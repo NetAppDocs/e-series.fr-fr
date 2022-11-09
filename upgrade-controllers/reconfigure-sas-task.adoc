@@ -1,0 +1,103 @@
+---
+permalink: upgrade-controllers/reconfigure-sas-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, reconfigure SAS-2, SAS-2, SAS-3, convert controller shelf, convert drive shelf, 
+summary: 'Vous pouvez convertir le tiroir contrôleur d"une baie SAS-2 approuvée (E2700, E550/EF5500, E5600/EF560) en tiroir disque, puis placer ce tiroir et tous les tiroirs disques SAS-2 approuvés (DE1600, DE5600, DE6600) derrière une nouvelle baie SAS-3 approuvée (E2800, E5700/EF570) et des tiroirs disques SAS-3 approuvés (DE212C, DE460C, DE224C). sans préservation des données.' 
+---
+= Reconfigurer un système SAS-2 derrière un nouveau tiroir contrôleur SAS-3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si nécessaire, vous pouvez reconfigurer votre système SAS-2 pour qu'il soit utilisé derrière un nouveau tiroir contrôleur SAS-3.
+
+Les baies SAS-2 approuvées comprennent les systèmes E2700, E550/EF5500 et E5600/EF560. Les tiroirs disques SAS-2 agréés sont notamment DE1600, DE5600 et DE6600. Les baies SAS-3 approuvées incluent les systèmes E2800 et E5700/EF570. Les tiroirs disques SAS-3 approuvés sont les systèmes DE212C, DE224C et DE460C.
+
+Dans cette procédure, vous convertissez le tiroir contrôleur en baie SAS-2 approuvée en tiroir disque, puis placez-le derrière une nouvelle baie SAS-3 approuvée et des tiroirs disques, sans préserver les données.
+
+Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+
+
+NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
+
+En raison de la complexité de cette procédure, les éléments suivants sont nécessaires :
+
+* Vous devez faire une demande FPVR (Feature Product variance Request). Pour déposer une FPVR, contactez les services professionnels NetApp.
++
+
+NOTE: L'échec de l'acquisition d'une FPVR avant de lancer cette procédure peut entraîner une panne de disque et le verrouillage du contrôleur.
+
+* Si vous pouvez sauvegarder vos données, vous pouvez effectuer cette procédure sans l'aide des services professionnels NetApp.
+* Si vous ne pouvez pas sauvegarder vos données, contactez les services professionnels NetApp pour obtenir de l'aide sur cette procédure.
+* Assurez-vous que les deux baies sont prêtes pour la procédure :
++
+** *Baie existante* : baie existante sous SANtricity OS 8.25 ou version ultérieure mise sous tension.
+** *Nouvelle baie* : nouvelle baie non compressée et hors tension.
+
+
+* Notez le numéro de série depuis le tiroir contrôleur SAS-2 que vous allez convertir en tiroir disque.
+
+
+
+
+== Étape 1 : mettez les contrôleurs hors tension (sans conservation des données)
+
+Toutes les opérations doivent être arrêtées avant de pouvoir mettre les contrôleurs hors tension.
+
+.Étapes
+. Si la baie SAS-2 existante est toujours accessible, supprimez tous les groupes de volumes, mettez les deux contrôleurs hors tension et retirez tous les câbles.
+. Notez le numéro de série depuis le tiroir contrôleur SAS-2 que vous allez convertir en tiroir disque.
+. Si la sécurité du lecteur est utilisée pour la baie existante, vérifiez que la clé de sécurité est disponible.
+
+
+
+
+== Étape 2 : installation des contrôleurs (sans conservation des données)
+
+Une fois l'arrêt réussi, vous pouvez remplacer les contrôleurs de la matrice.
+
+.Étapes
+. Remplacez les deux contrôleurs de la baie existante par des IOM ou des ESM.
+. Si possible, utilisez les câbles hôtes et les câbles réseau de la baie existante et connectez-les aux contrôleurs de la nouvelle baie.
++
+
+NOTE: En fonction des connexions hôte de votre nouvelle baie, différents câbles peuvent être nécessaires.
+
+. Reliez les tiroirs disques derrière les contrôleurs dans la nouvelle baie.
++
+Le tiroir du contrôleur et les tiroirs disques associés deviennent des tiroirs disques et peuvent être câblés aux contrôleurs de la nouvelle baie.
+
++
+
+NOTE: La connexion de SAS-2 à SAS-3 nécessite des câbles SAS HD à mini-SAS. Pour en savoir plus sur le câblage de votre configuration de contrôleur et de tiroir d'extension, consultez la link:../install-hw-cabling/index.html["Câblage"] ou le https://library.netapp.com/ecm/ecm_download_file/ECMLP2588749["Guide du câblage matériel E-Series"^].
+
+
+
+
+
+== Étape 3 : mise sous tension des contrôleurs (sans conservation des données)
+
+Une fois l'installation terminée, mettez les contrôleurs sous tension et envoyez les modifications de configuration au support technique NetApp.
+
+.Étapes
+. Mettre sous tension la nouvelle baie, y compris tous les tiroirs disques associés.
+. Configurez le port de gestion et les adresses IP en installant le https://mysupport.netapp.com/tools/info/ECMLP2563821I.html["Connexion rapide SANtricity"^] informatique.
+. Si la sécurité du lecteur était utilisée sur la baie existante, importez la clé de sécurité.
+. Si vous n'avez pas pu supprimer les groupes de volumes de votre matrice existante avant d'effectuer cette procédure, vous devez définir que tous les disques étrangers apparaissent comme étant natifs. Pour plus d'informations sur la définition des lecteurs sur natifs, reportez-vous à l'aide en ligne de SANtricity.
+. Envoyez les modifications de configuration à l'équipe de support technique de NetApp.
++
+.. Obtenez le numéro de série de l'ancien tiroir de disque du contrôleur que vous avez enregistré à l'étape 2.
+.. Connectez-vous au http://mysupport.netapp.com/eservice/assistant["Site de support NetApp"^].
+.. Dans la liste déroulante sous *Catégorie de commentaires*, sélectionnez *produits installés > demande de mise hors service*.
+.. Sélectionnez *Créer cas*. Entrez le texte suivant dans la zone de texte *Commentaires*, en remplaçant le numéro de série de votre plateau de contrôleur par le numéro de série :
++
+`Please decommission this serial number as the entitlement has been moved to another serial number in the system. Please reference this in the SN notes.`
+
+.. Sélectionnez *soumettre*.
+
+
+
+
+Les modifications de configuration SAS-2 à SAS-3 sont envoyées au support technique de NetApp.

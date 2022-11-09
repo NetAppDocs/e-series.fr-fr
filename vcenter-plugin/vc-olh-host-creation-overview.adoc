@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-host-creation-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez découvrir ou définir chaque hôte du réseau. 
+---
+= Présentation de la création de l'hôte
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez découvrir ou définir chaque hôte du réseau. Un hôte est un serveur qui envoie des E/S à un volume d'une baie de stockage.
+
+
+
+== Création automatique ou manuelle de l'hôte
+
+La création d'un hôte est l'une des étapes requises pour permettre à la baie de stockage de savoir quels hôtes lui sont connectés et d'autoriser l'accès E/S aux volumes. Un hôte peut être créé automatiquement ou manuellement.
+
+* *Automatique* -- la création automatique d'hôte pour les hôtes basés sur SCSI (et non sur NVMe-of) est initiée par l'agent de contexte hôte (HCA). Le HCA est un utilitaire que vous pouvez installer sur chaque hôte connecté à la matrice de stockage. Chaque hôte sur lequel le HCA est installé transmet ses informations de configuration aux contrôleurs de la matrice de stockage via le chemin d'E/S. En fonction des informations sur l'hôte, les contrôleurs créent automatiquement l'hôte et les ports hôtes associés et définissent le type d'hôte. Si nécessaire, vous pouvez apporter des modifications supplémentaires à la configuration de l'hôte. Une fois que l'HCA a effectué sa détection automatique, l'hôte est automatiquement configuré avec les attributs suivants :
++
+** Nom d'hôte dérivé du nom système de l'hôte.
+** Les ports d'identifiant hôte associés à l'hôte.
+** Type de système d'exploitation hôte de l'hôte.
+
+
+
+
+
+NOTE: Les hôtes sont créés en tant qu'hôtes autonomes ; le HCA ne crée pas ou n'ajoute pas automatiquement aux clusters hôtes.
+
+* *Manuel* -- lors de la création manuelle d'un hôte, vous associez des identificateurs de port hôte en les sélectionnant dans une liste ou en les saisissant manuellement. Une fois que vous avez créé un hôte, vous pouvez lui attribuer des volumes ou l'ajouter à un cluster hôte si vous prévoyez de partager l'accès aux volumes.
+
+
+
+
+== Comment sont affectés les volumes
+
+Pour qu'un hôte puisse envoyer des E/S à un volume, vous devez lui affecter le volume. Vous pouvez sélectionner un hôte ou un cluster hôte lors de la création d'un volume ou attribuer ultérieurement un volume à un hôte ou à un cluster hôte. Un cluster hôte est un groupe d'hôtes. Vous créez un cluster hôte pour vous permettre d'attribuer facilement les mêmes volumes à plusieurs hôtes.
+
+L'affectation de volumes à des hôtes est flexible, ce qui vous permet de répondre à vos besoins de stockage spécifiques.
+
+* *Hôte autonome, ne faisant pas partie d'un cluster hôte* -- vous pouvez affecter un volume à un hôte individuel. Le volume n'est accessible que par un seul hôte.
+* *Cluster hôte* -- vous pouvez affecter un volume à un cluster hôte. Il est possible d'accéder au volume par tous les hôtes du cluster hôte.
+* *Hôte dans un cluster hôte* -- vous pouvez affecter un volume à un hôte individuel qui fait partie d'un cluster hôte. Même si l'hôte fait partie d'un cluster hôte, celui-ci est uniquement accessible par l'hôte individuel, et non par les autres hôtes du cluster hôte.
+
+
+Lorsque des volumes sont créés, des LUN (Logical Unit Numbers) sont automatiquement attribuées. La LUN sert d'adresse entre l'hôte et le contrôleur au cours des opérations d'E/S. Vous pouvez modifier les LUN après la création du volume.

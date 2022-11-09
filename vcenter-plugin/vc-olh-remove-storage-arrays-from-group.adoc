@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Supprimez une ou plusieurs matrices de stockage gérées d"un groupe si vous ne souhaitez plus les gérer d"un groupe de stockage spécifique.' 
+---
+= Retirez les matrices de stockage du groupe
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer une ou plusieurs matrices de stockage gérées d'un groupe si vous ne souhaitez plus les gérer d'un groupe de stockage spécifique.
+
+Le retrait de matrices de stockage d'un groupe n'affecte en aucune façon la matrice de stockage ou ses données. Si la baie de stockage est gérée par System Manager, vous pouvez toujours la gérer à l'aide de votre navigateur. Si une matrice de stockage est accidentellement retirée d'un groupe, elle peut être ajoutée à nouveau.
+
+.Étapes
+. Dans la page gérer, sélectionnez menu:gérer les groupes[Supprimer les matrices de stockage du groupe].
+. Dans la liste déroulante, sélectionnez le groupe contenant les matrices de stockage que vous souhaitez supprimer, puis cochez la case en regard de chaque matrice de stockage que vous souhaitez supprimer du groupe.
+. Cliquez sur *Supprimer*.
+

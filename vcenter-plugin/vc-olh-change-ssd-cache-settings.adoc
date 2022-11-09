@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-ssd-cache-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifiez le nom de la mémoire SSD cache et affichez son état, ses capacités maximales et actuelles, la sécurité des disques et l"état Data assurance, ainsi que ses volumes et disques associés.' 
+---
+= Modifiez les paramètres de SSD cache
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom de la mémoire SSD cache et afficher son état, ses capacités maximales et actuelles, la sécurité des disques et l'état Data assurance, ainsi que ses volumes et disques associés.
+
+
+NOTE: Cette fonctionnalité n'est pas disponible sur les systèmes de stockage EF600 ou EF300.
+
+.Étapes
+. Sur la page gérer, sélectionnez la baie de stockage avec le cache SSD.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez le cache SSD que vous souhaitez modifier, puis cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue SSD cache Settings s'affiche.
+
+. Vérifiez ou modifiez les paramètres de cache SSD, le cas échéant.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+ a| 
+Nom
+ a| 
+Affiche le nom de la mémoire SSD cache que vous pouvez modifier. Vous devez fournir un nom pour le cache SSD.
+
+
+
+ a| 
+Caractéristiques
+ a| 
+Indique l'état de la mémoire SSD cache. Les États possibles sont les suivants :
+
+** Optimale
+** Inconnu
+** Dégradé
+** Échec (un état en échec entraîne un événement MEL critique.)
+** Suspendu
+
+
+
+
+ a| 
+Capacités
+ a| 
+Affiche la capacité actuelle et la capacité maximale autorisées pour le cache SSD. La capacité maximale autorisée pour SSD cache dépend de la taille du cache principal du contrôleur :
+
+** Jusqu'à 1 Gio
+** 1 Gio vers 2 Gio
+** 2 Gio vers 4 Gio
+** Plus de 4 Gio
+
+
+
+
+ a| 
+Sécurité et DA
+ a| 
+Affiche l'état sécurité des disques et Data assurance pour le cache SSD.
+
+** *Secure-compatible* --indique si le cache SSD est composé uniquement de lecteurs sécurisés. Un disque sécurisé est un disque à chiffrement automatique qui protège ses données contre tout accès non autorisé.
+** *Secure-Enabled* -- indique si la sécurité est activée sur le cache SSD.
+** *DA capable* -- indique si le cache SSD est composé uniquement de disques compatibles DA. Un lecteur compatible DA peut rechercher et corriger les erreurs qui peuvent survenir lors de la communication des données entre l'hôte et la matrice de stockage.
+
+
+
+
+ a| 
+Objets associés
+ a| 
+Affiche les volumes et les disques associés à la fonctionnalité SSD cache.
+
+|===
+====
+. Cliquez sur *Enregistrer*.
+

@@ -1,0 +1,33 @@
+---
+permalink: config-windows/install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Windows Unified Host Utilities, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Installez la méthode Windows Unified Host Utilities pour Windows Express. 
+---
+= Installer et configurer les utilitaires d'hôtes unifiés Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils Windows Unified Host Utilities vous aident à connecter les ordinateurs hôtes aux systèmes de stockage NetApp et à définir les paramètres requis sur les ordinateurs hôtes. Vous pouvez également définir les délais de lecture et d'écriture appropriés pour les systèmes de stockage NetApp.
+
+
+NOTE: Pour plus d'informations, reportez-vous au _Windows Host Utilities installation Guide (Guide d'installation des utilitaires d'hôtes Windows), disponible sous http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentation NetApp : utilitaires hôtes"^].
+
+.Étapes
+. Utilisez le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Pour déterminer la version appropriée d'Unified Host Utilities à installer.
++
+Les versions sont répertoriées dans une colonne de chaque configuration prise en charge.
+
+. Téléchargez les utilitaires d'hôtes unifiés à partir de http://mysupport.netapp.com["Support NetApp"^].
++
+
+NOTE: Ce package d'utilitaires ne peut pas être installé à l'aide du programme d'installation de SANtricity Storage Manager.
+
++
+
+NOTE: Vous pouvez également utiliser l'utilitaire SMDevices de SANtricity pour exécuter les mêmes fonctions que l'utilitaire hôte unifié. L'utilitaire SMDevices est inclus dans le package SMutils. Le package SMutils est un ensemble d'utilitaires qui permettent de vérifier ce que l'hôte voit de la matrice de stockage. Il est inclus dans l'installation du logiciel SANtricity.
+
+

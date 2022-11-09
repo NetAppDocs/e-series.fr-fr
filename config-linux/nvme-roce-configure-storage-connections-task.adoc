@@ -1,0 +1,124 @@
+---
+permalink: config-linux/nvme-roce-configure-storage-connections-task.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Si votre contrôleur inclut une connexion pour NVMe over RoCE \(RDMA over Converged Ethernet\), vous pouvez configurer les paramètres du port NVMe à partir de la page Hardware ou System dans SANtricity System Manager.' 
+---
+= Configuration des connexions NVMe over RoCE de la baie de stockage
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre contrôleur inclut une connexion pour NVMe over RoCE (RDMA over Converged Ethernet), vous pouvez configurer les paramètres du port NVMe à partir de la page Hardware ou System dans SANtricity System Manager.
+
+.Ce dont vous avez besoin, 8217;ll
+* Un port hôte NVMe over RoCE sur votre contrôleur. Sinon, les paramètres NVMe over RoCE ne sont pas disponibles dans System Manager.
+* Adresse IP de la connexion hôte.
+
+
+Vous pouvez accéder à la configuration NVMe over RoCE à partir de la page *Hardware* ou du menu:Settings[System]. Cette tâche décrit comment configurer les ports à partir de la page matériel.
+
+
+NOTE: Les paramètres et les fonctions NVMe over RoCE n'apparaissent que si le contrôleur de votre baie de stockage inclut un port NVMe over RoCE.
+
+.Étapes
+. Dans l'interface System Manager, sélectionnez *Hardware*.
+. Cliquez sur le contrôleur associé au port NVMe over RoCE que vous souhaitez configurer.
++
+Le menu contextuel du contrôleur s'affiche.
+
+. Sélectionnez *configurer les ports NVMe over RoCE*.
++
+La boîte de dialogue *Configure NVMe over RoCE ports* s'ouvre.
+
+. Dans la liste déroulante, sélectionnez le port à configurer, puis cliquez sur *Suivant*.
+. Sélectionnez les paramètres de configuration du port que vous souhaitez utiliser, puis cliquez sur *Suivant*.
++
+Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres de port* à droite de la boîte de dialogue.
+
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Vitesse du port ethernet configurée
+ a| 
+Sélectionnez la vitesse souhaitée. Les options qui s'affichent dans la liste déroulante dépendent de la vitesse maximale prise en charge par votre réseau (par exemple, 10 Gbit/s). Les valeurs possibles sont :
+
+** Négociation automatique
+** 10 Gbits/s.
+** 25 Gbits/s.
+** 40 Gbits/s.
+** 50 Gbits/s.
+** 100 Gbits/s.
+** 200 Gbits/s.
+
+
+
+NOTE: Lorsqu'une HIC compatible 200 Gb est connectée à un câble QSFP56, la négociation automatique n'est disponible que lorsque vous vous connectez aux switchs et/ou aux adaptateurs Mellanox.
+
+
+NOTE: Le débit du port NVMe over RoCE configuré doit correspondre à la vitesse du SFP sur le port sélectionné. Tous les ports doivent être définis sur la même vitesse.
+
+
+
+ a| 
+Activez IPv4 et/ou IPv6
+ a| 
+Sélectionnez une ou les deux options pour activer la prise en charge des réseaux IPv4 et IPv6.
+
+
+
+ a| 
+Taille MTU (disponible en cliquant sur *Afficher plus de paramètres de port*).
+ a| 
+Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 4200.
+
+|===
++
+Si vous avez sélectionné *Activer IPv4*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv4 après avoir cliqué sur *Suivant*. Si vous avez sélectionné *Activer IPv6*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv6 après avoir cliqué sur *Suivant*. Si vous avez sélectionné les deux options, la boîte de dialogue des paramètres IPv4 s'ouvre en premier, puis après avoir cliqué sur *Suivant*, la boîte de dialogue des paramètres IPv6 s'ouvre.
+
+. Configurez les paramètres IPv4 et/ou IPv6, automatiquement ou manuellement. Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres* à droite de la boîte de dialogue.
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Obtention automatique de la configuration auprès du serveur DHCP
+ a| 
+Sélectionnez cette option pour obtenir la configuration automatiquement.
+
+
+
+ a| 
+Spécifiez manuellement la configuration statique
+ a| 
+Sélectionnez cette option, puis entrez une adresse statique dans les champs. Pour IPv4, incluez le masque de sous-réseau réseau et la passerelle. Pour IPv6, incluez les adresses IP routables et l'adresse IP du routeur.
+
+
+NOTE: S'il n'y a qu'une seule adresse IP routable, définissez l'adresse restante sur 0:0:0:0:0:0:0:0:0.
+
+
+
+ a| 
+Activez la prise en charge VLAN (disponible en cliquant sur *Afficher plus de paramètres*).
+ a| 
+
+NOTE: Cette option n'est disponible que dans un environnement iSCSI. Elle n'est pas disponible dans un environnement NVMe over RoCE.
+
+
+
+ a| 
+Activez la priorité ethernet (disponible en cliquant sur *Afficher plus de paramètres*).
+ a| 
+
+NOTE: Cette option n'est disponible que dans un environnement iSCSI. Elle n'est pas disponible dans un environnement NVMe over RoCE.
+
+|===
+. Cliquez sur *Terminer*.
+

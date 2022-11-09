@@ -1,0 +1,100 @@
+---
+permalink: web-services-proxy/polling-intro-concept.html 
+sidebar: sidebar 
+keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
+summary: 'Vous pouvez configurer l"interrogation automatique pour toutes les statistiques de disque et de volume sur les systèmes de stockage découverts.' 
+---
+= Gérer l'interrogation automatique des statistiques Web Services Proxy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer l'interrogation automatique pour toutes les statistiques de disque et de volume sur les systèmes de stockage découverts.
+
+
+
+== Aperçu des statistiques
+
+Ces statistiques fournissent des informations sur les taux de collecte des données et les performances des systèmes de stockage.
+
+Le proxy de services Web permet d'accéder aux types de statistiques suivants :
+
+* Statistiques brutes -- compteurs totaux pour les points de données au moment de la collecte des données. Les statistiques brutes peuvent être utilisées pour les opérations de lecture totales ou pour les opérations d'écriture totales.
+* Statistiques analysées -- informations calculées pour un intervalle. Les statistiques analysées sont des exemples d'opérations de lecture/sortie par seconde ou de débit d'écriture.
+
+
+Les statistiques brutes sont linéaires et requièrent en général au moins deux points de données collectés pour en extraire des données exploitables. Les statistiques analysées sont une dérivation des statistiques brutes, qui fournissent des mesures importantes. De nombreuses valeurs qui peuvent être dérivées des statistiques brutes sont affichées dans un format de point dans le temps utilisable dans les statistiques analysées pour votre commodité.
+
+Vous pouvez récupérer des statistiques brutes, que l'interrogation automatique soit activée ou non. Vous pouvez ajouter le `usecache=true` Requête chaîne à la fin de l'URL pour récupérer les statistiques mises en cache à partir du dernier sondage. Les résultats en cache augmentent considérablement les performances de la récupération des statistiques. Toutefois, plusieurs appels à un taux égal ou inférieur à la mémoire cache d'intervalle d'interrogation configurée récupère les mêmes données.
+
+
+
+== Fonctionnalité Statistiques
+
+Le proxy de services Web fournit des points de terminaison API qui permettent de récupérer les statistiques brutes et analysées du contrôleur et de l'interface à partir de modèles matériels et de versions logicielles pris en charge.
+
+
+
+=== API de statistiques brutes
+
+* `+/storage-systems/{system-id}/controller-statistics+`
+* `+/storage-systems/{system-id}/drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{system-id}/interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{system-id}/volume-statistics/{optional list of volume ids}+`
+
+
+
+
+=== API de statistiques analysées
+
+* `+/storage-systems/{id}/analysed-controller-statistics/+`
+* `+/storage-systems/{id}/analysed-drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{id}/analysed-interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{id}/analysed-volume-statistics/{optional list of volume ids}+`
+
+
+Ces URL extraient les statistiques analysées du dernier sondage et ne sont disponibles que lorsque l'interrogation est activée. Ces URL incluent les données d'entrée-sortie suivantes :
+
+* Opérations par seconde
+* Débit en mégaoctets par seconde
+* Temps de réponse en millisecondes
+
+
+Les calculs sont basés sur les différences entre les itérations de polling statistiques, qui sont les mesures les plus courantes en matière de performances du stockage. Ces statistiques sont préférables aux statistiques non analysées.
+
+
+NOTE: Lorsque le système démarre, aucune collecte de statistiques précédente n'est utilisée pour calculer les différentes mesures. Les statistiques analysées nécessitent donc au moins un cycle d'interrogation après le démarrage pour renvoyer les données. En outre, si les compteurs cumulatifs sont réinitialisés, le cycle d'interrogation suivant aura des nombres imprévisibles pour les données.
+
+
+
+== Configurer les intervalles d'interrogation
+
+Pour configurer les intervalles d'interrogation, modifiez le fichier wsconfig.xml pour spécifier un intervalle d'interrogation en secondes.
+
+
+NOTE: Les statistiques étant mises en cache en mémoire, il est possible que la mémoire soit plus importante de 1.5 Mo pour chaque système de stockage.
+
+.Avant de commencer
+* Les systèmes de stockage doivent être découverts par le proxy.
+
+
+.Étapes
+. Ouvrez le fichier wsconfig.xml, à l'adresse suivante :
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_services_proxy
+
+
+. Ajoutez la ligne suivante à l'intérieur du `<env-entries>` balise, dans laquelle `n` est le nombre de secondes de l'intervalle entre les demandes d'interrogation :
++
+[listing]
+----
+<env key="stats.poll.interval">n</env>
+----
++
+Par exemple, si 60 est saisi, l'interrogation commence à des intervalles de 60 secondes. C'est-à-dire que le système demande que l'interrogation commence 60 secondes après la fin de la période précédente (quelle que soit la durée de la période de scrutin précédente). Toutes les statistiques sont horodatées avec l'heure exacte de récupération. Le système utilise l'horodatage ou la différence de temps sur laquelle baser le calcul de 60 secondes.
+
+. Enregistrez le fichier.
+

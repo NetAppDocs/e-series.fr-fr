@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e5700/controllers-overview-concept.html 
+sidebar: sidebar 
+keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
+summary: Examinez les types et les exigences des contrôleurs E5700. 
+---
+= Conditions requises pour le remplacement du contrôleur E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un contrôleur E5700, vérifiez les exigences et les facteurs à prendre en compte.
+
+Chaque boîtier de contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option.
+
+
+
+== Présentation de la procédure
+
+Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
+
+Vous pouvez déterminer si le boîtier de contrôleur est défectueux de deux façons :
+
+* Le gourou de la restauration de SANtricity System Manager vous indique de remplacer le boîtier du contrôleur.
+* La LED d'avertissement orange sur le boîtier du contrôleur est allumée, ce qui indique que le contrôleur est défectueux.
+
+
+image::../media/e5700_attention_led_callout.png[légende d'avertissement de la baie e5700]
+
+*(1)* _LED attention_
+
+
+NOTE: La figure montre un exemple de cartouche de contrôleur ; les ports hôtes du boîtier de contrôleur peuvent être différents.
+
+* Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+
+
+
+NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
+
+
+NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)
+
+
+
+== Conditions requises pour le remplacement d'un contrôleur défectueux
+
+Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
+
+* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+
+
+
+NOTE: Les contrôleurs de remplacement sont préinstallés avec 16 Go de mémoire. Si votre contrôleur requiert la configuration 64 Go, utilisez le kit de mise à niveau fourni avant d'installer votre contrôleur de remplacement.
+
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Un tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+Vous pouvez également effectuer certaines opérations à l'aide de l'interface de ligne de commandes. Si vous ne disposez pas d'un accès à l'interface de ligne de commandes, vous pouvez effectuer l'une des opérations suivantes :
+
++
+** *Pour SANtricity System Manager (version 11.60 et supérieure)* -- Télécharger le paquet CLI (fichier zip) depuis System Manager. Accédez au menu:Paramètres[système > modules complémentaires > interface de ligne de commande]. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
+** *Pour SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Suivez les instructions du guide express pour télécharger et installer le logiciel. Vous pouvez exécuter des commandes CLI à partir de l'EMW en sélectionnant menu:Outils[Exécuter script].
+
+
+
+
+
+
+== Configuration du mode recto verso requise
+
+Dans le cas d'un tiroir contrôleur avec deux contrôleurs (configuration duplex), vous pouvez remplacer un absorbeur de contrôleurs alors que votre baie de stockage est sous tension et exécuter des opérations d'E/S hôte, tant que les conditions suivantes sont vraies :
+
+* Le second boîtier du contrôleur situé sur le shelf présente un état optimal.
+* Le champ *OK à supprimer* de la zone Détails du gourou de la restauration dans le Gestionnaire de système SANtricity affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
+

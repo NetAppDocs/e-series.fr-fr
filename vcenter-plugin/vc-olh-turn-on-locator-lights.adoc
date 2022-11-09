@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-turn-on-locator-lights.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez localiser les disques afin d"identifier physiquement tous les disques qui comprennent un pool, un groupe de volumes ou SSD cache sélectionné. Un voyant s"allume sur chaque lecteur du pool, du groupe de volumes ou du cache SSD sélectionné.' 
+---
+= Allumer les feux de localisation
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez localiser les disques afin d'identifier physiquement tous les disques qui comprennent un pool, un groupe de volumes ou SSD cache sélectionné. Un voyant s'allume sur chaque lecteur du pool, du groupe de volumes ou du cache SSD sélectionné.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez le pool, le groupe de volumes ou le cache SSD à localiser, puis cliquez sur menu:More[Activer les voyants de localisation].
++
+Une boîte de dialogue s'affiche pour indiquer que les voyants des disques comprenant le pool sélectionné, le groupe de volumes ou le cache SSD sont activés.
+
+. Après avoir trouvé les lecteurs, cliquez sur *Désactiver*.
+

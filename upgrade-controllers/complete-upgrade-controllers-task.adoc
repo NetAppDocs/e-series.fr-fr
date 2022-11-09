@@ -1,0 +1,203 @@
+---
+permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+summary: 'Procédez à la mise à niveau du contrôleur en mettant le tiroir contrôleur sous tension et en validant la version logicielle du contrôleur. Vous pouvez ensuite recueillir des données d"assistance et reprendre les opérations.' 
+---
+= Mise à niveau complète du contrôleur
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Procédez à la mise à niveau du contrôleur en mettant le tiroir contrôleur sous tension et en validant la version logicielle du contrôleur. Vous pouvez ensuite recueillir des données d'assistance et reprendre les opérations.
+
+Si vous mettez à niveau les contrôleurs dans un bac d'unité de contrôleur recto verso, répétez toutes les étapes pour terminer la mise à niveau du second contrôleur.
+
+
+
+== Étape 1 : mettez le contrôleur sous tension
+
+Vous devez mettre le tiroir contrôleur sous tension afin de vérifier qu'il fonctionne correctement.
+
+.Étapes
+. Mettez l'interrupteur d'alimentation situé à l'arrière de chaque plateau de lecteur connecté au plateau du contrôleur
+. Attendez deux minutes que les disques démarrent.
+. Mettez l'interrupteur d'alimentation situé à l'arrière du plateau du contrôleur
+. Attendez trois minutes pour terminer le processus de mise sous tension.
+. Si vous remplacez le contrôleur complet des contrôleurs E2800 ou E5700, suivez l'une des procédures suivantes en fonction du scénario de sécurité de votre disque.
++
+|===
+| Type complet de remplacement de contrôleur | Procédure et conditions préalables 
+
+
+ a| 
+Tous les disques non sécurisés, ni la gestion externe ni interne des clés
+ a| 
+Passez à l'étape suivante.
+
+
+
+ a| 
+Combinaison de disques sécurisés et non sécurisés, gestion interne des clés
+ a| 
+Vous devez d'abord créer une clé de sécurité interne, puis importer la clé de sécurité manuellement pour déverrouiller les lecteurs sécurisés. Une fois les disques déverrouillés, vous pouvez accéder aux disques.
+
+.. Créer une clé de sécurité interne
+.. Remplacez le contrôleur par une gestion interne des clés et par un ou plusieurs disques sécurisés
+
+
+
+
+ a| 
+Tous les disques sécurisés, gestion interne des clés
+ a| 
+Remplacez le contrôleur par une gestion interne des clés et par un ou plusieurs disques sécurisés
+
+
+
+ a| 
+Combinaison de disques sécurisés et non sécurisés, gestion externe des clés
+ a| 
+Passez à l'étape suivante.
+
+Une fois le remplacement du contrôleur effectué, les contrôleurs se resynchronent automatiquement avec le serveur de gestion de clés externe et les disques se déverrouillent et seront accessibles.
+
+
+NOTE: Si vous recevez un code de verrouillage d'affichage à sept segments de `L5` après avoir effectué le remplacement du contrôleur de disques sécurisés mixtes par une gestion interne des clés, contactez le support technique.
+
+
+
+ a| 
+Tous les disques sécurisés, gestion externe des clés, vous êtes temporairement remis à gestion interne des clés pour la procédure de remplacement du contrôleur
+ a| 
+Vous devez d'abord déverrouiller les lecteurs sécurisés à l'aide de la procédure interne de gestion des clés. Une fois les disques déverrouillés, vous revenez à gestion externe des clés en créant une nouvelle clé de sécurité externe pour la matrice de stockage.
+
+.. Remplacez le contrôleur par une gestion interne des clés et par un ou plusieurs disques sécurisés
+.. Créer une clé de sécurité externe
+
+
+
+
+ a| 
+Tous les disques sécurisés, gestion externe des clés, vous n'avez pas temporairement activé la gestion interne des clés pour la procédure de remplacement du contrôleur
+ a| 
+Remplacement du contrôleur par une gestion externe des clés et sécurisation de tous les disques
+
+|===
+
+
+
+
+== Étape 2 : vérifier l'état des contrôleurs et des tiroirs
+
+Vous pouvez utiliser les voyants et le logiciel de gestion du stockage pour vérifier l'état de vos contrôleurs et tiroirs.
+
+.Étapes
+. Vérifiez les LED du contrôleur A pour vous assurer qu'il est correctement en cours de démarrage.
++
+Les voyants d'action du service Host Link requis deviennent verts au cours du redémarrage. L'écran à sept segments montre la séquence OS+ SD+ vide- pour indiquer que le contrôleur exécute le traitement de début de journée (SOD).
+
++
+Une fois le redémarrage terminé, l'écran à sept segments affiche l'ID du bac correspondant à l'affichage à sept segments sur le second contrôleur. Vous pouvez ensuite découvrir la nouvelle cartouche de contrôleur à l'aide du logiciel de gestion du stockage.
+
+. Si l'un des voyants d'action de service requis du plateau du contrôleur est _on_, ou si le voyant d'action de service requise du contrôleur est _on_ :
++
+.. Vérifier que le boîtier du contrôleur a été correctement installé et que tous les câbles sont correctement installés. Réinstallez le boîtier du contrôleur, si nécessaire.
+.. Vérifiez les voyants action de service requise du plateau du contrôleur et le voyant action de service requise du contrôleur. Si le problème n'est pas résolu, contactez le support technique.
+
+
+. Pour une configuration recto verso, répétez les étapes 1 à 2 pour le contrôleur B.
+. À l'aide des voyants et du logiciel de gestion du stockage, vérifiez l'état de tous les bacs de la matrice de stockage. Si un composant nécessite l'attention d'un composant, utilisez le gourou de la restauration pour un dépannage. Si le problème n'est pas résolu, contactez le support technique.
+
+
+
+
+== Étape 3 : validation de la version logicielle du contrôleur
+
+Vous devez vous assurer que vos nouveaux contrôleurs fonctionnent correctement avec le système d'exploitation (micrologiciel du contrôleur) et la NVSRAM.
+
+.Étapes
+. Effectuez l'une des opérations suivantes :
++
+** Si vous effectuez la mise à niveau vers des contrôleurs qui ne prennent pas en charge SANtricity 11.30 et le micrologiciel des contrôleurs 8.30, vérifiez que la version exécutée sur les nouveaux contrôleurs correspond à la dernière version exécutée sur les contrôleurs d'origine. En principe, il s'agit de la version la plus récente prise en charge par les anciens contrôleurs. Si nécessaire, installez la version appropriée sur les nouveaux contrôleurs.
+** Si vous effectuez une mise à niveau vers des contrôleurs exécutant SANtricity 11.30 et le micrologiciel du contrôleur 8.30, téléchargez et installez la dernière NVSRAM après avoir mis les nouveaux contrôleurs sous tension.
+
+
+. Si votre mise à niveau du contrôleur implique une modification de protocole (par exemple, Fibre Channel vers iSCSI) et que vous avez déjà des hôtes définis pour votre baie de stockage, associez les nouveaux ports hôte à vos hôtes :
++
+.. Dans System Manager, sélectionnez menu :Storage[hosts].
+.. Sélectionnez l'hôte auquel les ports seront associés, puis cliquez sur *Afficher/Modifier les paramètres*.
++
+Une boîte de dialogue qui affiche les paramètres actuels de l'hôte s'affiche.
+
+.. Cliquez sur l'onglet *ports hôte*.
++
+La boîte de dialogue affiche les identificateurs de port hôte actuels.
+
+.. Pour mettre à jour les informations d'identification de port hôte associées à chaque hôte, remplacez les ID de port hôte des anciennes cartes hôte par les nouveaux ID de port hôte de la nouvelle carte hôte.
+.. Répétez l'étape d pour chaque hôte.
+.. Cliquez sur *Enregistrer*.
+
+
++
+Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] et le http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+. Si la mise en cache d'écriture différée a été désactivée pour tous les volumes fins lors de la préparation du remplacement, réactivez la mise en cache d'écriture différée.
++
+.. Dans System Manager, sélectionnez menu :Storage[volumes].
+.. Sélectionnez un volume, puis sélectionnez menu:autres [Modifier les paramètres du cache].
++
+La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
+
+.. Sélectionnez l'onglet *Basic* et modifiez les paramètres de mise en cache de lecture et d'écriture.
+.. Cliquez sur *Enregistrer*.
+
+
+. Si le langage SAML a été désactivé pour préparer le remplacement, réactivez le langage SAML.
++
+.. Dans System Manager, sélectionnez menu:Paramètres[Access Management].
+.. Sélectionnez l'onglet *SAML*, puis suivez les instructions de la page.
+
+
+. Rassemblez les données de support relatives à votre baie de stockage à l'aide de l'interface utilisateur graphique ou de l'interface de ligne de commande :
++
+** Utilisez System Manager ou la fenêtre de gestion de baie de Storage Manager pour collecter et enregistrer un pack de support de votre baie de stockage.
++
+*** Dans System Manager, sélectionnez menu :support [support Center > onglet Diagnostics]. Sélectionnez ensuite *Collect support Data* et cliquez sur *collect*.
+*** Dans la barre d'outils de la fenêtre gestion des matrices, sélectionnez menu:Monitor[Health > Collect support Data Manually]. Entrez ensuite un nom et spécifiez un emplacement sur votre système où vous souhaitez stocker le bundle de support.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `support-data.7z`.
+
++
+Si votre tiroir contient des tiroirs, les données de diagnostic correspondant à ce tiroir sont archivées dans un fichier compressé distinct nommé `tray-component-state-capture.7z`
+
+
+
+** Utilisez l'interface de ligne de commande pour exécuter le `save storageArray supportData` commande pour collecter des données de support complètes sur la baie de stockage.
++
+
+NOTE: La collecte des données de support peut affecter temporairement les performances de votre baie de stockage.
+
+
+
+. Demandez au support technique NetApp les modifications que vous avez apportées à la configuration de votre baie de stockage.
++
+.. Obtenez le numéro de série du chemin de disque du contrôleur que vous avez enregistré xref:prepare-upgrade-controllers-task.adoc[Préparation à la mise à niveau des contrôleurs].
+.. Connectez-vous au site de support NetApp à l'adresse http://mysupport.netapp.com/eservice/assistant["mysupport.netapp.com/eservice/assistant"^].
+.. Sélectionnez *enregistrement du produit* dans la liste déroulante sous *Catégorie 1*.
+.. Entrez le texte suivant dans la zone de texte **Commentaires** en remplaçant le numéro de série de votre plateau de contrôleur par le numéro de série :
++
+`Please create alert against Serial Number: serial number. The alert name should be “E-Series Upgrade”. The alert text should read as follows:`
+
++
+`“Attention: The controllers in this system have been upgraded from the original configuration. Verify the controller configuration before ordering replacement controllers and notify dispatch that the system has been upgraded.”`
+
+.. Cliquez sur le bouton *Submit* au bas du formulaire.
+
+
+
+
+Si la mise à niveau de votre contrôleur entraîne la modification de l'ID fournisseur de LSI à NETAPP, rendez-vous sur link:remount-volumes-lsi-task.html["Remontez des volumes après avoir changé le fournisseur de LSI à NETAPP"]sinon, la mise à niveau du contrôleur est terminée et vous pouvez reprendre le fonctionnement normal.

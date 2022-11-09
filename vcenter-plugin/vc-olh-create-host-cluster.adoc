@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Lorsque deux hôtes ou plus requièrent l"accès E/S aux mêmes volumes, vous pouvez créer un cluster hôte.' 
+---
+= Création d'un cluster hôte
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Lorsque deux hôtes ou plus requièrent l'accès E/S aux mêmes volumes, vous pouvez créer un cluster hôte.
+
+Notez les consignes suivantes lorsque vous créez un cluster hôte :
+
+* Cette opération ne démarre que si la création du cluster comporte au moins deux hôtes.
+* Les hôtes des clusters hôtes peuvent disposer de différents systèmes d'exploitation (hétérogènes).
+* Les hôtes NVMe des clusters hôtes ne peuvent pas être combinés avec des hôtes non NVMe.
+* Pour créer un volume activé pour Data assurance (DA), la connexion hôte que vous prévoyez d'utiliser doit prendre en charge DA.
++
+Si l'une des connexions hôte sur les contrôleurs de votre matrice de stockage ne prend pas en charge DA, les hôtes associés ne peuvent pas accéder aux données sur les volumes DA.
+
+* Cette opération n'a pas de succès si le nom que vous choisissez est déjà utilisé.
+* La longueur du nom ne doit pas dépasser 30 caractères.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez menu:Créer [cluster hôte].
++
+La boîte de dialogue Créer un cluster hôte s'affiche.
+
+. Sélectionnez les paramètres du cluster hôte selon les besoins.
++
+|===
+| Réglage | Description 
+
+
+| Nom | Saisissez le nom du nouveau cluster hôte. 
+
+
+| Sélectionnez les hôtes pour partager l'accès au volume | Sélectionnez deux hôtes ou plus dans la liste déroulante. Seuls les hôtes qui ne font pas déjà partie d'un cluster hôte apparaissent dans la liste. 
+|===
+. Cliquez sur *Créer*.
++
+Si les hôtes sélectionnés sont connectés à des types d'interface qui ont différentes capacités d'assurance de données (DA), une boîte de dialogue s'affiche avec le message indiquant que DA sera indisponible sur le cluster hôte. Cette indisponibilité empêche l'ajout de volumes DA au cluster hôte. Sélectionnez *Oui* pour continuer ou *non* pour annuler.
+
++
+DA augmente l'intégrité des données dans l'ensemble du système de stockage. DA permet à la matrice de stockage de vérifier si des erreurs peuvent se produire lorsque des données sont déplacées entre les hôtes et les lecteurs. L'utilisation de DA pour le nouveau volume garantit la détection de toute erreur.
+
+
+
+Le nouveau cluster hôte apparaît dans le tableau, avec les hôtes affectés dans les lignes en dessous.
+
+Vous devez affecter un volume à un cluster hôte afin qu'il puisse être utilisé pour les opérations d'E/S. Accédez à link:vc-olh-assign-volumes-to-hosts.html["Attribuez des volumes aux hôtes"].

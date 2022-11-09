@@ -1,0 +1,76 @@
+---
+permalink: cloud-connector/uninstall-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector uninstall, remove Cloud Connector 
+summary: 'Vous pouvez désinstaller SANtricity Cloud Connector à l"aide du programme de désinstallation graphique ou de la console.' 
+---
+= Désinstallez SANtricity Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez désinstaller SANtricity Cloud Connector en mode graphique de désinstallation ou de console.
+
+
+
+== Désinstallation en mode graphique
+
+Vous pouvez utiliser le mode graphique pour désinstaller SANtricity Cloud Connector sur un système d'exploitation Linux.
+
+.Étapes
+. Dans une fenêtre de terminal, accédez au répertoire contenant le fichier de désinstallation de SANtricity Cloud Connector.
++
+Le fichier de désinstallation de SANtricity Cloud Connector est disponible à l'emplacement par défaut suivant :
+
++
+[listing]
+----
+/opt/netapp/santricity_cloud_connector4/uninstall_cloud_connector4
+----
+. Depuis le répertoire contenant le fichier de désinstallation de SANtricity Cloud Connector, exécutez la commande suivante :
++
+[listing]
+----
+./uninstall_cloud_connector4 –i gui
+----
++
+Le processus de désinstallation de SANtricity Cloud Connector est initialisé.
+
+. Dans la fenêtre de désinstallation, cliquez sur *Désinstaller* pour poursuivre la désinstallation de SANtricity Cloud Connector.
++
+Le processus de désinstallation est terminé et l'application SANtricity Cloud Connector est désinstallée dans le système d'exploitation Linux.
+
+
+
+
+
+== Désinstallation en mode console
+
+Vous pouvez utiliser le mode console pour désinstaller SANtricity Cloud Connector sur un système d'exploitation Linux.
+
+.Étapes
+. Dans une fenêtre de terminal, accédez au répertoire contenant le fichier de désinstallation de SANtricity Cloud Connector.
++
+Le fichier de désinstallation de SANtricity Cloud Connector est disponible à l'emplacement par défaut suivant :
+
++
+[listing]
+----
+/opt/netapp/santricity_cloud_connector4/uninstall_cloud_connector4
+----
+. Depuis le répertoire contenant le fichier de désinstallation de SANtricity Cloud Connector, exécutez la commande suivante :
++
+[listing]
+----
+./uninstall_cloud_connector4 –i console
+----
++
+Le processus de désinstallation de SANtricity Cloud Connector est initialisé.
+
+. Dans la fenêtre de désinstallation, appuyez sur *entrée* pour poursuivre la désinstallation de SANtricity Cloud Connector.
++
+Le processus de désinstallation est terminé et l'application SANtricity Cloud Connector est désinstallée dans le système d'exploitation Linux.
+
+

@@ -1,0 +1,87 @@
+---
+permalink: config-linux/sas-create-partitions-filesystems-task.html 
+sidebar: sidebar 
+keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Une nouvelle LUN n"a pas de partition ni de système de fichiers lorsque l"hôte Linux le détecte pour la première fois. Vous devez formater la LUN avant de pouvoir utiliser cette dernière.' 
+---
+= Créer des partitions et des systèmes de fichiers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une nouvelle LUN n'a pas de partition ni de système de fichiers lorsque l'hôte Linux le détecte pour la première fois. Vous devez formater la LUN avant de pouvoir utiliser cette dernière. Si vous le souhaitez, vous pouvez créer un système de fichiers sur la LUN.
+
+.Ce dont vous avez besoin, 8217;ll
+* LUN détectée par l'hôte.
+* Une liste des disques disponibles. (Pour voir les disques disponibles, exécutez le `ls` dans le dossier /dev/mapper.)
+
+
+Vous pouvez initialiser le disque en tant que disque de base avec une table de partition GUID (GPT) ou un enregistrement de démarrage maître (MBR).
+
+Formatez la LUN avec un système de fichiers tel que ext4. Certaines applications ne nécessitent pas cette étape.
+
+.Étapes
+. Récupérez l'ID SCSI du disque mappé en émettant le `sanlun lun show -p` commande.
++
+L'ID SCSI est une chaîne de 33 caractères hexadécimaux, commençant par le nombre 3. Si les noms conviviaux sont activés, Device Mapper signale les disques comme mpath au lieu d'un ID SCSI.
+
++
+[listing]
+----
+# sanlun lun show -p
+
+                E-Series Array: ictm1619s01c01-SRP(60080e50002908b40000000054efb9d2)
+                   Volume Name:
+               Preferred Owner: Controller in Slot B
+                 Current Owner: Controller in Slot B
+                          Mode: RDAC (Active/Active)
+                       UTM LUN: None
+                           LUN: 116
+                      LUN Size:
+                       Product: E-Series
+                   Host Device: mpathr(360080e50004300ac000007575568851d)
+              Multipath Policy: round-robin 0
+            Multipath Provider: Native
+--------- ---------- ------- ------------ ----------------------------------------------
+host      controller                      controller
+path      path       /dev/   host         target
+state     type       node    adapter      port
+--------- ---------- ------- ------------ ----------------------------------------------
+up        secondary  sdcx    host14       A1
+up        secondary  sdat    host10       A2
+up        secondary  sdbv    host13       B1
+----
+. Créez une nouvelle partition selon la méthode appropriée à votre version de Linux OS.
++
+En général, les caractères identifiant la partition d'un disque sont ajoutés à l'ID SCSI (numéro 1 ou p3 par exemple).
+
++
+[listing]
+----
+# parted -a optimal -s -- /dev/mapper/360080e5000321bb8000092b1535f887a mklabel
+gpt mkpart primary ext4 0% 100%
+----
+. Créez un système de fichiers sur la partition.
++
+La méthode de création d'un système de fichiers varie en fonction du système de fichiers choisi.
+
++
+[listing]
+----
+# mkfs.ext4 /dev/mapper/360080e5000321bb8000092b1535f887a1
+----
+. Créez un dossier pour monter la nouvelle partition.
++
+[listing]
+----
+# mkdir /mnt/ext4
+----
+. Montez la partition.
++
+[listing]
+----
+# mount /dev/mapper/360080e5000321bb8000092b1535f887a1 /mnt/ext4
+----
+

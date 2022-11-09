@@ -1,0 +1,346 @@
+---
+permalink: maintenance-e5700/hics-add-supertask-task.html 
+sidebar: sidebar 
+keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
+summary: Ajouter une HIC dans un système E5700. 
+---
+= Ajouter une carte d'interface hôte E5700 (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter une carte d'interface hôte (HIC) aux boîtiers de contrôleur E5700 avec des ports hôtes de base. Cette fonctionnalité augmente le nombre de ports hôtes dans votre baie de stockage et offre des protocoles hôtes supplémentaires.
+
+Lorsque vous ajoutez des HIC, vous devez mettre hors tension la baie de stockage, installer la HIC et mettre de nouveau l'alimentation.
+
+.Avant de commencer
+* Révision link:hics-overview-supertask-concept.html["Conditions requises pour le remplacement de la carte E5700 HIC"].
+* Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
+* Nouveau matériel hôte installé pour les nouveaux ports hôte, tels que les commutateurs ou les adaptateurs de bus hôte (HBA).
+* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports hôte.
++
+Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] et le http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Un tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : préparez-vous à ajouter HIC
+
+Préparez-vous à ajouter une HIC en sauvegardant la base de données de configuration de la baie de stockage, en collectant les données de prise en charge et en arrêtant les opérations d'E/S de l'hôte. Ensuite, vous pouvez mettre le tiroir contrôleur hors tension.
+
+.Étapes
+. Dans la page d'accueil de SANtricity System Manager, assurez-vous que la baie de stockage affiche un état optimal.
++
+Si le statut n'est pas optimal, utilisez le gourou de la restauration ou contactez le support technique pour résoudre le problème. Ne pas poursuivre cette procédure.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient au cours de cette procédure, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+Si un problème survient au cours de cette procédure, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pendant les opérations d'E/S, l'application hôte risque de perdre l'accès aux données car le stockage n'est pas accessible.
+
+
+
+. Si la baie de stockage participe à une relation de mise en miroir, arrêtez toutes les opérations d'E/S hôte sur la baie de stockage secondaire.
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic avec led cache texte associé maint e5700]
+
++
+*(1)* _cache LED active_
+
+. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Met le tiroir contrôleur hors tension.
++
+.. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.
+.. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+
+
+
+
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Retirez le boîtier du contrôleur pour ajouter la nouvelle HIC.
+
+.Étapes
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic avec led cache texte associé maint e5700]
+
++
+*(1)* _cache LED active_
+
+. Appuyez sur le loquet de la poignée de came jusqu'à ce qu'il se libère, puis ouvrez la poignée de came vers la droite pour libérer le boîtier du contrôleur de la tablette.
++
+La figure suivante présente un tiroir contrôleur E5724 :
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
++
+La figure suivante présente un exemple de tiroir contrôleur E5760 :
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. A l'aide de deux mains et de la poignée de came, faites glisser le boîtier du contrôleur hors de la tablette.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+Si vous retirez le boîtier du contrôleur d'un shelf contrôleur E5724, un rabat se met en place pour bloquer la baie vide, ce qui contribue à maintenir le débit d'air et le refroidissement.
+
+. Retournez le boîtier du contrôleur afin que le capot amovible soit orienté vers le haut.
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+== Étape 3 : installer une HIC
+
+Installez la carte d'interface hôte (HIC) pour augmenter le nombre de ports hôtes dans votre baie de stockage.
+
+
+CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur E5700 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, si vous disposez d'une configuration duplex, les deux contrôleurs et les deux circuits intégrés doivent être identiques. La présence de circuits intégrés incompatibles ou non concordants entraînera le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+.Étapes
+. Déballez la nouvelle HIC et la nouvelle plaque HIC.
+. Appuyez sur le bouton situé sur le couvercle du boîtier du contrôleur et faites glisser le couvercle pour le retirer.
+. Vérifiez que le voyant vert à l'intérieur du contrôleur (par les DIMM) est éteint.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+
++
+*(1)* _cache interne actif_
+
++
+*(2)* _batterie_
+
+. À l'aide d'un tournevis cruciforme n° 1, retirez les quatre vis qui fixent le cache blanc au boîtier du contrôleur, puis retirez le cache.
+. Alignez les trois vis moletées de la HIC avec les trous correspondants du contrôleur, puis alignez le connecteur situé au bas de la HIC avec le connecteur d'interface HIC de la carte contrôleur.
++
+Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
+
+. Abaisser avec précaution la HIC et mettre le connecteur HIC en place en appuyant doucement sur la HIC.
++
+
+CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+
++
+*(1)* _carte d'interface hôte (HIC)_
+
++
+*(2)* _vis_
+
+. Serrez les vis à molette HIC à la main.
++
+N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
+
+. À l'aide d'un tournevis cruciforme n° 1, fixez la nouvelle carte HIC sur le boîtier du contrôleur à l'aide des quatre vis que vous avez retirées précédemment.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+
+
+
+
+
+== Étape 4 : réinstallez le boîtier du contrôleur
+
+Réinstaller le boîtier du contrôleur dans le shelf contrôleur après avoir installé la nouvelle HIC.
+
+.Étapes
+. Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
+. Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
++
+La figure suivante présente un tiroir contrôleur E5724 :
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
++
+La figure suivante présente un exemple de tiroir contrôleur E5760 :
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. Déplacez la poignée de came vers la gauche pour verrouiller le boîtier du contrôleur en place.
+. Rebranchez tous les câbles que vous avez retirés.
++
+
+CAUTION: Ne connectez pas les câbles de données aux nouveaux ports HIC pour le moment.
+
+. (Facultatif) si vous ajoutez des HIC à une configuration duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur, installer la deuxième HIC et réinstaller le second boîtier de contrôleur.
+
+
+
+
+== Étape 5 : ajout complet de HIC
+
+Vérifier les LED du contrôleur et l'affichage à sept segments, puis vérifier que l'état du contrôleur est optimal.
+
+.Étapes
+. Allumer les deux boutons d'alimentation à l'arrière du tiroir contrôleur.
++
+** N'éteignez pas les interrupteurs d'alimentation pendant le processus de mise sous tension, qui dure généralement 90 secondes ou moins.
+** Les ventilateurs de chaque shelf sont très bruyants lors du premier démarrage. Le bruit est normal au démarrage.
+
+
+. Au démarrage du contrôleur, vérifier les LED du contrôleur et l'affichage à sept segments.
++
+** L'affichage à sept segments montre la séquence répétée *OS*, *SD*, *_blank_* pour indiquer que le contrôleur exécute le traitement début de journée (SOD). Une fois qu'un contrôleur a démarré avec succès, son affichage à sept segments doit afficher l'ID du bac.
+** Le voyant d'avertissement orange du contrôleur s'allume puis s'éteint, à moins qu'une erreur ne s'affiche.
+** Les voyants verts Host Link restent éteints jusqu'à ce que vous connectiviez les câbles hôte.
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 symboles maint e5700]
+
++
+*(1)* _LED Host Link_
+
++
+*(2)* _voyant attention (orange)_
+
++
+*(3)* _affichage à sept segments_
+
+
+
+. Dans SANtricity System Manager, vérifier que l'état du contrôleur est optimal
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que la HIC et le boîtier du contrôleur sont correctement installés. Au besoin, déposer et réinstaller le boîtier du contrôleur et le HIC.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si les nouveaux ports HIC nécessitent des émetteurs-récepteurs SFP+, installez ces SFP.
+. Si vous avez installé une HIC avec des ports SFP+ (optiques), vérifiez que les nouveaux ports disposent du protocole hôte souhaité.
++
+.. Dans le Gestionnaire système SANtricity, sélectionnez *matériel*.
+.. Si le graphique montre les lecteurs, cliquez sur *Afficher le verso du tiroir*.
+.. Sélectionnez le graphique pour le contrôleur A ou le contrôleur B.
+.. Sélectionnez *Afficher les paramètres* dans le menu contextuel.
+.. Sélectionnez l'onglet *Host interfaces*.
+.. Cliquez sur *Afficher plus de paramètres*.
+.. Passez en revue les détails indiqués pour les ports HIC (les ports marqués *e0__x_* ou *0__x_* dans l'emplacement HIC *slot 1*) pour déterminer si vous êtes prêt à connecter les ports hôtes aux hôtes de données :
++
+*** _Si les nouveaux ports HIC ont le protocole attendu_:
++
+Vous êtes prêt à connecter les nouveaux ports HIC aux hôtes de données ; passez à l'étape suivante.
+
+*** _Si les nouveaux ports HIC ne possèdent pas *le protocole attendu_:
++
+Vous devez appliquer un pack de fonctions logicielles avant de pouvoir connecter les nouveaux ports HIC aux hôtes de données. Voir link:hpp-change-host-protocol-task.html["Modifiez le protocole hôte E5700"]. Ensuite, connectez les ports hôtes aux hôtes de données et reprenez les opérations.
+
+
+
+
+
+. Connectez les câbles des ports hôtes du contrôleur aux hôtes de données.
++
+Si vous avez besoin d'instructions pour configurer et utiliser un nouveau protocole hôte, reportez-vous au link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+
+
+
+L'ajout d'une carte d'interface hôte à votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

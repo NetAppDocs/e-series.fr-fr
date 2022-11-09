@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-provisioning-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez créer des conteneurs de données, appelés volumes, afin que l"hôte puisse accéder au stockage sur la baie.' 
+---
+= Présentation du provisionnement
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dans le plug-in de stockage pour vCenter, vous pouvez créer des conteneurs de données, appelés volumes, afin que l'hôte puisse accéder au stockage sur la baie.
+
+
+
+== Types et caractéristiques des volumes
+
+Les volumes sont des conteneurs de données qui gèrent et organisent l'espace de stockage sur votre baie de stockage.
+
+Vous créez des volumes à partir de la capacité de stockage disponible sur votre matrice de stockage, ce qui vous aide à organiser les ressources de votre système. Le concept de "volumes" est similaire à l'utilisation de dossiers/répertoires sur un ordinateur pour organiser des fichiers pour un accès rapide.
+
+Les volumes sont la seule couche de données visible par les hôtes. Dans un environnement SAN, les volumes sont mappés à des LUN (Logical Unit Numbers). Ces LUN tiennent les données utilisateur accessibles via un ou plusieurs protocoles d'accès hôte pris en charge par la baie de stockage, y compris FC, iSCSI et SAS.
+
+Chaque volume d'un pool ou d'un groupe de volumes peut présenter ses propres caractéristiques, en fonction du type de données qui seront stockées. Parmi ces caractéristiques, on compte :
+
+* *Taille de segment* -- Un segment correspond à la quantité de données en kilo-octets (Kio) stockée sur un lecteur avant que la matrice de stockage ne passe au lecteur suivant de la bande (groupe RAID). La taille du segment est égale ou inférieure à la capacité du groupe de volumes. La taille du segment est fixe et ne peut pas être modifiée pour les pools.
+* *Capacity* -- vous créez un volume à partir de la capacité disponible dans un pool ou un groupe de volumes. Avant de créer un volume, le pool ou le groupe de volumes doit déjà exister et il doit disposer de suffisamment de capacité disponible pour créer le volume.
+* *Propriété de contrôleur* -- toutes les matrices de stockage peuvent avoir un ou deux contrôleurs. Sur une baie à un seul contrôleur, la charge de travail d'un volume est gérée par un seul contrôleur. Sur une baie à double contrôleur, un volume possède un contrôleur préféré (A ou B) qui « possède » le volume. Dans une configuration à double contrôleur, la propriété des volumes est automatiquement ajustée à l'aide de la fonctionnalité d'équilibrage automatique de la charge pour corriger tout problème d'équilibrage de la charge lors du transfert des charges de travail entre les contrôleurs. L'équilibrage de charge automatique assure l'équilibrage automatique de la charge d'E/S et garantit que le trafic d'E/S entrantes depuis les hôtes est géré et équilibré de manière dynamique entre les deux contrôleurs.
+* *Affectation de volume* -- vous pouvez donner aux hôtes l'accès à un volume lorsque vous créez le volume ou ultérieurement. Tout accès aux hôtes est géré par un numéro d'unité logique (LUN). Les hôtes détectent les LUN qui sont, de leur tour, attribuées aux volumes. Si vous affectez un volume à plusieurs hôtes, utilisez un logiciel de mise en cluster pour vous assurer que le volume est disponible pour tous les hôtes.
++
+Le type d'hôte peut avoir des limites spécifiques sur le nombre de volumes accessibles par l'hôte. Gardez cette limitation à l'esprit lorsque vous créez des volumes pour une utilisation par un hôte spécifique.
+
+* *Provisionnement de ressources* -- pour les baies de stockage EF600 ou EF300, vous pouvez spécifier que les volumes doivent être utilisés immédiatement sans processus d'initialisation en arrière-plan. Un volume provisionné en ressources est un volume non volumineux dans un groupe ou un pool de volumes SSD : la capacité de disque est allouée (affectée au volume) lors de la création du volume, mais la désallocation des blocs de disques est effectuée (non mappée).
+* *Nom descriptif* -- vous pouvez nommer un volume quel que soit votre nom, mais nous vous recommandons de rendre le nom descriptif.
+
+
+Lors de la création du volume, la capacité allouée à chaque volume est attribuée à un nom, une taille de segment (groupes de volumes uniquement), la propriété du contrôleur et l'affectation volume à hôte. Les données de volume font automatiquement l'objet d'un équilibrage de charge entre les contrôleurs, selon les besoins.
+
+
+
+== Capacité pour les volumes
+
+Les lecteurs de votre matrice de stockage fournissent la capacité de stockage physique de vos données. Avant de commencer à stocker des données, vous devez configurer la capacité allouée dans des composants logiques appelés pools ou groupes de volumes. Ces objets de stockage vous permettent de configurer, de stocker, de maintenir et de préserver les données de votre matrice de stockage.
+
+
+
+=== Capacité à créer et étendre des volumes
+
+Vous pouvez créer des volumes à partir de la capacité non affectée ou de la capacité disponible dans un pool ou un groupe de volumes.
+
+* Lorsque vous créez un volume à partir de capacité non allouée, vous pouvez créer un pool ou un groupe de volumes et le volume en même temps.
+* Lorsque vous créez un volume à partir de la capacité disponible, vous créez un volume supplémentaire sur un pool ou un groupe de volumes existant.après avoir augmenté la capacité du volume, vous devez augmenter manuellement la taille du système de fichiers pour qu'elle corresponde. La façon dont vous faites cela dépend du système de fichiers que vous utilisez. Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+NOTE: L'interface du plug-in ne fournit pas d'option pour créer des volumes fins.
+
+
+
+=== Capacité signalée pour les volumes
+
+La capacité indiquée du volume correspond à la quantité de capacité de stockage physique allouée. L'intégralité de la capacité de stockage physique doit être présente. L'espace physiquement alloué est égal à l'espace signalé à l'hôte.
+
+Vous définissez normalement la capacité indiquée du volume comme étant la capacité maximale à laquelle le volume augmentera. Leurs volumes fournissent des performances élevées et prévisibles pour vos applications principalement parce que toute la capacité utilisateur est réservée et allouée au moment de la création.
+
+
+
+=== Limites de capacité
+
+La capacité minimale d'un volume est de 1 Mio, et la capacité maximale est déterminée par le nombre et la capacité des disques du pool ou du groupe de volumes.
+
+Lorsque vous augmentez la capacité indiquée pour un volume, gardez les consignes suivantes à l'esprit :
+
+* Vous pouvez indiquer jusqu'à trois décimales (par exemple, 65.375 Gio).
+* La capacité doit être inférieure (ou égale à) à la capacité maximale disponible dans le groupe de volumes. Lorsque vous créez un volume, une certaine capacité supplémentaire est pré-allouée à la migration DSS (Dynamic segment Size). La migration DSS est une fonction du logiciel qui vous permet de modifier la taille du segment d'un volume.
+* Les volumes supérieurs à 2 Tio sont pris en charge par certains systèmes d'exploitation hôtes (la capacité maximale signalée est déterminée par le système d'exploitation hôte). En réalité, certains systèmes d'exploitation hôtes prennent en charge des volumes jusqu'à 128 To. Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+
+== Charges de travail spécifiques aux applications
+
+Lors de la création d'un volume, vous sélectionnez une charge de travail pour personnaliser la configuration de la matrice de stockage d'une application spécifique.
+
+Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application. Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.
+
+Lors de la création du volume, le système vous invite à répondre à des questions sur l'utilisation d'une charge de travail. Par exemple, si vous créez des volumes pour Microsoft Exchange, vous devez connaître le nombre de boîtes aux lettres dont vous avez besoin, les besoins moyens de vos boîtes aux lettres et le nombre de copies de la base de données que vous souhaitez. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins. Vous pouvez également ignorer cette étape dans la séquence de création du volume.
+
+
+
+=== Types de charges de travail
+
+Vous pouvez créer deux types de charges de travail : spécifique à l'application et autres.
+
+* *Spécifique à l'application* -- lorsque vous créez des volumes à l'aide d'une charge de travail spécifique à l'application, le système peut recommander une configuration de volume optimisée pour minimiser les conflits entre les E/S de la charge de travail de l'application et tout autre trafic à partir de votre instance d'application. Les caractéristiques de volume comme le type d'E/S, la taille de segment, la propriété des contrôleurs et le cache de lecture et d'écriture sont automatiquement recommandées et optimisées pour les charges de travail créées pour les types d'applications suivants.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Applications de vidéosurveillance
+** VMware ESXi (pour les volumes à utiliser avec le système de fichiers des ordinateurs virtuels)
++
+Vous pouvez revoir la configuration de volume recommandée et modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système à l'aide de la boîte de dialogue Ajouter/Modifier des volumes.
+
+
+
+* *Autres (ou applications sans support de création de volume spécifique)* -- D'autres charges de travail utilisent une configuration de volume que vous devez spécifier manuellement lorsque vous souhaitez créer une charge de travail qui n'est pas associée à une application spécifique ou si le système ne dispose pas d'une optimisation intégrée pour l'application que vous prévoyez d'utiliser sur la baie de stockage. Vous devez spécifier manuellement la configuration du volume à l'aide de la boîte de dialogue Ajouter/Modifier des volumes.
+
+
+
+
+=== Vues d'applications et de workloads
+
+Pour afficher les applications et les charges de travail, lancez System Manager. Dans cette interface, vous pouvez afficher les informations associées à une charge de travail spécifique aux applications de deux manières différentes :
+
+* Vous pouvez sélectionner l'onglet applications et charges de travail de la mosaïque volumes pour afficher les volumes de la baie de stockage regroupés par charge de travail et le type d'application auquel la charge de travail est associée.
+* Vous pouvez sélectionner l'onglet applications et charges de travail de la mosaïque Performance pour afficher les indicateurs de performance (latence, opérations d'entrée/sortie par seconde et Mo) des objets logiques. Les objets sont regroupés par application et charge de travail associée. En recueillant ces données de performances à intervalles réguliers, vous pouvez établir les mesures de base et analyser les tendances, ce qui peut vous aider à étudier les problèmes liés aux performances d'E/S.
+

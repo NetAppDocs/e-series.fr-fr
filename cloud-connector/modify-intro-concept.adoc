@@ -1,0 +1,134 @@
+---
+permalink: cloud-connector/modify-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector settings 
+summary: 'Vous pouvez accéder à l"option Paramètres dans le panneau de navigation de gauche de l"application SANtricity Cloud Connector. L"option Paramètres permet de modifier les configurations actuelles de l"application pour le compte S3, les baies de stockage gérées et les hôtes, ainsi que les informations d"identification Web Services Proxy. Vous pouvez également modifier le mot de passe de l"application SANtricity Cloud Connector via l"option Paramètres.' 
+---
+= Modifiez les paramètres de SANtricity Cloud Connector
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'option Paramètres permet de modifier les configurations actuelles de l'application pour le compte S3, les baies de stockage gérées et les hôtes, ainsi que les informations d'identification Web Services Proxy. Vous pouvez également modifier le mot de passe de l'application SANtricity Cloud Connector via l'option Paramètres.
+
+
+
+== Modifiez les paramètres de compte S3
+
+Vous pouvez modifier les paramètres S3 de l'application SANtricity Cloud Connector dans la fenêtre Paramètres des comptes S3.
+
+Lorsque vous modifiez les paramètres d'URL ou d'étiquette du compartiment S3, notez que l'accès aux sauvegardes existantes configurées via le connecteur cloud SANtricity est affecté.
+
+.Étapes
+. Dans la barre d'outils de gauche, cliquez sur *Paramètres > Configuration*.
++
+La page Paramètres - Configuration s'affiche.
+
+. Cliquez sur *Afficher/Modifier les paramètres* pour les paramètres de compte S3.
++
+La page Paramètres du compte S3 s'affiche.
+
+. Dans le fichier URL, entrez l'URL du service cloud S3.
+. Dans le champ *ID de clé d'accès*, saisissez l'ID d'accès pour la cible S3.
+. Dans le champ *clé d'accès secrète*, saisissez la clé d'accès pour la cible S3.
+. Dans le champ *S3 Bucket Name*, entrez le nom du compartiment pour la cible S3.
+. Cochez la case *utiliser accès au style de chemin* si nécessaire.
+. Cliquez sur *Tester la connexion* pour vérifier la connexion pour les informations d'identification S3 saisies.
+. Cliquez sur *Enregistrer* pour appliquer les modifications.
++
+Les paramètres des comptes S3 modifiés sont appliqués.
+
+
+
+
+
+== Gérez les baies de stockage
+
+Vous pouvez ajouter ou supprimer des matrices de stockage du proxy de services Web enregistré sur l'hôte SANtricity Cloud Connector à la page gérer les matrices de stockage.
+
+La page gérer les matrices de stockage affiche la liste des matrices de stockage du proxy de services Web disponible pour l'enregistrement avec l'hôte SANtricity Cloud Connector.
+
+.Étapes
+. Dans la barre d'outils de gauche, cliquez sur *Paramètres > matrices de stockage*.
++
+L'écran Paramètres - matrices de stockage s'affiche.
+
+. Pour ajouter des matrices de stockage au connecteur de Cloud SANtricity, cliquez sur *Ajouter*.
++
+.. Dans la fenêtre Ajouter des matrices de stockage, cochez chaque case en regard des matrices de stockage souhaitées dans la liste des résultats.
+.. Cliquez sur *Ajouter*.
++
+La matrice de stockage sélectionnée est ajoutée au connecteur de nuage SANtricity et s'affiche dans la section liste des résultats de l'écran Paramètres - matrices de stockage.
+
+
+
+. Pour modifier l'hôte d'une matrice de stockage ajoutée, cliquez sur *Modifier* pour l'élément de ligne dans la section liste des résultats de l'écran Paramètres - matrices de stockage.
++
+.. Dans le menu déroulant hôte associé, sélectionnez l'hôte souhaité pour la matrice de stockage.
+.. Cliquez sur *Enregistrer*.
++
+L'hôte sélectionné est affecté à la matrice de stockage.
+
+
+
+. Pour supprimer une matrice de stockage existante de l'hôte SANtricity Cloud Connector, sélectionnez les matrices de stockage souhaitées dans la liste des résultats inférieure, puis cliquez sur *Supprimer*.
++
+.. Dans le champ confirmer la suppression de la matrice de stockage, saisissez `REMOVE`.
+.. Cliquez sur *Supprimer*.
++
+La matrice de stockage sélectionnée est supprimée de l'hôte SANtricity Cloud Connector.
+
+
+
+
+
+
+
+== Modifier les paramètres du proxy de services Web
+
+Vous pouvez modifier les paramètres proxy de services Web existants pour l'application SANtricity Cloud Connector dans la fenêtre Paramètres proxy de services Web.
+
+Le proxy de services Web utilisé avec SANtricity Cloud Connector doit être ajouté aux baies appropriées et définir le mot de passe correspondant.
+
+.Étapes
+. Dans la barre d'outils de gauche, cliquez sur *menu:Paramètres[Configuration]*.
++
+L'écran Paramètres - Configuration s'affiche.
+
+. Cliquez sur *Afficher/Modifier les paramètres* pour le proxy de services Web.
++
+L'écran Paramètres du proxy de services Web s'affiche.
+
+. Dans le champ URL, entrez l'URL du proxy de services Web utilisé pour SANtricity Cloud Connector.
+. Dans le champ Nom d'utilisateur, entrez le nom d'utilisateur de la connexion Web Services Proxy.
+. Dans le champ Mot de passe, entrez le mot de passe de la connexion Web Services Proxy.
+. Cliquez sur *Tester la connexion* pour vérifier la connexion pour les informations d'identification proxy de services Web saisies.
+. Cliquez sur *Enregistrer* pour appliquer les modifications.
+
+
+
+
+== Modifiez le mot de passe de SANtricity Cloud Connector
+
+Vous pouvez modifier le mot de passe de l'application SANtricity Cloud Connector dans l'écran Modifier le mot de passe.
+
+.Étapes
+. Dans la barre d'outils de gauche, cliquez sur *menu:Paramètres[Configuration]*.
++
+L'écran Paramètres - Configuration s'affiche.
+
+. Cliquez sur *Modifier le mot de passe* pour SANtricity Cloud Connector.
++
+L'écran Modifier le mot de passe s'affiche.
+
+. Dans le champ Mot de passe actuel, entrez le mot de passe actuel de l'application SANtricity Cloud Connector.
+. Dans le champ Nouveau mot de passe, saisissez votre nouveau mot de passe pour l'application SANtricity Cloud Connector.
+. Dans le champ confirmer le nouveau mot de passe, saisissez à nouveau le nouveau mot de passe.
+. Cliquez sur *Modifier* pour appliquer le nouveau mot de passe.
++
+Le mot de passe modifié est appliqué à l'application SANtricity Cloud Connector.
+
+

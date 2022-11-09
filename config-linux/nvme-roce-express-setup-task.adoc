@@ -1,0 +1,14 @@
+---
+permalink: config-linux/nvme-roce-express-setup-task.html 
+sidebar: sidebar 
+keywords: nvme, rdma, converge, ethernet, roce, network, protocol, express, setup 
+summary: 'Vous pouvez utiliser NVMe avec le protocole réseau RDMA over Converged Ethernet \(RoCE\).' 
+---
+= Configuration NVMe over RoCE Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser NVMe avec le protocole réseau RDMA over Converged Ethernet (RoCE).

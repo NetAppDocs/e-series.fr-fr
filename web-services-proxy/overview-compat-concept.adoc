@@ -1,0 +1,61 @@
+---
+permalink: web-services-proxy/overview-compat-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Compatibilité et restrictions pour WSP. 
+---
+= Compatibilité et restrictions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La compatibilité et les restrictions suivantes s'appliquent à l'utilisation du proxy de services Web.
+
+|===
+| Réflexion | Compatibilité ou restriction 
+
+
+ a| 
+Prise en charge HTTP
+ a| 
+Le proxy de services Web permet l'utilisation de HTTP ou HTTPS. (La version intégrée des services Web nécessite HTTPS pour des raisons de sécurité.)
+
+
+
+ a| 
+Firmwares et systèmes de stockage
+ a| 
+Le proxy de services Web peut gérer tous les systèmes de stockage E-Series, notamment des systèmes plus anciens et les tout derniers modèles E2800, EF280, E5700, EF570, EF300, Et les systèmes EF600.
+
+
+
+ a| 
+Prise en charge IP
+ a| 
+Le proxy de services Web prend en charge le protocole IPv4 ou IPv6.
+
+
+NOTE: Le protocole IPv6 peut échouer lorsque le proxy de services Web tente de détecter automatiquement l'adresse de gestion à partir de la configuration du contrôleur. Les causes possibles de cette défaillance incluent les problèmes lors du transfert d'adresse IP ou de l'activation d'IPv6 sur les systèmes de stockage, mais pas sur le serveur.
+
+
+
+ a| 
+Contraintes de nom de fichier NVSRAM
+ a| 
+Le proxy de services Web utilise les noms de fichiers NVSRAM pour identifier précisément les informations de version. Par conséquent, vous ne pouvez pas modifier les noms de fichier NVSRAM lorsqu'ils sont utilisés avec le proxy de services Web. Il se peut que le proxy des services Web ne reconnaisse pas un fichier NVSRAM renommé comme un fichier de micrologiciel valide.
+
+
+
+ a| 
+Symbol Web
+ a| 
+Symbol Web est une URL dans l'API REST. Il permet d'accéder à presque tous les appels de symboles. La fonction de symbole fait partie de l'URL suivante :
+
+`+http://host:port/devmgr/storage-system/storage array ID/symbol/symbol function+`
+
+
+NOTE: Les systèmes de stockage désactivés par Symbol sont pris en charge via Web Services Proxy.
+
+|===

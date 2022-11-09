@@ -1,0 +1,73 @@
+---
+permalink: config-windows/configure-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, configure LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Configurer le stockage sur l"hôte pour la méthode Windows Express.' 
+---
+= Configurer le stockage sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comme une nouvelle LUN est hors ligne et n'a pas de partition ou de système de fichiers lorsqu'un hôte Windows le détecte pour la première fois, vous devez mettre le volume en ligne et l'initialiser dans Windows. Vous pouvez éventuellement formater la LUN avec un système de fichiers.
+
+Vous pouvez initialiser le disque en tant que disque de base avec une table de partition GPT ou MBR. En général, le format de la LUN est utilisé avec un système de fichiers tel que NTFS (New Technology File System).
+
+LUN détectée par l'hôte.
+
+.Étapes
+. À partir d'une invite de commande Windows, entrez le `diskpart` contexte.
++
+[listing]
+----
+> diskpart
+----
+. Afficher la liste des disques disponibles.
++
+[listing]
+----
+> list disk
+----
+. Sélectionnez le disque à mettre en ligne.
++
+[listing]
+----
+> select disk 1
+----
+. Mettre le disque en ligne.
++
+[listing]
+----
+> online disk
+----
+. Créer une partition.
++
+[listing]
+----
+> create partition primary
+----
++
+
+NOTE: Dans Windows Server 2008 et versions ultérieures, vous êtes invité immédiatement après la création de la partition à formater le disque et à lui donner un nom. Sélectionnez *Annuler* à l'invite pour continuer à utiliser ces instructions pour formater et nommer la partition.
+
+. Attribuez une lettre de lecteur.
++
+[listing]
+----
+> assign letter=f
+----
+. Formatez le disque.
++
+[listing]
+----
+> format FS=NTFS LABEL=”New Volume” QUICK
+----
+. Quitter le contexte diskpart.
++
+[listing]
+----
+> exit
+----
+

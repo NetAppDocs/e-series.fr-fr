@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-prepare-task.html 
+sidebar: sidebar 
+keywords: e5724, ef570, ef280, e2812, e2824, de212c, de224c, installation 
+summary: Pour installer les systèmes E5724, EF570, EF280, E2812, E2824, DE212C ou DE224C, créez un compte et enregistrez votre matériel. 
+---
+= Avant l'installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment vous préparer à installer les systèmes E5724, EF570, EF280, E2812, E2824, Système de stockage DE212C ou DE224C.
+
+.Étapes
+. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Assurez-vous que les éléments suivants se trouvent dans la boîte que vous avez reçue.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Tiroir avec disques installés (panneau vendu séparément)
+
+
+
+ a| 
+image:../media/superrails_inst-hw-e2800-e5700.png[""]
+ a| 
+Matériel de montage en rack
+
+|===
++
+Le tableau suivant identifie les types de câbles que vous pouvez recevoir. Si vous recevez un câble non répertorié dans le tableau, reportez-vous à la section https://hwu.netapp.com/["Hardware Universe"^] pour localiser le câble et identifier son utilisation.
+
++
+|===
+| Type de connecteur | Type de câble | Utiliser 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles Ethernet
+
+(si commandé)
+ a| 
+Connexion de gestion
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles d'E/S.
+
+(si commandé)
+ a| 
+Câblage des hôtes de données
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles d'alimentation
+
+(si commandé)
+ a| 
+Mise sous tension du système de stockage
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+Câbles SAS inclus uniquement avec les tiroirs disques
+ a| 
+Câbles SAS
+
+|===
+. Assurez-vous de fournir les éléments suivants.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Tournevis Phillips n°2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Lampe de poche
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+Bracelet ESD
+
+
+
+ a| 
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+ a| 
+Espace rack 2U : configuration standard de 19 pouces (48.30 cm) rack permettant d'installer les étagères 2U des dimensions suivantes.
+
+*Profondeur*: 19.0 po. (48.3 cm)
+
+*Largeur*: 17.6 po. (44.7 cm)
+
+*Hauteur*: 3.34 po. (8.48 cm)
+
+*Tiroir* : 24 disques
+
+*Poids max*: 60.5 lb (27.4 kg)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Navigateur pris en charge pour le logiciel de gestion :
+
+** Google Chrome (version 78 et ultérieure)
+** Microsoft Internet Explorer (version 11 et ultérieure)
+** Microsoft Edge (88 et versions ultérieures)
+** Mozilla Firefox (version 70 et ultérieure)
+** Safari (version 12 et ultérieure)
+
+
+|===
+

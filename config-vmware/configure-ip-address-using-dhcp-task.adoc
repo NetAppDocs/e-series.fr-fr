@@ -1,0 +1,48 @@
+---
+permalink: config-vmware/configure-ip-address-using-dhcp-task.html 
+sidebar: sidebar 
+keywords: IP address, DHCP, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Utilisez le protocole Dynamic Host Configuration Protocol \(DHCP\) pour fournir des adresses IP dans la méthode VMware express.' 
+---
+= Configurez les adresses IP à l'aide de DHCP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour configurer les communications entre la station de gestion et la matrice de stockage, utilisez le protocole DHCP (Dynamic Host Configuration Protocol) pour fournir des adresses IP.
+
+Un serveur DHCP installé et configuré sur le même sous-réseau que les ports de gestion du stockage.
+
+Chaque baie de stockage dispose d'un contrôleur (simplex) ou de deux contrôleurs (duplex), et chaque contrôleur dispose de deux ports de gestion du stockage. Une adresse IP est attribuée à chaque port de gestion.
+
+Les instructions suivantes se rapportent à une matrice de stockage dotée de deux contrôleurs (configuration duplex).
+
+.Étapes
+. Si ce n'est déjà fait, connectez un câble Ethernet à la station de gestion et au port de gestion 1 de chaque contrôleur (A et B).
++
+Le serveur DHCP attribue une adresse IP au port 1 de chaque contrôleur.
+
++
+
+NOTE: N'utilisez pas le port de gestion 2 sur l'un ou l'autre contrôleur. Le port 2 est réservé au personnel technique de NetApp.
+
++
+
+NOTE: Si vous déconnectez et reconnectez le câble Ethernet, ou si la matrice de stockage est mise hors/sous tension, DHCP attribue de nouveau des adresses IP. Ce processus se produit jusqu'à ce que les adresses IP statiques soient configurées. Il est recommandé d'éviter de débrancher le câble ou de mettre hors tension la matrice.
+
++
+Si la matrice de stockage ne parvient pas à obtenir les adresses IP attribuées par DHCP dans les 30 secondes, les adresses IP par défaut suivantes sont définies :
+
++
+** Contrôleur A, port 1: 169.254.128.101
+** Contrôleur B, port 1 : 169.254.128.102
+** Masque de sous-réseau : 255.255.0.0
+
+
+. Repérez l'étiquette d'adresse MAC située à l'arrière de chaque contrôleur, puis fournissez à votre administrateur réseau l'adresse MAC du port 1 de chaque contrôleur.
++
+Votre administrateur réseau a besoin des adresses MAC pour déterminer l'adresse IP de chaque contrôleur. Vous aurez besoin des adresses IP pour vous connecter à votre système de stockage via votre navigateur.
+
+

@@ -1,0 +1,355 @@
+---
+permalink: maintenance-e5700/batteries-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
+summary: 'Remplacement d"une batterie défectueuse dans un système de stockage E5700.' 
+---
+= Remplacer la batterie E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer une batterie défectueuse dans un système de stockage E5700.
+
+Chaque boîtier de contrôleur E5700 comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur. Si le gourou de la restauration de SANtricity System Manager indique un état « batterie défaillante » ou un état « remplacement de batterie requis », vous devez remplacer la batterie concernée.
+
+.Avant de commencer
+* Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+* Révision link:batteries-intro-concept.html["Conditions requises pour le remplacement de la batterie E5700"].
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Une batterie de rechange.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : mise hors ligne du contrôleur (duplex)
+
+Si vous disposez d'une configuration recto verso, mettez le contrôleur concerné hors ligne pour pouvoir retirer en toute sécurité la batterie défectueuse. Le contrôleur que vous ne mettez pas hors ligne doit être en ligne (dans l'état optimal).
+
+
+NOTE: Effectuez cette tâche uniquement si votre matrice de stockage dispose de deux contrôleurs (configuration duplex).
+
+.Étapes
+. Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité Recovery Guru qui confirme la présence d'un problème au niveau de la batterie et pour garantir qu'aucun autre élément ne doit être résolu en premier.
+. Dans la zone Details du Recovery Guru, déterminez la batterie à remplacer.
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les disques durs, sélectionnez *Afficher le verso du tiroir* pour afficher les contrôleurs.
+... Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
+... Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager à l'aide du contrôleur que vous tentez de mettre hors ligne, un message SANtricity System Manager indisponible s'affiche. Sélectionnez *connexion à une autre connexion réseau* pour accéder automatiquement au Gestionnaire système SANtricity à l'aide de l'autre contrôleur.
+
+
+
+** Vous pouvez également mettre les contrôleurs hors ligne en utilisant les commandes de l'interface de ligne de commandes suivantes :
++
+*Pour contrôleur A:* `set controller [a] availability=offline`
+
++
+*Pour le contrôleur B:* `set controller [b] availability=offline`
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+
+
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Avant de pouvoir retirer la batterie défectueuse, vous devez retirer le boîtier du contrôleur.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si les ports hôtes du boîtier du contrôleur utilisent des émetteurs-récepteurs SFP+, laissez-les installés.
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Appuyez sur le loquet de la poignée de came jusqu'à ce qu'il se libère, puis ouvrez la poignée de came vers la droite pour libérer le boîtier du contrôleur de la tablette.
++
+La figure suivante présente un tiroir contrôleur E5724 :
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
++
+La figure suivante présente un exemple de tiroir contrôleur E5760 :
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. A l'aide de deux mains et de la poignée de came, faites glisser le boîtier du contrôleur hors de la tablette.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+Si vous retirez le boîtier du contrôleur d'un shelf contrôleur E5724, un rabat se met en place pour bloquer la baie vide, ce qui contribue à maintenir le débit d'air et le refroidissement.
+
+. Retournez le boîtier du contrôleur afin que le capot amovible soit orienté vers le haut.
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+== Étape 3 : retirez la batterie défectueuse
+
+Après avoir retiré le boîtier du contrôleur du shelf, retirez la batterie.
+
+.Étapes
+. Retirez le couvercle du boîtier du contrôleur en appuyant sur le bouton et en faisant glisser le couvercle hors de celui-ci.
+. Vérifiez que le voyant vert à l'intérieur du contrôleur (entre la batterie et les modules DIMM) est éteint.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+
++
+*(1)* _LED active cache interne_
+
++
+*(2)* _batterie_
+
+. Repérez le loquet de dégagement bleu de la batterie.
+. Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 retirer le bloc-batterie e5700]
+
++
+*(1)* _loquet de dégagement de la batterie_
+
++
+*(2)* _batterie_
+
+. Soulevez la batterie et faites-la glisser hors du boîtier du contrôleur.
+. Suivez les procédures appropriées pour votre emplacement afin de recycler ou de mettre au rebut la batterie défectueuse.
++
+
+CAUTION: Pour se conformer aux réglementations IATA, n'expédiez jamais une batterie au lithium par avion à moins qu'elle ne soit installée sur le shelf contrôleur.
+
+
+
+
+
+== Étape 4 : installez une nouvelle batterie
+
+Après avoir retiré la batterie défectueuse, installez-en une neuve.
+
+.Étapes
+. Déballez la nouvelle batterie et placez-la sur une surface plane et sans électricité statique.
++
+
+NOTE: Conformément aux réglementations de sécurité IATA, les batteries de rechange sont livrées avec un état de charge (SoC) de 30 % ou moins. Lorsque vous réappliquez l'alimentation, n'oubliez pas que la mise en cache des écritures ne reprend pas tant que la batterie de remplacement n'est pas entièrement chargée et qu'elle a terminé son cycle d'apprentissage initial.
+
+. Orientez le boîtier du contrôleur de manière à ce que le logement de la batterie soit orienté vers vous.
+. Insérez la batterie dans le boîtier du contrôleur en l'inclinant légèrement vers le bas.
++
+Vous devez insérer la bride métallique située à l'avant de la batterie dans la fente située au bas du boîtier du contrôleur et faire glisser le haut de la batterie sous la petite goupille d'alignement située sur le côté gauche du boîtier.
+
+. Déplacez le loquet de la batterie vers le haut pour fixer la batterie.
++
+Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 insérez la pile dans le logement e5700]
+
++
+*(1)* _loquet de dégagement de la batterie_
+
++
+*(2)* _batterie_
+
+. Retournez le boîtier du contrôleur pour vérifier que la batterie est correctement installée.
++
+
+CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de la batterie doit être complètement insérée dans la fente du boîtier du contrôleur (comme illustré sur la première figure). Si la batterie n'est pas installée correctement (comme illustré sur la deuxième figure), la bride métallique risque de toucher la carte contrôleur, ce qui endommagerait le contrôleur lorsque vous mettez le système sous tension.
+
++
+** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+
+** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+
+
+
+
+
+
+
+== Étape 5 : réinstaller le boîtier du contrôleur
+
+Après avoir installé la nouvelle batterie, réinstallez le boîtier du contrôleur dans le shelf.
+
+.Étapes
+. Vous réinstallez le capot sur le boîtier du contrôleur en le faisant glisser de l'arrière vers l'avant jusqu'à ce que le bouton s'enclenche.
+. Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
+. Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. Déplacez la poignée de came vers la gauche pour verrouiller le boîtier du contrôleur en place.
+. Rebranchez tous les câbles.
+
+
+
+
+== Étape 6 : mise en ligne du contrôleur (duplex)
+
+Pour une configuration recto verso, placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.
+
+
+NOTE: Effectuez cette tâche uniquement si votre baie de stockage dispose de deux contrôleurs.
+
+.Étapes
+. Au démarrage du contrôleur, vérifier les LED du contrôleur et l'écran à sept segments.
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
++
+*(1)* _LED Host Link_
+
++
+*(2)* _voyant attention (orange)_
+
++
+*(3)* _affichage à sept segments_
+
+
+
+. Mettre le contrôleur en ligne à l'aide de SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les lecteurs, sélectionnez *Afficher le verso du tiroir*.
+... Sélectionnez le contrôleur que vous souhaitez placer en ligne.
+... Sélectionnez *placer en ligne* dans le menu contextuel et confirmez que vous souhaitez effectuer l'opération.
++
+Le système met le contrôleur en ligne.
+
+
+
+** Vous pouvez également mettre les contrôleurs en ligne à l'aide des commandes CLI suivantes :
++
+*Pour contrôleur A:* `set controller [a] availability=online;`
+
++
+*Pour le contrôleur B:* `set controller [b] availability=online;`
+
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et vérifiez que la batterie et le boîtier du contrôleur sont correctement installés. Si nécessaire, retirez et réinstallez le boîtier du contrôleur et la batterie.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si nécessaire, collectez les données d'assistance de votre baie de stockage à l'aide de SANtricity System Manager.
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.

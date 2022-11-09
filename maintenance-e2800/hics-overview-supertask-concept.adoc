@@ -1,0 +1,70 @@
+---
+permalink: maintenance-e2800/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace HIC, E2800 replace host interface card, replacing E2800 HIC, E2800 replace HIC, adding E2800 HIC, upgrading E2800 HIC, E2800, E-Series, eseries 
+summary: 'Consultez les conditions relatives au remplacement d"une HIC E2800.' 
+---
+= Conditions requises pour le remplacement de la carte HIC E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte (HIC) sur une baie E2800, vérifiez les conditions et les points à prendre en compte.
+
+
+
+== Présentation de la procédure
+
+Les étapes à suivre pour remplacer une HIC dépendent de la présence d'un ou de deux contrôleurs, comme suit :
+
+|===
+| Si votre baie de stockage dispose de... | Vous devez... 
+
+
+ a| 
+Un contrôleur (E2812 ou E2824 simplex)
+ a| 
+. Arrêt des opérations d'E/S hôte
+. Met le tiroir contrôleur hors tension
+. Déposer le boîtier du contrôleur
+. Remplacer la batterie
+. Remplacez le boîtier du contrôleur
+. Mettez le tiroir contrôleur sous tension
+
+
+
+
+ a| 
+Deux contrôleurs (E2860, E2812 ou E2824 duplex)
+ a| 
+. Mettre le contrôleur hors ligne
+. Déposer le boîtier du contrôleur
+. Remplacer la batterie
+. Remplacez le boîtier du contrôleur
+. Mettre le contrôleur en ligne
+
+
+|===
+
+
+== Conditions requises pour l'ajout, la mise à niveau ou le remplacement d'une HIC
+
+Si vous prévoyez d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte (HIC), gardez les conditions suivantes à l'esprit.
+
+* Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, cela est dû au fait que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
+* Vous disposez d'un ou deux contrôleurs HIC, selon que vous possédez un ou deux contrôleurs sur la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
++
+Si vous disposez d'une configuration duplex (deux contrôleurs), les circuits intégrés installés dans les deux boîtiers de contrôleur doivent être identiques. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.
+
+* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) sont nécessaires pour connecter les nouveaux ports hôte.
++
+Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] ou le http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Vous avez un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.
+* Vous avez un tournevis cruciforme n° 1.
+* Vous disposez d'étiquettes pour identifier chaque câble connecté au boîtier du contrôleur.
+* Vous disposez d'une station de gestion avec un navigateur qui peut accéder au gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+

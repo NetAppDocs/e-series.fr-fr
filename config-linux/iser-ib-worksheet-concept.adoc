@@ -1,0 +1,237 @@
+---
+permalink: config-linux/iser-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: iSER worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez cette fiche pour enregistrer les informations de configuration du stockage iser sur InfiniBand. 
+---
+= Enregistrez votre configuration iser sur IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer et imprimer un fichier PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage iser sur Infiniband. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+
+
+== Identifiants d'hôte
+
+
+NOTE: L'IQN de l'initiateur logiciel est déterminé pendant la tâche, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurer la mise en réseau des hôtes connectés au stockage].
+
+Localisez et documentez l'IQN de l'initiateur à partir de chaque hôte. Pour les initiateurs logiciels, l'IQN se trouve généralement dans le fichier /etc/iscsi/initiatorname.iscsi.
+
+|===
+| N° de légende | Connexions des ports hôtes | IQN de l'initiateur logiciel 
+
+
+ a| 
+1
+ a| 
+Hôte (initiateur) 1
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+|===
+
+
+== Configuration recommandée
+
+Les configurations recommandées se composent de deux ports hôtes (initiateurs) et de quatre ports cibles.
+
+image::../media/port_identifiers_ib_iser.gif[identificateur de port ib iser]
+
+
+
+== IQN cible
+
+Documentez l'IQN cible de la matrice de stockage. Vous utiliserez ces informations dans xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurer la mise en réseau des hôtes connectés au stockage].
+
+Recherchez le nom IQN de la matrice de stockage à l'aide de SANtricity : *Baie de stockage* > *iser* > *gérer les paramètres*. Ces informations peuvent s'avérer nécessaires lorsque vous créez des sessions iser à partir de systèmes d'exploitation qui ne prennent pas en charge la découverte de cibles d'envoi.
+
+|===
+| N° de légende | Nom de la matrice | IQN cible 
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+
+|===
+
+
+== Configuration du réseau
+
+Documenter la configuration réseau qui sera utilisée pour les hôtes et le stockage sur la structure InfiniBand. Ces instructions supposent que deux sous-réseaux seront utilisés pour une redondance complète.
+
+Votre administrateur réseau peut fournir les informations suivantes. Ces informations sont utilisées dans la rubrique, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurer la mise en réseau des hôtes connectés au stockage].
+
+
+
+=== Sous-réseau A
+
+Définissez le sous-réseau à utiliser.
+
+|===
+| Adresse réseau | Masque de réseau 
+
+
+ a| 
+ a| 
+
+|===
+Documentez les IQN utilisés par les ports de la matrice et chaque port hôte.
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | IQN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Hôte 1, port 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Facultatif) hôte 2, port 1
+ a| 
+
+|===
+
+
+=== Le sous-réseau B
+
+Définissez le sous-réseau à utiliser.
+
+|===
+| Adresse réseau | Masque de réseau 
+
+
+ a| 
+ a| 
+
+|===
+Documentez les IQN utilisés par les ports de la matrice et chaque port hôte.
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | IQN 
+
+
+ a| 
+8
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+10
+ a| 
+Contrôleur A, port 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur B, port 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Hôte 1, port 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Facultatif) hôte 2, port 2
+ a| 
+
+|===
+
+
+== Nom d'hôte de mappage
+
+
+NOTE: Le nom d'hôte de mappage est créé pendant le flux de travail.
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

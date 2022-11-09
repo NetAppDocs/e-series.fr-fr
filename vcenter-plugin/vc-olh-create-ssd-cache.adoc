@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-ssd-cache.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Pour accélérer dynamiquement les performances du système, vous pouvez utiliser la fonctionnalité SSD cache pour mettre en cache les données les plus fréquemment utilisées (données actives) sur des disques SSD à faible latence.' 
+---
+= Créer un cache SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour accélérer dynamiquement les performances du système, vous pouvez utiliser la fonctionnalité SSD cache pour mettre en cache les données les plus fréquemment utilisées (données actives) sur des disques SSD à faible latence. SSD cache est exclusivement utilisé pour les lectures d'hôte.
+
+Votre baie de stockage doit contenir des disques SSD.
+
+
+NOTE: SSD cache n'est pas disponible sur les systèmes de stockage EF600 ou EF300.
+
+Lorsque vous créez SSD cache, vous pouvez utiliser un ou plusieurs disques. Comme le cache de lecture se trouve dans la baie de stockage, la mise en cache est partagée entre toutes les applications qui utilisent la baie de stockage. Vous sélectionnez les volumes à mettre en cache, puis la mise en cache est automatique et dynamique.
+
+Suivez ces instructions lors de la création de SSD cache.
+
+* Vous ne pouvez activer la sécurité sur le SSD cache que lorsque vous le créez, pas plus tard.
+* Un seul SSD cache est pris en charge par baie de stockage.
+* La capacité maximale de cache SSD utilisable sur une matrice de stockage dépend de la capacité du cache principal du contrôleur.
+* Le cache SSD n'est pas pris en charge sur les images des snapshots.
+* Si vous importez ou exportez des volumes SSD cache activés ou désactivés, les données mises en cache ne sont ni importées ni exportées.
+* Tout volume attribué à l'utilisation de la fonctionnalité SSD cache d'un contrôleur n'est pas éligible pour un transfert automatique d'équilibrage de charge.
+* Si les volumes associés sont sécurisés, créez un SSD cache sécurisé.
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage du cache.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Cliquez sur menu:Créer [cache SSD].
++
+La boîte de dialogue Créer une mémoire cache SSD s'affiche.
+
+. Saisissez un nom pour le cache SSD.
+. Sélectionnez la capacité SSD cache candidate à utiliser en fonction des caractéristiques suivantes.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Caractéristique | Utiliser 
+
+
+| Puissance | La montre la capacité disponible en Gio. Sélectionnez la capacité en fonction des besoins de stockage de votre application. La capacité maximale de SSD cache dépend de la capacité du cache principal du contrôleur. Si vous allouez plus que le volume maximal vers SSD cache, toute capacité supplémentaire sera inutilisable. La capacité SSD cache compte pour la capacité globale allouée. 
+
+
+| Nombre total de disques | Affiche le nombre de disques disponibles pour ce cache SSD. Sélectionnez le disque SSD candidat avec le nombre de disques que vous souhaitez 
+
+
+| Sécurité | Indique si le module SSD cache candidate comprend uniquement des disques sécurisés, qui peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard). Si vous souhaitez créer un cache SSD sécurisé, recherchez « Oui - FDE » ou « Oui - FIPS » dans la colonne fonctionnalité de sécurité. 
+
+
+| Activer la sécurité ? | Fournit l'option permettant d'activer la fonction de sécurité des lecteurs avec des lecteurs sécurisés. Si vous souhaitez créer une mémoire cache SSD sécurisée, cochez la case *Activer la sécurité*. REMARQUE : une fois activée, la sécurité ne peut pas être désactivée. Vous ne pouvez activer la sécurité sur le SSD cache que lorsque vous le créez, pas plus tard. 
+
+
+| Compatible DA | Indique si Data assurance (DA) est disponible pour ce candidat SSD cache. Data assurance (DA) vérifie et corrige les erreurs susceptibles de se produire lors du transfert des données entre les contrôleurs et les disques. Si vous souhaitez utiliser DA, sélectionnez un candidat SSD cache qui prend en charge DA. Cette option n'est disponible que lorsque la fonction DA a été activée. SSD cache peut contenir à la fois des disques compatibles DA et des disques non DA, mais tous les disques doivent être compatibles DA pour que vous puissiez utiliser DA. 
+|===
+====
+. Associez la fonctionnalité SSD cache aux volumes pour lesquels vous souhaitez implémenter la mise en cache de lecture SSD. Pour activer le cache SSD sur les volumes compatibles immédiatement, cochez la case *Activer le cache SSD sur les volumes compatibles existants qui sont mappés sur les hôtes*.
++
+Les volumes sont compatibles s'ils partagent les mêmes capacités Drive Security et DA.
+
+. Cliquez sur *Créer*.
+

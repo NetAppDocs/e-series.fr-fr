@@ -1,0 +1,21 @@
+---
+permalink: config-linux/srp-ib-setup-multipath-conf-file-concept.html 
+sidebar: sidebar 
+keywords: multipath.conf, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez le fichier multipath.conf est le fichier de configuration du démon multipathd. 
+---
+= Configurez le fichier multipath.conf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le fichier multipath.conf est le fichier de configuration du démon multipathd.
+
+Le fichier multipathd.conf remplace la table de configuration intégrée pour multipathd.
+
+
+NOTE: Pour les systèmes d'exploitation SANtricity 8.30 et versions ultérieures, NetApp recommande d'utiliser les paramètres par défaut tels que fournis.
+
+Aucune modification de /etc/multipath.conf n'est requise.

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-fans-wombat.html 
+sidebar: sidebar 
+keywords: ef300, ef600, controller, shelf, drive, fan, cooling 
+summary: Chaque tiroir contrôleur ou tiroir disque EF300 ou EF600 comprend cinq ventilateurs pour assurer la climatisation du contrôleur 
+---
+= Ventilateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chaque tiroir contrôleur ou tiroir disque EF300 ou EF600 comprend cinq ventilateurs pour assurer la climatisation du contrôleur

@@ -1,0 +1,26 @@
+---
+permalink: config-linux/fc-install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, 
+summary: 'Installez les utilitaires d"hôtes unifiés Linux lors de l"utilisation de FC.' 
+---
+= Installer et configurer Linux Unified Host Utilities
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les outils Linux Unified Host Utilities vous aident à gérer le stockage NetApp, y compris les règles de basculement et les chemins physiques.
+
+.Étapes
+. Utilisez le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Pour déterminer la version appropriée d'Unified Host Utilities à installer.
++
+Les versions sont répertoriées dans une colonne de chaque configuration prise en charge.
+
+. Téléchargez les utilitaires d'hôtes unifiés à partir de https://mysupport.netapp.com/site/["Support NetApp"^].
++
+
+NOTE: Vous pouvez également utiliser l'utilitaire SMDevices de SANtricity pour exécuter les mêmes fonctions que l'utilitaire hôte unifié. L'utilitaire SMDevices est inclus dans le package SMutils. Le package SMutils est un ensemble d'utilitaires qui permettent de vérifier ce que l'hôte voit de la matrice de stockage. Il est inclus dans l'installation du logiciel SANtricity.
+
+

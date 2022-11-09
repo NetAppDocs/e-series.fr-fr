@@ -1,0 +1,317 @@
+---
+permalink: install-hw-cabinet/prepare-move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: 'Préparez-vous à déplacer l"armoire.' 
+---
+= Préparez-vous à déplacer l'armoire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Préparez-vous à déplacer l'armoire de son emplacement dans votre zone de réception en estimant son poids total, en l'acclimatant, en retirant les matériaux d'emballage et en vérifiant le contenu de l'expédition.
+
+
+
+== Étape 1 : estimer le poids de l'armoire
+
+L'armoire peut transporter de façon fiable et sûre jusqu'à 909.1 kg (2000 lb) de capacité. Vous devez connaître le poids approximatif de l'armoire pour pouvoir la déplacer en toute sécurité.
+
+.Étapes
+. Utilisez le tableau suivant pour calculer le poids total approximatif de votre armoire.
++
+Le poids total de l'armoire dépend du nombre et du type de bacs installés dans l'armoire.
+
++
+|===
+| Composant | Poids | Remarques 
+
+
+ a| 
+Armoire
+ a| 
+138.80 kg (306.0 lb)
+ a| 
+Vide avec la porte arrière installée
+
+
+
+ a| 
+Unités de distribution d'alimentation (PDU [paire])
+ a| 
+19.96 kg (44.0 lb)
+ a| 
+
+
+
+ a| 
+Rails de montage (paire)
+ a| 
+1.59 kg (3.50 lb)
+ a| 
+
+
+
+ a| 
+Plateau contrôleur E2612
+ a| 
+27 kg (59.52 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur-disque E2624
+ a| 
+26.12 kg (57.32 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque contrôleur E2660
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque contrôleur E2712
+ a| 
+27.12 kg (59.8 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque contrôleur E2724
+ a| 
+26 kg (57.32 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur E2760
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Plateau contrôleur E5412
+ a| 
+27.92 (61.52 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur-disque E5424
+ a| 
+26.92 kg (59.32 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque E5460
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque E5512
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur E5524
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque du contrôleur E5560
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur E5612 disque
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur E5624
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir contrôleur E5660
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Baie Flash EF540
+ a| 
+23.64 kg (52.12 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Baie Flash EF550
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Baie Flash EF560
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque DE1600
+ a| 
+26.3 kg (58 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque DE5600
+ a| 
+25.31 kg (55.8 lb)
+ a| 
+Configuration maximale
+
+
+
+ a| 
+Tiroir disque DE6600
+ a| 
+104.1 kg (229.6 lb)
+ a| 
+Configuration maximale
+
+|===
+. Lisez les notes suivantes.
++
+
+CAUTION: Retirer tous les disques du plateau de disque DE6600 avant de placer l'armoire en position finale.
+
++
+
+CAUTION: *Dommages possibles à l'équipement* -- les armoires avec tiroirs disques DE6600 sont expédiées sans disques pour réduire le poids d'expédition. Étant donné qu'une armoire entièrement équipée avec des tiroirs disques DE6600 peut peser plus de 1247.3 kg (2750 lb), veillez à déplacer l'armoire en place avant de charger les disques. Assurez-vous également que sa capacité de charge au sol peut supporter ce poids.
+
++
+
+CAUTION: *Dommages possibles aux composants du plateau* -- ne placez pas de plateau de disque DE6600 sur une surface plane. Installez le tiroir disque DE6600 dans l'armoire avant de faire fonctionner ou de déplacer des tiroirs.
+
+
+
+
+
+== Étape 2 : armoire acclimato
+
+Assurez-vous que l'armoire et les plateaux sont bien installés dans l'environnement intérieur avant de retirer les matériaux d'emballage.
+
+.Étapes
+. Si la température extérieure est inférieure à 0 °C (32 °F), laissez l'armoire et les plateaux à l'intérieur de leur caisse pendant au moins 24 heures afin d'éviter la condensation.
+. Augmentez ou diminuez la période de stabilisation de 24 heures en fonction de la température extérieure à l'arrivée.
++
+
+CAUTION: *Dommages possibles aux composants du plateau* -- si la température extérieure est inférieure à 0°C (32°F) lorsque vous recevez votre armoire et les plateaux, ne les déballez pas immédiatement ou ne les déballez pas. L'exposition de composants froids à des températures intérieures chaudes peut provoquer de la condensation, ce qui peut entraîner des dommages ou des défaillances de composants.
+
+
+
+
+
+== Étape 3 : retirez les matériaux d'emballage
+
+Ne retirez les matériaux d'emballage qu'après avoir atteint la température intérieure de l'armoire.
+
+.Étapes
+. Reportez-vous aux instructions de déballage fournies à l'avant de la caisse d'expédition.
+. Retirez les matériaux d'emballage conformément aux instructions fournies.
+
+
+
+
+== Étape 4 : vérifier le contenu de l'expédition
+
+Vérifiez le contenu de l'expédition pour vous assurer que tout l'équipement est arrivé sur le site.
+
+.Étapes
+. Comparez le bordereau d'expédition avec l'équipement que vous avez reçu.
+. S'assurer que tout l'équipement est arrivé sur le site.
+. Si des éléments sont manquants, contactez votre représentant commercial.
+
+
+
+
+== Étape 5 : retirer les composants lourds de l'armoire
+
+Déposer certains composants plus lourds situés dans la partie supérieure de l'armoire pour assurer une stabilité maximale.
+
+.Avant de commencer
+* Avant de déplacer l'armoire, assurez-vous que le poids maximal ne dépasse pas 2000 kg.
+* Notez l'emplacement de chaque bac, composant et câble avant de le retirer afin de pouvoir réinstaller chaque élément à son emplacement d'origine.
+
+
+.Étapes
+. Notez la configuration du câble pour un remontage ultérieur si des câbles doivent être débranchés.
+. Retirez les tiroirs disques et les tiroirs contrôleur-disque de la moitié supérieure de l'armoire. Conservez tous les composants du même bac ensemble.
++
+
+NOTE: Il n'est pas nécessaire de retirer les blocs d'alimentation ou d'autres composants de l'arrière de chaque bac
+
+. Placez chaque composant dans un sac antistatique séparé. Si les boîtes d'expédition d'origine sont disponibles, utilisez-les pour transporter les composants.
+

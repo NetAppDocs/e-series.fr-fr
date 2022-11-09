@@ -1,0 +1,91 @@
+---
+permalink: upgrade-controllers/install-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
+summary: Après avoir retiré les anciens contrôleurs, vous pouvez installer de nouveaux contrôleurs dans le plateau du lecteur de contrôleur 
+---
+= Installez de nouveaux contrôleurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir retiré les anciens contrôleurs, vous pouvez installer de nouveaux contrôleurs dans le plateau du lecteur de contrôleur
+
+Effectuez les opérations suivantes pour chaque contrôleur du plateau du lecteur de contrôleur Si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour installer le second boîtier de contrôleur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Un bracelet antistatique ou prendre d'autres précautions antistatiques.
+* Une batterie provenant du boîtier du contrôleur d'origine ou une batterie neuve que vous avez commandée.
+* Le nouveau boîtier du contrôleur.
+
+
+
+
+== Étape 1 : installer la batterie
+
+Installez la batterie que vous avez retirée du boîtier du contrôleur d'origine ou une batterie neuve que vous avez commandée.
+
+.Étapes
+. Déballez le nouveau boîtier du contrôleur et placez-le sur une surface plane et sans électricité statique de sorte que le couvercle amovible soit orienté vers le haut.
+. Appuyez sur le bouton du capot et faites glisser le capot pour le retirer.
+. Orientez le boîtier du contrôleur de manière à ce que le logement de la batterie soit orienté vers vous.
+. Selon le modèle de votre contrôleur, effectuez l'une des opérations suivantes :
++
+** Pour les modèles de contrôleur E2600 ou E2700 :
++
+... Insérez la carte électronique de la batterie en la faisant glisser vers l'avant du nouveau boîtier du contrôleur.
+... Serrez la vis moletée pour fixer la carte de circuit de la batterie dans la nouvelle carte du boîtier du contrôleur.
+... Réinstallez le capot supérieur sur le nouveau boîtier du contrôleur en le faisant glisser vers l'avant jusqu'à ce que les capots du loquet supérieur s'entendiez un clic.
++
+Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
+
+
+
+** Pour les autres modèles de contrôleurs :
++
+... Insérez la batterie dans le nouveau boîtier du contrôleur.
++
+Faites glisser la batterie dans le réservoir, en vous assurant qu'elle reste sous les rivets sur le mur de la nouvelle cartouche.
+
+... En maintenant la poignée de verrouillage à un angle de 45 degrés, alignez les connecteurs situés au bas de la batterie avec les connecteurs situés sur le boîtier.
+... Poussez la batterie vers le bas jusqu'à ce que vous entendiez un déclic, puis déplacez la poignée de verrouillage vers le haut pour fixer la batterie du contrôleur au boîtier du contrôleur.
++
+
+TIP: Pour vous assurer que la batterie du contrôleur est correctement insérée dans le plateau du lecteur du contrôleur E5XX, vous devrez peut-être la faire glisser et la réinsérer. Il est sécurisé lorsque vous entendez un clic en place et que la poignée de verrouillage ne se déplace pas en position verticale lorsque vous l'agitez.
+
+... Réinstallez le capot supérieur sur le nouveau boîtier du contrôleur en le faisant glisser vers l'avant jusqu'à ce que les capots du loquet supérieur s'entendiez un clic.
++
+Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
+
+
+
+
+
+. Retournez le boîtier du contrôleur pour vérifier que la batterie est correctement installée.
+
+
+
+
+== Étape 2 : installer un nouveau boîtier de contrôleur
+
+Installer le nouveau boîtier de contrôleur dans le shelf de contrôleur.
+
+.Étapes
+. Faites glisser le nouveau boîtier du contrôleur complètement dans le plateau du lecteur du contrôleur Tournez les leviers de déverrouillage vers le centre du boîtier du contrôleur pour le verrouiller.
+. Si le nouveau boîtier de contrôleur est équipé d'une carte HIC Fibre Channel ou d'une carte HIC InfiniBand, installez les émetteurs-récepteurs SFP+ (Fibre Channel) ou QSFP+ (InfiniBand) dans le boîtier du contrôleur et reconnectez les câbles hôtes.
++
+En fonction des circuits intégrés impliqués dans votre mise à niveau, vous pourrez réutiliser un émetteur-récepteur SFP+ ou des émetteurs-récepteurs QSFP+ que vous avez retirés de votre ancien boîtier de contrôleur.
+
+. Rebranchez tous les câbles entre le plateau du contrôleur et les tiroirs des disques.
++
+Si la configuration du câblage du lecteur est identique à celle de vos anciens contrôleurs, utilisez les étiquettes que vous avez connectées aux câbles pour reconnecter les câbles correctement.
+
++
+
+NOTE: Si vous effectuez la mise à niveau vers les contrôleurs E2700 à partir d'un modèle précédent, la configuration du câblage des disques peut être différente de la configuration utilisée par les anciens contrôleurs.
+
+
+
+Si vous mettez à niveau les contrôleurs E2800 et E5700 alors que la fonction sécurité des disques est activée, rendez-vous sur link:upgrade-unlock-drives-task.html["Déverrouiller les lecteurs"]. Sinon, passez à link:complete-upgrade-controllers-task.html["Mise à niveau complète du contrôleur"].

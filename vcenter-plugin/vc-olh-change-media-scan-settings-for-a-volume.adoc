@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Une analyse des supports est une opération en arrière-plan qui analyse toutes les données et informations de redondance du volume. Utilisez cette option pour activer ou désactiver les paramètres de numérisation de supports pour un ou plusieurs volumes, ou pour modifier la durée de numérisation. 
+---
+= Modifiez les paramètres de numérisation d'un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une analyse des supports est une opération en arrière-plan qui analyse toutes les données et informations de redondance du volume. Utilisez cette option pour activer ou désactiver les paramètres de numérisation de supports pour un ou plusieurs volumes, ou pour modifier la durée de numérisation.
+
+Comprenez les éléments suivants :
+
+* Les analyses de supports s'exécutent en continu à un taux constant en fonction de la capacité à scanner et de la durée d'acquisition. Les acquisitions en arrière-plan peuvent être temporairement suspendues par une tâche en arrière-plan de priorité plus élevée (par exemple, reconstruction), mais reprendront à la même vitesse constante.
+* Un volume est analysé uniquement lorsque l'option de numérisation des supports est activée pour la matrice de stockage et pour ce volume. Si le contrôle de redondance est également activé pour ce volume, les informations de redondance du volume sont vérifiées pour vérifier la cohérence avec les données, à condition que le volume dispose de la redondance. L'analyse des supports avec contrôle de redondance est activée par défaut pour chaque volume lors de sa création.
+* En cas d'erreur irrécupérable lors de l'acquisition, les données seront réparées à l'aide des informations de redondance, le cas échéant.
++
+Par exemple, les informations de redondance sont disponibles dans des volumes RAID 5 optimaux, ou dans des volumes RAID 6 optimaux ou qui ne comportent qu'un seul disque en panne. Si l'erreur irrécupérable ne peut pas être réparée à l'aide d'informations de redondance, le bloc de données est ajouté au journal de secteur illisible. Les erreurs de support corrigibles et non corrigibles sont signalées au journal des événements.
+
+* Si le contrôle de redondance détecte une incohérence entre les données et les informations de redondance, il est signalé dans le journal des événements.
+
+
+Les analyses des supports détectent et répare les erreurs de support sur les blocs de disque qui sont rarement lus par les applications. Cela peut éviter les pertes de données en cas de panne de disque, car les données des disques défaillants sont reconstruites à l'aide des informations de redondance et des données des autres disques du groupe ou du pool de volumes.
+
+Vous pouvez effectuer les opérations suivantes :
+
+* Activez ou désactivez les analyses des supports en arrière-plan pour l'ensemble de la baie de stockage
+* Modifiez la durée d'acquisition de la matrice de stockage
+* Activez ou désactivez la recherche multimédia pour un ou plusieurs volumes
+* Activez ou désactivez la vérification de redondance pour un ou plusieurs volumes
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage contenant les volumes pour lesquels vous souhaitez modifier les paramètres de numérisation des supports.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez un volume, puis sélectionnez menu:autres [Modifier les paramètres de numérisation multimédia].
++
+La boîte de dialogue Modifier les paramètres de numérisation de supports de lecteur s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
+
+. Pour activer la numérisation de supports, cochez la case *Numériser le support au cours de...*. La désactivation de la case à cocher analyse du support suspend tous les paramètres de numérisation du support.
+. Indiquez le nombre de jours pendant lesquels vous souhaitez exécuter la numérisation du support.
+. Cochez la case *Media Scan* pour chaque volume sur lequel vous souhaitez effectuer une analyse de support. Le système active l'option Vérification de la redondance pour chaque volume sur lequel vous choisissez d'exécuter une analyse des supports. Si des volumes individuels pour lesquels vous ne souhaitez pas effectuer de vérification de redondance, décochez la case *Vérification de redondance*.
+. Cliquez sur *Enregistrer*.
+
+
+Le système applique des modifications aux analyses de supports en arrière-plan en fonction de votre sélection.

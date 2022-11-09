@@ -1,0 +1,115 @@
+---
+permalink: config-linux/srp-ib-configure-network-connections-task.html 
+sidebar: sidebar 
+keywords: configure network SRP over IB, configure Linux network, OFED, RDMA, express linux configuration, linux host, 
+summary: Si votre configuration utilise le protocole SRP sur Infiniband, suivez les étapes de cette section. 
+---
+= Configurez les connexions réseau : ​SRP sur Infiniband
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre configuration utilise le protocole SRP sur Infiniband, suivez les étapes de cette section.
+
+Pour connecter l'hôte Linux à la matrice de stockage, vous devez activer la pile de pilotes InfiniBand avec les options appropriées. Les paramètres spécifiques peuvent varier d'une distribution Linux à l'autre. Vérifier le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour des instructions spécifiques et des paramètres supplémentaires recommandés spécifiques à votre solution.
+
+.Étapes
+. Installez la pile de pilotes OFED/RDMA de votre système d'exploitation.
++
+*SLES*
+
++
+[listing]
+----
+zypper install rdma-core
+----
++
+*RHEL*
+
++
+[listing]
+----
+yum install rdma-core
+----
+. Configurer OFED/RDMA pour charger le module SRP.
++
+*SLES*
+
++
+[listing]
+----
+zypper install srp_daemon
+----
++
+*RHEL*
+
++
+[listing]
+----
+ yum install srp_daemon
+----
+. Dans le fichier de configuration OFED/RDMA, définissez `SRP_LOAD=yes` et `SRP_DAEMON_ENABLE=yes`.
++
+Le fichier de configuration RDMA se trouve à l'emplacement suivant :
+
++
+[listing]
+----
+/etc/rdma/rdma.conf
+----
+. Activer et démarrer le service OFED/RDMA.
++
+*RHEL 7.x et SLES 12.x ou supérieur*
+
++
+** Pour permettre aux modules InfiniBand de charger au démarrage :
++
+[listing]
+----
+systemctl enable rdma
+----
+** Pour charger immédiatement les modules InfiniBand :
++
+[listing]
+----
+systemctl start rdma
+----
+
+
+. Activez le démon SRP.
++
+*RHEL 7.x et SLES 12 ou supérieur*
+
++
+** Pour activer le démarrage du démon SRP au démarrage :
++
+[listing]
+----
+systemctl enable srp_daemon
+----
+** Pour démarrer le démon SRP immédiatement :
++
+[listing]
+----
+systemctl start srp_daemon
+----
+
+
+. Si vous devez modifier la configuration SRP, entrez la commande suivante à créer `/etc/modprobe.d/ib_srp.conf` .
++
+[listing]
+----
+options ib_srp cmd_sg_entries=255 allow_ext_sg=y indirect_sg_entries=2048
+----
++
+.. Sous le `/etc/srp_daemon.conf`, ajoutez la ligne suivante.
++
+[listing]
+----
+a    max_sect=4096
+----
+
+
+

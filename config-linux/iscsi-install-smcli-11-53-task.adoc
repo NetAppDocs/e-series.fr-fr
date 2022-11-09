@@ -1,0 +1,55 @@
+---
+permalink: config-linux/iscsi-install-smcli-11-53-task.html 
+sidebar: sidebar 
+keywords: install Storage Manager Linux, install CLI Windows, install command line interface, install Host Context Agent, install HCA, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Installez Storage Manager pour CLI et HCA dans la méthode Linux express. 
+---
+= Installer SANtricity Storage Manager pour SMcli (logiciel SANtricity version 11.53 ou antérieure).
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez le logiciel SANtricity 11.53 ou une version antérieure, vous pouvez installer le logiciel SANtricity Storage Manager sur votre station de gestion pour vous aider à gérer la baie.
+
+SANtricity Storage Manager inclut l'interface de ligne de commande (CLI) pour des tâches de gestion supplémentaires, ainsi que l'agent de contexte hôte pour la communication des informations de configuration de l'hôte aux contrôleurs de la baie de stockage via le chemin d'E/S.
+
+
+NOTE: Si vous utilisez le logiciel SANtricity 11.60 ou une version ultérieure, vous n'avez pas besoin de suivre ces étapes. L'interface de ligne de commande sécurisée SANtricity (SMcli) est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement du SMcli via le Gestionnaire système SANtricity, reportez-vous à la rubrique _Télécharger l'interface de ligne de commande (CLI)_ de l'aide en ligne de SANtricity System Manager.
+
+.Ce dont vous avez besoin, 8217;ll
+* SANtricity 11.53 ou version antérieure.
+* Privilèges administrateur ou superutilisateur corrects.
+* Un système pour le client SANtricity Storage Manager avec la configuration minimale requise suivante :
++
+** *RAM* : 2 Go pour Java Runtime Engine
+** *Espace disque* : 5 Go
+** *OS/Architecture* : pour obtenir des conseils sur la détermination des versions et architectures de systèmes d'exploitation pris en charge, allez à http://mysupport.netapp.com["Support NetApp"^]. Dans l'onglet *Downloads*, accédez au menu :Downloads[E-Series SANtricity Storage Manager].
+
+
+
+
+Cette tâche décrit l'installation de SANtricity Storage Manager sur les plates-formes Windows et Linux, car Windows et Linux sont des plates-formes de station de gestion communes lorsque Linux est utilisé pour l'hôte de données.
+
+.Étapes
+. Téléchargez la version du logiciel SANtricity sur http://mysupport.netapp.com["Support NetApp"^]. Dans l'onglet *Downloads*, accédez au menu :Downloads[E-Series SANtricity Storage Manager].
+. Exécutez le programme d'installation de SANtricity.
++
+|===
+| Répertoires de base | Linux 
+
+
+ a| 
+Double-cliquez sur le paquet d'installation SMIA*.exe pour lancer l'installation.
+ a| 
+.. Accédez au répertoire où se trouve le package d'installation SMIA*.bin.
+.. Si le point de montage temporaire ne dispose pas d'autorisations d'exécution, définissez le `IATEMPDIR` variable. Exemple : `IATEMPDIR=/root ./SMIA-LINUXX64-11.25.0A00.0002.bin`
+.. Exécutez le `chmod +x SMIA*.bin` commande permettant d'accorder l'autorisation d'exécution au fichier.
+.. Exécutez le `./SMIA*.bin` pour démarrer le programme d'installation.
+
+
+|===
+. Utilisez l'assistant d'installation pour installer le logiciel sur la station de gestion.
+

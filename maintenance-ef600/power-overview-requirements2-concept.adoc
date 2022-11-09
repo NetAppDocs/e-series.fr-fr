@@ -1,0 +1,23 @@
+---
+permalink: maintenance-ef600/power-overview-requirements2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: 'Examinez les exigences et les considérations avant de remplacer un bloc d"alimentation EF300 ou EF600.' 
+---
+= Exigences relatives au remplacement des blocs d'alimentation EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un bloc d'alimentation dans une baie EF300 ou EF600, vérifiez les exigences suivantes.
+
+* Vous devez disposer d'une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
+
+
+
+NOTE: Ne mélangez pas les blocs d'alimentation de différents types de tension. Toujours remplacer comme pour similaire.
+
+* Vous devez avoir un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.
+

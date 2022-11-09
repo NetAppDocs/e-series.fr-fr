@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez supprimer des disques pour réduire la capacité d"un pool existant ou d"un cache SSD.' 
+---
+= Retirer la capacité
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer des disques pour réduire la capacité d'un pool existant ou d'un cache SSD.
+
+Après avoir supprimé des disques, les données de chaque volume du pool ou SSD cache sont redistribuées aux disques restants. Les disques retirés sont non assignés et leur capacité devient alors partie de la capacité libre totale de la baie de stockage.
+
+Suivez les consignes suivantes lorsque vous retirez de la capacité :
+
+* Vous ne pouvez pas supprimer le dernier disque d'un cache SSD sans supprimer au préalable le cache SSD.
+* Vous ne pouvez pas réduire le nombre de disques dans un pool à moins de 11 disques.
+* Vous pouvez supprimer un maximum de 12 lecteurs à la fois. Si vous devez retirer plus de 12 lecteurs, répétez la procédure.
+* Vous ne pouvez pas supprimer les disques s'il n'y a pas suffisamment de capacité libre dans le pool ou dans SSD cache pour contenir les données, lorsque ces données sont redistribuées vers les disques restants du pool ou SSD cache.
+
+
+Les conséquences possibles sur les performances sont les suivantes :
+
+* La suppression des disques d'un pool ou d'un SSD cache peut entraîner une réduction des performances du volume.
+* La capacité de conservation n'est pas utilisée lorsque vous supprimez la capacité d'un pool ou d'un SSD cache. Toutefois, la capacité de conservation peut diminuer en fonction du nombre de disques restants dans le pool ou dans SSD cache.
+
+
+Les impacts suivants sur les lecteurs sécurisés sont les suivants :
+
+* Si vous retirez le dernier lecteur qui n'est pas sécurisé, le pool est laissé avec tous les lecteurs compatibles. Dans ce cas, vous avez la possibilité d'activer la sécurité du pool.
+* Si vous supprimez le dernier disque qui ne prend pas en charge Data assurance (DA), le pool est laissé avec tous les disques compatibles DA.
+* Tous les nouveaux volumes que vous créez sur le pool seront compatibles DA. Si vous souhaitez que les volumes existants soient compatibles DA, vous devez les supprimer, puis recréer le volume.
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage.
++
+Menu sélection:Provisioning [Configure pools and Volume Groups].
+
+. Sélectionnez le pool ou SSD cache, puis cliquez sur menu:More[Remove Capacity].
++
+La boîte de dialogue Supprimer la capacité s'affiche.
+
+. Sélectionnez un ou plusieurs lecteurs dans la liste.
++
+Lorsque vous sélectionnez ou désélectionnez des lecteurs dans la liste, le champ capacité totale sélectionnée est mis à jour. Ce champ indique la capacité totale du pool ou de SSD cache résultant de la suppression des disques sélectionnés.
+
+. Cliquez sur *Supprimer*, puis confirmez que vous souhaitez supprimer les lecteurs.
+
+
+La capacité réduite récemment du pool ou de SSD cache est reflétée dans la vue pools et groupes de volumes.

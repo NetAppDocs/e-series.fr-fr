@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Afficher les statistiques du SSD cache, telles que les lectures, les écritures, les accès au cache, le pourcentage d"allocation du cache, et le pourcentage d"utilisation du cache.' 
+---
+= Afficher les statistiques de cache SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez afficher les statistiques du module SSD cache, telles que les lectures, les écritures, les accès au cache, le pourcentage d'allocation du cache, et le pourcentage d'utilisation du cache.
+
+
+NOTE: Cette fonctionnalité n'est pas disponible sur les systèmes de stockage EF600 ou EF300.
+
+Les statistiques nominales, qui constituent un sous-ensemble des statistiques détaillées, sont affichées dans la boîte de dialogue Afficher les statistiques du cache du disque SSD. Vous ne pouvez afficher des statistiques détaillées sur SSD cache que lorsque vous exportez toutes les statistiques SSD vers un fichier .csv.
+
+Pendant que vous examinez et interprétez les statistiques, gardez à l'esprit que certaines interprétations sont dérivées en examinant une combinaison de statistiques.
+
+.Étapes
+. Sur la page gérer, sélectionnez la baie de stockage avec le cache SSD.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez le cache SSD pour lequel vous souhaitez afficher les statistiques, puis cliquez sur menu:autres statistiques[View SSD cache].
++
+La boîte de dialogue Afficher les statistiques de cache SSD s'affiche et affiche les statistiques nominales du cache SSD sélectionné.
+
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+| En lecture | Affiche le nombre total de lectures d'hôte à partir des volumes SSD cache activés. Plus le rapport entre les lectures et les écritures est élevé, meilleur est le fonctionnement du cache. 
+
+
+| Écritures | Nombre total d'écritures sur l'hôte pour les volumes SSD cache. Plus le rapport entre les lectures et les écritures est élevé, meilleur est le fonctionnement du cache. 
+
+
+| Accès au cache | Affiche le nombre d'accès au cache. 
+
+
+| Taux d'accès au cache % | Affiche le pourcentage d'accès au cache. Ce nombre est dérivé de cache Hits/(lectures + écritures). Le pourcentage de réussite dans le cache doit être supérieur à 50 % pour une opération SSD cache efficace. 
+
+
+| % D'allocation du cache | Affiche le pourcentage de stockage SSD cache alloué, exprimé en pourcentage du stockage SSD cache disponible pour ce contrôleur et dérivé des octets alloués/octets disponibles. 
+
+
+| Taux d'utilisation du cache | Affiche le pourcentage de stockage SSD cache contenant les données des volumes activés, exprimé en pourcentage de stockage SSD cache alloué. Ce montant représente l'utilisation ou la densité de la mémoire SSD cache. Dérivé des octets alloués/octets disponibles. 
+
+
+| Tout exporter | Exporte toutes les statistiques de cache SSD vers un format CSV. Le fichier exporté contient toutes les statistiques disponibles pour la mémoire SSD cache (nominale et détaillée). 
+|===
+====
+. Cliquez sur *Annuler* pour fermer la boîte de dialogue.
+

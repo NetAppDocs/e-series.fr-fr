@@ -1,0 +1,69 @@
+---
+permalink: maintenance-e2800/batteries-remove-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: 'Pour retirer la batterie, retirer d"abord le boîtier du contrôleur du shelf.' 
+---
+= Retirer le boîtier du contrôleur E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez retirer le boîtier du contrôleur du shelf contrôleur afin que vous puissiez retirer la batterie.
+
+Lorsque vous retirez un boîtier de contrôleur, vous devez débrancher tous les câbles. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si les ports hôtes du boîtier du contrôleur utilisent des émetteurs-récepteurs SFP+, laissez-les installés.
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Appuyez sur le loquet de la poignée de came jusqu'à ce qu'il se libère, puis ouvrez la poignée de came vers la droite pour libérer le boîtier du contrôleur de la tablette.
++
+La figure suivante illustre un tiroir contrôleur E2812, un tiroir contrôleur E2824 ou une baie Flash EF280 :
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e2800]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
++
+La figure suivante présente un exemple de tiroir contrôleur E2860 :
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 ajouter la cartouche de contrôleur maint e2800]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. A l'aide de deux mains et de la poignée de came, faites glisser le boîtier du contrôleur hors de la tablette.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+Si vous retirez le canister d'un tiroir contrôleur E2812, d'un tiroir de contrôleur E2824 ou de la baie Flash EF280, un rabat peut être mis en place pour bloquer la baie vide, ce qui permet de maintenir le débit d'air et le refroidissement.
+
+. Retournez le boîtier du contrôleur afin que le capot amovible soit orienté vers le haut.
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+. Accédez à link:batteries-remove-failed-task.html["Retirez la batterie du système E2800 défectueuse"].
+

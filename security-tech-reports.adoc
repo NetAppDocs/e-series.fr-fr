@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: security-tech-reports.html 
+keywords: security technical reports, e-series, hardware, santricity, os 
+summary: Rapports techniques sur les E-Series 
+---
+= Parcourir les rapports techniques de sécurité
+:allow-uri-read: 
+
+
+
+
+== Rapports techniques de sécurité
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17162-tr4474pdf.pdf["*TR-4474 : Guide des fonctions de sécurité des lecteurs SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17079-tr4712pdf.pdf["*TR-4712 : fonctions de sécurité de gestion SANtricity*"] | https://www.netapp.com/pdf.html?item=/media/17218-tr4813pdf.pdf["*TR-4813 : gestion des certificats pour les systèmes E-Series*"] 
+
+
+| Décrit la fonctionnalité de chiffrement de disque complet des systèmes E-Series, dont la prise en charge des disques validés FIPS 140-2 et la gestion des clés interne et externe. | Décrit les fonctions de sécurité SANtricity pour les systèmes NetApp E-Series E2800, E5700, EF280, EF570, EF300 Et EF600. | Décrit la gestion des certificats de sécurité avec les derniers contrôleurs et applications de la gamme E-Series. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/19422-tr-4855.pdf["*TR-4855: Guide de renforcement de la sécurité pour SANtricity*"] | https://www.netapp.com/media/19404-tr-4853.pdf["*TR-4853 : gestion des accès pour les systèmes E-Series*"] |  
+
+
+| Décrit comment déployer SANtricity pour répondre aux objectifs de sécurité définis en matière de confidentialité, d'intégrité et de disponibilité des systèmes d'information. | Décrit la configuration de la gestion des accès, notamment le contrôle d'accès basé sur des rôles (RBAC), le protocole LDAP (Lightweight Directory Access Protocol) et le langage SAML (Security assertion Markup Language). |  
+|===

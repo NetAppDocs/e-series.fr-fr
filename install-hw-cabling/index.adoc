@@ -1,0 +1,75 @@
+---
+permalink: install-hw-cabling/index.html 
+sidebar: sidebar 
+keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Connectez un hôte directement à un contrôleur ou utilisez des commutateurs. 
+---
+= Présentation du câblage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez connecter un hôte directement à un contrôleur ou utiliser des commutateurs pour connecter un hôte à un contrôleur.
+
+Si votre système de stockage inclut un ou plusieurs tiroirs disques, vous devez les connecter à votre tiroir contrôleur. Vous pouvez ajouter un nouveau tiroir disque alors que l'alimentation est toujours appliquée à d'autres composants du système de stockage. En outre, vous pouvez connecter votre système de stockage à un réseau pour une gestion hors bande.
+
+Les informations de câblage sont destinées à un installateur de matériel ou à un administrateur système qui installe ou développe un système de stockage. Il est supposé que vous avez installé le système de stockage comme décrit dans les _instructions d'installation et de configuration_ pour votre matériel.
+
+
+
+== Modèle matériel applicable
+
+Les informations de câblage s'appliquent aux modèles matériels suivants.
+
+|===
+| * Étagère contrôleur* | *Étagère de disques* 
+
+
+ a| 
+EF300, EF600
+ a| 
+DE212C, DE224C, DE460
+
+
+
+ a| 
+E5724, EF570, E2812, E2824, EF280
+ a| 
+DE212C ET DE224C
+
+
+
+ a| 
+E2860, E5760
+ a| 
+DE460C
+
+|===
+
+
+== Informations supplémentaires sur le câblage
+
+Si vous procédez à un câblage pour la configuration suivante, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant."^]
+
+|===
+| * Étagère contrôleur* | *Étagère de disques* 
+
+
+ a| 
+E2712, E2724, E5612, E5624, EF560
+ a| 
+DE212C ET DE224C
+
+
+
+ a| 
+E2760, E5660
+ a| 
+DE460C
+
+|===
+Pour plus d'informations sur les autres options de câblage, reportez-vous au https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Guide du câblage matériel E-Series"^] pour les systèmes plus anciens.
+
+Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous à la section https://www.netapp.com/us/media/tr-4656.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].

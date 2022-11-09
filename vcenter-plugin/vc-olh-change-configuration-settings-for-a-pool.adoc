@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-pool.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifiez les paramètres d"un pool, y compris son nom, ses paramètres d"alertes de capacité, ses priorités de modification et sa capacité de conservation.' 
+---
+= Modifiez les paramètres de configuration d'un pool
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier les paramètres d'un pool, notamment son nom, ses paramètres d'alertes de capacité, ses priorités de modification et sa capacité de conservation.
+
+Cette tâche explique comment modifier les paramètres de configuration d'un pool.
+
+
+NOTE: Vous ne pouvez pas modifier le niveau RAID d'un pool à l'aide de l'interface du plug-in. Le plug-in configure automatiquement les pools en tant que RAID 6.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage avec le pool.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez le pool à modifier, puis cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Paramètres de pool s'affiche.
+
+. Sélectionnez l'onglet *Paramètres*, puis modifiez les paramètres de pool selon vos besoins.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+ a| 
+Nom
+ a| 
+Vous pouvez modifier le nom fourni par l'utilisateur du pool. La spécification d'un nom pour un pool est requise.
+
+
+
+ a| 
+Alertes de capacité
+ a| 
+Vous pouvez envoyer des notifications d'alerte lorsque la capacité disponible dans un pool atteint ou dépasse un seuil spécifié. Lorsque les données stockées dans le pool dépassent le seuil spécifié, le plug-in envoie un message vous permettant d'ajouter plus d'espace de stockage ou de supprimer des objets inutiles. Les alertes s'affichent dans la zone Notifications du tableau de bord et peuvent être envoyées par e-mail et par des messages d'interruption SNMP à partir du serveur. Vous pouvez définir les alertes de capacité suivantes :
+
+** *Alerte critique* -- cette alerte critique vous avertit lorsque la capacité disponible dans le pool atteint ou dépasse le seuil spécifié. Utilisez les commandes de disque pour régler le pourcentage de seuil. Cochez la case pour désactiver cette notification.
+** *Alerte précoce* -- cette alerte précoce vous avertit lorsque la capacité libre dans un pool atteint un seuil spécifié. Utilisez les commandes de disque pour régler le pourcentage de seuil. Cochez la case pour désactiver cette notification.
+
+
+
+
+ a| 
+Priorités de modification
+ a| 
+Vous pouvez spécifier les niveaux de priorité des opérations de modification dans un pool par rapport aux performances du système. Une priorité plus élevée pour les opérations de modification dans un pool accélère l'exécution d'une opération, mais peut ralentir les performances d'E/S de l'hôte. Une priorité inférieure entraîne le temps nécessaire aux opérations, mais les performances d'E/S des hôtes sont moins affectées. Vous pouvez choisir parmi cinq niveaux de priorité : le plus faible, le plus moyen, le plus élevé et le plus élevé. Plus le niveau de priorité est élevé, plus l'impact sur les E/S hôte et les performances du système est important.
+
+** *Priorité de reconstruction critique* -- cette barre de défilement détermine la priorité d'une opération de reconstruction de données lorsque plusieurs pannes de disque entraînent une condition dans laquelle certaines données ne sont pas redondantes et une panne de disque supplémentaire peut entraîner une perte de données.
+** *Priorité de reconstruction dégradée* -- cette barre de défilement détermine la priorité de l'opération de reconstruction des données lorsqu'une panne de disque s'est produite, mais les données sont toujours redondantes et une panne de disque supplémentaire n'entraîne pas de perte de données.
+** *Priorité d'opération d'arrière-plan* -- cette barre de défilement détermine la priorité des opérations d'arrière-plan du pool qui se produisent alors que le pool est dans un état optimal. Ces opérations incluent l'extension dynamique des volumes (DVE), le format de disponibilité instantanée (IAF) et la migration des données vers un disque remplacé ou ajouté.
+
+
+
+
+ a| 
+Capacité de conservation (« capacité d'optimisation » pour baie EF600 ou EF300)
+ a| 
+*Capacité de préservation* -- vous pouvez définir le nombre de disques pour déterminer la capacité réservée sur le pool afin de prendre en charge les pannes de disque potentielles. En cas de panne de disque, la capacité de préservation est utilisée pour conserver les données reconstruites. Les pools utilisent la capacité de conservation lors du processus de reconstruction des données à la place des disques de secours, utilisés dans des groupes de volumes. Utilisez les commandes de disque pour régler le nombre d'entraînements. En fonction du nombre de lecteurs, la capacité de conservation dans le pool apparaît à côté de la boîte du disque. Gardez les informations suivantes à l'esprit concernant la capacité de conservation.
+
+** La capacité de conservation étant soustraite de la capacité disponible totale d'un pool, la capacité que vous réservez affecte la capacité disponible pour créer des volumes. Si vous spécifiez 0 pour la capacité de conservation, toute la capacité disponible du pool est utilisée pour la création du volume.
+** Si vous réduisez la capacité de conservation, vous augmentez la capacité utilisable pour les volumes de pool.
+
+
+*Capacité d'optimisation supplémentaire (baies EF600 et EF300 uniquement)* -- lors de la création d'un pool, une capacité d'optimisation recommandée est générée, offrant un équilibre entre capacité disponible et performances et durée de vie des disques. Vous pouvez ajuster cet équilibre en déplaçant le curseur vers la droite pour de meilleures performances et réduire l'usure, au détriment de l'augmentation de la capacité disponible, ou en le déplaçant vers la gauche pour augmenter la capacité disponible, au détriment de meilleures performances et de l'usure des disques. Les disques SSD auront une durée de vie plus longue et de meilleures performances d'écriture maximales lorsqu'une partie de leur capacité est non allouée. Pour les disques associés à un pool, la capacité non allouée comprend la capacité de préservation d'un pool, la capacité disponible (non utilisée par les volumes) et une partie de la capacité utilisable définie comme capacité d'optimisation supplémentaire. La capacité d'optimisation supplémentaire assure un niveau minimal de capacité d'optimisation en réduisant la capacité utilisable et, en tant que tel, n'est pas disponible pour la création du volume.
+
+|===
+====
+. Cliquez sur *Enregistrer*.
+

@@ -1,0 +1,28 @@
+---
+permalink: config-linux/fc-configure-switches-task.html 
+sidebar: sidebar 
+keywords: FC switches, zoning, express linux configuration, software configuration, linux host, 
+summary: Configurez les commutateurs Fibre Channel de manière à ce que les hôtes puissent se connecter à la baie de stockage et limiter le nombre de chemins. 
+---
+= Configuration des commutateurs FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
+
+.Ce dont vous avez besoin, 8217;ll
+* Identifiants d'administrateur pour les commutateurs.
+* WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
+
+
+Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
+
+.Étapes
+. Connectez-vous au programme d'administration des commutateurs FC, puis sélectionnez l'option de configuration du zoning.
+. Créer une nouvelle zone qui inclut le premier port initiateur hôte et qui inclut également tous les ports cibles qui se connectent au même commutateur FC que l'initiateur.
+. Créer des zones supplémentaires pour chaque port d'initiateur hôte FC dans le commutateur.
+. Enregistrer les zones, puis activer la nouvelle configuration de zoning.
+

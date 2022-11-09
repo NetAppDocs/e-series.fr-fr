@@ -1,0 +1,70 @@
+---
+permalink: config-linux/iser-ib-configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Configurer le logiciel multivoie, qui fournit un chemin redondant à la baie de stockage en cas de perturbation de l"un des chemins physiques.' 
+---
+= Configurez le logiciel multivoie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour fournir un chemin redondant à la baie de stockage, vous pouvez configurer le logiciel multivoie.
+
+Vous devez installer les modules requis sur votre système.
+
+* Pour les hôtes Red Hat (RHEL), vérifiez que les packages sont installés en cours d'exécution `rpm -q device-mapper-multipath`.
+* Pour les hôtes SLES, vérifiez que les packages sont installés en cours d'exécution `rpm -q multipath-tools`.
+
+
+Si vous n'avez pas encore installé le système d'exploitation, utilisez le support fourni par le fournisseur de votre système d'exploitation.
+
+Le logiciel multivoie fournit un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques. Le logiciel multivoie présente le système d'exploitation avec un seul périphérique virtuel qui représente les chemins physiques actifs vers le stockage. Le logiciel multichemin gère également le processus de basculement qui met à jour le périphérique virtuel.
+
+Vous utilisez l'outil DM-MP (device mapper multipath) pour les installations Linux. Par défaut, DM-MP est désactivé dans RHEL et SLES. Procédez comme suit pour activer les composants DM-MP sur l'hôte.
+
+.Étapes
+. Si aucun fichier multipath.conf n'est déjà créé, exécutez le `# touch /etc/multipath.conf` commande.
+. Utilisez les paramètres de chemins d'accès multiples par défaut en laissant le fichier multipath.conf vide.
+. Démarrez le service multivoie.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Enregistrez votre version du noyau en exécutant le `uname -r` commande.
++
+[listing]
+----
+# uname -r
+3.10.0-327.el7.x86_64
+----
++
+Vous utiliserez ces informations lorsque vous affectez des volumes à l'hôte.
+
+. Activez le démon multipathd au démarrage.
++
+[listing]
+----
+systemctl enable multipathd
+----
+. Reconstruire le `initramfs` image ou `initrd` image sous le répertoire /boot :
++
+[listing]
+----
+dracut --force --add multipath
+----
+. Assurez-vous que l'image /boot/initramers-* ou l'image /boot/initrd-* nouvellement créée est sélectionnée dans le fichier de configuration de démarrage.
++
+Par exemple, pour GRUB c'est `/boot/grub/menu.lst` et pour le grub2 c'est `/boot/grub2/menu.cfg`.
+
+. Utilisez le https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Créer l'hôte manuellement"] procédure de l'aide en ligne pour vérifier si les hôtes sont définis. Vérifiez que chaque paramètre de type d'hôte est basé sur les informations du noyau recueillies dans ,étape 4.
+
+
+
+NOTE: L'équilibrage automatique de la charge est désactivé pour tous les volumes mappés vers les hôtes exécutant le noyau 3.9 ou version antérieure.
+
+. Redémarrez l'hôte.
+

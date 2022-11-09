@@ -1,0 +1,54 @@
+---
+permalink: cloud-connector/index.html 
+sidebar: sidebar 
+keywords: Cloud Connector 
+summary: SANtricity Cloud Connector 
+---
+= Présentation de SANtricity® Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Cloud Connector est une application Linux basée sur hôte qui vous permet d'effectuer des sauvegardes et des restaurations complètes basées sur des blocs et des fichiers de volumes E-Series vers des comptes de plainte S3 (par exemple, Amazon simple Storage Service et NetApp StorageGRID) et l'appliance NetApp AltaVault.
+
+Disponible pour l'installation sur les plates-formes RedHat et SUSE Linux, SANtricity Cloud Connector est une solution conditionnée (.bin file). Une fois SANtricity Cloud Connector installé, vous pouvez configurer l'application pour qu'elle effectue des tâches de sauvegarde et de restauration des volumes E-Series vers une appliance AltaVault ou vers vos comptes Amazon S3 ou StorageGRID existants. Toutes les tâches effectuées via SANtricity Cloud Connector utilisent des API REST.
+
+
+NOTE: L'outil SANtricity Cloud Connector est obsolète et n'est plus disponible au téléchargement.
+
+
+
+== Considérations
+
+Lorsque vous utilisez ces procédures, sachez que :
+
+* Les tâches de configuration et de sauvegarde/restauration décrites dans ces procédures s'appliquent à la version de l'interface utilisateur graphique du SANtricity Cloud Connector.
+* Les workflows d'API REST de l'application SANtricity Cloud Connector ne sont pas décrits dans ces procédures. Les développeurs expérimentés disposent de terminaux pour chaque opération SANtricity Cloud Connector dans la documentation de l'API. La documentation de l'API est accessible en accédant à ``http://<hostname.domain>:<port>/docs`` par l'intermédiaire d'un navigateur.
+
+
+
+
+== Types de sauvegardes
+
+SANtricity Cloud Connector propose deux types de sauvegardes : des sauvegardes basées sur des images et des fichiers.
+
+* *Sauvegarde basée sur image*
++
+Une sauvegarde basée sur des images lit les blocs de données brutes à partir d'un volume de snapshot et les sauvegarde dans un fichier appelé image. Tous les blocs de données du volume snapshot sont sauvegardés, y compris les blocs vides, les blocs occupés par des fichiers supprimés, les blocs associés au partitionnement et les métadonnées du système de fichiers. Les sauvegardes d'images ont l'avantage de stocker toutes les informations avec le volume de snapshot, quel que soit le système de partitionnement ou les systèmes de fichiers sur celui-ci.
+
++
+L'image n'est pas stockée sur la cible de sauvegarde comme un seul fichier, mais elle est divisée en une série de blocs de données de 64 Mo. Les blocs de données permettent à SANtricity Cloud Connector d'utiliser plusieurs connexions à la cible de sauvegarde, ce qui améliore les performances du processus de sauvegarde.
+
++
+Pour les sauvegardes vers StorageGRID et Amazon Web Services (S3), chaque bloc de données utilise une clé de chiffrement distincte pour chiffrer le bloc. La clé est un hachage SHA256 consistant en la combinaison d'une phrase de passe fournie par l'utilisateur et du hachage SHA256 des données utilisateur. Pour les sauvegardes vers AltaVault, SANtricity Cloud Connector ne chiffre pas les blocs de données à mesure que AltaVault effectue cette opération.
+
+* *Sauvegarde basée sur fichier*
++
+Une sauvegarde basée sur des fichiers lit les fichiers contenus dans une partition de système de fichiers et les sauvegarde en une série de blocs de données de 64 Mo. Une sauvegarde basée sur les fichiers ne sauvegarde pas les fichiers supprimés, ni le partitionnement et les métadonnées du système de fichiers. Tout comme pour les sauvegardes basées sur des images, les blocs de données permettent à SANtricity Cloud Connector d'utiliser plusieurs connexions à la cible de sauvegarde, ce qui améliore les performances du processus de sauvegarde.
+
++
+Pour les sauvegardes vers StorageGRID et Amazon Web Services, chaque bloc de données utilise une clé de chiffrement distincte pour chiffrer le bloc. La clé est un hachage SHA256 consistant en la combinaison de la phrase de passe fournie par l'utilisateur et du hachage SHA256 des données utilisateur. Pour les sauvegardes vers AltaVault, les blocs de données ne sont pas chiffrés par SANtricity Cloud Connector, car AltaVault effectue cette opération.
+
+

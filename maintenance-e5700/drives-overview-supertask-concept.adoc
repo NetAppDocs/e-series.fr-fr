@@ -1,0 +1,103 @@
+---
+permalink: maintenance-e5700/drives-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 drive, replace E5700 drive, failed E5700 drive 
+summary: Consultez les exigences de la baie E5700. 
+---
+= Conditions requises pour le remplacement des disques E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un disque, vérifiez les exigences et les considérations à prendre en compte.
+
+
+
+== Types de tiroirs
+
+Vous pouvez remplacer un disque dans un tiroir de 24 disques, dans un tiroir de 60 disques ou dans un tiroir disque.
+
+
+
+=== tiroirs de 24 disques
+
+Les figures montrent le mode de numérotation des disques dans chaque type de shelf (le cadre avant ou les caches d'extrémité ont été retirés).
+
+*Numérotation des disques dans un tiroir contrôleur E5724 ou dans un tiroir disque DE224C*
+
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e5700.gif[28 dwg e2824 de224c numérotation des lecteurs maint e5700]
+
+
+NOTE: Votre baie de stockage E5724 peut inclure un ou plusieurs tiroirs disques d'extension SAS-2, dont le tiroir de 24 disques DE5600 ou le tiroir de 60 disques DE6600 Pour obtenir des instructions sur le remplacement d'un lecteur dans l'un de ces tiroirs, reportez-vous à la section link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Remplacement d'un disque E2660, E2760, E5460, E5560 ou E5660 en tiroirs disques"] et link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Réinstallation d'un disque dans des tiroirs E2600, E2700, E5400, E5500 et E5600 12 disques ou 24 disques"].
+
+
+
+=== tiroirs de 60 disques
+
+Le tiroir contrôleur E5760 et le tiroir disque DE460C sont composés de cinq tiroirs disques contenant chacun 12 emplacements de disque. Le tiroir d'entraînement 1 se trouve en haut et le tiroir d'entraînement 5 en bas.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c avant sans légendes début e5700]
+
+Pour un tiroir contrôleur E5760 et un tiroir disque DE460C, les disques sont numérotés de 0 à 11 dans chaque tiroir disque au sein du tiroir.
+
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[tiroir dwg trafford avec disques durs associés maint e5700]
+
+
+NOTE: Votre baie de stockage E5760 peut inclure un ou plusieurs tiroirs disques d'extension SAS-2, notamment le tiroir DE1600 12 disques, le tiroir DE5600 de 24 disques ou DE6600 60 Pour obtenir des instructions sur le remplacement d'un lecteur dans l'un de ces tiroirs, reportez-vous à la section link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Remplacement d'un disque E2660, E2760, E5460, E5560 ou E5660 en tiroirs disques"] et link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Réinstallation d'un disque dans des tiroirs E2600, E2700, E5400, E5500 et E5600 12 disques ou 24 disques"].
+
+
+
+=== Tiroir d'entraînement
+
+Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E5760 et un tiroir disque DE460C. Chacun de ces tiroirs de 60 disques dispose de cinq tiroirs disques.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c avant sans légendes début e5700]
+
+Chacun des cinq tiroirs peut accueillir jusqu'à 12 disques.
+
+image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[92 dwg de6600 tiroir avec disques durs sans légendes maint e5700]
+
+
+
+== Exigences relatives à la gestion des disques
+
+
+CAUTION: Les lecteurs de votre matrice de stockage sont fragiles. Une manipulation incorrecte des disques est l'une des principales causes de défaillance des disques.
+
+Suivez ces règles pour éviter d'endommager les lecteurs de votre matrice de stockage :
+
+* Prévention des décharges électrostatiques (ESD) :
++
+** Conservez le lecteur dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+** N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
++
+Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux.
+
+** Conservez le sac ESD et tous les matériaux d'emballage au cas où vous devrez retourner un disque plus tard.
+** Portez toujours un bracelet antistatique relié à la terre sur une surface non peinte du châssis de votre boîtier de stockage.
++
+Si un bracelet n'est pas disponible, touchez une surface non peinte du châssis de votre boîtier de stockage avant de manipuler le lecteur.
+
+
+
+* Manipulez les disques avec précaution :
++
+** Utilisez toujours deux mains lors du retrait, de l'installation ou du transport d'un lecteur.
+** Ne forcez jamais un lecteur dans une étagère et n'utilisez pas de pression légère et ferme pour engager complètement le loquet d'entraînement.
+** Placez les entraînements sur des surfaces amorties et ne placez jamais de disques sur l'un de l'autre.
+** Ne pas heurter les entraînements contre d'autres surfaces.
+** Avant de retirer un lecteur d'une étagère, déverrouillez la poignée et attendez 30 secondes que le lecteur tourne.
+** Lors de l'expédition des disques, utilisez toujours l'emballage approuvé.
+
+
+* Éviter les champs magnétiques :
++
+** Tenir les disques à l'écart des dispositifs magnétiques.
++
+Les champs magnétiques peuvent détruire toutes les données du lecteur et causer des dommages irréparables au circuit d'entraînement.
+
+
+
+

@@ -1,0 +1,273 @@
+---
+permalink: getting-started/learn-hardware-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+summary: Les baies de stockage E-Series sont disponibles dans plusieurs configurations et modèles. 
+---
+= Présentation du matériel E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les baies de stockage E-Series sont disponibles dans plusieurs configurations et modèles.
+
+Une baie de stockage comprend des tiroirs, des contrôleurs, des disques, des logiciels et des firmwares. La baie peut être installée dans un rack ou une armoire avec du matériel personnalisable pour un ou deux contrôleurs dans un tiroir de 12, 24 ou 60 disques. Vous pouvez connecter la baie de stockage à un SAN à partir de plusieurs types d'interface et à un grand nombre de systèmes d'exploitation hôtes.
+
+Les baies E-Series sont disponibles dans les modèles suivants :
+
+* E2800 Series - hybride d'entrée de gamme
+* Gamme EF280 – baies 100 % Flash d'entrée de gamme
+* Gamme EF300 - 100 % NVMe, 100 % Flash d'entrée de gamme
+* E5700 Series - milieu de gamme hybride
+* Gamme EF570 : stockage 100 % Flash de milieu de gamme
+* Gamme EF600 - stockage 100 % NVMe, 100 % Flash de milieu de gamme
+
+
+
+
+== Modèles E2800
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+* 2U/12 (2 unités de rack ; 12 disques)
+* 2U/24 (2 unités de rack ; 24 disques)
++
+image::../media/e2800_2u_front.gif[e2800 2u à l'avant]
+
+* 4U60 (4 unités de rack ; 60 disques)
++
+image::../media/e2860_front.gif[e2860 avant]
+
+
+
+
+
+ a| 
+Disques :
+ a| 
+Prend en charge les types de disques suivants :
+
+* NL-SAS 3.5" (jusqu'à 180)
+* SSD SAS 2.5" (jusqu'à 120)
+* Disque dur SAS 2.5" (jusqu'à 180)
+
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* SAS 12 Gb
+* ISCSI 10 Gb ou 25 Gb
+* Fibre Channel 16 Gb ou 32 Gb
+
+
+|===
+
+
+== Modèles EF280
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Disques :
+ a| 
+Prend en charge jusqu'à 96 disques SSD 2.5"
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* SAS 12 Gb
+* ISCSI 10 Gb ou 25 Gb
+* Fibre Channel 16 Gb ou 32 Gb
+
+
+|===
+
+
+== Modèles EF300
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Disques et HIC :
+ a| 
+Prend en charge jusqu'à 24 SSD NVMe avec une seule carte d'interface hôte (HIC) par contrôleur.
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* ISCSI 25 Gb
+* 32 Gb NVMe/Fibre Channel
+* 32 Gb SCSI/Fibre Channel
+* Iser 100 Gb/IB
+* SRP/IB 100 Gb
+* NVMe/IB 100 Gb
+* 100 Gb NVMe/RoCE
+
+
+|===
+
+
+== Modèles E5700
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+* 2U/24 (2 unités de rack ; 24 disques)
++
+image::../media/e2800_2u_front.gif[e2800 2u à l'avant]
+
+* 4U60 (4 unités de rack ; 60 disques)
++
+image::../media/e2860_front.gif[e2860 avant]
+
+
+
+
+
+ a| 
+Disques :
+ a| 
+Prend en charge jusqu'à 480 des types de disques suivants :
+
+* Disques NL-SAS 3.5"
+* Disques SSD SAS 2.5"
+* Disques durs SAS 2.5"
+
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* SAS 12 Gb
+* ISCSI 10 Gb ou 25 Gb
+* Fibre Channel 16 Gb ou 32 Gb
+* 32 Gb NVMe/Fibre Channel
+* Iser 100 Gb/IB
+* SRP/IB 100 Gb
+* NVMe/IB 100 Gb
+* 100 Gb NVMe/RoCE
+
+
+|===
+
+
+== Modèles EF570
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Disques :
+ a| 
+Prend en charge jusqu'à 120 disques SSD 2.5"
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* SAS 12 Gb
+* ISCSI 10 Gb ou 25 Gb
+* Fibre Channel 16 Gb ou 32 Gb
+* 32 Gb NVMe/Fibre Channel
+* Iser 100 Gb/IB
+* SRP/IB 100 Gb
+* NVMe/IB 100 Gb
+* 100 Gb NVMe/RoCE
+
+
+|===
+
+
+== Modèles EF600
+
+|===
+| Composant | Spécifications 
+
+
+ a| 
+Tailles de rack :
+ a| 
+2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
+
+
+
+ a| 
+Disques et HIC :
+ a| 
+Jusqu'à 24 SSD NVMe pris en charge, avec deux cartes d'interface hôte (HIC) par contrôleur.
+
+
+
+ a| 
+Interfaces :
+ a| 
+Disponible avec les interfaces suivantes :
+
+* ISCSI 25 Gb
+* 32 Gb NVMe/Fibre Channel
+* 32 Gb SCSI/Fibre Channel
+* Iser 100 Gb/IB
+* SRP/IB 100 Gb
+* NVMe/IB 100 Gb
+* 100 Gb NVMe/RoCE
+* Iser 200 Gb/IB
+* NVMe/IB 200 Gb
+* NVMe/RoCE 200 Gb
+
+
+|===

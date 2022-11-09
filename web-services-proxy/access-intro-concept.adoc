@@ -1,0 +1,228 @@
+---
+permalink: web-services-proxy/access-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, roles WSP, user access WSP 
+summary: 'Vous pouvez gérer l"accès des utilisateurs à l"API Web Services et à Unified Manager pour des raisons de sécurité.' 
+---
+= Gérer l'accès des utilisateurs dans Web Services Proxy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez gérer l'accès des utilisateurs à l'API Web Services et à Unified Manager pour des raisons de sécurité.
+
+
+
+== Présentation de la gestion des accès
+
+La gestion des accès comprend les connexions basées sur des rôles, le chiffrement par mot de passe, l'authentification de base et l'intégration LDAP.
+
+
+
+=== Accès basé sur des rôles
+
+Le contrôle d'accès basé sur des rôles (RBAC) associe des utilisateurs prédéfinis à des rôles. Chaque rôle accorde des autorisations à un niveau de fonctionnalité spécifique.
+
+Le tableau suivant décrit chaque rôle.
+
+|===
+| Rôle | Description 
+
+
+ a| 
+security.admin
+ a| 
+SSL et gestion des certificats.
+
+
+
+ a| 
+storage.admin
+ a| 
+Accès complet en lecture/écriture à la configuration du système de stockage.
+
+
+
+ a| 
+storage.monitor
+ a| 
+Accès en lecture seule pour afficher les données du système de stockage.
+
+
+
+ a| 
+support.admin
+ a| 
+Accès à toutes les ressources matérielles sur les systèmes de stockage et aux opérations de prise en charge telles que la récupération AutoSupport (ASUP).
+
+|===
+Les comptes utilisateur par défaut sont définis dans le fichier users.properties. Vous pouvez modifier les comptes utilisateur en modifiant directement le fichier users.properties ou en utilisant les fonctions de gestion des accès d'Unified Manager.
+
+Le tableau suivant répertorie les connexions utilisateur disponibles pour le proxy de services Web.
+
+|===
+| Connexion utilisateur prédéfinie | Description 
+
+
+ a| 
+admin
+ a| 
+Super administrateur qui a accès à toutes les fonctions et inclut tous les rôles. Pour Unified Manager, vous devez définir le mot de passe lors de la première connexion.
+
+
+
+ a| 
+stockage
+ a| 
+L'administrateur responsable du provisionnement du stockage. Cet utilisateur comprend les rôles suivants : Storage.admin, support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+
+
+ a| 
+sécurité
+ a| 
+L'utilisateur responsable de la configuration de la sécurité. Cet utilisateur comprend les rôles suivants : Security.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+
+
+ a| 
+assistance
+ a| 
+L'utilisateur est responsable des ressources matérielles, des données de défaillance et des mises à niveau du micrologiciel. Cet utilisateur comprend les rôles suivants : support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+
+
+ a| 
+superviser
+ a| 
+Un utilisateur avec un accès au système en lecture seule. Cet utilisateur inclut uniquement le rôle Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+
+
+ a| 
+rw
+ a| 
+L'utilisateur rw (read/write) comprend les rôles suivants : Storage.admin, support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+
+
+ a| 
+ro
+ a| 
+L'utilisateur ro (lecture seule) inclut uniquement le rôle Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
+
+|===
+
+
+=== Chiffrement par mot de passe
+
+Pour chaque mot de passe, vous pouvez appliquer un processus de chiffrement supplémentaire à l'aide de l'encodage de mot de passe SHA256 existant. Ce processus de chiffrement supplémentaire applique un ensemble aléatoire d'octets à chaque mot de passe (Salt) pour chaque chiffrement SHA256. Le chiffrement saled SHA256 est appliqué à tous les mots de passe nouvellement créés.
+
+
+NOTE: Avant la version 3.0 de Web Services Proxy, les mots de passe étaient chiffrés uniquement par hachage SHA256. Tous les mots de passe chiffrés SHA256 uniquement à hachage conservent ce codage et sont toujours valides sous le fichier users.properties. Toutefois, les mots de passe chiffrés uniquement au hachage SHA256 ne sont pas aussi sécurisés que les mots de passe avec chiffrement SAH256 salé.
+
+
+
+=== Authentification de base
+
+Par défaut, l'authentification de base est activée, ce qui signifie que le serveur renvoie un défi d'authentification de base. Ce paramètre peut être modifié dans le fichier wsconfig.xml.
+
+
+
+=== LDAP
+
+Le protocole LDAP (Lightweight Directory Access Protocol), un protocole d'application permettant d'accéder aux services d'informations d'annuaire distribués et de les gérer, est activé pour le proxy de services Web. L'intégration LDAP permet l'authentification des utilisateurs et le mappage des rôles aux groupes.
+
+Pour plus d'informations sur la configuration de la fonctionnalité LDAP, reportez-vous aux options de configuration dans l'interface Unified Manager ou dans la section LDAP de la documentation interactive de l'API.
+
+
+
+== Configurez l'accès utilisateur
+
+Vous pouvez gérer l'accès des utilisateurs en appliquant un cryptage supplémentaire aux mots de passe, en définissant une authentification de base et en définissant un accès basé sur les rôles.
+
+
+
+=== Appliquer un chiffrement supplémentaire aux mots de passe
+
+Pour un niveau de sécurité maximal, vous pouvez appliquer un chiffrement supplémentaire aux mots de passe à l'aide du codage de mot de passe SHA256 existant.
+
+Ce processus de chiffrement supplémentaire applique un ensemble aléatoire d'octets à chaque mot de passe (Salt) pour chaque chiffrement SHA256. Le chiffrement saled SHA256 est appliqué à tous les mots de passe nouvellement créés.
+
+.Étapes
+. Ouvrez le fichier users.properties, à l'adresse suivante :
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\data\config
+** (Linux) -- /opt/netapp/santricity_web_services_proxy/données/config
+
+
+. Saisissez à nouveau le mot de passe chiffré en texte brut.
+. Exécutez le `securepasswds` Utilitaire de ligne de commande pour crypter à nouveau le mot de passe ou simplement redémarrer Web Services Proxy. Cet utilitaire est installé dans le répertoire d'installation racine du proxy de services Web.
++
+
+NOTE: Vous pouvez également Salt et hacher les mots de passe des utilisateurs locaux dès que des modifications du mot de passe sont effectuées via Unified Manager.
+
+
+
+
+
+=== Configurer l'authentification de base
+
+Par défaut, l'authentification de base est activée, ce qui signifie que le serveur renvoie un défi d'authentification de base. Si vous le souhaitez, vous pouvez modifier ce paramètre dans le fichier wsconfig.xml.
+
+. Ouvrez le fichier wsconfig.xml, à l'adresse suivante :
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_services_proxy
+
+
+. Modifiez la ligne suivante dans le fichier en spécifiant FALSE (non activé) ou true (activé).
++
+Par exemple : `<env key="enable-basic-auth">true</env>`
+
+. Enregistrez le fichier.
+. Redémarrez le service Webserver pour que la modification prenne effet.
+
+
+
+
+=== Configurer l'accès basé sur les rôles
+
+Pour limiter l'accès des utilisateurs à des fonctions spécifiques, vous pouvez modifier les rôles spécifiés pour chaque compte utilisateur.
+
+Le proxy de services Web comprend un contrôle d'accès basé sur des rôles (RBAC), dans lequel les rôles sont associés à des utilisateurs prédéfinis. Chaque rôle accorde des autorisations à un niveau de fonctionnalité spécifique. Vous pouvez modifier les rôles affectés aux comptes d'utilisateur en modifiant directement le fichier users.properties.
+
+
+NOTE: Vous pouvez également modifier des comptes d'utilisateur à l'aide de Access Management dans Unified Manager. Pour plus d'informations, consultez l'aide en ligne disponible avec Unified Manager.
+
+.Étapes
+. Ouvrez le fichier users.properties, situé dans :
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\data\config
+** (Linux) -- /opt/netapp/santricity_web_services_proxy/données/config
+
+
+. Recherchez la ligne du compte utilisateur que vous souhaitez modifier (stockage, sécurité, moniteur, prise en charge, rw, ou ro).
++
+
+NOTE: Ne modifiez pas l'utilisateur admin. Il s'agit d'un super utilisateur avec accès à toutes les fonctions.
+
+. Ajoutez ou supprimez les rôles spécifiés, le cas échéant.
++
+Les rôles incluent :
+
++
+** Security.admin -- SSL et gestion des certificats.
+** Storage.admin -- accès en lecture/écriture complet à la configuration du système de stockage.
+** Storage.Monitor -- accès en lecture seule pour afficher les données du système de stockage.
+** Support.admin -- accès à toutes les ressources matérielles sur les systèmes de stockage et aux opérations de support telles que la récupération AutoSupport (ASUP).
++
+
+NOTE: Le rôle Storage.Monitor est obligatoire pour tous les utilisateurs, y compris l'administrateur.
+
+
+
+. Enregistrez le fichier.
+

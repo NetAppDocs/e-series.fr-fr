@@ -1,0 +1,157 @@
+---
+permalink: maintenance-e2800/batteries-complete-replacement-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Remplacez la batterie. 
+---
+= Remplacement complet de la batterie du système E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procédure de remplacement de la batterie dépend de la configuration recto-verso (deux contrôleurs) ou recto (un contrôleur).
+
+* Pour les configurations recto verso, reportez-vous à la section  controller online (duplex).
+* Pour les configurations recto, voir  up controller (simplex).
+
+
+
+
+== Mise en ligne du contrôleur (duplex)
+
+Mettez le contrôleur en ligne pour vérifier que la matrice de stockage fonctionne correctement. Vous pouvez ensuite recueillir des données d'assistance et reprendre les opérations.
+
+
+NOTE: Effectuez cette tâche uniquement si votre baie de stockage dispose de deux contrôleurs.
+
+.Étapes
+. Au démarrage du contrôleur, vérifier les LED du contrôleur et l'écran à sept segments.
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _voyant attention (ambre)_
+
++
+*(2)* _affichage à sept segments_
+
++
+*(3)* _LED Host Link_
+
+
+
+. Mettre le contrôleur en ligne à l'aide de SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les lecteurs, sélectionnez *Afficher le verso du tiroir*.
+... Sélectionnez le contrôleur que vous souhaitez placer en ligne.
+... Sélectionnez *placer en ligne* dans le menu contextuel et confirmez que vous souhaitez effectuer l'opération.
++
+Le système met le contrôleur en ligne.
+
+
+
+** Vous pouvez également remettre le contrôleur en ligne à l'aide des commandes CLI suivantes :
++
+*Pour contrôleur A:* `set controller [a] availability=online;`
+
++
+*Pour le contrôleur B:* `set controller [b] availability=online;`
+
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et vérifiez que la batterie et le boîtier du contrôleur sont correctement installés. Si nécessaire, retirez et réinstallez le boîtier du contrôleur et la batterie.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si nécessaire, collectez les données d'assistance de votre baie de stockage à l'aide de SANtricity System Manager.
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.
+
+
+
+== Mise sous tension du contrôleur (simplex)
+
+Mettez le tiroir contrôleur sous tension afin de vérifier qu'il fonctionne correctement. Vous pouvez ensuite recueillir des données d'assistance et reprendre les opérations.
+
+
+NOTE: Effectuez cette tâche uniquement si votre matrice de stockage dispose d'un seul contrôleur.
+
+.Étapes
+. Allumer les deux boutons d'alimentation à l'arrière du tiroir contrôleur.
++
+** N'éteignez pas les interrupteurs d'alimentation pendant le processus de mise sous tension, qui dure généralement 90 secondes ou moins.
+** Les ventilateurs de chaque shelf sont très bruyants lors du premier démarrage. Le bruit est normal au démarrage.
+
+
+. Au démarrage du contrôleur, vérifier les LED du contrôleur et l'affichage à sept segments.
++
+** L'affichage à sept segments montre la séquence répétée *OS*, *SD*, *_blank_* pour indiquer que le contrôleur exécute le traitement début de journée (SOD). Une fois qu'un contrôleur a démarré avec succès, son affichage à sept segments doit afficher l'ID du bac.
+** Le voyant d'avertissement orange du contrôleur s'allume puis s'éteint, à moins qu'une erreur ne s'affiche.
+** Les voyants verts Host Link s'allument.
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg voyant attn 7s maint. e2800]
+
++
+*(1)* _voyant attention (ambre)_
+
++
+*(2)* _affichage à sept segments_
+
++
+*(3)* _LED Host Link_
+
+
+
+. Vérifier que l'état du contrôleur est optimal et vérifier les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et vérifiez que la batterie et le boîtier du contrôleur sont correctement installés. Si nécessaire, retirez et réinstallez le boîtier du contrôleur et la batterie.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si nécessaire, collectez les données d'assistance de votre baie de stockage à l'aide de SANtricity System Manager.
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.

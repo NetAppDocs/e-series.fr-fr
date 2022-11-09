@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Vous pouvez gérer les mises à niveau du logiciel SANtricity et de la NVSRAM pour plusieurs matrices de stockage du même type. 
+---
+= Présentation de la mise à niveau
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le plug-in de stockage pour vCenter vous permet de gérer les mises à niveau du logiciel SANtricity et de la NVSRAM pour plusieurs baies de stockage du même type.
+
+
+
+== Mise à niveau du workflow
+
+Les étapes suivantes fournissent un flux de travail général pour les mises à niveau logicielles :
+
+. Vous téléchargez le dernier fichier SANtricity OS depuis le site du support (un lien est disponible à partir de la page du support). Enregistrez le fichier sur le système hôte de gestion (l'hôte sur lequel vous accédez au plug-in dans un navigateur), puis décompressez le fichier.
+. Dans le plug-in, vous pouvez charger le fichier logiciel SANtricity OS et le fichier NVSRAM dans le référentiel (zone du serveur où les fichiers sont stockés).
+. Une fois les fichiers chargés dans le référentiel, vous pouvez sélectionner le fichier à utiliser dans la mise à niveau. Dans la page mise à niveau du logiciel SANtricity OS, sélectionnez le fichier logiciel du système d'exploitation et le fichier NVSRAM. Après avoir sélectionné un fichier logiciel, une liste de matrices de stockage compatibles apparaît sur cette page. Vous sélectionnez ensuite les baies de stockage que vous souhaitez mettre à niveau avec le nouveau logiciel. (Vous ne pouvez pas sélectionner de baies incompatibles.)
+. Vous pouvez alors démarrer un transfert et une activation de logiciel immédiat, ou vous pouvez choisir d'activer les fichiers ultérieurement. Pendant le processus de mise à niveau, le plug-in effectue les tâches suivantes :
++
+** Effectue un contrôle de l'état des baies de stockage pour déterminer si une condition susceptible d'empêcher la mise à niveau est terminée. Si l'une des baies ne fonctionne pas, vous pouvez ignorer cette matrice et poursuivre la mise à niveau pour les autres, ou arrêter le processus complet et dépanner les baies qui ne sont pas utilisées.
+** Transfère les fichiers de mise à niveau vers chaque contrôleur.
+** Redémarre les contrôleurs et active le nouveau logiciel de système d'exploitation, un contrôleur à la fois. Lors de l'activation, le fichier OS existant est remplacé par le nouveau fichier.
+
+
+
+
+
+NOTE: Vous pouvez également indiquer que le logiciel est activé ultérieurement.
+
+
+
+== Mise à niveau
+
+Avant de mettre à niveau plusieurs baies de stockage, passez en revue les principaux éléments à prendre en compte dans le cadre de votre planification.
+
+
+
+=== Versions actuelles
+
+Vous pouvez afficher les versions actuelles du logiciel SANtricity OS à partir de la page gérer du plug-in de stockage pour vCenter pour chaque baie de stockage détectée. La version est indiquée dans la colonne logiciel SANtricity OS. Les informations relatives au micrologiciel du contrôleur et à la NVSRAM sont disponibles dans une boîte de dialogue contextuelle lorsque vous cliquez sur la version du système d'exploitation dans chaque ligne.
+
+
+
+=== Les autres composants doivent être mis à niveau
+
+Dans le cadre du processus de mise à niveau, vous devrez peut-être également mettre à niveau le pilote multivoie/basculement de l'hôte ou le pilote HBA afin que l'hôte puisse interagir correctement avec les contrôleurs. Pour plus d'informations sur la compatibilité, reportez-vous à la section link:https://imt.netapp.com/matrix/["Matrice d'interopérabilité"^].
+
+
+
+=== Doubles contrôleurs
+
+Si une baie de stockage contient deux contrôleurs et qu'un pilote multivoie est installé, la baie de stockage peut continuer à traiter les E/S pendant la mise à niveau. Pendant la mise à niveau, la procédure suivante se produit :
+
+. Le contrôleur A bascule de toutes ses LUN vers le contrôleur B.
+. La mise à niveau se produit sur le contrôleur A.
+. Le contrôleur A revient ses LUN et toutes les LUN du contrôleur B.
+. La mise à niveau se produit sur le contrôleur B.
+
+
+Une fois la mise à niveau terminée, vous devrez peut-être redistribuer manuellement les volumes entre les contrôleurs afin de garantir que les volumes reviennent au contrôleur propriétaire approprié.

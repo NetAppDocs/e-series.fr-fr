@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Pour afficher et gérer les ressources de stockage dans le plug-in de stockage pour vCenter, vous devez découvrir les adresses IP des baies de votre réseau. 
+---
+= Découvrir les baies de stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour afficher et gérer les ressources de stockage dans le plug-in de stockage pour vCenter, vous devez découvrir les adresses IP des baies de votre réseau.
+
+.Avant de commencer
+* Vous devez connaître les adresses IP réseau (ou plage d'adresses) des contrôleurs de la matrice.
+* Les matrices de stockage doivent être correctement configurées et installées.
+* Les mots de passe de la baie de stockage doivent être configurés à l'aide de la mosaïque Access Management de System Manager.
+
+
+La découverte de la matrice est une procédure à plusieurs étapes :
+
+*  1: Enter network addresses for discovery
+*  2: Resolve untrusted certificates during discovery
+*  3: Provide passwords
+
+
+
+
+== Étape 1 : saisissez les adresses réseau pour la découverte
+
+Pour découvrir les baies de stockage, vous devez d'abord saisir une seule adresse IP ou une plage d'adresses IP à rechercher sur le sous-réseau local. La fonction Ajouter/découvrir ouvre un assistant qui vous guide tout au long du processus de découverte.
+
+.Étapes
+. Dans la page *gérer*, sélectionnez *Ajouter/découvrir*.
++
+La boîte de dialogue entrer une plage d'adresses réseau s'affiche.
+
+. Effectuez l'une des opérations suivantes :
++
+** Pour détecter une matrice, sélectionnez le bouton radio *découvrir une matrice de stockage unique*, puis entrez l'adresse IP de l'un des contrôleurs de la matrice de stockage.
+** Pour découvrir plusieurs matrices de stockage, sélectionnez le bouton d'option *découvrir toutes les matrices de stockage dans une plage de réseau*, puis entrez l'adresse de début et l'adresse de fin du réseau pour effectuer une recherche sur votre sous-réseau local.
+
+
+. Cliquez sur *Démarrer la découverte*.
++
+Au fur et à mesure que le processus de détection commence, la boîte de dialogue affiche les matrices de stockage au fur et à mesure qu'elles sont découvertes. Le processus de détection peut prendre plusieurs minutes.
+
++
+
+NOTE: Si aucune baie gérable n'est détectée, vérifiez que les matrices de stockage sont correctement connectées à votre réseau et que leurs adresses attribuées sont à portée. Cliquez sur *nouveaux paramètres de découverte* pour revenir à la page Ajouter/découvrir.
+
+. Cochez la case en regard de toute matrice de stockage que vous souhaitez ajouter à votre domaine de gestion.
++
+Le système effectue une vérification des informations d'identification sur chaque matrice que vous ajoutez au domaine de gestion. Vous devrez peut-être résoudre tous les problèmes avec des certificats non fiables avant de continuer.
+
+. Cliquez sur *Suivant* pour passer à l'étape suivante de l'assistant.
+. Si les matrices de stockage possèdent des certificats valides, rendez-vous sur  3: Provide passwords. Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche ; allez à  2: Resolve untrusted certificates during discovery. Si vous souhaitez importer des certificats signés par une autorité de certification, annulez les boîtes de dialogue de découverte et allez à link:vc-olh-import-certificates-for-arrays.html["Importer des certificats pour les tableaux"].
+
+
+
+
+== Étape 2 : résolution de certificats non approuvés lors de la découverte
+
+Si nécessaire, vous devez résoudre tous les problèmes liés au certificat avant de poursuivre le processus de détection.
+
+Lors de la découverte, si une baie de stockage affiche un état « certificats non approuvés », la boîte de dialogue résoudre les certificats auto-signés s'affiche. Vous pouvez résoudre des certificats non approuvés dans cette boîte de dialogue ou importer des certificats d'autorité de certification (voir link:vc-olh-import-certificates-for-arrays.html["Importer des certificats pour les tableaux"]).
+
+.Étapes
+. Si la boîte de dialogue résoudre les certificats auto-signés s'ouvre, consultez les informations affichées pour les certificats non approuvés. Pour plus d'informations, vous pouvez également cliquer sur les points de suspension à l'extrémité de la table et sélectionner *View* dans le menu contextuel.
+. Effectuez l'une des opérations suivantes :
++
+** Si vous faites confiance aux connexions aux matrices de stockage découvertes, cliquez sur *Suivant*, puis sur *Oui* pour confirmer et passer à la carte suivante de l'assistant. Les certificats auto-signés seront marqués comme fiables et les matrices de stockage seront ajoutées au plug-in.
+** Si vous ne faites pas confiance aux connexions aux matrices de stockage, sélectionnez *Annuler* et validez la stratégie de certificat de sécurité de chaque matrice de stockage avant d'ajouter une de ces connexions au plug-in.
+
+
+
+
+
+
+== Étape 3 : fournir des mots de passe
+
+Pour la dernière étape de la découverte, vous devez saisir les mots de passe des matrices de stockage que vous souhaitez ajouter à votre domaine de gestion.
+
+.Étapes
+. Si vous avez déjà configuré des groupes pour les baies, vous pouvez utiliser la liste déroulante pour sélectionner un groupe pour les matrices découvertes.
+. Pour chaque matrice découverte, entrez son mot de passe d'administrateur dans les champs.
+. Cliquez sur *Terminer*.
+
+
+
+NOTE: La connexion du système aux baies de stockage spécifiées peut prendre plusieurs minutes.
+
+Les matrices de stockage sont ajoutées à votre domaine de gestion et associées au groupe sélectionné (si spécifié).
+
+
+NOTE: Vous pouvez utiliser l'option lancer pour ouvrir System Manager basé sur navigateur pour une ou plusieurs baies de stockage lorsque vous souhaitez effectuer des opérations de gestion.

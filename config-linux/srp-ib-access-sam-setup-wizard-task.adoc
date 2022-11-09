@@ -1,0 +1,95 @@
+---
+permalink: config-linux/srp-ib-access-sam-setup-wizard-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'L"assistant d"installation de SANtricity System Manager vous permet de configurer votre baie de stockage.' 
+---
+= Accédez à SANtricity System Manager et utilisez l'assistant d'installation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour configurer votre baie de stockage, utilisez l'assistant d'installation de SANtricity System Manager.
+
+SANtricity System Manager est une interface web intégrée à chaque contrôleur. Pour accéder à l’interface utilisateur, pointez un navigateur vers l’adresse IP du contrôleur. Un assistant d'installation vous aide à commencer la configuration du système.
+
+.Ce dont vous avez besoin, 8217;ll
+* Gestion hors bande.
+* Station de gestion pour accéder à SANtricity System Manager incluant l'un des navigateurs suivants :
++
+|===
+| Navigateur | Version minimale 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+
+
+L'assistant redémarre automatiquement lorsque vous ouvrez System Manager ou actualisez votre navigateur et _au moins une_ des conditions suivantes est remplie :
+
+* Aucun pool et groupe de volumes n'est détecté.
+* Aucune charge de travail n'est détectée.
+* Aucune notification n'est configurée.
+
+
+.Étapes
+. Depuis votre navigateur, saisissez l'URL suivante : `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` est l'adresse de l'un des contrôleurs de la baie de stockage.
+
++
+Lors de la première ouverture du Gestionnaire système SANtricity sur une matrice qui n'a pas été configurée, l'invite définir le mot de passe administrateur s'affiche. La gestion de l'accès basée sur les rôles configure quatre rôles locaux : administrateur, support, sécurité et contrôle. Ces trois derniers rôles ont des mots de passe aléatoires qui ne peuvent être devinés. Après avoir défini un mot de passe pour le rôle admin, vous pouvez modifier tous les mots de passe à l'aide des informations d'identification admin. Pour plus d'informations sur les quatre rôles d'utilisateur locaux, consultez l'aide en ligne disponible dans l'interface utilisateur SANtricity System Manager.
+
+. Entrez le mot de passe du Gestionnaire système pour le rôle admin dans les champs définir le mot de passe administrateur et confirmer le mot de passe, puis cliquez sur *définir le mot de passe*.
++
+L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volumes, de charges de travail ou de notifications configurés.
+
+. Utilisez l'assistant de configuration pour effectuer les tâches suivantes :
++
+** *Vérifier le matériel (contrôleurs et lecteurs)* -- vérifier le nombre de contrôleurs et de lecteurs dans la matrice de stockage. Attribuez un nom à la matrice.
+** *Vérifier les hôtes et les systèmes d'exploitation* -- vérifier les types d'hôte et de système d'exploitation auxquels la matrice de stockage peut accéder.
+** *Accept pools* -- acceptez la configuration de pool recommandée pour la méthode d'installation express. Un pool est un groupe logique de lecteurs.
+** *Configurer les alertes* -- permettre à System Manager de recevoir des notifications automatiques en cas de problème avec la matrice de stockage.
+** *Activer AutoSupport* -- surveille automatiquement l'état de santé de votre matrice de stockage et envoie des interventions au support technique.
+
+
+. Si vous n'avez pas encore créé de volume, créez-en un en accédant au menu:Storage[volumes > Créer > Volume].
++
+Pour plus d'informations, consultez l'aide en ligne de SANtricity System Manager.
+
+

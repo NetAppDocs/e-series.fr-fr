@@ -1,0 +1,31 @@
+---
+permalink: install-hw-cabinet/index.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: 'Présentation de l"installation des tiroirs disques dans une armoire E-Series 3040 40U' 
+---
+= Installez les tiroirs dans l'armoire 3040 40U
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer les tiroirs disques contrôleur et les tiroirs disques d'extension suivants dans une armoire E-Series 3040 40U :
+
+* Tiroirs disques de contrôleur E2612, E2624 et E2660
+* Tiroirs disques de contrôleur E2712, E2724 et E2760
+* Des tiroirs disques de contrôleur E5412, E5424 et E5460
+* E5512, E5524 et tiroirs disques de contrôleur E5560
+* Tiroirs disques contrôleurs E5612, E5624 et E5660
+* Baies Flash EF540, EF550 et EF560
+* Tiroirs disques DE1600, DE5600 et DE6600
+
+
+Vous pouvez également installer les tiroirs contrôleurs et tiroirs disques SAS-3 suivants dans l'armoire.
+
+* Tiroirs contrôleurs E2812, E2824 et E5724
+* Tiroirs disques DE212C et DE224C
+
+
+Toutefois, les spécifications de ces étagères ne sont pas répertoriées dans ces procédures. Reportez-vous à la section https://hwu.netapp.com["NetApp Hardware Universe"^].

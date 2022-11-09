@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-management-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Utilisez la fonctionnalité Add/Discover pour trouver et ajouter les baies de stockage que vous souhaitez gérer dans le réseau de votre entreprise. 
+---
+= Présentation de la gestion des baies
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez la fonctionnalité Add/Discover pour trouver et ajouter les baies de stockage que vous souhaitez gérer dans le plug-in de stockage pour vCenter. Dans la page gérer, vous pouvez également renommer, supprimer et fournir de nouveaux mots de passe pour ces matrices découvertes.
+
+
+
+== Considérations relatives à la détection des baies
+
+Pour que le plug-in affiche et gère les ressources de stockage, vous devez découvrir les baies de stockage que vous souhaitez gérer sur le réseau de votre entreprise. Vous pouvez détecter puis ajouter une ou plusieurs baies.
+
+
+
+=== Baies de stockage multiples
+
+Si vous choisissez de détecter plusieurs matrices, vous entrez une plage d'adresses IP réseau, puis le système tente de connecter individuellement chaque adresse IP de cette plage. Toute matrice de stockage atteinte s'affiche dans le plug-in et vous pouvez ensuite les ajouter à votre domaine de gestion.
+
+
+
+=== Baie de stockage unique
+
+Si vous choisissez de détecter une seule baie, vous entrez l'adresse IP unique d'un des contrôleurs de la matrice de stockage, puis ajoutez-la à votre domaine de gestion.
+
+
+NOTE: Le plug-in détecte et affiche uniquement l'adresse IP ou l'adresse IP unique dans une plage attribuée à un contrôleur. Si d'autres contrôleurs ou adresses IP sont attribués à ces contrôleurs qui se trouvent en dehors de cette seule adresse IP ou plage d'adresses IP, le plug-in ne les détecte pas ou les affiche pas. Toutefois, une fois la matrice de stockage ajoutée, toutes les adresses IP associées sont découvertes et affichées dans la vue gestion.
+
+
+
+=== Informations d'identification de l'utilisateur
+
+Vous devez fournir le mot de passe administrateur pour chaque matrice de stockage que vous souhaitez ajouter.
+
+
+
+=== Certificats
+
+Dans le cadre du processus de détection, le système vérifie que les matrices de stockage découvertes utilisent des certificats par une source fiable. Le système utilise deux types d'authentification par certificat pour toutes les connexions qu'il établit avec le navigateur :
+
+* *Certificats de confiance* -- vous devrez peut-être installer des certificats de confiance supplémentaires fournis par l'autorité de certification si un ou les deux certificats de contrôleur sont expirés, révoqués ou manquants dans sa chaîne.
+* *Certificats auto-signés* -- les matrices peuvent également utiliser des certificats auto-signés. Si vous essayez de découvrir des tableaux sans importer des certificats signés, le plug-in fournit une étape supplémentaire qui vous permet d'accepter le certificat auto-signé. Le certificat auto-signé de la matrice de stockage sera marqué comme approuvé et la matrice de stockage sera ajoutée au plug-in. Si vous ne faites pas confiance aux connexions à la matrice de stockage, sélectionnez *Annuler* et validez la stratégie de certificat de sécurité de la matrice de stockage avant d'ajouter la matrice de stockage au plug-in.
+
+
+
+
+== État de la matrice de stockage
+
+Lorsque vous ouvrez le plug-in de stockage pour vCenter, la communication avec chaque baie de stockage est établie et l'état de chaque baie de stockage est affiché.
+
+À partir de la page *Manage - All*, vous pouvez afficher l'état de la matrice de stockage et l'état de la connexion à la matrice de stockage.
+
+|===
+| État | Indique 
+
+
+| Optimale | La baie de stockage est dans un état optimal. Il n'y a pas de problème de certificat et le mot de passe est valide. 
+
+
+| Mot de passe non valide | Un mot de passe de matrice de stockage non valide a été fourni. 
+
+
+| Certificat non fiable | Une ou plusieurs connexions avec la matrice de stockage ne sont pas fiables car le certificat HTTPS est auto-signé et n'a pas été importé, ou le certificat est signé par l'autorité de certification et les certificats d'autorité de certification racine et intermédiaire n'ont pas été importés. 
+
+
+| Nécessite une attention particulière | Il y a un problème avec la baie de stockage qui nécessite votre intervention pour la corriger. 
+
+
+| Verrouillage | La matrice de stockage est dans un état verrouillé. 
+
+
+| Inconnu | La baie de stockage n'a jamais été contactée. Cela peut se produire lorsque le plug-in est en cours de démarrage et n'a pas encore pris contact avec la matrice de stockage, ou la matrice de stockage est hors ligne et n'a jamais été contacté depuis le démarrage du plug-in. 
+
+
+| Hors ligne | Le plug-in avait précédemment contacté la baie de stockage, mais il lui a désormais perdu toute connexion. 
+|===
+
+
+== Interface du plug-in par rapport à System Manager
+
+Vous pouvez utiliser le plug-in de stockage pour vCenter pour les tâches d'exploitation de base sur votre baie de stockage. Cependant, il peut arriver que vous deviez lancer System Manager pour effectuer des tâches qui ne sont pas disponibles dans le plug-in.
+
+System Manager est une application intégrée au contrôleur de la baie de stockage, qui est connectée au réseau via un port de gestion Ethernet. System Manager inclut toutes les fonctions basées sur la baie.
+
+Le tableau suivant vous aide à décider si vous pouvez utiliser l'interface du plug-in ou l'interface System Manager pour une tâche de la matrice de stockage particulière.
+
+|===
+| Fonction | Interface de plug-in | Interface de System Manager 
+
+
+| Opérations par lots sur des groupes de baies de stockage multiples | Oui. | Non Les opérations sont réalisées sur une seule baie. 
+
+
+| Mises à niveau du firmware du système d'exploitation SANtricity | Oui. Une ou plusieurs matrices dans une opération par lot. | Oui. Une seule baie uniquement. 
+
+
+| Importer les paramètres d'une matrice à plusieurs matrices | Oui. | Non 
+
+
+| Gestion des clusters d'hôtes et d'hôtes (création, affectation de volumes, mise à jour et suppression) | Oui. | Oui. 
+
+
+| Gestion des pools et des groupes de volumes (création, mise à jour, activation de la sécurité et suppression) | Oui. | Oui. 
+
+
+| Gestion des volumes (création, redimensionnement, mise à jour et suppression) | Oui. | Oui. 
+
+
+| Gestion du cache SSD (création, mise à jour et suppression) | Oui. | Oui. 
+
+
+| Mise en miroir et gestion des snapshots | Non | Oui. 
+
+
+| Gestion du matériel (affichage de l'état du contrôleur, configuration des connexions des ports, mise hors ligne du contrôleur, activation des disques de secours, effacement des disques etc.) | Non | Oui. 
+
+
+| Gestion des alertes (e-mail, SNMP et syslog) | Non | Oui. 
+
+
+| Gestion des clés de sécurité | Non | Oui. 
+
+
+| Gestion des certificats pour les contrôleurs | Non | Oui. 
+
+
+| Gestion des accès aux contrôleurs (LDAP, SAML, etc.) | Non | Oui. 
+
+
+| Gestion AutoSupport | Non | Oui. 
+|===

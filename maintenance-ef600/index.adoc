@@ -1,0 +1,68 @@
+---
+permalink: maintenance-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+summary: Maintenance du matériel EF300 et EF600 
+---
+= Maintenance du matériel EF300 et EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour les systèmes de stockage EF300 et EF600, vous pouvez effectuer les procédures de maintenance concernant les composants suivants.
+
+
+
+== Batteries
+
+Une batterie est fournie avec un contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.
+
+
+
+== Contrôleurs
+
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les disques et met en œuvre les fonctions de SANtricity System Manager.
+
+
+
+== Modules DIMM
+
+Vous devez remplacer un module DIMM (module de mémoire double en ligne) en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux.
+
+
+
+== Disques
+
+Un lecteur est un périphérique qui fournit le support de stockage physique pour les données.
+
+
+
+== Ventilateurs
+
+Chaque tiroir contrôleur ou tiroir disque EF300 ou EF600 comprend cinq ventilateurs pour assurer la climatisation du contrôleur
+
+
+
+== Cartes d'interface hôte (HIC)
+
+Une carte d'interface hôte (HIC) doit être installée dans un boîtier de contrôleur. Le contrôleur EF600 inclut des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.
+
+
+
+== Protocole de port hôte
+
+Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.
+
+
+
+== Blocs d'alimentation
+
+Une alimentation électrique fournit une source d'alimentation redondante dans un tiroir contrôleur.
+
+
+
+== Cartes d'extension SAS
+
+Une carte d'extension SAS peut être installée dans un boîtier de contrôleur. Le contrôleur EF300 prend en charge l'extension SAS.

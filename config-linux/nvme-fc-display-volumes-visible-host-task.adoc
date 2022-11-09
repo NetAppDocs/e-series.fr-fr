@@ -1,0 +1,31 @@
+---
+permalink: config-linux/nvme-fc-display-volumes-visible-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'L"outil SMDevices, qui fait partie du package nvme-cli, vous permet d"afficher les volumes actuellement visibles sur l"hôte. Cet outil est une alternative à la commande nvme list.' 
+---
+= Afficher les volumes visibles pour l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'outil SMDevices pour afficher les volumes actuellement visibles sur l'hôte. Cet outil fait partie du package nvme-cli et peut être utilisé comme alternative au `nvme list` commande.
+
+Pour afficher des informations sur chaque chemin NVMe vers un volume E-Series, utilisez la `nvme netapp smdevices [-o <format>]` commande.
+
+La sortie `<format>` peut être normal (par défaut si -o n'est pas utilisé), colonne ou json.
+
+[listing]
+----
+# nvme netapp smdevices
+/dev/nvme1n1, Array Name ICTM0706SYS04, Volume Name NVMe2, NSID 1, Volume ID 000015bd5903df4a00a0980000af4462, Controller A, Access State unknown, 2.15GB
+/dev/nvme1n2, Array Name ICTM0706SYS04, Volume Name NVMe3, NSID 2, Volume ID 000015c05903e24000a0980000af4462, Controller A, Access State unknown, 2.15GB
+/dev/nvme1n3, Array Name ICTM0706SYS04, Volume Name NVMe4, NSID 4, Volume ID 00001bb0593a46f400a0980000af4462, Controller A, Access State unknown, 2.15GB
+/dev/nvme1n4, Array Name ICTM0706SYS04, Volume Name NVMe6, NSID 6, Volume ID 00001696593b424b00a0980000af4112, Controller A, Access State unknown, 2.15GB
+/dev/nvme2n1, Array Name ICTM0706SYS04, Volume Name NVMe2, NSID 1, Volume ID 000015bd5903df4a00a0980000af4462, Controller B, Access State unknown, 2.15GB
+/dev/nvme2n2, Array Name ICTM0706SYS04, Volume Name NVMe3, NSID 2, Volume ID 000015c05903e24000a0980000af4462, Controller B, Access State unknown, 2.15GB
+/dev/nvme2n3, Array Name ICTM0706SYS04, Volume Name NVMe4, NSID 4, Volume ID 00001bb0593a46f400a0980000af4462, Controller B, Access State unknown, 2.15GB
+/dev/nvme2n4, Array Name ICTM0706SYS04, Volume Name NVMe6, NSID 6, Volume ID 00001696593b424b00a0980000af4112, Controller B, Access State unknown, 2.15GB
+----

@@ -1,0 +1,82 @@
+---
+permalink: remote-storage-volumes/import-remote-storage-task.html 
+sidebar: sidebar 
+keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
+summary: 'L"importation du périphérique de stockage distant s"effectue via l"assistant d"importation de stockage distant sous le Gestionnaire système SANtricity. La fonction d"importation du stockage à distance permet de déplacer les données d"un périphérique de stockage distant vers la baie E-Series locale.' 
+---
+= Importer le stockage distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour lancer une importation du stockage à partir d'un système distant vers un système de stockage E-Series local, utilisez l'assistant d'importation de stockage distant dans l'interface utilisateur de SANtricity System Manager.
+
+.Ce dont vous avez besoin, 8217;ll
+* Le système de stockage E-Series doit être configuré pour communiquer avec le système de stockage distant. Voir link:setup-remote-volumes-concept.html["Configuration du matériel"].
+* Pour le système de stockage distant, rassemblez les informations suivantes :
++
+** IQN iSCSI
+** Adresses IP iSCSI
+** Numéro LUN du périphérique de stockage distant (volume source)
+
+
+* Pour le système de stockage E-Series local, créez ou sélectionnez un volume à utiliser pour l'importation des données. Le volume cible doit remplir les conditions suivantes :
++
+** Correspond à la taille de bloc du périphérique de stockage distant (le volume source).
+** A une capacité égale ou supérieure à celle du périphérique de stockage distant.
+** Dispose d'un état optimal et est disponible. Pour obtenir la liste complète des besoins, reportez-vous à la section link:system-reqs-concept.html["Exigences et restrictions"].
+
+
+* Recommandé : sauvegardez les volumes sur le système de stockage distant avant de démarrer le processus d'importation.
+
+
+Dans cette tâche, vous créez un mappage entre le périphérique de stockage distant et un volume sur le système de stockage E-Series local. Lorsque vous avez terminé la configuration, l'importation commence.
+
+
+NOTE: Étant donné que de nombreuses variables peuvent avoir un impact sur l'opération d'importation et son temps d'achèvement, vous devez d'abord effectuer de plus petites importations de test. Utilisez ces tests pour vous assurer que toutes les connexions fonctionnent comme prévu et que l'opération d'importation s'effectue dans un délai approprié.
+
+.Étapes
+. Dans le Gestionnaire système SANtricity, cliquez sur *stockage > stockage distant*.
+. Cliquez sur *Importer stockage distant*.
++
+Un assistant d'importation de stockage distant s'affiche.
+
+. À l'étape 1a du panneau configurer la source, entrez les informations de connexion.
++
+.. Dans le champ *Nom*, entrez le nom du périphérique de stockage distant.
+.. Sous les propriétés de connexion *iSCSI*, entrez les informations suivantes pour le périphérique de stockage distant : IQN, adresse IP et numéro de port (par défaut, 3260).
++
+Si vous souhaitez ajouter une autre connexion iSCSI, cliquez sur *+Ajouter une autre adresse IP* pour inclure une adresse IP supplémentaire pour le stockage distant. Lorsque vous avez terminé, cliquez sur *Suivant*.
+
++
+Après avoir cliqué sur Suivant, l'étape 1b du panneau configurer la source s'affiche.
+
+
+
+. Dans le champ *LUN*, sélectionnez le LUN source souhaité pour le périphérique de stockage distant, puis cliquez sur *Suivant*.
++
+Le panneau configurer la cible s'ouvre et affiche les candidats de volume devant servir de cible pour l'importation. Certains volumes n'apparaissent pas dans la liste des candidats en raison de la taille du bloc, de la capacité ou de la disponibilité du volume.
+
+. Dans le tableau, sélectionnez un volume cible sur le système de stockage E-Series. Si nécessaire, utilisez le curseur pour modifier la priorité d'importation. Cliquez sur *Suivant*. Confirmez l'opération dans la boîte de dialogue suivante en tapant `continue`, Puis cliquez sur *Continuer*.
++
+Si le volume cible a une capacité supérieure au volume source, cette capacité supplémentaire n'est pas signalée à l'hôte connecté au système E-Series. Pour utiliser la nouvelle capacité, vous devez effectuer une opération d'extension du système de fichiers sur l'hôte une fois l'opération d'importation terminée et déconnectée.
+
++
+Après avoir confirmé la configuration dans la boîte de dialogue, le panneau Revue s'affiche.
+
+. Dans l'écran Revue, vérifiez que le périphérique de stockage distant, la cible et les paramètres d'importation spécifiés sont corrects. Cliquez sur *Finish* pour terminer la création du stockage distant.
++
+Une autre boîte de dialogue s'ouvre et vous demande si vous souhaitez lancer une autre importation.
+
+. Si nécessaire, cliquez sur *Oui* pour créer une autre importation de stockage à distance. Cliquez sur Oui pour revenir à l'étape 1a du panneau configurer la source, où vous pouvez sélectionner la configuration existante ou en ajouter une nouvelle. Si vous ne souhaitez pas créer d'autre importation, cliquez sur *non* pour quitter la boîte de dialogue.
++
+Une fois le processus d'importation lancé, l'ensemble du volume cible est écrasé par les données copiées. Si l'hôte écrit de nouvelles données sur le volume cible au cours de ce processus, ces nouvelles données sont propagées au périphérique distant (volume source).
+
+. Affichez la progression de l'opération dans la boîte de dialogue opérations de visualisation sous le panneau stockage distant.
++
+Le temps nécessaire à l'importation dépend de la taille du système de stockage distant, du paramètre de priorité de l'importation et de la charge d'E/S sur les systèmes de stockage et les volumes associés. Une fois l'importation terminée, le volume local est une copie du périphérique de stockage distant.
+
+. Lorsque vous êtes prêt à rompre la relation entre les deux volumes, sélectionnez *déconnecter* sur l'objet d'importation dans la vue opérations en cours. Une fois la relation déconnectée, les performances du volume local reprennent leur état normal et n'sont plus affectées par la connexion distante.
+

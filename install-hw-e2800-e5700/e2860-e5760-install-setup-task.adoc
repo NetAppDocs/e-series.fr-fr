@@ -1,0 +1,14 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-install-setup-task.html 
+sidebar: sidebar 
+keywords: instruction, describe, install, storage, system, link, additional, content, installation, setup, e2860, e5760, de460c 
+summary: Ces instructions expliquent comment installer et configurer votre nouveau système de stockage et fournissent des liens vers des contenus supplémentaires. 
+---
+= Instructions d'installation et de configuration pour les systèmes E2860, E5760 et DE460C
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ces instructions expliquent comment installer et configurer votre nouveau système de stockage et fournissent des liens vers des contenus supplémentaires.

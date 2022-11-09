@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-rename-storage-array.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Modifiez le nom de la matrice de stockage affichée sur la page gérer. 
+---
+= Renommez la baie de stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom de la matrice de stockage affichée sur la page gérer du plug-in de stockage pour vCenter.
+
+.Étapes
+. Dans la page *Manage*, cochez la case située à gauche du nom de la matrice de stockage.
+. Sélectionnez les points de suspension à l'extrême droite de la ligne, puis sélectionnez *Renommer la matrice de stockage* dans le menu contextuel.
+. Saisissez le nouveau nom et cliquez sur *Enregistrer*.
+

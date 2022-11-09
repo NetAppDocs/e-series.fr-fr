@@ -1,0 +1,118 @@
+---
+permalink: remote-storage-volumes/system-reqs-concept.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes requirements, RTV requirements, RTV restrictions, remote volumes, remote storage E-Series 
+summary: Votre système doit répondre aux exigences de compatibilité pour les volumes de stockage distants. 
+---
+= Exigences et restrictions relatives au stockage distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de configurer la fonction volumes de stockage distants, vérifiez les exigences et restrictions suivantes.
+
+
+
+== Configuration matérielle requise
+
+
+
+=== Protocoles pris en charge
+
+Pour la version initiale de la fonction volumes de stockage distants, la prise en charge est uniquement disponible pour les protocoles iSCSI et IPv4.
+
+Reportez-vous à la http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Pour obtenir des informations à jour sur le support et la configuration entre l'hôte et les baies E-Series (destination) utilisées pour la fonctionnalité Remote Storage volumes.
+
+
+
+=== Configuration requise pour le système de stockage
+
+La baie de stockage E-Series doit inclure les éléments suivants :
+
+* Deux contrôleurs (mode duplex)
+* Connexions iSCSI pour les deux contrôleurs E-Series afin de communiquer avec le système de stockage distant via une ou plusieurs connexions iSCSI
+* SANtricity OS 11.71 ou version ultérieure
+* Fonction de stockage à distance activée dans l'ID du sous-modèle (SMID)
+
+
+Le système distant peut être un système de stockage E-Series ou un système d'un autre fournisseur. Il doit inclure des interfaces compatibles iSCSI.
+
+
+
+== Besoins en termes de volume
+
+Les volumes utilisés pour les importations doivent satisfaire aux exigences en matière de taille, de statut et d'autres critères.
+
+
+
+=== Volume de stockage distant
+
+Le volume source d'une importation est appelé « volume de stockage distant ». Ce volume doit répondre aux critères suivants :
+
+* Ne peut pas faire partie d'une autre importation
+* Le statut doit être en ligne
+
+
+Une fois l'importation lancée, le micrologiciel du contrôleur crée un volume de stockage distant en arrière-plan. Du fait de ce processus d'arrière-plan, le volume de stockage distant n'est pas gérable dans System Manager et ne peut être utilisé que pour l'opération d'importation.
+
+Une fois créé, le volume de stockage distant est traité comme tout autre volume standard sur le système E-Series, à l'exception des cas suivants :
+
+* Peut être utilisé comme proxy pour le périphérique de stockage distant.
+* Ne peut pas être utilisé comme candidats pour d'autres copies de volume ou instantanés.
+* Impossible de modifier le paramètre Data assurance pendant l'importation.
+* Ne peut pas être mappé à des hôtes, car ils sont strictement réservés à l'opération d'importation.
+
+
+Chaque volume de stockage distant est associé à un seul objet de stockage distant. Toutefois, un objet de stockage distant peut être associé à plusieurs volumes de stockage distant. Le volume de stockage distant est identifié de manière unique à l'aide de l'une des combinaisons suivantes :
+
+* Identificateur d'objet de stockage distant
+* Numéro de LUN du périphérique de stockage distant
+
+
+
+
+=== Candidats au volume cible
+
+Le volume cible correspond au volume de destination sur le système E-Series local.
+
+Le volume de destination doit répondre aux critères suivants :
+
+* Doit être un volume RAID/DDP
+* Doit avoir une capacité égale ou supérieure au volume de stockage distant.
+* Doit avoir une taille de bloc identique au volume de stockage distant.
+* Doit avoir un état valide (optimal).
+* Ne peut avoir aucune des relations suivantes : copie de volume, copies Snapshot, mise en miroir asynchrone ou synchrone.
+* Ne peut pas faire l'objet d'opérations de reconfiguration : extension de volume dynamique, extension de capacité dynamique, taille de segment dynamique, migration RAID dynamique, réduction dynamique de la capacité, Ou défragmentation.
+* Ne peut pas être mappé à un hôte avant le début de l'importation (cependant, il peut être mappé après le démarrage de l'importation).
+* Flash Read cache (FRC) ne peut pas être activé.
+
+
+System Manager vérifie automatiquement ces exigences dans le cadre de l'assistant d'importation de stockage distant. Seuls les volumes qui répondent à toutes les exigences sont affichés pour la sélection du volume de destination.
+
+
+
+== Restrictions
+
+La fonction de stockage à distance comporte les restrictions suivantes :
+
+* La mise en miroir doit être désactivée.
+* Le volume de destination du système E-Series ne doit pas contenir de snapshots.
+* Le volume de destination du système E-Series ne doit pas être mappé à un hôte avant le démarrage de l'importation.
+* Le provisionnement des ressources doit être désactivé sur le volume de destination du système E-Series.
+* Les mappages directs du volume de stockage distant vers un ou plusieurs hôtes ne sont pas pris en charge.
+* Web Services Proxy n'est pas pris en charge.
+* Les secrets CHAP iSCSI ne sont pas pris en charge.
+* SMcli n'est pas pris en charge.
+* Le datastore VMware n'est pas pris en charge.
+* Un seul système de stockage de la paire relation/importation peut être mis à niveau à la fois lorsqu'une paire d'importation est présente.
+
+
+
+
+== Préparation pour les importations de production
+
+Il est conseillé d'effectuer un test ou une importation « à sec » avant l'importation de la production afin de vérifier que le stockage et la configuration de la fabrique sont corrects.
+
+De nombreuses variables peuvent avoir un impact sur l'opération d'importation et le temps de fin. Pour garantir la réussite d'une importation de production et obtenir une estimation de la durée, vous pouvez utiliser ces importations de test pour vous assurer que toutes les connexions fonctionnent comme prévu et que l'opération d'importation se termine dans un délai approprié. Vous pouvez alors apporter des ajustements pour obtenir les résultats souhaités avant que l'importation de production ne soit lancée.

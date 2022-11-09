@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifiez les paramètres d"un groupe de volumes, y compris son nom et son niveau RAID.' 
+---
+= Modifiez les paramètres de configuration d'un groupe de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier les paramètres d'un groupe de volumes, y compris son nom et son niveau RAID.
+
+Si vous modifiez le niveau RAID pour répondre aux besoins de performances des applications qui accèdent au groupe de volumes, veillez à respecter les prérequis suivants :
+
+* Le groupe de volumes doit avoir le statut optimal.
+* Vous devez disposer de suffisamment de capacité au sein du groupe de volumes pour passer au nouveau niveau RAID.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage contenant le groupe de volumes.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez le groupe de volumes que vous souhaitez modifier, puis cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Paramètres du groupe de volumes s'affiche.
+
+. Sélectionnez l'onglet *Paramètres*, puis modifiez les paramètres du groupe de volumes selon les besoins.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+ a| 
+Nom
+ a| 
+Vous pouvez modifier le nom fourni par l'utilisateur du groupe de volumes. La spécification d'un nom pour un groupe de volumes est requise.
+
+
+
+ a| 
+Niveau RAID
+ a| 
+Sélectionnez le nouveau niveau RAID dans le menu déroulant.
+
+** *RAID 0 striping* -- offre de hautes performances mais ne fournit pas de redondance de données. Si un seul disque tombe en panne dans le groupe de volumes, tous les volumes associés sont défaillants et toutes les données sont perdues. Un groupe RAID de répartition regroupe deux ou plusieurs lecteurs en un disque logique de grande taille.
+** *RAID 1 mirroring* -- offre des performances élevées et la meilleure disponibilité des données et est adapté au stockage des données sensibles à un niveau professionnel ou personnel. Protège vos données en mettant automatiquement en miroir le contenu d'un disque sur le second disque de la paire en miroir. Elle protège les données en cas de panne d'un seul disque.
+** *RAID 10 répartition/mise en miroir* -- fournit une combinaison de RAID 0 (répartition) et de RAID 1 (mise en miroir) et est obtenu lorsque quatre disques ou plus sont sélectionnés. RAID 10 convient aux applications transactionnelles à volume élevé, telles qu'une base de données, qui exigent de hautes performances et une tolérance aux pannes élevée.
+** *RAID 5* -- idéal pour les environnements multi-utilisateurs (comme le stockage de base de données ou de système de fichiers) où la taille d'E/S type est faible et où une proportion élevée d'activité de lecture est observée.
+** *RAID 6* -- idéal pour les environnements nécessitant une protection de redondance au-delà de RAID 5, mais ne nécessitant pas de hautes performances en écriture. RAID 3 ne peut être affecté qu'aux groupes de volumes à l'aide de l'interface de ligne de commande. Lorsque vous modifiez le niveau RAID, vous ne pouvez pas annuler cette opération après son démarrage. Pendant cette modification, vos données restent disponibles.
+
+
+
+
+ a| 
+Capacité d'optimisation (baies EF600 uniquement)
+ a| 
+Lors de la création d'un groupe de volumes, une capacité d'optimisation recommandée permet d'équilibrer la capacité disponible avec la performance et l'usure des disques. Vous pouvez ajuster cet équilibre en déplaçant le curseur vers la droite pour de meilleures performances et réduire l'usure, au détriment de l'augmentation de la capacité disponible, ou en le déplaçant vers la gauche pour augmenter la capacité disponible, au détriment de meilleures performances et de l'usure des disques. Les disques SSD auront une durée de vie plus longue et de meilleures performances d'écriture maximales lorsqu'une partie de leur capacité est non allouée. Pour les disques associés à un groupe de volumes, la capacité non allouée comprend la capacité libre d'un groupe (capacité non utilisée par les volumes) et une partie de la capacité utilisable définie comme capacité d'optimisation supplémentaire. La capacité d'optimisation supplémentaire assure un niveau minimal de capacité d'optimisation en réduisant la capacité utilisable et, en tant que tel, n'est pas disponible pour la création du volume.
+
+|===
+====
+. Cliquez sur *Enregistrer*.
+
+
+Une boîte de dialogue de confirmation s'affiche si la capacité est réduite, si la redondance des volumes est perdue ou si la protection contre la perte de tiroir/tiroir est perdue suite à la modification du niveau RAID. Sélectionnez *Oui* pour continuer, sinon cliquez sur *non*.
+
+Si vous modifiez le niveau RAID d'un groupe de volumes, le plug-in modifie les niveaux RAID de chaque volume qui comprend le groupe de volumes. Les performances peuvent être légèrement affectées pendant l'opération.

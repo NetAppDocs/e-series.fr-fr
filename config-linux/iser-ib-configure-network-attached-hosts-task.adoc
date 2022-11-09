@@ -1,0 +1,167 @@
+---
+permalink: config-linux/iser-ib-configure-network-attached-hosts-task.html 
+sidebar: sidebar 
+keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
+summary: 'La pile de pilotes OFED InfiniBand prend en charge l"exécution simultanée de iser et SRP sur les mêmes ports, de sorte qu"aucun matériel supplémentaire n"est requis.' 
+---
+= Configurer la mise en réseau des hôtes connectés au stockage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre configuration utilise le protocole iser over InfiniBand, suivez les étapes de cette section.
+
+La pile de pilotes OFED InfiniBand prend en charge l'exécution simultanée de iser et SRP sur les mêmes ports, de sorte qu'aucun matériel supplémentaire n'est requis.
+
+Un technicien OFED recommandé par NetApp installé sur le système Pour plus d'informations, reportez-vous à la section https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+.Étapes
+. Activer et démarrer les services iSCSI sur le ou les hôtes :
++
+*Red Hat Enterprise Linux 7, 8 et 9 (RHEL 7, RHEL 8 et RHEL 9)*
+
++
+[listing]
+----
+
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
++
+*SUSE Linux Enterprise Server 12 et 15 (SLES 12 et SLES 15)*
+
++
+[listing]
+----
+
+# systemctl start iscsid.service
+# systemctl enable iscsid.service
+----
+. Configurez les interfaces réseau de la carte InfiniBand :
++
+.. Identifier les ports InfiniBand à utiliser. Documentez l'adresse matérielle (adresse MAC) de chaque port.
+.. Configurer des noms persistants pour les périphériques d'interface réseau InfiniBand.
+.. Configurez l'adresse IP et les informations réseau pour les interfaces InfiniBand identifiées.
++
+La configuration d'interface spécifique requise peut varier en fonction du système d'exploitation utilisé. Pour plus d'informations sur l'implémentation, consultez la documentation du système d'exploitation de votre fournisseur.
+
+.. Démarrez les interfaces réseau IB en redémarrant le service réseau ou en redémarrant manuellement chaque interface. Par exemple :
++
+[listing]
+----
+systemctl restart network
+----
+.. Vérifiez la connectivité aux ports cibles. À partir de l'hôte, envoyez une requête ping aux adresses IP que vous avez configurées lorsque vous avez configuré des connexions réseau.
+
+
+. Redémarrez les services pour charger le module iser.
+. Modifiez les paramètres iSCSI dans /etc/iscsi/iscsid.conf.
++
+[listing]
+----
+node.startup = automatic
+replacement_timeout = 20
+----
+. Créer des configurations de session iSCSI :
++
+.. Créez des fichiers de configuration iface pour chaque interface InfiniBand.
++
+
+NOTE: L'emplacement du répertoire des fichiers iSCSI iface dépend du système d'exploitation. Cet exemple concerne l'utilisation de Red Hat Enterprise Linux :
+
++
+[listing]
+----
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib0
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib1
+----
+.. Modifiez chaque fichier iface pour définir le nom de l'interface et l'IQN de l'initiateur. Définissez les paramètres suivants de façon appropriée pour chaque fichier d'interface :
++
+|===
+| Option | Valeur 
+
+
+ a| 
+iface.net_ifacename
+ a| 
+Nom du périphérique d'interface (ex. ib0).
+
+
+
+ a| 
+iface.initiatorname
+ a| 
+L'IQN de l'initiateur hôte est documenté dans la feuille de calcul.
+
+|===
+.. Créer des sessions iSCSI sur la cible.
++
+La méthode privilégiée pour créer les sessions est d'utiliser la méthode de découverte SendTargets. Toutefois, cette méthode ne fonctionne pas sur certaines versions du système d'exploitation.
+
++
+
+NOTE: Utilisez *méthode 2* pour RHEL 6.x ou SLES 11.3 ou version ultérieure.
+
++
+*** *Méthode 1 - découverte de SendTargets:* utilisez le mécanisme de découverte de SendTargets à l'une des adresses IP du portail cible. Cela créera des sessions pour chacun des portails cibles.
++
+[listing]
+----
+iscsiadm -m discovery -t st -p 192.168.130.101 -I iser
+----
+*** *Méthode 2 - création manuelle :* pour chaque adresse IP de portail cible, créez une session en utilisant la configuration d’interface hôte appropriée. Dans cet exemple, l'interface ib0 se trouve sur le sous-réseau A et l'interface ib1 se trouve sur le sous-réseau B. Pour ces variables, remplacez la valeur appropriée par la feuille de calcul :
++
+**** <IQN cible> = IQN cible du tableau de stockage
+**** <adresse IP du port cible> = adresse IP configurée sur le port cible spécifié
+
+
+
+
+
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+----
+. Connectez-vous aux sessions iSCSI.
++
+Pour chaque session, exécutez la commande iscsiadm pour vous connecter à la session.
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+----
+. Vérifiez les sessions iser/iSCSI.
++
+.. Vérifiez l'état de la session iscsi à partir de l'hôte :
++
+[listing]
+----
+iscsiadm -m session
+----
+.. Vérifiez l'état de la session iscsi à partir de la baie de disques. Dans SANtricity System Manager, accédez à *Baie de stockage* > *iser* > *Afficher/Terminer sessions*.
+
+
+
+
+Lorsque le service OFED/RDMA démarre, le ou les modules de noyau iser se charge par défaut lorsque les services iSCSI sont en cours d'exécution. Pour terminer la configuration de la connexion iser, le ou les modules iser doivent être chargés. L'hôte doit actuellement être redémarré.

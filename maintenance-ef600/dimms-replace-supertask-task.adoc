@@ -1,0 +1,263 @@
+---
+permalink: maintenance-ef600/dimms-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM 
+summary: Remplacez un module DIMM dans une baie EF300 ou EF600. 
+---
+= Remplacez les modules DIMM dans EF300 ou EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer un module DIMM dans une baie EF300 ou EF600.
+
+Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre contrôleur, mettre le contrôleur hors ligne, retirer le contrôleur, retirer les modules DIMM et installer les nouveaux modules DIMM dans votre contrôleur. Vous pouvez ensuite remettre votre contrôleur en ligne et vérifier que la baie de stockage fonctionne correctement.
+
+.Avant de commencer
+* Révision link:dimms-overview-supertask-concept.html["Conditions requises pour remplacer un module DIMM EF300 ou EF600"].
+* Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Un module DIMM de remplacement.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Une zone de travail plate et sans électricité statique.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : déterminez si vous devez remplacer un module DIMM
+
+Vérifiez la taille du cache de votre contrôleur avant de remplacer les MODULES DIMM.
+
+.Étapes
+. Accédez au profil de matrice de stockage du contrôleur. Dans SANtricity System Manager, accédez au menu :support [support Center]. Dans la page support Resources, sélectionnez *Storage Array Profile*.
+. Faites défiler vers le bas ou utilisez le champ Rechercher pour localiser les informations *module de cache de données*.
+. Si l'un des éléments suivants est présent, notez l'emplacement du module DIMM et poursuivez avec les procédures suivantes pour remplacer les modules DIMM de votre contrôleur :
++
+** Un module DIMM défectueux ou un module DIMM signalant *le module de cache de données* n'est pas optimal.
+** Module DIMM avec une capacité * module de cache de données* non concordante.
+
+
+
+
+
+
+== Étape 2 : mettez le contrôleur hors ligne
+
+Mettez le contrôleur hors ligne pour pouvoir retirer et remplacer les modules DIMM en toute sécurité.
+
+.Étapes
+. Dans SANtricity System Manager, vérifiez les détails dans le gourou de la restauration afin de confirmer qu'il y a un problème avec une mémoire non conforme et de garantir qu'aucun autre élément ne doit être traité en premier.
+. Dans la zone Details du Recovery Guru, déterminez quel DIMM à remplacer.
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+. Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
++
+.. Sélectionnez *matériel*.
+.. Si le graphique montre les disques durs, sélectionnez *Afficher le verso du tiroir* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
+.. Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager à l'aide du contrôleur que vous tentez de mettre hors ligne, un message SANtricity System Manager indisponible s'affiche. Sélectionnez *connexion à une autre connexion réseau* pour accéder automatiquement au Gestionnaire système SANtricity à l'aide de l'autre contrôleur.
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+. Sélectionnez *revérification* dans Recovery Guru, puis confirmez que le champ OK pour supprimer dans la zone Détails affiche Oui, indiquant qu'il est sûr de supprimer ce composant.
+
+
+
+
+== Étape 3 : déposer le boîtier du contrôleur
+
+Retirez le boîtier de contrôleur défectueux pour remplacer les modules DIMM par de nouveaux.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
++
+image::../media/remove_controller_5.png[déposer le contrôleur 5]
+
+. A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+image::../media/remove_controller_6.png[déposer le contrôleur 6]
+
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+== Étape 4 : retirez les modules DIMM
+
+S'il y a une discordance de mémoire, remplacez les modules DIMM de votre contrôleur.
+
+.Étapes
+. Retirez le capot du boîtier du contrôleur en dévissant la vis à molette unique et en soulevant le couvercle.
+. Vérifiez que la LED verte située dans le contrôleur est éteinte.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
+. Localisez les modules DIMM de votre contrôleur.
+. Notez l'orientation du module DIMM dans le support afin que vous puissiez insérer le module DIMM de remplacement dans le bon sens.
++
+
+NOTE: Une encoche située au bas du DIMM vous aide à aligner le DIMM pendant l'installation.
+
+. Poussez lentement les deux languettes d'éjection du module DIMM de chaque côté du module DIMM pour éjecter le module DIMM de son logement, puis faites-le glisser hors du logement.
++
+image::../media/dimm_2.png[dimm 2]
+
++
+image::../media/dimim_3.png[dime 3]
+
++
+
+CAUTION: Tenez soigneusement le module DIMM par les bords pour éviter toute pression sur les composants de la carte de circuit DIMM.
+
++
+Le nombre et le positionnement des modules DIMM du système dépendent du modèle de votre système.
+
+
+
+
+
+== Étape 5 : installez de nouveaux modules DIMM
+
+Installez un module DIMM neuf pour remplacer l'ancien.
+
+.Étapes
+. Tenez le DIMM par les coins et alignez-le sur le logement.
++
+L'encoche entre les broches du DIMM doit être alignée avec la languette du support.
+
+. Insérez le module DIMM directement dans le logement.
++
+Le module DIMM s'insère bien dans le logement, mais devrait être facilement installé. Si ce n'est pas le cas, réalignez le module DIMM avec le logement et réinsérez-le.
+
++
+
+NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien aligné et complètement inséré dans le logement.
+
+. Poussez délicatement, mais fermement, sur le bord supérieur du DIMM jusqu'à ce que les loquets s'enclenchent sur les encoches aux extrémités du DIMM.
++
+
+NOTE: Les modules DIMM s'adaptent bien. Vous devrez peut-être appuyer doucement d'un côté à la fois et le fixer à l'aide de chaque languette individuellement.
+
++
+image::../media/dimm_5.png[dimm 5]
+
+
+
+
+
+== Étape 6 : réinstallez le boîtier du contrôleur
+
+Après avoir installé les nouveaux modules DIMM, réinstallez le boîtier du contrôleur dans le tiroir du contrôleur.
+
+.Étapes
+. Abaissez le capot du boîtier du contrôleur et fixez la vis à molette.
+. Tout en appuyant sur les poignées du contrôleur, faites glisser délicatement le boîtier du contrôleur jusqu'à ce qu'il se place dans le tiroir du contrôleur.
++
+
+NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
+
++
+image::../media/remove_controller_7.png[déposer le contrôleur 7]
+
+. Rebranchez tous les câbles.
+
+
+
+
+== Étape 7 : remplacement complet des modules DIMM
+
+Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.
+
+.Étapes
+. Mettez le contrôleur en ligne.
++
+.. Dans System Manager, accédez à la page Hardware.
+.. Sélectionnez *Afficher le verso du contrôleur*.
+.. Sélectionnez le contrôleur avec les modules DIMM remplacés.
+.. Sélectionnez *placer en ligne* dans la liste déroulante.
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Cliquez sur Menu:matériel [support > Centre de mise à niveau] pour vous assurer que la dernière version de SANtricity OS est installée.
++
+Au besoin, installez la dernière version.
+
+. Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
++
+.. Sélectionnez menu:Storage[volumes]. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez menu:More[change Ownership] pour afficher les propriétaires de volumes.
+.. Si les volumes appartiennent tous au propriétaire préféré, passez à l'étape 6.
+.. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Accédez au menu:plus[redistribuez les volumes].
+.. S'il n'y a pas de Recovery Guru présent ou si les étapes Recovery Guru ne sont pas toujours renvoyées à leurs propriétaires préférés, contactez le support.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le remplacement de votre DIMM est terminé. Vous pouvez reprendre les opérations normales.

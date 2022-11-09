@@ -1,0 +1,64 @@
+---
+permalink: maintenance-ef600/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+summary: Exigences et considérations relatives au remplacement des batteries EF300 ou EF600 
+---
+= Exigences relatives au remplacement de la batterie EF300 ou EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer une batterie EF300 ou EF600, vérifiez les exigences et considérations.
+
+Une batterie est fournie avec un contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.
+
+
+
+== Alertes Recovery Guru
+
+Si le gourou de la restauration de SANtricity System Manager indique un des États suivants, vous devez remplacer la batterie affectée :
+
+* La batterie est défectueuse
+* Remplacement de la batterie requis
+
+
+Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité Recovery Guru qui confirme la présence d'un problème au niveau de la batterie et pour garantir qu'aucun autre élément ne doit être résolu en premier.
+
+
+
+== Présentation de la procédure
+
+Pour protéger vos données, vous devez remplacer une batterie défectueuse dès que possible.
+
+Voici une présentation des étapes à suivre pour remplacer une batterie dans des contrôleurs EF300 ou EF600 :
+
+. Mettez le contrôleur hors ligne.
+. Déposer le boîtier du contrôleur.
+. Remplacer la batterie.
+. Remplacez le boîtier du contrôleur.
+. Mettre le contrôleur en ligne.
+
+
+
+
+== De formation
+
+Si vous envisagez de remplacer une batterie, vous devez disposer des éléments suivants :
+
+* Une batterie de rechange.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+Vous pouvez également effectuer certaines opérations à l'aide de l'interface de ligne de commandes. Si vous ne disposez pas d'un accès à l'interface de ligne de commandes, vous pouvez effectuer l'une des opérations suivantes :
+
++
+** *Pour SANtricity System Manager (version 11.60 et supérieure)* -- Télécharger le paquet CLI (fichier zip) depuis System Manager. Accédez au menu:Paramètres[système > modules complémentaires > interface de ligne de commande]. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
+** *Pour SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Suivez les instructions du guide express pour télécharger et installer le logiciel. Vous pouvez exécuter des commandes CLI à partir de l'EMW en sélectionnant menu:Outils[Exécuter script].
+
+
+

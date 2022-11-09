@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-alert-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Importer les configurations d"alertes d"une matrice de stockage vers d"autres matrices de stockage.' 
+---
+= Importer les paramètres d'alerte
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez importer des configurations d'alertes d'une matrice de stockage vers d'autres matrices de stockage. Cette opération de traitement par lot permet de gagner du temps lorsque vous devez configurer plusieurs baies sur le réseau.
+
+Assurez-vous que :
+
+* Les alertes sont configurées dans System Manager (menu:Paramètres[alertes]) pour la baie de stockage que vous souhaitez utiliser comme source.
+* La configuration existante des baies de stockage cibles est sauvegardée dans System Manager (menu:Paramètres[système > Enregistrer la configuration de la matrice de stockage]).
+* Vous avez étudié les exigences en matière de réplication des configurations de stockage dans link:vc-olh-import-settings-overview.html["Vue d'ensemble des paramètres d'importation"].
+
+
+Vous pouvez sélectionner des alertes par e-mail, SNMP ou syslog pour l'opération d'importation :
+
+* *Alertes par e-mail* -- Une adresse de serveur de messagerie et les adresses e-mail des destinataires de l'alerte.
+* *Syslog Alerts* -- Une adresse de serveur syslog et un port UDP.
+* *Alertes SNMP* -- Un nom de communauté et une adresse IP pour le serveur SNMP.
+
+
+.Étapes
+. Dans la page gérer, cliquez sur menu:actions [Paramètres d'importation].
++
+L'assistant Importer les paramètres s'ouvre.
+
+. Dans la boîte de dialogue Sélectionner les paramètres, sélectionnez *alertes par e-mail*, *alertes SNMP* ou *alertes Syslog*, puis cliquez sur *Suivant*.
++
+Une boîte de dialogue s'ouvre pour sélectionner le tableau source.
+
+. Dans la boîte de dialogue Sélectionner la source, sélectionnez la matrice avec les paramètres à importer, puis cliquez sur *Suivant*.
+. Dans la boîte de dialogue Sélectionner des cibles, sélectionnez une ou plusieurs matrices pour recevoir les nouveaux paramètres.
++
+
+NOTE: Les matrices de stockage avec un micrologiciel inférieur à 8.50 ne sont pas disponibles pour la sélection. En outre, une matrice n'apparaît pas dans cette boîte de dialogue si le plug-in ne peut pas communiquer avec cette matrice (par exemple, s'il est hors ligne ou s'il présente des problèmes de certificat, de mot de passe ou de mise en réseau).
+
+. Cliquez sur *Terminer*.
++
+La page opérations affiche les résultats de l'opération d'importation. Si l'opération échoue, vous pouvez cliquer sur sa ligne pour afficher plus d'informations.
+
+
+
+Les baies de stockage cibles sont désormais configurées de façon à envoyer des alertes aux administrateurs par e-mail, SNMP ou syslog.

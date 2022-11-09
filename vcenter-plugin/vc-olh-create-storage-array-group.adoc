@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Le groupe de stockage définit les disques qui fournissent le stockage qui constitue le volume. 
+---
+= Créer un groupe de matrices de stockage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous créez des groupes de stockage, puis ajoutez des matrices de stockage aux groupes. Le groupe de stockage définit les disques qui fournissent le stockage qui constitue le volume.
+
+*Étapes*
+
+. Sur la page gérer, sélectionnez menu:gérer les groupes[Créer un groupe de matrices de stockage].
+. Dans le champ *Nom*, saisissez un nom pour le nouveau groupe.
+. Sélectionnez les matrices de stockage que vous souhaitez ajouter au nouveau groupe.
+. Cliquez sur *Créer*.
+

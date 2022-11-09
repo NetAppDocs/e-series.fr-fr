@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e5700/index.html 
+sidebar: sidebar 
+keywords: E5700 maintenance, repair E5700, replace E5700 components, E5724, EF570, E5760 
+summary: Maintenance du matériel E5700 
+---
+= Tout en préservant le matériel E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le système de stockage E5700, vous pouvez effectuer les procédures de maintenance des composants suivants.
+
+
+
+== Batteries
+
+Une batterie est fournie avec un boîtier de contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.
+
+
+
+== Contrôleurs
+
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager.
+
+
+
+== Canisters
+
+Les boîtiers sont constitués de trois types différents : des blocs d'alimentation (blocs d'alimentation) qui fournissent une source d'alimentation redondante et un refroidissement adéquat dans un tiroir de contrôleur ou tiroir de 24 disques de 12 ou de disques, des blocs d'alimentation qui sont utilisés pour la redondance de l'alimentation dans un tiroir de contrôleur ou un tiroir de 60 disques, les boîtiers de ventilateur utilisés pour la climatisation du tiroir de contrôleur de 60 disques ou du tiroir disque.
+
+
+
+== Disques
+
+Un lecteur est un dispositif électromagnétique mécanique qui fournit le support de stockage physique pour les données.
+
+
+
+== Cartes d'interface hôte (HIC)
+
+Une carte d'interface hôte (HIC) peut être installée en option dans un boîtier de contrôleur. Le contrôleur E5700 inclut des ports hôtes intégrés sur la carte contrôleur elle-même, ainsi que des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés au contrôleur sont appelés ports hôtes de base. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.
+
+
+
+== Protocole de port hôte
+
+Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.

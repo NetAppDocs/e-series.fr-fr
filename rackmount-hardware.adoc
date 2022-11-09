@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: rackmount-hardware.html 
+keywords: rackmount, rack-mount, install in rack, rails 
+summary: Montez le matériel en rack. 
+---
+= Matériel de montage en rack
+:allow-uri-read: 
+
+
+[role="lead"]
+Utilisez les liens ci-dessous pour accéder à la documentation décrivant l'installation du matériel de montage en rack.
+
+
+
+== Rails de support réglables
+
+L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Installation des rails de support réglables"^] pour installer un plateau de contrôleur ou un plateau de lecteur livré séparément (non déjà installé dans l'armoire). Cette procédure est applicable aux bacs 2U (9 cm ou 3.5 pouces) suivants :
+
+* DE1600 ou DE5600
+* E2612 ou E2624
+* E5412, E5424, E5512 OU E5524
+
+
+
+
+== Rack à deux montants — 2U
+
+L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installation d'un équipement 2U dans un rack à deux montants"^].
+
+
+
+== Rack ou armoire à quatre montants — 2U
+
+L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installation d'un boîtier 2U de 12 disques dans un rack ou une armoire à quatre montants"^].
+
+
+
+== Rack à quatre montants — SuperRail
+
+L'accès https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installez le SuperRail dans un rack à quatre montants (tiroirs DE224C/DE460C)"^].

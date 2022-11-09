@@ -1,0 +1,207 @@
+---
+permalink: upgrade-santricity/upgrade-drive-firmware-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Vous mettez à niveau le micrologiciel de vos lecteurs pour vous assurer que vous disposez de toutes les dernières fonctionnalités et correctifs de bogues. 
+---
+= Mettre à niveau le micrologiciel du lecteur
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Suivez cette procédure pour mettre à niveau le micrologiciel de vos lecteurs, qui garantit que vous disposez de toutes les dernières fonctionnalités et correctifs.
+
+
+
+== Étape 1 : téléchargez les fichiers du micrologiciel du lecteur
+
+Cette étape vous permet de télécharger les fichiers du firmware des disques sur le site de support NetApp vers votre client de gestion.
+
+.Étapes
+. Dans SANtricity System Manager, sélectionnez menu:support [Upgrade Center].
+. Dans le cadre de la mise à niveau du micrologiciel des disques, cliquez sur *NetApp support* et connectez-vous au site de support NetApp.
+. Sur le site de support, cliquez sur l'onglet *Téléchargements*, puis sélectionnez *Disk Drive & Firmware Matrix*.
+. Sélectionnez *firmwares de disques des baies E-Series et EF-Series.*
+. Suivez les instructions à l'écran pour télécharger les fichiers.
+
+
+
+
+== Étape 2 : commencez la mise à niveau du micrologiciel du lecteur
+
+Dans cette étape, vous mettez à niveau le micrologiciel des lecteurs.
+
+.Avant de commencer
+* Sauvegardez vos données à l'aide de la sauvegarde disque à disque, de la copie de volume (vers un groupe de volumes non affecté par la mise à niveau du micrologiciel planifiée) ou d'un miroir distant.
+* Assurez-vous que l'état de la matrice de stockage est optimal.
+* Assurez-vous que tous les disques ont un état optimal.
+* Assurez-vous qu'aucune modification de configuration n'est effectuée sur la matrice de stockage.
+* Comprenez que si les disques ne peuvent être mis à niveau que hors ligne, l'activité d'E/S vers tous les volumes associés aux disques est arrêtée.
+
+
+.Étapes
+. Dans le Centre de mise à niveau de System Manager (menu:support[Upgrade Center]), cliquez sur *commencer la mise à niveau* dans la section « Drive Firmware Upgrade » (mise à niveau du micrologiciel du lecteur).
++
+Une boîte de dialogue s'affiche, qui répertorie les fichiers du micrologiciel du lecteur actuellement utilisés.
+
+. Extrayez (décompresser) les fichiers téléchargés depuis le site de support.
+. Cliquez sur *Parcourir*, puis sélectionnez les nouveaux fichiers de micrologiciel de lecteur que vous avez téléchargés à partir du site de support.
++
+Les fichiers du micrologiciel du lecteur ont un nom de fichier similaire à `D_HUC101212CSS600_30602291_MS01_2800_0002` avec l'extension de `.dlp`.
+
++
+Vous pouvez sélectionner jusqu'à quatre fichiers de micrologiciel de lecteur, un par un. Si plusieurs fichiers de micrologiciel de lecteur sont compatibles avec le même lecteur, vous obtenez une erreur de conflit de fichier. Choisissez le fichier de micrologiciel de lecteur que vous souhaitez utiliser pour la mise à niveau et supprimez l'autre.
+
+. Cliquez sur *Suivant*.
++
+La boîte de dialogue Sélectionner les lecteurs apparaît, qui répertorie les lecteurs que vous pouvez mettre à niveau avec les fichiers sélectionnés.
+
++
+Seuls les lecteurs compatibles apparaissent.
+
++
+Le micrologiciel sélectionné pour le lecteur apparaît dans la zone d'information *micrologiciel proposé*. Si vous devez modifier le micrologiciel, cliquez sur *Retour* pour revenir à la boîte de dialogue précédente.
+
+. Sélectionnez le type de mise à niveau que vous souhaitez effectuer :
++
+** *Online (par défaut)* -- affiche les lecteurs qui peuvent prendre en charge un téléchargement de micrologiciel _pendant que la matrice de stockage traite I/O_. Il n'est pas nécessaire d'arrêter les E/S vers les volumes associés à l'aide de ces lecteurs lorsque vous sélectionnez cette méthode de mise à niveau. Ces disques sont mis à niveau un par un, alors que la baie de stockage traite des E/S vers ces disques.
+** *Hors ligne (parallèle)* -- affiche les lecteurs qui peuvent prendre en charge un téléchargement de micrologiciel _uniquement pendant que toutes les activités d'E/S sont arrêtées_ sur tous les volumes qui utilisent les lecteurs. Vous devez arrêter toutes les activités d'E/S sur les volumes qui utilisent les lecteurs que vous mettez à niveau lorsque vous sélectionnez cette méthode de mise à niveau. Les lecteurs qui ne sont pas redondants doivent être traités comme une opération hors ligne. Cette configuration inclut tous les disques associés à un cache SSD, un groupe de volumes RAID 0 ou tout pool ou groupe de volumes dégradé. La mise à niveau hors ligne (parallèle) est généralement plus rapide que la méthode en ligne (par défaut).
+
+
+. Dans la première colonne du tableau, sélectionnez le ou les lecteurs que vous souhaitez mettre à niveau.
+. Cliquez sur *Démarrer* et confirmez que vous souhaitez effectuer l'opération.
++
+Si vous devez arrêter la mise à niveau, cliquez sur *Stop*. Tous les téléchargements de micrologiciel en cours sont terminés. Tous les téléchargements de micrologiciel qui n'ont pas démarré sont annulés.
+
++
+
+CAUTION: L'arrêt de la mise à niveau du micrologiciel du lecteur peut entraîner une perte de données ou l'indisponibilité des disques.
+
+. (Facultatif) pour afficher la liste des mises à niveau, cliquez sur *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `drive_upgrade_log-timestamp.txt`.
+
+. Si l'une des erreurs suivantes se produit pendant la procédure de mise à niveau, effectuez l'action recommandée appropriée.
++
+|===
+| Si vous rencontrez cette erreur de téléchargement du micrologiciel... | Puis procédez comme suit... 
+
+
+ a| 
+** Disques affectés en panne
+
+ a| 
+L'une des raisons de la défaillance est que le lecteur ne possède pas la signature appropriée. Assurez-vous que le disque concerné est un disque autorisé. Contactez le support technique pour plus d'informations.
+
+Lorsque vous remplacez un lecteur, assurez-vous que sa capacité est supérieure ou égale à celle du lecteur défectueux que vous remplacez.
+
+Vous pouvez remplacer le disque défectueux alors que la matrice de stockage reçoit des E/S.
+
+
+
+ a| 
+Vérifier la matrice de stockage
+ a| 
+** Assurez-vous qu'une adresse IP a été attribuée à chaque contrôleur.
+** Assurez-vous que tous les câbles connectés au contrôleur ne sont pas endommagés.
+** Assurez-vous que tous les câbles sont bien connectés.
+
+
+
+
+ a| 
+Disques de secours intégrés
+ a| 
+Ce problème d'erreur doit être corrigé avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Groupes de volumes incomplets
+ a| 
+Si un ou plusieurs groupes de volumes ou pools de disques sont incomplets, vous devez corriger cette condition d'erreur avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Opérations exclusives (autres que l'analyse des supports en arrière-plan/parité) actuellement en cours d'exécution sur tous les groupes de volumes
+ a| 
+Si une ou plusieurs opérations exclusives sont en cours, les opérations doivent être effectuées avant la mise à niveau du micrologiciel. Utilisez System Manager pour surveiller la progression des opérations.
+
+
+
+ a| 
+Volumes manquants
+ a| 
+Vous devez corriger la condition de volume manquant avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+L'un ou l'autre des contrôleurs est dans un état autre que optimal
+ a| 
+L'un des contrôleurs de la baie de stockage doit faire attention. Ce problème doit être résolu avant la mise à niveau du firmware. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Incohérence des informations de partition de stockage entre les graphiques d'objet du contrôleur
+ a| 
+Une erreur s'est produite lors de la validation des données sur les contrôleurs. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Échec de la vérification du contrôleur de base de données SPM Verify Database Controller
+ a| 
+Une erreur de mappage de la base de données de mappage des partitions de stockage s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Validation de la base de données de configuration (si prise en charge par la version du contrôleur de la matrice de stockage)
+ a| 
+Une erreur de base de données de configuration s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Vérifications liées À MEL
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 10 événements MEL informationnels ou critiques de DDE ont été rapportés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 2 pages 2C des événements MEL critiques ont été rapportés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 2 événements MEL critiques de disque dur ont été signalés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 4 entrées MEL critiques au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+|===
+
+
+La mise à niveau du micrologiciel de votre lecteur est terminée. Vous pouvez reprendre les opérations normales.

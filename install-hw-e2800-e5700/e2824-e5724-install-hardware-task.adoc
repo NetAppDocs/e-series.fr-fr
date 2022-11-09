@@ -1,0 +1,71 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Installez le système E2800 ou E5700 dans un rack à deux montants ou dans une armoire système NetApp. 
+---
+= Installer le matériel de fixation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment installer les systèmes E5724, EF570, EF280, E2812, E2824, Système de stockage DE212C ou DE224C dans un rack à deux montants ou dans une armoire système NetApp.
+
+Avant d'installer le matériel, assurez-vous d'effectuer les opérations suivantes :
+
+* Enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Préparez une zone de travail plate et sans électricité statique.
+* Procurez-vous un bracelet antistatique et prenez les précautions anti-statiques.
+
+
+Lisez toutes les instructions avant de suivre les étapes ci-dessous.
+
+.Étapes
+. Déballez le contenu du matériel, puis inventoriez le matériel de fixation contre le bordereau d'emballage.
+. Installer les rails.
++
+Si des instructions ont été fournies avec le matériel de montage en rack, reportez-vous à ces instructions pour obtenir des informations détaillées sur l'installation des rails. Pour des instructions supplémentaires de montage en rack, reportez-vous à la section link:../rackmount-hardware.html["Matériel de montage en rack"].
+
++
+
+NOTE: Installez le matériel en partant du bas du rack ou de l'armoire jusqu'en haut pour éviter que l'équipement ne se renverse.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+. Installer le shelf.
++
+
+CAUTION: Lorsqu'ils sont entièrement chargés avec des disques, chaque tiroir pèse environ 29 kg (64 lb). Deux personnes ou un dispositif de levage mécanique sont nécessaires pour déplacer la tablette en toute sécurité.
+
++
+.. En commençant avec le shelf que vous souhaitez au bas de l'armoire, placez l'arrière du shelf (extrémité avec les connecteurs) sur les rails.
+.. En soutenant le shelf par le bas, faites-le glisser dans l'armoire.image:../media/4_person_lift_source.png[""]
+
+
+. Fixer le shelf.
++
+Fixez le shelf sur le rack comme indiqué dans link:../rackmount-hardware.html["Matériel de montage en rack"].
+
++
+.. Insérez des vis dans les premier et troisième trous du haut du shelf des deux côtés pour le fixer à l'avant de l'armoire.
+.. Placez deux supports arrière de chaque côté de la section supérieure arrière de la tablette. Insérez les vis dans le premier et le troisième trous de chaque support pour fixer l'arrière de l'armoire.
+
+
++
+image:../media/trafford_secure.png[""]
+
+. Installez le cadre ou les embouts.
++
+.. Positionnez le panneau avant en face du shelf contrôleur de manière à ce que les trous de chaque extrémité soient alignés sur les fixations du shelf contrôleur.
+.. Enclenchez le panneau.
+.. Si vous disposez d'étagères de disques en option, placez le capuchon d'extrémité gauche devant la tablette de disques de manière à ce que les trous du bouchon d'extrémité soient alignés avec les fixations sur le côté gauche de la tablette.
+.. Enclenchez le bouchon d'extrémité.
+.. Répéter les étapes ci-dessus pour le chapeau d'extrémité droit.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]

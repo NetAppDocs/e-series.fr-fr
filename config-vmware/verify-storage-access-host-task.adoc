@@ -1,0 +1,16 @@
+---
+permalink: config-vmware/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: verify storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Avant d"utiliser un volume, vérifiez que l"hôte peut écrire les données sur le volume et les lire de nouveau.' 
+---
+= Vérification de l'accès au stockage sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser un volume, vérifiez que l'hôte peut écrire les données sur le volume et les lire de nouveau.
+
+Pour ce faire, vérifiez que le volume a été utilisé comme datastore VMFS (Virtual machine File System) ou a été directement mappé à une machine virtuelle pour être utilisé comme RDM (Raw Device Mapping).

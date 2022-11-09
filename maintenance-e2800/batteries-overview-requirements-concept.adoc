@@ -1,0 +1,91 @@
+---
+permalink: maintenance-e2800/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Consultez les exigences et les considérations relatives au remplacement de la batterie E2800. 
+---
+= Conditions requises pour le remplacement de la batterie E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer une batterie E2800, vérifiez les conditions requises et les points à prendre en compte.
+
+Chaque boîtier de contrôleur comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur.
+
+
+
+== Alertes Recovery Guru
+
+Si le gourou de la restauration de SANtricity System Manager indique un des États suivants, vous devez remplacer la batterie affectée :
+
+* La batterie est défectueuse
+* Remplacement de la batterie requis
+
+
+Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité Recovery Guru qui confirme la présence d'un problème au niveau de la batterie et pour garantir qu'aucun autre élément ne doit être résolu en premier.
+
+
+
+== Présentation de la procédure
+
+Pour protéger vos données, vous devez remplacer une batterie défectueuse dès que possible.
+
+Voici un aperçu des étapes à suivre pour remplacer une batterie dans un contrôleur E2800 :
+
+. Préparez le remplacement en suivant les étapes appropriées pour une configuration recto ou recto verso.
+. Déposer le boîtier du contrôleur.
+. Retirez la batterie défectueuse.
+. Installez la nouvelle batterie.
+. Réinstallez le boîtier du contrôleur.
+. Procédez au remplacement en suivant les étapes appropriées pour une configuration recto ou recto verso.
+
+
+
+
+== Configuration recto ou recto verso
+
+Les étapes de remplacement d'une batterie dépendent de l'existence d'un ou de deux contrôleurs, comme suit :
+
+|===
+| Si votre baie de stockage dispose de... | Vous devez... 
+
+
+ a| 
+Deux contrôleurs (duplex)
+ a| 
+. Mettre le contrôleur hors ligne.
+. Déposer le boîtier du contrôleur.
+. Remplacer la batterie.
+. Remplacez le boîtier du contrôleur.
+. Mettre le contrôleur en ligne.
+
+
+
+
+ a| 
+Un contrôleur (simplex)
+ a| 
+. Arrêt des opérations d'E/S hôte
+. Met le tiroir contrôleur hors tension.
+. Déposer le boîtier du contrôleur.
+. Remplacer la batterie.
+. Remplacez le boîtier du contrôleur.
+. Mettez le tiroir contrôleur sous tension.
+
+
+|===
+
+
+== Conditions requises pour le remplacement d'une batterie
+
+Si vous envisagez de remplacer une batterie défectueuse, vous devez disposer des éléments suivants :
+
+* Une batterie de rechange.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+

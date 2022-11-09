@@ -1,0 +1,25 @@
+---
+permalink: install-hw-cabling/power-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: 'Connectez les alimentations de chaque composant à des circuits d"alimentation séparés.' 
+---
+= Câblage d'alimentation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connecter les alimentations de chaque composant pour séparer les circuits d'alimentation.
+
+.Avant de commencer
+* Vous avez confirmé que votre emplacement fournit l'alimentation nécessaire.
+* Les deux boutons d'alimentation des deux blocs d'alimentation doivent impérativement être éteints.
+
+
+La source d'alimentation de votre système de stockage doit être capable de répondre aux besoins en alimentation du nouveau tiroir disque. Pour plus d'informations sur la consommation d'énergie de votre système de stockage, reportez-vous au https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+.Étape
+. Connectez les deux câbles d'alimentation de chaque shelf à différentes unités de distribution de l'alimentation dans l'armoire ou le rack.
+

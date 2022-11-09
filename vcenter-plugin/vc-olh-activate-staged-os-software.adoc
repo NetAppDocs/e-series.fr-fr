@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez choisir d"activer le fichier logiciel à un moment plus opportun.' 
+---
+= Activer le logiciel de se préparé
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez choisir d'activer le fichier logiciel immédiatement ou attendre jusqu'à ce qu'il soit plus pratique. Cette procédure suppose que vous avez choisi d'activer le fichier logiciel ultérieurement.
+
+Vous pouvez transférer les fichiers du micrologiciel sans les activer. Vous pouvez choisir de l'activer ultérieurement pour les raisons suivantes :
+
+* *Temps de jour* -- l'activation du logiciel peut prendre un certain temps, vous pouvez donc attendre que les charges d'E/S soient plus légères. Les contrôleurs redémarrent et basculent pendant l'activation pour que les performances soient inférieures à la normale jusqu'à la fin de la mise à niveau.
+* *Type de paquet* -- vous pouvez tester le nouveau logiciel et le nouveau micrologiciel sur une matrice de stockage avant de mettre à niveau les fichiers sur d'autres matrices de stockage.
+
+
+
+NOTE: Vous ne pouvez pas arrêter le processus d'activation après son démarrage.
+
+.Étapes
+. Dans la vue principale, sélectionnez *gérer*. Si nécessaire, cliquez sur la colonne *Statut* pour trier, en haut de la page, toutes les matrices de stockage avec l'état "mise à niveau du système d'exploitation (en attente d'activation)".
+. Sélectionnez une ou plusieurs baies de stockage pour lesquelles vous souhaitez activer le logiciel, puis sélectionnez menu :Centre de mise à niveau [Activer le logiciel SANtricity par étapes].
++
+Les actions suivantes se produisent pendant l'opération de mise à niveau :
+
++
+** Une vérification de l'état de santé de pré-mise à niveau s'exécute dans le cadre du processus d'activation. Le contrôle préalable à la mise à niveau de l'état de santé vérifie tous les composants de la baie de stockage pour s'assurer que l'activation peut continuer.
+** Si un contrôle d'intégrité échoue pour une matrice de stockage, l'activation s'arrête. Vous pouvez cliquer sur les points de suspension (…) Et sélectionnez *Enregistrer le journal* pour examiner les erreurs. Vous pouvez également choisir de remplacer l'erreur de vérification de l'état, puis de cliquer sur *Continuer* pour poursuivre l'activation.
+** Vous pouvez annuler l'opération d'activation après la vérification de l'état de fonctionnement avant la mise à niveau.
++
+Une fois la vérification préalable à la mise à niveau terminée, l'activation a lieu. Le temps nécessaire à l'activation dépend de la configuration de la matrice de stockage et des composants que vous activez.
+
+
+
+. (Facultatif) une fois l'activation terminée, vous pouvez afficher une liste des éléments activés pour une matrice de stockage spécifique en cliquant sur les points de suspension (…). Puis sélectionnez *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `activate_log-<date>. json`.
+
+

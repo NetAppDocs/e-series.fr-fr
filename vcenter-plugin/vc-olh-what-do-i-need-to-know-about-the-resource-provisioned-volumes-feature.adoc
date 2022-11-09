@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-know-about-the-resource-provisioned-volumes-feature.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d"initialisation en arrière-plan.' 
+---
+= Que dois-je savoir sur la fonctionnalité de volumes provisionnés par les ressources ?
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+
+NOTE: La fonctionnalité de provisionnement des ressources n'est pas disponible pour le moment. Dans certains cas, les composants peuvent être signalés comme étant capables de provisionner les ressources, mais la possibilité de créer des volumes provisionnés par les ressources a été désactivée jusqu'à ce qu'ils puissent être réactivés dans le cadre d'une mise à jour ultérieure.
+
+
+
+== Volumes provisionnés par les ressources
+
+Un volume provisionné en ressources est un volume non volumineux dans un groupe ou un pool de volumes SSD : la capacité de disque est allouée (affectée au volume) lors de la création du volume, mais la désallocation des blocs de disques est effectuée (non mappée). À titre de comparaison, dans un volume épais traditionnel, tous les blocs de disque sont mappés ou alloués lors d'une opération d'initialisation du volume en arrière-plan afin d'initialiser les champs d'informations de protection Data assurance et de rendre la parité des données et RAID cohérente dans chaque bande RAID. Lorsqu'un volume de ressource est provisionné, il n'y a pas d'initialisation en arrière-plan limitée dans le temps. À la place, chaque bande RAID est initialisée lors de la première écriture sur un bloc de volume dans la bande.
+
+Les volumes provisionnés par ressource sont pris en charge uniquement sur les groupes et pools de volumes SSD, où tous les disques du groupe ou du pool prennent en charge la fonction de restauration d'erreur DULBE (Logical Block Error Enable) de NVMe désallocation ou non écrite. Lors de la création d'un volume provisionné de ressources, tous les blocs de disques attribués au volume sont désalloué (non mappés). De plus, les hôtes peuvent désallouer les blocs logiques du volume à l'aide de la commande NVMe Dataset Management. La gestion de la conservation des blocs peut améliorer la durée de vie du disque SSD et accroître des performances d'écriture maximales. L'amélioration varie selon le modèle de disque et la capacité.
+
+
+
+== Activation et désactivation de la fonction
+
+Le provisionnement des ressources est activé par défaut sur les systèmes où les disques prennent en charge DULBE. Vous pouvez désactiver ce paramètre par défaut à partir de pools et groupes de volumes. La désactivation du provisionnement des ressources est une action permanente pour les volumes existants et ne peut pas être inversée (c'est-à-dire, vous ne pouvez pas réactiver le provisionnement des ressources pour ces groupes de volumes et ces pools).
+
+Cependant, si vous souhaitez réactiver le provisionnement de ressources pour tout nouveau volume créé, vous pouvez le faire à partir du menu:Paramètres[système]. Notez que lorsque vous réactivez le provisionnement de ressources, seuls les nouveaux groupes de volumes et pools sont affectés. Tous les groupes et pools de volumes existants restent inchangés. Si vous le souhaitez, vous pouvez également désactiver à nouveau le provisionnement des ressources à partir du menu:Paramètres[système].

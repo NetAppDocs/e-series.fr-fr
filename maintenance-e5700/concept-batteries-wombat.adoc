@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-batteries-wombat.html 
+sidebar: sidebar 
+keywords: battery, controller, canister, preserve, cache, data, ac, power, fail, batteries 
+summary: 'Une batterie est fournie avec un boîtier de contrôleur et conserve les données mises en cache en cas de panne de l"alimentation secteur.' 
+---
+= Batteries
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une batterie est fournie avec un boîtier de contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.

@@ -1,0 +1,340 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Créez le stockage en créant d"abord une charge de travail pour un type d"application spécifique. Vous ajoutez ensuite de la capacité de stockage à la charge de travail en créant des volumes aux caractéristiques de volume sous-jacentes similaires.' 
+---
+= Créer du stockage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dans le plug-in de stockage pour vCenter, vous créez le stockage en créant d'abord une charge de travail pour un type d'application spécifique. Vous ajoutez ensuite de la capacité de stockage à la charge de travail en créant des volumes aux caractéristiques de volume sous-jacentes similaires.
+
+
+
+== Étape 1 : créer des workloads
+
+Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application.
+
+Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.
+
+Le système ne recommande une configuration de volume optimisée que pour les types d'applications suivants :
+
+* Microsoft SQL Server
+* Microsoft Exchange Server
+* Vidéosurveillance
+* VMware ESXi (pour les volumes à utiliser avec le système de fichiers des ordinateurs virtuels)
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez menu:Créer [charge de travail].
++
+La boîte de dialogue Créer une charge de travail d'application s'affiche.
+
+. Utilisez la liste déroulante pour sélectionner le type d'application pour laquelle vous souhaitez créer la charge de travail, puis saisissez un nom de charge de travail.
+. Cliquez sur *Créer*.
+
+
+
+
+== Étape 2 : créer des volumes
+
+Vous créez des volumes pour ajouter de la capacité de stockage à une charge de travail spécifique aux applications et rendre les volumes créés visibles pour un hôte ou un cluster hôte spécifique.
+
+La plupart des types d'applications sont par défaut définis par l'utilisateur pour une configuration de volume, tandis que les autres types ont une configuration intelligente appliquée lors de la création du volume. Par exemple, si vous créez des volumes pour une application Microsoft Exchange, vous devez connaître le nombre de boîtes aux lettres dont vous avez besoin, les besoins moyens de vos boîtes aux lettres et le nombre de copies de la base de données que vous souhaitez. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins.
+
+Vous pouvez créer des volumes à partir du menu:Provisioning[Manage volumes > Create > volumes] ou à partir du menu:Provisioning[Configure pools and Volume Groups > Create > volumes]. La procédure est la même pour l'une ou l'autre sélection.
+
+Le processus de création d'un volume est une procédure à plusieurs étapes.
+
+
+
+=== Étape 2a : sélectionnez l'hôte pour un volume
+
+Dans la première étape, vous pouvez sélectionner un hôte ou un cluster hôte spécifique pour le volume, ou vous pouvez choisir d'affecter l'hôte ultérieurement.
+
+Assurez-vous que :
+
+* Des hôtes ou des clusters hôtes valides ont été définis (accédez au menu :provisionnement[configurer les hôtes]).
+* Des identifiants de port hôte ont été définis pour l'hôte.
+* La connexion hôte doit prendre en charge Data assurance (DA) si vous prévoyez de créer des volumes compatibles DA. Si l'une des connexions hôte sur les contrôleurs de votre matrice de stockage ne prend pas en charge DA, les hôtes associés ne peuvent pas accéder aux données sur les volumes DA.
+
+
+Gardez ces consignes à l'esprit lorsque vous attribuez des volumes :
+
+* Le système d'exploitation d'un hôte peut disposer de limites spécifiques sur le nombre de volumes accessibles par l'hôte. Gardez cette limitation à l'esprit lorsque vous créez des volumes pour une utilisation par un hôte spécifique.
+* Vous pouvez définir une affectation pour chaque volume de la matrice de stockage.
+* Les volumes affectés sont partagés entre les contrôleurs de la baie de stockage.
+* Le même numéro d'unité logique (LUN) ne peut pas être utilisé deux fois par un hôte ou un cluster hôte pour accéder à un volume. Vous devez utiliser une LUN unique.
+* Pour accélérer le processus de création de volumes, vous pouvez ignorer l'étape d'affectation des hôtes afin que les nouveaux volumes soient initialisés hors ligne.
+
+
+
+NOTE: L'affectation d'un volume à un hôte échoue si vous tentez d'attribuer un volume à un cluster hôte en conflit avec une affectation établie pour un hôte dans les clusters hôtes.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez menu:Créer[volumes].
++
+La boîte de dialogue Sélectionner un hôte s'affiche.
+
+. Dans la liste déroulante, sélectionnez un hôte ou un cluster hôte spécifique auquel vous souhaitez attribuer des volumes ou choisissez d'affecter ultérieurement l'hôte ou le cluster hôte.
+. Pour continuer la séquence de création du volume pour l'hôte ou le cluster hôte sélectionné, cliquez sur *Suivant.*
++
+La boîte de dialogue Sélectionner la charge de travail s'affiche.
+
+
+
+
+
+=== Étape 2b : sélectionnez une charge de travail pour un volume
+
+Dans la deuxième étape, vous sélectionnez une charge de travail pour personnaliser la configuration de la baie de stockage d'une application spécifique, comme VMware.
+
+Cette tâche décrit comment créer des volumes pour une charge de travail. En règle générale, une charge de travail contient des volumes aux caractéristiques similaires, optimisés en fonction du type d'application prise en charge par la charge de travail. Vous pouvez définir une charge de travail à cette étape ou sélectionner des charges de travail existantes.
+
+Tenez compte des recommandations suivantes :
+
+* Lors de l'utilisation d'une charge de travail spécifique à une application, le système recommande une configuration de volume optimisée afin de limiter les conflits entre les E/S de charge de travail d'application et tout autre trafic depuis votre instance d'application. Vous pouvez revoir la configuration de volume recommandée, puis modifier, ajouter ou supprimer les volumes et caractéristiques recommandés par le système à l'aide de la boîte de dialogue Ajouter/Modifier des volumes (disponible à l'étape suivante).
+* Lorsque vous utilisez d'autres types d'applications, vous spécifiez manuellement la configuration du volume à l'aide de la boîte de dialogue Ajouter/Modifier des volumes (disponible à l'étape suivante).
+
+
+.Étapes
+. Effectuez l'une des opérations suivantes :
++
+** Sélectionnez l'option *Créer des volumes pour une charge de travail existante*, puis sélectionnez la charge de travail dans la liste déroulante.
+** Sélectionnez l'option *Créer une nouvelle charge de travail* pour définir une nouvelle charge de travail pour une application prise en charge ou pour d'autres applications, puis procédez comme suit :
++
+*** Dans la liste déroulante, sélectionnez le nom de l'application pour laquelle vous souhaitez créer la nouvelle charge de travail. Sélectionnez l'une des « autres » entrées si l'application que vous souhaitez utiliser sur cette matrice de stockage n'est pas répertoriée.
+*** Saisissez un nom pour la charge de travail à créer.
+
+
+
+
+. Cliquez sur *Suivant*.
+. Si votre charge de travail est associée à un type d'application pris en charge, saisissez les informations demandées. Sinon, passez à l'étape suivante.
+
+
+
+
+=== Étape 2c : ajout ou modification de volumes
+
+Dans la troisième étape, vous définissez la configuration du volume.
+
+.Avant de commencer
+* Les pools ou les groupes de volumes doivent disposer d'une capacité disponible suffisante.
+* Le nombre maximal de volumes autorisés dans un groupe de volumes est de 256.
+* Le nombre maximum de volumes autorisé dans un pool dépend du modèle du système de stockage :
++
+** 2,048 volumes (EF600 et E5700 Series)
+** 1,024 volumes (EF300)
+** 512 volumes (E2800 Series)
+
+
+* Pour créer un volume activé pour Data assurance (DA), la connexion hôte que vous prévoyez d'utiliser doit prendre en charge DA.
++
+** Si vous souhaitez créer un volume DA activé, sélectionnez un pool ou un groupe de volumes qui est compatible DA (recherchez *Oui* en regard de "DA" dans la table des candidats de groupe de volumes et de pools).
+** Les fonctionnalités DE DA sont présentées au niveau du pool et du groupe de volumes. DA protection vérifie et corrige les erreurs susceptibles de se produire au fur et à mesure du transfert des données entre les contrôleurs et les disques. La sélection d'un pool ou d'un groupe de volumes capable de gérer le nouveau volume garantit la détection et la correction des erreurs éventuelles.
+** Si l'une des connexions hôte sur les contrôleurs de votre matrice de stockage ne prend pas en charge DA, les hôtes associés ne peuvent pas accéder aux données sur les volumes DA.
+
+
+* Pour créer un volume sécurisé, une clé de sécurité doit être créée pour la matrice de stockage.
++
+** Si vous souhaitez créer un volume sécurisé, sélectionnez un pool ou un groupe de volumes qui est sécurisé capable (recherchez Oui en regard de « sécurisé » dans le tableau des candidats au pool et au groupe de volumes).
+** Les fonctionnalités de sécurité des disques sont présentées au niveau du pool et du groupe de volumes. Les disques sécurisés empêchent tout accès non autorisé aux données d'un disque physiquement retiré de la baie de stockage. Un disque sécurisé crypte les données pendant les écritures et les décrypte pendant les lectures à l'aide d'une clé de cryptage unique.
+** Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
+
+
+* Pour créer un volume provisionné en ressources, tous les disques doivent être des disques NVMe avec l'option DULBE (Logical Block Error) désallocation ou non écrite.
+
+
+Vous créez des volumes à partir de pools ou de groupes de volumes éligibles, affichés dans la boîte de dialogue Ajouter/Modifier des volumes. Pour chaque pool et groupe de volumes éligibles, le nombre de disques disponibles et la capacité totale disponible s'affichent.
+
+Pour certaines charges de travail spécifiques à une application, chaque pool ou groupe de volumes éligible affiche la capacité proposée en fonction de la configuration de volume suggérée et indique la capacité libre restante en Gio. Pour les autres charges de travail, la capacité proposée s'affiche lors de l'ajout de volumes à un pool ou à un groupe de volumes, puis lorsque vous spécifiez la capacité indiquée.
+
+.Étapes
+. Choisissez l'une des actions suivantes selon que vous avez sélectionné une autre charge de travail ou une charge de travail spécifique à une application à l'étape précédente :
++
+** *Autre* -- cliquez sur *Ajouter nouveau volume* dans chaque pool ou groupe de volumes que vous souhaitez utiliser pour créer un ou plusieurs volumes.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom du volume
+ a| 
+Un nom par défaut est attribué à un volume lors de la séquence de création du volume. Vous pouvez accepter le nom par défaut ou fournir une description plus détaillée indiquant le type de données stockées dans le volume.
+
+
+
+ a| 
+Capacité déclarée
+ a| 
+Définissez la capacité du nouveau volume et les unités de capacité à utiliser (MIB, Gio ou Tio). Pour les volumes épais, la capacité minimale est de 1 Mio, et la capacité maximale est déterminée par le nombre et la capacité des disques du pool ou du groupe de volumes. N'oubliez pas que la capacité de stockage est également nécessaire pour les services de copie (images Snapshot, volumes Snapshot, copies de volume et miroirs distants) ; par conséquent, n'allouez pas toutes la capacité aux volumes standard. La capacité d'un pool est allouée par incréments de 4 Gio. Toute capacité non multiple de 4 Gio est allouée, mais non utilisable. Pour vérifier que la capacité entière est utilisable, spécifiez la capacité par incréments de 4 Gio. Si une capacité inutilisable, le seul moyen de le récupérer est d'augmenter la capacité du volume.
+
+
+
+ a| 
+Taille de bloc du volume (EF300 et EF600 uniquement)
+ a| 
+Affiche les tailles de blocs pouvant être créées pour le volume :
+
+*** 512 – 512 octets
+*** 4K à 4,096 octets
+
+
+
+
+ a| 
+Taille du segment
+ a| 
+Affiche le paramètre de dimensionnement du segment, qui apparaît uniquement pour les volumes d'un groupe de volumes. Vous pouvez modifier la taille du segment pour optimiser les performances. *Transitions de taille de segment autorisées* -- le système détermine les transitions de taille de segment autorisées. Les tailles de segment qui ne sont pas appropriées à partir de la taille de segment actuelle ne sont pas disponibles dans la liste déroulante. Les transitions autorisées sont généralement deux ou la moitié de la taille de segment actuelle. Par exemple, si la taille de segment de volume actuelle est de 32 Kio, une nouvelle taille de segment de volume de 16 Kio ou 64 Kio est autorisée. *Volumes SSD cache-enabled* -- vous pouvez spécifier une taille de segment de 4 Ko pour les volumes SSD cache-enabled. Veillez à sélectionner la taille de segment 4 Kio uniquement pour les volumes SSD cache prenant en charge les opérations d'E/S de blocs de petite taille (par exemple, 16 tailles de bloc d'E/S Kio ou plus petites). Les performances peuvent être affectées si vous sélectionnez 4 Kio comme taille de segment pour les volumes SSD cache qui gèrent les opérations séquentielles de blocs volumineux. *Le temps de modification de la taille du segment* -- la durée de modification de la taille du segment d'un volume dépend de ces variables :
+
+*** La charge d'E/S de l'hôte
+*** Priorité de modification du volume
+*** Nombre de disques dans le groupe de volumes
+*** Nombre de canaux de transmission
+*** La puissance de traitement des contrôleurs de la baie de stockage
+
+
+Lorsque vous modifiez la taille de segment d'un volume, les performances d'E/S sont affectées, mais vos données restent disponibles.
+
+
+
+ a| 
+Sécurité
+ a| 
+*Oui* apparaît en regard de « Secure-capable » uniquement si les lecteurs du pool ou du groupe de volumes sont sécurisés. La sécurité du lecteur empêche tout accès non autorisé aux données d'un lecteur qui est physiquement retiré de la matrice de stockage. Cette option n'est disponible que lorsque la fonction sécurité du lecteur a été activée et qu'une clé de sécurité est configurée pour la matrice de stockage. Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
+
+
+
+ a| 
+DA
+ a| 
+*Oui* apparaît en regard de “DA” uniquement si les lecteurs du pool ou du groupe de volumes prennent en charge Data assurance (DA). DA augmente l'intégrité des données dans l'ensemble du système de stockage. DA permet à la matrice de stockage de vérifier si des erreurs peuvent se produire lorsque les données sont transférées via les contrôleurs vers les disques. L'utilisation de DA pour le nouveau volume garantit la détection de toute erreur.
+
+
+
+ a| 
+Ressource provisionnée (EF300 et EF600 uniquement)
+ a| 
+*Oui* apparaît en regard de “Resource Provisioné” uniquement si les lecteurs prennent en charge cette option. La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+|===
+====
+** *Charge de travail spécifique à une application* -- cliquez sur *Suivant* pour accepter les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée, ou cliquez sur *Modifier les volumes* pour modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom du volume
+ a| 
+Un nom par défaut est attribué à un volume lors de la séquence de création du volume. Vous pouvez accepter le nom par défaut ou fournir une description plus détaillée indiquant le type de données stockées dans le volume.
+
+
+
+ a| 
+Capacité déclarée
+ a| 
+Définissez la capacité du nouveau volume et les unités de capacité à utiliser (MIB, Gio ou Tio). Pour les volumes épais, la capacité minimale est de 1 Mio, et la capacité maximale est déterminée par le nombre et la capacité des disques du pool ou du groupe de volumes. N'oubliez pas que la capacité de stockage est également nécessaire pour les services de copie (images Snapshot, volumes Snapshot, copies de volume et miroirs distants) ; par conséquent, n'allouez pas toutes la capacité aux volumes standard. La capacité d'un pool est allouée par incréments de 4 Gio. Toute capacité non multiple de 4 Gio est allouée, mais non utilisable. Pour vérifier la disponibilité de toute la capacité, spécifiez la capacité par incréments de 4 Gio. Si une capacité inutilisable, le seul moyen de le récupérer est d'augmenter la capacité du volume.
+
+
+
+ a| 
+Type de Volume
+ a| 
+Type de volume indique le type de volume créé pour une charge de travail spécifique à une application.
+
+
+
+ a| 
+Taille de bloc du volume (EF300 et EF600 uniquement)
+ a| 
+Affiche les tailles de blocs pouvant être créées pour le volume :
+
+*** 512 -- 512 octets
+*** 4 Ko -- 4,096 octets
+
+
+
+
+ a| 
+Taille du segment
+ a| 
+Affiche le paramètre de dimensionnement du segment, qui apparaît uniquement pour les volumes d'un groupe de volumes. Vous pouvez modifier la taille du segment pour optimiser les performances. *Transitions de taille de segment autorisées* -- le système détermine les transitions de taille de segment autorisées. Les tailles de segment qui ne sont pas appropriées à partir de la taille de segment actuelle ne sont pas disponibles dans la liste déroulante. Les transitions autorisées sont généralement deux ou la moitié de la taille de segment actuelle. Par exemple, si la taille de segment de volume actuelle est de 32 Kio, une nouvelle taille de segment de volume de 16 Kio ou 64 Kio est autorisée. *Volumes SSD cache-enabled* -- vous pouvez spécifier une taille de segment de 4 Ko pour les volumes SSD cache-enabled. Veillez à sélectionner la taille de segment 4 Kio uniquement pour les volumes SSD cache prenant en charge les opérations d'E/S de blocs de petite taille (par exemple, 16 tailles de bloc d'E/S Kio ou plus petites). Les performances peuvent être affectées si vous sélectionnez 4 Kio comme taille de segment pour les volumes SSD cache qui gèrent les opérations séquentielles de blocs volumineux. *Le temps de modification de la taille du segment* -- la durée de modification de la taille du segment d'un volume dépend de ces variables :
+
+*** La charge d'E/S de l'hôte
+*** Priorité de modification du volume
+*** Nombre de disques dans le groupe de volumes
+*** Nombre de canaux de transmission
+*** La puissance de traitement des contrôleurs de la baie de stockage
+
+
+Lorsque vous modifiez la taille de segment d'un volume, les performances d'E/S sont affectées, mais vos données restent disponibles.
+
+
+
+ a| 
+Sécurité
+ a| 
+*Oui* apparaît en regard de « Secure-capable » uniquement si les lecteurs du pool ou du groupe de volumes sont sécurisés. La sécurité du disque empêche les accès non autorisés aux données d'un disque qui est physiquement retiré de la matrice de stockage. Cette option n'est disponible que lorsque la fonction de sécurité du lecteur a été activée et qu'une clé de sécurité est configurée pour la matrice de stockage. Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
+
+
+
+ a| 
+DA
+ a| 
+*Oui* apparaît en regard de “DA” uniquement si les lecteurs du pool ou du groupe de volumes prennent en charge Data assurance (DA). DA augmente l'intégrité des données dans l'ensemble du système de stockage. DA permet à la matrice de stockage de vérifier si des erreurs peuvent se produire lorsque les données sont transférées via les contrôleurs vers les disques. L'utilisation de DA pour le nouveau volume garantit la détection de toute erreur.
+
+
+
+ a| 
+Ressource provisionnée (EF300 et EF600 uniquement)
+ a| 
+*Oui* apparaît en regard de “Resource Provisioné” uniquement si les lecteurs prennent en charge cette option. La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+|===
+====
+
+
+. Pour continuer la séquence de création du volume pour l'application sélectionnée, cliquez sur *Suivant*.
+
+
+
+
+=== Étape 2d : examiner la configuration du volume
+
+Dans la dernière étape, vous examinez un récapitulatif des volumes que vous envisagez de créer et apportez les modifications nécessaires.
+
+.Étapes
+. Vérifiez les volumes que vous souhaitez créer. Pour apporter des modifications, cliquez sur *Retour*.
+. Lorsque vous êtes satisfait de la configuration de votre volume, cliquez sur *Finish*.
+
+
+.Une fois que vous avez terminé
+* Dans vSphere client, créez des datastores pour les volumes.
+* Apportez les modifications nécessaires au système d'exploitation sur l'hôte de l'application afin que les applications puissent utiliser le volume.
+* Exécutez soit le système basé sur l'hôte `hot_add` utilitaire ou utilitaire propre à un système d'exploitation (disponible auprès d'un fournisseur tiers), puis exécutez le `SMdevices` utilitaire permettant de mettre en corrélation les noms des volumes avec les noms des matrices de stockage hôte.
++
+Le `hot_add` utilitaire et le `SMdevices` l'utilitaire est inclus dans le `SMutils` création de package. Le `SMutils` package est un ensemble d'utilitaires permettant de vérifier ce que l'hôte voit de la baie de stockage. Il est inclus dans l'installation du logiciel SANtricity.
+
+

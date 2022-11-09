@@ -1,0 +1,260 @@
+---
+permalink: upgrade-santricity/upgrade-single-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Mise à niveau des logiciels et des firmwares pour un seul contrôleur E-Series. 
+---
+= Mise à niveau des logiciels et du firmware pour un seul contrôleur
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau un seul contrôleur, ce qui garantit que vous disposez de toutes les fonctionnalités et tous les correctifs les plus récents.
+
+Ce processus implique une mise à niveau du logiciel de la baie de stockage et, en option, du micrologiciel du module d'E/S et de la mémoire NVSRAM (Nonvolatile Random Access Memory) non volatile.
+
+.Avant de commencer
+* Révision link:overview-upgrade-consider-task.html["Mise à niveau"].
+* Déterminez si vous souhaitez mettre à niveau le fichier NVSRAM du contrôleur en même temps que le micrologiciel du système d'exploitation.
++
+Normalement, vous devez mettre à niveau tous les composants en même temps. Toutefois, vous pouvez décider de ne pas mettre à niveau le fichier NVSRAM du contrôleur si votre fichier a été corrigé ou est une version personnalisée et que vous ne souhaitez pas le remplacer.
+
+* Déterminez si vous souhaitez mettre à niveau le firmware du module d'E/S.
++
+Normalement, vous devez mettre à niveau tous les composants en même temps. Toutefois, vous pouvez décider de ne pas mettre à niveau le firmware du module d'E/S si vous ne souhaitez pas le mettre à niveau dans le cadre de la mise à niveau du logiciel SANtricity OS ou si le support technique vous a demandé de rétrograder le micrologiciel de votre module d'E/S (vous ne pouvez que le mettre à niveau à l'aide de l'interface de ligne de commande).
+
+* Vous pouvez activer votre mise à niveau de système d'exploitation dès maintenant ou ultérieurement.
++
+Voici quelques raisons d'activer ultérieurement :
+
++
+** *Temps de journée* – l'activation du logiciel et du micrologiciel peut prendre un certain temps, vous pouvez donc attendre que les charges d'E/S soient plus légères. Les contrôleurs basculent pendant l'activation, pour que les performances soient inférieures à la normale jusqu'à la fin de la mise à niveau.
+** *Type de paquet* – vous pouvez tester le nouveau logiciel et le nouveau micrologiciel sur une matrice de stockage avant de mettre à niveau les fichiers sur d'autres matrices de stockage.
+
+
+
+
+
+
+== Étape 1 : téléchargement de fichiers logiciels à partir du site d'assistance
+
+Cette étape vous permet de vous rendre sur le site de support NetApp pour enregistrer les nouveaux fichiers logiciels DLP (téléchargeable) sur votre système hôte de gestion.
+
+Le temps nécessaire à la mise à niveau dépend de la configuration de votre baie de stockage et des composants que vous mettez à niveau.
+
+.Étapes
+. Si votre matrice de stockage ne contient qu'un seul contrôleur ou si aucun pilote multivoie n'est installé, arrêtez l'activité d'E/S vers la matrice de stockage pour éviter les erreurs d'application. Si votre baie de stockage est équipée de deux contrôleurs et qu'un pilote multivoie est installé, il n'est pas nécessaire d'arrêter l'activité d'E/S.
++
+
+CAUTION: Si vous mettez à niveau le système d'exploitation SANtricity sur une appliance StorageGRID (SG5612 ou SG5760, par exemple), vous devez interrompre les activités d'E/S en plaçant l'appliance en mode de maintenance avant de poursuivre cette procédure, sinon les données risquent d'être perdues. Pour obtenir des instructions détaillées, reportez-vous aux instructions d'installation et de maintenance de votre appliance StorageGRID.
+
+. Dans l'interface de System Manager, sélectionnez menu :support [Upgrade Center].
+. Dans la zone « mise à niveau du logiciel SANtricity OS », cliquez sur *Téléchargements de systèmes d'exploitation SANtricity* pour ouvrir le site de support NetApp.
+. Sur la page Downloads, sélectionnez *logiciel de contrôleur de système d'exploitation SANtricity E-Series*.
++
+
+NOTE: Un firmware avec signature numérique est requis dans la version 8.42 et supérieure. Si vous tentez de télécharger un firmware non signé, une erreur s'affiche et le téléchargement est interrompu.
+
+. Suivez les instructions à l'écran pour télécharger le logiciel de système d'exploitation le plus récent pour votre modèle de contrôleur. Si vous souhaitez également mettre à niveau la NVSRAM, téléchargez le fichier NVSRAM pour un seul contrôleur.
+
+
+
+
+== Étape 2 : transférer les fichiers logiciels vers les contrôleurs
+
+Au cours de cette étape, vous transférez les fichiers logiciels vers votre contrôleur afin que vous puissiez commencer le processus de mise à niveau. Les composants sont copiés du client de gestion vers les contrôleurs et placés dans une zone de stockage temporaire dans la mémoire Flash.
+
+
+CAUTION: *Risque de perte de données ou de détérioration de la baie de stockage* -- ne modifiez pas la matrice de stockage pendant la mise à niveau. Maintenez l'alimentation de la baie de stockage.
+
+.Étapes
+. (En option). Si vous prévoyez d'effectuer une mise à niveau au cours d'une fenêtre de maintenance spécifique, exécutez un contrôle de l'état avant-mise à niveau pour déterminer s'il existe un problème majeur au niveau de la baie de stockage. Dans ce cas, sélectionnez *contrôle d'état de pré-mise à niveau* dans le Centre de mise à niveau dans System Manager (menu:support[Upgrade Center]) et suivez les instructions qui s'affichent à l'écran. Sinon, vous pouvez ignorer cette étape, car une vérification de l'état fait partie du processus de mise à niveau.
+. Si vous NE souhaitez PAS mettre à niveau le micrologiciel du module d'E/S à ce stade, cliquez sur *suspendre la synchronisation automatique du module d'E/S* et suivez les instructions de la boîte de dialogue.
++
+Si vous possédez une baie de stockage avec un seul contrôleur, le firmware du module d'E/S n'est pas mis à niveau.
+
+. Dans le Centre de mise à niveau de System Manager, cliquez sur *commencer la mise à niveau* à partir de "mise à niveau du logiciel SANtricity OS".
++
+La boîte de dialogue mise à niveau du logiciel SANtricity OS s'affiche.
+
+. Sélectionnez un ou plusieurs fichiers pour lancer le processus de mise à niveau :
++
+.. Sélectionnez le fichier logiciel SANtricity OS en cliquant sur *Parcourir* et accédez au fichier logiciel OS que vous avez téléchargé à partir du site de support.
+.. Sélectionnez le fichier NVSRAM du contrôleur en cliquant sur *Parcourir* et accédez au fichier NVSRAM que vous avez téléchargé à partir du site de support. Les fichiers NVSRAM du contrôleur ont un nom de fichier similaire à `N2800-830000-000.dlp`.
+
+
++
+Ces actions se produisent :
+
++
+** Par défaut, seuls les fichiers compatibles avec la configuration actuelle de la matrice de stockage apparaissent.
+** Lorsque vous sélectionnez un fichier à mettre à niveau, le nom et la taille du fichier s'affichent.
+
+
+. (Facultatif) si vous avez sélectionné un fichier logiciel SANtricity OS à mettre à niveau, vous pouvez transférer les fichiers vers le contrôleur sans les activer en cochant la case *transférer les fichiers maintenant, mais ne pas mettre à niveau (Activer la mise à niveau plus tard)*.
+. Cliquez sur *Démarrer* et confirmez que vous souhaitez effectuer l'opération.
++
+Vous pouvez annuler l'opération pendant le contrôle d'intégrité de pré-mise à niveau, mais pas pendant le transfert ou l'activation.
+
+. (Facultatif) pour afficher la liste des mises à niveau, cliquez sur *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom, `drive_upgrade_log-timestamp.txt`.
+
+
+
+Si vous avez déjà activé vos fichiers logiciels, allez à  4: Complete software and firmware upgradesinon, aller à  3: Activate software files.
+
+
+
+== Étape 3 : activation des fichiers logiciels
+
+Suivez cette étape uniquement si le logiciel ou le micrologiciel a été transféré mais pas activé. Pour vérifier cet état, recherchez une notification dans la zone Notifications de la page d'accueil de System Manager ou de la page Centre de mise à niveau.
+
+Lorsque vous effectuez l'activation, le logiciel et le micrologiciel actuels sont remplacés par le nouveau logiciel et le nouveau micrologiciel. Vous ne pouvez pas arrêter le processus d'activation après son démarrage.
+
+.Étapes
+. Dans l'interface de System Manager, sélectionnez menu :support [Upgrade Center].
+. Dans la zone "mise à niveau du logiciel SANtricity OS", cliquez sur *Activer* et confirmez que vous souhaitez effectuer l'opération.
+. (Facultatif) pour afficher la liste des mises à niveau, cliquez sur *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom, `drive_upgrade_log-timestamp.txt`.
+
+
+
+
+
+== Étape 4 : mise à niveau complète du logiciel et du firmware
+
+Effectuez la mise à niveau du logiciel et du micrologiciel en vérifiant les versions dans la boîte de dialogue Inventaire du logiciel et du micrologiciel.
+
+.Avant de commencer
+* Vous devez avoir activé votre logiciel ou votre micrologiciel.
+
+
+.Étapes
+. Dans System Manager, vérifiez que tous les composants apparaissent sur la page Hardware.
+. Vérifiez les nouvelles versions du logiciel et du micrologiciel en cochant la boîte de dialogue Inventaire du logiciel et du micrologiciel (allez au menu:support[Upgrade Center], puis cliquez sur le lien *Software and Firmware Inventory*).
+. Si vous avez mis à niveau la NVSRAM du contrôleur, tous les paramètres personnalisés que vous avez appliqués à la NVSRAM existante sont perdus pendant le processus d'activation. Vous devez à nouveau appliquer les paramètres personnalisés à la NVSRAM une fois le processus d'activation terminé.
+. Si l'une des erreurs suivantes se produit pendant la procédure de mise à niveau, effectuez l'action recommandée appropriée.
++
+|===
+| Si vous rencontrez cette erreur de téléchargement du micrologiciel... | Puis procédez comme suit... 
+
+
+ a| 
+Disques affectés en panne
+ a| 
+L'une des raisons de la défaillance est que le lecteur ne possède pas la signature appropriée. Assurez-vous que le disque concerné est un disque autorisé. Contactez le support technique pour plus d'informations.
+
+Lorsque vous remplacez un lecteur, assurez-vous que sa capacité est supérieure ou égale à celle du lecteur défectueux que vous remplacez.
+
+Vous pouvez remplacer le disque défectueux alors que la matrice de stockage reçoit des E/S.
+
+
+
+ a| 
+Vérifier la matrice de stockage
+ a| 
+** Assurez-vous qu'une adresse IP a été attribuée à chaque contrôleur.
+** Assurez-vous que tous les câbles connectés au contrôleur ne sont pas endommagés.
+** Assurez-vous que tous les câbles sont bien connectés.
+
+
+
+
+ a| 
+Disques de secours intégrés
+ a| 
+Ce problème d'erreur doit être corrigé avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Groupes de volumes incomplets
+ a| 
+Si un ou plusieurs groupes de volumes ou pools de disques sont incomplets, vous devez corriger cette condition d'erreur avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Opérations exclusives (autres que l'analyse des supports en arrière-plan/parité) actuellement en cours d'exécution sur tous les groupes de volumes
+ a| 
+Si une ou plusieurs opérations exclusives sont en cours, les opérations doivent être effectuées avant la mise à niveau du micrologiciel. Utilisez System Manager pour surveiller la progression des opérations.
+
+
+
+ a| 
+Volumes manquants
+ a| 
+Vous devez corriger la condition de volume manquant avant de pouvoir mettre à niveau le micrologiciel. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+L'un ou l'autre des contrôleurs est dans un état autre que optimal
+ a| 
+L'un des contrôleurs de la baie de stockage doit faire attention. Ce problème doit être résolu avant la mise à niveau du firmware. Lancez System Manager et utilisez le gourou de la restauration pour résoudre le problème.
+
+
+
+ a| 
+Incohérence des informations de partition de stockage entre les graphiques d'objet du contrôleur
+ a| 
+Une erreur s'est produite lors de la validation des données sur les contrôleurs. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Échec de la vérification du contrôleur de base de données SPM Verify Database Controller
+ a| 
+Une erreur de mappage de la base de données de mappage des partitions de stockage s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Validation de la base de données de configuration (si prise en charge par la version du contrôleur de la matrice de stockage)
+ a| 
+Une erreur de base de données de configuration s'est produite sur un contrôleur. Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Vérifications liées À MEL
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 10 événements MEL informationnels ou critiques de DDE ont été rapportés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 2 pages 2C des événements MEL critiques ont été rapportés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 2 événements MEL critiques de disque dur ont été signalés au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+
+
+ a| 
+Plus de 4 entrées MEL critiques au cours des 7 derniers jours
+ a| 
+Contactez le support technique pour résoudre ce problème.
+
+|===
+
+
+La mise à niveau du logiciel du contrôleur est terminée. Vous pouvez reprendre les opérations normales.

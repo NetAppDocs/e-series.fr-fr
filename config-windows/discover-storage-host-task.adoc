@@ -1,0 +1,32 @@
+---
+permalink: config-windows/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, discover LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Découvrez le stockage selon la méthode Windows Express. 
+---
+= Découverte du stockage sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lorsque vous ajoutez de nouvelles LUN, vous devez analyser à nouveau manuellement les disques associés pour les détecter. L'hôte ne détecte pas automatiquement les nouveaux LUN.
+
+Les LUN de votre système de stockage apparaissent sous forme de disques vers l'hôte Windows.
+
+.Étapes
+. Connectez-vous en tant qu'administrateur.
+. Pour détecter le stockage, exécutez la commande suivante à partir d'une invite de commande Windows.
++
+[listing]
+----
+# echo rescan | diskpart
+----
+. Pour vérifier l'ajout de nouveau stockage, exécutez la commande suivante.
++
+[listing]
+----
+# echo list disk | diskpart
+----
+

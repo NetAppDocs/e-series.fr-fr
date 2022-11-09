@@ -1,0 +1,344 @@
+---
+permalink: maintenance-e2800/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: Vérifiez les exigences de conversion du protocole des ports hôtes sur un système E2800. 
+---
+= Exigences en matière de modification du protocole du port hôte E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de convertir le protocole hôte pour une baie E2800, consultez les conditions requises.
+
+
+
+== Ports hôtes que vous pouvez modifier
+
+
+NOTE: Seuls les HIC FC/iSCSI 10 Gb et les ports de base optique d'un contrôleur E2800 peuvent être convertis.
+
+La figure ci-dessous illustre l'arrière d'un contrôleur E2800 doté de deux ports hôte SFP+ (optiques) *(1)* et de quatre ports HIC SFP+ (optiques) *(2)*.
+
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base optique quad sfp]
+
+
+NOTE: Une HIC deux ports est également disponible.
+
+Le contrôleur E2800 ou les contrôleurs de votre baie de stockage peuvent avoir différents types de ports hôtes de base et différents types de ports HIC. Le tableau indique quels ports hôtes peuvent être modifiés avec un pack de fonctions.
+
+|===
+| Si vous avez ces ports hôtes de la carte mère... | Et vous avez ces ports HIC... | Vous pouvez modifier... 
+
+
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Aucune
+ a| 
+Uniquement les ports hôtes de la carte de base
+
+
+
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Quatre ports SFP+ (optiques)
+ a| 
+Tous les ports
+
+
+
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Tous les ports
+
+
+
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Deux ou quatre ports SAS
+ a| 
+Uniquement les ports hôtes de la carte de base
+
+
+
+ a| 
+Deux ports SFP+ (optiques)
+ a| 
+Deux ports RJ-45 (base-T)
+ a| 
+Uniquement les ports hôtes de la carte de base
+
+
+
+ a| 
+Deux ports RJ-45 (base-T)
+ a| 
+Aucune
+ a| 
+Aucun des ports
+
+
+
+ a| 
+Deux ports RJ-45 (base-T)
+ a| 
+Deux ports RJ-45 (base-T)
+ a| 
+Aucun des ports
+
+|===
+Les ports hôtes de la carte mère et les ports HIC peuvent utiliser le même protocole hôte ou des protocoles hôtes différents.
+
+
+
+== Conditions requises pour la modification du protocole hôte
+
+* Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure.
+* Vous devez arrêter les opérations d'E/S hôte lors de la conversion et vous ne pourrez pas accéder aux données de la baie de stockage tant que la conversion n'est pas terminée.
+* Vous devez utiliser la gestion hors bande. (Vous ne pouvez pas utiliser la gestion intrabande pour terminer cette procédure.)
+* Vous avez obtenu le matériel nécessaire à la conversion. Votre ingénieur commercial NetApp peut vous aider à déterminer le matériel dont vous avez besoin et à commander les pièces appropriées.
+* Si vous tentez de modifier les ports hôtes de la carte de base de votre baie de stockage et qu'ils utilisent actuellement des émetteurs-récepteurs SFP à double protocole (également appelés _Unified_) que vous avez achetés auprès de NetApp, vous n'avez pas besoin de modifier vos émetteurs-récepteurs SFP.
+* Assurez-vous que les émetteurs-récepteurs SFP à double protocole prennent en charge à la fois FC (à 4 Gbit/s, 16 Gbit/s) et iSCSI (à 10 Gbit/s), mais ils ne prennent pas en charge iSCSI 1 Gbit/s. Voir link:../maintenance-e2800/hpp-change-host-protocol-task.html["Étape 1 : déterminez si vous disposez de SFP à double protocole"] Pour déterminer le type d'émetteurs-récepteurs SFP installés.
+
+
+
+
+== Considérations relatives à la modification du protocole hôte
+
+Les considérations relatives à la modification du protocole hôte dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
+
+Si vous utilisez une fonction de mise en miroir ou la fonction Data assurance (DA), vous devez comprendre ce qui se passe pour ces fonctions lorsque vous modifiez le protocole de port hôte comme décrit ci-dessous.
+
+
+NOTE: Les considérations suivantes ne s'appliquent que si vous convertissez une baie de stockage déjà utilisée. Ces considérations ne s'appliquent pas si vous convertissez une nouvelle baie de stockage qui ne possède pas encore d'hôtes et de volumes définis.
+
+
+
+=== Transition de FC à iSCSI
+
+* Si votre configuration contient des hôtes d'amorçage SAN connectés aux ports de la carte de base FC, vérifiez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Pour vérifier que la configuration est prise en charge sur iSCSI. Si ce n'est pas le cas, vous ne pouvez pas convertir le protocole hôte en iSCSI.
+* La fonction DA n'est pas prise en charge pour iSCSI.
++
+** Si vous utilisez actuellement DA et que vous souhaitez convertir les ports hôte FC en iSCSI, vous devez désactiver DA sur tous les volumes.
+** Si vous ne désactivez pas DA avant la conversion en iSCSI, la matrice de stockage sera hors conformité après la conversion.
+
+
+* La fonctionnalité de mise en miroir synchrone n'est pas prise en charge pour iSCSI.
++
+** Si vous utilisez actuellement des relations de mise en miroir synchrone et que vous souhaitez convertir les ports hôtes FC en iSCSI, vous devez désactiver la mise en miroir synchrone.
+** Consultez l'aide en ligne de SANtricity System Manager pour supprimer toutes les paires mises en miroir synchrones, qui suppriment les relations en miroir sur la baie de stockage locale et sur la baie de stockage distante. De plus, suivez les instructions de l'aide en ligne pour désactiver la duplication synchrone.
++
+
+CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone avant de les convertir en iSCSI, votre système perdra l'accès aux données et risque de perte.
+
+
+
+* La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole.
++
+** Si vous utilisez actuellement la mise en miroir asynchrone et que vous voulez convertir tous les ports hôtes de FC à iSCSI, vous devez désactiver la mise en miroir asynchrone avant d'appliquer le pack de fonctionnalités.
+** Consultez l'aide en ligne de SANtricity System Manager pour supprimer tous les groupes de cohérence des miroirs et supprimer toutes les paires mises en miroir des baies de stockage locales et distantes. De plus, suivez les instructions de l'aide en ligne pour désactiver la mise en miroir asynchrone.
+
+
+
+
+
+
+=== Transition de iSCSI à FC
+
+* La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole. Si vous utilisez actuellement la mise en miroir asynchrone avec les ports de la carte de base, vous devez désactiver la mise en miroir asynchrone avant de changer le protocole.
+* Consultez l'aide en ligne de SANtricity System Manager pour supprimer tous les groupes de cohérence des miroirs et supprimer toutes les paires mises en miroir des baies de stockage locales et distantes. De plus, suivez les instructions de l'aide en ligne pour désactiver la mise en miroir asynchrone.
+
+
+
+
+=== Transition de FC à FC/iSCSI
+
+Considérations sur la mise en miroir :
+
+* La mise en miroir synchrone n'est pas prise en charge pour iSCSI.
+* Si une baie de stockage utilisée pour la mise en miroir ne comporte actuellement que des ports FC et que vous souhaitez en convertir certains en iSCSI, vous devez déterminer les ports utilisés pour la mise en miroir.
+* Il n'est pas nécessaire de convertir les ports de la baie de stockage locale et de la baie de stockage distante au même protocole tant que les deux baies de stockage disposent d'au moins un port FC actif après la conversion.
+* Si vous envisagez de convertir les ports utilisés pour les relations symétriques, vous devez désactiver toute relation de miroir synchrone ou asynchrone avant d'appliquer le Feature Pack.
+* Si vous prévoyez de convertir les ports qui sont _non_ utilisés pour la mise en miroir, les opérations de mise en miroir asynchrone ne seront pas affectées.
+* Avant d'appliquer le pack de fonctions, vérifiez que tous les groupes de cohérence des miroirs sont synchronisés. Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante.
+
+
+Considérations relatives à la Data assurance :
+
+* La fonction Data assurance (DA) n'est pas prise en charge pour iSCSI.
++
+Pour assurer un accès continu aux données, il se peut que vous ayez à remappage ou à supprimer les volumes DA des clusters hôtes avant d'appliquer le pack de fonctionnalités.
+
++
+
+NOTE: La fonction Data assurance pour iSCSI est prise en charge par SANtricity versions 11.40 et ultérieures.
+
++
+|===
+| Si vous disposez de... | Vous devez... 
+
+
+ a| 
+De volumes DA dans le cluster par défaut
+ a| 
+Remappage de tous les volumes DA du cluster par défaut.
+
+** Si vous ne souhaitez pas partager de volumes DA entre hôtes, procédez comme suit :
++
+... Créez une partition hôte pour chaque ensemble de ports hôte FC (sauf si cette opération a déjà été effectuée).
+... Remappage les volumes DA sur les ports hôtes appropriés.
+
+
+** Pour partager des volumes DA entre des hôtes, procédez comme suit :
++
+... Créez une partition hôte pour chaque ensemble de ports hôte FC (sauf si cette opération a déjà été effectuée).
+... Créez un cluster hôte qui inclut les ports hôtes appropriés.
+... Remappage des volumes DA vers le nouveau cluster hôte.
++
+
+NOTE: Cette approche permet d'éliminer l'accès aux volumes situés dans le cluster par défaut.
+
+
+
+
+
+
+
+ a| 
+Volumes DA dans un cluster hôte qui contient des hôtes FC uniquement et que vous souhaitez ajouter des hôtes iSCSI uniquement
+ a| 
+Supprimez tous les volumes DA appartenant au cluster à l'aide de l'une de ces options.
+
+
+NOTE: LES volumes DA ne peuvent pas être partagés dans ce scénario.
+
+** Si vous ne souhaitez pas partager les volumes DA entre les hôtes, remappage tous les volumes DA vers les hôtes FC individuels du cluster.
+** Isoler les hôtes iSCSI uniquement dans leur propre cluster hôte et conserver le cluster hôte FC en l'état (avec des volumes DA partagés).
+** Ajoutez une carte HBA FC aux hôtes iSCSI uniquement pour permettre le partage des volumes DA et non DA.
+
+
+
+
+ a| 
+Volumes DA dans un cluster hôte contenant des hôtes FC uniquement ou des volumes DA mappés à une partition d'hôte FC individuelle
+ a| 
+Aucune action n'est nécessaire avant d'appliquer le pack de fonctions. Les volumes DA restent mappés sur leur hôte FC respectif.
+
+
+
+ a| 
+Aucune partition n'est définie
+ a| 
+Aucune action n'est nécessaire avant d'appliquer le Feature Pack car aucun volume n'est actuellement mappé. Après la conversion du protocole hôte, suivez la procédure appropriée pour créer des partitions hôte et, si vous le souhaitez, des clusters hôte.
+
+|===
+
+
+
+
+=== Transition d'iSCSI à FC/iSCSI
+
+* Si vous envisagez de convertir un port utilisé pour la mise en miroir, vous devez déplacer les relations de mise en miroir vers un port qui restera iSCSI après la conversion.
++
+Dans le cas contraire, la liaison de communication peut être inactive après la conversion en raison d'une incompatibilité de protocole entre le nouveau port FC de la baie locale et le port iSCSI existant de la baie distante.
+
+* Si vous prévoyez de convertir les ports qui ne sont pas utilisés pour la mise en miroir, les opérations de mise en miroir asynchrone ne seront pas affectées.
++
+Avant d'appliquer le pack de fonctions, vérifiez que tous les groupes de cohérence des miroirs sont synchronisés. Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante.
+
+
+
+
+
+=== Transition de FC/iSCSI à FC
+
+* Lors de la conversion de tous les ports hôtes en FC, n'oubliez pas que la mise en miroir asynchrone via FC doit se produire sur le port FC le plus numéroté.
+* Si vous envisagez de convertir les ports utilisés pour les relations symétriques, vous devez désactiver ces relations avant d'appliquer le Feature Pack.
++
+
+CAUTION: *Perte de données possible* -- si vous ne supprimez pas les relations de mise en miroir asynchrone qui se sont produites sur iSCSI avant de convertir les ports en FC, les contrôleurs risquent de se bloquer et vous risquez de perdre des données.
+
+* Si la baie de stockage dispose actuellement de ports de carte mère iSCSI et de ports FC HIC, les opérations de mise en miroir asynchrone ne seront pas affectées.
++
+Avant et après la conversion, la mise en miroir se produit sur le port FC le plus numéroté, qui restera le port HIC marqué *2* dans la figure. Avant d'appliquer le pack de fonctions, vérifiez que tous les groupes de cohérence des miroirs sont synchronisés. Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante.
+
+* Si la baie de stockage dispose actuellement de ports FC de base et de ports HIC iSCSI, vous devez supprimer toutes les relations de mise en miroir qui se produisent sur FC avant d'appliquer le pack de fonctions.
++
+Lorsque vous appliquez le pack de fonctionnalités, la prise en charge de la mise en miroir passe du port hôte de la carte de base numéro le plus élevé (appelé *1* dans la figure) au port HIC le plus numéroté (appelé *2* dans la figure).
+
++
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc iscsi to fc]
+
++
+|===
+3+| Avant la conversion 3+| Après la conversion .2+| Étapes requises 
+
+
+| Ports de la carte mère | Ports HIC | Port utilisé pour la mise en miroir | Ports de la carte mère | Ports HIC | Port utilisé pour la mise en miroir 
+
+
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+FC
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+Synchronisez les groupes de cohérence miroir avant et testez les communications après
+
+
+
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+*(1)*
+ a| 
+FC
+ a| 
+FC
+ a| 
+*(2)*
+ a| 
+Supprimez les relations de mise en miroir avant et redéfinissez la mise en miroir après
+
+|===
+
+
+
+
+=== Transition de FC/iSCSI à iSCSI
+
+* La mise en miroir synchrone n'est pas prise en charge pour iSCSI.
+* Si vous envisagez de convertir les ports utilisés pour les relations symétriques, vous devez désactiver les relations de symétrie avant d'appliquer le Feature Pack.
++
+
+CAUTION: *Perte de données possible* -- si vous ne supprimez pas les relations de mise en miroir qui se sont produites sur FC avant de convertir les ports en iSCSI, les contrôleurs risquent de se bloquer et vous risquez de perdre des données.
+
+* Si vous n'envisagez pas de convertir les ports utilisés pour la mise en miroir, les opérations de mise en miroir ne sont pas affectées.
+* Avant d'appliquer le pack de fonctions, vérifiez que tous les groupes de cohérence des miroirs sont synchronisés.
+* Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante.
+
+
+
+
+=== Mêmes opérations de mise en miroir et de protocole hôte
+
+Les opérations de mise en miroir ne sont pas affectées si les ports hôtes utilisés pour la mise en miroir conservent le même protocole après avoir appliqué le pack de fonctionnalités. Même avant d'appliquer le pack de fonctions, vous devez confirmer que tous les groupes de cohérence des miroirs sont synchronisés.
+
+Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante. Si vous avez des questions sur la procédure à suivre, consultez l'aide en ligne de SANtricity System Manager.

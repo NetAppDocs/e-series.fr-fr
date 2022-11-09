@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-assign-volumes-to-hosts.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous devez affecter un volume à un hôte ou à un cluster hôte afin qu"il puisse être utilisé pour les opérations d"E/S.' 
+---
+= Attribuez des volumes aux hôtes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous devez affecter un volume à un hôte ou à un cluster hôte afin qu'il puisse être utilisé pour les opérations d'E/S.
+
+Suivez ces instructions à l'esprit lorsque vous attribuez des volumes aux hôtes :
+
+* Vous ne pouvez affecter un volume qu'à un seul hôte ou cluster hôte à la fois.
+* Les volumes affectés sont partagés entre les contrôleurs de la baie de stockage.
+* Le même numéro d'unité logique (LUN) ne peut pas être utilisé deux fois par un hôte ou un cluster hôte pour accéder à un volume. Vous devez utiliser une LUN unique.
+* Pour les nouveaux groupes de volumes, si vous attendez que tous les volumes soient créés et initialisés avant de les affecter à un hôte, la durée d'initialisation du volume est réduite. N'oubliez pas qu'une fois qu'un volume associé au groupe de volumes est mappé, tous les volumes reprendront l'initialisation plus lente.
+
+
+L'affectation de volumes permet à un hôte ou un cluster hôte d'accéder à ce volume d'une baie de stockage.
+
+Tous les volumes non affectés sont affichés pendant cette tâche, mais les fonctions des hôtes avec ou sans Data assurance (DA) s'appliquent comme suit :
+
+* Pour un hôte compatible DA, vous pouvez sélectionner des volumes qui sont soit activés DA, soit non activés DA.
+* Pour un hôte qui n'est pas compatible DA, si vous sélectionnez un volume qui est activé DA, un avertissement indique que le système doit automatiquement désactiver DA sur le volume avant d'affecter le volume à l'hôte.
++
+L'assignation d'un volume échoue dans les conditions suivantes :
+
+* Tous les volumes sont affectés.
+* Le volume est déjà affecté à un autre hôte ou cluster hôte. La possibilité d'attribuer un volume n'est pas disponible dans les conditions suivantes :
+* Aucun hôte ou cluster hôte valide n'existe.
+* Aucun identifiant de port hôte n'a été défini pour l'hôte.
+* Toutes les affectations de volume ont été définies.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez l'hôte ou le cluster hôte auquel vous souhaitez affecter des volumes, puis cliquez sur *attribuer des volumes*.
++
+Une boîte de dialogue s'affiche et répertorie tous les volumes pouvant être affectés. Vous pouvez trier n'importe quelle colonne ou saisir quelque chose dans la zone filtre pour faciliter la recherche de volumes particuliers.
+
+. Cochez la case en regard de chaque volume que vous souhaitez attribuer ou cochez la case de l'en-tête du tableau pour sélectionner tous les volumes.
+. Cliquez sur *attribuer* pour terminer l'opération.
+
+
+Après avoir attribué un ou plusieurs volumes à un hôte ou à un cluster hôte, le système effectue les opérations suivantes :
+
+* Le volume affecté reçoit le prochain numéro de LUN disponible. L'hôte utilise le numéro de LUN pour accéder au volume.
+* Le nom de volume fourni par l'utilisateur apparaît dans les listes de volumes associées à l'hôte. Le cas échéant, le volume d'accès configuré en usine apparaît également dans les listes de volumes associées à l'hôte.
+

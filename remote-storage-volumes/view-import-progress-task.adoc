@@ -1,0 +1,37 @@
+---
+permalink: remote-storage-volumes/view-import-progress-task.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: 'Vous pouvez afficher l"état de chaque importation de stockage distant à partir de la section liste des résultats de l"écran stockage distant du Gestionnaire système SANtricity.' 
+---
+= Gérer la progression de l'importation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois le processus d'importation démarré, vous pouvez afficher et prendre des mesures sur sa progression.
+
+Pour chaque opération d'importation, la page opérations en cours affiche un pourcentage d'achèvement et une estimation du temps restant. Les actions sont notamment la modification de la priorité d'importation, l'arrêt et la reprise des opérations et la déconnexion de l'opération.
+
+
+NOTE: Vous pouvez également afficher les opérations en cours à partir de la page d'accueil (*Accueil > Afficher les opérations en cours*).
+
+.Étapes
+. Dans SANtricity System Manager, accédez à la page stockage distant et sélectionnez *Afficher les opérations*.
++
+La boîte de dialogue opérations en cours s'affiche.
+
+. Si vous le souhaitez, utilisez les liens de la colonne actions pour arrêter et reprendre, modifier la priorité ou se déconnecter d'une opération.
++
+** *Changer priorité* – sélectionnez *changer priorité* pour modifier la priorité de traitement d'une opération en cours ou en attente. Appliquez une priorité à l'opération, puis cliquez sur *OK*.
+** *Stop* – sélectionnez *Stop* pour interrompre la copie des données à partir du périphérique de stockage distant. La relation entre la paire d'importation est toujours intacte et vous pouvez sélectionner *reprendre* lorsque vous êtes prêt à poursuivre l'opération d'importation.
+** *Reprendre* – sélectionnez *reprendre* pour commencer un processus arrêté ou en échec à partir de l'endroit où il s'était arrêté. Ensuite, appliquez une priorité à l'opération reprendre, puis cliquez sur *OK*.
++
+L'opération reprendre ne redémarre pas * l'importation depuis le début. Si vous souhaitez redémarrer le processus depuis le début, vous devez sélectionner *déconnecter*, puis recréer l'importation via l'Assistant importation de stockage distant.
+
+** *Disconnect* – sélectionnez *Disconnect* pour rompre la relation entre les volumes source et de destination pour une opération d'importation qui s'est arrêtée, terminée ou a échoué.
+
+
+

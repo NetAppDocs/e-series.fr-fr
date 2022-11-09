@@ -1,0 +1,134 @@
+---
+permalink: maintenance-e5700/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, iSER, RoCE, NVMe, converting host port protocol, 
+summary: Terminez la conversion du protocole hôte E5700. 
+---
+= Conversion de protocole hôte E5700 complète
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la conversion du protocole des ports hôtes, effectuez des étapes supplémentaires pour utiliser le nouveau protocole.
+
+Les étapes à suivre dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
+
+
+
+== Conversion FC-iSCSI complète
+
+Si vous aviez déjà des ports hôtes FC et que vous avez converti en iSCSI, vous devrez peut-être modifier votre configuration existante pour prendre en charge iSCSI. La procédure suivante s'applique uniquement si aucune HIC iSCSI n'est présente.
+
+Cette tâche s'applique uniquement si vous convertissez une matrice de stockage déjà utilisée.
+
+Cette tâche ne s'applique pas si vous convertissez une nouvelle baie de stockage qui ne possède pas encore d'hôtes et de volumes définis. Si vous avez converti le protocole hôte-port d'une nouvelle baie de stockage, reportez-vous à la section link:../install-hw-cabling/index.html["Procédures de câblage"] Pour installer les câbles et SFP. Suivez ensuite les instructions du link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"] pour terminer la configuration de chaque protocole.
+
+.Étapes
+. Configurer les commutateurs.
++
+Vous devez configurer les switchs utilisés pour transporter le trafic iSCSI selon les recommandations du fournisseur pour l'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
+
+. Dans SANtricity System Manager, sélectionnez menu:Hardware [Configure iSCSI ports].
+. Sélectionnez les paramètres du port.
++
+Vous pouvez configurer votre réseau iSCSI de plusieurs façons. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
+
+. Mettez à jour les définitions d'hôte dans SANtricity System Manager.
++
+
+NOTE: Si vous avez besoin d'instructions pour ajouter des hôtes ou des clusters hôtes, consultez l'aide en ligne de SANtricity System Manager.
+
++
+.. Sélectionnez menu:Storage[hosts].
+.. Sélectionnez l'hôte auquel le port sera associé et cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Host Settings s'affiche.
+
+.. Cliquez sur l'onglet *ports hôte*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss paramètres hôte boîte de dialogue ports onglet maint. e5700]
+
+.. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
++
+La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
+
+.. Cliquez sur *Supprimer* et utilisez la boîte de dialogue *Supprimer le port hôte* pour supprimer (dissocier) un identificateur de port hôte.
++
+L'option *Delete* ne supprime pas physiquement le port hôte. Cette option supprime l'association entre le port hôte et l'hôte. Sauf si vous supprimez l'adaptateur de bus hôte ou l'initiateur iSCSI, le port hôte est toujours reconnu par le contrôleur.
+
+.. Cliquez sur *Enregistrer* pour appliquer vos modifications aux paramètres d'identification du port hôte.
+.. Répétez ces étapes pour ajouter et supprimer tout identifiant de port hôte supplémentaire.
+
+
+. Redémarrez l'hôte ou effectuez une nouvelle analyse afin que l'hôte détecte correctement les LUN.
+. Remontez des volumes ou commencez à utiliser le volume en mode bloc.
+
+
+Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.
+
+
+
+== Conversion iSCSI en FC complète
+
+Si vous aviez déjà des ports hôtes iSCSI et que vous avez converti en FC, vous devrez peut-être modifier votre configuration existante pour prendre en charge FC. La procédure suivante s'applique uniquement si aucune carte FC HIC n'est présente.
+
+Cette tâche s'applique uniquement si vous convertissez une matrice de stockage déjà utilisée.
+
+Cette tâche ne s'applique pas si vous convertissez une nouvelle baie de stockage qui ne possède pas encore d'hôtes et de volumes définis. Si vous avez converti le protocole hôte-port d'une nouvelle baie de stockage, reportez-vous à la section link:../install-hw-cabling/index.html["Procédures de câblage"] Pour installer les câbles et SFP. Suivez ensuite les instructions du link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"] pour terminer la configuration de chaque protocole.
+
+.Étapes
+. Installez l'utilitaire HBA et déterminez les WWPN des initiateurs.
+. Remettre en place les commutateurs.
++
+Zoning les commutateurs permettent aux hôtes de se connecter au stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion des commutateurs.
+
+. Mettez à jour les définitions d'hôte dans SANtricity System Manager.
++
+.. Sélectionnez menu:Storage[hosts].
+.. Sélectionnez l'hôte auquel le port sera associé et cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Host Settings s'affiche.
+
+.. Cliquez sur l'onglet *ports hôte*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss paramètres hôte boîte de dialogue ports onglet maint. e5700]
+
+.. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
++
+La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
+
+.. Cliquez sur *Supprimer* et utilisez la boîte de dialogue *Supprimer le port hôte* pour supprimer (dissocier) un identificateur de port hôte.
++
+L'option *Delete* ne supprime pas physiquement le port hôte. Cette option supprime l'association entre le port hôte et l'hôte. Sauf si vous supprimez l'adaptateur de bus hôte ou l'initiateur iSCSI, le port hôte est toujours reconnu par le contrôleur.
+
+.. Cliquez sur *Enregistrer* pour appliquer vos modifications aux paramètres d'identification du port hôte.
+.. Répétez ces étapes pour ajouter et supprimer tout identifiant de port hôte supplémentaire.
+
+
+. Redémarrez l'hôte ou effectuez une nouvelle analyse afin que l'hôte détecte correctement le stockage mappé.
+. Remontez des volumes ou commencez à utiliser le volume en mode bloc.
+
+
+Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.
+
+
+
+== Conversion complète pour IB-iser vers/depuis IB-SRP, NVMe over IB, NVMe over RoCE ou NVMe over FC
+
+Une fois la clé Feature Pack appliquée pour convertir le protocole utilisé par votre port InfiniBand iser HIC en/depuis SRP, NVMe over InfiniBand, NVMe over RoCE ou NVMe over Fibre Channel, vous devez configurer l'hôte pour utiliser le protocole approprié.
+
+.Étapes
+. Configurer l'hôte pour utiliser le protocole SRP ou iser ou NVMe
++
+Pour des instructions détaillées sur la configuration de l'hôte pour utiliser SRP, iser ou NVMe, consultez le link:../config-linux/index.html["Configuration Linux Express"].
+
+. Pour connecter l'hôte à la matrice de stockage pour une configuration SRP, vous devez activer la pile de pilotes InfiniBand avec les options appropriées.
++
+Les paramètres spécifiques peuvent varier d'une distribution Linux à l'autre. Vérifier le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour des instructions spécifiques et des paramètres supplémentaires recommandés pour votre solution.
+
+
+
+Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.

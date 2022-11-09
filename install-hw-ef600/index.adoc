@@ -1,0 +1,27 @@
+---
+permalink: install-hw-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation 
+summary: Installation et configuration des baies EF300 et EF600 
+---
+= Installation et configuration des systèmes de stockage EF300 et EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pdfdir: ../pdf/
+
+
+[role="lead"]
+Découvrez comment installer et configurer le système de stockage EF300 ou EF600.
+
+Vous pouvez choisir l'un des formats suivants pour vous guider lors de l'installation et de la configuration de votre nouveau système de stockage.
+
+* *PDF*
++
+C'est un https://library.netapp.com/ecm/ecm_download_file/ECMLP2851449["Poster PDF"^] d'instructions détaillées avec des liens en direct vers du contenu supplémentaire.
+
+* *Instructions en ligne*
++
+Voici les instructions de configuration en ligne décrites sur ce site. Commencez par xref:prepare-for-install-task.adoc[Avant l'installation] pour commencer.
+
+

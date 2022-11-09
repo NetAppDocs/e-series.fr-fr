@@ -1,0 +1,168 @@
+---
+permalink: upgrade-controllers/overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade compatibility, upgrade SAS shelf, upgrade SAS shelves, upgrade SAS enclosures, SAS-2 to SAS-3 
+summary: Consultez les conditions requises pour la mise à niveau et le remplacement des contrôleurs E-Series. 
+---
+= Mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de mettre à niveau les contrôleurs, vérifiez les points suivants.
+
+
+
+== Configuration matérielle et firmware requise
+
+* * Mises à niveau des contrôleurs recto et recto verso*
++
+Pour les tiroirs de contrôleur duplex, vous remplacez les deux contrôleurs. Pour les tiroirs de disques de contrôleur simplex, vous remplacez un contrôleur. Dans les deux cas, vous devez mettre le plateau du contrôleur hors tension Par conséquent, vous ne pouvez pas accéder aux données de la baie de stockage tant que vous n'avez pas terminé le remplacement correctement.
+
+* *Plateaux et étagères*
++
+Les baies de stockage équipées d'un tiroir contrôleur E2800 ou E5700 sont généralement gérées via l'interface utilisateur de SANtricity System Manager. Vous pouvez également utiliser l'interface de SANtricity Storage Manager pour gérer les tiroirs contrôleurs E2800 ou E5700. Tous les autres tiroirs de disques de contrôleur mentionnés dans cette procédure utilisent SANtricity Storage Manager.
+
+* *Batteries du contrôleur*
++
+Un nouveau contrôleur est livré sans batterie installée. Dans la mesure du possible, retirez la batterie de votre ancien contrôleur, puis installez-la dans le nouveau contrôleur. Toutefois, pour certaines mises à niveau du contrôleur, la batterie de l'ancien contrôleur n'est pas compatible avec le nouveau contrôleur. Dans ce cas, vous devez commander une batterie avec votre nouveau contrôleur et disposer de cette batterie avant de commencer ces tâches.
+
+* *Identification du fournisseur*
++
+Certaines mises à niveau du contrôleur entraînent le changement de l'ID du fournisseur dans les données de demande SCSI `LSI` à `NETAPP`. Lorsque l'ID fournisseur change de `LSI` à `NETAPP`, Des étapes supplémentaires sont requises sur les systèmes d'exploitation Windows, VMware et AIX pour récupérer des périphériques. Les étapes de ces systèmes d'exploitation sont incluses dans cette procédure de mise à niveau.
+
+* *Mise en miroir synchrone et mise en miroir asynchrone*
++
+Si votre baie de stockage participe à la mise en miroir synchrone, seules les connexions iSCSI ou Fibre Channel sont prises en charge entre le site principal et le site distant. Si la configuration de la carte d'interface hôte (HIC) de vos nouveaux contrôleurs n'inclut pas de connexions iSCSI ou Fibre Channel, la mise en miroir synchrone ne sera pas prise en charge.
+
++
+Pour la mise en miroir asynchrone, la baie de stockage locale et la baie de stockage distante peuvent exécuter différentes versions du micrologiciel. La version minimale prise en charge est la version 7.84 du firmware SANtricity.
+
+* *Limites d'objets de stockage*
++
+Si vous remplacez vos contrôleurs des modèles 5x00 par 2x00, votre nouvelle configuration de baie de stockage prendra en charge un nombre inférieur d'objets de stockage (par exemple, des volumes) dans le logiciel de gestion du stockage par rapport à votre ancienne configuration. Assurez-vous que votre ancienne configuration ne dépasse pas les limites de l'objet de stockage. Voir http://hwu.netapp.com/home.aspx["Hardware Universe"^] pour en savoir plus.
+
+
+
+
+
+== Mise à niveau vers des modèles plus récents
+
+Si vous remplacez les contrôleurs par une mise à niveau vers un nouveau modèle, n'oubliez pas que votre baie de stockage actuelle peut disposer de fonctionnalités premium installées sur le nouveau modèle ne prend pas en charge. Par exemple, les contrôleurs E2700 ne prennent pas en charge la fonction premium snapshots existants.
+
+Si vous remplacez les contrôleurs E2600 par des contrôleurs E2700 et que la baie de stockage utilisait la fonctionnalité snapshots hérités, vous devez désactiver cette fonctionnalité et supprimer ou convertir tous les volumes (snapshots, référentiels) associés à cette fonctionnalité avant de remplacer les contrôleurs. Vous pouvez convertir des instantanés hérités en snapshots mis à jour. Avant de mettre à niveau un plateau de contrôleur, vous devez désactiver toutes les fonctions premium utilisées sur votre matrice de stockage qui ne sont pas prises en charge sur les nouveaux contrôleurs.
+
+
+
+== Compatibilité des mises à niveau
+
+[role="lead"]
+Examinez les chemins de mise à niveau pris en charge pour chaque modèle de baie de stockage.
+
+
+
+=== De E2x00 à E2x00
+
+* *Batterie* : réutilisez l'ancienne batterie.
+* *ID fournisseur* : étapes supplémentaires requises.
+* *Prise en charge des fonctionnalités* : les snapshots hérités ne sont pas pris en charge par la baie E2700.
+* *Tiroirs SAS-2* : les contrôleurs E2800 ne doivent pas être placés en tiroirs SAS-2.
+
+
+
+
+=== De E2x00 à E5x00
+
+* *Batterie* : commander une batterie neuve.
+* *ID de fournisseur* : des étapes supplémentaires sont requises pour la mise à niveau de E2600 vers E5500 ou E5600, ou pour la mise à niveau de E2700 vers E5400.
+* *Prise en charge des fonctionnalités* :
++
+** Les snapshots hérités ne sont pas pris en charge sur la baie E5500 ou E5600.
+** La mise en miroir de volume distant existant (RVM) n'est pas prise en charge sur les baies E5500 ou E5600 avec des HIC iSCSI.
+** Data assurance n'est pas pris en charge sur les baies E5500 ou E5600 avec circuits intégrés iSCSI.
+** Les contrôleurs E5700 ne doivent pas être placés dans des tiroirs SAS-2.
+
+
+* *Tiroirs SAS-3* : les contrôleurs E5400, E5500 et E5600 ne doivent pas être placés en tiroirs SAS-3.
+
+
+
+
+=== De E5x00 à E2x00
+
+* *Batterie* : commander une batterie neuve.
+* *ID fournisseur* : des étapes supplémentaires sont requises pour la mise à niveau d'un système E5500 ou E5600 vers un système E2600 ou pour la mise à niveau d'un système E5400 vers un système E2700.
+* *Prise en charge des fonctionnalités* : les snapshots hérités ne sont pas pris en charge par la baie E2700.
+* *Tiroirs SAS-3* : les contrôleurs E5400, E5500 et E5600 ne doivent pas être placés en tiroirs SAS-3.
+
+
+
+
+=== De E5x00 à E5x00
+
+* *Batterie* : réutilisez l'ancienne batterie.
+* *ID fournisseur* : étapes supplémentaires requises pour la mise à niveau de système E5400 vers baie E5500 ou baie E5600.
+* *Prise en charge des fonctionnalités* :
++
+** Les snapshots hérités ne sont pas pris en charge sur la baie E5500 ou E5600.
+** La mise en miroir de volume distant existant (RVM) n'est pas prise en charge sur les systèmes E5400 ou E5500 avec des HIC iSCSI.
+** Data assurance n'est pas pris en charge sur les systèmes E5400 ou E5500 avec des circuits intégrés iSCSI.
+** Les contrôleurs E5700 ne doivent pas être placés dans des tiroirs SAS-2.
+
+
+* *Tiroirs SAS-3* : les contrôleurs E5400, E5500 et E5600 ne doivent pas être placés en tiroirs SAS-3.
+
+
+
+
+=== De l'EF540 à l'EF540
+
+* *Batterie* : réutilisez l'ancienne batterie.
+* *ID fournisseur* : étapes supplémentaires requises pour la mise à niveau de la baie EF540 vers une baie EF550 ou EF560.
+* *Prise en charge des fonctionnalités* :
++
+** Pas de snapshots existants pour la baie EF550/EF560.
+** Pas de Data assurance pour la baie EF550/EF560 avec iSCSI.
+** Les contrôleurs EF570 ne doivent pas être placés en tiroirs SAS-3.
+
+
+* *Tiroirs SAS-3* : les contrôleurs EF540, EF550 et EF560 ne doivent pas être placés en tiroirs SAS-3.
+
+
+
+
+=== Armoires SAS
+
+Le système E5700 prend en charge les boîtiers SAS-2 DE5600 et DE6600 par le biais d'une mise à niveau de la tête. Lorsqu'un contrôleur E5700 est installé dans des armoires SAS-2, la prise en charge des ports hôte de base est désactivée.
+
+|===
+| Tiroirs SAS-2 | Tiroirs SAS-3 
+
+
+ a| 
+Les tiroirs SAS-2 incluent les modèles suivants :
+
+* Tiroirs disques DE1600, DE5600 et DE6600
+* Tiroirs disques du contrôleur E5400, E5500 et E5600
+* Baies Flash EF540, EF550 et EF560
+* Tiroirs disques de contrôleur E2600 et E2700
+
+ a| 
+Les tiroirs SAS-3 incluent les modèles suivants :
+
+* Tiroirs contrôleurs E2800
+* Tiroirs contrôleurs E5700
+* Tiroirs disques DE212C, DE224C, DE460C
+
+
+|===
+
+
+=== Protection des investissements SAS-2 vers SAS-3
+
+Vous pouvez reconfigurer votre système SAS-2 pour qu'il soit utilisé derrière un nouveau tiroir de contrôleur SAS-3 (E57XX/EF570/E28XX).
+
+
+NOTE: Cette procédure nécessite une demande FPVR (Feature Product variance Request). Pour déposer une FPVR, contactez votre équipe de vente.

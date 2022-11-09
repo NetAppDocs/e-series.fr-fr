@@ -1,0 +1,22 @@
+---
+permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: convert EF300 host protocol, convert EF600 host protocol, 
+summary: Consultez les exigences et les considérations avant de convertir le protocole hôte EF300 ou EF600. 
+---
+= Exigences en matière de conversion des protocoles hôte EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de convertir le protocole hôte pour une baie EF300 ou EF600, vérifiez les exigences suivantes.
+
+* Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt.
+* Vous devez arrêter les opérations d'E/S hôte lors de la conversion. Vous ne pouvez pas accéder aux données de la baie de stockage tant que la conversion n'est pas terminée.
+* Vous utilisez la gestion hors bande. (Vous ne pouvez pas utiliser la gestion intrabande pour terminer cette procédure.)
+* Vous avez obtenu le matériel nécessaire pour la conversion, qui peut inclure un nouvel ensemble de HIC et/ou SFP. Votre ingénieur commercial NetApp peut vous aider à déterminer le matériel dont vous avez besoin et à commander les pièces appropriées.
+* Les émetteurs-récepteurs SFP à double protocole prennent en charge les protocoles FC 16 Gb et 8 Gb, ainsi que iSCSI 10 Gb. Par conséquent, vous n'aurez peut-être pas besoin de modifier des SFP si vous disposez du double protocole et basculer simplement entre FC et iSCSI, ou inversement.
+* Certaines conversions de protocole de port hôte peuvent nécessiter l'ajout ou la mise à niveau d'une carte d'interface hôte.
+

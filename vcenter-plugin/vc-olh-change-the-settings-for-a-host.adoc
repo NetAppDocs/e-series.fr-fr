@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-the-settings-for-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez modifier le nom, le type de système d"exploitation hôte et les clusters hôtes associés pour un hôte ou un cluster hôte.' 
+---
+= Modifiez les paramètres d'un hôte
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom, le type de système d'exploitation hôte et les clusters hôtes associés pour un hôte ou un cluster hôte.
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez l'hôte à modifier, puis cliquez sur *Afficher/Modifier les paramètres*.
++
+Une boîte de dialogue qui affiche les paramètres actuels de l'hôte s'affiche.
+
+. Pour modifier les propriétés de l'hôte, assurez-vous que l'onglet *Propriétés* est sélectionné, puis modifiez les paramètres selon les besoins.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+ a| 
+Nom
+ a| 
+Vous pouvez modifier le nom fourni par l'utilisateur de l'hôte. La spécification d'un nom pour l'hôte est requise.
+
+
+
+ a| 
+Cluster hôte associé
+ a| 
+Vous pouvez choisir l'une des options suivantes :
+
+** *Aucun* -- l'hôte reste un hôte autonome. Si l'hôte était associé à un cluster hôte, le système le supprime du cluster.
+** *<Cluster hôte>* -- le système associe l'hôte au cluster sélectionné.
+
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+Vous pouvez modifier le type de système d'exploitation exécuté sur l'hôte que vous avez défini.
+
+|===
+====
+. Pour modifier les paramètres du port, cliquez sur l'onglet *ports hôte*, puis modifiez les paramètres selon les besoins.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+ a| 
+Port hôte
+ a| 
+Vous pouvez choisir l'une des options suivantes :
+
+** *Ajouter* -- utilisez Ajouter pour associer un nouvel identifiant de port hôte à l'hôte. La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte Fibre Channel et Infiniband doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
+** *Supprimer* -- utilisez Supprimer pour supprimer (dissocier) un identificateur de port hôte. L'option Supprimer ne supprime pas physiquement le port hôte. Cette option supprime l'association entre le port hôte et l'hôte. Sauf si vous supprimez l'adaptateur de bus hôte ou l'initiateur iSCSI, le port hôte est toujours reconnu par le contrôleur.
+
+
+
+CAUTION: Si vous supprimez un identificateur de port hôte, il n'est plus associé à cet hôte. De même, l'hôte perd l'accès à l'un de ses volumes affectés via cet identifiant de port hôte.
+
+
+
+ a| 
+Étiquette
+ a| 
+Pour modifier le nom de l'étiquette du port, cliquez sur l'icône *Edit* (crayon). Le nom de l'étiquette de port doit être unique. Un nom d'étiquette déjà configuré n'est pas autorisé.
+
+
+
+ a| 
+Secret CHAP
+ a| 
+Apparaît uniquement pour les hôtes iSCSI. Vous pouvez définir ou modifier le secret CHAP pour les initiateurs (hôtes iSCSI). Le système utilise la méthode CHAP (Challenge Handshake Authentication Protocol) qui valide l'identité des cibles et des initiateurs pendant la liaison initiale. L'authentification est basée sur une clé de sécurité partagée appelée secret CHAP.
+
+|===
+====
+. Cliquez sur *Enregistrer*.
+

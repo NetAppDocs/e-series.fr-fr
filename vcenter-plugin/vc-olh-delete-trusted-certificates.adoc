@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-trusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Supprimez un ou plusieurs certificats qui ne sont plus nécessaires. 
+---
+= Supprimer les certificats de confiance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer un ou plusieurs certificats qui ne sont plus nécessaires, tels qu'un certificat expiré.
+
+Importez le nouveau certificat avant de supprimer l'ancien.
+
+
+CAUTION: Sachez que la suppression d'un certificat racine ou intermédiaire peut avoir un impact sur plusieurs matrices de stockage, car ces matrices peuvent partager les mêmes fichiers de certificat.
+
+.Étapes
+. Sélectionnez *gestion des certificats*.
+. Sélectionnez l'onglet *approuvé*.
+. Sélectionnez un ou plusieurs certificats dans le tableau, puis cliquez sur *Supprimer*.
++
+
+NOTE: La fonction Supprimer n'est pas disponible pour les certificats pré-installés.
+
++
+La boîte de dialogue confirmer la suppression du certificat de confiance s'ouvre.
+
+. Confirmez la suppression, puis cliquez sur *Supprimer*.
++
+Le certificat est supprimé de la table.
+
+

@@ -1,0 +1,250 @@
+---
+permalink: maintenance-e2800/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: Procédez à la conversion du protocole de port hôte pour une baie E2800. 
+---
+= Conversion de protocole hôte complète pour la baie E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après la conversion du protocole des ports hôtes, vous devez effectuer des étapes supplémentaires avant de pouvoir utiliser le nouveau protocole.
+
+Les étapes dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
+
+
+
+== Conversion FC-iSCSI complète
+
+Si vous avez converti tous les ports hôtes de FC à iSCSI, vous devez configurer la mise en réseau iSCSI.
+
+.Étapes
+. Configurer les commutateurs.
++
+Vous devez configurer les switchs utilisés pour transporter le trafic iSCSI selon les recommandations du fournisseur pour l'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
+
+. Dans SANtricity System Manager, sélectionnez menu:Hardware [Configure iSCSI ports].
+. Sélectionnez les paramètres du port.
++
+Vous pouvez configurer votre réseau iSCSI de plusieurs façons. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
+
+. Mettez à jour les définitions d'hôte dans SANtricity System Manager.
++
+
+NOTE: Si vous avez besoin d'instructions pour ajouter des hôtes ou des clusters hôtes, consultez l'aide en ligne de SANtricity System Manager.
+
++
+.. Sélectionnez menu:Storage[hosts].
+.. Sélectionnez l'hôte auquel le port sera associé et cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Host Settings s'affiche.
+
+.. Cliquez sur l'onglet *ports hôte*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e2800.gif[sam1130 ss paramètres hôte boîte de dialogue ports onglet maint e2800]
+
+.. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
++
+La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
+
+.. Cliquez sur *Supprimer* et utilisez la boîte de dialogue *Supprimer le port hôte* pour supprimer (dissocier) un identificateur de port hôte.
++
+L'option *Delete* ne supprime pas physiquement le port hôte. Cette option supprime l'association entre le port hôte et l'hôte. Sauf si vous supprimez l'adaptateur de bus hôte ou l'initiateur iSCSI, le port hôte est toujours reconnu par le contrôleur.
+
+.. Cliquez sur *Enregistrer* pour appliquer vos modifications aux paramètres d'identification du port hôte.
+.. Répétez ces étapes pour ajouter et supprimer tout identifiant de port hôte supplémentaire.
+
+
+. Redémarrez l'hôte ou effectuez une nouvelle analyse afin que l'hôte détecte correctement les LUN.
+. Remontez des volumes ou commencez à utiliser le volume en mode bloc.
+
+
+
+
+== Conversion iSCSI en FC complète
+
+Si vous avez converti tous les ports hôtes de iSCSI à FC, vous devez configurer la mise en réseau FC.
+
+.Étapes
+. Installez l'utilitaire HBA et déterminez les WWPN des initiateurs.
+. Remettre en place les commutateurs.
++
+Zoning les commutateurs permettent aux hôtes de se connecter au stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion des commutateurs.
+
+. Mettez à jour les définitions d'hôte dans SANtricity System Manager.
++
+.. Sélectionnez menu:Storage[hosts].
+.. Sélectionnez l'hôte auquel le port sera associé et cliquez sur *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Host Settings s'affiche.
+
+.. Cliquez sur l'onglet *ports hôte*.
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e2800.gif[sam1130 ss paramètres hôte boîte de dialogue ports onglet maint e2800]
+
+.. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
++
+La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
+
+.. Cliquez sur *Supprimer* et utilisez la boîte de dialogue *Supprimer le port hôte* pour supprimer (dissocier) un identificateur de port hôte.
++
+L'option *Delete* ne supprime pas physiquement le port hôte. Cette option supprime l'association entre le port hôte et l'hôte. Sauf si vous supprimez l'adaptateur de bus hôte ou l'initiateur iSCSI, le port hôte est toujours reconnu par le contrôleur.
+
+.. Cliquez sur *Enregistrer* pour appliquer vos modifications aux paramètres d'identification du port hôte.
+.. Répétez ces étapes pour ajouter et supprimer tout identifiant de port hôte supplémentaire.
+
+
+. Redémarrez l'hôte ou effectuez une nouvelle analyse afin que l'hôte détecte correctement le stockage mappé.
+. Remontez des volumes ou commencez à utiliser le volume en mode bloc.
+
+
+
+
+== Conversion FC vers FC/iSCSI complète
+
+Si vous aviez auparavant tous les ports hôte FC et que vous les avez convertis en ports iSCSI, vous devrez peut-être modifier votre configuration existante pour prendre en charge iSCSI.
+
+Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux ports iSCSI. Les étapes exactes dépendent de vos topologies réseau actuelles et planifiées. Avec l'option 1, vous devez relier de nouveaux hôtes iSCSI à la baie. Option 2 suppose que vous souhaitez convertir les hôtes connectés aux ports convertis de FC en iSCSI.
+
+
+
+=== Option 1 : déplacement des hôtes FC et ajout de nouveaux hôtes iSCSI
+
+. Déplacez tous les hôtes FC des nouveaux ports iSCSI vers les ports qui restent FC.
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez tout SFP FC.
+. Connectez de nouveaux hôtes iSCSI à ces ports, directement ou à l'aide d'un commutateur.
+. Configurer la mise en réseau iSCSI pour les nouveaux hôtes et ports. Pour obtenir des instructions, reportez-vous au link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+
+
+
+
+=== Option 2 : conversion des hôtes FC en iSCSI
+
+. Arrêtez les hôtes FC connectés aux ports convertis.
+. Fournir une topologie iSCSI pour les ports convertis. Par exemple, convertissez les switchs de FC en iSCSI.
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP FC des ports convertis et remplacez-les par des SFP iSCSI ou SFP à double protocole.
+. Reliez les câbles aux SFP dans les ports convertis et vérifiez qu'ils sont connectés au commutateur ou à l'hôte iSCSI approprié.
+. Mettez les hôtes sous tension.
+. Utilisez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Outil de configuration des hôtes iSCSI.
+. Modifiez la partition hôte pour ajouter les ID de port hôte iSCSI et supprimer les ID de port hôte FC.
+. Après le redémarrage des hôtes iSCSI, utilisez les procédures applicables sur les hôtes pour enregistrer les volumes et les rendre disponibles sur votre système d'exploitation.
++
+** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+
+
+
+== Conversion iSCSI vers FC/iSCSI complète
+
+Si vous aviez auparavant tous les ports hôtes iSCSI et que vous les avez convertis en FC, vous devrez peut-être modifier votre configuration existante pour prendre en charge FC.
+
+Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les nouveaux ports FC. Les étapes exactes dépendent de vos topologies réseau actuelles et planifiées. Avec l'option 1, vous devez relier de nouveaux hôtes FC à la baie. Option 2 suppose que vous souhaitez convertir les hôtes connectés aux ports convertis de iSCSI en FC.
+
+
+
+=== Option 1 : déplacement des hôtes iSCSI et ajout de nouveaux hôtes FC
+
+. Déplacez tous les hôtes iSCSI des nouveaux ports FC vers les ports qui restent iSCSI.
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez tout SFP FC.
+. Connectez de nouveaux hôtes FC à ces ports, directement ou à l'aide d'un commutateur.
+. Configurer la mise en réseau FC pour les nouveaux hôtes et ports Pour obtenir des instructions, reportez-vous au link:../config-windows/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+
+
+
+
+=== Option 2 : conversion d'hôtes iSCSI en FC
+
+. Arrêtez les hôtes iSCSI connectés aux ports convertis.
+. Fournir une topologie FC pour les ports convertis. Par exemple, convertissez les switchs iSCSI en FC.
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP iSCSI des ports convertis et remplacez-les par des SFP FC ou SFP à double protocole.
+. Reliez les câbles aux SFP dans les ports convertis et vérifiez qu'ils sont connectés au commutateur FC ou à l'hôte approprié.
+. Mettez les hôtes sous tension.
+. Utilisez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Outil de configuration des hôtes FC.
+. Modifiez la partition hôte pour ajouter les ID de port hôte FC et supprimer les ID de port hôte iSCSI.
+. Une fois les nouveaux hôtes FC redémarrés, appliquez les procédures applicables sur les hôtes pour enregistrer les volumes et les mettre à disposition de votre système d'exploitation.
++
+** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+
+
+
+== Conversion FC/iSCSI en FC complète
+
+Si vous aviez déjà une combinaison de ports hôtes FC et de ports d'hôte iSCSI et que vous avez converti tous les ports en FC, vous pourriez devoir modifier votre configuration existante pour utiliser les nouveaux ports FC.
+
+Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les nouveaux ports FC. Les étapes exactes dépendent de vos topologies réseau actuelles et planifiées. Avec l'option 1, vous devez relier de nouveaux hôtes FC à la baie. Avec l'option 2, vous devez convertir les hôtes connectés aux ports 1 et 2 d'iSCSI en FC.
+
+
+
+=== Option 1 : supprimez les hôtes iSCSI et ajoutez des hôtes FC
+
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP iSCSI et remplacez-les par des SFP FC ou SFP à double protocole.
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez tout SFP FC.
+. Connectez de nouveaux hôtes FC à ces ports, directement ou à l'aide d'un commutateur
+. Configurer la mise en réseau FC pour les nouveaux hôtes et ports Pour obtenir des instructions, reportez-vous au link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+
+
+
+
+=== Option 2 : conversion d'hôtes iSCSI en FC
+
+. Arrêtez les hôtes iSCSI connectés aux ports que vous avez convertis.
+. Indiquez une topologie FC pour ces ports. Par exemple, convertissez tous les commutateurs connectés à ces hôtes, de iSCSI à FC.
+. Si vous n'utilisez pas encore de SFP à double protocole, retirez les SFP iSCSI des ports et remplacez-les par des SFP FC ou SFP à double protocole.
+. Reliez les câbles aux SFP et vérifiez qu'ils sont connectés au bon hôte ou commutateur FC.
+. Mettez les hôtes sous tension.
+. Utilisez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Outil de configuration des hôtes FC.
+. Modifiez la partition hôte pour ajouter les ID de port hôte FC et supprimer les ID de port hôte iSCSI.
+. Une fois les nouveaux hôtes FC redémarrés, appliquez les procédures applicables sur les hôtes pour enregistrer les volumes et les mettre à disposition de votre système d'exploitation.
++
+** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+
+
+
+== Conversion FC/iSCSI vers iSCSI complète
+
+Si vous aviez déjà une combinaison de ports hôtes FC et de ports d'hôte iSCSI et que vous avez converti tous les ports en iSCSI, vous devrez peut-être modifier votre configuration existante pour utiliser les nouveaux ports iSCSI.
+
+Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux ports iSCSI. Les étapes exactes dépendent de vos topologies réseau actuelles et planifiées. Avec l'option 1, vous devez relier de nouveaux hôtes iSCSI à la baie. Avec l'option 2, vous devez convertir les hôtes de FC en iSCSI.
+
+
+
+=== Option 1 : supprimez les hôtes FC et ajoutez des hôtes iSCSI
+
+. Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP FC et remplacez-les par des SFP iSCSI ou SFP à double protocole.
+. Connectez de nouveaux hôtes iSCSI à ces ports, directement ou à l'aide d'un commutateur.
+. Configurer la mise en réseau iSCSI pour les nouveaux hôtes et ports. Pour obtenir des instructions, reportez-vous au link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+
+
+
+
+=== Option 2 : conversion des hôtes FC en iSCSI
+
+. Arrêtez les hôtes FC connectés aux ports que vous avez convertis.
+. Indiquez une topologie iSCSI pour ces ports. Par exemple, convertissez tous les commutateurs connectés à ces hôtes, de FC en iSCSI.
+. Si vous n'utilisez pas encore de SFP à double protocole, retirez les SFP FC des ports et remplacez-les par des SFP iSCSI ou SFP à double protocole.
+. Reliez les câbles aux SFP et vérifiez qu'ils sont connectés à l'hôte ou au commutateur iSCSI approprié.
+. Mettez les hôtes sous tension.
+. Utilisez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Outil de configuration des hôtes ISCSI.
+. Modifiez la partition hôte pour ajouter les ID de port hôte iSCSI et supprimer les ID de port hôte FC.
+. Après le redémarrage des nouveaux hôtes iSCSI, utilisez les procédures applicables sur les hôtes pour enregistrer les volumes et les rendre disponibles sur votre système d'exploitation.
++
+** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+

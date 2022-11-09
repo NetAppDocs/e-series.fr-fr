@@ -1,0 +1,22 @@
+---
+permalink: config-linux/nvme-roce-configure-switch-task.html 
+sidebar: sidebar 
+keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code. 
+---
+= Configurer le commutateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
+
+
+CAUTION: *RISQUE DE PERTE DE DONNÉES.* vous devez activer le contrôle de flux pour une utilisation avec le contrôle Global Pause sur le switch afin d'éliminer le risque de perte de données dans un environnement NVMe over RoCE.
+
+.Étapes
+. Activez le contrôle de flux de trames pause Ethernet *de bout en bout* comme meilleure pratique de configuration.
+. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
+

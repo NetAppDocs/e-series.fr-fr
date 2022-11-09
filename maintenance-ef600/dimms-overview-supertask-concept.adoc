@@ -1,0 +1,42 @@
+---
+permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM, 
+summary: Consultez les exigences et les considérations avant de remplacer les modules DIMM EF300 ou EF600. 
+---
+= Conditions requises pour remplacer un module DIMM EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un module DIMM dans une baie de stockage EF300 ou EF600, vérifiez les exigences et les considérations à prendre en compte.
+
+Vous devez remplacer un module DIMM en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux. Assurez-vous de vérifier la configuration de votre contrôleur EF300 ou EF600 pour vous assurer que la taille de DIMM correcte est remplacée.
+
+
+CAUTION: Notez que les modules DIMM de votre matrice de stockage sont fragiles ; une manipulation incorrecte peut entraîner des dommages.
+
+Suivez ces règles pour éviter d'endommager les modules DIMM de votre matrice de stockage :
+
+* Prévention des décharges électrostatiques (ESD) :
++
+** Conservez le module DIMM dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+** Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux. N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
+** Conservez le sac ESD et tout matériel d'emballage au cas où vous devrez retourner un module DIMM ultérieurement.
++
+
+CAUTION: Portez toujours un bracelet antistatique relié à la terre sur une surface non peinte du châssis de votre boîtier de stockage.
+
+
+
+* Manipulez les modules DIMM avec précaution :
++
+** Utilisez toujours deux mains lors du retrait, de l'installation ou du transport d'un module DIMM.
+** Ne forcez jamais un module DIMM dans une étagère et n'utilisez pas de pression légère et ferme pour engager complètement le loquet.
+** Utilisez toujours un emballage approuvé lors de l'expédition des DIMM.
+
+
+* Éviter les champs magnétiques. Conservez les DIMM à l'écart des périphériques magnétiques.
+

@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-shelf-loss-protection-and-drawer-loss-protection.html 
+keywords:  
+summary:  
+---
+= Qu'est-ce que la protection contre les pertes de tablette et la protection contre les pertes de tiroir ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La protection contre les pertes de tiroirs et les pertes de tiroirs sont des attributs des pools et des groupes de volumes qui vous permettent d'assurer l'accès aux données en cas de défaillance d'un seul tiroir ou d'un tiroir.
+
+
+
+=== Protection contre les pertes de tablette
+
+Un tiroir est le boîtier qui contient les disques ou les disques et le contrôleur. La protection contre les pertes de tiroirs garantit l'accessibilité aux données stockées sur les volumes d'un pool ou d'un groupe de volumes en cas de perte totale de communication avec un seul tiroir de disque. Par exemple, la perte totale de communication peut entraîner une perte d'alimentation au tiroir disque ou une panne des deux modules d'E/S (IOM).
+
+
+NOTE: La protection contre les pertes de tiroirs n'est pas garantie si un disque est déjà en panne dans le pool ou le groupe de volumes. Dans ce cas, si l'accès à un tiroir disque est perdu et qu'un autre disque du pool ou du groupe de volumes entraîne la perte des données.
+
+Les critères de protection contre les pertes de rayonnage dépendent de la méthode de protection, comme décrit dans le tableau suivant.
+
+|===
+| Niveau | Critères pour la protection contre les pertes de rayonnage | Nombre minimal de tiroirs requis 
+
+
+| Piscine | Le pool doit inclure les disques provenant d'au moins cinq tiroirs et il doit inclure un nombre égal de disques dans chaque tiroir. La protection contre les pertes de rayonnage n'est pas applicable aux étagères de grande capacité ; si votre système contient des étagères de grande capacité, consultez la section protection contre les pertes de tiroirs. | 5 
+
+
+| RAID 6 | Le groupe de volumes ne contient pas plus de deux disques dans un tiroir unique. | 3 
+
+
+| RAID 3 ou RAID 5 | Chaque disque du groupe de volumes est situé dans un tiroir distinct. | 3 
+
+
+| RAID 1 | Chaque disque d'une paire RAID 1 doit être placé dans un tiroir distinct. | 2 
+
+
+| RAID 0 | Impossible d'obtenir la protection contre les pertes de tablette. | Sans objet 
+|===
+
+
+=== Protection contre les pertes de tiroirs
+
+Un tiroir est un des compartiments d'un shelf que vous tirez pour accéder aux disques. Seuls les tiroirs haute capacité sont dotés de tiroirs. La protection contre les pertes de tiroirs garantit l'accessibilité aux données sur les volumes d'un pool ou d'un groupe de volumes en cas de perte totale de communication avec un tiroir unique. Une perte totale de communication peut être une perte d'alimentation du tiroir ou une défaillance d'un composant interne dans le tiroir.
+
+
+CAUTION: La protection contre les pertes de tiroirs n'est pas garantie si un lecteur a déjà échoué dans le pool ou le groupe de volumes. Dans ce cas, la perte de l'accès à un tiroir (et par conséquent un autre lecteur du pool ou du groupe de volumes) entraîne la perte de données.
+
+Les critères de protection contre les pertes de tiroirs dépendent de la méthode de protection, comme décrit dans le tableau suivant :
+
+|===
+| Niveau | Critères pour la protection contre les pertes de tiroirs | Nombre minimum de tiroirs requis 
+
+
+| Piscine | Les candidats aux pools doivent inclure des disques de tous les tiroirs et chaque tiroir doit comporter un nombre égal de disques. Le pool doit inclure des disques provenant d'au moins cinq tiroirs et il doit y avoir un nombre égal de disques dans chaque tiroir. Une étagère de 60 disques peut assurer la protection contre les pertes de tiroirs lorsque le pool contient 15, 20, 25, 30, 35, 40, 45, 50, 55 ou 60 disques. Des incréments de 5 peuvent être ajoutés au pool après sa création initiale. | 5 
+
+
+| RAID 6 | Le groupe de volumes ne contient pas plus de deux disques dans un tiroir unique. | 3 
+
+
+| RAID 3 ou 5 | Chaque lecteur du groupe de volumes se trouve dans un tiroir distinct | 3 
+
+
+| RAID 1 | Chaque lecteur d'une paire symétrique doit être placé dans un tiroir séparé. | 2 
+
+
+| RAID 0 | Impossible d'obtenir la protection contre la perte de tiroir. | Sans objet 
+|===

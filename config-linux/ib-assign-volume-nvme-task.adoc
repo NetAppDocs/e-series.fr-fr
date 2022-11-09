@@ -1,0 +1,56 @@
+---
+permalink: config-linux/ib-assign-volume-nvme-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, assign volume, assign namespace, 
+summary: 'Vous devez affecter un volume \(namespace\) à un hôte ou un cluster hôte afin de pouvoir utiliser ce dernier pour les opérations d"E/S. Cette affectation permet à un hôte ou un cluster hôte d"accéder à un ou plusieurs namespaces d"une baie de stockage.' 
+---
+= Affecter un volume
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez affecter un volume (namespace) à un hôte ou à un cluster hôte afin de pouvoir utiliser les opérations d'E/S. Cette affectation permet à un hôte ou un cluster hôte d'accéder à un ou plusieurs namespaces d'une baie de stockage.
+
+Gardez ces consignes à l'esprit lorsque vous attribuez des volumes :
+
+* Vous ne pouvez affecter un volume qu'à un seul hôte ou cluster hôte à la fois.
+* Les volumes affectés sont partagés entre les contrôleurs de la baie de stockage.
+* Le même ID de namespace (NSID) ne peut pas être utilisé deux fois par un hôte ou un cluster hôte pour accéder à un volume. Vous devez utiliser un ID NSID unique.
+
+
+L'assignation d'un volume échoue dans les conditions suivantes :
+
+* Tous les volumes sont affectés.
+* Le volume est déjà affecté à un autre hôte ou cluster hôte.
+
+
+La possibilité d'attribuer un volume n'est pas disponible dans les conditions suivantes :
+
+* Aucun hôte ou cluster hôte valide n'existe.
+* Toutes les affectations de volume ont été définies.
+
+
+Tous les volumes non attribués s'affichent, mais les fonctions des hôtes avec ou sans Data assurance (DA) s'appliquent comme suit :
+
+* Pour un hôte compatible DA, vous pouvez sélectionner des volumes qui sont soit activés DA, soit non activés DA.
+* Pour un hôte qui n'est pas compatible DA, si vous sélectionnez un volume qui est activé DA, un avertissement indique que le système doit automatiquement désactiver DA sur le volume avant d'affecter le volume à l'hôte.
+
+
+.Étapes
+. Sélectionnez menu:Storage[hosts].
+. Sélectionnez l'hôte ou le cluster hôte auquel vous souhaitez affecter des volumes, puis cliquez sur *attribuer des volumes*.
++
+Une boîte de dialogue s'affiche et répertorie tous les volumes pouvant être affectés. Vous pouvez trier n'importe quelle colonne ou saisir quelque chose dans la case *Filter* pour faciliter la recherche de volumes particuliers.
+
+. Cochez la case en regard de chaque volume que vous souhaitez attribuer ou cochez la case dans l'en-tête de tableau pour sélectionner tous les volumes.
+. Cliquez sur *attribuer* pour terminer l'opération.
+
+
+Après avoir attribué un ou plusieurs volumes à un hôte ou à un cluster hôte, le système effectue les opérations suivantes :
+
+* Le volume affecté reçoit le prochain NSID disponible. L'hôte utilise le NSID pour accéder au volume.
+* Le nom de volume fourni par l'utilisateur apparaît dans les listes de volumes associées à l'hôte.
+

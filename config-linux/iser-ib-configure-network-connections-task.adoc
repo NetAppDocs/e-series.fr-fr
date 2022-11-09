@@ -1,0 +1,26 @@
+---
+permalink: config-linux/iser-ib-configure-network-connections-task.html 
+sidebar: sidebar 
+keywords: configure network connection, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Si votre configuration utilise le protocole iser sur InfiniBand, suivez les étapes de cette section. 
+---
+= Configurez les connexions réseau
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si votre configuration utilise le protocole iser over InfiniBand, suivez les étapes de cette section pour configurer les connexions réseau.
+
+.Étapes
+. Dans System Manager, accédez au menu:Paramètres[System > configurer iser sur les ports Infiniband]. Pour plus d'instructions, consultez l'aide en ligne de System Manager.
++
+Placez les adresses iSCSI de la baie sur le même sous-réseau que le ou les ports hôtes que vous utiliserez pour créer des sessions iSCSI. Pour les adresses, consultez le xref:iser-ib-worksheet-concept.adoc[Fiche technique iser].
+
+. Enregistrez l'IQN.
++
+Ces informations peuvent s'avérer nécessaires lorsque vous créez des sessions iser à partir de systèmes d'exploitation qui ne prennent pas en charge la découverte de cibles d'envoi. Entrez ces informations dans le xref:iser-ib-worksheet-concept.adoc[Fiche technique iser].
+
+

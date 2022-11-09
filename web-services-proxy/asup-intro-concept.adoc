@@ -1,0 +1,170 @@
+---
+permalink: web-services-proxy/asup-intro-concept.html 
+sidebar: sidebar 
+keywords: ASUP configuration Web Services, AutoSupport Web Services Proxy, WSP ASUP config 
+summary: 'Vous pouvez configurer AutoSupport (ASUP), qui collecte les données, puis les envoie automatiquement au support technique pour le dépannage et l"analyse des problèmes à distance.' 
+---
+= Gérer AutoSupport à l'aide du proxy de services Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer AutoSupport (ASUP), qui collecte les données, puis les envoie automatiquement au support technique pour le dépannage et l'analyse des problèmes à distance.
+
+
+
+== Présentation d'AutoSupport (ASUP)
+
+La fonctionnalité AutoSupport (ASUP) transmet automatiquement des messages à NetApp selon des critères manuels et basés sur la planification.
+
+Chaque message AutoSupport est un ensemble de fichiers journaux, de données de configuration, de données d'état et de mesures de performances. Par défaut, AutoSupport transmet les fichiers répertoriés dans le tableau suivant à l'équipe de support NetApp une fois par semaine.
+
+|===
+| Nom du fichier | Description 
+
+
+ a| 
+x-headers-data.txt
+ a| 
+Fichier .txt contenant les informations d'en-tête X.
+
+
+
+ a| 
+manifest.xml
+ a| 
+Fichier .xml détaillant le contenu du message.
+
+
+
+ a| 
+arraydata.xml
+ a| 
+Un fichier .xml contenant la liste des données client a persisté.
+
+
+
+ a| 
+appserver-config.txt
+ a| 
+Fichier .txt contenant les données de configuration du serveur d'applications.
+
+
+
+ a| 
+wsconfig.txt
+ a| 
+Fichier .txt contenant les données de configuration du service Web.
+
+
+
+ a| 
+host-info.txt
+ a| 
+Fichier .txt contenant des informations sur l'environnement hôte.
+
+
+
+ a| 
+journaux-serveur.7z
+ a| 
+Un fichier .7z contenant chaque fichier journal de serveur Web disponible.
+
+
+
+ a| 
+client-info.txt
+ a| 
+Fichier .txt avec paires clé/valeur arbitraires pour les compteurs spécifiques à l'application, tels que les accès aux méthodes et aux pages Web.
+
+
+
+ a| 
+profil-webservices.json
+ a| 
+Ces fichiers contiennent des données de profil Webservices et des données statistiques de surveillance de Jersey. Par défaut, les statistiques de surveillance Jersey sont activées. Vous pouvez les activer et les désactiver dans le fichier wsconfig.xml, comme suit :
+
+* Activer : `<env key="enable.jersey.statistics">true</env>`
+* Désactiver : `<env key="enable.jersey.statistics">false</env>`
+
+
+|===
+
+
+== Configurez AutoSupport
+
+AutoSupport est activé par défaut lors de l'installation. Cependant, vous pouvez modifier ce paramètre ou les types de distribution.
+
+
+
+=== Activez ou désactivez le protocole AutoSupport
+
+La fonction AutoSupport est activée ou désactivée lors de l'installation initiale du proxy de services Web, mais vous pouvez modifier ce paramètre dans le fichier de configuration de l'utilitaire.
+
+Vous pouvez activer ou désactiver AutoSupport à l'aide du fichier ASUPConfig.xml, comme décrit dans les étapes ci-dessous. Vous pouvez également activer ou désactiver cette fonctionnalité via l'API en utilisant *Configuration* et *POST/asup*, puis en saisissant "true" ou "false".
+
+. Ouvrez le fichier ASUPConfig.xml dans le répertoire de travail.
+. Localiser les lignes pour `<asupdata enabled="(Boolean)" timestamp=>`
+. Entrez `true` (activer) ou `false` (désactiver). Par exemple :
++
+[listing]
+----
+<asupdata enabled="false" timestamp="0">
+----
++
+
+NOTE: L'entrée d'horodatage est superflue.
+
+. Enregistrez le fichier.
+
+
+
+
+=== Configurer la méthode de livraison AutoSupport
+
+Vous pouvez configurer la fonction AutoSupport pour qu'elle utilise les méthodes de distribution HTTPS, HTTP ou SMTP. HTTPS est la méthode de livraison par défaut.
+
+. Accédez au fichier ASUPConfig.xml dans le répertoire de travail.
+. Dans la chaîne, `<delivery type="n">`, entrez 1, 2 ou 3 comme décrit dans le tableau :
++
+|===
+| Valeur | Description 
+
+
+ a| 
+1
+ a| 
+*HTTPS* (par défaut)
+
+<type de livraison=« 1 »>
+
+
+
+ a| 
+2
+ a| 
+*HTTP*
+
+<type de livraison="2">
+
+
+
+ a| 
+3
+ a| 
+*SMTP* -- pour configurer correctement le type de distribution AutoSupport sur SMTP, vous devez inclure l'adresse du serveur de messagerie SMTP, ainsi que les e-mails de l'expéditeur et du destinataire, comme dans l'exemple suivant :
+
+[listing]
+----
+<delivery type="3">
+<smtp>
+<mailserver>smtp.example.com</mailserver>
+<sender>user@example.com</sender>
+<replyto>user@example.com</replyto>
+</smtp>
+</delivery>
+----
+|===
+

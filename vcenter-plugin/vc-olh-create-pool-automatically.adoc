@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-pool-automatically.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Vous pouvez créer des pools automatiquement lorsque le système détecte au moins 11 disques non assignés ou détecte un disque non affecté éligible pour un pool existant. 
+---
+= Création automatique du pool
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez créer des pools automatiquement lorsque le système détecte au moins 11 disques non assignés ou détecte un disque non affecté éligible pour un pool existant. Un pool est un ensemble de disques regroupés de manière logique.
+
+Vous pouvez lancer la boîte de dialogue Configuration automatique du pool lorsque l'une des conditions suivantes est vraie :
+
+* Au moins un lecteur non affecté a été détecté qui peut être ajouté à un pool existant avec des types de disques similaires.
+* Onze (11) disques non assignés ou plus ont été détectés qui peuvent être utilisés pour créer un nouveau pool (s'ils ne peuvent pas être ajoutés à un pool existant en raison de types de disques différents).
+
+
+La création automatique de pool vous permet de configurer facilement tous les disques non assignés dans la baie de stockage dans un pool et d'ajouter des disques aux pools existants.
+
+Gardez à l'esprit les éléments suivants :
+
+* Lorsque vous ajoutez des disques à une matrice de stockage, le système détecte automatiquement les disques et vous invite à créer un ou plusieurs pools en fonction du type de disque et de la configuration actuelle.
+* Si des pools ont été définis précédemment, le système vous invite automatiquement à ajouter les disques compatibles à un pool existant. Lorsque de nouveaux disques sont ajoutés à un pool existant, le système redistribue automatiquement les données en fonction de la nouvelle capacité, notamment les nouveaux lecteurs que vous avez ajoutés.
+* Lors de la configuration d'une baie de stockage EF600 ou EF300, assurez-vous que chaque contrôleur a accès à un nombre égal de disques dans les 12 premiers emplacements et à un nombre égal de disques dans les 12 derniers slots. Cette configuration permet aux contrôleurs d'utiliser plus efficacement les deux bus PCIe côté disque. Pour créer un pool, vous devez utiliser tous les disques de la matrice de stockage.
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage du pool.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez menu:More [lancer la configuration automatique du pool].
++
+Le tableau des résultats répertorie les nouveaux pools, les pools existants avec disques ajoutés, ou les deux. Par défaut, un nouveau pool est nommé avec un numéro séquentiel.
+
++
+Notez que le système effectue les opérations suivantes :
+
++
+** Crée un pool unique si le nombre de disques dotés du même type de disque (HDD ou SSD) et ayant la même capacité est suffisant.
+** Plusieurs pools sont créés si la capacité non affectée se compose de différents types de disques.
+** Ajoute les disques à un pool existant si un pool est déjà défini dans la baie de stockage et que vous ajoutez de nouveaux disques du même type de disque au pool.
+** Ajoute les disques du même type au pool existant, et utilisez les autres types de disques pour créer différents pools si les nouveaux disques sont de types différents.
+
+
+. Pour modifier le nom d'un nouveau pool, cliquez sur l'icône *Modifier* (le crayon).
+. Pour afficher d'autres caractéristiques du pool, placez le curseur sur ou appuyez sur l'icône Détails (la page).
++
+Des informations sur le type de disque, la fonctionnalité de sécurité, l'assurance de données (DA), la protection contre la perte de tiroir et la protection contre la perte de tiroir s'affichent.
+
++
+Pour les baies de stockage EF600 et EF300, les paramètres sont également affichés pour le provisionnement des ressources et la taille des blocs de volume.
+
+. Cliquez sur *Accept*.
+

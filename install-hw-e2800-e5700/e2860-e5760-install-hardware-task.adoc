@@ -1,0 +1,103 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Installez le système E2800 ou E5700 dans un rack à deux montants ou dans une armoire système NetApp. 
+---
+= Installer le matériel de fixation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment installer un système de stockage E2860, E5760 ou DE460 dans un rack à deux montants ou une armoire système NetApp.
+
+.Avant de commencer
+* Enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Préparez une zone de travail plate et sans électricité statique.
+* Procurez-vous un bracelet antistatique et prenez les précautions anti-statiques.
+
+
+Lisez toutes les instructions avant de suivre les étapes ci-dessous.
+
+.Étapes
+. Déballez le contenu du matériel, puis inventoriez le matériel de fixation contre le bordereau d'emballage.
+. Installer les rails.
++
+Si des instructions sont fournies avec le matériel de fixation en rack, reportez-vous à ces instructions pour savoir comment installer les rails. Pour des instructions supplémentaires de montage en rack, reportez-vous à la section link:../rackmount-hardware.html["Matériel de montage en rack"].
+
++
+
+NOTE: Pour les armoires à trous carrés, vous devez d'abord installer les écrous cage fournis pour fixer l'avant et l'arrière du shelf avec des vis.
+
++
+|===
+|  
+
+
+ a| 
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+|===
+. Installer le shelf.
++
+
+CAUTION: Une tablette vide pèse environ 60 kg (132 lb). Un dispositif de levage mécanisé ou quatre personnes utilisant des poignées de levage sont nécessaires pour déplacer en toute sécurité une tablette vide.
+
++
+.. Si vous soulevez la tablette à la main, fixez les quatre poignées de levage. Poussez sur chaque poignée jusqu'à ce qu'elle s'enclenche.
+.. En soutenant le shelf par le bas, faites-le glisser dans l'armoire. Si les poignées de levage sont utilisées, retirez-les un par un lorsque la tablette glisse dans l'armoire. Pour retirer les poignées, tirez le loquet de déverrouillage, poussez-le vers le bas, puis tirez-le hors de la tablette.
+
+
++
+image:../media/4_person_lift_source.png[""]
+
+. Fixer le shelf.
++
+.. Insérez des vis dans les premier et troisième trous du haut du shelf des deux côtés pour le fixer à l'avant de l'armoire.
+.. Placez deux supports arrière de chaque côté de la section supérieure arrière de la tablette. Insérez les vis dans le premier et le troisième trous de chaque support pour fixer l'arrière de l'armoire.
++
+image:../media/trafford_secure.png[""]
+
+
+
+. Installez les disques.
++
+.. Enroulez l'extrémité du bracelet antistatique autour de votre poignet et fixez l'extrémité du clip à une masse métallique pour éviter les décharges statiques.
+.. En commençant par la fente avant gauche du tiroir supérieur, installez chaque disque en le positionnant doucement dans la fente d'entraînement et en abaissant la poignée d'entraînement relevée jusqu'à ce qu'elle s'enclenche.
++
+*** Si vous installez moins de 60 disques, si vous disposez de disques SSD ou si vos disques ont des capacités différentes :
++
+**** De conserver un minimum de 20 disques par tiroir. Installez les disques dans les quatre emplacements avant de chaque tiroir en premier, pour une circulation d'air adaptée à la climatisation.
+**** Distribuez les disques restants aux tiroirs. Si possible, installez un nombre égal de chaque type de disque dans chaque tiroir pour permettre la création de groupes de volumes protégés contre la perte de tiroir ou de pools de disques.
+**** Répartir uniformément les disques SSD sur les tiroirs.
+
+
+
+
+.. Faites glisser doucement le tiroir vers l'intérieur en poussant le centre et en fermant doucement les deux loquets.
++
+*** Ne pas forcer le tiroir en place.
+*** A l'aide de l'outil connecteur, déconnectez le connecteur du câble serpent et reconnectez-le, assurez-vous d'entendre un clic pour déterminer si la reconnexion est correctement effectuée.
+*** Une déconnexion et une reconnexion ne doivent être nécessaires que lors de la configuration initiale ou si le plateau est expédié à un autre emplacement.
+
+
+.. Fixez le cadre avant.
+
+
+
+
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+
+
+
+ a| 
+
+CAUTION: Risque d'endommagement de l'équipement -- cessez de pousser le tiroir si vous vous sentez grippé. Utilisez les leviers de déverrouillage à l'avant du tiroir pour le faire glisser vers l'arrière. Réinsérez ensuite le tiroir avec précaution dans la fente.
+
+|===

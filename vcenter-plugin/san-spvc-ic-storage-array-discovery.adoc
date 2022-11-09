@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-array-discovery.html 
+keywords: discover arrays vCenter plugin, discover storage resources Plugin for vCenter, resolve certificates vCenter plugin 
+summary: 'Utilisez l"interface Plug-in pour vCenter pour découvrir les adresses IP des baies de votre réseau.' 
+---
+= Découvrir les matrices de stockage dans le plug-in
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour afficher et gérer les ressources de stockage, vous devez utiliser l'interface du plug-in de stockage pour vCenter pour découvrir les adresses IP des baies de votre réseau.
+
+.Avant de commencer
+* Vous devez connaître les adresses IP réseau (ou plage d'adresses) des contrôleurs de la matrice.
+* Les matrices de stockage doivent être correctement configurées et configurées, et vous devez connaître les informations d'identification de la matrice de stockage (nom d'utilisateur et mot de passe).
+
+
+
+
+== Étape 1 : saisissez les adresses réseau pour la découverte
+
+.Étapes
+. Dans la page gérer, sélectionnez *Ajouter/découvrir*.
++
+La boîte de dialogue entrer une plage d'adresses réseau s'affiche.
+
+. Effectuez l'une des opérations suivantes :
++
+** Pour détecter une matrice, sélectionnez le bouton radio *découvrir une matrice de stockage unique*, puis entrez l'adresse IP de l'un des contrôleurs de la matrice de stockage.
+** Pour découvrir plusieurs matrices de stockage, sélectionnez le bouton d'option *découvrir toutes les matrices de stockage dans une plage de réseau*, puis entrez l'adresse de début et l'adresse de fin du réseau pour effectuer une recherche sur votre sous-réseau local.
+
+
+. Cliquez sur *Démarrer la découverte*.
++
+Au fur et à mesure que le processus de détection commence, la boîte de dialogue affiche les matrices de stockage au fur et à mesure qu'elles sont découvertes. Le processus de détection peut prendre plusieurs minutes.
+
++
+Si aucune baie gérable n'est détectée, vérifiez que les matrices de stockage sont correctement connectées à votre réseau et que leurs adresses attribuées sont à portée. Cliquez sur *nouveaux paramètres de découverte* pour revenir à la page Ajouter/découvrir.
+
+. Cochez la case en regard de toute matrice de stockage que vous souhaitez ajouter à votre domaine de gestion.
++
+Le système effectue une vérification des informations d'identification sur chaque matrice que vous ajoutez au domaine de gestion. Vous devrez peut-être résoudre tous les problèmes avec des certificats non fiables avant de continuer.
+
+. Cliquez sur *Suivant* pour passer à l'étape suivante de l'assistant.
++
+Si les matrices de stockage possèdent des certificats valides, rendez-vous sur  3: Provide passwords.
+
++
+Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche. Accédez à  2: Resolve untrusted certificates during discovery.
+
++
+Si vous souhaitez importer des certificats signés par une autorité de certification, annulez hors de l'assistant de découverte et cliquez sur *gestion des certificats* dans le panneau de gauche. Reportez-vous à l'aide en ligne pour de plus amples instructions.
+
+
+
+
+
+== Étape 2 : résolution de certificats non approuvés lors de la découverte
+
+Vous devez résoudre tous les problèmes liés au certificat avant de poursuivre le processus de détection.
+
+. Si la boîte de dialogue résoudre les certificats auto-signés s'ouvre, consultez les informations affichées pour les certificats non approuvés. Pour plus d'informations, vous pouvez également cliquer sur les points de suspension à l'extrémité de la table et sélectionner *View* dans le menu contextuel.
+. Effectuez l'une des opérations suivantes :
++
+** Si vous faites confiance aux connexions aux matrices de stockage découvertes, cliquez sur *Suivant*, puis sur *Oui* pour confirmer et passer à la boîte de dialogue suivante de l'assistant. Les certificats auto-signés sont marqués comme approuvés et les matrices de stockage seront ajoutées au plug-in.
+** Si vous ne faites pas confiance aux connexions aux matrices de stockage, sélectionnez *Annuler* et validez la stratégie de certificat de sécurité de chaque matrice de stockage avant d'en ajouter une.
+
+
+. Cliquez sur *Suivant* pour passer à l'étape suivante de l'assistant.
+
+
+
+
+== Étape 3 : fournir des mots de passe
+
+Pour la dernière étape de la découverte, vous devez saisir les mots de passe des matrices de stockage que vous souhaitez ajouter à votre domaine de gestion.
+
+. Pour chaque matrice découverte, entrez son mot de passe d'administrateur dans les champs.
+. Cliquez sur *Terminer*.
++
+La connexion du système aux baies de stockage spécifiées peut prendre plusieurs minutes. Lorsque le processus est terminé, les matrices de stockage sont ajoutées à votre domaine de gestion et associées au groupe sélectionné (si spécifié).
+
+

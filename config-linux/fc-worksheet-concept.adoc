@@ -1,0 +1,126 @@
+---
+permalink: config-linux/fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
+summary: Utilisez cette fiche technique pour enregistrer les informations de configuration du stockage FC. 
+---
+= Enregistrer votre configuration FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage FC. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+L'illustration montre un hôte connecté à une baie de stockage E-Series dans deux zones. Une zone est indiquée par la ligne bleue ; l'autre zone est indiquée par la ligne rouge. Chaque port unique possède deux chemins d'accès au stockage (un pour chaque contrôleur).
+
+image::../media/port_identifiers_host_and_target_conf-lin.gif[identificateurs de port hôte et conf lin cible]
+
+
+
+== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | WWPN 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port hôte 0 vers zone de commutation FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Port hôte 1 vers zone de commutation FC 1
+ a| 
+
+|===
+
+
+== Identifiants cibles
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | WWPN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur A, port 2 vers le commutateur FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Contrôleur B, port 2 vers le commutateur FC 2
+ a| 
+
+|===
+
+
+== Hôte de mappage
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

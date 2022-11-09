@@ -1,0 +1,55 @@
+---
+permalink: config-vmware/verify-vmware-config-support-task.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Vérifiez que la configuration VMware est prise en charge. 
+---
+= Vérifiez que la configuration VMware est prise en charge
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour assurer un fonctionnement fiable, vous créez un plan d'implémentation, puis utilisez la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que l'ensemble de la configuration est pris en charge.
+
+.Étapes
+. Accédez au http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+. Cliquez sur la vignette *solution Search*.
+. Dans la zone Menu:protocoles[hôte SAN], cliquez sur le bouton *Ajouter* en regard de *hôte SAN E-Series*.
+. Cliquez sur *Afficher les critères de recherche de raffinage*.
++
+La section améliorer les critères de recherche s'affiche. Dans cette section, vous pouvez sélectionner le protocole qui s'applique, ainsi que d'autres critères pour la configuration, tels que le système d'exploitation, le système d'exploitation NetApp et le pilote multivoie hôte. Sélectionnez les critères que vous savez que vous voulez pour votre configuration, puis voyez quels éléments de configuration compatibles s'appliquent. Si nécessaire, effectuez les mises à jour de votre système d'exploitation et de votre protocole qui sont prescrits dans l'outil. Les informations détaillées concernant la configuration choisie sont accessibles sur la page Afficher les configurations prises en charge en cliquant sur la flèche de droite.
+
+. Au besoin, effectuez les mises à jour de votre système d'exploitation et de votre protocole, comme indiqué dans le tableau.
++
+|===
+| Mises à jour du système d'exploitation | Protocole | Mises à jour liées aux protocoles 
+
+
+ a| 
+** Vous devrez peut-être installer des pilotes prêts à l'emploi afin de vous assurer que les fonctionnalités et la prise en charge sont correctes. Vous pouvez installer des pilotes HBA à l'aide du shell ESXi ou d'une connexion SSH distante à l'hôte ESXi. Pour accéder à l'hôte à l'aide de l'une de ces méthodes, vous devez activer le shell ESXi et l'accès SSH. Pour plus d'informations sur le shell ESXi, reportez-vous à la base de connaissances VMware concernant l'utilisation du shell ESXi dans ESXi. Pour les commandes d'installation, reportez-vous aux instructions accompagnant les pilotes HBA.
+** Chaque fournisseur HBA dispose de méthodes spécifiques pour mettre à jour le code d'amorçage et le micrologiciel. Certaines de ces méthodes peuvent inclure l'utilisation d'un plug-in vCenter ou l'installation du fournisseur CIM sur l'hôte ESXi. Les plug-ins vCenter peuvent être utilisés pour obtenir des informations sur la carte HBA spécifique du fournisseur. Reportez-vous à la section support du site Web du fournisseur pour obtenir les instructions et les logiciels nécessaires à la mise à jour du code d'amorçage ou du micrologiciel de l'adaptateur HBA. Reportez-vous au _VMware Compatibility Guide_ ou au site Web du fournisseur HBA pour obtenir le code d'amorçage ou le micrologiciel correct.
+
+ a| 
+FC
+ a| 
+Pilote, micrologiciel et code d'amorçage de l'adaptateur de bus hôte (HBA)
+
+
+
+ a| 
+ISCSI
+ a| 
+Pilote, micrologiciel et code d'amorçage de la carte d'interface réseau (NIC)
+
+
+
+ a| 
+SAS
+ a| 
+Pilote, micrologiciel et code d'amorçage de l'adaptateur de bus hôte (HBA)
+
+|===
+

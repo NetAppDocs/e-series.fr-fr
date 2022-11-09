@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-know-about-host-block-size-requirements.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Pour les systèmes EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Kio (également appelé « taille de secteur »). Vous devez définir la valeur correcte lors de la création du volume.' 
+---
+= De quoi ai-je besoin pour connaître les exigences en termes de taille de bloc de l'hôte ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour les systèmes EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Kio (également appelé « taille de secteur »). Vous devez définir la valeur correcte lors de la création du volume. Si possible, le système suggère la valeur par défaut appropriée.
+
+Avant de définir la taille du bloc de volume, lisez les limitations et consignes suivantes.
+
+* Certains systèmes d'exploitation et machines virtuelles (notamment VMware) nécessitent actuellement une taille de bloc de 512 octets et ne prennent pas en charge 4Kio. Veillez donc à connaître les exigences de l'hôte avant de créer un volume. En règle générale, vous pouvez obtenir les meilleures performances en définissant un volume pour présenter une taille de bloc de 4 Ko ; cependant, assurez-vous que votre hôte autorise les blocs de 4 Ko (ou 4 Ko).
+* Le type de disques que vous sélectionnez pour votre pool ou groupe de volumes détermine également la taille de blocs de volumes pris en charge, comme suit :
++
+** Si vous créez un groupe de volumes à l'aide de disques qui écrivent dans des blocs de 512 octets, vous ne pouvez créer que des volumes avec des blocs de 512 octets.
+** Si vous créez un groupe de volumes à l'aide de disques qui écrivent des blocs de 4 Ko, vous pouvez créer des volumes avec des blocs de 512 octets ou de 4 Ko.
+
+
+* Si la baie dispose d'une carte d'interface hôte iSCSI, tous les volumes sont limités à des blocs de 512 octets (quelle que soit la taille de bloc du groupe de volumes). Ceci est dû à une implémentation matérielle spécifique.
+* Vous ne pouvez pas modifier une taille de bloc une fois qu'elle est définie. Si vous avez besoin de modifier la taille d'un bloc, vous devez supprimer le volume, puis le recréer à nouveau.
+

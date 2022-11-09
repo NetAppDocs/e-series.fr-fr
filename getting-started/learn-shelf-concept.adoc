@@ -1,0 +1,66 @@
+---
+permalink: getting-started/learn-shelf-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
+summary: Les systèmes E-Series sont disponibles dans plusieurs tailles de tiroirs. 
+---
+= Types de tiroirs E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les systèmes E-Series sont disponibles dans plusieurs tailles de tiroirs.
+
+|===
+| Type de tiroir | Illustration 
+
+
+ a| 
+*DE212C:*
+
+* 2u12 (2 unités de rack ; 12 disques)
+* Disques durs 3.5" et/ou SSD 2.5" (avec adaptateur)
+* Contrôleurs E2800 uniquement
+
+ a| 
+image:../media/e2812_front.gif[""]
+
+
+
+ a| 
+*DE224C:*
+
+* 2u24 (2 unités de rack ; 24 disques)
+* Disques durs 2.5" et/ou SSD 2.5"
+* Contrôleurs E2800, EF280, E5700 et EF570
+
+ a| 
+image:../media/e2824_front.gif[""]
+
+
+
+ a| 
+*DE460C:*
+
+* 4u60 (4 unités de rack ; 60 disques)
+* Disques 3.5" et 2.5" (NL-SAS, SAS et SSD)
+* Contrôleurs E2800 et E5700
+
+ a| 
+image:../media/de460c.gif[""]
+
+
+
+ a| 
+*NE224:*
+
+* 2u24 (2 unités de rack ; 24 disques)
+* Disques SSD NVMe 2.5"
+* Contrôleurs EF300 et EF600
+
+ a| 
+image:../media/ne224.gif[""]
+
+|===

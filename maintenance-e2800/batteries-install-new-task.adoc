@@ -1,0 +1,62 @@
+---
+permalink: maintenance-e2800/batteries-install-new-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Installez une batterie neuve. 
+---
+= Installez la nouvelle batterie E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir retiré la batterie défectueuse, vous pouvez l'installer.
+
+.Ce dont vous avez besoin, 8217;ll
+* La batterie de rechange.
+* Une surface plane et sans statique.
+
+
+.Étapes
+. Déballez la nouvelle batterie et placez-la sur une surface plane et sans électricité statique.
++
+
+NOTE: Conformément aux réglementations de sécurité IATA, les batteries de rechange sont livrées avec un état de charge (SoC) de 30 % ou moins. Lorsque vous réappliquez l'alimentation, n'oubliez pas que la mise en cache des écritures ne reprend pas tant que la batterie de remplacement n'est pas entièrement chargée et qu'elle a terminé son cycle d'apprentissage initial.
+
+. Orientez le boîtier du contrôleur de manière à ce que le logement de la batterie soit orienté vers vous.
+. Insérez la batterie dans le boîtier du contrôleur en l'inclinant légèrement vers le bas.
++
+Vous devez insérer la bride métallique située à l'avant de la batterie dans la fente située au bas du boîtier du contrôleur et faire glisser le haut de la batterie sous la petite goupille d'alignement située sur le côté gauche du boîtier.
+
+. Déplacez le loquet de la batterie vers le haut pour fixer la batterie.
++
+Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insérer la pile dans le bloc e2800]
+
++
+*(1)* _loquet de dégagement de la batterie_
+
++
+*(2)* _batterie_
+
+. Retournez le boîtier du contrôleur pour vérifier que la batterie est correctement installée.
++
+
+CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de la batterie doit être complètement insérée dans la fente du boîtier du contrôleur (comme illustré sur la première figure). Si la batterie n'est pas installée correctement (comme illustré sur la deuxième figure), la bride métallique risque de toucher la carte contrôleur, ce qui endommagerait le contrôleur lorsque vous mettez le système sous tension.
+
++
+** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans la fente du contrôleur : +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+. Accédez à link:batteries-reinstall-controller-canister-task.html["Réinstallez le boîtier du contrôleur E2800"].
+

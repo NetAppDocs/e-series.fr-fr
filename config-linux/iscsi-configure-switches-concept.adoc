@@ -1,0 +1,24 @@
+---
+permalink: config-linux/iscsi-configure-switches-concept.html 
+sidebar: sidebar 
+keywords: Switches, zoning, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Configurez les commutateurs selon les recommandations du fournisseur en matière d"iSCSI.' 
+---
+= Configurer les commutateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
+
+Vous devez vous assurer que :
+
+* Vous disposez de deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau.
+* Vous devez activer le contrôle de flux *de bout en bout*.
+* Le cas échéant, vous avez activé les trames Jumbo.
+
+
+
+NOTE: Les canaux de port/LACP n'est pas pris en charge sur les ports switchs du contrôleur. Le protocole LACP côté hôte n'est pas recommandé. Le chemins d'accès multiples offre les mêmes avantages, et dans certains cas, de meilleurs avantages.

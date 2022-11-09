@@ -1,0 +1,254 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: whats new, new features, SANtricity 11.73 
+summary: Nouvelles fonctionnalités de SANtricity OS. 
+---
+= Nouveautés de SANtricity OS
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les tableaux suivants décrivent les nouvelles fonctionnalités de SANtricity OS 11.7 pour la gestion intégrée des contrôleurs EF300, EF600, E2800/EF280 et E5700/EF570.
+
+
+
+== Nouvelles fonctionnalités de la version 11.74
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Prise en charge de la norme FIPS 140-3
+ a| 
+La norme FIPS 140-3 est désormais prise en charge sur certains disques pour les SSD SAS et NVMe. Les disques SSD de niveau FIPS 140-3 peuvent coexister avec les disques SSD de niveau FIPS 140-2, à condition que ces disques soient tous basés sur NVMe ou sur SAS. Lorsque vous utilisez une combinaison de ces niveaux dans des groupes de volumes et des pools de disques, notez que le groupe ou le pool fonctionnera alors au niveau inférieur de sécurité (140-2).
+
+
+
+ a| 
+Prise en charge des authentifications MFA et SSH
+ a| 
+Pour SANtricity versions 11.74 et ultérieures, la fonction de connexion à distance vous permet de configurer l'autorisation multifacteur (MFA) en demandant aux utilisateurs d'entrer une clé SSH et/ou un mot de passe SSH. L'option de menu de la section matériel est passée de *changer la connexion distante* à *configurer la connexion distante (SSH)*.
+
+
+
+ a| 
+Jetons d'accès
+ a| 
+Cette version inclut une nouvelle fonctionnalité pour la création de jetons d'accès. Ces tokens vous permettent de vous authentifier auprès de l'API REST ou de l'interface de ligne de commande sans exposer les noms d'utilisateur et les mots de passe. Cette fonctionnalité est fournie dans la section gestion des accès.
+
+|===
+
+
+== Nouvelles fonctionnalités de la version 11.73
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Provisionnement des ressources et prise en charge DULBE
+ a| 
+Les capacités de provisionnement des ressources et de disque DULBE sont désormais entièrement prises en charge dans cette version. Cette prise en charge inclut l'utilisation accrue de la commande UNMAP dirigée par hôte sur les volumes provisionnés par ressource.
+
+
+
+ a| 
+Extension SAS EF600 (512e
+ a| 
+Cette version prend en charge l'extension aux boîtiers SAS-3 du système de stockage EF600. Avec cette extension, les SSD NVMe de 4 blocs de Kio peuvent coexister avec 512 SSD SAS et disques durs. Toutefois, les disques de tailles de bloc différentes ne peuvent pas être configurés dans le même pool ou dans le même groupe de volumes.
+
+
+
+ a| 
+Prise en charge des SSD QLC
+ a| 
+Cette version prend en charge la génération actuelle de disques SSD QLC dotés d'un jeu de fonctions ONTAP dans le firmware des disques, mais qui ne disposent pas de l'ensemble complet de fonctionnalités spécifiques aux baies E-Series. Les disques QLC (NVMe uniquement) sont moins onéreux, mais leurs performances d'écriture sont moins élevées et leur indice d'endurance est moindre. Ils ne doivent donc pas être utilisés avec des charges de travail intensives en écriture.
+
+
+
+ a| 
+Prise en charge TLS 1.3
+ a| 
+TLS 1.3 est désormais pris en charge pour la gestion intégrée. Cette prise en charge s'applique à System Manager et aux services Web intégrés, avec la possibilité de l'activer ou de le désactiver. (Le support TLS 1.3 a été ajouté dans une version précédente pour Web Services Proxy et Unified Manager.)
+
+
+
+ a| 
+RAID 1 DDP avec 8 disques au minimum
+ a| 
+Avec cette version, la configuration RAID 1 DDP ne requiert plus au moins 11 SSD dans un pool. Le minimum autorise désormais des pools de disques SSD de 8 disques si seuls les volumes RAID 1 sont créés dans le pool.
+
+
+
+ a| 
+Suppression de la clé EKMS
+ a| 
+Un administrateur du stockage peut désormais demander un serveur de gestion des clés externe (EKMS) afin de supprimer une ancienne clé. La suppression de la clé n'a lieu que lors d'un processus de re-clé une fois que les disques installés ont la nouvelle clé.
+
+|===
+
+
+== Nouvelles fonctionnalités de la version 11.72
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Support SNMPv3
+ a| 
+SNMPv3 est maintenant pris en charge pour les notifications d'alerte, configurable dans le menu:Paramètres[alertes]. SNMPv3 offre une sécurité via une authentification forte et un cryptage de données.
+
+
+
+ a| 
+Prise en charge de la réplication des clés sur plusieurs serveurs de clés
+ a| 
+Pour la gestion externe des clés pour les lecteurs auto-cryptés, la boîte de dialogue Créer une gestion externe des clés inclut une nouvelle option pour l'ajout de plusieurs serveurs de clés.
+
+
+
+ a| 
+Versions mises à jour du navigateur
+ a| 
+Les versions minimales du navigateur System Manager ont été mises à jour.
+
+|===
+
+
+== Nouvelles fonctionnalités de la version 11.71
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Extension EF300
+| Cette version prend en charge l'extension vers les boîtiers SAS-3 pour le système de stockage EF300. Avec cette extension, les SSD NVMe de 4 blocs de Kio peuvent coexister avec 512 SSD SAS et disques durs. Toutefois, les disques de tailles de bloc différentes ne peuvent pas être configurés dans le même pool ou dans le même groupe de volumes. 
+
+
+ a| 
+Option de mode FEC en configuration iSCSI
+ a| 
+Pour les matrices de stockage utilisant la carte d'interface hôte iSCSI 25 Gb, une nouvelle option est disponible pour la configuration du mode FEC (Forward Error correction) (correction d'erreur directe) lorsque vous configurez des ports iSCSI.
+
+
+
+ a| 
+Volumes de stockage distants
+ a| 
+La fonction volumes de stockage à distance en option vous permet d'importer des volumes d'un système de stockage distant vers un système de stockage E-Series local à l'aide d'une connexion iSCSI. Le stockage distant peut être de la même marque que votre système E-Series ou d'un autre fournisseur de stockage, tant qu'il est accessible via iSCSI.
+
+
+
+ a| 
+Suppression (effacement) de la fonctionnalité ajoutée pour les disques non FDE
+ a| 
+La fonction de nettoyage de disque inclut désormais des disques non FDE dans la procédure. Sur la page matériel, vous pouvez ouvrir le menu contextuel du lecteur et sélectionner « Effacer » (auparavant, cette sélection était « Effacer sécurisé »).
+
+
+
+ a| 
+Connexion sécurisée pour les alertes par e-mail
+ a| 
+Pour activer les notifications par e-mail chiffrées, vous pouvez éventuellement configurer des e-mails sortants (alertes, interventions ASUP) afin de fournir des informations d'identification pour l'authentification. Les types de cryptage incluent SMTPS et STARTTLS.
+
+
+
+ a| 
+Ajouts AutoSupport
+ a| 
+Une alerte apparaît alors dans la zone Notifications lorsque AutoSupport n'est pas activé.
+
+
+
+ a| 
+Modification du format d'alerte syslog
+ a| 
+Le format d'alerte Syslog prend désormais en charge RFC 5424.
+
+|===
+
+
+== Nouvelles fonctionnalités de la version 11.70
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Nouveau modèle de système de stockage – EF300
+ a| 
+Cette version présente le système de stockage 100 % Flash NVMe à faible coût EF300. L' EF300 inclut 24 disques SSD NVMe et une seule carte d'interface hôte (HIC) par contrôleur. Les interfaces hôtes NVMe over Fabrics prises en charge incluent NVMe over IB, NVMe over RoCE et NVMe over FC. Les interfaces SCSI prises en charge incluent : FC, IB over iser et IB over SRP. Il est possible de consulter et de gérer plusieurs systèmes de stockage EF300 et autres baies de stockage E-Series dans Unified Manager.
+
+
+
+ a| 
+Nouvelle fonctionnalité de provisionnement des ressources (EF300 et EF600 uniquement)
+ a| 
+La fonctionnalité de provisionnement des ressources est une nouveauté des systèmes de stockage EF300 et EF600. Les volumes provisionnés par les ressources peuvent être utilisés immédiatement sans aucun processus d'initialisation en arrière-plan.
+
+
+
+ a| 
+Ajout de la taille de bloc de 512 octets (EF300 et EF600 uniquement)
+ a| 
+Pour les systèmes de stockage EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Ko. La fonctionnalité 512e a été ajoutée pour permettre la prise en charge de l'interface hôte iSCSI et du système d'exploitation VMware. Si possible, System Manager suggère la valeur par défaut appropriée.
+
+
+
+ a| 
+Nouvelle option d'envoi d'interventions AutoSupport à la demande
+ a| 
+Une nouvelle fonctionnalité Envoyer l'intervention AutoSupport vous permet d'envoyer des données au support technique sans attendre une intervention programmée. Cette option est disponible dans l'onglet AutoSupport du centre de support.
+
+
+
+ a| 
+Améliorations des serveurs de gestion externe des clés
+ a| 
+La fonction de connexion à un serveur de gestion externe des clés comprend les améliorations suivantes :
+
+* Contourner la fonction de création d'une clé de sauvegarde.
+* Choisissez un certificat intermédiaire pour le serveur de gestion des clés, en plus des certificats client et serveur.
+
+
+
+
+ a| 
+Améliorations du certificat
+ a| 
+Cette version permet d'utiliser un outil externe tel qu'OpenSSL pour générer une requête de signature de certificat (RSC), qui vous oblige également à importer un fichier de clé privée avec le certificat signé.
+
+
+
+ a| 
+Nouvelle fonctionnalité d'initialisation hors ligne pour les groupes de volumes
+ a| 
+Pour la création de volumes, System Manager fournit une méthode permettant d'ignorer l'étape d'affectation d'hôte afin que les nouveaux volumes soient initialisés hors ligne. Cette fonctionnalité s'applique uniquement aux groupes de volumes RAID sur des disques SAS (et non aux pools de disques dynamiques ou aux SSD NVMe inclus dans les systèmes de stockage EF300 et EF600). Cette caractéristique est destinée aux charges de travail qui doivent être intégralement performantes lorsque les volumes sont utilisés, et non lorsqu'ils ont été exécutés en arrière-plan.
+
+
+
+ a| 
+Nouvelle fonction de collecte des données de configuration
+ a| 
+Cette nouvelle fonctionnalité enregistre les données de configuration RAID depuis le contrôleur, qui inclut toutes les données des groupes de volumes et des pools de disques (mêmes informations que la commande CLI pour `save storageArray dbmDatabase`). Cette fonctionnalité a été ajoutée au support technique et se trouve dans l'onglet Diagnostics du centre de support.
+
+
+
+ a| 
+Modifiez la capacité de conservation par défaut des pools de disques dans un cas de 12 lecteurs
+ a| 
+Un pool de disques de 12 disques avait déjà été créé avec une capacité de préservation suffisante pour couvrir deux disques. La valeur par défaut est maintenant modifiée pour gérer l'échec d'un seul disque afin de proposer un pool petit par défaut plus économique.
+
+|===

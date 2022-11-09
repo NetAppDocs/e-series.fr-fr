@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-do-to-recognize-the-expanded-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Si vous augmentez la capacité d"un volume, il est possible que l"hôte ne reconnaisse pas immédiatement l"augmentation de la capacité du volume.' 
+---
+= Que dois-je faire pour reconnaître la capacité étendue ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si vous augmentez la capacité d'un volume, il est possible que l'hôte ne reconnaisse pas immédiatement l'augmentation de la capacité du volume.
+
+La plupart des systèmes d'exploitation reconnaissent la capacité étendue du volume et se développent automatiquement après le lancement de l'extension du volume. Cependant, certains pourraient ne pas le faire. Si votre système d'exploitation ne reconnaît pas automatiquement la capacité étendue du volume, vous devrez peut-être procéder à une nouvelle analyse ou à un redémarrage du disque.
+
+Après avoir développé la capacité du volume, vous devez augmenter manuellement la taille du système de fichiers pour qu'elle corresponde. La façon dont vous faites cela dépend du système de fichiers que vous utilisez.
+
+Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.

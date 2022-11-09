@@ -1,0 +1,53 @@
+---
+permalink: install-hw-ef600/power-controller-shelves-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, power on, power cables 
+summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous tension.' 
+---
+= Met les tiroirs contrôleurs sous tension
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment connecter les câbles d'alimentation et mettre les tiroirs disques sous tension.
+
+Avant d'alimenter les tiroirs contrôleurs, assurez-vous d'effectuer les opérations suivantes :
+
+* Installez votre matériel.
+* Prenez les précautions anti-statiques.
+
+
+.Étapes
+. Branchez les câbles d'alimentation, un à chaque contrôleur (EF600 ci-dessous).
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-ef600.png[""]
+ a| 
+* Câbles d'alimentation*
+
+|===
++
+|===
+
+
+ a| 
+image:../media/cabling_power.png[""]
+
+|===
+. Connectez les deux câbles d'alimentation, un de chaque contrôleur, à deux unités de distribution d'alimentation séparées dans l'armoire ou le rack.
++
+
+CAUTION: L'accès à un boîtier de contrôleur EF300 ou EF600 à partir du tiroir peut être bloqué par des PDU tierces. N'utilisez pas de prises d'alimentation directement derrière le boîtier du contrôleur.
+
+. Laissez le contrôleur démarrer pendant cinq minutes avant de terminer l'installation et la configuration du système de stockage.
+
+
+Le contrôleur démarre automatiquement. Les LED clignotent et les ventilateurs commencent à indiquer que le contrôleur est sous tension.
+
+
+NOTE: Les ventilateurs sont très bruyants lors de leur première mise sous tension.

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Supprimez une ou plusieurs baies de stockage si vous ne souhaitez plus la gérer depuis le plug-in de stockage pour vCenter. 
+---
+= Retirez les matrices de stockage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer une ou plusieurs baies de stockage si vous ne souhaitez plus la gérer depuis le plug-in de stockage pour vCenter.
+
+Vous ne pouvez accéder à aucune des baies de stockage que vous supprimez. Vous pouvez cependant établir une connexion avec n'importe quelle baie de stockage supprimée en pointant directement un navigateur vers son adresse IP ou son nom d'hôte.
+
+La suppression d'une matrice de stockage n'affecte en aucune façon la matrice de stockage ou ses données. Si une matrice de stockage est accidentellement retirée, elle peut être ajoutée à nouveau.
+
+.Étapes
+. Dans la page *Manage*, sélectionnez une ou plusieurs matrices de stockage à supprimer.
+. Menu sélection:tâches rares[Supprimer des matrices de stockage].
++
+La matrice de stockage est supprimée de toutes les vues de l'interface du plug-in.
+
+

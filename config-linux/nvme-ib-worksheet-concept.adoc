@@ -1,0 +1,237 @@
+---
+permalink: config-linux/nvme-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez cette fiche pour enregistrer les informations de configuration du stockage NVMe over Infiniband. 
+---
+= Enregistrez votre configuration NVMe over IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage NVMe over InfiniBand. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+
+
+== Identifiants d'hôte
+
+
+NOTE: Le NQN de l'initiateur logiciel est déterminé pendant la tâche.
+
+Localisez et documentez le NQN initiateur à partir de chaque hôte. Le NQN se trouve généralement dans le fichier /etc/nvme/hostnqn.
+
+|===
+| N° de légende | Connexions des ports hôtes | NQN hôte 
+
+
+ a| 
+1
+ a| 
+Hôte (initiateur) 1
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+
+
+ a| 
+s/o
+ a| 
+ a| 
+
+|===
+
+
+== Configuration recommandée
+
+Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au sous-système. Dans la version SANtricity OS 11.50, nous prenons en charge une connexion unique entre chaque hôte et un contrôleur de sous-système, comme illustré ci-dessous. Dans cette configuration, un port HCA (adaptateur de canal hôte) de chaque hôte doit se trouver sur le même sous-réseau que le port de contrôleur E-Series auquel il est connecté, mais sur un sous-réseau différent de celui de l'autre port HCA.
+
+image::../media/nvmeof_direct_connect.gif[connexion directe nvmeof]
+
+
+
+== NQN cible
+
+Documentez le NQN cible de la matrice de stockage. Vous utiliserez ces informations dans xref:nvme-ib-configure-storage-connections-task.adoc[Configuration des connexions NVMe over InfiniBand de la baie de stockage].
+
+Recherchez le nom NQN de la matrice de stockage à l'aide de SANtricity : *Baie de stockage* > *NVMe sur Infiniband* > *gérer les paramètres*. Ces informations peuvent s'avérer nécessaires lors de la création de sessions NVMe over InfiniBand à partir de systèmes d'exploitation qui ne prennent pas en charge la découverte des cibles d'envoi.
+
+|===
+| N° de légende | Nom de la matrice | IQN cible 
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+
+|===
+
+
+== Configuration du réseau
+
+Documenter la configuration réseau qui sera utilisée pour les hôtes et le stockage sur la structure InfiniBand. Ces instructions supposent que deux sous-réseaux seront utilisés pour une redondance complète.
+
+Votre administrateur réseau peut fournir les informations suivantes. Ces informations sont utilisées dans la rubrique, xref:nvme-ib-configure-storage-connections-task.adoc[Configuration des connexions NVMe over InfiniBand de la baie de stockage].
+
+
+
+=== Sous-réseau A
+
+Définissez le sous-réseau à utiliser.
+
+|===
+| Adresse réseau | Masque de réseau 
+
+
+ a| 
+ a| 
+
+|===
+Documentez les NQN à utiliser par les ports de la matrice et chaque port hôte.
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | NQN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Hôte 1, port 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Facultatif) hôte 2, port 1
+ a| 
+
+|===
+
+
+=== Le sous-réseau B
+
+Définissez le sous-réseau à utiliser.
+
+|===
+| Adresse réseau | Masque de réseau 
+
+
+ a| 
+ a| 
+
+|===
+Documentez les IQN utilisés par les ports de la matrice et chaque port hôte.
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | NQN 
+
+
+ a| 
+8
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+10
+ a| 
+Contrôleur A, port 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur B, port 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Hôte 1, port 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Facultatif) hôte 2, port 2
+ a| 
+
+|===
+
+
+== Nom d'hôte de mappage
+
+
+NOTE: Le nom d'hôte de mappage est créé pendant le flux de travail.
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

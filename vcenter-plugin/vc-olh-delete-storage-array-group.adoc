@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Supprimez un ou plusieurs groupes de matrices de stockage qui ne sont plus nécessaires. 
+---
+= Supprimer le groupe de matrices de stockage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer un ou plusieurs groupes de matrices de stockage qui ne sont plus nécessaires.
+
+Cette opération supprime uniquement le groupe de matrices de stockage. Les matrices de stockage associées au groupe supprimé restent accessibles via la vue gérer tout ou tout autre groupe auquel elles sont associées.
+
+.Étapes
+. Sur la page gérer, sélectionnez menu:gérer les groupes[Supprimer le groupe de matrices de stockage].
+. Sélectionnez un ou plusieurs groupes de matrices de stockage que vous souhaitez supprimer.
+. Cliquez sur *Supprimer*.
+

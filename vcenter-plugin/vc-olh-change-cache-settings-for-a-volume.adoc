@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+summary: 'Modifiez les paramètres du cache de lecture et d"écriture pour affecter les performances d"E/S globales d"un volume.' 
+permalink: vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+---
+= Modifier les paramètres de cache d'un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Modifiez les paramètres du cache de lecture et d'écriture pour affecter les performances d'E/S globales d'un volume.
+
+Gardez ces consignes à l'esprit lorsque vous modifiez les paramètres de cache d'un volume :
+
+* Après avoir ouvert la boîte de dialogue Modifier les paramètres de cache, une icône peut s'afficher en regard des propriétés de cache sélectionnées. Cette icône indique que le contrôleur a temporairement suspendu les opérations de mise en cache. Cette action peut se produire lorsqu'une nouvelle batterie est en cours de chargement, lorsqu'un contrôleur a été retiré ou si le contrôleur a détecté une discordance dans les tailles de cache. Une fois la condition effacée, les propriétés de cache sélectionnées dans la boîte de dialogue deviennent actives. Si les propriétés de cache sélectionnées ne sont pas actives, contactez le support technique.
+* Vous pouvez modifier les paramètres du cache pour un seul volume ou pour plusieurs volumes sur une matrice de stockage. Vous pouvez modifier les paramètres de cache de tous les volumes en même temps.
+
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage contenant les volumes pour lesquels vous souhaitez modifier les paramètres de cache.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez un volume, puis sélectionnez menu:autres [Modifier les paramètres du cache].
++
+La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
+
+. Sélectionnez l'onglet *Basic* pour modifier les paramètres de mise en cache de lecture et d'écriture.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Paramètre de cache | Description 
+
+
+| Mise en cache de lecture | Le cache de lecture est un tampon qui stocke les données lues à partir des lecteurs. Les données d'une opération de lecture peuvent déjà se trouver dans le cache à partir d'une opération précédente, ce qui évite d'avoir à accéder aux disques. Les données restent dans le cache de lecture jusqu'à ce qu'elles soient supprimées. 
+
+
+| Mise en cache d'écriture | Le cache d'écriture est un tampon qui stocke les données de l'hôte qui n'ont pas encore été écrites sur les lecteurs. Les données restent dans le cache d'écriture jusqu'à ce qu'elles soient écrites sur les disques. La mise en cache d'écriture peut augmenter les performances d'E/S. Le cache est automatiquement vidé une fois la mise en cache d'écriture désactivée pour un volume. 
+|===
+====
+. Sélectionnez l'onglet *Avancé* pour modifier les paramètres avancés pour les volumes épais. Les paramètres de cache avancés sont disponibles uniquement pour les volumes épais.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Réglage | Description 
+
+
+| Récupération dynamique du cache de lecture | La fonctionnalité Dynamic cache Read Prefetch permet au contrôleur de copier des blocs de données séquentiels supplémentaires dans le cache pendant la lecture des blocs de données d'un disque vers le cache. Cette mise en cache augmente le risque que les futures demandes de données soient traitées à partir du cache. La lecture préalable en cache dynamique est importante pour les applications multimédia qui utilisent des E/S séquentielles Le taux et la quantité de données préextraites dans le cache sont auto-réglables en fonction du débit et de la taille de la demande des lectures de l'hôte. L'accès aléatoire n'entraîne pas la préextraction des données dans le cache. Cette fonction ne s'applique pas lorsque la mise en cache de lecture est désactivée. 
+
+
+| Mise en cache d'écriture sans batterie | Le paramètre mise en cache d'écriture sans batterie permet de poursuivre la mise en cache d'écriture même lorsque les batteries sont manquantes, en panne, complètement déchargées ou pas complètement chargées. Il n'est généralement pas recommandé de choisir la mise en cache d'écriture sans piles car les données risquent d'être perdues en cas de coupure d'alimentation. En règle générale, la mise en cache des écritures est désactivée temporairement par le contrôleur jusqu'à ce que les batteries soient chargées ou qu'une batterie défectueuse soit remplacée. ATTENTION : *perte de données possible* -- si vous sélectionnez cette option et que vous ne disposez pas d'une alimentation universelle pour la protection, vous risquez de perdre des données. En outre, vous risquez de perdre des données si vous ne disposez pas de batteries de contrôleur et que vous activez l'option de mise en cache d'écriture sans batteries. 
+
+
+| Mise en cache d'écriture avec mise en miroir | La mise en cache des écritures avec la mise en miroir se produit lorsque les données écrites dans la mémoire cache d'un contrôleur sont également écrites dans la mémoire cache de l'autre contrôleur. Par conséquent, si un contrôleur tombe en panne, l'autre peut mener à bien toutes les opérations d'écriture en attente. La mise en miroir du cache d'écriture n'est disponible que si la mise en cache d'écriture est activée et que deux contrôleurs sont présents. Lors de la création du volume, la mise en cache d'écriture avec mise en miroir est le paramètre par défaut. 
+|===
+====
+. Cliquez sur *Enregistrer* pour modifier les paramètres de cache.
+

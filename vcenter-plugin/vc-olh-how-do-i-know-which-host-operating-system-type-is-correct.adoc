@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Le champ Type de système d"exploitation hôte contient le système d"exploitation de l"hôte. Vous pouvez sélectionner le type d"hôte recommandé dans la liste déroulante ou autoriser l"agent de contexte hôte (HCA) à configurer l"hôte et le type de système d"exploitation hôte approprié.' 
+---
+= Comment savoir quel type de système d'exploitation hôte est correct ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le champ Type de système d'exploitation hôte contient le système d'exploitation de l'hôte. Vous pouvez sélectionner le type d'hôte recommandé dans la liste déroulante ou autoriser l'agent de contexte hôte (HCA) à configurer l'hôte et le type de système d'exploitation hôte approprié.
+
+Les types d'hôte qui apparaissent dans la liste déroulante dépendent du modèle de la matrice de stockage et de la version du micrologiciel. Les versions les plus récentes affichent d'abord les options les plus courantes, qui sont les plus susceptibles d'être appropriées. L'apparence sur cette liste n'implique pas que l'option est entièrement prise en charge.
+
+
+NOTE: Pour plus d'informations sur la prise en charge des hôtes, reportez-vous au http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+Certains des types d'hôtes suivants peuvent apparaître dans la liste :
+
+|===
+| Type de système d'exploitation hôte | Système d'exploitation et pilote multivoie 
+
+
+| Linux DM-MP (Kernel 3.10 ou version ultérieure) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de basculement multivoie Device Mapper avec un noyau 3.10 ou ultérieur. 
+
+
+| VMware ESXi | Prend en charge les systèmes d'exploitation VMware ESXi exécutant l'architecture NMP (Native Multipathing Plug-in) en utilisant le module SATP_ALUA (Storage Array Policy module) intégré à VMware. 
+
+
+| Windows (en cluster ou non mis en cluster) | Prend en charge les configurations Windows en cluster ou non en cluster qui n'exécutent pas le pilote de chemins d'accès multiples ATTO. 
+
+
+| Cluster ATTO (tous les systèmes d'exploitation) | Prise en charge de toutes les configurations de cluster via le pilote ATTO Technology, Inc., multivoie. 
+
+
+| Linux (Veritas DMP) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de chemins d'accès multiples DMP Veritas. 
+
+
+| Linux (ATTO) | Prend en charge les systèmes d'exploitation Linux via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| Mac OS | Prend en charge les versions Mac OS via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| Windows (ATTO) | Prend en charge les systèmes d'exploitation Windows via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| FlexArray (ALUA) | Prend en charge un système NetApp FlexArray via ALUA pour les chemins d'accès multiples. 
+
+
+| SERVICE IBM | Prend en charge une configuration contrôleur de volume SAN IBM. 
+
+
+| Valeur par défaut | Réservé au démarrage initial de la matrice de stockage. Si le type de système d'exploitation hôte est défini sur usine par défaut, modifiez-le pour qu'il corresponde au système d'exploitation hôte et au pilote multichemin exécuté sur l'hôte connecté. 
+
+
+| Linux DM-MP (Kernal 3.9 ou version antérieure) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de basculement multivoie Device Mapper avec un noyau 3.9 ou antérieur. 
+
+
+| Fenêtre clustered (obsolète) | Si votre type de système d'exploitation hôte est défini sur cette valeur, utilisez à la place le paramètre Windows (cluster ou non-cluster). 
+|===
+Une fois l'HCA installé et le stockage connecté à l'hôte, l'HCA envoie la topologie hôte aux contrôleurs de stockage via le chemin d'E/S. En fonction de la topologie hôte, les contrôleurs de stockage définissent automatiquement l'hôte et les ports hôtes associés, puis définissent le type d'hôte.
+
+
+NOTE: Si le HCA ne sélectionne pas le type d'hôte recommandé, vous devez définir manuellement le type d'hôte.

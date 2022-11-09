@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-optimization-capacity-for-volume-groups.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Les disques SSD auront une durée de vie plus longue et de meilleures performances d"écriture maximales lorsqu"une partie de leur capacité est non allouée.' 
+---
+= Quelle est la capacité d'optimisation des groupes de volumes ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les disques SSD auront une durée de vie plus longue et de meilleures performances d'écriture maximales lorsqu'une partie de leur capacité est non allouée.
+
+Pour les disques associés à un groupe de volumes, la capacité non allouée comprend la capacité libre d'un groupe de volumes (capacité non utilisée par les volumes), et une partie de la capacité utilisable définie comme capacité d'optimisation. La capacité d'optimisation supplémentaire assure un niveau minimal de capacité d'optimisation en réduisant la capacité utilisable et, en tant que tel, n'est pas disponible pour la création du volume.
+
+Lors de la création d'un groupe de volumes, une capacité d'optimisation recommandée permet d'équilibrer les performances, l'usure des disques et la capacité disponible. Le curseur capacité d'optimisation supplémentaire dans la boîte de dialogue Paramètres du groupe de volumes permet d'ajuster la capacité d'optimisation d'un groupe de volumes. Le réglage du curseur permet d'obtenir de meilleures performances et une meilleure durée de vie des disques aux dépens de la capacité disponible, ou encore d'augmenter la capacité disponible aux dépens des performances et de l'usure des disques.
+
+
+NOTE: Le curseur supplémentaire sur la capacité d'optimisation est disponible uniquement pour les systèmes de stockage EF600 et EF300.

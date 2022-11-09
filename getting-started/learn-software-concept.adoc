@@ -1,0 +1,173 @@
+---
+permalink: getting-started/learn-software-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
+summary: 'Les systèmes E-Series incluent le logiciel SANtricity pour le provisionnement du stockage et d"autres tâches.' 
+---
+= Présentation du logiciel SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les systèmes E-Series incluent le logiciel SANtricity pour le provisionnement du stockage et d'autres tâches.
+
+Le logiciel SANtricity comprend ces interfaces de gestion :
+
+* System Manager : interface Web utilisée pour gérer un contrôleur dans une baie de stockage.
+* Unified Manager :- interface web utilisée pour afficher et gérer toutes les baies de stockage de votre réseau.
+* Proxy de services Web -- une API REST utilisée pour afficher et gérer toutes les matrices de stockage de votre réseau.
+* Interface de ligne de commande -- application logicielle permettant de configurer et de contrôler les matrices de stockage.
+
+
+
+NOTE: Les baies de stockage EF600 et EF300 ne prennent pas en charge la mise en miroir, les volumes fins ou les fonctionnalités de cache SSD.
+
+
+
+== SANtricity System Manager
+
+System Manager est un logiciel de gestion web intégré à chaque contrôleur. Pour accéder à l'interface utilisateur, pointez un navigateur vers l'adresse IP du contrôleur. Un assistant d'installation vous aide à commencer la configuration du système.
+
+System Manager offre de nombreuses fonctionnalités de gestion :
+
+|===
+
+
+ a| 
+image:../media/sam1130_icon_performance.gif[""] *Performance*
+ a| 
+Affiche jusqu'à 30 jours de données de performances, notamment la latence d'E/S, les IOPS, l'utilisation du CPU et le débit.
+
+
+
+ a| 
+image:../media/sam1130_icon_volumes.gif[""] *Stockage*
+ a| 
+Provisionnez le stockage à l'aide de pools ou de groupes de volumes et créez des charges de travail applicatives.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] *Protection des données*
+ a| 
+Effectuez des sauvegardes et des reprises après incident à l'aide des snapshots, de la copie de volume et de la mise en miroir à distance.
+
+
+
+ a| 
+image:../media/sam1130_icon_controllers.gif[""] *Matériel*
+ a| 
+Vérifiez l'état des composants et exécutez certaines fonctions associées à ces composants, telles que l'attribution de disques de secours.
+
+
+
+ a| 
+image:../media/sam1130_icon_alerts.gif[""] *Alertes*
+ a| 
+Informez les administrateurs des événements importants survenant sur la baie de stockage. Les alertes peuvent être envoyées par e-mail, des traps SNMP et des syslog.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Gestion de l'accès*
+ a| 
+Configurez l'authentification utilisateur qui exige que les utilisateurs se connectent au système avec des informations d'identification attribuées.
+
+
+
+ a| 
+image:../media/sam1130_icon_settings.gif[""] *Paramètres système*
+ a| 
+Configurez d'autres fonctionnalités de performances du système, telles que le cache SSD et l'équilibrage automatique des charges.
+
+
+
+ a| 
+image:../media/sam1130_icon_support.gif[""] *Support*
+ a| 
+Affichez les données de diagnostic, gérez les mises à niveau et configurez AutoSupport, qui surveille l'état de santé d'une baie de stockage et envoie des interventions automatiques au support technique.
+
+|===
+
+
+== SANtricity Unified Manager
+
+Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. Une vue centrale permet de voir l'état des baies E-Series et EF-Series les plus récentes, notamment les systèmes E2800, EF280, EF300, E5700, EF570, Et EF600. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
+
+Unified Manager est installé sur un serveur de gestion avec le proxy de services Web. Pour accéder à Unified Manager, ouvrez un navigateur et entrez l'URL pointant vers le serveur sur lequel le proxy de services Web est installé.
+
+Unified Manager offre de nombreuses fonctionnalités de gestion, notamment :
+
+|===
+
+
+ a| 
+image:../media/artboard_9.png[""] *Découvrir les matrices de stockage*
+ a| 
+Trouvez et ajoutez les baies de stockage que vous souhaitez gérer sur le réseau de votre entreprise. Vous pouvez alors afficher l'état de toutes les matrices de stockage à partir d'une seule page.
+
+
+
+ a| 
+image:../media/artboard_11.png[""] *Lancement*
+ a| 
+Ouvrez une instance de System Manager pour effectuer des opérations de gestion individuelles sur une baie de stockage particulière.
+
+
+
+ a| 
+image:../media/sam1130_icon_system.gif[""] *Paramètres d'importation*
+ a| 
+Effectuez une importation par lots d'une matrice de stockage vers plusieurs baies, notamment des paramètres d'alertes, de AutoSupport et de services d'annuaire.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] * Mise en miroir*
+ a| 
+Configurez des paires en miroir synchrones ou asynchrones entre deux baies de stockage.
+
+
+
+ a| 
+image:../media/artboard_10.png[""] *Gérer les groupes*
+ a| 
+Organisez les baies de stockage en groupes pour une gestion simplifiée.
+
+
+
+ a| 
+image:../media/sam1130_icon_upgrade_center.gif[""] *Centre de mise à niveau*
+ a| 
+Mettez à niveau le logiciel du système d'exploitation SANtricity sur plusieurs baies de stockage.
+
+
+
+ a| 
+image:../media/sam1140_icon_certs.gif[""] * Certificats*
+ a| 
+Créez des demandes de signature de certificat (RSC), importez des certificats et gérez des certificats existants pour plusieurs matrices de stockage.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Gestion de l'accès*
+ a| 
+Configurez l'authentification utilisateur qui exige que les utilisateurs se connectent à Unified Manager avec les informations d'identification attribuées.
+
+|===
+
+
+== Proxy de services Web SANtricity
+
+Le proxy de services Web est un serveur API RESTful capable de gérer des centaines de baies E-Series nouvelles et existantes. Le proxy est installé séparément sur un serveur Windows ou Linux.
+
+Web Services comprend une documentation API qui vous permet d'interagir directement avec l'API REST. Pour accéder à la documentation de l'API des services Web, ouvrez un navigateur et entrez l'URL pointant vers le serveur sur lequel le proxy des services Web est installé.
+
+
+
+== Interface de ligne de commandes
+
+L'interface de ligne de commande est une application logicielle qui permet de configurer et de surveiller les matrices de stockage. À l'aide de la CLI, vous pouvez exécuter des commandes à partir d'une invite du système d'exploitation, telle que l'invite DOS C:, un chemin du système d'exploitation Linux ou un chemin du système d'exploitation Solaris.

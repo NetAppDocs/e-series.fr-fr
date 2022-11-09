@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-settings-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La fonction Importer les paramètres est une opération par lots qui vous permet de répliquer les paramètres d"une seule matrice de stockage (la source) vers plusieurs matrices (les cibles).' 
+---
+= Vue d'ensemble des paramètres d'importation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La fonction Importer les paramètres est une opération par lots qui vous permet de répliquer les paramètres d'une seule matrice de stockage (la source) vers plusieurs baies (les cibles) du plug-in de stockage pour vCenter.
+
+
+
+== Paramètres disponibles pour l'importation
+
+Les configurations suivantes peuvent être importées d'une matrice à une autre :
+
+* *Alertes* -- méthodes d'alerte pour envoyer des événements importants aux administrateurs à l'aide d'un courrier électronique, d'un serveur syslog ou d'un serveur SNMP.
+* *AutoSupport* -- fonction qui surveille l'intégrité d'une matrice de stockage et envoie des interventions automatiques au support technique.
+* *Services d'annuaire* -- Méthode d'authentification utilisateur gérée par un serveur LDAP (Lightweight Directory Access Protocol) et un service d'annuaire, comme Active Directory de Microsoft.
+* *Paramètres système* -- configurations relatives aux éléments suivants :
++
+** Paramètres de recherche d'un volume
+** Paramètres des SSD
+** Équilibrage automatique de la charge (n'inclut pas le reporting sur la connectivité hôte)
+
+
+* *Configuration de stockage* -- configurations relatives aux éléments suivants :
++
+** Volumes (volumes épais et non référentiels uniquement)
+** Groupes de volumes et pools
+** Affectations des disques de secours
+
+
+
+
+
+
+== Flux de travail de configuration
+
+Pour importer des paramètres, suivez ce flux de travail :
+
+. Sur une matrice de stockage à utiliser comme source, configurez les paramètres à l'aide de System Manager.
+. Sur les baies de stockage à utiliser comme cibles, sauvegardez leur configuration à l'aide de System Manager.
+. Depuis l'interface du plug-in, accédez à la page *Manage* et importez les paramètres.
+. Dans la page opérations, consultez les résultats de l'opération Importer les paramètres.
+
+
+
+
+== Conditions requises pour la réplication des configurations de stockage
+
+Avant d'importer une configuration de stockage d'une matrice de stockage à une autre, passez en revue les exigences et les directives.
+
+
+
+=== Tiroirs
+
+* Les tiroirs où les contrôleurs résident doivent être identiques sur les baies source et cible.
+* Les identifiants des tiroirs doivent être identiques sur les baies source et cible.
+* Les tiroirs d'extension doivent être installés dans les mêmes emplacements avec les mêmes types de disques (si le disque est utilisé dans la configuration, l'emplacement des disques inutilisés n'a pas d'importance).
+
+
+
+
+=== Contrôleurs
+
+* Le type de contrôleur peut être différent entre les baies source et cible, mais le type de boîtier RBOD doit être identique.
+* Les HIC, y compris les capacités DA de l'hôte, doivent être identiques sur les baies source et cible.
+* L'importation d'une configuration recto-verso vers une configuration recto-verso n'est pas prise en charge. Cependant, l'importation d'une configuration recto-verso est autorisée.
+* Les paramètres FDE ne sont pas inclus dans le processus d'importation.
+
+
+
+
+=== État
+
+* Les baies cibles doivent être en état optimal.
+* La baie source n'a pas besoin d'être en état optimal.
+
+
+
+
+=== Stockage
+
+* La capacité du lecteur peut varier entre les matrices source et cible, tant que la capacité du volume sur la cible est supérieure à la source. (Il se peut qu'une baie cible dispose de lecteurs plus récents et de plus grande capacité qui ne soient pas entièrement configurés en volumes par l'opération de réplication.)
+* Les volumes de pool de disques de 64 To ou plus sur la baie source empêchent le processus d'importation sur les cibles.
+

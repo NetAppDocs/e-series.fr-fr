@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-use-ca-signed-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Obtenir et importer des certificats signés par une autorité de certification pour un accès sécurisé au système de gestion hébergeant le plug-in de stockage pour vCenter. 
+---
+= Utiliser des certificats signés CA
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez obtenir et importer des certificats signés par une autorité de certification pour obtenir un accès sécurisé au système de gestion hébergeant le plug-in de stockage pour vCenter.
+
+L'utilisation de certificats signés par l'autorité de certification est une procédure en trois étapes :
+
+*  1: Complete a CSR file.
+*  2: Submit CSR file.
+*  3: Import management certificates.
+
+
+
+
+== Étape 1 : remplissez un fichier CSR
+
+Vous devez d'abord générer un fichier de demande de signature de certificat (CSR) qui identifie votre organisation et le système hôte sur lequel le plug-in est exécuté. Vous pouvez également générer un fichier CSR à l'aide d'un outil tel que OpenSSL et passer directement à  2: Submit CSR file.
+
+.Étapes
+. Sélectionnez *gestion des certificats*.
+. Dans l'onglet *Management*, sélectionnez *Complete CSR*.
+. Entrez les informations suivantes, puis cliquez sur *Suivant* :
++
+** *Organisation* -- le nom légal complet de votre entreprise ou organisation. Inclure les suffixes, tels que Inc. Ou Corp
+** *Unité organisationnelle (facultative)* -- la division de votre organisation qui gère le certificat.
+** *Ville/localité* -- la ville où votre système hôte ou entreprise est situé.
+** *État/région (facultatif)* -- l'état ou la région où se trouve votre système hôte ou votre entreprise.
+** *Code ISO de pays* -- le code ISO à deux chiffres de votre pays (Organisation internationale de normalisation), tel que les États-Unis.
+
+
+. Entrez les informations suivantes sur le système hôte sur lequel le plug-in est exécuté :
++
+** *Nom commun* -- l'adresse IP ou le nom DNS du système hôte sur lequel le plug-in est exécuté. Assurez-vous que cette adresse est correcte ; elle doit correspondre exactement à ce que vous entrez pour accéder au plug-in dans le navigateur. Ne pas inclure http:// ou https://. Le nom DNS ne peut pas commencer par un caractère générique.
+** *Adresses IP alternatives* -- si le nom commun est une adresse IP, vous pouvez éventuellement entrer des adresses IP ou des alias supplémentaires pour le système hôte. Pour plusieurs entrées, utilisez un format délimité par des virgules.
+** *Noms DNS alternatifs* -- si le nom commun est un nom DNS, entrez tout nom DNS supplémentaire pour le système hôte. Pour plusieurs entrées, utilisez un format délimité par des virgules. S'il n'y a pas de noms DNS alternatifs, mais que vous avez saisi un nom DNS dans le premier champ, copiez ce nom ici. Le nom DNS ne peut pas commencer par un caractère générique.
+
+
+. Assurez-vous que les informations sur l'hôte sont correctes. Si ce n'est pas le cas, les certificats renvoyés de l'autorité de certification échoueront lorsque vous tentez de les importer.
+. Cliquez sur *Terminer*.
+
+
+
+
+== Étape 2 : soumettez le fichier CSR
+
+Après avoir créé un fichier de demande de signature de certificat (CSR), vous envoyez le fichier CSR généré à une autorité de certification pour recevoir des certificats de gestion signés pour le système hébergeant le plug-in.
+
+Les systèmes E-Series nécessitent le format PEM (Base64 ASCII codage) pour les certificats signés, qui inclut les types de fichiers suivants : .pem, .crt, .cer ou .key.
+
+.Étapes
+. Localisez le fichier CSR téléchargé.
++
+L'emplacement du dossier de téléchargement dépend de votre navigateur.
+
+. Soumettez le fichier CSR à une autorité de certification (par exemple VeriSign ou DigiCert) et demandez des certificats signés au format PEM.
+
+
+
+CAUTION: Après avoir soumis un fichier CSR à l'autorité de certification, ne régénérez PAS un autre fichier CSR.
+
+Chaque fois que vous générez une RSC, le système crée une paire de clés privée et publique. La clé publique fait partie de la RSC, tandis que la clé privée est conservée dans le magasin de clés du système. Lorsque vous recevez les certificats signés et que vous les importez, le système garantit que les clés privées et publiques sont la paire d'origine. Si les clés ne correspondent pas, les certificats signés ne fonctionneront pas et vous devez demander de nouveaux certificats à l'autorité de certification.
+
+
+
+== Étape 3 : certificats de gestion des importations
+
+Une fois que vous avez reçu des certificats signés de l'autorité de certification (CA), importez les certificats dans le système hôte où le plug-in est installé.
+
+.Avant de commencer
+* Vous devez avoir signé les certificats de l'autorité de certification. Ces fichiers incluent le certificat racine, un ou plusieurs certificats intermédiaires et le certificat de serveur.
+* Si l'autorité de certification a fourni un fichier de certificat chaîné (par exemple, un fichier .p7b), vous devez déballer le fichier chaîné dans des fichiers individuels : le certificat racine, un ou plusieurs certificats intermédiaires et le certificat de serveur. Vous pouvez utiliser l'utilitaire certmgr de Windows pour décompresser les fichiers (cliquez avec le bouton droit de la souris et sélectionnez menu:toutes les tâches[Exporter]). Le codage base-64 est recommandé. Une fois les exportations terminées, un fichier CER est affiché pour chaque fichier de certificat de la chaîne.
+* Vous devez copier les fichiers de certificat sur le système hôte sur lequel le plug-in est exécuté.
+
+
+.Étapes
+. Sélectionnez *gestion des certificats*.
+. Dans l'onglet *Management*, sélectionnez *Import*.
++
+Une boîte de dialogue s'ouvre pour importer les fichiers de certificat.
+
+. Cliquez sur *Parcourir* pour sélectionner d'abord les fichiers de certificat racine et intermédiaire, puis sélectionnez le certificat de serveur. Si vous avez généré la RSC à partir d'un outil externe, vous devez également importer le fichier de clé privée créé avec la RSC.
++
+Les noms de fichier s'affichent dans la boîte de dialogue.
+
+. Cliquez sur *Importer*.
+
+
+Les fichiers sont chargés et validés. Les informations de certificat s'affichent sur la page gestion des certificats.

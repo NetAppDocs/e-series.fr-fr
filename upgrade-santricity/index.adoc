@@ -1,0 +1,23 @@
+---
+permalink: upgrade-santricity/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Présentation de la mise à niveau de SANtricity® OS 
+---
+= Présentation de la mise à niveau du système d'exploitation SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau votre système d'exploitation et les composants matériels de votre système vers la dernière version du logiciel et du micrologiciel de SANtricity.
+
+Ces procédures de mise à niveau comprennent des instructions distinctes pour :
+
+* Contrôleur unique -- comprend les procédures de mise à niveau du logiciel de la matrice de stockage et, en option, du micrologiciel du module d'E/S et de la mémoire NVSRAM (Nonvolatile Static Random Access Memory).
+* Plusieurs contrôleurs -- inclut les procédures de mise à niveau du logiciel SANtricity OS sur plusieurs baies de stockage de même type.
+* Lecteur -- contient des instructions pour la mise à niveau du micrologiciel du lecteur.
+
+
+Avant de commencer la mise à niveau, vérifiez le link:overview-upgrade-consider-task.html["Mise à niveau"].

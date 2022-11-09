@@ -1,0 +1,24 @@
+---
+permalink: config-linux/srp-ib-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Avant d"utiliser le volume, vérifiez que l"hôte peut écrire les données sur le volume et les lire de nouveau.' 
+---
+= Vérification de l'accès au stockage sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser le volume, vérifiez que l'hôte peut écrire les données sur le volume et les lire de nouveau.
+
+Volume initialisé au format avec un système de fichiers.
+
+.Étapes
+. Sur l'hôte, copiez un ou plusieurs fichiers vers le point de montage du disque.
+. Copiez les fichiers dans un autre dossier sur le disque d'origine.
+. Exécutez le `diff` pour comparer les fichiers copiés aux originaux.
+
+
+Supprimez le fichier et le dossier que vous avez copiés.

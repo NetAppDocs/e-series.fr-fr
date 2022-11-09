@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-would-i-need-to-create-a-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Si vous souhaitez que deux hôtes ou plus partagent l"accès au même ensemble de volumes, vous devez créer un cluster hôte.' 
+---
+= Pourquoi aurais-je besoin de créer un cluster hôte ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si vous souhaitez que deux hôtes ou plus partagent l'accès au même ensemble de volumes, vous devez créer un cluster hôte. Normalement, chaque hôte est équipé d'un logiciel de mise en cluster installé sur lui afin de coordonner l'accès au volume.

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, section, duplex, configuration 
+summary: 'Un contrôleur se compose d"une carte, d"un micrologiciel et d"un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un contrôleur dans une configuration duplex.' 
+---
+= Contrôleurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un contrôleur dans une configuration duplex.

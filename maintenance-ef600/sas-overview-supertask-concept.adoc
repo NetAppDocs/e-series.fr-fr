@@ -1,0 +1,26 @@
+---
+permalink: maintenance-ef600/sas-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: 'Consultez les conditions requises et les considérations avant de remplacer une carte d"extension SAS EF300.' 
+---
+= Exigences relatives au remplacement des cartes d'extension SAS EF300 et EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous prévoyez d'ajouter une carte d'extension SAS à un système EF300 ou EF600, vérifiez les exigences suivantes.
+
+* Vous devez suivre le link:../install-hw-ef600/index.html["Installation et configuration des systèmes de stockage EF300 et EF600"] pour configurer votre contrôleur.
+* Vous devez mettre à jour votre micrologiciel avec la dernière version. Pour mettre à jour votre micrologiciel, suivez les instructions de la section link:../upgrade-santricity/index.html["Mise à niveau de SANtricity OS"].
+* Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès.
+* Vous devez effectuer cette tâche avec les deux boîtiers de contrôleur.
+* Vous avez un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.
+* Vous avez un tournevis cruciforme n° 1.
+* Vous disposez d'étiquettes pour identifier chaque câble connecté au boîtier du contrôleur.
+* Vous disposez d'une station de gestion avec un navigateur qui peut accéder au gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+* Une carte d'extension SAS peut être installée sur les contrôleurs EF300 dans le port 1 pour permettre l'extension du plateau de lecteur.
+* Pour raccorder votre extension SAS, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage du matériel E-Series"] pour obtenir des instructions.
+

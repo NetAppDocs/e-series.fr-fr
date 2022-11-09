@@ -1,0 +1,39 @@
+---
+permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 controller, replace EF600 controller, 
+summary: Exigences et facteurs à prendre en compte lors du remplacement des contrôleurs EF300 ou EF600 
+---
+= Exigences relatives au remplacement des contrôleurs EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un contrôleur EF300 ou EF600, vérifiez les exigences et considérations.
+
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les disques et met en œuvre les fonctions de SANtricity System Manager.
+
+
+
+== Exigences de remplacement des contrôleurs
+
+Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
+
+* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Un tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Remplacement sous tension
+
+Vous pouvez remplacer un boîtier de contrôleur alors que votre matrice de stockage est sous tension et effectuer des opérations d'E/S hôte, si les conditions suivantes sont vraies :
+
+* Le second boîtier du contrôleur situé sur le shelf présente un état optimal.
+* Le champ *OK à supprimer* de la zone Détails du gourou de la restauration dans le Gestionnaire de système SANtricity affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
+

@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Résolvez les certificats non approuvés en important un certificat auto-signé de la matrice de stockage ou en important un certificat d"autorité de certification (CA) émis par un tiers de confiance.' 
+---
+= Résoudre les certificats non fiables
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+À partir de la page certificat, vous pouvez résoudre les certificats non approuvés en important un certificat auto-signé de la matrice de stockage ou en important un certificat d'autorité de certification (CA) émis par un tiers de confiance.
+
+Si vous prévoyez d'importer un certificat signé par une autorité de certification, assurez-vous que :
+
+* Vous avez généré une demande de signature de certificat (.CSR file) pour chaque contrôleur de la matrice de stockage et l'avez envoyée à l'autorité de certification.
+* L'autorité de certification a renvoyé des fichiers de certificat approuvés.
+* Les fichiers de certificat sont disponibles sur votre système local.
+
+
+Des certificats non approuvés se produisent lorsqu'une matrice de stockage tente d'établir une connexion sécurisée au plug-in, mais la connexion ne parvient pas à confirmer la sécurité. Vous devrez peut-être installer d'autres certificats de confiance si l'un des éléments suivants est vrai :
+
+* Vous avez ajouté récemment une baie de stockage.
+* Un ou les deux certificats ont expiré ou sont révoqués.
+* Un ou les deux certificats ne sont pas titulaires d'un certificat racine ou intermédiaire.
+
+
+.Étapes
+. Sélectionnez *gestion des certificats*.
+. Sélectionnez l'onglet *approuvé*.
++
+Cette page affiche tous les certificats signalés pour les matrices de stockage.
+
+. Sélectionnez menu:Import[Certificates] pour importer un certificat CA ou menu:Import[certificats de tableau de stockage auto-signés] pour importer un certificat auto-signé.
+. Pour limiter la vue, vous pouvez utiliser le champ de filtrage *Afficher les certificats qui sont...* ou vous pouvez trier les lignes de certificat en cliquant sur l'un des en-têtes de colonne.
+. Dans la boîte de dialogue, sélectionnez le certificat, puis cliquez sur *Importer*.
++
+Le certificat est téléchargé et validé.
+
+

@@ -1,0 +1,171 @@
+---
+permalink: maintenance-e2800/batteries-prepare-replace-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Préparez le remplacement de la batterie de la baie E2800 en suivant les étapes appropriées pour le mode recto verso ou le mode recto verso. 
+---
+= Préparez-vous au remplacement de la batterie E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les étapes à suivre pour préparer le remplacement de la batterie dépendent de la configuration recto-verso (deux contrôleurs) ou recto (un contrôleur).
+
+* Pour les configurations recto verso, reportez-vous à la section  controller offline (duplex).
+* Pour les configurations recto, voir  down the controller shelf (simplex).
+
+
+.Avant de commencer
+* Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+* Vérifiez le link:batteries-overview-requirements-concept.html["Conditions requises pour le remplacement de la batterie E2800"].
+
+
+
+
+== Mettez le contrôleur hors ligne (duplex)
+
+Si vous disposez d'une configuration recto verso, vous devez mettre le contrôleur affecté hors ligne pour pouvoir retirer en toute sécurité la batterie défectueuse. Le contrôleur que vous ne mettez pas hors ligne doit être en ligne (dans l'état optimal).
+
+
+NOTE: Effectuez cette tâche uniquement si votre matrice de stockage dispose de deux contrôleurs (configuration duplex).
+
+.Étapes
+. Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité Recovery Guru qui confirme la présence d'un problème au niveau de la batterie et pour garantir qu'aucun autre élément ne doit être résolu en premier.
+. Dans la zone Details du Recovery Guru, déterminez la batterie à remplacer.
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les disques durs, sélectionnez *Afficher le verso du tiroir* pour afficher les contrôleurs.
+... Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
+... Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager à l'aide du contrôleur que vous tentez de mettre hors ligne, un message SANtricity System Manager indisponible s'affiche. Sélectionnez *connexion à une autre connexion réseau* pour accéder automatiquement au Gestionnaire système SANtricity à l'aide de l'autre contrôleur.
+
+
+
+** Vous pouvez également mettre les contrôleurs hors ligne en utilisant les commandes de l'interface de ligne de commandes suivantes :
++
+*Pour contrôleur A:* `set controller [a] availability=offline`
+
++
+*Pour le contrôleur B:* `set controller [b] availability=offline`
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
+. Accédez à link:batteries-remove-controller-canister-task.html["Retirer le boîtier du contrôleur E2800"].
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+
+
+
+
+== Mettez le tiroir contrôleur hors tension (simplex)
+
+Si vous disposez d'une configuration simplex, mettez le tiroir contrôleur hors tension, afin que vous puissiez retirer la batterie défectueuse en toute sécurité.
+
+
+NOTE: Effectuez cette tâche uniquement si votre baie de stockage dispose d'un seul contrôleur (configuration simplex).
+
+.Étapes
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+.. Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+.. Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+.. Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous continuez cette procédure pendant les opérations d'E/S, vous risquez de perdre des données.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Dans la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
+. Vérifiez que toutes les opérations ont été effectuées avant de passer à l'étape suivante.
+. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.
+. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+. Accédez à link:batteries-remove-controller-canister-task.html["Retirer le boîtier du contrôleur E2800"].
+

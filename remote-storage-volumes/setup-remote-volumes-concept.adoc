@@ -1,0 +1,84 @@
+---
+permalink: remote-storage-volumes/setup-remote-volumes-concept.html 
+sidebar: sidebar 
+keywords: configure Remote Storage Volumes, set up RTV, configure remote volumes, set up remote storage E-Series 
+summary: La configuration initiale est requise pour que le système E-Series puisse se connecter au stockage distant via le protocole iSCSI pris en charge. 
+---
+= Configurer le matériel pour les volumes de stockage distants
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le système de stockage E-Series doit être configuré de manière à communiquer avec le système de stockage distant via le protocole iSCSI pris en charge.
+
+
+
+== Configuration d'un périphérique de stockage distant et d'une baie E-Series
+
+Avant de passer à SANtricity System Manager pour configurer la fonction volumes de stockage distants, procédez comme suit :
+
+. Établissez manuellement une connexion câblée entre le système E-Series et le système de stockage à distance, de sorte que les deux systèmes puissent communiquer via iSCSI.
+. Configurez les ports iSCSI de sorte que le système E-Series et le système de stockage distant puissent communiquer correctement.
+. Procurez-vous l'IQN du système E-Series.
+. Assurez que le système E-Series est visible sur le système de stockage distant. Si le système de stockage distant est un système E-Series, créez un hôte en utilisant l'IQN du système E-Series de destination comme informations de connexion pour le port hôte.
+. Si le périphérique de stockage distant est utilisé par un hôte/une application :
++
+** Arrêtez les E/S vers le périphérique de stockage distant.
+** Annulez/démontez le périphérique de stockage distant.
+
+
+. Mappez le périphérique de stockage distant sur l'hôte défini pour le système de stockage E-Series.
+. Obtenez le numéro de LUN du périphérique utilisé pour le mappage.
+
+
+
+NOTE: Recommandé : sauvegardez le volume source distant avant de lancer le processus d'importation.
+
+
+
+== Branchez les câbles des matrices de stockage
+
+Dans le cadre du processus de configuration, les baies de stockage et l'hôte d'E/S doivent être câblés à l'interface compatible iSCSI.
+
+Les diagrammes suivants présentent des exemples de câblage des systèmes de manière à ce qu'ils effectuent des opérations de volume de stockage distant sur une connexion iSCSI.
+
+image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+
+
+
+== Configurez les ports iSCSI
+
+Vous devez configurer les ports iSCSI pour assurer la communication entre la cible (baie de stockage E-Series locale) et la source (baie de stockage à distance).
+
+Les ports iSCSI peuvent être configurés de plusieurs façons en fonction de votre sous-réseau. Voici quelques exemples de configuration des ports iSCSI à utiliser avec la fonction volumes de stockage distants.
+
+|===
+| Source A | Source B | Cible A | Cible B 
+
+
+ a| 
+10.10.1.100/22
+ a| 
+10.10.2.100/22
+ a| 
+10.10.1.101/22
+ a| 
+10.10.2.101/22
+
+|===
+|===
+| Source A | Source B | Cible A | Cible B 
+
+
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.101/16
+ a| 
+10.10.0.101/16
+
+|===

@@ -1,0 +1,333 @@
+---
+permalink: maintenance-ef600/drives-replace-EF300-task.html 
+sidebar: sidebar 
+keywords: replace EF300 drive, replace EF600 drive, drive failure 
+summary: Remplacez un lecteur dans une matrice EF300. 
+---
+= Remplacez le lecteur dans une matrice EF300
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer un lecteur dans une matrice EF300.
+
+L' EF300 prend en charge l'extension SAS avec des tiroirs de 24 et 60 disques. La procédure à suivre dépend du fait que vous disposez d'un tiroir de 24 disques ou de 60 disques :
+
+*  drive in an EF300 (24-drive shelf)
+*  drive in an EF300 (60-drive shelf)
+
+
+
+
+== Remplacement du disque par un tiroir EF300 (24 disques)
+
+Suivez cette procédure pour remplacer un disque dans un tiroir de 24 disques.
+
+La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des E/S.
+
+.Avant de commencer
+* Examinez les exigences de gestion des disques dans le link:drives-overview-supertask-concept.html["Exigences relatives au remplacement des disques EF300 ou EF600"].
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Une surface de travail plate et sans électricité statique.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+=== Étape 1 : préparation du remplacement de l'entraînement (24 disques)
+
+Préparation au remplacement d'un disque en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
+
+.Étapes
+. Si le gourou de la restauration de SANtricity System Manager vous a averti d'une _panne de disque imminente_, mais que le disque n'est pas encore défaillant, suivez les instructions de la fonctionnalité Recovery Guru qui indique la panne du disque.
+. Si nécessaire, utilisez SANtricity System Manager pour confirmer que vous disposez d'un disque de remplacement approprié.
++
+.. Sélectionnez *matériel*.
+.. Sélectionnez le disque défectueux sur le graphique du tiroir.
+.. Cliquez sur le lecteur pour afficher son menu contextuel, puis sélectionnez *Paramètres d'affichage*.
+.. Vérifiez que la capacité du disque de remplacement est égale ou supérieure à celle du disque que vous remplacez et qu'il possède les fonctionnalités attendues.
++
+Par exemple, n'essayez pas de remplacer un disque dur par un disque SSD. De même, si vous remplacez un lecteur compatible avec la sécurité, assurez-vous que le lecteur de remplacement est également compatible avec la sécurité.
+
+
+
+. Si nécessaire, utilisez SANtricity System Manager pour localiser le disque dans votre matrice de stockage : dans le menu contextuel du lecteur, sélectionnez *Activer le localisateur light*.
++
+Le voyant d'avertissement du lecteur (orange) clignote pour vous permettre d'identifier le lecteur à remplacer.
+
++
+
+NOTE: Si vous remplacez un disque dans un tiroir équipé d'un panneau, vous devez le retirer pour afficher les LED du disque.
+
+
+
+
+
+=== Étape 2 : retrait du disque défectueux (24 disques)
+
+Retirez un disque défectueux pour le remplacer par un nouveau disque.
+
+.Étapes
+. Déballez le lecteur de remplacement et placez-le sur une surface plane et sans électricité statique près de l'étagère.
++
+Conservez tous les matériaux d'emballage.
+
+. Appuyez sur le bouton de déverrouillage du disque défectueux.
++
+image::../media/drw_drive_latch_maint-e5700.gif[loquet d'entraînement de l'arrière du système e5700]
+
++
+** Pour les disques des tiroirs contrôleurs E5724 ou les tiroirs disques DE224C, le bouton de libération est situé en haut du disque. La poignée de came sur les ressorts d'entraînement s'ouvre partiellement et l'entraînement se dégage du fond de panier central.
+
+
+. Ouvrez la poignée de came et faites glisser légèrement l'entraînement vers l'extérieur.
+. Attendre 30 secondes.
+. A l'aide des deux mains, retirez le disque du shelf.
+. Placez le lecteur sur une surface antistatique avec amorti, à l'écart des champs magnétiques.
+. Attendez 30 secondes que le logiciel reconnaisse que le lecteur a été retiré.
++
+
+NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 30 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
+
+
+
+
+
+=== Étape 3 : installation d'un nouvel entraînement (24 disques)
+
+Vous installez un nouveau lecteur pour remplacer le lecteur défectueux. Installez le disque de remplacement dès que possible après avoir retiré le disque défectueux. Dans le cas contraire, il existe un risque de surchauffe de l'équipement.
+
+.Étapes
+. Ouvrir la poignée de came.
+. À l'aide de deux mains, insérez le lecteur de remplacement dans la baie ouverte, en appuyant fermement jusqu'à ce que le lecteur s'arrête.
+. Fermez lentement la poignée de came jusqu'à ce que le lecteur soit bien en place dans le fond de panier central et que la poignée s'enclenche.
++
+Le voyant vert du lecteur s'allume lorsque le lecteur est correctement inséré.
+
++
+
+NOTE: Selon votre configuration, le contrôleur peut reconstruire automatiquement les données sur le nouveau disque. Si le tiroir utilise des disques de rechange à chaud, le contrôleur peut avoir à effectuer une reconstruction complète sur le disque de rechange à chaud avant de pouvoir copier les données sur le disque remplacé. Ce processus de reconstruction augmente le temps requis pour mener à bien cette procédure.
+
+
+
+
+
+=== Étape 4 : remplacement complet des disques (24 disques)
+
+Vérifiez que le nouveau lecteur fonctionne correctement.
+
+.Étapes
+. Vérifiez le voyant d'alimentation et la LED d'avertissement du disque que vous avez remplacé.
++
+Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement peut s'allume. Toutefois, le voyant devrait s'éteindre en une minute.
+
++
+** La LED d'alimentation est allumée ou clignote et la LED d'avertissement est éteinte : indique que le nouveau disque fonctionne correctement.
+** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 30 secondes, puis réinstallez-le.
+** La LED d'avertissement est allumée : indique que le nouveau disque est susceptible d'être défectueux. Remplacez-le par un autre lecteur neuf.
+
+
+. Si le gourou de la restauration de SANtricity System Manager affiche toujours un problème, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
+. Si le gourou de la restauration indique que la reconstruction du disque n'a pas démarré automatiquement, lancer la reconstruction manuellement, comme suit :
++
+
+NOTE: Effectuez cette opération uniquement lorsque vous y êtes invité par le support technique ou le gourou de la restauration
+
++
+.. Sélectionnez *matériel*.
+.. Cliquez sur le lecteur que vous avez remplacé.
+.. Dans le menu contextuel du lecteur, sélectionnez *reconstruire*.
+.. Confirmez que vous souhaitez effectuer cette opération.
++
+Une fois la reconstruction du disque terminée, le groupe de volumes est à l'état optimal.
+
+
+
+. Si nécessaire, réinstallez le cadre.
+. Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
+
+
+Le remplacement de votre disque est terminé. Vous pouvez reprendre les opérations normales.
+
+
+
+== Remplacement du disque par un tiroir EF300 (60 disques)
+
+Suivez cette procédure pour remplacer un disque dans un tiroir de 60 disques.
+
+La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des opérations d'E/S.
+
+.Avant de commencer
+* Examinez les exigences de gestion des disques dans le link:drives-overview-supertask-concept.html["Exigences relatives au remplacement des disques EF300 ou EF600"].
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+=== Étape 1 : préparation du remplacement de l'entraînement (60 disques)
+
+Préparation au remplacement d'un disque en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
+
+.Étapes
+. Si le gourou de la restauration de SANtricity System Manager vous a averti d'une _panne de disque imminente_, mais que le disque n'est pas encore défaillant, suivez les instructions de la fonctionnalité Recovery Guru qui indique la panne du disque.
+. Si nécessaire, utilisez SANtricity System Manager pour confirmer que vous disposez d'un disque de remplacement approprié.
++
+.. Sélectionnez *matériel*.
+.. Sélectionnez le disque défectueux sur le graphique du tiroir.
+.. Cliquez sur le lecteur pour afficher son menu contextuel, puis sélectionnez *Paramètres d'affichage*.
+.. Vérifiez que la capacité du disque de remplacement est égale ou supérieure à celle du disque que vous remplacez et qu'il possède les fonctionnalités attendues.
++
+Par exemple, n'essayez pas de remplacer un disque dur par un disque SSD. De même, si vous remplacez un lecteur compatible avec la sécurité, assurez-vous que le lecteur de remplacement est également compatible avec la sécurité.
+
+
+
+. Si nécessaire, utilisez SANtricity System Manager pour localiser le disque dans la baie de stockage.
++
+.. Si le tiroir dispose d'un panneau, retirez-le pour voir les LED.
+.. Dans le menu contextuel du lecteur, sélectionnez *Activer le voyant de localisation*.
++
+Le voyant d'avertissement du tiroir disque (orange) clignote pour vous permettre d'ouvrir le tiroir de disque approprié afin d'identifier le lecteur à remplacer.
+
++
+image::../media/2860_dwg_attn_led_on_drawer_maint-e5700.gif[2860 dwg à l'attention du voyant sur le tiroir, le maint e5700]
+
++
+*(1)* _LED attention_
+
+.. Déverrouillez le tiroir d'entraînement en tirant sur les deux leviers.
+.. A l'aide des leviers étendus, tirez doucement le tiroir d'entraînement vers l'extérieur jusqu'à ce qu'il s'arrête.
+.. Observez la partie supérieure du tiroir disque pour trouver le voyant d'avertissement devant chaque lecteur.
++
+image::../media/2860_dwg_amber_on_drive_maint-e5700.gif[2860 dwg de couleur orange sur le service d'entraînement e5700]
+
++
+*(1)* _voyant attention allumé pour le lecteur en haut à droite_
+
++
+Les LED d'avertissement du tiroir disque se trouvent sur le côté gauche de chaque disque, devant une icône d'avertissement située sur la poignée du disque, juste derrière le voyant.
+
++
+image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[28 dwg e2860 de460c conduit attention maint e5700]
+
++
+*(1)* _icône attention_
+
++
+*(2)* _LED attention_
+
+
+
+
+
+
+
+=== Étape 2 : retrait du disque défectueux (60 disques)
+
+Retirez un disque défectueux pour le remplacer par un nouveau disque.
+
+.Étapes
+. Déballez le lecteur de remplacement et placez-le sur une surface plane et sans électricité statique près de l'étagère.
++
+Conservez tous les matériaux d'emballage pour la prochaine fois que vous devez renvoyer un lecteur.
+
+. Dégagez les leviers du tiroir d'entraînement du centre du tiroir d'entraînement approprié en tirant les deux côtés du tiroir.
+. Tirez avec précaution sur les leviers du tiroir d'entraînement étendu pour extraire le tiroir d'entraînement jusqu'à son extension complète sans le retirer du boîtier.
+. Tirez doucement le loquet de dégagement orange situé devant le lecteur que vous souhaitez retirer.
++
+La poignée de came des ressorts d'entraînement s'ouvre partiellement et l'entraînement est libéré du tiroir.
+
++
+image::../media/trafford_drive_rel_button_maint-e5700.gif[trafford drive rel button maint. e5700]
+
++
+*(1)* _loquet de déblocage Orange_
+
+. Ouvrez la poignée de came et soulevez légèrement l'entraînement.
+. Attendre 30 secondes.
+. Utilisez la poignée de came pour soulever l'entraînement de l'étagère.
++
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e5700.gif[92 dwg de6600 installez ou retirez le service de conduite e5700]
+
+. Placez le lecteur sur une surface antistatique avec amorti, à l'écart des champs magnétiques.
+. Attendez 30 secondes que le logiciel reconnaisse que le lecteur a été retiré.
++
+
+NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 30 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
+
+
+
+
+
+=== Étape 3 : installation d'un nouvel entraînement (60 disques)
+
+Installez un nouveau lecteur pour remplacer le lecteur défectueux.
+
+
+CAUTION: *Perte possible d'accès aux données* -- lorsque vous repoussez le tiroir d'entraînement dans le boîtier, ne le fermez jamais. Poussez lentement le tiroir pour éviter de le secouant et d'endommager le module de stockage.
+
+.Étapes
+. Relever la poignée de came du nouvel entraînement à la verticale.
+. Alignez les deux boutons relevés de chaque côté du support d'entraînement avec l'espace correspondant dans le canal d'entraînement du tiroir d'entraînement.
++
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e5700.gif[28 dwg e2860 de460c drive cru maint e5700]
+
++
+*(1)* _bouton relevé sur le côté droit du support d'entraînement_
+
+. Abaissez le lecteur tout droit, puis faites tourner la poignée de came vers le bas jusqu'à ce que le lecteur s'enclenche sous le loquet de dégagement orange.
+. Replacez avec précaution le tiroir du lecteur dans le boîtier. Poussez lentement le tiroir pour éviter de le secouant et d'endommager le module de stockage.
+. Fermez le tiroir d'entraînement en poussant les deux leviers vers le centre.
++
+Le voyant d'activité vert du disque remplacé à l'avant du tiroir s'allume lorsque le disque est correctement inséré.
+
++
+Selon votre configuration, le contrôleur peut reconstruire automatiquement les données sur le nouveau disque. Si le tiroir utilise des disques de rechange à chaud, le contrôleur peut avoir à effectuer une reconstruction complète sur le disque de rechange à chaud avant de pouvoir copier les données sur le disque remplacé. Ce processus de reconstruction augmente le temps requis pour mener à bien cette procédure.
+
+
+
+
+
+=== Étape 4 : remplacement complet des disques (60 disques)
+
+Vérifiez que le nouveau lecteur fonctionne correctement.
+
+.Étapes
+. Vérifiez le voyant d'alimentation et la LED d'avertissement du disque que vous avez remplacé. (Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement peut s'allume. Toutefois, le voyant devrait s'éteindre en moins d'une minute.)
++
+** La LED d'alimentation est allumée ou clignote et la LED d'avertissement est éteinte : indique que le nouveau disque fonctionne correctement.
+** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 30 secondes, puis réinstallez-le.
+** La LED d'avertissement est allumée : indique que le nouveau disque est susceptible d'être défectueux. Remplacez-le par un autre lecteur neuf.
+
+
+. Si le gourou de la restauration de SANtricity System Manager affiche toujours un problème, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
+. Si le gourou de la restauration indique que la reconstruction du disque n'a pas démarré automatiquement, lancer la reconstruction manuellement, comme suit :
++
+
+NOTE: Effectuez cette opération uniquement lorsque vous y êtes invité par le support technique ou le gourou de la restauration
+
++
+.. Sélectionnez *matériel*.
+.. Cliquez sur le lecteur que vous avez remplacé.
+.. Dans le menu contextuel du lecteur, sélectionnez *reconstruire*.
+.. Confirmez que vous souhaitez effectuer cette opération.
++
+Une fois la reconstruction du disque terminée, le groupe de volumes est à l'état optimal.
+
+
+
+. Si nécessaire, réinstallez le cadre.
+. Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
+
+
+Le remplacement de votre disque est terminé. Vous pouvez reprendre les opérations normales.

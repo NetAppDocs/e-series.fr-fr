@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-fde-fips-security.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La sécurité FDE/FIPS fait référence à des disques sécurisés qui cryptent les données pendant les écritures et les déchiffrez pendant les lectures à l"aide d"une clé de cryptage unique.' 
+---
+= Qu'est-ce que la sécurité FDE/FIPS ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La sécurité FDE/FIPS fait référence à des disques sécurisés qui cryptent les données pendant les écritures et les déchiffrez pendant les lectures à l'aide d'une clé de cryptage unique.
+
+Ces disques sécurisés empêchent tout accès non autorisé aux données d'un disque physiquement retiré de la baie de stockage. Les disques sécurisés peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard). Les disques FIPS ont fait l'objet d'un test de certification.
+
+
+NOTE: Pour les volumes nécessitant une prise en charge de FIPS, utilisez uniquement des disques FIPS. La combinaison de disques FIPS et FDE dans un groupe ou un pool de volumes entraîne le traitement de tous les disques comme disques FDE. Par ailleurs, un disque FDE ne peut pas être ajouté à un groupe ou un pool de volumes FIPS ni être utilisé comme unité de rechange.

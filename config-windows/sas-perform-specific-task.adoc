@@ -1,0 +1,116 @@
+---
+permalink: config-windows/sas-perform-specific-task.html 
+sidebar: sidebar 
+keywords: sas, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Pour le protocole SAS, vous déterminez les adresses des ports hôtes et définissez les paramètres recommandés. 
+---
+= Réalisez des tâches SAS-Specific
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole SAS, vous déterminez les adresses de port hôte et définissez les paramètres appropriés.
+
+
+
+== Étape 1 : détermination des identificateurs d'hôte SAS—​Windows
+
+Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.
+
+Consultez les instructions relatives aux utilitaires HBA :
+
+* La plupart des fournisseurs HBA proposent un utilitaire HBA. En fonction du système d'exploitation hôte et de la CPU, utilisez l'utilitaire LSI-sas2flash(6G) ou sas3flash(12G).
+* Les ports d'E/S hôte peuvent s'enregistrer automatiquement si l'agent de contexte hôte est installé.
+
+
+.Étapes
+. Téléchargez l'utilitaire LSI-sas2flash(6G) ou sas3flash(12G) sur le site Web de votre fournisseur de HBA.
+. Installez l'utilitaire.
+. Utilisez le BIOS HBA pour sélectionner les paramètres appropriés à votre configuration.
++
+Pour définir des recommandations, reportez-vous à la colonne Notes de l' http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+
+== Étape 2 : enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+image::../media/sas_topology_diagram_conf-win.gif[Schéma : topologie SAS]
+
+
+
+=== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | Adresse SAS 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port 1 de l'hôte (initiateur) connecté au contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Port 1 de l'hôte (initiateur) connecté au contrôleur B, port 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Port 2 de l'hôte (initiateur) connecté au contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
+ a| 
+
+|===
+
+
+=== Identifiants cibles
+
+Les configurations recommandées se composent de deux ports cibles.
+
+
+
+=== Nom d'hôte de mappage
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

@@ -1,0 +1,82 @@
+---
+permalink: getting-started/getup-run-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+summary: Pour mettre en service les systèmes E-Series, vous devez installer des composants matériels, configurer les systèmes hôtes et configurer le stockage. 
+---
+= Mise en service de la gamme E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour mettre en service les systèmes E-Series, vous devez installer des composants matériels, configurer les systèmes hôtes et configurer le stockage.
+
+Le déploiement de la baie de stockage implique le flux de travail suivant :
+
+image::../media/doccenterworkflow.gif[doccentreworkflow]
+
+
+
+== Étape 1 : installer le matériel de fixation
+
+Pour installer le matériel E-Series, accédez aux instructions d'installation et de configuration de votre baie de stockage et de type de tiroir :
+
+* link:../install-hw-ef600/index.html["EF600 ou EF300 avec tiroir de 24 disques"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Gamme E2800/EF280 ou E5700/EF570 avec tiroirs de 12 ou 24 disques"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["E2800 ou E5700 Series avec tiroir de 60 disques"^]
+
+
+
+
+== Étape 2 : configurer l'armoire
+
+Si vous configurez une nouvelle armoire pour la matrice de stockage, vous devez déplacer l'armoire à son emplacement permanent, installer le matériel et le connecter à une source d'alimentation. Pour installer l'armoire, accédez aux instructions suivantes :
+
+* link:../install-hw-cabinet/index.html["Installez l'armoire 40U 3040"^]
+
+
+
+
+== Étape 3 : installer les rails
+
+Lorsqu'ils sont expédiés, chaque tiroir inclut du matériel de montage en rack. Pour obtenir des instructions détaillées sur l'installation des rails, sélectionnez vos types de rails :
+
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Poser les rails de support réglables"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installez le boîtier 2U dans un rack à quatre montants"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installez le tiroir DE224C dans un rack à deux montants"^]
+* http://docs.netapp.com/platstor/topic/com.netapp.doc.hw-rail-superrail/home.html["Installez le SuperRail dans un rack à quatre montants (tiroirs DE224C/DE460C)"^]
+
+
+
+
+== Étape 4 : connecter les câbles
+
+Les instructions d'installation et de configuration (étape 1) comprennent des instructions pour connecter les câbles. Toutefois, si vous avez besoin de listes de câbles et d'émetteurs-récepteurs pris en charge, de bonnes pratiques pour le câblage et d'informations détaillées sur les ports hôtes de votre contrôleur, accédez aux instructions suivantes :
+
+* link:../install-hw-cabling/index.html["Brancher les câbles du matériel E-Series"]
+
+
+
+
+== Étape 5 : configurer les hôtes
+
+Pour rendre le stockage disponible à un hôte, sélectionnez un guide pour le type de système d'exploitation de l'hôte :
+
+* link:../config-linux/index.html["Configuration Linux Express"]
+* link:../config-vmware/index.html["Configuration VMware Express"]
+* link:../config-windows/index.html["Configuration Windows Express"]
+
+
+
+
+== Étape 6 : configurer le stockage
+
+Pour configurer le stockage, vous pouvez accéder à l'interface Web, System Manager, en pointant un navigateur vers l'adresse IP du contrôleur. Un assistant d'installation vous aide à commencer la configuration du système. Vous pouvez également utiliser l'interface de ligne de commandes.
+
+Sélectionnez l'interface que vous souhaitez utiliser :
+
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide de SANtricity System Manager pour 11,7 fois"]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Aide de SANtricity System Manager pour 11,6 x"]
+

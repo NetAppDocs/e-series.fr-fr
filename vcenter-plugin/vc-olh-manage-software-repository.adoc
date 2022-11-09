@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-manage-software-repository.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Vous pouvez afficher et gérer un référentiel logiciel qui répertorie tous les fichiers logiciels associés au plug-in de stockage pour vCenter. 
+---
+= Gérez un référentiel logiciel
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez afficher et gérer un référentiel logiciel qui répertorie tous les fichiers logiciels associés au plug-in de stockage pour vCenter.
+
+Si vous utilisez le référentiel pour ajouter des fichiers SANtricity OS, assurez-vous que les fichiers OS sont disponibles sur votre système local.
+
+Vous pouvez utiliser l'option gérer le référentiel logiciel SANtricity OS pour importer un ou plusieurs fichiers OS vers le système hôte sur lequel le plug-in est exécuté. Vous pouvez également choisir de supprimer un ou plusieurs fichiers OS disponibles dans le référentiel logiciel.
+
+.Étapes
+. Dans la vue principale, sélectionnez *gérer*, puis menu:Centre de mise à niveau[gérer le référentiel logiciel SANtricity].
++
+La boîte de dialogue gérer le référentiel logiciel SANtricity OS s'affiche.
+
+. Effectuez l'une des opérations suivantes :
++
+** *Importer:*
++
+... Cliquez sur *Importer*.
+... Cliquez sur *Parcourir*, puis naviguez jusqu'à l'emplacement où les fichiers OS que vous souhaitez ajouter résident. Les fichiers OS possèdent un nom de fichier similaire à `N2800-830000-000.dlp`.
+... Sélectionnez un ou plusieurs fichiers OS à ajouter, puis cliquez sur *Importer*.
+
+
+** *Supprimer:*
++
+... Sélectionnez un ou plusieurs fichiers OS que vous souhaitez supprimer du référentiel logiciel.
+... Cliquez sur *Supprimer*.
+
+
+
+
+
+
+Si vous avez sélectionné l'importation, le ou les fichiers sont téléchargés et validés. Si vous avez sélectionné Supprimer, les fichiers sont supprimés du référentiel logiciel.

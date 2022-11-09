@@ -1,0 +1,89 @@
+---
+permalink: config-linux/sas-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SAS worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez cette fiche pour enregistrer des informations de configuration du stockage SAS. 
+---
+= Enregistrez votre configuration SAS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage SAS. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+image::../media/sas_topology_diagram_conf-lin.gif[Schéma : topologie SAS]
+
+
+
+== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | Adresse SAS 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port 1 de l'hôte (initiateur) connecté au contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Port 1 de l'hôte (initiateur) connecté au contrôleur B, port 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Port 2 de l'hôte (initiateur) connecté au contrôleur A, port 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
+ a| 
+
+|===
+
+
+== Identifiants cibles
+
+Les configurations recommandées se composent de deux ports cibles.
+
+
+
+== Hôte de mappage
+
+|===
+
+
+ a| 
+Mappage du nom d'hôte
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-login-and-navigation.html 
+keywords: log in vCenter plugin, login Plugin for vCenter, browsers vCenter plugin user interface, vCenter GUI, 
+summary: Connectez-vous et naviguez dans le plug-in pour vCenter. 
+---
+= Connectez-vous et naviguez dans le plug-in de stockage pour vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez vous connecter au plug-in de stockage pour vCenter pour naviguer dans l'interface utilisateur.
+
+. Avant de vous connecter au plug-in, assurez-vous d'utiliser l'un des navigateurs suivants :
++
+** Google Chrome 89 ou version ultérieure
+** Mozilla Firefox 80 ou version ultérieure
+** Microsoft Edge 90 ou version ultérieure
+
+
+. Connectez-vous au client vSphere sous le compte utilisateur disposant de privilèges de lecture/écriture pour le plug-in.
+. Dans la page d'accueil du client vSphere, cliquez sur *SANtricity Storage Plugin pour vCenter*.
++
+Le plug-in s'ouvre dans une fenêtre vSphere client. La page principale du plug-in s'ouvre sur *Manage-All*.
+
+. Accès aux tâches de gestion du stockage à partir de la barre latérale de navigation à gauche :
++
+** *Gérer* – Découvrez les matrices de stockage de votre réseau, ouvrez System Manager pour une baie, importez les paramètres d'une baie à plusieurs baies, gérez les groupes de baies, mettez à niveau le logiciel OS et provisionnez le stockage.
+** *Gestion des certificats* – gérer les certificats pour s'authentifier entre les navigateurs et les clients.
+** *Opérations* – permet d'afficher la progression des opérations par lots, comme l'importation de paramètres d'une matrice à une autre.
+** *Support* – permet d'afficher les options, les ressources et les contacts d'assistance technique.
+
+
+
+
+
+NOTE: Certaines opérations ne sont pas disponibles lorsqu'une matrice de stockage présente un état non optimal.

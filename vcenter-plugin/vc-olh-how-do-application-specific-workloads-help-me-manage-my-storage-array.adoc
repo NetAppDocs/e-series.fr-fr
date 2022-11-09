@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-application-specific-workloads-help-me-manage-my-storage-array.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Les caractéristiques de volume de votre charge de travail spécifique à l"application déterminent la façon dont la charge de travail interagit avec les composants de votre baie de stockage et vous aident à déterminer les performances de votre environnement dans une configuration donnée.' 
+---
+= En quoi les charges de travail spécifiques aux applications contribuent-elles à la gestion de ma baie de stockage ?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les caractéristiques de volume de votre charge de travail spécifique à l'application déterminent la façon dont la charge de travail interagit avec les composants de votre baie de stockage et vous aident à déterminer les performances de votre environnement dans une configuration donnée.
+
+Une application peut être utilisée comme un logiciel tel que SQL Server ou Exchange. Vous définissez une ou plusieurs charges de travail pour prendre en charge chaque application. Pour certaines applications, le système recommande automatiquement une configuration de volume qui optimise le stockage. Des caractéristiques telles que le type d'E/S, la taille du segment, la propriété du contrôleur et le cache de lecture et d'écriture sont incluses dans la configuration du volume.

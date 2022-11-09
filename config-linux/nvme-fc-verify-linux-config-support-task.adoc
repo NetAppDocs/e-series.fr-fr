@@ -1,0 +1,50 @@
+---
+permalink: config-linux/nvme-fc-verify-linux-config-support-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Pour assurer un fonctionnement fiable, vous créez un plan d"implémentation, puis utilisez la matrice d"interopérabilité (IMT) de NetApp afin de vérifier que l"ensemble de la configuration est pris en charge.' 
+---
+= Vérifier la prise en charge de Linux et vérifier les restrictions
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dans un premier temps, vous devez vérifier que votre configuration Linux est prise en charge et vérifier également les restrictions de contrôleur, d'hôte et de récupération.
+
+
+
+== Vérifiez que la configuration Linux est prise en charge
+
+Pour assurer un fonctionnement fiable, vous créez un plan d'implémentation, puis utilisez la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que l'ensemble de la configuration est pris en charge.
+
+.Étapes
+. Accédez au https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+. Cliquez sur la vignette *solution Search*.
+. Dans la zone Menu:protocoles[hôte SAN], cliquez sur le bouton *Ajouter* en regard de *hôte SAN E-Series*.
+. Cliquez sur *Afficher les critères de recherche de raffinage*.
++
+La section améliorer les critères de recherche s'affiche. Dans cette section, vous pouvez sélectionner le protocole qui s'applique, ainsi que d'autres critères pour la configuration, tels que le système d'exploitation, le système d'exploitation NetApp et le pilote multivoie hôte.
+
+. Sélectionnez les critères que vous savez que vous voulez pour votre configuration, puis voyez quels éléments de configuration compatibles s'appliquent.
+. Si nécessaire, effectuez les mises à jour de votre système d'exploitation et de votre protocole qui sont prescrits dans l'outil.
++
+Les informations détaillées concernant la configuration choisie sont accessibles sur la page Afficher les configurations prises en charge en cliquant sur la flèche de droite.
+
+
+
+
+
+== Consultez les restrictions relatives à NVMe over FC
+
+Avant d'utiliser NVMe over Fibre Channel, consultez la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour vérifier les dernières restrictions en matière de contrôleur, d'hôte et de reprise.
+
+
+
+=== Restrictions en matière de stockage et de reprise après incident
+
+* La mise en miroir asynchrone et synchrone n'est pas prise en charge.
+* Le provisionnement fin (la création de volumes fins) n'est pas pris en charge.
+

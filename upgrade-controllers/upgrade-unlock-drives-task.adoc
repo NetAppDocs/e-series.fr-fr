@@ -1,0 +1,95 @@
+---
+permalink: upgrade-controllers/upgrade-unlock-drives-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, unlock drives, key management, Drive Security, 
+summary: Si vous mettez à niveau les contrôleurs E2800 et E5700 alors que la fonction sécurité des disques est activée, vous devez déverrouiller manuellement les disques. 
+---
+= Déverrouiller les lecteurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous mettez à niveau les contrôleurs E2800 et E5700, la fonctionnalité de sécurité des disques de ces contrôleurs verrouille les disques partiellement, externes ou internes. Si la fonction sécurité du lecteur est activée, vous devez déverrouiller manuellement ces lecteurs.
+
+Suivre la procédure appropriée pour :
+
+*  key management
+*  key management
+
+
+
+
+== Gestion interne des clés
+
+Procédez comme suit pour la gestion interne des clés lorsque tous les disques sont verrouillés.
+
+Les contrôleurs récemment échangés se verrouillent avec un code d'affichage à sept segments de *L5*. Ce verrouillage se produit lorsqu'aucun lecteur ne peut effectuer la synchronisation de code automatique (ACS). Une fois la clé de sécurité importée, ACS reprend et met à jour les nouveaux contrôleurs.
+
+
+NOTE: Si vous n'utilisez pas le port de gestion 1, essayez avec d'autres adresses IP par défaut : + Ctrl A port 1 : 192.168.128.101 + Ctrl A port 2 : 192.168.128.102 + Ctrl B port 1 : 192.168.129.101 + Ctrl B port 2 : 192.168.129.102
+
+.Étapes
+. Établir une connexion ethernet directe et privée entre la baie de stockage et l'ordinateur portable ou le PC du client SANtricity. Pour cela :
++
+.. Utilisez un câble ethernet RJ45 pour connecter l'ordinateur portable au port de gestion 1 du contrôleur A.
+.. Pour terminer la connexion, vous devrez peut-être affecter l'ordinateur portable à une adresse IP dans le même sous-réseau que le contrôleur A. Lors du verrouillage du contrôleur, l'adresse Par défaut du contrôleur A est 192.168.128.101. Vous pouvez donc attribuer l'ordinateur portable à un sous-réseau tel que « 192.168.128.201 ».
+
+
+. En utilisant l'adresse IP 192.168.128.101 avec le nom d'utilisateur *admin* et le mot de passe vide, importez la clé interne à l'aide de l' `import storageArray securityKey file` Commande CLI, avec la clé de sécurité enregistrée à partir de link:prepare-upgrade-controllers-task.html["Préparation à la mise à niveau des contrôleurs"]. Pour plus d'informations sur l'utilisation de cette commande, reportez-vous au https://docs.netapp.com/us-en/e-series-cli/index.html["Référence de l'interface de ligne de commande"].
++
+*Exemple:* `SMcli 192.168.128.101 -u admin -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+
++
+Vous pouvez également importer la clé interne via l'API REST via l'appel suivant : `/storage-systems/{system-id}/security-key/import`
+
+
+
+Les contrôleurs continueront le processus de synchronisation par code automatique à partir des lecteurs et redémarrent. Après le redémarrage, les contrôleurs seront accessibles via la configuration IP d'origine.
+
+
+
+== Gestion externe des clés
+
+Procédez comme suit pour gérer les clés externes lorsque tous les disques sont verrouillés.
+
+Les contrôleurs récemment échangés se verrouillent avec un code d'affichage à sept segments de *L5*. Ce verrouillage se produit lorsqu'aucun lecteur ne peut effectuer la synchronisation de code automatique (ACS). Une fois la clé de sécurité importée, ACS reprend et met à jour les nouveaux contrôleurs.
+
+
+NOTE: Votre matrice de stockage doit être dans un état optimal pour récupérer les certificats client et serveur. Si les certificats ne peuvent pas être récupérés, vous devez créer une nouvelle demande de signature de certificat (RSC), puis importer le certificat de serveur à partir du serveur de gestion de clés externe.
+
+.Étapes
+. Établir une connexion ethernet directe et privée entre la baie de stockage et l'ordinateur portable ou le PC du client SANtricity. Pour cela :
++
+.. Utilisez un câble ethernet RJ45 pour connecter l'ordinateur portable au port de gestion 1 du contrôleur A.
+.. Pour terminer la connexion, vous devrez peut-être affecter l'ordinateur portable à une adresse IP dans le même sous-réseau que le contrôleur A. Lors du verrouillage du contrôleur, l'adresse Par défaut du contrôleur A est 192.168.128.101. Vous pouvez donc attribuer l'ordinateur portable à un sous-réseau tel que « 192.168.128.201 ».
+
+
+. En utilisant l'adresse IP par défaut 192.168.128.101 avec le nom d'utilisateur *admin* et le mot de passe vide, configurez le serveur de gestion de clés externe à l'aide de l' `set storageArray externalKeyManagement` Commande CLI et fournir le `serverAddress` et `serverPort` enregistré à partir de link:prepare-upgrade-controllers-task.html["Préparation à la mise à niveau des contrôleurs"]. Pour plus d'informations sur l'utilisation de cette commande, reportez-vous au https://docs.netapp.com/us-en/e-series-cli/index.html["Référence de l'interface de ligne de commande"].
++
+*Exemple:* `SMcli 192.168.128.101 -u admin -c "set storageArray externalKeyManagement serverAddress=<ServerIPAddress> serverPort=<serverPort>;"`
+
++
+Vous pouvez également configurer le serveur de gestion externe des clés via l'API REST au moyen de l'appel suivant : `/storage-systems/{system-id}/external-key-server`
+
+. En utilisant l'adresse IP par défaut 192.168.128.101 avec le nom d'utilisateur *admin* et le mot de passe restant vide, importez les certificats à l'aide de l' `storageArray keyManagementCertificate` Commande CLI : une fois pour le certificat client et une seconde pour le certificat de serveur.
++
+*Exemple A:* `SMcli 192.168.128.101 -u admin -c "download storageArray keyManagementCertificate certificateType=client file=\"Directory&FileName\";"`
+
++
+*Exemple B:* `SMcli 192.168.128.101 -u admin -c "download storageArray keyManagementCertificate certificateType=server file=\"Directory&FileName\";"`
+
++
+Vous pouvez également importer le certificat de serveur de clés via l'API REST via l'appel suivant : `/storage-systems/{system-id}/external-key-server/certificate`
+
+. Utilisation de la clé de sécurité enregistrée à partir de link:prepare-upgrade-controllers-task.html["Préparation à la mise à niveau des contrôleurs"], Importez la clé externe à l'adresse IP 192.168.128.101 avec le nom d'utilisateur *admin* et le mot de passe restant vide.
++
+*Exemple:* `SMcli 192.168.128.101 -u admin -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+
++
+Vous pouvez également importer la clé externe via l'API REST via l'appel suivant : `/storage-systems/{system-id}/security-key/import`
+
+
+
+Les contrôleurs continueront le processus de synchronisation par code automatique à partir des lecteurs et redémarrent. Après le redémarrage, les contrôleurs seront accessibles via la configuration IP d'origine.

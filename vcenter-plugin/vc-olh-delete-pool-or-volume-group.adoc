@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Supprimez un pool ou un groupe de volumes pour renforcer la capacité non attribuée, que vous pouvez reconfigurer pour répondre aux besoins en stockage des applications 
+---
+= Supprime le pool ou le groupe de volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer un pool ou un groupe de volumes pour renforcer la capacité non allouée, ce qui vous permet de reconfigurer les applications en fonction des besoins de stockage.
+
+.Avant de commencer
+* Vous devez avoir sauvegardé les données sur tous les volumes du pool ou du groupe de volumes.
+* Vous devez avoir arrêté toutes les entrées/sorties (E/S).
+* Vous devez démonter les systèmes de fichiers des volumes.
+* Vous devez avoir supprimé toutes les relations en miroir dans le pool ou le groupe de volumes.
+* Vous devez avoir arrêté toute opération de copie de volume en cours pour le pool ou le groupe de volumes.
+* Le pool ou le groupe de volumes ne doit pas participer à une opération de mise en miroir asynchrone.
+* Les disques du groupe de volumes ne doivent pas avoir de réservation permanente.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage contenant le pool ou le groupe de volumes.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionnez un pool ou un groupe de volumes dans la liste.
++
+Vous ne pouvez sélectionner qu'un seul pool ou groupe de volumes à la fois. Faites défiler la liste pour afficher d'autres pools ou groupes de volumes.
+
+. Sélectionnez menu:tâches rares[Supprimer] et confirmez.
+
+
+Le système effectue les opérations suivantes :
+
+* Supprime toutes les données du pool ou du groupe de volumes.
+* Supprime tous les lecteurs associés au pool ou au groupe de volumes.
+* Déaffecte les disques associés, ce qui vous permet de les réutiliser dans des pools ou groupes de volumes nouveaux ou existants.
+

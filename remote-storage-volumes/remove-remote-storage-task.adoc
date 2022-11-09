@@ -1,0 +1,27 @@
+---
+permalink: remote-storage-volumes/remove-remote-storage-task.html 
+sidebar: sidebar 
+keywords: remove storage object, disconnect remote storage 
+summary: Vous pouvez supprimer tout objet de stockage distant configuré via SANtricity System Manager. 
+---
+= Supprime un objet de stockage distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois l'importation terminée, vous pouvez supprimer un objet de stockage distant si vous ne souhaitez plus copier les données entre les périphériques locaux et distants.
+
+.Étapes
+. Assurez-vous qu'aucune importation n'est associée à l'objet de stockage distant que vous envisagez de supprimer.
+. Dans l'écran stockage distant du Gestionnaire système SANtricity, sélectionnez l'objet stockage distant souhaité dans la section liste des résultats.
+. Cliquez sur *Supprimer*.
++
+La boîte de dialogue confirmer la suppression de la connexion de stockage distant s'affiche.
+
+. Confirmer l'opération en tapant `remove` Puis cliquez sur *Supprimer*.
++
+L'objet stockage distant sélectionné est supprimé.
+
+

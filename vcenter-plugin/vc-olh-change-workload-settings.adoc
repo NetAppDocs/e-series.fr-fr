@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-workload-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifier le nom d"une charge de travail et afficher son type d"application associé.' 
+---
+= Modifiez les paramètres des charges de travail
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom d'une charge de travail et afficher son type d'application associé.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage contenant la charge de travail à modifier.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez l'onglet *applications et charges de travail*.
++
+La vue applications et charges de travail s'affiche.
+
+. Sélectionnez la charge de travail à modifier, puis *Afficher/Modifier les paramètres*.
++
+La boîte de dialogue Paramètres des applications et des charges de travail s'affiche.
+
+. (Facultatif) modifiez le nom fourni par l'utilisateur de la charge de travail.
+. Cliquez sur *Enregistrer*.
+

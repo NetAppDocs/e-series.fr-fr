@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-santricity-os.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Mettez à niveau une ou plusieurs matrices de stockage avec le dernier logiciel et NVSRAM pour vous assurer que vous disposez des dernières fonctionnalités et correctifs. 
+---
+= Mettez à niveau SANtricity OS
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mettez à niveau une ou plusieurs matrices de stockage avec le dernier logiciel et NVSRAM pour vous assurer que vous disposez des dernières fonctionnalités et correctifs. La NVSRAM du contrôleur est un fichier de contrôleur qui spécifie les paramètres par défaut des contrôleurs.
+
+Assurez-vous que :
+
+* Les derniers fichiers SANtricity OS sont disponibles sur le système hôte sur lequel le plug-in est exécuté.
+* Vous savez si vous souhaitez activer votre mise à niveau logicielle dès maintenant ou ultérieurement. Vous pouvez choisir de l'activer ultérieurement pour les raisons suivantes :
++
+** *Temps de jour* -- l'activation du logiciel peut prendre un certain temps, vous pouvez donc attendre que les charges d'E/S soient plus légères. Les contrôleurs basculent pendant l'activation, tout comme les performances peuvent être inférieures à la normale jusqu'à la fin de la mise à niveau.
+** *Type de paquet* -- vous pouvez tester le nouveau logiciel de système d'exploitation sur une matrice de stockage avant de mettre à niveau les fichiers sur d'autres matrices de stockage.
+
+
+
+
+
+CAUTION: *Risque de perte de données ou de détérioration de la baie de stockage* -- ne modifiez pas la matrice de stockage pendant la mise à niveau. Maintenez l'alimentation de la baie de stockage.
+
+.Étapes
+. Si votre matrice de stockage ne contient qu'un seul contrôleur ou qu'un pilote multivoie n'est pas utilisé, arrêtez l'activité d'E/S vers la matrice de stockage pour éviter les erreurs d'application. Si votre baie de stockage est équipée de deux contrôleurs et qu'un pilote multivoie est installé, il n'est pas nécessaire d'arrêter l'activité d'E/S.
+. Dans la vue principale, sélectionnez *Manage*, puis une ou plusieurs matrices de stockage à mettre à niveau.
+. Sélectionnez menu:Centre de mise à niveau [mise à niveau > SANtricity OS > logiciel].
++
+La page mise à niveau du logiciel SANtricity OS s'affiche.
+
+. Téléchargez le pack logiciel SANtricity OS le plus récent du site de support sur votre machine locale.
++
+.. Cliquez sur Ajouter un nouveau fichier au référentiel logiciel
+.. Cliquez sur le lien pour trouver les derniers téléchargements de SANtricity OS.
+.. Cliquez sur le lien *Télécharger la dernière version*.
+.. Suivez les instructions restantes pour télécharger le fichier OS et le fichier NVSRAM sur votre ordinateur local.
++
+
+NOTE: Un firmware avec signature numérique est requis dans la version 8.42 et supérieure. Si vous tentez de télécharger un firmware non signé, une erreur s'affiche et le téléchargement est interrompu.
+
+
+
+. Sélectionnez le fichier du logiciel OS et le fichier NVSRAM que vous souhaitez utiliser pour mettre à niveau les contrôleurs :
++
+.. Dans la liste déroulante, sélectionnez le fichier OS que vous avez téléchargé sur votre ordinateur local.
++
+Si plusieurs fichiers sont disponibles, les fichiers sont triés de la date la plus récente à la date la plus ancienne.
+
++
+
+NOTE: Le référentiel logiciel répertorie tous les fichiers logiciels associés au plug-in. Si vous ne voyez pas le fichier que vous souhaitez utiliser, vous pouvez cliquer sur le lien *Ajouter un nouveau fichier au référentiel logiciel* pour accéder à l'emplacement où réside le fichier OS que vous souhaitez ajouter.
+
+.. Dans la liste déroulante *Sélectionner un fichier NVSRAM*, sélectionnez le fichier de contrôleur que vous souhaitez utiliser.
++
+S'il existe plusieurs fichiers, les fichiers sont triés de la date la plus récente à la date la plus ancienne.
+
+
+
+. Dans le tableau matrice de stockage compatible, vérifiez les matrices de stockage compatibles avec le fichier logiciel du système d'exploitation que vous avez sélectionné, puis sélectionnez les matrices que vous souhaitez mettre à niveau.
++
+** Les matrices de stockage que vous avez sélectionnées dans la vue gestion et compatibles avec le fichier de micrologiciel sélectionné sont sélectionnées par défaut dans la table matrice de stockage compatible.
+** Les matrices de stockage qui ne peuvent pas être mises à jour avec le fichier de micrologiciel sélectionné ne peuvent pas être sélectionnées dans le tableau matrice de stockage compatible comme indiqué par l'état *incompatible*.
+
+
+. (Facultatif) pour transférer le fichier logiciel vers les matrices de stockage sans les activer, cochez la case *transférer le logiciel OS vers les matrices de stockage, le marquer comme étant par étape et l'activer ultérieurement*.
+. Cliquez sur *Démarrer*.
+. Selon que vous choisissez d'activer maintenant ou ultérieurement, effectuez l'une des opérations suivantes :
++
+** Type `TRANSFER` Pour confirmer que vous souhaitez transférer les versions du logiciel OS proposées sur les baies que vous avez sélectionnées pour la mise à niveau, puis cliquez sur *transfert*. Pour activer le logiciel transféré, sélectionnez menu:Centre de mise à niveau [Activer le logiciel SANtricity OS par étapes].
+** Type `UPGRADE` Pour confirmer que vous souhaitez transférer et activer les versions de logiciel du système d'exploitation proposées sur les baies que vous avez sélectionnées pour la mise à niveau, puis cliquez sur *Upgrade*.
++
+Le système transfère le fichier logiciel vers chaque matrice de stockage que vous avez sélectionnée pour la mise à niveau, puis active ce fichier en lançant un redémarrage.
+
++
+Les actions suivantes se produisent pendant l'opération de mise à niveau :
+
+** Une vérification de l'état de pré-mise à niveau s'effectue dans le cadre du processus de mise à niveau. Un contrôle avant la mise à niveau de l'état de santé vérifie tous les composants de la baie de stockage afin de vérifier que la mise à niveau peut se faire.
+** Si une vérification de l'état d'intégrité d'une matrice de stockage échoue, la mise à niveau s'arrête. Vous pouvez cliquer sur les points de suspension (…) Et sélectionnez *Enregistrer le journal* pour examiner les erreurs. Vous pouvez également choisir de remplacer l'erreur de vérification d'intégrité, puis de cliquer sur *Continuer* pour poursuivre la mise à niveau.
+** Vous pouvez annuler l'opération de mise à niveau après la vérification de l'état de santé avant la mise à niveau.
+
+
+. (Facultatif) une fois la mise à niveau terminée, vous pouvez afficher la liste des mises à niveau pour une matrice de stockage spécifique en cliquant sur les points de suspension (…). Puis sélectionnez *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `upgrade_log-<date>. json`.
+
+

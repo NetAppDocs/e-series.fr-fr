@@ -1,0 +1,41 @@
+---
+permalink: config-windows/index.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez la configuration express pour un hôte Windows avec un système E-Series. 
+---
+= Présentation de la configuration de Windows Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La méthode Windows Express pour installer votre baie de stockage et accéder à SANtricity System Manager est appropriée pour configurer un hôte Windows autonome sur un système E-Series. Elle est conçue pour que le système de stockage soit opérationnel le plus rapidement possible, avec un minimum de décisions.
+
+
+
+== Présentation de la procédure
+
+La méthode express comprend les étapes suivantes, également décrites dans le link:understand-windows-concept.html["Flux de travail Windows"].
+
+. Configurez l'un des environnements de communication suivants :
++
+** link:fc-perform-specific-task.html["Fibre Channel (FC)"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Création de volumes logiques sur la baie de stockage.
+. Rendre les volumes disponibles pour l'hôte de données.
+
+
+
+
+== Trouvez plus d'informations
+
+* Aide en ligne - explique comment utiliser SANtricity System Manager pour terminer les tâches de configuration et de gestion du stockage. Il est disponible dans le produit.
+* https://kb.netapp.com/["Base de connaissances NetApp"^] (Une base de données d'articles) - fournit des informations de dépannage, des FAQ et des instructions pour une large gamme de produits et technologies NetApp.
+* http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] -- vous permet de rechercher des configurations de produits et de composants NetApp conformes aux normes et aux exigences spécifiées par NetApp.
+* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentation NetApp : utilitaires hôtes"^] -- fournit la documentation de la version actuelle de Windows Unified Host Utilities.
+

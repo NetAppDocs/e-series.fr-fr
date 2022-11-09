@@ -1,0 +1,35 @@
+---
+permalink: remote-storage-volumes/index.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: 'Utilisez la fonctionnalité Remote Storage volumes pour importer les données d"un périphérique de stockage distant directement vers un volume E-Series local.' 
+---
+= Présentation des volumes de stockage distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilisez la fonctionnalité volumes de stockage à distance SANtricity® pour importer des données d'un périphérique de stockage distant directement vers un volume E-Series local. Cette fonction contribue à simplifier le processus de mise à niveau des équipements et à fournir des fonctionnalités de migration des données permettant de déplacer des données depuis des systèmes non-E-Series vers des systèmes E-Series.
+
+
+
+== Présentation de la configuration
+
+La fonctionnalité volumes de stockage distants est disponible avec SANtricity System Manager sur les ID de sous-modèles sélectionnés. Pour utiliser cette fonctionnalité, vous devez configurer un système de stockage distant et un système de stockage E-Series pour communiquer les uns avec les autres.
+
+Utilisez le workflow suivant :
+
+. link:system-reqs-concept.html["Examinez les conditions et les restrictions"].
+. link:setup-remote-volumes-concept.html["Configuration du matériel"].
+. link:import-remote-storage-task.html["Importer le stockage distant"].
+
+
+
+
+== Trouvez plus d'informations
+
+* Aide en ligne, disponible dans l'interface utilisateur de System Manager ou dans https://docs.netapp.com/us-en/e-series-santricity/index.html["Documentation sur le logiciel SANtricity"^].
+* Pour plus d'informations techniques sur la fonction volumes de stockage distants, reportez-vous au https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["Rapport technique sur les volumes de stockage à distance"^].
+

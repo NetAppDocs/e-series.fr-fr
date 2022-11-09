@@ -1,0 +1,190 @@
+---
+permalink: cloud-connector/backup-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector backup 
+summary: 'Vous pouvez accéder à l"option backups dans le panneau de navigation gauche de l"application SANtricity Cloud Connector. L"option sauvegardes affiche la page sauvegardes, qui vous permet de créer de nouvelles tâches de sauvegarde basées sur des images ou des fichiers.' 
+---
+= Sauvegardes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez accéder à l'option backups dans le panneau de navigation gauche de l'application SANtricity Cloud Connector. L'option sauvegardes affiche la page sauvegardes, qui vous permet de créer de nouvelles tâches de sauvegarde basées sur des images ou des fichiers.
+
+Utilisez la page *backups* de l'application SANtricity Cloud Connector pour créer et traiter des sauvegardes de volumes E-Series. Vous pouvez créer des sauvegardes basées sur des images ou des fichiers, puis effectuer ces opérations immédiatement ou ultérieurement. Vous pouvez également choisir d'effectuer des sauvegardes complètes ou incrémentielles sur la base de la dernière sauvegarde complète effectuée. Jusqu'à six sauvegardes incrémentielles peuvent être exécutées sur la base de la dernière sauvegarde complète effectuée via l'application SANtricity Cloud Connector.
+
+
+NOTE: Tous les horodatages pour les tâches de sauvegarde et de restauration répertoriées sous l'application SANtricity Cloud Connector utilisent une heure locale.
+
+
+
+== Créer une nouvelle sauvegarde basée sur l'image
+
+Vous pouvez créer de nouvelles sauvegardes basées sur des images via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
+
+Vérifiez que vous disposez de baies de stockage du proxy de services Web enregistrées dans le Cloud Connector de SANtricity.
+
+.Étapes
+. Dans la page sauvegardes, cliquez sur *Créer*.
++
+La fenêtre Créer une sauvegarde s'affiche.
+
+. Sélectionnez *Créer une sauvegarde basée sur image*.
+. Cliquez sur *Suivant*.
++
+La liste des volumes E-Series disponibles s'affiche dans la fenêtre Créer une sauvegarde.
+
+. Sélectionnez le volume E-Series souhaité et cliquez sur *Suivant*.
++
+Le *Nom de la sauvegarde et fournir une description* page de la fenêtre de confirmation Créer une sauvegarde s'affiche.
+
+. Pour modifier le nom de la sauvegarde générée automatiquement, entrez le nom souhaité dans le champ *Nom du travail*.
+. Si nécessaire, ajoutez une description pour la sauvegarde dans le champ *Description du travail*.
++
+
+NOTE: Vous devez saisir une description de travail qui vous permet d'identifier facilement le contenu de la sauvegarde.
+
+. Cliquez sur *Suivant*.
++
+Un résumé de la sauvegarde basée sur l'image sélectionnée s'affiche sous la page *Revue informations de sauvegarde* de la fenêtre Créer une sauvegarde.
+
+. Vérifiez la sauvegarde sélectionnée et cliquez sur *Terminer*.
++
+La page de confirmation de la fenêtre Créer une sauvegarde s'affiche.
+
+. Sélectionnez l'une des options suivantes :
++
+** *OUI* -- lance une sauvegarde complète pour la sauvegarde sélectionnée.
+** *NON* -- Aucune sauvegarde complète n'est effectuée pour la sauvegarde basée sur l'image sélectionnée.
++
+
+NOTE: Une sauvegarde complète de la sauvegarde basée sur l'image sélectionnée peut être effectuée ultérieurement via la fonction Exécuter de la page sauvegardes.
+
+
+
+. Cliquez sur *OK*.
++
+La sauvegarde du volume E-Series sélectionné est initiée et l'état de la tâche s'affiche sous la section liste des résultats de la page backups.
+
+
+
+
+
+== Créer une nouvelle sauvegarde basée sur un dossier/fichier
+
+Vous pouvez créer de nouvelles sauvegardes basées sur des dossiers ou des fichiers via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
+
+Vérifiez que vous disposez de baies de stockage du proxy de services Web enregistrées dans le Cloud Connector de SANtricity.
+
+Une sauvegarde basée sur des fichiers sauvegarde inconditionnellement tous les fichiers du système de fichiers que vous spécifiez. Toutefois, vous pouvez effectuer une restauration sélective de fichiers et de dossiers.
+
+.Étapes
+. Dans la page sauvegardes, cliquez sur *Créer*.
++
+La fenêtre Créer une sauvegarde s'affiche.
+
+. Sélectionnez *Créer une sauvegarde basée sur un dossier/fichier*.
+. Cliquez sur *Suivant*.
++
+La liste des volumes contenant des systèmes de fichiers disponibles pour la sauvegarde s'affiche dans la fenêtre Créer une sauvegarde.
+
+. Sélectionnez le volume souhaité et cliquez sur *Suivant*.
++
+La liste des systèmes de fichiers disponibles sur le volume sélectionné s'affiche dans la fenêtre Créer une sauvegarde.
+
++
+
+NOTE: Si votre système de fichiers ne s'affiche pas, vérifiez que votre type de système de fichiers est pris en charge par l'application SANtricity Cloud Connector. Pour plus d'informations, reportez-vous à la section link:learn-intro-concept.html#supported-file-systems["Systèmes de fichiers pris en charge"].
+
+. Sélectionnez le système de fichiers souhaité contenant le ou les fichiers à sauvegarder, puis cliquez sur *Suivant*.
++
+Le *Nom de la sauvegarde et fournir une description* page de la fenêtre de confirmation Créer une sauvegarde s'affiche.
+
+. Pour modifier le nom de la sauvegarde générée automatiquement, entrez le nom souhaité dans le champ *Nom du travail*.
+. Si nécessaire, ajoutez une description pour la sauvegarde dans le champ *Description du travail*.
++
+
+NOTE: Vous devez saisir une description de travail qui vous permet d'identifier facilement le contenu de la sauvegarde.
+
+. Cliquez sur *Suivant*.
++
+Un résumé de la sauvegarde du dossier/fichier sélectionné s'affiche dans la page *Revue informations de sauvegarde* de la fenêtre Créer une sauvegarde.
+
+. Vérifiez la sauvegarde du dossier/fichier sélectionné et cliquez sur *Finish*.
++
+La page de confirmation de la fenêtre Créer une sauvegarde s'affiche.
+
+. Sélectionnez l'une des options suivantes :
++
+** *OUI* -- lance une sauvegarde complète pour la sauvegarde sélectionnée.
+** *NON* -- Une sauvegarde complète pour la sauvegarde sélectionnée n'est pas effectuée.
++
+
+NOTE: Une sauvegarde complète de la sauvegarde basée sur les fichiers sélectionnée peut également être effectuée ultérieurement via la fonction Exécuter de la page sauvegardes.
+
+
+
+. Cliquez sur *Fermer*.
++
+La sauvegarde du volume E-Series sélectionné est lancée et l'état de la tâche s'affiche sous la section liste des résultats de la page sauvegarde.
+
+
+
+
+
+== Exécution de sauvegardes complètes et incrémentielles
+
+Vous pouvez effectuer des sauvegardes complètes et incrémentielles via la fonction Exécuter de la page sauvegardes. Les sauvegardes incrémentielles sont uniquement disponibles pour les sauvegardes basées sur des fichiers.
+
+Assurez-vous d'avoir créé une tâche de sauvegarde via SANtricity Cloud Connector.
+
+.Étapes
+. Dans l'onglet sauvegardes, sélectionnez la tâche de sauvegarde souhaitée et cliquez sur *Exécuter*.
++
+
+NOTE: Une sauvegarde complète est automatiquement effectuée chaque fois qu'une tâche de sauvegarde basée sur une image ou une tâche de sauvegarde sans sauvegarde initiale précédemment effectuée est sélectionnée.
+
++
+La fenêtre Exécuter la sauvegarde s'affiche.
+
+. Sélectionnez l'une des options suivantes :
++
+** *Full* -- sauvegarde toutes les données pour la sauvegarde basée sur fichier sélectionnée.
+** *Incremental* -- sauvegarde les modifications effectuées uniquement depuis la dernière sauvegarde effectuée.
++
+
+NOTE: Un nombre maximum de six sauvegardes incrémentielles peuvent être effectuées en fonction de la dernière sauvegarde complète effectuée via l'application SANtricity Cloud Connector.
+
+
+
+. Cliquez sur *Exécuter*.
++
+La demande de sauvegarde est initiée.
+
+
+
+
+
+== Supprimer une tâche de sauvegarde
+
+La fonction Supprimer supprime les données sauvegardées à l'emplacement cible spécifié pour la sauvegarde sélectionnée et le jeu de sauvegarde.
+
+Assurez-vous qu'il y a une sauvegarde dont l'état est terminé, échec ou annulé.
+
+.Étapes
+. Dans la page sauvegardes, sélectionnez la sauvegarde souhaitée et cliquez sur *Supprimer*.
++
+
+NOTE: Si une sauvegarde de base complète est sélectionnée pour suppression, toutes les sauvegardes incrémentielles associées sont également supprimées.
+
++
+La fenêtre confirmer la suppression s'affiche.
+
+. Dans le champ *Type delete*, saisissez `DELETE` pour confirmer l'action de suppression.
+. Cliquez sur *Supprimer*.
++
+La sauvegarde sélectionnée est supprimée.
+
+

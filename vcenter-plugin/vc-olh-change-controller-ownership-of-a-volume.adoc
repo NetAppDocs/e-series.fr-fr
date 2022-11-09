@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifiez la propriété de contrôleur préférée d"un volume, afin de pouvoir diriger les E/S des applications hôtes via le nouveau chemin.' 
+---
+= Modifier la propriété du contrôleur d'un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier la propriété de contrôleur préférée d'un volume, de sorte que les E/S des applications hôtes soient dirigées par le nouveau chemin.
+
+Si vous n'utilisez pas de pilote multivoie, toutes les applications hôtes qui utilisent actuellement le volume doivent être arrêtées. Cette action évite les erreurs d'application lorsque le chemin d'E/S change.
+
+Vous pouvez modifier la propriété du contrôleur pour un ou plusieurs volumes d'un pool ou d'un groupe de volumes.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage contenant les volumes pour lesquels vous souhaitez modifier la propriété du contrôleur.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez un volume, puis sélectionnez menu:More[change Ownership].
++
+La boîte de dialogue Modifier la propriété du volume s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
+
+. Utilisez la liste déroulante *propriétaire préféré* pour changer le contrôleur préféré pour chaque volume que vous souhaitez modifier et confirmez que vous souhaitez effectuer l'opération.
+
+
+.Résultats
+* Le système modifie la propriété du contrôleur du volume. Les E/S vers le volume sont désormais dirigées via ce chemin d'E/S.
+* Il est possible que le volume n'utilise pas le nouveau chemin d'E/S tant que le pilote multivoie n'est pas reconfiguré pour reconnaître le nouveau chemin.
+
+
+Cette action prend généralement moins de cinq minutes.

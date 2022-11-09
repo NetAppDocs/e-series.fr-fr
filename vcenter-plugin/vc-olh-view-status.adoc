@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-status.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Affichez l"état du système à partir du plug-in de stockage pour vCenter ou du client vSphere' 
+---
+= Afficher l'état
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez afficher l'état du système à partir du plug-in de stockage pour vCenter ou du client vSphere.
+
+. Ouvrez le plug-in depuis le client vSphere.
+. Afficher l'état à partir des panneaux suivants :
++
+** *État de la matrice de stockage* -- accédez au panneau *gérer-tout*. Pour chaque tableau découvert, la ligne fournit une colonne État.
+** *Opérations en cours* -- cliquez sur *opérations* dans le panneau latéral pour afficher toutes les tâches en cours, telles que l'importation de paramètres. Vous pouvez également afficher les opérations à long terme à partir de la liste déroulante approvisionnement. Pour chaque opération répertoriée dans la boîte de dialogue opérations en cours, un pourcentage d'achèvement et une estimation du temps restant pour terminer l'opération sont affichés. Dans certains cas, vous pouvez arrêter une opération ou la placer à une priorité plus ou moins élevée. Si vous le souhaitez, utilisez les liens de la colonne actions pour arrêter ou modifier la priorité d'une opération.
+
+
+
+
+
+CAUTION: Lisez tous les textes de mise en garde fournis dans les boîtes de dialogue, en particulier lors de l'arrêt d'une opération.
+
+Les opérations qui peuvent apparaître pour le plug-in sont répertoriées dans le tableau suivant. Des opérations supplémentaires peuvent également apparaître dans l'interface de System Manager.
+
+|===
+| Fonctionnement | État possible de l'opération | Actions que vous pouvez entreprendre 
+
+
+| Création de volumes (volumes de pool épais supérieurs à 64 Tio uniquement) | En cours | Aucune 
+
+
+| Suppression du volume (volumes de pool épais supérieurs à 64 Tio uniquement) | En cours | Aucune 
+
+
+| Ajoutez de la capacité au pool ou au groupe de volumes | En cours | Aucune 
+
+
+| Modifier un niveau RAID pour un volume | En cours | Aucune 
+
+
+| Réduction de la capacité pour un pool | En cours | Aucune 
+
+
+| Vérifiez le temps restant sur une opération de format de disponibilité instantanée (IAF) pour les volumes de pool | En cours | Aucune 
+
+
+| Vérifier la redondance des données d'un groupe de volumes | En cours | Aucune 
+
+
+| Initialiser un volume | En cours | Aucune 
+
+
+| Augmentation de la capacité d'un volume | En cours | Aucune 
+
+
+| Modifier la taille de segment d'un volume | En cours | Aucune 
+|===

@@ -1,0 +1,291 @@
+---
+permalink: maintenance-ef600/hics-upgrade-intro.html 
+sidebar: sidebar 
+keywords: upgrade EF300 HIC, upgrade EF600 HIC, increase host ports, change host protocol 
+summary: 'Vous mettez à niveau une carte d"interface hôte (HIC) pour augmenter le nombre de ports hôtes ou pour modifier les protocoles hôtes.' 
+---
+= Mise à niveau de la carte d'interface hôte EF300 ou EF600 (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter le nombre de ports hôtes ou pour modifier les protocoles hôtes.
+
+.Description de la tâche
+* Lorsque vous mettez à niveau les circuits intégrés, vous devez mettre hors tension la baie de stockage, mettre à niveau les circuits intégrés et réappliquer l'alimentation.
+* Lorsque vous mettez à niveau des circuits intégrés dans un contrôleur EF300 ou EF600, répétez toutes les étapes pour retirer le second contrôleur, mettez à niveau les circuits intégrés du deuxième contrôleur, puis réinstallez le second contrôleur avant d'appliquer de nouveau l'alimentation au tiroir du contrôleur.
+
+
+.Avant de commencer
+* Révision link:hics-overview-supertask-concept.html["Conditions requises pour les mises à niveau des HIC EF300 ou EF600"].
+* Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Étant donné que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous installez des cartes HIC.
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Deux circuits intégrés compatibles avec vos contrôleurs.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Une zone de travail plate et sans électricité statique.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Un tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur EF300 ou EF600 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, les deux contrôleurs et les deux HIC doivent être identiques. La présence de circuits intégrés incompatibles ou non concordants provoque le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+
+
+== Étape 1 : mettez le tiroir contrôleur hors ligne
+
+Mettez le tiroir contrôleur hors ligne afin de pouvoir mettre à niveau les HIC en toute sécurité.
+
+.Étapes
+. Dans la page d'accueil de SANtricity System Manager, assurez-vous que la baie de stockage affiche un état optimal.
++
+Si le statut n'est pas optimal, utilisez le gourou de la restauration ou contactez le support technique pour résoudre le problème. Ne pas poursuivre cette procédure.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pendant les opérations d'E/S, l'application hôte risque de perdre l'accès aux données car le stockage n'est pas accessible.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Met le tiroir contrôleur hors tension.
++
+.. Etiqueter puis débrancher les deux câbles d'alimentation du tiroir contrôleur.
+.. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+
+
+
+
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Retirez le boîtier du contrôleur pour mettre à niveau la nouvelle HIC.
+
+.Étapes
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si les ports HIC utilisent des émetteurs-récepteurs SFP+, retirez-les.
++
+En fonction du type de HIC auquel vous effectuez la mise à niveau, vous pourrez réutiliser ces SFP.
+
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
++
+image::../media/remove_controller_5.png[déposer le contrôleur 5]
+
+. A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+image::../media/remove_controller_6.png[déposer le contrôleur 6]
+
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+== Étape 3 : retirez la HIC
+
+Supprimez la carte HIC d'origine pour la remplacer par une carte mise à niveau.
+
+.Étapes
+. Retirez le capot du boîtier du contrôleur en dévissant la vis à molette unique et en soulevant le couvercle.
+. Vérifiez que la LED verte située dans le contrôleur est éteinte.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
+. À l'aide d'un tournevis cruciforme, retirez les deux vis qui fixent le cadran HIC au boîtier du contrôleur.
++
+image::../media/hic_2.png[hic 2]
+
++
+
+NOTE: L'image ci-dessus est un exemple, l'apparence de votre HIC peut varier.
+
+. Retirez la plaque HIC.
+. À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez la vis à molette unique qui fixent le HIC à la carte contrôleur.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: La HIC est fournie avec trois emplacements de vis sur le dessus, mais est fixée avec un seul emplacement.
+
++
+
+NOTE: L'image ci-dessus est un exemple, l'apparence de votre HIC peut varier.
+
+. Détachez avec précaution la carte HIC de la carte contrôleur en la soulevant et en la sortant du contrôleur.
++
+
+CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
+
++
+image::../media/hic_4.png[hic 4]
+
++
+
+NOTE: L'image ci-dessus est un exemple, l'apparence de votre HIC peut varier.
+
+. Placez le HIC sur une surface plane et sans électricité statique.
+
+
+
+
+== Étape 4 : mettre à niveau la HIC
+
+Après avoir retiré l'ancienne HIC, installez-en la nouvelle.
+
+
+CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur EF300 ou EF600 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, les deux contrôleurs et les deux HIC doivent être identiques. La présence de circuits intégrés incompatibles ou non concordants provoque le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+.Étapes
+. Déballez la nouvelle HIC et la nouvelle plaque HIC.
+. Alignez la vis moletée unique de la HIC avec les trous correspondants du contrôleur, puis alignez le connecteur situé au bas de la HIC avec le connecteur d'interface HIC de la carte contrôleur.
++
+Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
+
++
+image::../media/hic_7.png[hic 7]
+
++
+
+NOTE: L'image ci-dessus est un exemple, l'apparence de votre HIC peut varier.
+
+. Abaisser avec précaution la HIC et mettre le connecteur HIC en place en appuyant doucement sur la HIC.
++
+
+CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et la vis à molette.
+
+. Serrez manuellement la vis à molette HIC.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: L'image ci-dessus est un exemple ; l'apparence de votre HIC peut varier.
+
++
+
+NOTE: N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
+
+. À l'aide d'un tournevis cruciforme n° 1, fixez la plaque HIC que vous avez retirée de la HIC d'origine à l'aide des trois vis.
+
+
+
+
+== Étape 5 : réinstallez le boîtier du contrôleur
+
+Après la mise à niveau de la HIC, réinstallez le boîtier du contrôleur dans le shelf.
+
+.Étapes
+. Abaissez le capot du boîtier du contrôleur et fixez la vis à molette.
+. Tout en appuyant sur les poignées du contrôleur, faites glisser délicatement le boîtier du contrôleur jusqu'à ce qu'il se place dans le tiroir du contrôleur.
++
+
+NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
+
++
+image::../media/remove_controller_7.png[déposer le contrôleur 7]
+
+. Si elles ont été retirées, installez les SFP dans la nouvelle HIC et rebranchez tous les câbles. Si vous utilisez plusieurs protocoles hôtes, assurez-vous d'installer les SFP dans les ports hôtes appropriés.
++
+Si vous utilisez plusieurs protocoles hôtes, assurez-vous d'installer les SFP dans les ports hôtes appropriés.
+
+
+
+
+
+== Étape 6 : effectuez la mise à niveau HIC
+
+Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.
+
+.Étapes
+. Mettez le contrôleur en ligne.
++
+.. Branchez les câbles d'alimentation.
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Cliquez sur Menu:matériel [support > Centre de mise à niveau] pour vous assurer que la dernière version de SANtricity OS est installée.
++
+Au besoin, installez la dernière version.
+
+. Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
++
+.. Sélectionnez menu:Storage[volumes]. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez menu:More[change Ownership] pour afficher les propriétaires de volumes.
+.. Si les volumes appartiennent tous au propriétaire préféré, passez à l'étape 6.
+.. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Accédez au menu:plus[redistribuez les volumes].
+.. Si seulement certains volumes sont renvoyés à leurs propriétaires préférés après la distribution automatique ou manuelle, vous devez vérifier le Recovery Guru pour les problèmes de connectivité hôte.
+.. S'il n'y a pas de Recovery Guru présent ou si vous suivez les étapes de Recovery guru, les volumes ne sont toujours pas retournés à leurs propriétaires préférés contactez le support.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le processus de mise à niveau d'une carte d'interface hôte dans votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

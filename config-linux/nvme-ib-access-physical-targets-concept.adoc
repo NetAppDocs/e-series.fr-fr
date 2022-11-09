@@ -1,0 +1,84 @@
+---
+permalink: config-linux/nvme-ib-access-physical-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volume physical, SLES 15, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Vous pouvez configurer les E/S dirigées vers la cible du périphérique en fonction de votre version de SLES \(SUSE Linux version\).' 
+---
+= Accès aux volumes NVMe pour les cibles de périphériques NVMe physiques
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction du système d'exploitation (et de la méthode de chemins d'accès multiples de l'extension) que vous utilisez.
+
+Pour RHEL 8, RHEL 9 et SLES 15, les E/S sont dirigées vers les cibles de périphérique NVMe physiques par l'hôte Linux. Une solution native de chemins d'accès multiples NVMe gère les chemins physiques sous-jacents à un périphérique physique apparent affiché par l'hôte.
+
+
+
+== Les périphériques NVMe physiques sont des cibles d'E/S.
+
+Il est recommandé d'exécuter les E/S sur les liens de `/dev/disk/by-id/nvme-eui.[uuid#]` plutôt que directement sur le chemin d'accès du périphérique nvme physique `/dev/nvme[subsys#]n[id#]`. Le lien entre ces deux emplacements est disponible à l'aide de la commande suivante :
+
+[listing]
+----
+# ls /dev/disk/by-id/ -l
+lrwxrwxrwx 1 root root 13 Oct 18 15:14 nvme-eui.0000320f5cad32cf00a0980000af4112 -> ../../nvme0n1
+----
+E/S exécutées sur `/dev/disk/by-id/nvme-eui.[uuid#]` seront transmis directement `/dev/nvme[subsys#]n[id#]` Qui possède tous les chemins virtualisés sous-jacente à l'aide de la solution native de chemins d'accès multiples NVMe.
+
+Vous pouvez afficher vos chemins en exécutant :
+
+[listing]
+----
+# nvme list-subsys
+----
+Exemple de résultat :
+
+[listing]
+----
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000a522500000000589aa8a6
+\
++- nvme0 rdma traddr=192.4.21.131 trsvcid=4420 live
++- nvme1 rdma traddr=192.4.22.141 trsvcid=4420 live
+----
+Si vous spécifiez un périphérique nvme physique lors de l'utilisation de la commande 'nvme list-subsys', il fournit des informations supplémentaires sur les chemins d'accès à cet espace de noms :
+
+[listing]
+----
+# nvme list-subsys /dev/nvme0n1
+nvme-subsys0 - NQN=nqn.1992-08.com.netapp:5700.600a098000af44620000000058d5dd96
+\
+ +- nvme0 rdma traddr=192.168.130.101 trsvcid=4420 live non-optimized
+ +- nvme1 rdma traddr=192.168.131.101 trsvcid=4420 live non-optimized
+ +- nvme2 rdma traddr=192.168.130.102 trsvcid=4420 live optimized
+ +- nvme3 rdma traddr=192.168.131.102 trsvcid=4420 live optimized
+----
+Il existe également des crochets dans les commandes multivoie qui vous permettent d'afficher les informations relatives à votre chemin pour le basculement natif via elles également :
+
+[listing]
+----
+#multipath -ll
+----
+
+NOTE: Pour afficher les informations sur le chemin d'accès, vous devez définir les éléments suivants dans /etc/multipath.conf :
+
+[listing]
+----
+
+defaults {
+        enable_foreign nvme
+}
+----
+Exemple de résultat :
+
+[listing]
+----
+eui.0000a0335c05d57a00a0980000a5229d [nvme]:nvme0n9 NVMe,Netapp E-Series,08520001
+size=4194304 features='n/a' hwhandler='ANA' wp=rw
+|-+- policy='n/a' prio=50 status=optimized
+| `- 0:0:1 nvme0c0n1 0:0 n/a optimized    live
+`-+- policy='n/a' prio-10 status=non-optimized
+`- 0:1:1 nvme0c1n1 0:0 n/a non-optimized    live
+----

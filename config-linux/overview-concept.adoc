@@ -1,0 +1,147 @@
+---
+permalink: config-linux/overview-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Vérifiez les conditions d"utilisation de la méthode express pour configurer une baie E-Series et un hôte Linux.' 
+---
+= Hypothèses
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La méthode Linux express est basée sur les hypothèses suivantes :
+
+|===
+| Composant | Hypothèses 
+
+
+ a| 
+Sous-jacent
+ a| 
+* Pour installer le matériel, vous avez utilisé les instructions d'installation et de configuration fournies avec les tiroirs contrôleurs.
+* Les câbles sont connectés entre les tiroirs disques facultatifs et les contrôleurs.
+* Vous avez mis le système de stockage sous tension.
+* Vous avez installé tout autre matériel (par exemple, station de gestion, commutateurs) et effectué les connexions nécessaires.
+* Si vous utilisez les protocoles NVMe over InfiniBand, NVMe over RoCE ou NVMe over Fibre Channel, chaque contrôleur EF300, EF600, EF570 ou E5700 contient au moins 32 Go de RAM.
+
+
+
+
+ a| 
+Hôte
+ a| 
+* Vous avez établi une connexion entre le système de stockage et l'hôte de données.
+* Vous avez installé le système d'exploitation hôte.
+* Vous n'utilisez pas Linux en tant qu'invité virtualisé.
+* Vous ne configurez pas l'hôte de données (E/S connecté) pour démarrer à partir du réseau SAN.
+* Vous avez installé toutes les mises à jour du système d'exploitation répertoriées sous https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Station de gestion de stockage
+ a| 
+* Vous utilisez un réseau de gestion 1 Gbit/s ou plus rapide.
+* Vous utilisez une station séparée pour la gestion plutôt que l'hôte de données (E/S connecté).
+* Vous utilisez une gestion hors bande dans laquelle une station de gestion du stockage envoie des commandes au système de stockage via les connexions Ethernet au contrôleur.
+* Vous avez relié la station de gestion au même sous-réseau que les ports de gestion du stockage.
+
+
+
+
+ a| 
+Adressage IP
+ a| 
+* Vous avez installé et configuré un serveur DHCP.
+* Vous avez déjà * non* une connexion Ethernet entre la station de gestion et le système de stockage.
+
+
+
+
+ a| 
+Provisionnement du stockage
+ a| 
+* Vous n'utiliserez pas les volumes partagés.
+* Vous allez créer des pools plutôt que des groupes de volumes.
+
+
+
+
+ a| 
+Protocole : FC
+ a| 
+* Vous avez établi toutes les connexions FC côté hôte et activé le zoning des commutateurs.
+* Vous utilisez des commutateurs et des HBA FC pris en charge par NetApp.
+* Vous utilisez des versions de firmware et de pilote FC HBA, comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : iSCSI
+ a| 
+* Vous utilisez des commutateurs Ethernet capables de transporter le trafic iSCSI.
+* Vous avez configuré les commutateurs Ethernet selon les recommandations du fournisseur en matière d'iSCSI.
+
+
+
+
+ a| 
+Protocole : SAS
+ a| 
+* Vous utilisez des HBA SAS pris en charge par NetApp.
+* Vous utilisez des versions de pilote et de micrologiciel SAS HBA répertoriées dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : iser over InfiniBand
+ a| 
+* Vous utilisez une structure InfiniBand.
+* Vous utilisez des versions de pilote et de firmware IB-iser, comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : SRP sur InfiniBand
+ a| 
+* Vous utilisez une structure InfiniBand.
+* Vous utilisez des versions de pilote et de micrologiciel IB-SRP comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe over InfiniBand
+ a| 
+* Vous avez reçu les cartes d'interface hôte 100 G ou 200 G d'un système de stockage EF300, EF600, EF570 ou E5700 préconfiguré avec le protocole NVMe over InfiniBand, ou bien les contrôleurs ont été commandés avec des ports IB standard et doivent être convertis en ports NVMe-of.
+* Vous utilisez une structure InfiniBand.
+* Vous utilisez des versions de pilote et de firmware NVMe/IB, comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe over RoCE
+ a| 
+* Vous avez reçu les cartes d'interface hôte 100 G ou 200 G d'un système de stockage EF300, EF600, EF570 ou E5700 préconfiguré avec le protocole NVMe over RoCE ou les contrôleurs ont été commandés avec des ports IB standard et doivent être convertis en ports NVMe-of.
+* Vous utilisez les versions de pilote NVMe/RoCE et de firmware, comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe over Fibre Channel
+ a| 
+* Vous avez reçu les cartes d'interface hôte 32G d'un système de stockage EF300, EF600, EF570 ou E5700 pré-configuré avec le protocole NVMe over Fibre Channel. Dans le cas de contrôleurs avec des ports FC standard, vous devez ensuite les convertir en ports NVMe-of.
+* Vous utilisez les versions de pilote et de firmware NVMe/FC, comme indiqué dans le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+|===
+
+NOTE: Ces instructions de méthode express incluent des exemples pour SUSE Linux Enterprise Server (SLES) et pour Red Hat Enterprise Linux (RHEL).

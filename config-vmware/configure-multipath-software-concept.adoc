@@ -1,0 +1,22 @@
+---
+permalink: config-vmware/configure-multipath-software-concept.html 
+sidebar: sidebar 
+keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Configurer le logiciel m pour fournir un chemin redondant à la baie de stockage en cas de perturbation de l"un des chemins physiques.' 
+---
+= Configurez le logiciel multivoie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour fournir un chemin redondant à la baie de stockage, vous pouvez configurer le logiciel multivoie.
+
+Le logiciel multivoie fournit un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques. Le logiciel multivoie présente le système d'exploitation avec un seul périphérique virtuel qui représente les chemins physiques actifs vers le stockage. Le logiciel multichemin gère également le processus de basculement qui met à jour le périphérique virtuel. Pour VMware, NVMe/FC utilise le plug-in haute performance (HPP).
+
+Applicable uniquement aux protocoles FC, iSCSI et SAS, VMware propose des plug-ins, appelés « plug-ins de type baie de stockage » (SATP), pour gérer les implémentations de basculement des baies de stockage de certains fournisseurs.
+
+Le SATP que vous devez utiliser est *VMW_SATP_ALUA*.
+
+Pour plus d'informations, voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-DB5BC795-E4D9-4350-9C5D-12BB3C0E6D99.html["SATA VMware"^].

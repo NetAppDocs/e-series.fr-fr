@@ -1,0 +1,518 @@
+---
+permalink: maintenance-e2800/controllers-simplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
+summary: Vous pouvez remplacer une cartouche de contrôleur défectueuse dans une configuration simplex. 
+---
+= Remplacez le contrôleur par une configuration E2800 simplex
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer une cartouche de contrôleur défectueuse dans une configuration simplex (contrôleur unique), pour les tiroirs contrôleurs suivants :
+
+* Tiroir contrôleur E2812
+* Tiroir contrôleur E2824
+
+
+Le boîtier du contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option. Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
+
+.Ce dont vous avez besoin, 8217;ll
+* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : préparation du remplacement du contrôleur (simplex)
+
+Préparez-vous à remplacer un boîtier de contrôleur en enregistrant la clé de sécurité du lecteur, en sauvegardant la configuration et en recueillant les données de support. Vous pouvez ensuite arrêter les opérations d'E/S hôte et mettre le tiroir contrôleur hors tension.
+
+.Étapes
+. Si possible, notez la version du logiciel SANtricity OS actuellement installée sur le contrôleur. Ouvrez SANtricity System Manager et sélectionnez le menu :support[Upgrade Center > View Software and Firmware Inventory].
+. Si la fonction de sécurité du lecteur est activée, assurez-vous qu'une clé enregistrée existe et que vous connaissez la phrase de passe requise pour l'installer.
++
+
+CAUTION: *Perte possible d'accès aux données* -- si la sécurité de tous les lecteurs de la matrice de stockage est activée, le nouveau contrôleur ne pourra pas accéder à la matrice de stockage tant que vous ne déverrouillerez pas les disques sécurisés à l'aide de la fenêtre gestion de l'entreprise de SANtricity Storage Manager.
+
++
+Pour enregistrer la clé (peut ne pas être possible, selon l'état du contrôleur) :
+
++
+.. Dans SANtricity System Manager, sélectionnez menu :Paramètres[System].
+.. Sous *gestion des clés de sécurité du lecteur*, sélectionnez *touche de sauvegarde*.
+.. Dans les champs *définir une phrase de passe/saisir à nouveau une phrase de passe*, entrez et confirmez une phrase de passe pour cette copie de sauvegarde.
+.. Cliquez sur *Backup*.
+.. Enregistrez vos informations de clé dans un emplacement sécurisé, puis cliquez sur *Fermer*.
+
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous continuez cette procédure pendant les opérations d'E/S, vous risquez de perdre des données.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Dans la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
+. Vérifiez que toutes les opérations ont été effectuées avant de passer à l'étape suivante.
+. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.
+. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+. Sélectionnez *revérification* dans Recovery Guru, et confirmez que le champ *OK pour supprimer* dans la zone Détails affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
++
+Les données de la matrice de stockage ne seront accessibles qu'après avoir remplacé le boîtier du contrôleur.
+
+
+
+
+
+== Étape 2 : retrait du contrôleur défectueux (simplex)
+
+Remplacez le réservoir défectueux par un neuf.
+
+
+
+=== Étape 2a : retrait du boîtier du contrôleur (simplex)
+
+Déposer un boîtier de contrôleur.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si les ports HIC du boîtier du contrôleur utilisent des émetteurs-récepteurs SFP+, retirez les SFP.
++
+Comme vous devez retirer la HIC du contrôleur défaillant, vous devez retirer tous les SFP des ports HIC. Toutefois, vous pouvez laisser tous les SFP installés dans les ports hôtes de la carte de base. Lorsque vous êtes prêt à raccorder le nouveau contrôleur, il vous suffit de déplacer ces SFP vers le nouveau boîtier de contrôleur. Cette approche est particulièrement utile si vous disposez de plusieurs types de SFP.
+
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
+
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 contrôleur attn led maint e2800]
+
++
+*(1)* _cache LED active_
+
+. Appuyez sur le loquet de la poignée de came jusqu'à ce qu'il se libère, puis ouvrez la poignée de came vers la droite pour libérer le boîtier du contrôleur du fond de panier central.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retirer la cartouche de contrôleur simplex maint. e2800]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. A l'aide de deux mains et de la poignée de came, faites glisser le boîtier du contrôleur hors de la tablette.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+Lorsque vous retirez le boîtier du contrôleur, un rabat se met en place pour bloquer la baie vide, ce qui contribue à maintenir le débit d'air et le refroidissement.
+
+. Retournez le boîtier du contrôleur afin que le capot amovible soit orienté vers le haut.
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+=== Étape 2b : retrait de la batterie (simplex)
+
+Après avoir retiré le boîtier du contrôleur du shelf, retirez la batterie.
+
+.Étapes
+. Retirez le couvercle du boîtier du contrôleur en appuyant sur le bouton et en faisant glisser le couvercle hors de celui-ci.
+. Vérifiez que le voyant vert à l'intérieur du contrôleur (entre la batterie et les modules DIMM) est éteint.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interne led maint e2800 active]
+
++
+*(1)* _cache interne actif_
+
++
+*(2)* _batterie_
+
+. Repérez le loquet de dégagement bleu de la batterie.
+. Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retirer le bloc-batterie e2800]
+
++
+*(1)* _loquet de dégagement de la batterie_
+
++
+*(2)* _batterie_
+
+. Soulevez la batterie et faites-la glisser hors du boîtier du contrôleur.
+
+
+
+
+=== Étape 2c : retrait de la carte d'interface hôte (simplex)
+
+Si le boîtier du contrôleur comporte une carte d'interface hôte (HIC), retirez la carte HIC du boîtier du contrôleur d'origine pour pouvoir la réutiliser dans le nouveau boîtier du contrôleur.
+
+.Étapes
+. À l'aide d'un tournevis cruciforme n° 1, retirez les vis qui fixent le cadran HIC au boîtier du contrôleur.
++
+Il y a quatre vis : une sur le dessus, une sur le côté et deux sur l'avant.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+
+. Retirez la plaque HIC.
+. À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez les trois vis à molette qui fixent le HIC à la carte contrôleur.
+. Détachez avec précaution la carte HIC de la carte contrôleur en la soulevant et en la faisant glisser vers l'arrière.
++
+
+CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+
++
+*(1)* _carte d'interface hôte_
+
++
+*(2)* _vis_
+
+. Placez le HIC sur une surface antistatique.
+
+
+
+
+== Étape 3 : installation d'un nouveau contrôleur (simplex)
+
+Installez un nouveau boîtier de contrôleur pour remplacer le boîtier défectueux.
+
+
+
+=== Étape 3a : installation de la batterie (simplex)
+
+Installer la batterie dans le boîtier de contrôleur de remplacement. Vous pouvez installer la batterie que vous avez retirée du boîtier du contrôleur d'origine ou installer une nouvelle batterie que vous avez commandée.
+
+.Étapes
+. Déballez le boîtier du contrôleur de remplacement et placez-le sur une surface plane et sans électricité statique de sorte que le couvercle amovible soit orienté vers le haut.
++
+Conservez les matériaux d'emballage à utiliser lors de l'expédition du boîtier de contrôleur défectueux.
+
+. Appuyez sur le bouton du capot et faites glisser le capot pour le retirer.
+. Orientez le boîtier du contrôleur de manière à ce que le logement de la batterie soit orienté vers vous.
+. Insérez la batterie dans le boîtier du contrôleur en l'inclinant légèrement vers le bas.
++
+Vous devez insérer la bride métallique située à l'avant de la batterie dans la fente située au bas du boîtier du contrôleur et faire glisser le haut de la batterie sous la petite goupille d'alignement située sur le côté gauche du boîtier.
+
+. Déplacez le loquet de la batterie vers le haut pour fixer la batterie.
++
+Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insérer la pile dans le bloc e2800]
+
++
+*(1)* _loquet de dégagement de la batterie_
+
++
+*(2)* _batterie_
+
+. Retournez le boîtier du contrôleur pour vérifier que la batterie est correctement installée.
++
+
+CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de la batterie doit être complètement insérée dans la fente du boîtier du contrôleur (comme illustré sur la première figure). Si la batterie n'est pas installée correctement (comme illustré sur la deuxième figure), la bride métallique risque de toucher la carte contrôleur, ce qui endommagerait le contrôleur lorsque vous mettez le système sous tension.
+
++
+** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
+** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+
+
+=== Étape 3b : installation de la carte d'interface hôte (simplex)
+
+Si vous avez retiré une carte d'interface hôte (HIC) du boîtier de contrôleur d'origine, installez cette HIC dans le nouveau boîtier de contrôleur.
+
+.Étapes
+. À l'aide d'un tournevis cruciforme n° 1, retirez les quatre vis qui fixent le cache blanc au boîtier du contrôleur de remplacement, puis retirez le cache.
+. Alignez les trois vis moletées de la HIC avec les trous correspondants du contrôleur, puis alignez le connecteur situé au bas de la HIC avec le connecteur d'interface HIC de la carte contrôleur.
++
+Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
+
+. Abaisser avec précaution la HIC et mettre le connecteur HIC en place en appuyant doucement sur la HIC.
++
+
+CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+
++
+*(1)* _carte d'interface hôte_
+
++
+*(2)* _vis_
+
+. Serrez les vis à molette HIC à la main.
++
+N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
+
+. À l'aide d'un tournevis cruciforme n° 1, fixez la carte HIC que vous avez retirée du boîtier de contrôleur d'origine sur le nouveau boîtier de contrôleur à l'aide de quatre vis.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+
+
+
+
+
+=== Étape 3c : installation d'un nouveau boîtier de contrôleur (simplex)
+
+Après avoir installé la batterie et le HIC, vous pouvez installer le nouveau boîtier de contrôleur dans le shelf.
+
+.Étapes
+. Réinstallez le couvercle sur le boîtier du contrôleur en faisant glisser le couvercle de l'arrière vers l'avant jusqu'à ce que le bouton s'enclenche.
+. Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
+. Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retirer la cartouche de contrôleur simplex maint. e2800]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+. Déplacez la poignée de came vers la gauche pour verrouiller le boîtier du contrôleur en place.
+. Installez les SFP depuis le contrôleur d'origine dans les ports hôte du nouveau contrôleur et reconnectez tous les câbles.
++
+Si vous utilisez plusieurs protocoles hôtes, assurez-vous d'installer les SFP dans les ports hôtes appropriés.
+
+. Déterminez comment attribuer une adresse IP au contrôleur de remplacement, en fonction de la connexion ou non de son port Ethernet 1 (étiqueté P1) à un réseau doté d'un serveur DHCP et de la sécurité de tous les lecteurs.
++
+|===
+| Utilisation du serveur DHCP ? | Tous les disques sont sécurisés ? | Étapes 
+
+
+ a| 
+Oui.
+ a| 
+Non
+ a| 
+Le nouveau contrôleur obtient son adresse IP depuis le serveur DHCP. Cette valeur peut être différente de l'adresse IP du contrôleur d'origine. Localisez l'adresse MAC indiquée sur l'étiquette au dos du contrôleur de remplacement et contactez votre administrateur réseau pour obtenir l'adresse IP attribuée par le serveur DHCP.
+
+
+
+ a| 
+Oui.
+ a| 
+Oui.
+ a| 
+Le nouveau contrôleur obtient son adresse IP depuis le serveur DHCP. Cette valeur peut être différente de l'adresse IP du contrôleur d'origine. Localisez l'adresse MAC indiquée sur l'étiquette au dos du contrôleur de remplacement et contactez votre administrateur réseau pour obtenir l'adresse IP attribuée par le serveur DHCP. Vous pouvez ensuite déverrouiller les lecteurs à l'aide de l'interface de ligne de commande.
+
+
+
+ a| 
+Non
+ a| 
+Non
+ a| 
+Le nouveau contrôleur adopte l'adresse IP du contrôleur que vous avez retiré.
+
+
+
+ a| 
+Non
+ a| 
+Oui.
+ a| 
+Vous devez définir manuellement l'adresse IP du nouveau contrôleur. (Vous pouvez réutiliser l'adresse IP de l'ancien contrôleur ou utiliser une nouvelle adresse IP.) Lorsque le contrôleur a une adresse IP, vous pouvez déverrouiller les lecteurs à l'aide de l'interface de ligne de commande. Une fois les disques déverrouillés, le nouveau contrôleur réutilise automatiquement l'adresse IP du contrôleur d'origine.
+
+|===
+
+
+
+
+== Étape 4 : remplacement complet du contrôleur (simplex)
+
+Mettez le tiroir contrôleur sous tension, collectez les données de support et reprenez les opérations.
+
+.Étapes
+. Allumer les deux boutons d'alimentation à l'arrière du tiroir contrôleur.
++
+** N'éteignez pas les interrupteurs d'alimentation pendant le processus de mise sous tension, qui dure généralement 90 secondes ou moins.
+** Les ventilateurs de chaque shelf sont très bruyants lors du premier démarrage. Le bruit est normal au démarrage.
+
+
+. Au démarrage du contrôleur, vérifier les LED du contrôleur et l'affichage à sept segments.
++
+** L'affichage à sept segments montre la séquence répétée *OS*, *SD*, *_blank_* pour indiquer que le contrôleur exécute le traitement début de journée (SOD). Une fois qu'un contrôleur a démarré avec succès, son affichage à sept segments doit afficher l'ID du bac.
+** Le voyant d'avertissement orange du contrôleur s'allume puis s'éteint, à moins qu'une erreur ne s'affiche.
+** Les voyants verts Host Link s'allument.
++
+
+NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg voyant attn 7s maint. e2800]
+
++
+*(1)* _voyant attention (ambre)_
+
++
+*(2)* _affichage à sept segments_
+
++
+*(3)* _LED Host Link_
+
+
+
+. Si l'un des voyants d'avertissement du tiroir du contrôleur reste allumé, vérifier que le boîtier du contrôleur a été correctement installé et que tous les câbles sont correctement installés. Réinstallez le boîtier du contrôleur, si nécessaire.
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si la matrice de stockage est dotée de disques sécurisés, importez la clé de sécurité du lecteur ; sinon, passez à l'étape suivante. Suivez la procédure appropriée ci-dessous pour une matrice de stockage avec tous les disques sécurisés ou un mélange de disques sécurisés et non sécurisés.
++
+
+NOTE: _Disques non sécurisés_ sont des disques non attribués, des disques de secours globaux ou des disques faisant partie d'un groupe de volumes ou d'un pool qui n'est pas sécurisé par la fonction de sécurité du lecteur. _Secure Drives_ sont des lecteurs affectés qui font partie d'un groupe de volumes sécurisé ou d'un pool de disques à l'aide de Drive Security.
+
++
+** *Disques sécurisés uniquement (pas de disques non sécurisés)* :
++
+... Accéder à l'interface de ligne de commande de la baie de stockage.
+... Entrez la commande suivante pour importer la clé de sécurité :
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+où ?
+
++
+**** `C:/file.slk` représente l'emplacement du répertoire et le nom de la clé de sécurité de votre lecteur
+**** `passPhrase` Est la phrase de passe nécessaire pour déverrouiller le fichier une fois la clé de sécurité importée, le contrôleur redémarre et le nouveau contrôleur adopte les paramètres enregistrés pour la matrice de stockage.
+
+
+... Passer à l'étape suivante pour vérifier que le nouveau contrôleur est optimal.
+
+
+** *Combinaison de disques sécurisés et non sécurisés* :
++
+... Collectez le pack de support et ouvrez le profil de la matrice de stockage.
+... Recherchez et enregistrez tous les emplacements des lecteurs non sécurisés, qui se trouvent dans le pack de support.
+... Mettez le système hors tension.
+... Retirez les lecteurs non sécurisés.
+... Remplacer le contrôleur.
+... Mettez le système sous tension et attendez que l'écran à sept segments affiche le numéro du bac.
+... Dans SANtricity System Manager, sélectionnez menu :Paramètres[System].
+... Dans la section gestion des clés de sécurité, sélectionnez *Créer/changer la clé* pour créer une nouvelle clé de sécurité.
+... Sélectionnez *déverrouiller les lecteurs sécurisés* pour importer la clé de sécurité que vous avez enregistrée.
+... Exécutez le `set allDrives nativeState` Commande CLI.
++
+Le contrôleur va redémarrer automatiquement.
+
+... Attendez que le contrôleur s'amorce et que l'écran à sept segments indique le numéro du bac ou un L5 clignotant.
+... Mettez le système hors tension.
+... Réinstallez les disques non sécurisés.
+... Réinitialise le contrôleur en utilisant SANtricity System Manager.
+... Mettez le système sous tension et attendez que l'écran à sept segments affiche le numéro du bac.
+... Passer à l'étape suivante pour vérifier que le nouveau contrôleur est optimal.
+
+
+
+
+. Depuis SANtricity System Manager, vérifiez que le nouveau contrôleur est optimal.
++
+.. Sélectionnez *matériel*.
+.. Pour le tiroir contrôleur, sélectionnez *Afficher l'arrière du tiroir*.
+.. Sélectionnez le boîtier du contrôleur que vous avez remplacé.
+.. Sélectionnez *Paramètres d'affichage*.
+.. Vérifiez que le *Status* du contrôleur est optimal.
+.. Si l'état n'est pas optimal, mettez le contrôleur en surbrillance et sélectionnez *placer en ligne*.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez menu :support[Centre de support > *Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

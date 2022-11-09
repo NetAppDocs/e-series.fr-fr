@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Une vérification de l"état s"exécute dans le cadre du processus de mise à niveau, mais vous pouvez également effectuer une vérification de l"état séparément avant de commencer.' 
+---
+= Vérification de l'état de pré-mise à niveau
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une vérification de l'état s'exécute dans le cadre du processus de mise à niveau, mais vous pouvez également effectuer une vérification de l'état séparément avant de commencer. Le contrôle de l'état des composants de la baie de stockage vérifie que la mise à niveau peut se poursuivre.
+
+*Étapes*
+
+. Dans la vue principale, sélectionnez *Manage*, puis menu:Upgrade Center[Pre-Upgrade Health Check].
++
+La boîte de dialogue Vérification préalable à la mise à niveau s'ouvre et répertorie tous les systèmes de stockage détectés.
+
+. Si nécessaire, filtrez ou triez les systèmes de stockage dans la liste pour afficher tous les systèmes qui ne sont pas actuellement dans l'état optimal.
+. Cochez les cases des systèmes de stockage que vous souhaitez exécuter via la vérification de l'état.
+. Cliquez sur *Démarrer*.
++
+La progression s'affiche dans la boîte de dialogue pendant la vérification de l'état.
+
+. Lorsque le contrôle d'intégrité est terminé, vous pouvez cliquer sur les points de suspension (...) à droite de chaque ligne pour afficher plus d'informations et effectuer d'autres tâches.
+
+
+
+NOTE: Si l'une des baies ne fonctionne pas, vous pouvez ignorer cette matrice et poursuivre la mise à niveau pour les autres, ou arrêter le processus complet et dépanner les baies qui ne sont pas utilisées.

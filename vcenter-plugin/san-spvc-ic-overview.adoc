@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter, VMware vSphere Client 
+summary: 'Le plug-in de stockage SANtricity pour vCenter assure une gestion intégrée des baies de stockage E-Series à partir d"une session client VMware vSphere.' 
+---
+= Présentation du plug-in de stockage pour vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le plug-in de stockage SANtricity pour vCenter assure une gestion intégrée des baies de stockage E-Series à partir d'une session client VMware vSphere.
+
+
+
+== Tâches disponibles
+
+Vous pouvez utiliser le plug-in pour effectuer les tâches suivantes :
+
+* Affichez et gérez les matrices de stockage découvertes sur le réseau.
+* Traitements par lots sur des groupes de baies de stockage multiples
+* Effectuer des mises à niveau sur le système d'exploitation logiciel.
+* Importer des paramètres d'une matrice de stockage à une autre.
+* Configurez les volumes, SSD cache, les hôtes, les clusters hôtes, les pools et groupes de volumes.
+* Lancez l'interface System Manager pour des tâches de gestion supplémentaires sur une baie.
+
+
+
+NOTE: Le plug-in n'est pas un remplacement direct de l'interface System Manager, qui est intégré sur chaque contrôleur d'une baie de stockage. System Manager fournit des fonctions de gestion supplémentaires. Si vous le souhaitez, vous pouvez ouvrir System Manager en sélectionnant une matrice de stockage dans la vue principale du plug-in, puis en cliquant sur *lancer*.
+
+Le plug-in nécessite un serveur VMware vCenter Server Appliance déployé dans l'environnement VMware et un hôte d'application pour installer et exécuter le serveur Web du plug-in.
+
+Pour plus d'informations sur les communications dans l'environnement vCenter, reportez-vous à la figure suivante.
+
+image:../media/vcenter_communication2.png[""]
+
+
+
+== Présentation de l'interface
+
+Lorsque vous vous connectez au plug-in, la page principale s'ouvre sur *Manage - All*. À partir de cette page, vous pouvez afficher et gérer toutes les matrices de stockage détectées sur votre réseau.
+
+
+
+=== Barre latérale de navigation
+
+La barre latérale de navigation affiche les éléments suivants :
+
+* *Gérer* -- détection des matrices de stockage dans votre réseau, lancez System Manager pour une baie, importation des paramètres d'une baie à plusieurs baies, gestion des groupes de baies, mise à niveau du système d'exploitation SANtricity et provisionnement du stockage.
+* *Gestion des certificats* -- gérer les certificats pour s'authentifier entre les navigateurs et les clients.
+* *Opérations* -- permet d'afficher la progression des opérations par lots, comme l'importation de paramètres d'une matrice à une autre.
+
+
+
+NOTE: Certaines opérations ne sont pas disponibles lorsqu'une matrice de stockage présente un état non optimal.
+
+* *Support* -- permet d'afficher les options, les ressources et les contacts d'assistance technique.
+
+
+
+
+=== Navigateurs pris en charge
+
+Le plug-in de stockage pour vCenter est accessible à partir de plusieurs types de navigateurs. Les navigateurs et versions suivants sont pris en charge.
+
+* Google Chrome 89 ou version ultérieure
+* Mozilla Firefox 80 ou version ultérieure
+* Microsoft Edge 90 ou version ultérieure
+
+
+
+
+=== Rôles et autorisations utilisateur
+
+Pour accéder aux tâches du plug-in de stockage pour vCenter, l'utilisateur doit disposer d'autorisations de lecture/écriture. Par défaut, tous les ID utilisateur VMware vCenter définis ne disposent d'aucune autorisation pour effectuer des tâches dans le plug-in.
+
+
+
+== Présentation de la configuration
+
+La configuration implique les étapes suivantes :
+
+. link:san-spvc-ic-installation.html["Installez et enregistrez le plug-in"].
+. link:san-spvc-ic-user-access.html["Configurer les autorisations d'accès au plug-in"].
+. link:san-spvc-ic-login-and-navigation.html["Connectez-vous à l'interface du plug-in"].
+. link:san-spvc-ic-storage-array-discovery.html["Découvrir les baies de stockage"].
+. link:san-spvc-ic-storage-provisioning.html["Provisionner le stockage"].
+
+
+
+
+== Trouvez plus d'informations
+
+Pour plus d'informations sur la gestion des datastores dans vSphere client, reportez-vous à la section https://docs.vmware.com/en/VMware-vSphere/index.html["Documentation VMware vSphere"^].

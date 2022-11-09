@@ -1,0 +1,178 @@
+---
+permalink: config-windows/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez les identifiants des ports hôte. 
+---
+= Réalisez des tâches FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez les identifiants des ports hôte.
+
+
+
+== Étape 1 : configurer les commutateurs FC—​Windows
+
+La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
+
+.Ce dont vous avez besoin, 8217;ll
+* Identifiants d'administrateur pour les commutateurs.
+* WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
+
+
+Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
+
+.Étapes
+. Connectez-vous au programme d'administration des commutateurs FC, puis sélectionnez l'option de configuration du zoning.
+. Créer une nouvelle zone qui inclut le premier port initiateur hôte et qui inclut également tous les ports cibles qui se connectent au même commutateur FC que l'initiateur.
+. Créer des zones supplémentaires pour chaque port d'initiateur hôte FC dans le commutateur.
+. Enregistrer les zones, puis activer la nouvelle configuration de zoning.
+
+
+
+
+== Étape 2 : déterminez les WWPN des hôtes et définissez les paramètres recommandés—​FC, Windows
+
+Vous installez un utilitaire HBA FC, ce qui vous permet d'afficher le nom international du port (WWPN) de chaque port hôte. En outre, vous pouvez utiliser l'utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l' http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour la configuration prise en charge.
+
+Consultez les instructions suivantes pour les utilitaires HBA :
+
+* La plupart des fournisseurs HBA proposent un utilitaire HBA. Vous aurez besoin de la version appropriée de HBA pour votre système d'exploitation hôte et votre processeur. Voici des exemples d'utilitaires FC HBA :
++
+** Emulex OneCommand Manager pour les HBA Emulex
+** QConverge Console de QLogic pour les HBA QLogic
+
+
+* Les ports d'E/S hôte peuvent s'enregistrer automatiquement si l'agent de contexte hôte est installé.
+
+
+.Étapes
+. Téléchargez l'utilitaire approprié à partir du site Web du fournisseur de votre carte HBA.
+. Installez l'utilitaire.
+. Sélectionnez les paramètres appropriés dans l'utilitaire HBA.
++
+Les paramètres appropriés pour votre configuration sont répertoriés dans la colonne Notes de l' http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+
+== Étape 3 : enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage FC. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+L'illustration montre un hôte connecté à une baie de stockage E-Series dans deux zones. Une zone est indiquée par la ligne bleue ; l'autre zone est indiquée par la ligne rouge. Chaque port unique possède deux chemins d'accès au stockage (un pour chaque contrôleur).
+
+image::../media/port_identifiers_host_and_target_conf-win.gif[les identificateurs de port hôte et cible gagnent]
+
+
+
+=== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | WWPN 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port hôte 0 vers zone de commutation FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Port hôte 1 vers zone de commutation FC 1
+ a| 
+
+|===
+
+
+=== Identifiants cibles
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | WWPN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur A, port 2 vers le commutateur FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Contrôleur B, port 2 vers le commutateur FC 2
+ a| 
+
+|===
+
+
+=== Nom d'hôte de mappage
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

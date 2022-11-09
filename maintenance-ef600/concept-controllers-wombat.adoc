@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, ef300, ef600, shelf 
+summary: 'Un contrôleur se compose d"une carte, d"un micrologiciel et d"un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un seul contrôleur ou les deux contrôleurs de votre tiroir contrôleur EF300 ou EF600.' 
+---
+= Contrôleurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un seul contrôleur ou les deux contrôleurs de votre tiroir contrôleur EF300 ou EF600.

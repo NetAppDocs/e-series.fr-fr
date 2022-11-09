@@ -1,0 +1,88 @@
+---
+permalink: config-linux/srp-ib-configure-subnet-manager-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'L"utilisation d"un commutateur InfiniBand pour exécuter le gestionnaire de sous-réseau peut entraîner une perte de chemin inattendue pendant les charges élevées. Pour éviter toute perte de chemin, configurez le gestionnaire de sous-réseau sur un ou plusieurs de vos hôtes à l"aide d"opensm.' 
+---
+= Configurez le gestionnaire de sous-réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un gestionnaire de sous-réseau doit être exécuté dans votre environnement sur votre commutateur ou sur vos hôtes. Si vous exécutez le serveur côté hôte, procédez comme suit pour le configurer.
+
+
+NOTE: Avant de configurer le gestionnaire de sous-réseau, vous devez installer le package infiniband-diags pour obtenir l'ID global unique (GUID) via le `ibstat -p` commande. Voir xref:srp-ib-determine-host-port-guids-task.adoc[Déterminez les GUID des ports hôtes et définissez les paramètres recommandés] pour plus d'informations sur l'installation du package infiniband-diags.
+
+.Étapes
+. Installer le `opensm` sur tous les hôtes qui exécutent le gestionnaire de sous-réseau.
+. Utilisez le `ibstat -p` commande à rechercher `GUID0` et `GUID1` Des ports HBA. Par exemple :
++
+[listing]
+----
+# ibstat -p
+0x248a070300a80a80
+0x248a070300a80a81
+----
+. Créez un script de gestionnaire de sous-réseau qui s'exécute une fois dans le cadre du processus d'amorçage.
++
+[listing]
+----
+# vim /usr/sbin/subnet-manager.sh
+----
+. Ajoutez les lignes suivantes. Remplacez les valeurs de l'étape 2 par `GUID0` et `GUID1`. Pour `P0` et `P1`, utilisez les priorités du gestionnaire de sous-réseau, 1 étant le plus faible et 15 le plus élevé.
++
+[listing]
+----
+#!/bin/bash
+
+opensm -B -g <GUID0> -p <P0> -f /var/log/opensm-ib0.log
+opensm -B -g <GUID1> -p <P1> -f /var/log/opensm-ib1.log
+----
++
+Exemple de commande avec substitutions de valeur :
+
++
+[listing]
+----
+#!/bin/bash
+
+opensm -B -g 0x248a070300a80a80 -p 15 -f /var/log/opensm-ib0.log
+opensm -B -g 0x248a070300a80a81 -p 1 -f /var/log/opensm-ib1.log
+----
+. Créez un fichier d'unité de service système nommé `subnet-manager.service`.
++
+[listing]
+----
+# vim /etc/systemd/system/subnet-manager.service
+----
+. Ajoutez les lignes suivantes.
++
+[listing]
+----
+[Unit]
+Description=systemd service unit file for subnet manager
+
+[Service]
+Type=forking
+ExecStart=/bin/bash /usr/sbin/subnet-manager.sh
+
+[Install]
+WantedBy=multi-user.target
+----
+. Avertir le système du nouveau service.
++
+[listing]
+----
+# systemctl daemon-reload
+----
+. Activez et démarrez le `subnet-manager` services.
++
+[listing]
+----
+# systemctl enable subnet-manager.service
+# systemctl start subnet-manager.service
+----
+

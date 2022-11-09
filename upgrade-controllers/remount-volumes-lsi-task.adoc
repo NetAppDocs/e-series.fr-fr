@@ -1,0 +1,65 @@
+---
+permalink: upgrade-controllers/remount-volumes-lsi-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remount volume, upgrade LSI, vendor ID 
+summary: 'Vous remontez des volumes si la mise à niveau du contrôleur entraîne la modification de l"ID fournisseur de LSI à NETAPP.' 
+---
+= Remontez des volumes après avoir changé le fournisseur de LSI à NETAPP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la mise à niveau du contrôleur entraîne la modification de l'ID fournisseur de LSI à NETAPP, suivez la procédure adéquate pour votre type d'hôte :
+
+*  volumes on an AIX host
+*  volumes on a VMware host
+*  volumes on a Windows host
+
+
+
+
+== Remontez des volumes sur un hôte AIX
+
+Une fois les contrôleurs remplacés, il est possible que l'hôte affiche les nouveaux volumes de la baie de stockage, mais affiche également les volumes d'origine comme ayant échoué.
+
+Si des volumes défaillants apparaissent, exécutez la `cfgmgr` commande.
+
+
+
+== Remontez des volumes sur un hôte VMware
+
+Après le remplacement des contrôleurs, vous pouvez observer les conditions suivantes :
+
+* VMware présente les nouveaux chemins pour les volumes de la baie de stockage, mais présente également les chemins d'origine comme des chemins morts.
+* Les hôtes répertorient toujours les volumes de la baie de stockage comme ayant des ID fournisseur LSI. Cela peut se produire lorsque les volumes ont été réclamés par la règle LSI au début et continuer à utiliser la même règle LSI lorsque les volumes sont de nouveau en ligne.
+* Le nom d'affichage ne reflète pas la modification apportée par LSI à NetApp. Cela peut se produire car le nom d'affichage est devenu un test libre après la découverte initiale. Dans ce cas, vous pouvez modifier manuellement le nom d'affichage.
+
+
+.Étapes
+. Effectuez une nouvelle analyse sur chaque hôte.
+. Arrêtez toutes les opérations d'E/S hôte de ce sous-système.
+. Récupérez les volumes selon la règle NetApp.
++
+.. Exécutez le `esxcli storage core device list` commande. Vérifiez le résultat de la commande pour identifier les volumes dont le nom possède le formulaire `aa.xxxx`.
+.. Lancer la commande `do esxcli storage core claiming reclaim -d naa.xxxxx` Pour remplacer l'ID fournisseur LSI par NetApp.
+
+
+
+
+
+
+== Remontez des volumes sur un hôte Windows
+
+Après avoir remplacé les contrôleurs, vous devez remonter les volumes sur un hôte Windows pour permettre aux hôtes connectés de réaliser des opérations d'E/S avec les volumes situés sur la baie de stockage mise à niveau.
+
+.Étapes
+. Dans le *Gestionnaire de périphériques*, sélectionnez *Afficher les périphériques masqués*.
+. Pour chaque périphérique de disque SCSI NETAPP répertorié dans *Device Manager*, cliquez avec le bouton droit de la souris sur l'entrée, puis sélectionnez *Désinstaller*.
++
+Si Windows affiche une boîte de dialogue avec un message indiquant que vous devez redémarrer l'hôte, terminez la désinstallation de tous les volumes avant de rechercher du matériel et de redémarrer.
+
+. Cliquez avec le bouton droit de la souris dans *Gestionnaire de périphériques*, puis sélectionnez *Rechercher les modifications matérielles*.
+. Redémarrez l'hôte.
+

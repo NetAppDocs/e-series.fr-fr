@@ -1,0 +1,270 @@
+---
+permalink: web-services-proxy/array-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, discover storage WSP, 
+summary: 'Pour gérer les systèmes de stockage sur le réseau, vous devez d"abord les découvrir, puis les ajouter à la liste de gestion.' 
+---
+= Gérer les systèmes de stockage à l'aide du proxy de services Web
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour gérer les systèmes de stockage sur le réseau, vous devez d'abord les découvrir, puis les ajouter à la liste de gestion.
+
+
+
+== Découvrir les systèmes de stockage
+
+Vous pouvez configurer la détection automatique ou découvrir manuellement les systèmes de stockage.
+
+
+
+=== Détecter automatiquement les systèmes de stockage
+
+Vous pouvez spécifier que les systèmes de stockage sont automatiquement détectés sur le réseau en modifiant les paramètres du fichier wsconfig.xml. Par défaut, la détection automatique IPv6 est désactivée et IPv4 est activé.
+
+Pour ajouter un système de stockage, il vous suffit de fournir une adresse IP ou DNS de gestion. Le serveur détecte automatiquement tous les chemins de gestion lorsque les chemins ne sont pas configurés ou que les chemins sont configurés et pivotables.
+
+
+NOTE: Si vous tentez d'utiliser un protocole IPv6 pour détecter automatiquement les systèmes de stockage de la configuration du contrôleur après la connexion initiale, le processus risque d'échouer. Les causes possibles de la panne incluent les problèmes lors du transfert d'adresse IP ou de l'activation d'IPv6 sur les systèmes de stockage, mais pas d'activation sur le serveur.
+
+Avant d'activer les paramètres de découverte IPv6, vérifiez que votre infrastructure prend en charge la connectivité IPv6 avec les systèmes de stockage pour limiter les problèmes de connexion.
+
+.Étapes
+. Ouvrez le fichier wsconfig.xml, à l'adresse suivante :
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_services_proxy
+
+
+. Dans les chaînes de découverte automatique, modifiez les paramètres de `true` à `false`, selon le besoin. Voir l'exemple suivant.
++
+[listing]
+----
+<env key="autodiscover.ipv6.enable">true</env>
+----
++
+
+NOTE: Lorsque les chemins sont configurés, mais pas configurés pour que le serveur puisse acheminer vers les adresses, des erreurs de connexion intermittentes se produisent. Si vous ne pouvez pas définir les adresses IP comme routables à partir de l'hôte, désactivez la détection automatique (définissez les paramètres sur `false`).
+
+. Enregistrez le fichier.
+
+
+
+
+=== Découvrez et ajoutez des systèmes de stockage à l'aide de terminaux API
+
+Vous pouvez utiliser des terminaux API pour détecter et ajouter des systèmes de stockage à la liste gérée. Cette procédure crée une connexion de gestion entre le système de stockage et l'API.
+
+
+NOTE: Cette tâche décrit comment détecter et ajouter des systèmes de stockage à l'aide de l'API REST, pour que vous puissiez gérer ces systèmes dans la documentation interactive de l'API. Cependant, il peut être préférable de gérer les systèmes de stockage dans Unified Manager, ce qui constitue une interface simple d'utilisation. Pour plus d'informations, consultez l'aide en ligne disponible avec Unified Manager.
+
+Pour les systèmes de stockage avec SANtricity versions 11.30 et ultérieures, l'interface de gestion héritée pour le symbole doit être activée dans l'interface SANtricity System Manager. Dans le cas contraire, les noeuds finaux de découverte échouent. Pour trouver ce paramètre, ouvrez System Manager, puis accédez au menu :Paramètres[System > Paramètres supplémentaires > interface de gestion des changements].
+
+.Étapes
+. Connectez-vous au link:install-login-task.html["Documentation interactive sur les API"].
+. Identifier les systèmes de stockage :
++
+.. Dans la documentation API, assurez-vous que *V2* est sélectionné dans la liste déroulante, puis développez la catégorie *Storage-Systems*.
+.. Cliquez sur le noeud final *POST: /Discovery*, puis sur *essayez-le*.
+.. Entrez les paramètres comme indiqué dans le tableau.
++
+|===
+
+
+ a| 
+StartIP
+
+IP
+ a| 
+Remplacez la chaîne par la plage d'adresses IP de début et de fin pour un ou plusieurs systèmes de stockage du réseau.
+
+
+
+ a| 
+UseAgents
+ a| 
+Définissez cette valeur sur :
+
+*** True = utiliser des agents intrabande pour l'analyse réseau.
+*** FALSE = ne pas utiliser d'agents intrabande pour l'analyse réseau.
+
+
+
+
+ a| 
+Délai de connexion
+ a| 
+Saisissez les secondes autorisées pour l'acquisition avant que la connexion ne soit interrompue.
+
+
+
+ a| 
+MaxPortsToUtilisez
+ a| 
+Entrez un nombre maximum de ports utilisés pour l'analyse réseau.
+
+|===
+.. Cliquez sur *Exécuter*.
++
+
+NOTE: Les actions d'API s'exécutent sans les invites de l'utilisateur.
+
++
+Le processus de détection s'exécute en arrière-plan.
+
+.. Assurez-vous que le code renvoie un 202.
+.. Sous *corps de réponse*, localisez la valeur renvoyée pour la requête. Vous avez besoin de l'ID de la demande pour afficher les résultats à l'étape suivante.
+
+
+. Afficher les résultats de la découverte, comme suit :
++
+.. Cliquez sur le noeud final *GET: /Discovery*, puis sur *essayez-le*.
+.. Saisissez l'ID de la demande à partir de l'étape précédente. Si vous laissez le champ *Request ID* vide, le noeud final est défini par défaut sur le dernier ID de demande exécuté.
+.. Cliquez sur *Exécuter*.
+.. S'assurer que le code renvoie 200.
+.. Dans le corps de réponse, localisez votre ID de requête et les chaînes pour systèmes de stockage. Les chaînes ressemblent à l'exemple suivant :
++
+[listing]
+----
+"storageSystems": [
+    {
+      "serialNumber": "123456789",
+      "wwn": "000A011000AF0000000000001A0C000E",
+      "label": "EF570_Array",
+      "firmware": "08.41.10.01",
+      "nvsram": "N5700-841834-001",
+      "ipAddresses": [
+        "10.xxx.xx.213",
+        "10.xxx.xx.214"
+      ],
+----
+.. Notez les valeurs wwn, label et IPadresses. Vous en avez besoin pour l'étape suivante.
+
+
+. Ajout de systèmes de stockage de la manière suivante :
++
+.. Cliquez sur le noeud final *POST: /Storage-system*, puis sur *essayez-le*.
+.. Entrez les paramètres comme indiqué dans le tableau.
++
+|===
+
+
+ a| 
+id
+ a| 
+Entrez un nom unique pour ce système de stockage. Vous pouvez saisir le libellé (affiché dans la réponse de GET: /Discovery), mais le nom peut être n'importe quelle chaîne que vous choisissez. Si vous ne fournissez pas de valeur pour ce champ, Web Services attribue automatiquement un identifiant unique.
+
+
+
+ a| 
+Adresses des contrôleurs
+ a| 
+Entrez les adresses IP affichées dans la réponse pour OBTENIR : /Discovery. Pour les doubles contrôleurs, séparez les adresses IP par une virgule. Par exemple :
+
+`"IP address 1","IP address 2"`
+
+
+
+ a| 
+validation
+ a| 
+Entrez `true`, Afin de recevoir une confirmation que les services Web peuvent se connecter au système de stockage.
+
+
+
+ a| 
+mot de passe
+ a| 
+Entrez le mot de passe d'administration du système de stockage.
+
+
+
+ a| 
+wwn
+ a| 
+Entrez le WWN du système de stockage (affiché dans la réponse de GET: /Discovery).
+
+|===
+.. Supprimez toutes les chaînes après `"enableTrace": true`, de sorte que l'ensemble de la chaîne soit similaire à l'exemple suivant :
++
+[listing]
+----
+{
+  "id": "EF570_Array",
+  "controllerAddresses": [
+    "Controller-A-Mgmt-IP","Controller-B-Mgmt_IP"
+  ],
+  "validate":true,
+  "password": "array-admin-password",
+  "wwn": "000A011000AF0000000000001A0C000E",
+  "enableTrace": true
+}
+----
+.. Cliquez sur *Exécuter*.
+.. Assurez-vous que le code de réponse est 201, ce qui indique que le noeud final a été exécuté avec succès.
++
+Le noeud final *Post: /Storage-Systems* est mis en file d'attente. Vous pouvez afficher les résultats à l'aide du noeud final *GET: /Storage-Systems* à l'étape suivante.
+
+
+
+. Confirmez l'ajout de la liste comme suit :
++
+.. Cliquez sur le noeud final *GET: /Storage-system*.
++
+Aucun paramètre n'est requis.
+
+.. Cliquez sur *Exécuter*.
+.. Assurez-vous que la réponse du code est 200, ce qui indique que le noeud final a été exécuté avec succès.
+.. Dans le corps de réponse, recherchez les détails relatifs au système de stockage. Les valeurs renvoyées indiquent qu'elles ont été correctement ajoutées à la liste des matrices gérées, comme dans l'exemple suivant :
++
+[listing]
+----
+[
+  {
+    "id": "EF570_Array",
+    "name": "EF570_Array",
+    "wwn": "000A011000AF0000000000001A0C000E",
+    "passwordStatus": "valid",
+    "passwordSet": true,
+    "status": "optimal",
+    "ip1": "10.xxx.xx.213",
+    "ip2": "10.xxx.xx.214",
+    "managementPaths": [
+      "10.xxx.xx.213",
+      "10.xxx.xx.214"
+  ]
+  }
+]
+----
+
+
+
+
+
+
+== Évolutivité verticale du nombre de systèmes de stockage gérés
+
+Par défaut, l'API peut gérer jusqu'à 100 systèmes de stockage. Si vous devez gérer davantage de mémoire, vous devez augmenter les exigences de mémoire du serveur.
+
+Le serveur est configuré pour utiliser 512 Mo de mémoire. Pour chaque 100 systèmes de stockage supplémentaires de votre réseau, ajoutez 250 Mo à ce nombre. N'ajoutez pas plus de mémoire que ce que vous avez physiquement. Prévoyez suffisamment d'espace supplémentaire pour votre système d'exploitation et d'autres applications.
+
+
+NOTE: La taille par défaut du cache est de 8,192 événements. L'utilisation approximative des données pour le cache d'événements MEL est de 1 Mo pour chaque 8,192 événements. Par conséquent, en conservant les valeurs par défaut, l'utilisation du cache doit être d'environ 1 Mo pour un système de stockage.
+
+
+NOTE: Outre la mémoire, le proxy utilise des ports réseau pour chaque système de stockage. Linux et Windows considèrent les ports réseau comme des descripteurs de fichiers. Par mesure de sécurité, la plupart des systèmes d'exploitation limitent le nombre de descripteurs de fichier ouverts qu'un processus ou un utilisateur peut ouvrir à la fois. En particulier dans les environnements Linux, où les connexions TCP ouvertes sont considérées comme des descripteurs de fichier, le proxy de services Web peut facilement dépasser cette limite. Comme le correctif dépend du système, vous devez vous reporter à la documentation de votre système d'exploitation pour savoir comment augmenter cette valeur.
+
+.Étapes
+. Effectuez l'une des opérations suivantes :
++
+** Sous Windows, accédez au fichier appserver64.init. Localiser la ligne, `vmarg.3=-Xmx512M`
+** Sous Linux, accédez au fichier webserver.sh. Localiser la ligne, `JAVA_OPTIONS="-Xmx512M"`
+
+
+. Pour augmenter la mémoire, remplacez `512` Avec la mémoire souhaitée en Mo.
+. Enregistrez le fichier.
+

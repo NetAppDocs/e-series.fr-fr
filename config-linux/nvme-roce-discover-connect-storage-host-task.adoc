@@ -1,0 +1,91 @@
+---
+permalink: config-linux/nvme-roce-discover-connect-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Avant de définir chaque hôte dans SANtricity System Manager, vous devez détecter les ports de contrôleur cible depuis l"hôte, puis établir les connexions NVMe.' 
+---
+= Découverte et connexion au stockage depuis l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de définir chaque hôte dans SANtricity System Manager, vous devez détecter les ports de contrôleur cible depuis l'hôte, puis établir les connexions NVMe.
+
+.Étapes
+. Découvrez les sous-systèmes disponibles sur la cible NVMe-of pour tous les chemins à l'aide de la commande suivante :
++
+[listing]
+----
+nvme discover -t rdma -a target_ip_address
+----
++
+Dans cette commande, `target_ip_address` Est l'adresse IP du port cible.
+
++
+
+NOTE: Le `nvme discover` la commande détecte tous les ports du contrôleur dans le sous-système, quel que soit l'accès hôte.
+
++
+[listing]
+----
+# nvme discover -t rdma -a 192.168.1.77
+Discovery Log Number of Records 2, Generation counter 0
+=====Discovery Log Entry 0======
+trtype:  rdma
+adrfam:  ipv4
+subtype: nvme subsystem
+treq:    not specified
+portid:  0
+trsvcid: 4420
+subnqn:  nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94
+traddr:  192.168.1.77
+rdma_prtype: roce
+rdma_qptype: connected
+rdma_cms:    rdma-cm
+rdma_pkey: 0x0000
+=====Discovery Log Entry 1======
+trtype:  rdma
+adrfam:  ipv4
+subtype: nvme subsystem
+treq:    not specified
+portid:  1
+trsvcid: 4420
+subnqn:  nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94
+traddr:  192.168.2.77
+rdma_prtype: roce
+rdma_qptype: connected
+rdma_cms:    rdma-cm
+rdma_pkey: 0x0000
+----
+. Répétez l'étape 1 pour toutes les autres connexions.
+. Connectez-vous au sous-système découvert sur le premier chemin à l'aide de la commande : `nvme connect -t rdma -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
++
+
+NOTE: La commande indiquée ci-dessus ne persiste pas après le redémarrage. Le `NVMe connect` L'exécution de la commande doit s'effectuer après chaque redémarrage pour rétablir les connexions NVMe.
+
++
+
+NOTE: Les connexions ne sont pas établies pour les ports découverts inaccessibles par l'hôte.
+
++
+
+NOTE: Si vous spécifiez un numéro de port à l'aide de cette commande, la connexion échoue. Le port par défaut est le seul port configuré pour les connexions.
+
++
+
+NOTE: Le paramètre de profondeur de file d'attente recommandé est 1024. Remplacer le paramètre par défaut 128 par 1024 à l'aide de ``-Q 1024``option de ligne de commande, comme indiqué dans l'exemple suivant.
+
++
+
+NOTE: Le délai de perte de contrôleur recommandé en secondes est de 60 minutes (3600 secondes). Remplacer le réglage par défaut de 600 secondes avec 3600 secondes à l'aide de l' `-l 3600` option de ligne de commande, comme indiqué dans l'exemple suivant.
+
++
+[listing]
+----
+# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
+# nvme connect -t rdma -a 192.168.2.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
+----
+. Répétez l'étape 3 pour connecter le sous-système découvert sur le second chemin.
+

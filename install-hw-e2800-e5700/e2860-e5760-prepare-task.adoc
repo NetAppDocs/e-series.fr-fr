@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-prepare-task.html 
+sidebar: sidebar 
+keywords: E2860, E5760, DE460, installation 
+summary: Pour installer les systèmes E2860, E5760 ou DE460, créez un compte et enregistrez le matériel. 
+---
+= Avant l'installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment vous préparer à installer votre système de stockage E2860, E5760 ou DE460.
+
+.Étapes
+. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Assurez-vous que les éléments suivants se trouvent dans la boîte que vous avez reçue.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Matériel de montage en rack, de panneau et de tiroir
+
+
+
+ a| 
+image:../media/handles_counted.png[""]
+ a| 
+Poignées d'étagère x4
+
+|===
++
+Le tableau suivant identifie les types de câbles que vous pouvez recevoir. Si vous recevez un câble non répertorié dans le tableau, reportez-vous à la section https://hwu.netapp.com/["Hardware Universe"^] pour localiser le câble et identifier son utilisation.
+
++
+|===
+| Type de connecteur | Type de câble | Utiliser 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles Ethernet
+
+(si commandé)
+ a| 
+Connexion de gestion
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles d'E/S.
+
+(si commandé)
+ a| 
+Câblage des hôtes de données
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Câbles d'alimentation
+
+x2 par tiroir
+
+(si commandé)
+ a| 
+Mise sous tension du système de stockage
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+Câbles SAS (inclus uniquement avec les tiroirs disques)
+ a| 
+Câblage des tiroirs
+
+|===
+. Assurez-vous de fournir les éléments suivants.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Tournevis Phillips n°2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Lampe de poche
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+Bracelet ESD
+
+
+
+ a| 
+image:../media/4u_dummy.png[""]
+ a| 
+Espace rack 4U : 19 pouces standard (48.30 cm) rack pour s'adapter aux tiroirs 4U des dimensions suivantes.
+
+*Profondeur*: 38.25 po. (97.16 cm)
+
+*Largeur*: 17.66 po. (44.86 cm)
+
+*Hauteur*: 6.87 po. (17.46 cm)
+
+*Poids max*: 250 lb (113 kg)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Navigateur pris en charge pour le logiciel de gestion :
+
+** Google Chrome (version 47 et ultérieure)
+** Microsoft Internet Explorer (version 11 et ultérieure)
+** Microsoft Edge (EdgeHTML 12 et version ultérieure)
+** Mozilla Firefox (version 31 et ultérieure)
+** Safari (version 9 et ultérieure)
+
+
+|===
+

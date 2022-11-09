@@ -1,0 +1,126 @@
+---
+permalink: config-linux/nvme-fc-access-virtual-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volumes virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction de votre version de Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles. 
+---
+= Accès aux volumes NVMe pour les cibles de périphériques virtuels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction du système d'exploitation (et de la méthode de chemins d'accès multiples de l'extension) que vous utilisez.
+
+Pour RHEL 7 et SLES 12, les E/S sont dirigées vers des cibles de périphériques virtuels par l'hôte Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles.
+
+
+
+== Les périphériques virtuels correspondent à des cibles d'E/S.
+
+Assurez-vous que vous exécutez des E/S uniquement sur les périphériques virtuels créés par DM-MP et non sur les chemins des périphériques physiques. Si vous exécutez des E/S sur les chemins physiques, DM-MP ne peut pas gérer un événement de basculement et les E/S échouent.
+
+Vous pouvez accéder à ces périphériques de bloc via le `dm` le périphérique ou le `symlink` dans `/dev/mapper`; par exemple :
+
+[listing]
+----
+/dev/dm-1
+/dev/mapper/eui.00001bc7593b7f5f00a0980000af4462
+----
+
+
+== Exemple
+
+L'exemple de sortie suivant de l' `nvme list` La commande affiche le nom du nœud hôte et sa corrélation avec l'ID de l'espace de noms.
+
+[listing]
+----
+
+NODE         SN           MODEL           NAMESPACE
+
+/dev/nvme1n1 021648023072 NetApp E-Series 10
+/dev/nvme1n2 021648023072 NetApp E-Series 11
+/dev/nvme1n3 021648023072 NetApp E-Series 12
+/dev/nvme1n4 021648023072 NetApp E-Series 13
+/dev/nvme2n1 021648023151 NetApp E-Series 10
+/dev/nvme2n2 021648023151 NetApp E-Series 11
+/dev/nvme2n3 021648023151 NetApp E-Series 12
+/dev/nvme2n4 021648023151 NetApp E-Series 13
+----
+|===
+| Colonne | Description 
+
+
+ a| 
+`Node`
+ a| 
+Le nom du nœud comprend deux parties :
+
+* La notation `nvme1` Représente le contrôleur A et `nvme2` Représente le contrôleur B.
+* La notation `n1`, `n2`, etc. représentent l'identificateur de l'espace de noms du point de vue de l'hôte. Ces identificateurs sont répétés dans le tableau, une fois pour le contrôleur A et une fois pour le contrôleur B.
+
+
+
+
+ a| 
+`Namespace`
+ a| 
+La colonne namespace répertorie l'ID d'espace de noms (NSID), qui est l'identifiant du point de vue de la matrice de stockage.
+
+|===
+Dans les sections suivantes `multipath -ll` sortie, les chemins optimisés sont affichés avec un `prio` valeur de 50, alors que les chemins non optimisés sont affichés avec un `prio` valeur de 10.
+
+Le système d'exploitation Linux achemine les E/S vers le groupe de chemins indiqué comme `status=active`, pendant que les groupes de chemins sont répertoriés comme `status=enabled` sont disponibles pour le basculement.
+
+[listing]
+----
+eui.00001bc7593b7f500a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- #:#:#:# nvme1n1 259:5 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+  `- #:#:#:# nvme2n1 259:9  active ready running
+
+eui.00001bc7593b7f5f00a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=0 status=enabled
+| `- #:#:#:# nvme1n1 259:5 failed faulty running
+`-+- policy='service-time 0' prio=10 status=active
+  `- #:#:#:# nvme2n1 259:9  active ready running
+----
+|===
+| Article | Description 
+
+
+ a| 
+`policy='service-time 0' prio=50 status=active`
+ a| 
+Et la ligne suivante le montrent `nvme1n1`, Qui est l'espace de noms avec un NSID de 10, est optimisé sur le chemin avec un `prio` valeur de 50 et a `status` valeur de `active`.
+
+Cet espace de nom est détenu par le contrôleur A.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=enabled`
+ a| 
+Cette ligne affiche le chemin de basculement pour l'espace de noms 10, avec un `prio` valeur de 10 et a `status` valeur de `enabled`. Pour le moment, les E/S ne sont pas dirigées vers le namespace sur ce chemin.
+
+Ce namespace est détenu par le contrôleur B.
+
+
+
+ a| 
+`policy='service-time 0' prio=0 status=enabled`
+ a| 
+Cet exemple montre ``multipath -ll``Sortie d'un point différent dans le temps, pendant le redémarrage du contrôleur A. Le chemin d'accès au namespace 10 est indiqué en avec un `prio` valeur de 0 et a `status` valeur de `enabled`.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=active`
+ a| 
+Notez que le `active` chemin fait référence à `nvme2`, De sorte que les E/S sont dirigées sur ce chemin vers le contrôleur B.
+
+|===

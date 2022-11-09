@@ -1,0 +1,150 @@
+---
+permalink: upgrade-santricity/overview-upgrade-consider-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Examinez les critères de mise à niveau du logiciel et des firmwares du contrôleur SANtricity OS de la baie de stockage, ainsi que son firmware. 
+---
+= Mise à niveau
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour garantir la réussite de la mise à niveau, consultez les considérations suivantes.
+
+
+
+== Mises à niveau du contrôleur (uniques ou multiples)
+
+Étudiez ces considérations clés avant de mettre à niveau les contrôleurs.
+
+
+
+=== Versions actuelles
+
+Vous pouvez afficher les versions actuelles de votre logiciel et micrologiciel, comme suit :
+
+* Si vous utilisez un seul contrôleur, utilisez l'interface SANtricity System Manager. Accédez au menu :support[Upgrade Center], puis cliquez sur le lien *Software and Firmware Inventory*.
+* Pour plusieurs contrôleurs, utilisez l'interface SANtricity Unified Manager. Accédez à la page *gérer* pour les matrices de stockage découvertes. Les versions sont affichées dans la colonne *SANtricity OS Software*. Les informations relatives au micrologiciel du contrôleur et à la NVSRAM sont disponibles dans une boîte de dialogue contextuelle lorsque vous cliquez sur la version du système d'exploitation SANtricity dans chaque ligne.
+
+
+
+
+=== Composants inclus dans la mise à niveau
+
+Les composants suivants sont inclus dans le processus de mise à niveau de SANtricity OS :
+
+* *System Manager* -- System Manager est le logiciel qui gère la baie de stockage.
+* *Micrologiciel de contrôleur* -- le micrologiciel de contrôleur gère les E/S entre les hôtes et les volumes.
+* *Micrologiciel IOM* -- le firmware du module d'E/S (IOM) gère la connexion entre un contrôleur et un tiroir de disque. Il surveille également l'état des composants.
+* *Supervisor Software* -- le logiciel Supervisor est la machine virtuelle sur un contrôleur dans lequel le logiciel s'exécute.
+
+
+
+
+=== Composants à mettre à niveau séparément
+
+Les composants suivants doivent être mis à niveau séparément :
+
+* *NVSRAM de contrôleur* -- NVSRAM de contrôleur est un fichier de contrôleur qui spécifie les paramètres par défaut des contrôleurs. Les instructions de mise à niveau de la NVSRAM sont fournies avec les instructions de mise à niveau des contrôleurs.
+* *Micrologiciel de lecteur* -- Voir link:upgrade-drive-firmware-task.html["Mettre à niveau le micrologiciel du lecteur"] pour obtenir des instructions séparées.
+* *Multipath/failover driver* -- dans le cadre du processus de mise à niveau, le pilote multipath/failover de l'hôte peut également avoir besoin d'être mis à niveau afin que l'hôte puisse interagir correctement avec les contrôleurs. Si des hôtes exécutant d'autres systèmes d'exploitation que Microsoft Windows disposent de connexions d'E/S au système de stockage, mettez à niveau les pilotes multichemins pour ces hôtes. Pour plus d'informations sur la compatibilité, reportez-vous à la section https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^]. Pour obtenir des instructions de mise à niveau, reportez-vous à la link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+* *SANtricity Unified Manager* -- Unified Manager gère plusieurs systèmes de stockage, notamment les systèmes E2800, E5700, EF300 et EF600. Unified Manager fait partie du proxy de services Web SANtricity, un serveur d'API RESTful installé séparément sur un système hôte et permettant de gérer des centaines de systèmes de stockage NetApp E-Series existants et nouveaux. Pour plus d'informations, voir link:../web-services-proxy/index.html["Présentation du proxy de services Web SANtricity"].
+* *Utilitaires* -- d'autres utilitaires de gestion nécessitent des mises à niveau distinctes, telles que l'utilitaire hôte Windows de SANtricity, l'utilitaire hôte SANtricity Linux et SANtricity Windows DSM. Pour plus d'informations sur ces utilitaires, reportez-vous au link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"].
+* *Systèmes existants* -- si votre système de stockage fait partie d'un réseau de stockage qui comprend des systèmes de stockage plus anciens, vous devrez peut-être utiliser la fenêtre de gestion d'entreprise SANtricity Storage Manager (EMW) existante pour offrir une vue d'entreprise de tous vos systèmes de stockage. Dans ce cas, vérifiez s'il existe une version de maintenance plus récente de SANtricity Storage Manager.
+
+
+
+
+=== Doubles contrôleurs et traitement des E/S.
+
+Si une baie de stockage contient deux contrôleurs et qu'un pilote multivoie est installé, la baie de stockage peut continuer à traiter les E/S pendant la mise à niveau. Pendant la mise à niveau, la procédure suivante se produit :
+
+. Le contrôleur A bascule de toutes ses LUN vers le contrôleur B.
+. La mise à niveau se produit sur le contrôleur A.
+. Le contrôleur A revient ses LUN et toutes les LUN du contrôleur B.
+. La mise à niveau se produit sur le contrôleur B.
+
+
+Une fois la mise à niveau terminée, vous devrez peut-être redistribuer manuellement les volumes entre les contrôleurs afin de garantir que les volumes reviennent au contrôleur propriétaire approprié.
+
+
+
+=== Vérification de l'état
+
+Un contrôle de l'état de santé est exécuté dans le cadre du processus de mise à niveau. Ce contrôle de l'état de santé évalue tous les composants de la baie de stockage pour vérifier que la mise à niveau peut se poursuivre. Les conditions suivantes peuvent empêcher la mise à niveau :
+
+* Disques affectés en panne
+* Disques de secours en cours d'utilisation
+* Groupes de volumes incomplets
+* Opérations exclusives en cours d'exécution
+* Volumes manquants
+* Contrôleur en état non optimal
+* Nombre excessif d'événements du journal des événements
+* Échec de validation de la base de données de configuration
+* Lecteurs avec les anciennes versions de DACstore
+
+
+Vous pouvez également exécuter le contrôle d'état de pré-mise à niveau séparément sans effectuer de mise à niveau.
+
+
+
+=== Mise à niveau immédiate ou échelonnée
+
+Vous pouvez activer la mise à niveau immédiatement ou la préparer ultérieurement. Vous pouvez choisir de l'activer ultérieurement pour les raisons suivantes :
+
+* *Temps de jour* -- l'activation du logiciel peut prendre un certain temps, vous pouvez donc attendre que les charges d'E/S soient plus légères. Selon la charge d'E/S et la taille du cache, une mise à niveau du contrôleur peut prendre entre 15 et 25 minutes. Les contrôleurs redémarrent et basculent pendant l'activation pour que les performances soient inférieures à la normale jusqu'à la fin de la mise à niveau.
+* *Type de paquet* -- vous pouvez tester le nouveau logiciel et le nouveau micrologiciel sur une matrice de stockage avant de mettre à niveau les fichiers sur d'autres matrices de stockage.
+
+
+
+
+== Mise à niveau du firmware des disques
+
+Passez en revue ces considérations clés avant de mettre à niveau le micrologiciel de votre lecteur.
+
+
+
+=== Compatibilité des lecteurs
+
+Chaque fichier de micrologiciel de lecteur contient des informations sur le type de lecteur sur lequel le micrologiciel s'exécute. Vous ne pouvez télécharger le fichier de micrologiciel spécifié que sur un lecteur compatible. System Manager vérifie automatiquement la compatibilité lors du processus de mise à niveau.
+
+
+
+=== Méthodes de mise à niveau
+
+Il existe deux types de méthodes de mise à niveau du micrologiciel des lecteurs : en ligne et hors ligne.
+
+|===
+| Mise à niveau en ligne | Mise à niveau hors ligne 
+
+
+ a| 
+Lors d'une mise à niveau en ligne, les disques sont mis à niveau séquentiellement, un à la fois. La baie de stockage continue de traiter les E/S pendant la mise à niveau. Il n'est donc pas nécessaire d'arrêter les E/S. Si un lecteur peut effectuer une mise à niveau en ligne, la méthode en ligne est utilisée automatiquement.
+
+Les lecteurs qui peuvent effectuer une mise à niveau en ligne sont les suivants :
+
+* Disques dans un pool optimal
+* Disques dans un groupe de volumes redondants optimal (RAID 1, RAID 5 et RAID 6)
+* Disques non assignés
+* Disques de secours de secours
+
+
+L'exécution d'une mise à niveau du firmware de disque en ligne peut prendre plusieurs heures, exposant ainsi la baie de stockage à des pannes de volume potentielles. Une défaillance de volume peut se produire dans les cas suivants :
+
+* Dans un groupe de volumes RAID 1 ou RAID 5, un disque tombe en panne pendant la mise à niveau d'un autre disque du groupe de volumes.
+* Dans un pool ou un groupe de volumes RAID 6, deux disques tombent en panne pendant la mise à niveau d'un autre disque dans le pool ou le groupe de volumes.
+
+ a| 
+Lors d'une mise à niveau hors ligne, tous les lecteurs du même type sont mis à niveau en même temps. Cette méthode nécessite l'arrêt de l'activité d'E/S sur les volumes associés aux disques sélectionnés. Comme plusieurs disques peuvent être mis à niveau simultanément (en parallèle), les temps d'indisponibilité sont considérablement réduits. Si un lecteur ne peut effectuer qu'une mise à niveau hors ligne, la méthode hors ligne est utilisée automatiquement.
+
+Les lecteurs suivants DOIVENT utiliser la méthode offline :
+
+* Disques dans un groupe de volumes non redondant (RAID 0)
+* Disques dans un pool ou un groupe de volumes non optimal
+* Disques dans SSD cache
+
+
+|===

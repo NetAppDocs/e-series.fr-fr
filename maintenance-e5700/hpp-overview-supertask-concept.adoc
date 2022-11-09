@@ -1,0 +1,110 @@
+---
+permalink: maintenance-e5700/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, converting host port protocol, 
+summary: Convertissez le protocole hôte pour un système E5700. 
+---
+= Conditions requises pour modifier le protocole du port hôte E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de convertir le protocole de port hôte dans le système E5700, vérifiez les conditions requises.
+
+
+
+== Ports hôtes que vous pouvez modifier
+
+
+NOTE: Seuls les ports de base optique d'un contrôleur E5700 peuvent être convertis.
+
+La figure suivante montre le système E5700 avec ses ports hôtes de base SFP+ (optiques) *(1)* et les deux ports IB HIC *(2)* en option.
+
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 avec 2 ports 100 g edr infiniband hic avec légende]
+
+
+
+== De formation
+
+* Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure.
+* Vous devez arrêter les opérations d'E/S hôte lors de la conversion et vous ne pourrez pas accéder aux données de la baie de stockage tant que la conversion n'est pas terminée.
+* Vous devez utiliser la gestion hors bande. (Vous ne pouvez pas utiliser la gestion intrabande pour terminer cette procédure.)
+* Vous avez obtenu le matériel nécessaire à la conversion. Votre ingénieur commercial NetApp peut vous aider à déterminer le matériel dont vous avez besoin et à commander les pièces appropriées.
+* Si vous tentez de modifier les ports hôtes de la carte de base de votre baie de stockage et qu'ils utilisent actuellement des émetteurs-récepteurs SFP à double protocole (également appelés _Unified_) que vous avez achetés auprès de NetApp, vous n'avez pas besoin de modifier vos émetteurs-récepteurs SFP.
+* Assurez-vous que les émetteurs-récepteurs SFP à double protocole prennent en charge à la fois FC (à 4 Gbit/s ou 16 Gbit/s) et iSCSI (à 10 Gbit/s), mais ils ne prennent pas en charge iSCSI 1 Gbit/s. Voir link:hpp-change-host-protocol-task.html["Étape 1 : déterminez si vous disposez de SFP à double protocole"] Pour déterminer le type d'émetteurs-récepteurs SFP installés.
+
+
+
+
+== Considérations relatives à la modification du protocole hôte
+
+Les considérations relatives à la modification du protocole hôte dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
+
+Si vous utilisez une fonction de mise en miroir ou la fonction Data assurance (DA), vous devez comprendre ce qui se passe avec ces fonctions lorsque vous modifiez le protocole de port hôte.
+
+
+NOTE: Les considérations suivantes ne s'appliquent que si vous convertissez une baie de stockage déjà utilisée. Ces considérations ne s'appliquent pas si vous convertissez une nouvelle baie de stockage qui ne possède pas encore d'hôtes et de volumes définis.
+
+
+
+=== Transition de FC à iSCSI
+
+* La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole.
++
+** Si vous utilisez actuellement la mise en miroir asynchrone par l'intermédiaire de la carte de base, vous devez désactiver les relations de mise en miroir asynchrone à l'aide de ces ports avant d'appliquer le pack de fonctions.
+** Consultez l'aide en ligne de SANtricity System Manager pour supprimer tous les groupes de cohérence des miroirs et supprimer toutes les paires mises en miroir des baies de stockage locales et distantes. De plus, suivez les instructions de l'aide en ligne pour désactiver la mise en miroir asynchrone.
++
+
+NOTE: Si votre configuration contient des hôtes d'amorçage SAN connectés aux ports de la carte de base FC, vérifiez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Pour vérifier que la configuration est prise en charge sur iSCSI. Si ce n'est pas le cas, vous ne pouvez pas convertir le protocole hôte en iSCSI.
+
+
+
+* La fonctionnalité de mise en miroir synchrone n'est pas prise en charge pour iSCSI.
++
+** Si vous utilisez actuellement des relations de mise en miroir synchrone via les ports de la carte de base, vous devez désactiver ces relations de mise en miroir synchrone.
+** Consultez l'aide en ligne de SANtricity System Manager pour supprimer toutes les paires mises en miroir synchrones, qui suppriment les relations en miroir sur la baie de stockage locale et sur la baie de stockage distante. De plus, suivez les instructions de l'aide en ligne pour désactiver la duplication synchrone.
++
+
+CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone avant de les convertir en iSCSI, votre système perdra l'accès aux données et risque de perte.
+
+
+
+
+
+
+
+=== Transition de iSCSI à FC
+
+* La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole. Si vous utilisez actuellement la mise en miroir asynchrone avec les ports de la carte de base, vous devez désactiver la mise en miroir asynchrone avant de changer le protocole.
+* Consultez l'aide en ligne de SANtricity System Manager pour supprimer tous les groupes de cohérence des miroirs et supprimer toutes les paires mises en miroir des baies de stockage locales et distantes. De plus, suivez les instructions de l'aide en ligne pour désactiver la mise en miroir asynchrone.
+
+
+
+
+=== Conversion d'IB-iser en/à partir d'IB-SRP
+
+* Vous n'avez pas besoin d'apporter de modifications à votre matériel lorsque vous passez de ou à iser en SRP.
+* La fonction Data assurance (DA) n'est pas prise en charge pour SRP.
+* La fonction DA n'est pas prise en charge pour IB-SRP. Si vous utilisez actuellement cette fonctionnalité via IB-HIC et que vous souhaitez convertir ces ports de iser en SRP, vous devez désactiver définitivement DA sur tous les volumes. Consultez l'aide en ligne de SANtricity System Manager pour modifier les paramètres d'un volume afin de désactiver définitivement le paramètre d'assurance de données.
++
+
+NOTE: Une fois qu'il a été désactivé, DA ne peut pas être réactivé sur le volume.
+
+* Confirmez ce qui suit :
++
+** SANtricity System Manager est accessible via un navigateur Web.
+** Le système de stockage exécute SANtricity OS (firmware du contrôleur) version 08.40.11.00 ou ultérieure.
+
+
+
+
+
+
+=== Les opérations de mise en miroir requièrent le même protocole hôte
+
+Les opérations de mise en miroir ne sont pas affectées si les ports hôtes utilisés pour la mise en miroir conservent le même protocole après avoir appliqué le pack de fonctionnalités. Même avant d'appliquer le pack de fonctions, vous devez confirmer que tous les groupes de cohérence des miroirs sont synchronisés. Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante. Si vous avez des questions sur la procédure à suivre, consultez l'aide en ligne de SANtricity System Manager.
+
+
+NOTE: La mise en miroir asynchrone et synchrone n'est pas prise en charge pour NVMe over Fabrics. Pour désactiver la mise en miroir synchrone et asynchrone, vous pouvez utiliser le `disable storageArray feature=asyncMirror` ou `disable storageArray feature=syncMirror` commandes via l'interface de ligne de commande. Reportez-vous à la http://docs.netapp.com/ess-11/topic/com.netapp.doc.ssm-cli-115/GUID-0F156C94-C2A7-4458-A922-56439A098C09.html["Désactiver la fonction de matrice de stockage"^] Commandes de mise en miroir dans l'aide en ligne de référence des commandes CLI pour plus d'informations sur la désactivation de la mise en miroir.

@@ -1,0 +1,24 @@
+---
+permalink: config-linux/srp-ib-determine-host-port-guids-task.html 
+sidebar: sidebar 
+keywords: host port GUIDs, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Détermination des GUID des ports hôtes. 
+---
+= Déterminez les GUID des ports hôtes et définissez les paramètres recommandés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le package infiniband-diags inclut des commandes permettant d'afficher le GUID (global unique ID) de chaque port InfiniBand (IB). La plupart des distributions Linux avec OFED/RDMA prises en charge via les packages inclus disposent également du package infiniband-diags, qui inclut des commandes permettant d'afficher des informations sur le HCA.
+
+.Étapes
+. Installer le `infiniband-diags` package utilisant les commandes de gestion des packages du système d'exploitation.
+. Exécutez le `ibstat` commande permettant d'afficher les informations relatives aux ports.
+. Enregistrez les GUID de l'initiateur sur le xref:srp-ib-worksheet-concept.adoc[Feuille de travail SRP].
+. Sélectionnez les paramètres appropriés dans l'utilitaire HBA.
++
+Les paramètres appropriés pour votre configuration sont répertoriés dans la colonne Notes de l' https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+

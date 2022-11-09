@@ -1,0 +1,174 @@
+---
+permalink: maintenance-e5700/canisters-supply-replace-task.html 
+sidebar: sidebar 
+keywords: E5700 power supply, repair E5700 power supply, replace E5700 power supply, failed E5700 power supply 
+summary: 'Remplacez le bloc d"alimentation E5700 à 24 disques.' 
+---
+= Remplacement du bloc d'alimentation E5700 (24 disques)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer un bloc d'alimentation dans une baie E5700 par un tiroir de 24 disques, qui inclut les types de tiroirs suivants :
+
+* Tiroir contrôleur E5724
+* Tiroir disque DE224C
+
+
+Chaque tiroir contrôleur ou tiroir disque de 24 disques comprend deux blocs d'alimentation avec ventilateurs intégrés. Il s'agit de _blocs-ventilateurs_ dans SANtricity System Manager. En cas de panne de l'absorbeur, remplacez-le dès que possible afin d'assurer une source d'alimentation redondante et un refroidissement adéquat.
+
+Vous pouvez remplacer un bloc d'alimentation alors que la baie de stockage est sous tension et que les opérations d'E/S de l'hôte sont en cours, Tant que le deuxième bloc d'alimentation du tiroir dispose d'un état optimal et que le champ *OK pour supprimer* de la zone Détails du Recovery Guru dans SANtricity System Manager affiche *Oui*.
+
+.Avant de commencer
+* Révision link:canisters-overview-supertask-concept.html["Conditions requises pour le remplacement de l'absorbeur E5700"].
+* Passez en revue les détails du Recovery Guru afin de vérifier qu'il y a un problème avec l'alimentation. Sélectionnez *revérification* dans Recovery Guru pour vous assurer qu'aucun autre élément ne doit être traité en premier.
+* Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux. Pour obtenir de l'aide, contactez le support technique si les deux blocs d'alimentation du tiroir disposent de LED d'avertissement orange.
+
+
+.Ce dont vous avez besoin, 8217;ll
+* Une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : préparez-vous à remplacer l'alimentation électrique
+
+Préparez-vous à remplacer un bloc d'alimentation dans un tiroir contrôleur ou un tiroir disque de 24 disques.
+
+.Étapes
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+Si un problème survient au cours de cette procédure, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Dans SANtricity System Manager, déterminez quelle alimentation a échoué. Vous pouvez trouver ces informations dans la zone Détails du gourou de la restauration ou vérifier les informations affichées pour la tiroir.
++
+.. Sélectionnez *matériel*.
+.. Regardez la puissance image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] et ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Des icônes à droite des listes déroulantes *Shelf* pour déterminer quel shelf possède l'alimentation défectueuse.
++
+Si un composant est défectueux, l'une des icônes ou les deux sont rouges.
+
+.. Lorsque vous trouvez la tablette avec une icône rouge, sélectionnez *Afficher le verso de la tablette*.
+.. Sélectionnez l'une des alimentations.
+.. Dans les onglets *blocs d'alimentation* et *ventilateurs*, observez l'état des blocs d'alimentation, des blocs d'alimentation et des ventilateurs pour déterminer quelle alimentation doit être remplacée.
++
+Un composant ayant l'état *FAILED* doit être remplacé.
+
++
+
+CAUTION: Si le second boîtier d'alimentation de l'étagère ne dispose pas de l'état *optimal*, ne tentez pas de remplacer à chaud l'alimentation défectueuse. Cependant, contactez le support technique pour obtenir de l'aide.
+
+
+
+. À l'arrière de la matrice de stockage, observez les voyants d'avertissement pour localiser le bloc d'alimentation à retirer.
++
+Vous devez remplacer l'alimentation sur laquelle la LED d'avertissement est allumée.
+
++
+image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[alimentation 28 dwg 913w vue arrière maint. e5700]
+
++
+** Si le voyant d'alimentation image:../media/drw_sas_power_icon_maint-e5700.gif[""] est *vert fixe*, l'alimentation fonctionne correctement. S'il est *hors tension*, le bloc d'alimentation est défectueux, l'interrupteur CA est éteint, le cordon d'alimentation CA n'est pas correctement installé ou la tension d'entrée du cordon d'alimentation CA n'est pas dans la marge (il y a un problème à l'extrémité de la source du cordon d'alimentation CA).
++
+Si la LED attention s'allume image:../media/drw_sas_fault_icon_maint-e5700.gif[""] est de type orange fixe*, le bloc d'alimentation ou son ventilateur intégré est défectueux.
+
+
+
+
+
+
+
+== Étape 2 : retirer l'alimentation défectueuse
+
+Retirez un bloc d'alimentation défectueux pour le remplacer par un nouveau.
+
+.Étapes
+. Déballez le nouveau bloc d'alimentation et placez-le sur une surface plane à proximité de la tablette du lecteur.
++
+Conservez tous les matériaux d'emballage pour pouvoir les utiliser lors du retour de l'alimentation défectueuse.
+
+. Mettez le bloc d'alimentation hors tension et débranchez les câbles d'alimentation :
++
+.. Eteindre l'interrupteur de l'alimentation en panne.
+.. Ouvrez le dispositif de retenue du cordon d'alimentation, puis débranchez le cordon d'alimentation du bloc d'alimentation.
+.. Débranchez le cordon d'alimentation de la source d'alimentation.
+
+
+. Appuyez sur le loquet de la poignée de came du bloc d'alimentation, puis ouvrez la poignée de came pour libérer complètement le bloc d'alimentation du plan central.
++
+image::../media/drw_2600_psu_maint-e5700.gif[bloc d'alimentation drw 2600 e5700]
+
+. Utilisez la poignée de came pour faire glisser le bloc d'alimentation hors du système.
++
+
+CAUTION: Lors de la dépose d'une alimentation électrique, toujours utiliser deux mains pour soutenir son poids.
+
++
+Lorsque vous retirez le bloc d'alimentation, un volet se met en place pour bloquer la baie vide, ce qui contribue à maintenir le flux d'air et le refroidissement.
+
+
+
+
+
+== Étape 3 : installez une nouvelle alimentation
+
+Installez une nouvelle alimentation électrique pour remplacer la source d'alimentation défectueuse.
+
+.Étapes
+. Assurez-vous que l'interrupteur marche/arrêt du nouveau bloc d'alimentation est en position *arrêt*.
+. À l'aide des deux mains, soutenez et alignez les bords du bloc d'alimentation avec l'ouverture du châssis du système, puis poussez doucement le bloc d'alimentation dans le châssis à l'aide de la poignée de came.
++
+Les blocs d'alimentation sont munis de clés et ne peuvent être installés qu'une seule fois.
+
++
+
+CAUTION: N'utilisez pas de force excessive lorsque vous faites glisser le bloc d'alimentation dans le système ; vous risquez d'endommager le connecteur.
+
+. Fermez la poignée de came de façon à ce que le loquet s'enclenche en position verrouillée et que le bloc d'alimentation soit bien en place.
+. Rebranchez le câblage du bloc d'alimentation :
++
+.. Rebranchez le cordon d'alimentation au bloc d'alimentation et à la source d'alimentation.
+.. Fixez le cordon d'alimentation à l'alimentation à l'aide de la pièce de retenue du cordon d'alimentation.
+
+
+. Mettez le ventilateur sous tension.
+
+
+
+
+== Étape 4 : remplacement complet de l'alimentation électrique
+
+Vérifiez que la nouvelle alimentation fonctionne correctement, rassemblez les données de support et reprenez le fonctionnement normal.
+
+.Étapes
+. Sur le nouveau bloc d'alimentation, vérifiez que le voyant d'alimentation vert est allumé et que le voyant d'avertissement orange est éteint.
+. Dans le gourou de la restauration de SANtricity System Manager, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
+. Si une panne d'alimentation est toujours signalée, répétez les étapes de la section  2: Remove failed power supply et po  3: Install new power supply. Si le problème persiste, contactez le support technique.
+. Déposer la protection antistatique.
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
+
+
+Le remplacement de votre bloc d'alimentation est terminé. Vous pouvez reprendre les opérations normales.

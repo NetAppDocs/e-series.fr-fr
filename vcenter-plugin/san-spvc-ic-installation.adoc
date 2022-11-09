@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-installation.html 
+keywords: install vCenter plugin, installing vCenter plugin, vCenter plugin, 
+summary: Installez le plug-in de stockage SANtricity pour vCenter. 
+---
+= Installez le plug-in de stockage pour vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez installer le plug-in de stockage pour vCenter et vérifier l'enregistrement du plug-in.
+
+
+
+== Passer en revue les conditions préalables à l'installation
+
+Assurez-vous que vos systèmes répondent aux exigences suivantes :
+
+* VMware vCenter Server Appliance prend en charge les versions suivantes : 6.7U3J, 7.0U1, 7.0U2, 7.0U3 et 8.0.
+* Système d'exploitation NetApp SANtricity version 11.60.2 ou supérieure
+* Versions d'hôte d'application prises en charge : Windows 2016, Windows 2019, Windows 2022.
+* Configuration minimale requise pour le système hôte :
++
+** Mémoire système : 512 Mo
+** Espace de stockage : 275 Mo + 200 Mo (journalisation)
+
+
+
+
+
+
+== Installez le logiciel du plug-in
+
+Pour installer le logiciel du plug-in :
+
+. Copiez le fichier du programme d'installation sur l'hôte qui sera utilisé comme serveur d'applications, puis accédez au dossier où vous avez téléchargé le programme d'installation.
+. Double-cliquez sur le fichier d'installation :
++
+`santricity_storage_vcenterplugin-windows_x64-- nn.nn.nn.nnnn.exe`
+
++
+Dans le nom de fichier ci-dessus, `nn.nn.nn.nnnn` représente le numéro de version.
+
+. Lorsque l'installation démarre, suivez les invites à l'écran.
++
+Au cours de l'installation, vous êtes invité à saisir certains paramètres de configuration.
+
++
+.. Sur le premier écran, sélectionnez la langue de votre choix pour le logiciel et cliquez sur *OK*.
+.. Dans l'écran Introduction, cliquez sur *Suivant*.
+.. Dans l'écran Copyright, cliquez sur *Suivant*.
+.. Dans l'écran Contrat de licence, cochez la case accepter les termes, puis cliquez sur *Suivant*.
+.. Sélectionnez le dossier dans lequel vous souhaitez installer le logiciel, puis cliquez sur *Suivant*.
+.. Dans l'écran validation de certificat, conservez la case à cocher si vous souhaitez appliquer la validation de certificat entre le plug-in et les matrices de stockage. Avec cette mise en œuvre, les certificats de la matrice de stockage sont vérifiés pour être approuvés par rapport au plug-in. Si les certificats ne sont pas approuvés, ils ne sont pas autorisés à être ajoutés au plug-in. Si vous souhaitez remplacer la validation de certificat, décochez la case pour que toutes les matrices de stockage puissent être ajoutées au plug-in à l'aide de certificats auto-signés. Cliquez sur *Suivant*.
++
+Pour en savoir plus sur les certificats, reportez-vous à l'aide en ligne disponible à partir de l'interface du plug-in.
+
+.. Dans l'écran Port de service Web HTTPS, laissez la valeur par défaut sur 8445 ou, si nécessaire, modifiez le numéro de port. Cliquez sur *Suivant*.
+.. Dans l'écran Récapitulatif de pré-installation, cliquez sur *Suivant* pour installer les fichiers.
+.. Lorsque le message serveur Web démarré apparaît, cliquez sur *OK* pour terminer l'installation.
+.. Cliquez sur *Done*.
++
+
+NOTE: Si nécessaire, vous pouvez modifier les paramètres validation de certificat et Port de service Web après l'installation. Dans le répertoire d'installation, ouvrez le fichier wsconfig.xml. Pour supprimer la validation de certificat sur les matrices de stockage, modifiez le `env` clé, `trust.all.arrays`, à `true`. Pour modifier le port Web Services, modifiez le `sslport` valeur de la valeur de port souhaitée comprise entre 0 et 65535. Assurez-vous que le numéro de port utilisé ne se lie pas à un autre processus. Lorsque vous avez terminé, enregistrez les modifications et redémarrez le serveur Web du plug-in. Si la valeur de port du serveur Web du plug-in est modifiée après l'enregistrement du plugin sur un vCSA, alors vous devez annuler l'enregistrement et réenregistrer le plugin pour que le vCSA communique sur le port modifié au serveur Web du plugin.
+
+
+
+. Vérifiez que le serveur d'applications a bien été installé en exécutant la commande *services.msc*.
+. Vérifiez que le service serveur d'applications (VCP) *le plug-in de stockage NetApp SANtricity pour vCenter* a été installé et que le service a démarré.
+
+
+
+
+== Enregistrez le plug-in avec une appliance vCenter Server
+
+Une fois le logiciel du plug-in installé, enregistrez le plugin avec un vCSA.
+
+
+NOTE: Le plug-in ne peut être enregistré que sur un seul vCSA à la fois. Pour vous inscrire à une autre version de vCSA, vous devez annuler l'enregistrement du plug-in à partir de la version actuelle de vCSA et le désinstaller de l'hôte de l'application. Vous pouvez ensuite réinstaller le plug-in et l'enregistrer dans l'autre vCSA.
+
+. Ouvrez une invite via la ligne de commande et accédez au répertoire suivant :
++
+`<install directory>\vcenter-register\bin`
+
+. Exécutez le fichier *vcenter-register.bat* :
+`vcenter-register.bat ^
+    -action registerPlugin ^
+    -vcenterHostname <vCenter FQDN> ^
+    -username <Administrator username> ^`
+. Vérifiez que le script a réussi.
+
+
+Les journaux sont enregistrés dans `%install_dir%/working/logs/vc-registration.log`.
+
+
+
+== Vérifiez l'enregistrement du plug-in
+
+Une fois le plug-in installé et le script d'enregistrement exécuté, vérifiez que le plug-in a bien été enregistré avec vCenter Server Appliance.
+
+. Ouvrez le client vSphere vers l'appliance vCenter Server.
+. Dans la barre de menus, sélectionnez menu:Administrator[Plugins client].
+. Assurez-vous que le plug-in de stockage pour vCenter est répertorié comme *activé*.
++
+Si le plug-in est répertorié comme désactivé et qu'un message d'erreur indique qu'il ne peut pas communiquer avec le serveur d'applications, vérifiez que le numéro de port défini pour le serveur d'applications est activé pour passer par tous les pare-feu susceptibles d'être utilisés. Le numéro de port TCP (transmission Control Protocol) du serveur d'applications par défaut est 8445.
+
+

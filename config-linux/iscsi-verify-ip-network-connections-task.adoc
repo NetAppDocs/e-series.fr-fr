@@ -1,0 +1,55 @@
+---
+permalink: config-linux/iscsi-verify-ip-network-connections-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Vous vérifiez les connexions réseau au protocole Internet \(IP\) en utilisant des tests ping pour vous assurer que l"hôte et la matrice sont en mesure de communiquer.' 
+---
+= Vérifiez les connexions réseau IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
+
+.Étapes
+. Sur l'hôte, exécutez l'une des commandes suivantes, selon que les trames Jumbo sont activées ou non :
++
+** Si les trames Jumbo ne sont pas activées, exécutez la commande suivante :
++
+[listing]
+----
+ping -I <hostIP\> <targetIP\>
+----
+** Si les trames Jumbo sont activées, exécutez la commande ping avec une taille de charge utile de 8,972 octets. Les en-têtes combinés IP et ICMP sont de 28 octets, qui, lorsqu'ils sont ajoutés à la charge utile, sont égaux à 9,000 octets. Le commutateur -s règle le `packet size` bits. Le commutateur -d définit l'option de débogage. Ces options permettent de transmettre avec succès des trames jumbo de 9,000 octets entre l'initiateur iSCSI et la cible.
++
+[listing]
+----
+ping -I <hostIP\> -s 8972 -d <targetIP\>
+----
++
+Dans cet exemple, l'adresse IP cible iSCSI est `192.0.2.8`.
+
++
+[listing]
+----
+#ping -I 192.0.2.100 -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Problème a `ping` Commande à partir de l'adresse d'initiateur de chaque hôte (l'adresse IP du port Ethernet hôte utilisé pour iSCSI) vers chaque port iSCSI de contrôleur. Effectuez cette action à partir de chaque serveur hôte de la configuration, en modifiant les adresses IP si nécessaire.
++
+
+NOTE: Si la commande échoue (par exemple, renvoie la commande `Packet needs to be fragmented but DF set`), vérifiez la taille MTU (prise en charge des trames Jumbo) pour les interfaces Ethernet sur le serveur hôte, le contrôleur de stockage et les ports de switch.
+
+

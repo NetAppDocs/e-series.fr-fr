@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-check-volume-redundancy.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Vous pouvez vérifier la redondance d"un volume dans un pool ou un groupe de volumes pour déterminer si les données de ce volume sont cohérentes. Les données redondantes sont utilisées pour reconstruire rapidement les informations sur un disque de remplacement en cas de panne de l"un des disques du pool ou du groupe de volumes.' 
+---
+= Vérifier la redondance des volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sous la supervision du support technique ou conformément aux instructions du gourou de la restauration, vous pouvez vérifier la redondance d'un volume dans un pool ou un groupe de volumes afin de déterminer si les données de ce volume sont cohérentes.
+
+Les données redondantes sont utilisées pour reconstruire rapidement les informations sur un disque de remplacement en cas de panne de l'un des disques du pool ou du groupe de volumes.
+
+.Avant de commencer
+* L'état du pool ou du groupe de volumes doit être optimal.
+* Le pool ou le groupe de volumes ne doit pas avoir d'opérations de modification de volume en cours.
+* Vous pouvez vérifier la redondance sur n'importe quel niveau RAID sauf sur RAID 0, car RAID 0 ne dispose pas de redondance de données. (Les pools sont configurés uniquement en RAID 6.)
+
+
+
+NOTE: Vérifiez la redondance des volumes uniquement lorsque vous y êtes invité par le gourou de la restauration et sous la supervision du support technique.
+
+Cette vérification n'est possible que sur un pool ou un groupe de volumes à la fois. Un contrôle de redondance des volumes effectue les actions suivantes :
+
+* Analyse les blocs de données d'un volume RAID 3, d'un volume RAID 5 ou d'un volume RAID 6, et vérifie les informations de redondance de chaque bloc. (RAID 3 ne peut être affecté qu'à des groupes de volumes à l'aide de l'interface de ligne de commande.)
+* Compare les blocs de données des lecteurs RAID 1 en miroir.
+* Renvoie des erreurs de redondance si le micrologiciel du contrôleur détermine que les données sont incohérentes.
+
+
+
+NOTE: L'exécution immédiate d'une vérification de redondance sur le même pool ou groupe de volumes peut entraîner une erreur. Pour éviter ce problème, attendez une à deux minutes avant d'exécuter une autre vérification de redondance sur le même pool ou groupe de volumes.
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage contenant le pool ou le groupe de volumes.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Sélectionner le menu:tâches rares[vérifier la redondance du volume].
++
+La boîte de dialogue vérifier la redondance s'affiche.
+
+. Sélectionnez les volumes que vous souhaitez vérifier, puis tapez vérifier pour confirmer que vous souhaitez effectuer cette opération.
+. Cliquez sur *vérifier*.
++
+La vérification de la redondance du volume démarre. Les volumes du pool ou du groupe de volumes sont analysés séquentiellement, en commençant par le haut du tableau dans la boîte de dialogue. Ces actions se produisent au fur et à mesure de l'analyse de chaque volume :
+
++
+** Le volume est sélectionné dans la table des volumes.
+** L'état de la vérification de la redondance est indiqué dans la colonne État.
+** La vérification s'arrête sur tout support ou erreur de parité rencontré, puis signale l'erreur. Le tableau suivant fournit plus d'informations sur l'état de la vérification de redondance :
+
+
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| État | Description 
+
+
+| En attente | Il s'agit du premier volume à analyser, et vous n'avez pas cliqué sur Démarrer pour lancer la vérification de redondance. -Ou- l'opération de contrôle de redondance est effectuée sur d'autres volumes du pool ou du groupe de volumes. 
+
+
+| Vérification | Le volume est en cours de contrôle de redondance. 
+
+
+| Réussi | Le volume a passé le contrôle de redondance. Aucune incohérence n'a été détectée dans les informations de redondance. 
+
+
+| Échec | Le volume a échoué au contrôle de redondance. Des incohérences ont été détectées dans les informations de redondance. 
+
+
+| Erreur de support | Le support de disque est défectueux et illisible. Suivez les instructions affichées dans la fonctionnalité Recovery Guru. 
+
+
+| Erreur de parité | La parité n'est pas ce qu'elle devrait être pour une partie donnée des données. Une erreur de parité est potentiellement grave et peut entraîner une perte permanente de données. 
+|===
+====
+. Cliquez sur *Done* après avoir vérifié le dernier volume du pool ou du groupe de volumes.
+

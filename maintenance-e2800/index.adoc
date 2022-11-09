@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e2800/index.html 
+sidebar: sidebar 
+keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
+summary: Effectuez les opérations de maintenance sur les composants E2800. 
+---
+= Maintenance du matériel E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le système de stockage E2800, vous pouvez effectuer les procédures de maintenance des composants suivants.
+
+
+
+== Batteries
+
+Chaque boîtier de contrôleur comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur.
+
+
+
+== Contrôleurs
+
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager.
+
+
+
+== Canisters
+
+Les boîtiers sont constitués de trois types différents : des blocs d'alimentation (blocs d'alimentation) qui fournissent une source d'alimentation redondante et un refroidissement adéquat dans un tiroir de contrôleur ou tiroir de 24 disques de 12 ou de disques, des blocs d'alimentation qui sont utilisés pour la redondance de l'alimentation dans un tiroir de contrôleur ou un tiroir de 60 disques, les boîtiers de ventilateur utilisés pour la climatisation du tiroir de contrôleur de 60 disques ou du tiroir disque.
+
+
+
+== Disques
+
+Un lecteur est un dispositif électromagnétique mécanique qui fournit le support de stockage physique pour les données.
+
+
+
+== Cartes d'interface hôte (HIC)
+
+Une carte d'interface hôte (HIC) peut être installée en option dans un boîtier de contrôleur. Le contrôleur E2800 inclut des ports hôtes intégrés sur la carte contrôleur elle-même, ainsi que des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés au contrôleur sont appelés ports hôtes de base. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.
+
+
+
+== Protocole de port hôte
+
+Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.

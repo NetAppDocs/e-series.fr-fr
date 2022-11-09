@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-host-port-protocol-conversion-wombat.html 
+sidebar: sidebar 
+keywords: convert, protocol, host, compatibility, communication, establish, port, conversion 
+summary: 'Vous pouvez convertir le protocole d"un hôte en un protocole différent afin d"établir la compatibilité et la communication.' 
+---
+= Conversion de protocole de port hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.

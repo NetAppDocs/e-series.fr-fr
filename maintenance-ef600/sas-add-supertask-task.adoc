@@ -1,0 +1,216 @@
+---
+permalink: maintenance-ef600/sas-add-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: 'Ajoutez une carte d"extension SAS aux contrôleurs EF300 pour permettre l"extension du plateau de disque.' 
+---
+= Ajoutez une carte d'extension SAS à EF300 et EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter une carte d'extension SAS à un contrôleur EF300 ou EF600 pour permettre l'extension du plateau de lecteur.
+
+Lorsque vous ajoutez une carte d'extension SAS, vous devez mettre la baie de stockage hors tension, installer la nouvelle carte d'extension SAS et mettre de nouveau sous tension.
+
+.Avant de commencer
+* Révision link:sas-overview-supertask-concept.html["Exigences relatives au remplacement des cartes d'extension SAS EF300 et EF600"].
+* Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès.
+
+
+
+CAUTION: Cette procédure doit être effectuée avec les deux boîtiers de contrôleur. Les configurations de contrôleur HIC doivent correspondre exactement.
+
+.Ce dont vous avez besoin, 8217;ll
+* Une carte d'extension SAS compatible avec votre contrôleur.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Une zone de travail plate et sans électricité statique.
+* Un tournevis cruciforme n° 1.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : mettez le tiroir contrôleur hors ligne
+
+Mettez le tiroir contrôleur hors ligne pour ajouter en toute sécurité la carte d'extension SAS.
+
+.Étapes
+. Dans la page d'accueil de SANtricity System Manager, assurez-vous que la baie de stockage affiche un état optimal.
++
+Si le statut n'est pas optimal, utilisez le gourou de la restauration ou contactez le support technique pour résoudre le problème. Ne pas poursuivre cette procédure.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez menu :support[Centre de support > Diagnostics].
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pendant les opérations d'E/S, l'application hôte risque de perdre l'accès aux données car le stockage n'est pas accessible.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Met le tiroir contrôleur hors tension.
++
+.. Etiqueter puis débrancher les deux câbles d'alimentation du tiroir contrôleur.
+.. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+
+
+
+
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Retirez le boîtier du contrôleur pour pouvoir ajouter la nouvelle carte d'extension SAS.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
++
+image::../media/remove_controller_5.png[déposer le contrôleur 5]
+
+. A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+image::../media/remove_controller_6.png[déposer le contrôleur 6]
+
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
+
+
+
+
+== Étape 3 : ajoutez la nouvelle carte d'extension SAS
+
+Installez la carte d'extension SAS pour permettre l'extension du plateau de lecteur.
+
+.Étapes
+. Retirez le capot du boîtier du contrôleur en dévissant la vis à molette unique et en soulevant le couvercle.
+. Vérifiez que la LED verte située dans le contrôleur est éteinte.
++
+Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
+
+. À l'aide d'un tournevis cruciforme n° 1, retirez les deux vis qui fixent la façade au boîtier du contrôleur, puis retirez la façade avant.
+. Alignez la vis moletée unique de la carte d'extension SAS avec le trou correspondant du contrôleur, puis alignez le connecteur situé au bas de la carte d'extension avec le connecteur d'interface de la carte d'extension sur la carte contrôleur.
++
+Veillez à ne pas rayer ou heurter les composants au bas de la carte d'extension SAS ou en haut de la carte contrôleur.
+
+. Abaissez avec précaution la carte d'extension SAS en place et insérez le connecteur de la carte d'extension en appuyant doucement sur la carte d'extension.
+. Serrez à la main la vis moletée de la carte d'extension SAS.
++
+N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
+
+. À l'aide d'un tournevis cruciforme n° 1, fixez la façade que vous avez retirée du boîtier de contrôleur d'origine sur le nouveau boîtier de contrôleur à l'aide des deux vis.
+
+
+
+
+== Étape 4 : réinstallez le boîtier du contrôleur
+
+Après avoir installé la nouvelle carte d'extension SAS, réinstallez le boîtier du contrôleur dans le tiroir du contrôleur.
+
+.Étapes
+. Abaissez le capot du boîtier du contrôleur et fixez la vis à molette.
+. Tout en appuyant sur les poignées du contrôleur, faites glisser délicatement le boîtier du contrôleur jusqu'à ce qu'il se place dans le tiroir du contrôleur.
++
+
+NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
+
++
+image::../media/remove_controller_7.png[déposer le contrôleur 7]
+
+
+
+
+
+== Étape 5 : ajout complet de carte d'extension SAS
+
+Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.
+
+.Étapes
+. Branchez les câbles d'alimentation pour mettre le contrôleur en ligne.
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Cliquez sur Menu:matériel [support > Centre de mise à niveau] pour vous assurer que la dernière version de SANtricity OS est installée.
++
+Au besoin, installez la dernière version.
+
+. Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
++
+.. Sélectionnez menu:Storage[volumes]. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez menu:More[change Ownership] pour afficher les propriétaires de volumes.
+.. Si les volumes appartiennent tous au propriétaire préféré, passez à l'étape 6.
+.. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Accédez au menu:plus[redistribuez les volumes].
+.. Si seulement certains volumes sont renvoyés à leurs propriétaires préférés après la distribution automatique ou manuelle, vous devez vérifier le Recovery Guru pour les problèmes de connectivité hôte.
+.. S'il n'y a pas de Recovery Guru présent ou si vous suivez les étapes de Recovery guru, les volumes ne sont toujours pas retournés à leurs propriétaires préférés contactez le support.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez menu :support[Centre de support > Diagnostics].
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Répétez cette tâche avec le second boîtier de contrôleur.
+
+
+
+NOTE: Pour raccorder votre extension SAS, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage du matériel E-Series"] pour obtenir des instructions.
+
+Le processus d'ajout d'une carte d'extension SAS dans votre matrice de stockage est terminé. Vous pouvez reprendre les opérations normales.

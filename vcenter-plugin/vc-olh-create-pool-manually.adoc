@@ -1,0 +1,139 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-pool-manually.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Vous pouvez créer un pool manuellement si votre configuration ne répond pas aux exigences de configuration automatique du pool. Un pool est un ensemble de disques regroupés de manière logique. 
+---
+= Créer le pool manuellement
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez créer un pool manuellement si votre configuration ne répond pas aux exigences de configuration automatique du pool. Un pool est un ensemble de disques regroupés de manière logique.
+
+.Avant de commencer
+* Vous devez disposer d'un minimum de 11 disques avec le même type de disque (HDD ou SSD).
+* La protection contre les pertes pour les tiroirs exige que les disques du pool se trouvent dans au moins six tiroirs disques différents et qu'un tiroir disque unique ne compte pas plus de deux disques.
+* Pour protéger les pertes de tiroirs, les disques qui composent le pool doivent se trouver dans au moins cinq tiroirs différents et le pool comprend un nombre égal de tiroirs disques à partir de chaque tiroir.
+* Lors de la configuration d'une baie de stockage EF600 ou EF300, assurez-vous que chaque contrôleur a accès à un nombre égal de disques dans les 12 premiers emplacements et à un nombre égal de disques dans les 12 derniers slots. Cette configuration permet aux contrôleurs d'utiliser plus efficacement les deux bus PCIe côté disque. Pour créer un pool, vous devez utiliser tous les disques de la matrice de stockage.
+
+
+Lors de la création des pools, vous déterminez ses caractéristiques, telles que le type de disque, les capacités de sécurité, l'assurance des données (DA), la protection contre la perte de tiroirs et la protection contre la perte de tiroirs.
+
+Pour les baies de stockage EF600 et EF300, les paramètres comprennent également le provisionnement des ressources et la taille des blocs de volume.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage du pool.
+. Menu sélection:Provisioning [Configure pools and Volume Groups].
+. Cliquez sur menu:Créer [Pool].
++
+La boîte de dialogue Créer un pool s'affiche.
+
+. Saisissez un nom pour le pool.
+. (Facultatif) si vous disposez de plusieurs types de lecteur dans votre matrice de stockage, sélectionnez le type de lecteur que vous souhaitez utiliser.
++
+Le tableau des résultats répertorie tous les pools possibles que vous pouvez créer.
+
+. Sélectionnez le candidat du pool que vous souhaitez utiliser en fonction des caractéristiques suivantes, puis cliquez sur *Créer*.
++
+.Détails du champ
+====
+[cols="25h,~"]
+|===
+| Caractéristique | Utiliser 
+
+
+ a| 
+Capacité libre
+ a| 
+Affiche la capacité libre du candidat au pool dans Gio. Sélectionnez un candidat au pool disposant de la capacité requise pour les besoins de stockage de votre application. La capacité de conservation (disponible) est également répartie dans l'ensemble du pool et ne fait pas partie de la capacité disponible.
+
+
+
+ a| 
+Nombre total de disques
+ a| 
+Affiche le nombre de lecteurs disponibles dans le candidat de la réserve. Le système réserve automatiquement autant de disques que possible pour la capacité de conservation (pour chaque six disques d'un pool, le système réserve un lecteur pour la capacité de conservation). En cas de panne de disque, la capacité de préservation est utilisée pour conserver les données reconstruites.
+
+
+
+ a| 
+Taille de bloc de disque (EF300 et EF600 uniquement)
+ a| 
+Affiche la taille de bloc (taille de secteur) que les lecteurs du pool peuvent écrire. Ces valeurs peuvent comprendre :
+
+** 512 -- taille de secteur de 512 octets.
+** 4 Ko -- 4,096 octets.
+
+
+
+
+ a| 
+Sécurité
+ a| 
+Indique si ce pool candidat est composé uniquement de disques sécurisés, qui peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard).
+
+** Vous pouvez protéger votre pool avec Drive Security, mais tous les disques doivent être sécurisés pour utiliser cette fonction.
+** Si vous souhaitez créer un pool uniquement FDE, recherchez *Oui - FDE* dans la colonne sécurité. Si vous souhaitez créer un pool FIPS uniquement, recherchez *Oui - FIPS* ou *Oui - FIPS (mixte)*. « Mixte » indique une combinaison de 140-2 et 140-3 disques de niveau. Si vous utilisez un mélange de ces niveaux, sachez que le pool fonctionnera alors au niveau de sécurité inférieur (140-2).
+** Vous pouvez créer un pool composé de lecteurs qui peuvent ou non être sécurisés ou qui sont un mélange de niveaux de sécurité. Si les lecteurs du pool comprennent des lecteurs qui ne sont pas sécurisés, vous ne pouvez pas sécuriser le pool.
+
+
+
+
+ a| 
+Activer la sécurité ?
+ a| 
+Fournit l'option permettant d'activer la fonction de sécurité des lecteurs avec des lecteurs sécurisés. Si le pool est sécurisé et que vous avez créé une clé de sécurité, vous pouvez activer la sécurité en cochant la case correspondante.
+
+
+NOTE: La seule façon de supprimer la sécurité du lecteur après son activation est de supprimer le pool et d'effacer les lecteurs.
+
+
+
+ a| 
+Compatible DA
+ a| 
+Indique si Data assurance (DA) est disponible pour ce candidat de pool. DA recherche et corrige les erreurs qui peuvent se produire lorsque les données sont transférées via les contrôleurs vers les lecteurs. Si vous souhaitez utiliser DA, sélectionnez un pool qui prend en charge DA. Cette option n'est disponible que lorsque la fonction DA a été activée. Un pool peut contenir des disques compatibles DA ou non, mais tous les disques doivent être compatibles DA pour que vous puissiez utiliser cette fonction.
+
+
+
+ a| 
+Fonctionnalité de provisionnement des ressources (EF300 et EF600 uniquement)
+ a| 
+Indique si la mise en service des ressources est disponible pour ce candidat de pool. La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+
+
+ a| 
+Protection contre les pertes de tablette
+ a| 
+Indique si la protection contre les pertes de tablette est disponible. La protection contre les pertes de tiroirs garantit l'accessibilité aux données stockées dans les volumes d'un pool en cas de perte totale de communication avec un seul tiroir de disque.
+
+
+
+ a| 
+Protection contre les pertes de tiroirs
+ a| 
+Indique si la protection contre les pertes de tiroirs est disponible, qui est uniquement fournie si vous utilisez un tiroir disque contenant des tiroirs. La protection contre les pertes de tiroirs garantit l'accessibilité aux données stockées sur les volumes d'un pool en cas de perte totale de communication avec un tiroir unique dans un tiroir disque.
+
+
+
+ a| 
+Tailles de bloc de volume prises en charge (EF300 et EF600 uniquement)
+ a| 
+Affiche les tailles de blocs qui peuvent être créées pour les volumes du pool :
+
+** 512 n -- 512 octets natifs.
+** 512e -- 512 octets émulés.
+** 4 Ko -- 4,096 octets.
+
+
+|===
+====
+

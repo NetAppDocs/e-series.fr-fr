@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-reset-management-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Restaurez le certificat de gestion à l"état d"origine auto-signé en usine.' 
+---
+= Réinitialisez les certificats de gestion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour le système de gestion hébergeant le plug-in de stockage pour vCenter, vous pouvez rétablir le certificat de gestion à l'état d'origine auto-signé en usine.
+
+Cette tâche supprime le certificat de gestion actuel du système hôte sur lequel le plug-in de stockage pour vCenter est exécuté. Une fois le certificat réinitialisé, le système hôte reprend à l'aide du certificat auto-signé.
+
+.Étapes
+. Sélectionnez *gestion des certificats*.
+. Dans l'onglet *Management*, sélectionnez *Reset*.
++
+Une boîte de dialogue confirmer la réinitialisation du certificat de gestion s'ouvre.
+
+. Tapez reset dans le champ, puis cliquez sur *Réinitialiser*.
++
+Une fois que votre navigateur a été actualisé, le navigateur risque de bloquer l'accès au site de destination et de signaler que le site utilise HTTP strict transport Security. Cette condition survient lorsque vous revenez à des certificats auto-signés. Pour effacer la condition qui bloque l'accès à la destination, vous devez effacer les données de navigation du navigateur.
+
+
+
+Le système revient à utiliser le certificat auto-signé à partir du serveur. Par conséquent, le système invite les utilisateurs à accepter manuellement le certificat auto-signé pour leurs sessions.

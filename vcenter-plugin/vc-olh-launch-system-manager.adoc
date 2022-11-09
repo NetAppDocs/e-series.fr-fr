@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-launch-system-manager.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Pour gérer une baie unique, utilisez l"option de lancement pour ouvrir System Manager dans une nouvelle fenêtre de navigateur.' 
+---
+= Lancez System Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour gérer une baie unique, utilisez l'option de lancement pour ouvrir SANtricity System Manager dans une nouvelle fenêtre de navigateur.
+
+System Manager est une application intégrée au contrôleur de la baie de stockage, qui est connectée au réseau via un port de gestion Ethernet. System Manager inclut toutes les fonctions basées sur la baie. Pour accéder à System Manager, vous devez disposer d'une connexion hors bande à un client de gestion de réseau avec un navigateur Web.
+
+.Étapes
+. Dans la page *gérer*, sélectionnez une ou plusieurs matrices de stockage à gérer.
+. Cliquez sur *lancer*.
++
+Le système ouvre un nouvel onglet dans le navigateur, puis affiche la page de connexion de System Manager.
+
+. Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *connexion*.
+

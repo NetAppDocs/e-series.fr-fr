@@ -1,0 +1,388 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-provisioning.html 
+keywords: create volumes vCenter plugin, provision Plugin for vCenter, vCenter plugin storage provisioning, vCenter plugin host 
+summary: Utilisez le plug-in vCenter pour créer des volumes, attribuer des volumes aux hôtes, puis attribuer des volumes aux datastores. 
+---
+= Provisionnement du stockage dans le plug-in
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pour provisionner le stockage, vous créez des volumes, attribuez des volumes aux hôtes, puis attribuez des volumes aux datastores.
+
+
+
+== Étape 1 : créer des volumes
+
+Les volumes sont des conteneurs de données qui gèrent et organisent l'espace de stockage sur votre baie de stockage. Vous créez des volumes à partir de la capacité de stockage disponible sur votre matrice de stockage, ce qui vous aide à organiser les ressources de votre système. Le concept de "volumes" est similaire à l'utilisation de dossiers/répertoires sur un ordinateur pour organiser des fichiers pour un accès rapide.
+
+Les volumes sont la seule couche de données visible par les hôtes. Dans un environnement SAN, les volumes sont mappés à des LUN (Logical Unit Numbers). Ces LUN tiennent les données utilisateur accessibles via un ou plusieurs protocoles d'accès hôte pris en charge par la baie de stockage.
+
+.Étapes
+. Dans la page gérer, sélectionnez la matrice de stockage.
+. Sélectionnez le menu:Provisioning [Manage volumes].
+. Sélectionnez menu:Créer[volumes].
++
+La boîte de dialogue Sélectionner un hôte s'affiche.
+
+. Dans la liste déroulante, sélectionnez un hôte ou un cluster hôte spécifique auquel vous souhaitez attribuer des volumes ou choisissez d'affecter ultérieurement l'hôte ou le cluster hôte.
+. Pour continuer la séquence de création du volume pour l'hôte ou le cluster hôte sélectionné, cliquez sur *Suivant*.
++
+La boîte de dialogue Sélectionner la charge de travail s'affiche. Une charge de travail contient des volumes aux caractéristiques similaires, optimisées en fonction du type d'application pris en charge par la charge des charges de travail. Vous pouvez définir une charge de travail ou sélectionner des charges de travail existantes.
+
+. Effectuez l'une des opérations suivantes :
++
+** Sélectionnez l'option *Créer des volumes pour une charge de travail existante*, puis sélectionnez la charge de travail dans la liste déroulante.
+** Sélectionnez l'option *Créer une nouvelle charge de travail* pour définir une nouvelle charge de travail pour une application prise en charge ou pour d'autres applications, puis procédez comme suit :
++
+... Dans la liste déroulante, sélectionnez le nom de l'application pour laquelle vous souhaitez créer la nouvelle charge de travail. Sélectionnez l'une des entrées « autres » si l'application que vous souhaitez utiliser sur cette matrice de stockage n'est pas répertoriée.
+... Saisissez un nom pour la charge de travail à créer.
+
+
+
+
+. Cliquez sur *Suivant*. Si votre charge de travail est associée à un type d'application pris en charge, saisissez les informations demandées. Sinon, passez à l'étape suivante.
++
+La boîte de dialogue Ajouter/Modifier des volumes s'affiche. Dans cette boîte de dialogue, vous créez des volumes à partir de pools admissibles ou de groupes de volumes. Pour chaque pool et groupe de volumes éligibles, le nombre de disques disponibles et la capacité totale disponible s'affichent. Pour certaines charges de travail spécifiques à une application, chaque pool ou groupe de volumes éligible affiche la capacité proposée en fonction de la configuration de volume suggérée et indique la capacité libre restante en Gio. Pour les autres charges de travail, la capacité proposée s'affiche lors de l'ajout de volumes à un pool ou à un groupe de volumes, puis lorsque vous spécifiez la capacité indiquée.
+
+. Avant de commencer à ajouter des volumes, lisez les instructions du tableau suivant.
++
+[cols="25h,~"]
+|===
+| Champ | Description 
+
+
+ a| 
+Capacité libre
+ a| 
+Les volumes étant créés à partir de pools ou de groupes de volumes, le pool ou le groupe de volumes que vous sélectionnez doit avoir une capacité disponible suffisante.
+
+
+
+ a| 
+Assurance de données (DA)
+ a| 
+Pour créer un volume compatible DA, la connexion hôte que vous prévoyez d'utiliser doit prendre en charge DA.
+
+** Si vous souhaitez créer un volume DA activé, sélectionnez un pool ou un groupe de volumes qui est compatible DA (recherchez *Oui* en regard de "DA" dans la table des candidats de groupe de volumes et de pools).
+** Les fonctionnalités DE DA sont présentées au niveau du pool et du groupe de volumes. DA protection vérifie et corrige les erreurs susceptibles de se produire au fur et à mesure du transfert des données entre les contrôleurs et les disques. La sélection d'un pool ou d'un groupe de volumes capable de gérer le nouveau volume garantit la détection et la correction des erreurs éventuelles.
+** Si l'une des connexions hôte sur les contrôleurs de votre matrice de stockage ne prend pas en charge DA, les hôtes associés ne peuvent pas accéder aux données sur les volumes DA.
+
+
+
+
+ a| 
+Sécurité du lecteur
+ a| 
+Pour créer un volume sécurisé, une clé de sécurité doit être créée pour la matrice de stockage.
+
+** Si vous souhaitez créer un volume sécurisé, sélectionnez un pool ou un groupe de volumes qui est sécurisé et capable (recherchez *Oui* en regard de « sécurisé » dans la table des candidats de groupe de volumes et de pools).
+** Les fonctionnalités de sécurité des disques sont présentées au niveau du pool et du groupe de volumes. Les disques sécurisés empêchent tout accès non autorisé aux données d'un disque physiquement retiré de la baie de stockage. Un disque sécurisé crypte les données pendant les écritures et les décrypte pendant les lectures à l'aide d'une clé de cryptage unique.
+** Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
+
+
+
+
+ a| 
+Provisionnement de ressources
+ a| 
+Pour créer un volume provisionné en ressources, tous les disques doivent être des disques NVMe avec l'option DULBE (Logical Block Error) désallocation ou non écrite.
+
+|===
+. Choisissez l'une des actions suivantes selon que vous avez sélectionné « autre » ou une charge de travail spécifique aux applications à l'étape précédente :
++
+** *Autre* – cliquez sur *Ajouter un nouveau volume* dans chaque pool ou groupe de volumes que vous souhaitez utiliser pour créer un ou plusieurs volumes.
+** *Charge de travail spécifique à une application* – cliquez sur *Suivant* pour accepter les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée, ou cliquez sur *Modifier les volumes* pour modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée.
++
+Les champs suivants s'affichent.
+
++
+[cols="25h,~"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom du volume
+ a| 
+Un nom par défaut est attribué à un volume lors de la séquence de création du volume. Vous pouvez accepter le nom par défaut ou fournir une description plus détaillée indiquant le type de données stockées dans le volume.
+
+
+
+ a| 
+Capacité déclarée
+ a| 
+Définissez la capacité du nouveau volume et les unités de capacité à utiliser (MIB, Gio ou Tio). Pour les volumes épais, la capacité minimale est de 1 Mio, et la capacité maximale est déterminée par le nombre et la capacité des disques du pool ou du groupe de volumes. La capacité d'un pool est allouée par incréments de 4 Gio. Toute capacité non multiple de 4 Gio est allouée, mais non utilisable. Pour vérifier la disponibilité de toute la capacité, spécifiez la capacité par incréments de 4 Gio. Si une capacité inutilisable, le seul moyen de le récupérer est d'augmenter la capacité du volume.
+
+
+
+ a| 
+Type de Volume
+ a| 
+Si vous avez sélectionné « charge de travail spécifique aux applications », le champ Type de volume s'affiche. Indique le type de volume créé pour une charge de travail spécifique aux applications.
+
+
+
+ a| 
+Taille de bloc du volume (EF300 et EF600 uniquement)
+ a| 
+Affiche les tailles de blocs pouvant être créées pour le volume :
+
+*** 512 – 512 octets
+*** 4K à 4,096 octets
+
+
+
+
+ a| 
+Taille du segment
+ a| 
+Affiche le paramètre de dimensionnement du segment, qui apparaît uniquement pour les volumes d'un groupe de volumes. Vous pouvez modifier la taille du segment pour optimiser les performances.
+
+*Transitions de taille de segment autorisées* – le système détermine les transitions de taille de segment autorisées. Les tailles de segment qui ne sont pas appropriées à partir de la taille de segment actuelle ne sont pas disponibles dans la liste déroulante. Les transitions autorisées sont généralement deux ou la moitié de la taille de segment actuelle. Par exemple, si la taille de segment de volume actuelle est de 32 Kio, une nouvelle taille de segment de volume de 16 Kio ou 64 Kio est autorisée.
+
+*Volumes SSD cache-enabled* – vous pouvez spécifier une taille de segment de 4 Ko pour les volumes SSD cache-enabled. Veillez à sélectionner la taille de segment 4 Kio uniquement pour les volumes SSD cache prenant en charge les opérations d'E/S de blocs de petite taille (par exemple, 16 tailles de bloc d'E/S Kio ou plus petites). Les performances peuvent être affectées si vous sélectionnez 4 Kio comme taille de segment pour les volumes SSD cache qui gèrent les opérations séquentielles de blocs volumineux.
+
+*Le temps de modification de la taille du segment* – la durée de modification de la taille du segment d'un volume dépend de ces variables :
+
+*** La charge d'E/S de l'hôte
+*** Priorité de modification du volume
+*** Nombre de disques dans le groupe de volumes
+*** Nombre de canaux de transmission
+*** La puissance de traitement des contrôleurs de la baie de stockage
+
+
+Lorsque vous modifiez la taille de segment d'un volume, les performances d'E/S sont affectées, mais vos données restent disponibles.
+
+
+
+ a| 
+Sécurité
+ a| 
+*Oui* apparaît en regard de « sécurisé » uniquement si les lecteurs du pool ou du groupe de volumes sont compatibles avec le chiffrement. La sécurité du lecteur empêche tout accès non autorisé aux données d'un lecteur qui est physiquement retiré de la matrice de stockage. Cette option n'est disponible que lorsque la fonction sécurité du lecteur a été activée et qu'une clé de sécurité est configurée pour la matrice de stockage. Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
+
+
+
+| DA | *Oui* apparaît en regard de "DA" uniquement si les lecteurs du pool ou du groupe de volumes prennent en charge Data assurance (DA). DA augmente l'intégrité des données dans l'ensemble du système de stockage. DA permet à la matrice de stockage de vérifier si des erreurs peuvent se produire lorsque les données sont transférées via les contrôleurs vers les disques. L'utilisation de DA pour le nouveau volume garantit la détection de toute erreur. 
+|===
+
+
+. Pour continuer la séquence de création du volume pour l'application sélectionnée, cliquez sur *Suivant*.
+. Dans la dernière étape, examinez un récapitulatif des volumes que vous envisagez de créer et apportez les modifications nécessaires. Pour apporter des modifications, cliquez sur *Retour*. Lorsque vous êtes satisfait de la configuration de votre volume, cliquez sur *Finish*.
+
+
+
+
+== Étape 2 : création d'un accès aux hôtes et attribution de volumes
+
+Un hôte peut être créé automatiquement ou manuellement :
+
+* *Automatique* -- la création automatique d'hôte pour les hôtes basés sur SCSI (et non sur NVMe-of) est initiée par l'agent de contexte hôte (HCA). Le HCA est un utilitaire que vous pouvez installer sur chaque hôte connecté à la matrice de stockage. Chaque hôte sur lequel le HCA est installé transmet ses informations de configuration aux contrôleurs de la matrice de stockage via le chemin d'E/S. En fonction des informations sur l'hôte, les contrôleurs créent automatiquement l'hôte et les ports hôtes associés et définissent le type d'hôte. Si nécessaire, vous pouvez apporter des modifications supplémentaires à la configuration de l'hôte. Une fois que l'HCA a effectué sa détection automatique, l'hôte est automatiquement configuré avec les attributs suivants :
++
+** Nom d'hôte dérivé du nom système de l'hôte.
+** Les ports d'identifiant hôte associés à l'hôte.
+** Type de système d'exploitation hôte de l'hôte.
+
+
+
+
+
+NOTE: Le logiciel Host Context Agent pour Linux et Windows est disponible à partir de https://mysupport.netapp.com/site/downloads["Support NetApp - Téléchargements"^].
+
+
+NOTE: Les hôtes sont créés en tant qu'hôtes autonomes ; le HCA ne crée pas ou n'ajoute pas automatiquement aux clusters hôtes.
+
+* *Manuel* – lors de la création manuelle d'un hôte, vous associez des identificateurs de port hôte en les sélectionnant dans une liste ou en les saisissant manuellement. Une fois que vous avez créé un hôte, vous pouvez lui attribuer des volumes ou l'ajouter à un cluster hôte si vous prévoyez de partager l'accès aux volumes.
+
+
+
+
+=== Utilisation de l'HCA pour détecter automatiquement l'hôte
+
+Vous pouvez autoriser l'agent HCA (Host Context Agent) à détecter automatiquement les hôtes, puis vérifier que les informations sont correctes.
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez menu:Storage[hosts].
++
+Le tableau répertorie les hôtes créés automatiquement.
+
+. Vérifiez que les informations fournies par l'HCA sont correctes (nom, type d'hôte, identifiants de port hôte).
+. Si vous devez modifier l'une des informations, sélectionnez l'hôte, puis cliquez sur *Afficher/Modifier les paramètres*.
+
+
+
+
+=== Création manuelle de l'hôte
+
+Lisez les consignes suivantes :
+
+* Vous devez déjà avoir ajouté ou découvert des baies de stockage au sein de votre environnement.
+* Vous devez définir les ports d'identificateur d'hôte associés à l'hôte.
+* Assurez-vous de fournir le même nom que le nom de système attribué à l'hôte.
+* Cette opération n'a pas de succès si le nom que vous choisissez est déjà utilisé.
+* La longueur du nom ne doit pas dépasser 30 caractères.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Cliquez sur menu:Créer [hôte].
++
+La boîte de dialogue Créer un hôte s'affiche.
+
+. Sélectionnez les paramètres de l'hôte, le cas échéant.
++
+[cols="25h,~"]
+|===
+| Champ | Description 
+
+
+ a| 
+Nom
+ a| 
+Saisissez un nom pour le nouvel hôte.
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+Sélectionnez le système d'exploitation en cours d'exécution sur le nouvel hôte dans la liste déroulante.
+
+
+
+ a| 
+Type d'interface hôte
+ a| 
+(Facultatif) si plusieurs types d'interface hôte sont pris en charge sur votre baie de stockage, sélectionnez le type d'interface hôte que vous souhaitez utiliser.
+
+
+
+ a| 
+Ports hôtes
+ a| 
+Effectuez l'une des opérations suivantes :
+
+** *Sélectionner l'interface d'E/S* -- généralement, les ports d'hôte doivent avoir ouvert une session et être disponibles dans la liste déroulante. Vous pouvez sélectionner les identificateurs de port hôte dans la liste.
+** *Ajout manuel* -- si un identificateur de port hôte n'est pas affiché dans la liste, cela signifie que le port hôte n'est pas connecté. Un utilitaire HBA ou l'utilitaire d'initiateur iSCSI peut être utilisé pour rechercher les identificateurs de port hôte et les associer à l'hôte.
+
+
+Vous pouvez saisir manuellement les identificateurs de port hôte ou les copier/coller à partir de l'utilitaire (un par un) dans le champ ports hôte.
+
+Vous devez sélectionner un identificateur de port hôte à la fois pour l'associer à l'hôte, mais vous pouvez continuer à sélectionner autant d'identificateurs qui sont associés à l'hôte. Chaque identifiant est affiché dans le champ ports hôte. Si nécessaire, vous pouvez également supprimer un identificateur en sélectionnant *X* en regard de celui-ci.
+
+
+
+ a| 
+Définissez le secret de l'initiateur CHAP
+ a| 
+(Facultatif) si vous avez sélectionné ou saisi manuellement un port hôte avec un IQN iSCSI, et si vous souhaitez avoir besoin d'un hôte qui tente d'accéder à la matrice de stockage pour s'authentifier à l'aide du protocole CHAP (Challenge Handshake Authentication Protocol), cochez la case *Set CHAP initiator secret*. Pour chaque port hôte iSCSI que vous avez sélectionné ou saisi manuellement, procédez comme suit :
+
+** Entrez le même code secret CHAP qui a été défini sur chaque initiateur hôte iSCSI pour l'authentification CHAP. Si vous utilisez l'authentification CHAP mutuelle (authentification bidirectionnelle permettant à un hôte de se valider sur la baie de stockage et pour qu'une baie de stockage se valide sur l'hôte), vous devez également définir le secret CHAP pour la baie de stockage lors de la configuration initiale ou en modifiant les paramètres.
+** Laissez le champ vide si vous n'avez pas besoin d'une authentification de l'hôte.
+
+
+Actuellement, la seule méthode d'authentification iSCSI utilisée est CHAP.
+
+|===
+. Cliquez sur *Créer*.
+. Si vous devez mettre à jour les informations sur l'hôte, sélectionnez-le dans le tableau et cliquez sur *Afficher/Modifier les paramètres*.
++
+Une fois l'hôte créé, le système crée un nom par défaut pour chaque port hôte configuré pour l'hôte (libellé utilisateur). L'alias par défaut est `<Hostname_Port Number>`. Par exemple, l'alias par défaut du premier port créé pour l'IPT hôte est `IPT_1`.
+
+. Ensuite, vous devez attribuer un volume à un hôte ou à un cluster hôte afin qu'il puisse être utilisé pour les opérations d'E/S. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez l'hôte ou le cluster hôte auquel vous souhaitez affecter des volumes, puis cliquez sur *attribuer des volumes*.
++
+Une boîte de dialogue s'affiche et répertorie tous les volumes pouvant être affectés. Vous pouvez trier n'importe quelle colonne ou saisir quelque chose dans la zone filtre pour faciliter la recherche de volumes particuliers.
+
+. Cochez la case en regard de chaque volume que vous souhaitez attribuer ou cochez la case de l'en-tête du tableau pour sélectionner tous les volumes.
+. Cliquez sur *attribuer* pour terminer l'opération.
++
+Le système effectue les opérations suivantes :
+
++
+** Le volume affecté reçoit le prochain numéro de LUN disponible. L'hôte utilise le numéro de LUN pour accéder au volume.
+** Le nom de volume fourni par l'utilisateur apparaît dans les listes de volumes associées à l'hôte. Le cas échéant, le volume d'accès configuré en usine apparaît également dans les listes de volumes associées à l'hôte.
+
+
+
+
+
+
+== Étape 3 : création d'un datastore dans vSphere client
+
+Pour créer un datastore dans le client vSphere, reportez-vous à la rubrique suivante de VMware Doc Center :
+
+* https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-7EB0CE06-02DD-4B31-85C7-E54993CC06DC.html["Créez un datastore VMFS dans le client vSphere"^]
+
+
+
+
+=== Augmentez la capacité du datastore existant en augmentant la capacité des volumes
+
+Vous pouvez augmenter la capacité indiquée (la capacité signalée aux hôtes) d'un volume en utilisant la capacité disponible dans le pool ou le groupe de volumes.
+
+Assurez-vous que :
+
+* Une capacité disponible suffisante est disponible dans le pool ou le groupe de volumes associé du volume.
+* Le volume est optimal et ne présente aucun état de modification.
+* Aucun disque de secours n'est utilisé dans le volume. (S'applique uniquement aux volumes de groupes de volumes.)
+
+
+
+NOTE: L'augmentation de la capacité d'un volume n'est prise en charge que sur certains systèmes d'exploitation. Si vous augmentez la capacité du volume sur un système d'exploitation hôte qui ne prend pas en charge l'extension de LUN, la capacité étendue est inutilisable et vous ne pouvez pas restaurer la capacité du volume d'origine.
+
+.Étapes
+. Accédez au plug-in dans vSphere client.
+. Dans le plug-in, sélectionnez la matrice de stockage souhaitée.
+. Cliquez sur *Provisioning* et sélectionnez *Manage volumes*.
+. Sélectionnez le volume pour lequel vous souhaitez augmenter la capacité, puis sélectionnez *augmenter la capacité*.
++
+La boîte de dialogue confirmer l'augmentation de la capacité s'affiche.
+
+. Sélectionnez *Oui* pour continuer.
++
+La boîte de dialogue augmenter la capacité déclarée s'affiche.
+
++
+Cette boîte de dialogue affiche la capacité actuelle signalée du volume et la capacité disponible dans le pool ou le groupe de volumes associé du volume.
+
+. Utilisez la case *augmenter la capacité signalée en ajoutant...* pour ajouter de la capacité à la capacité actuellement disponible. Vous pouvez modifier la valeur de capacité pour l'afficher en mébioctets (Mio), gibioctets (Tio) ou tébioctets (Tio).
+. Cliquez sur *augmenter*.
+. Affichez le volet tâches récentes pour connaître la progression de l'opération augmenter la capacité en cours d'exécution pour le volume sélectionné. Cette opération peut être longue et peut affecter les performances du système.
+. Une fois la capacité du volume terminée, vous devez augmenter manuellement la taille de VMFS pour la mettre en correspondance, comme décrit dans la rubrique suivante :
++
+** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^]
+
+
+
+
+
+
+=== Augmentation de la capacité du datastore existant en ajoutant des volumes
+
+. Vous pouvez augmenter la capacité d'un datastore en ajoutant des volumes. Suivez les étapes de la section  1: Create volumes.
+. Ensuite, attribuez les volumes à l'hôte souhaité pour augmenter la capacité du datastore. Reportez-vous à la rubrique suivante :
++
+** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^]
+
+
+

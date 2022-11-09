@@ -1,0 +1,113 @@
+---
+permalink: cloud-connector/restore-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector restore, 
+summary: 'Vous pouvez accéder à l"option Restaurer dans le panneau de navigation gauche de l"application SANtricity Cloud Connector. L"option Restaurer affiche la page Restaurer, qui vous permet de créer de nouveaux travaux de restauration basés sur des images ou des fichiers.' 
+---
+= Restaurations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez accéder à l'option Restaurer dans le panneau de navigation gauche de l'application SANtricity Cloud Connector. L'option Restaurer affiche la page Restaurer, qui vous permet de créer de nouveaux travaux de restauration basés sur des images ou des fichiers.
+
+SANtricity Cloud Connector s'appuie sur ce concept pour effectuer la restauration réelle d'un volume E-Series. Avant d'effectuer une restauration, vous devez identifier le volume E-Series à utiliser pour l'opération. Après avoir ajouté un volume E-Series à des fins de restauration sur l'hôte SANtricity Cloud Connector, vous pouvez utiliser la `Restore` Page de l'application SANtricity Cloud Connector pour créer et traiter les restaurations
+
+
+NOTE: Tous les horodatages pour les tâches de sauvegarde et de restauration répertoriées sous l'application SANtricity Cloud Connector utilisent une heure locale.
+
+
+
+== Créer une nouvelle restauration basée sur l'image
+
+Vous pouvez créer de nouvelles restaurations basées sur des images via la fonction Créer sur la page Restaurer de l'application SANtricity Cloud Connector.
+
+Vérifiez que vous disposez d'une sauvegarde basée sur des images disponible via SANtricity Cloud Connector.
+
+.Étapes
+. Dans la page Restaurer de l'application SANtricity Cloud Connector, cliquez sur *Créer*.
++
+La fenêtre Restaurer s'affiche.
+
+. Sélectionnez la sauvegarde souhaitée.
+. Cliquez sur *Suivant*.
++
+La page Sélectionner un point de sauvegarde s'affiche dans la fenêtre Restaurer.
+
+. Sélectionnez la sauvegarde terminée souhaitée.
+. Cliquez sur *Suivant*.
++
+La page Sélectionner la cible de restauration s'affiche dans la fenêtre Restaurer.
+
+. Sélectionnez le volume de restauration et cliquez sur *Suivant*.
++
+La page Revue s'affiche dans la fenêtre Restaurer.
+
+. Vérifiez l'opération de restauration sélectionnée et cliquez sur *Terminer*.
++
+La restauration du volume hôte cible sélectionné est lancée et l'état de la tâche s'affiche dans la section liste des résultats de la page Restaurer.
+
+
+
+
+
+== Créer une nouvelle restauration basée sur des fichiers
+
+Vous pouvez créer de nouvelles restaurations basées sur des fichiers via la fonction Créer de la page Restaurer de l'application SANtricity Cloud Connector.
+
+Vérifiez que vous disposez d'une sauvegarde basée sur des fichiers disponible via SANtricity Cloud Connector.
+
+.Étapes
+. Dans la page Restaurer de l'application SANtricity Cloud Connector, cliquez sur *Créer*.
++
+La fenêtre Restaurer s'affiche.
+
+. Dans la fenêtre Restaurer, sélectionnez la sauvegarde basée sur les fichiers souhaitée.
+. Cliquez sur *Suivant*.
++
+La page Sélectionner un point de sauvegarde s'affiche dans la fenêtre Créer un travail de restauration.
+
+. Dans la page Sélectionner un point de sauvegarde, sélectionnez la sauvegarde terminée souhaitée.
+. Cliquez sur *Suivant*.
++
+La liste des systèmes de fichiers ou dossiers/fichiers disponibles s'affiche dans la fenêtre Restaurer.
+
+. Sélectionnez les dossiers ou fichiers à restaurer et cliquez sur *Suivant*.
++
+La page Sélectionner la cible de restauration s'affiche dans la fenêtre Restaurer.
+
+. Sélectionnez le volume de restauration et cliquez sur *Suivant*.
++
+La page Revue s'affiche dans la fenêtre Restaurer.
+
+. Vérifiez l'opération de restauration sélectionnée et cliquez sur *Terminer*.
++
+La restauration du volume hôte cible sélectionné est lancée et l'état de la tâche s'affiche dans la section liste des résultats de la page Restaurer.
+
+
+
+
+
+== Supprimer une restauration
+
+Vous pouvez utiliser la fonction Supprimer pour supprimer un élément de restauration sélectionné de la section liste des résultats de la page Restaurer.
+
+Assurez-vous qu'il y a un travail de restauration dont l'état est terminé, échec ou annulé.
+
+.Étapes
+. Dans la page Restaurer, cliquez sur *Supprimer*.
++
+La fenêtre confirmer la suppression s'affiche.
+
+. Dans le champ *Type delete*, saisissez `delete` pour confirmer l'action de suppression.
+. Cliquez sur *Supprimer*.
++
+
+NOTE: Vous ne pouvez pas supprimer une restauration suspendue.
+
++
+La restauration sélectionnée est supprimée.
+
+

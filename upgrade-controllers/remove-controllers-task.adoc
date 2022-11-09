@@ -1,0 +1,84 @@
+---
+permalink: upgrade-controllers/remove-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+summary: 'La première étape de la mise à niveau des contrôleurs est d"enlever les anciens contrôleurs et, éventuellement, la batterie.' 
+---
+= Supprimer les contrôleurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir préparé la mise à niveau, vous pouvez retirer les contrôleurs et, si nécessaire, retirer la batterie.
+
+
+
+== Étape 1 : retirer le contrôleur
+
+Retirez le boîtier du contrôleur pour pouvoir le mettre à niveau avec un nouveau. Vous devez débrancher tous les câbles et retirer les émetteurs-récepteurs SFP. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
+
+.Ce dont vous avez besoin, 8217;ll
+* Un bracelet antistatique ou prendre d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+
+
+Effectuez les opérations suivantes pour chaque contrôleur du plateau du lecteur de contrôleur
+
+Si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié à l'ancien boîtier du contrôleur. Selon la configuration HIC, vous pourrez peut-être reconnecter certains câbles après avoir remplacé le boîtier du contrôleur.
+. Débranchez tous les câbles d'interface et Ethernet de l'ancien boîtier du contrôleur.
++
+Si des câbles à fibre optique sont présents, vous pouvez utiliser les deux leviers de déverrouillage pour retirer partiellement le boîtier du contrôleur. L'ouverture de ces leviers de déverrouillage facilite l'abaissement de la languette de dégagement du câble à fibre optique.
+
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si l'ancien boîtier de contrôleur contient une HIC Fibre Channel ou une HIC InfiniBand, retirez les émetteurs-récepteurs enfichables à petit format (SFP+) (pour Fibre Channel) ou les émetteurs-récepteurs QSFP+ (pour InfiniBand) (pour InfiniBand) de la HIC et conservez-les pour une réutilisation éventuelle.
+. Déposer le contrôleur A.
++
+.. Déverrouillez et faites pivoter les poignées de déverrouillage pour libérer le boîtier du contrôleur.
+.. A l'aide des poignées de déverrouillage et des mains, tirez le boîtier du contrôleur hors du plateau du lecteur du contrôleur
++
+La figure suivante est un exemple de l'emplacement général des poignées de version sur les modèles de contrôleur. La configuration des tiroirs contrôleurs et des tiroirs disques à contrôleurs est similaire pour les poignées de version.
+
++
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+
++
+*(1)* _canister_
+
++
+*(2)* _poignée de came_
+
+
+
+. Placez l'ancien boîtier du contrôleur sur une surface plane et sans électricité statique près du plateau d'entraînement du contrôleur avec les leviers de dégagement vers le haut. Positionner le boîtier du contrôleur de manière à pouvoir accéder au capot supérieur.
+. (Conditionnel) si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur.
+
+
+Si vous avez l'intention d'utiliser la batterie de l'ancien contrôleur du nouveau contrôleur, passez à la section suivante ; sinon, passez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].
+
+
+
+== Étape 2 : déposer la batterie
+
+Retirez la batterie uniquement si vous prévoyez d'utiliser la batterie de l'ancien boîtier du contrôleur dans le nouveau boîtier du contrôleur.
+
+.Étapes
+. Appuyez sur les deux boutons de verrouillage du capot supérieur de l'ancien boîtier du contrôleur et faites glisser le capot supérieur vers l'arrière du boîtier.
+. Effectuez l'une des options suivantes, en fonction de votre modèle de plateau de contrôleur, pour libérer l'ancienne batterie :
++
+** Pour le plateau du contrôleur E2600 ou E2700, dévissez la vis qui fixe la batterie au boîtier du contrôleur.
+** Pour les E5400, EF540, E5500, EF550, E5600, Ou le plateau du lecteur de contrôleur EF600, libérez la languette qui fixe la batterie au boîtier du contrôleur.
+
+
+. Retirez la batterie en la faisant glisser vers l'arrière de l'ancien boîtier du contrôleur.
+
+
+Accédez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].

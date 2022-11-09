@@ -1,0 +1,36 @@
+---
+permalink: web-services-proxy/index.html 
+sidebar: sidebar 
+keywords: Web Services Proxy, WSP, 
+summary: 'Présentation du proxy de services Web SANtricity®, de l"API de services Web, de L"API REST,' 
+---
+= Présentation du proxy de services Web SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Web Services Proxy est un serveur API RESTful installé séparément sur un système hôte afin de gérer des centaines de systèmes de stockage NetApp E-Series existants et nouveaux. Le proxy inclut SANtricity Unified Manager, une interface web qui fournit des fonctions similaires.
+
+
+
+== Présentation de l'installation
+
+L'installation et la configuration du proxy de services Web implique les étapes suivantes :
+
+. link:install-reqs-task.html["Examinez les conditions d'installation et de mise à niveau"].
+. link:install-wsp-task.html["Téléchargez et installez le fichier Web Services Proxy"].
+. link:install-login-task.html["Connectez-vous aux API et à Unified Manager"].
+. link:install-config-task.html["Configurer le proxy de services Web"].
+
+
+
+
+== Trouvez plus d'informations
+
+* Unified Manager -- l'installation proxy inclut SANtricity Unified Manager, une interface web qui permet d'accéder à une configuration plus récente des systèmes de stockage E-Series et EF-Series. Pour plus d'informations, consultez l'aide en ligne de Unified Manager, disponible depuis son interface utilisateur ou depuis https://docs.netapp.com/us-en/e-series-santricity/index.html["Documentation sur le logiciel SANtricity"^].
+* Référentiel GitHub : le stockage GitHub contient un référentiel pour la collecte et l'organisation d'exemples de scripts illustrant l'utilisation de l'API des services Web NetApp SANtricity. Pour accéder au référentiel, voir https://github.com/NetApp/webservices-samples["Exemples de services Web NetApp"^].
+* Representational State Transfer (REST) -- les services Web sont une API RESTful qui permet d'accéder à quasiment toutes les fonctionnalités de gestion de SANtricity. Il est donc préférable de vous familiariser avec les concepts REST. Pour plus d'informations, voir http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Styles architecturaux et conception d'architectures logicielles réseau"^].
+* JavaScript Object notation (JSON) -- parce que les données des services Web sont codées via JSON, vous devez être familier des concepts de programmation JSON. Pour plus d'informations, voir http://www.json.org["Présentation de JSON"^].
+

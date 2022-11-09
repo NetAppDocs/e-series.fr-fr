@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: feature-tech-reports.html 
+keywords: feature technical reports, e-series, hardware, santricity, os 
+summary: Rapports techniques sur les E-Series 
+---
+= Parcourir les rapports techniques présentés
+:allow-uri-read: 
+
+
+
+
+== Rapports techniques
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["*TR-4893 : volumes de stockage à distance SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/19405-tr-4839.pdf["*TR-4839 : mise en miroir synchrone et asynchrone SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17167-tr4747pdf.pdf["*TR-4747 : Présentation et guide de déploiement de la fonction SANtricity Snapshot*"^] 
+
+
+| Décrit l'architecture de la solution et la procédure d'utilisation du système de stockage E-Series pour importer des données à partir d'un périphérique de stockage distant existant. | Décrit la fonctionnalité de mise en miroir synchrone et asynchrone SANtricity. | Décrit la fonctionnalité Snapshot de SANtricity, y compris les instructions de navigation dans l'interface graphique de SANtricity System Manager. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/ko/media/12421-tr4652.pdf["*TR-4652 : pools de disques dynamiques SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737 : équilibrage automatique de la charge SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736 : API de services Web SANtricity*"^] 
+
+
+| Décrit comment les administrateurs de stockage peuvent regrouper des ensembles de disques similaires dans une topologie de pool dans laquelle tous les disques du pool participent au flux de travail E/S. | Décrit un aperçu du comportement de la fonctionnalité ALB, de ses paramètres de configuration clés et de ses améliorations en termes d'interopérabilité hôte. | Décrit un aperçu des services Web SANtricity, une API utilisée pour configurer et gérer les systèmes de stockage E-Series. 
+|===

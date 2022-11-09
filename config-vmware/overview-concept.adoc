@@ -1,0 +1,108 @@
+---
+permalink: config-vmware/overview-concept.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Consultez les conditions d"utilisation de la méthode express pour configurer une baie E-Series et un hôte VMware.' 
+---
+= Hypothèses
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La méthode VMware express se base sur les hypothèses suivantes :
+
+|===
+| Composant | Hypothèses 
+
+
+ a| 
+Sous-jacent
+ a| 
+* Pour installer le matériel, vous avez utilisé les instructions d'installation et de configuration fournies avec les tiroirs contrôleurs.
+* Les câbles sont connectés entre les tiroirs disques facultatifs et les contrôleurs.
+* Vous avez mis le système de stockage sous tension.
+* Vous avez installé tout autre matériel (par exemple, station de gestion, commutateurs) et effectué les connexions nécessaires.
+
+
+
+
+ a| 
+Hôte
+ a| 
+* Vous avez établi une connexion entre le système de stockage et l'hôte de données.
+* Vous avez installé le système d'exploitation hôte.
+* Vous n'utilisez pas VMware en tant qu'invité virtualisé.
+* Vous ne configurez pas l'hôte de données (E/S connecté) pour démarrer à partir du réseau SAN.
+
+
+
+
+ a| 
+Station de gestion de stockage
+ a| 
+* Vous utilisez un réseau de gestion 1 Gbit/s ou plus rapide.
+* Vous utilisez une station séparée pour la gestion plutôt que l'hôte de données (E/S connecté).
+* Vous utilisez une gestion hors bande dans laquelle une station de gestion du stockage envoie des commandes au système de stockage via les connexions Ethernet au contrôleur.
+* Vous avez relié la station de gestion au même sous-réseau que les ports de gestion du stockage.
+
+
+
+
+ a| 
+Adressage IP
+ a| 
+* Vous avez installé et configuré un serveur DHCP.
+* Vous avez déjà * non* une connexion Ethernet entre la station de gestion et le système de stockage.
+
+
+
+
+ a| 
+Provisionnement du stockage
+ a| 
+* Vous n'utiliserez pas les volumes partagés.
+* Vous allez créer des pools plutôt que des groupes de volumes.
+
+
+
+
+ a| 
+Protocole : FC
+ a| 
+* Vous avez établi toutes les connexions FC côté hôte et activé le zoning des commutateurs.
+* Vous utilisez des commutateurs et des HBA FC pris en charge par NetApp.
+* Vous utilisez des versions de firmware et de pilote FC HBA, comme indiqué dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe over Fibre Channel
+ a| 
+* Vous avez établi toutes les connexions FC côté hôte et activé le zoning des commutateurs.
+* Vous utilisez des commutateurs et des HBA FC pris en charge par NetApp.
+* Vous utilisez des versions de firmware et de pilote FC HBA, comme indiqué dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : iSCSI
+ a| 
+* Vous utilisez des commutateurs Ethernet capables de transporter le trafic iSCSI.
+* Vous avez configuré les commutateurs Ethernet selon les recommandations du fournisseur en matière d'iSCSI.
+
+
+
+
+ a| 
+Protocole : SAS
+ a| 
+* Vous utilisez des HBA SAS pris en charge par NetApp.
+* Vous utilisez des versions de pilote et de micrologiciel SAS HBA répertoriées dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+|===
+Si ces estimations ne sont pas correctes pour l'installation ou si vous voulez plus d'informations sur les aspects conceptuels, consultez le rapport suivant : https://www.netapp.com/us/media/tr-4789.pdf["Guide de configuration VMware pour l'intégration d'iSCSI SANtricity E-Series avec ESXi 6.X."^]

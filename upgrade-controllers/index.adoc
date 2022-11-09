@@ -1,0 +1,35 @@
+---
+permalink: upgrade-controllers/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
+summary: 'Présentation de la mise à niveau d"une baie E-Series en remplaçant les contrôleurs.' 
+---
+= Présentation des contrôleurs de mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau votre baie de stockage en remplaçant vos contrôleurs.
+
+
+
+== Composants du contrôleur
+
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met également en œuvre les fonctions du logiciel de gestion.
+
+
+
+== Quand utiliser cette procédure
+
+Cette procédure permet généralement de mettre à niveau tous les contrôleurs vers un autre modèle ou plateforme. Cette procédure implique de remplacer tous les contrôleurs d'un plateau lecteur de contrôleur
+
+Vous pouvez également utiliser cette procédure dans les situations suivantes :
+
+* Lorsque tous les contrôleurs d'un plateau de contrôleur-disque rencontrent des défaillances matérielles et ne fonctionnent plus.
+* Pour mettre à niveau les modules DIMM (Dual Inline Memory modules) de votre tiroir de lecteur de contrôleur en remplaçant les deux contrôleurs par le même modèle de contrôleur, mais par des modules DIMM différents.
+
+
+
+NOTE: Les scénarios de mise à niveau HIC ne sont pas pris en compte dans cette procédure. Consultez plutôt les procédures d'ajout, de mise à niveau et de remplacement pour votre système E-Series dans le cadre de la HIC.

@@ -1,0 +1,161 @@
+---
+permalink: web-services-proxy/install-login-task.html 
+sidebar: sidebar 
+keywords: log in API, log in Unified Manager 
+summary: 'Accédez à l"API Services Web et Unified Manager et connectez-vous.' 
+---
+= Connectez-vous aux API et à Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Web Services inclut une documentation API qui vous permet d'interagir directement avec l'API REST. Elle comprend également Unified Manager, une interface web pour gérer plusieurs baies de stockage E-Series.
+
+
+
+== Connectez-vous à l'API des services Web
+
+Après avoir installé le proxy de services Web, vous pouvez accéder à la documentation interactive de l'API dans un navigateur.
+
+La documentation relative aux API est exécutée avec chaque instance des services Web. Elle est également disponible au format PDF statique depuis le site de support NetApp. Pour accéder à la version interactive, ouvrez un navigateur et entrez l'URL pointant vers l'emplacement où réside les services Web (contrôleur de la version intégrée ou serveur du proxy).
+
+
+NOTE: L'API Web Services implémente la spécification OpenAPI (appelée à l'origine la spécification swagger).
+
+Pour la connexion initiale, utilisez les identifiants « admin ». « Admin » est considéré comme un super administrateur avec accès à toutes les fonctions et tous les rôles.
+
+.Étapes
+. Ouvrez un navigateur.
+. Saisissez l'URL de l'implémentation incorporée ou du proxy :
++
+** Embarqué : `+https://<controller>:<port>/devmgr/docs/+`
++
+Dans cette URL, `<controller>` Est l'adresse IP ou le FQDN du contrôleur, et `<port>` est le numéro du port de gestion du contrôleur (par défaut, 8443).
+
+** Proxy : `+http[s]://<server>:<port>/devmgr/docs/+`
++
+Dans cette URL, `<server>` Est l'adresse IP ou le FQDN du serveur où le proxy est installé, et `<port>` Est le numéro du port d'écoute (par défaut : 8080 pour HTTP ou 8443 pour HTTPS).
+
++
+
+NOTE: Si le port d'écoute est déjà utilisé, le proxy détecte le conflit et vous invite à choisir un autre port d'écoute.
+
++
+La documentation API s'ouvre dans le navigateur.
+
+
+
+. Lorsque la documentation interactive de l'API s'ouvre, accédez au menu déroulant en haut à droite de la page et sélectionnez *utils*.
+. Cliquez sur la catégorie *connexion* pour afficher les noeuds finaux disponibles.
+. Cliquez sur le noeud final *POST: /Login*, puis sur *essayez-le*.
+. Pour la première connexion, entrez admin pour le nom d'utilisateur et le mot de passe.
+. Cliquez sur *Exécuter*.
+. Pour accéder aux noeuds finaux pour la gestion du stockage, allez dans le menu déroulant en haut à droite et sélectionnez *v2*.
++
+Les catégories de haut niveau pour les terminaux sont affichées. Vous pouvez naviguer dans la documentation de l'API comme décrit dans le tableau.
+
++
+|===
+| De service | Description 
+
+
+ a| 
+Menu déroulant
+ a| 
+Dans le coin supérieur droit de la page, un menu déroulant propose des options permettant de basculer entre la version 2 de la documentation API (V2), l'interface de symboles (symbole V2) et les utilitaires API (utilitaires) pour la connexion.
+
+
+NOTE: La version 1 de la documentation de l'API étant une version préliminaire et n'étant généralement pas disponible, V1 n'est pas inclus dans le menu déroulant.
+
+
+
+ a| 
+Catégories
+ a| 
+La documentation API est organisée par catégories générales (par exemple : administration, configuration). Cliquez sur une catégorie pour afficher les noeuds finaux associés.
+
+
+
+ a| 
+Terminaux
+ a| 
+Sélectionnez un noeud final pour voir ses chemins d'URL, ses paramètres requis, ses corps de réponse et ses codes d'état que les URL sont susceptibles de renvoyer.
+
+
+
+ a| 
+Essayez-le
+ a| 
+Interagissez directement avec le noeud final en cliquant sur *essayez-le*. Ce bouton est fourni dans chacune des vues développées pour les noeuds finaux.
+
+Lorsque vous cliquez sur le bouton, des champs s'affichent pour saisir les paramètres (le cas échéant). Vous pouvez ensuite entrer des valeurs et cliquer sur *Exécuter*.
+
+La documentation interactive utilise JavaScript pour faire la demande directement à l'API; ce n'est pas une demande de test.
+
+|===
+
+
+
+
+== Connectez-vous à Unified Manager
+
+Après avoir installé Web Services Proxy, vous pouvez accéder à Unified Manager pour gérer plusieurs systèmes de stockage dans une interface Web.
+
+Pour accéder à Unified Manager, vous ouvrez un navigateur et entrez l'URL pointant vers l'emplacement d'installation du proxy. Les navigateurs et versions suivants sont pris en charge.
+
+|===
+| Navigateur | Version minimale 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+.Étapes
+. Ouvrez un navigateur et saisissez l'URL suivante :
++
+`+http[s]://<server>:<port>/um+`
+
++
+Dans cette URL, `<server>` Représente l'adresse IP ou le FQDN du serveur où le proxy de services Web est installé, et `<port>` Représente le numéro du port d'écoute (par défaut : 8080 pour HTTP ou 8443 pour HTTPS).
+
++
+La page de connexion à Unified Manager s'ouvre.
+
+. Pour la première connexion, entrez `admin` pour le nom d'utilisateur, puis définissez et confirmez un mot de passe pour l'utilisateur admin.
++
+Le mot de passe peut comporter jusqu'à 30 caractères. Pour plus d'informations sur les utilisateurs et les mots de passe, reportez-vous à la section gestion des accès de l'aide en ligne de Unified Manager.
+
+

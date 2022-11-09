@@ -1,0 +1,27 @@
+---
+permalink: maintenance-ef600/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF600 HIC, replace EF300 HIC, host interface card failed, HIC failure 
+summary: Examinez les exigences et les considérations avant de remplacer une HIC EF300 ou EF600. 
+---
+= Conditions requises pour les mises à niveau des HIC EF300 ou EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de mettre à niveau ou de remplacer une carte d'interface hôte (HIC) dans une baie EF300 ou EF600, vérifiez les points suivants.
+
+* Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous modifiez la configuration HIC. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.
+* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) sont nécessaires pour connecter les nouveaux ports hôte.
++
+Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] ou le http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Vous avez un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.
+* Vous avez un tournevis cruciforme n° 1.
+* Vous disposez d'étiquettes pour identifier chaque câble connecté au boîtier du contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+* Le remplacement ou la mise à niveau de certaines HIC nécessitent peut-être une conversion de protocole de port hôte. Suivez les instructions du xref:hpp-change-supertask-task.html[Modification du protocole hôte pour un système EF300 ou EF600] pour cette exigence.
+* Le port 2 de la carte HIC des contrôleurs EF300 doit être doté d'une carte d'interface HIC pour la connectivité hôte.
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-rename-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modifiez le nom d"un groupe de matrices de stockage lorsque le nom actuel n"est plus significatif ou applicable.' 
+---
+= Renommer le groupe de matrices de stockage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom d'un groupe de matrices de stockage lorsque le nom actuel n'a plus de sens ou s'applique.
+
+Gardez ces directives à l'esprit.
+
+* Un nom peut être composé de lettres, de chiffres et de traits de soulignement (_), de traits d'Union (-) et de livres (#). Si vous choisissez d'autres caractères, un message d'erreur s'affiche. Vous êtes invité à choisir un autre nom.
+* Limitez le nom à 30 caractères. Tout espace de début et de fin du nom est supprimé.
+* Utilisez un nom unique et significatif, facile à comprendre et à retenir.
+* Éviter des noms ou des noms arbitraires qui perdraient rapidement leur signification à l'avenir.
+
+
+.Étapes
+. Dans la vue principale, sélectionnez *Manage*, puis sélectionnez le groupe de matrices de stockage à renommer.
+. Sélectionnez menu:gérer les groupes[Renommer le groupe de matrices de stockage].
+. Dans le champ *Nom de groupe*, saisissez un nouveau nom pour le groupe.
+. Cliquez sur *Renommer*.
+

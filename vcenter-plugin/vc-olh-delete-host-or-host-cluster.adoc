@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-host-or-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes ne soient plus associés à cet hôte. 
+---
+= Supprime l'hôte ou le cluster hôte
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes ne soient plus associés à cet hôte.
+
+Suivez les consignes ci-dessous lorsque vous supprimez un hôte ou un cluster hôte :
+
+* Toute affectation de volumes spécifique est supprimée et les volumes associés sont disponibles dans le cadre d'une nouvelle affectation.
+* Si l'hôte fait partie d'un cluster hôte ayant ses propres affectations spécifiques, le cluster hôte n'est pas affecté. Cependant, si l'hôte fait partie d'un cluster hôte sans autres affectations, le cluster hôte et tout autre hôte ou identifiant de port hôte associés héritent de toute affectation par défaut.
+* Tous les identificateurs de port hôte associés à l'hôte deviennent non définis.
+
+
+.Étapes
+. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
+. Sélectionnez menu:Provisioning [Configure Hosts].
++
+La page configurer les hôtes s'ouvre.
+
+. Sélectionnez l'hôte ou le cluster hôte que vous souhaitez supprimer, puis cliquez sur *Supprimer*.
++
+La boîte de dialogue de confirmation s'affiche.
+
+. Confirmez que vous souhaitez effectuer l'opération, puis cliquez sur *Supprimer*.
+
+
+Si vous avez supprimé un hôte, le système effectue les opérations suivantes :
+
+* Supprime l'hôte et, le cas échéant, le supprime du cluster hôte.
+* Supprime l'accès aux volumes affectés.
+* Renvoie les volumes associés à un état non affecté.
+* Renvoie les identificateurs de port hôte associés à l'hôte à un état non associé. Si vous avez supprimé un cluster hôte, le système effectue les opérations suivantes :
++
+** Supprime le cluster hôte et ses hôtes associés (le cas échéant).
+** Supprime l'accès aux volumes affectés.
+** Renvoie les volumes associés à un état non affecté.
+** Renvoie les identificateurs de port hôte associés aux hôtes à un état non associé.
+
+
+

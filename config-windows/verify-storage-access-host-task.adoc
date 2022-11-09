@@ -1,0 +1,59 @@
+---
+permalink: config-windows/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Vérifiez que l"hôte peut écrire les données vers la LUN et les lire à nouveau.' 
+---
+= Vérification de l'accès au stockage sur l'hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'utiliser le volume, vérifiez que l'hôte peut écrire les données sur la LUN et les lire de nouveau.
+
+Vous devez avoir initialisé la LUN et la formater avec un système de fichiers.
+
+.Étapes
+. Créez et écrivez dans un fichier sur la nouvelle LUN.
++
+[listing]
+----
+> echo test file > f:\\test.txt
+----
+. Lisez le fichier et vérifiez que les données ont été écrites.
++
+[listing]
+----
+> type f:\\test.txt
+----
+. Pour vérifier que les chemins d'accès multiples fonctionnent, modifiez la propriété du volume.
++
+.. Dans l'interface utilisateur graphique de SANtricity System Manager, accédez à *Storage* > *volumes*, puis sélectionnez *plus* > *changer la propriété*.
+.. Dans la boîte de dialogue Modifier la propriété du volume, utilisez la liste déroulante *propriétaire préféré* pour sélectionner l'autre contrôleur pour l'un des volumes de la liste, puis confirmez l'opération.
+.. Vérifiez que vous pouvez toujours accéder aux fichiers de la LUN.
++
+[listing]
+----
+> dir f:\\
+----
+
+
+. Trouver l'ID cible.
++
+
+NOTE: L'utilitaire dsmUtil est sensible à la casse.
+
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe -a
+----
+. Afficher les chemins vers la LUN et vérifier que vous disposez du nombre attendu de chemins. Dans le `<target ID>` Partie de la commande, utilisez l'ID cible que vous avez trouvé à l'étape précédente.
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe –g <target ID\>
+----
+

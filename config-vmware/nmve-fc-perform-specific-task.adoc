@@ -1,0 +1,206 @@
+---
+permalink: config-vmware/nmve-fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Nvme over FC, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Pour le protocole NVMe over Fibre Channel, vous devez configurer les switchs et déterminer les identificateurs de port hôte. 
+---
+= Exécution de tâches NVMe sur FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole NVMe over Fibre Channel, vous pouvez configurer les switchs et déterminer les identifiants des ports hôte.
+
+
+
+== Étape 1 : configurer les switchs NVMe/FC
+
+La configuration (segmentation) des commutateurs NVMe over Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
+
+.Ce dont vous avez besoin, 8217;ll
+* Identifiants d'administrateur pour les commutateurs.
+* WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
+
+
+
+NOTE: L'utilitaire HBA d'un fournisseur peut être utilisé pour mettre à niveau et obtenir des informations spécifiques sur le HBA. Reportez-vous à la section support du site Web du fournisseur pour obtenir des instructions sur l'utilisation de l'utilitaire HBA.
+
+Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
+
+.Étapes
+. Connectez-vous au programme d'administration des commutateurs FC, puis sélectionnez l'option de configuration du zoning.
+. Créer une nouvelle zone qui inclut le premier port initiateur hôte et qui inclut également tous les ports cibles qui se connectent au même commutateur FC que l'initiateur.
+. Créer des zones supplémentaires pour chaque port d'initiateur hôte FC dans le commutateur.
+. Enregistrer les zones, puis activer la nouvelle configuration de zoning.
+
+
+
+
+== Étape 2 : identification des WWPN des ports hôtes—​NVMe/FC VMware
+
+Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.
+
+.Étapes
+. Connectez-vous à l'hôte ESXi à l'aide de SSH ou du shell ESXi.
+. Exécutez la commande suivante :
++
+[listing]
+----
+esxcfg-scsidevs –a
+----
+. Notez les identifiants d'initiateur. La sortie sera similaire à l'exemple suivant :
++
+[listing]
+----
+vmhba3 lpfc link-up  fc.20000090fa05e848:10000090fa05e848 (0000:03:00.0)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+vmhba4 lpfc link-up  fc.20000090fa05e849:10000090fa05e849 (0000:03:00.1)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+----
+
+
+
+
+== Étape 3 : activation des pilotes HBA
+
+La prise en charge de NVMe doit être activée au sein des pilotes Broadcom/Emulex et Marvell/Qlogic HBA.
+
+.Étapes
+. Exécutez l'une des commandes suivantes à partir du shell ESXi :
++
+** *Pilote HBA Broadcom/Emulex*
++
+[listing]
+----
+esxcli system module parameters set -m lpfc -p "lpfc_enable_fc4_type=3"
+----
+** *Marvell/Qlogic HBA Driver*
++
+[listing]
+----
+esxcfg-module -s "ql2xnvmesupport=1" qlnativefc
+----
+
+
+. Redémarrez l'hôte.
+
+
+
+
+== Étape 4 : enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer des informations de configuration du stockage NVMe sur Fibre Channel. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+L'illustration montre un hôte connecté à une baie de stockage E-Series dans deux zones. Une zone est indiquée par la ligne bleue ; l'autre zone est indiquée par la ligne rouge. Chaque zone contient un port initiateur et tous les ports cibles.
+
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[identifiants de port hôte et conf cible vmw]
+
+
+
+=== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | WWPN 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port hôte 0 vers zone de commutation FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Port hôte 1 vers zone de commutation FC 1
+ a| 
+
+|===
+
+
+=== Identifiants cibles
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | WWPN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur A, port 2 vers le commutateur FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Contrôleur B, port 2 vers le commutateur FC 2
+ a| 
+
+|===
+
+
+=== Hôte de mappage
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

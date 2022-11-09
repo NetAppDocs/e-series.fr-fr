@@ -1,0 +1,25 @@
+---
+permalink: config-linux/iscsi-configure-network-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configurez votre réseau iSCSI. 
+---
+= Configuration du réseau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données.
+
+Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
+
+Pour configurer un réseau iSCSI avec une redondance de base, connectez chaque port hôte et un port de chaque contrôleur pour séparer les commutateurs et partitionnez chaque ensemble de ports hôte et de ports de contrôleur sur des segments réseau ou des VLAN distincts.
+
+Vous devez activer le contrôle de flux matériel d'envoi et de réception *de bout en bout*. Vous devez désactiver le contrôle de flux prioritaire.
+
+Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performances, veillez à configurer la baie, les commutateurs et les hôtes pour utiliser des trames jumbo. Consultez la documentation de votre système d'exploitation et de vos commutateurs pour obtenir des informations sur l'activation des trames Jumbo sur les hôtes et sur les commutateurs. Pour activer les trames Jumbo sur la baie, suivez les étapes de la section link:iscsi-configure-array-side-network-task.html["Configuration des réseaux côté baie"].
+
+
+NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être configurés au-dessus de 9,000 octets. Consultez la documentation de votre commutateur pour plus d'informations.

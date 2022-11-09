@@ -1,0 +1,97 @@
+---
+permalink: config-linux/srp-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SRP over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilisez cette feuille de calcul pour enregistrer les informations de configuration du stockage SRP sur Infiniband. 
+---
+= Enregistrez votre configuration SRP sur IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche de travail suivante pour enregistrer les informations de configuration du stockage SRP sur InfiniBand. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+image::../media/port_identifiers_ib_srp.gif[identificateurs de port ib srp]
+
+
+
+== Identifiants d'hôte
+
+
+NOTE: Les GUID d'initiateurs sont déterminés dans la tâche, xref:srp-ib-determine-host-port-guids-task.adoc[Déterminez les GUID des ports hôtes et définissez les paramètres recommandés].
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | GUID 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+4
+ a| 
+Cible (baie de stockage)
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port hôte 1 vers commutateur IB 1 (chemin « A »)
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Port hôte 2 vers commutateur IB 2 (chemin « B »)
+ a| 
+
+|===
+
+
+== Configuration recommandée
+
+Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles.
+
+
+
+== Nom d'hôte de mappage
+
+
+NOTE: Le nom d'hôte de mappage est créé pendant le flux de travail.
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===

@@ -1,0 +1,94 @@
+---
+permalink: install-hw-cabling/driveshelf-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: 'Connectez chaque contrôleur du tiroir contrôleur à un module d"E/S (IOM) d"un tiroir disque.' 
+---
+= Câblage du tiroir disque
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connecter chaque contrôleur du tiroir contrôleur à un module d'E/S (IOM) d'un tiroir disque.
+
+Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+
+
+NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
+
+
+NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)
+
+Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
+
+
+
+== Câblage des systèmes E2800 et E5700
+
+Les informations suivantes s'appliquent au câblage des systèmes E2800, E2800B, EF280, E5700, EF5700B, Ou tiroir contrôleur EF570 vers un tiroir disque DE212C, DE224C ou DE460.
+
+
+
+=== Câblage d'un tiroir de 12 ou 24 disques
+
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 12 ou 24 disques.
+
+L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+
+
+==== Un tiroir contrôleur et des tiroirs de 12 ou 24 disques
+
+image::../media/12_24_cabling.png[12 24 câblage]
+
+
+
+=== Câblage d'un tiroir de 60 disques
+
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.
+
+L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+
+
+==== Un tiroir contrôleur et des tiroirs de 60 disques
+
+image::../media/60_cabling.png[60 câblage]
+
+
+
+== Câblage EF300 et EF600
+
+Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF300 ou EF600 à un tiroir disque DE212C, DE224C ou DE460.
+
+Avant de câbler une baie EF300 ou EF600, assurez-vous que la dernière version du firmware est mise à jour. Pour mettre à jour le micrologiciel, suivez les instructions de la section link:../upgrade-santricity/index.html["Mise à niveau de SANtricity OS"^].
+
+
+
+=== Câblage d'un tiroir de 12 ou 24 disques
+
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 12 ou 24 disques.
+
+L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+
+
+==== Un tiroir contrôleur et des tiroirs de 12 ou 24 disques
+
+image::../media/ef_to_de224c_four_shelves.png[ef pour de224c quatre tiroirs]
+
+
+
+=== Câblage d'un tiroir de 60 disques
+
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.
+
+L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+
+
+==== Un tiroir contrôleur et des tiroirs de 60 disques
+
+image::../media/ef_to_de460c.png[ef à dé460c]

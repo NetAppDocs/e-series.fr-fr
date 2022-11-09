@@ -1,0 +1,22 @@
+---
+permalink: install-hw-cabling/cable-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: cabling, cabling requirements, drive shelf cabling, controller cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Le câblage des tiroirs E-Series requiert plusieurs composants. 
+---
+= De formation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors du câblage du système de stockage, vous pouvez avoir besoin de certains composants, voire de tous les composants suivants :
+
+* Câbles : SAS, Fibre Channel (FC), Ethernet, InfiniBand
+* Émetteurs-récepteurs SFP (Small form-factor pluggable) ou QSFP (Quad SFP)
+* Commutateurs
+* Adaptateurs de bus hôte (HBA)
+* Adaptateurs de canal hôte (HCA)
+* Cartes d'interface réseau (NIC)
+

@@ -1,0 +1,144 @@
+---
+permalink: getting-started/learn-terms-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
+summary: En savoir plus sur les termes utilisés dans les E-Series. 
+---
+= Terminologie E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En savoir plus sur les termes utilisés dans les E-Series.
+
+|===
+| Durée | Description 
+
+
+ a| 
+contrôleur
+ a| 
+Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions.
+
+
+
+ a| 
+configurations recto/recto verso
+ a| 
+Le mode duplex est une configuration à deux contrôleurs dans la matrice de stockage. Le mode simplex est une configuration à un module de contrôleur.
+
+
+
+ a| 
+DISQUES DURS
+ a| 
+Les disques durs sont des dispositifs de stockage des données qui utilisent des plateaux en métal rotatifs avec un revêtement magnétique.
+
+
+
+ a| 
+HIC
+ a| 
+Une carte d'interface hôte (HIC) connecte la baie à l'hôte. Il peut être installé en option dans un boîtier de contrôleur.
+
+
+
+ a| 
+RÉMUNÉRATION VARIABLE
+ a| 
+InfiniBand (IB) est une norme de communication pour la transmission des données entre les serveurs hautes performances et les systèmes de stockage.
+
+
+
+ a| 
+D'IOPS
+ a| 
+Les IOPS représentent les opérations d'entrée/sortie par seconde.
+
+
+
+ a| 
+mise en miroir
+ a| 
+La mise en miroir consiste à répliquer des volumes de données sur des baies de stockage distinctes afin d'assurer une disponibilité continue.
+
+
+
+ a| 
+piscine
+ a| 
+Un pool est un ensemble de disques regroupés de manière logique. Vous pouvez utiliser un pool pour créer un ou plusieurs volumes accessibles à un hôte.
+
+
+
+ a| 
+cartouche d'alimentation/ventilateur
+ a| 
+Une cartouche d'alimentation/ventilateur est un ensemble qui glisse dans une étagère. Elle comprend une alimentation électrique et un ventilateur intégré.
+
+
+
+ a| 
+Unité de rack (U)
+ a| 
+Une unité de rack (U abrégée) est une unité de mesure définie comme 44.50 millimètres (1.75 po).
+
+
+
+ a| 
+SAS
+ a| 
+SAS (Serial Attached SCSI) est un protocole série point à point qui relie les contrôleurs directement aux disques durs.
+
+
+
+ a| 
+ROCE
+ a| 
+RDMA over Converged Ethernet (RoCE) est un protocole réseau qui permet un accès direct à la mémoire à distance (RDMA over Converged Ethernet) sur un réseau Ethernet.
+
+
+
+ a| 
+tiroir
+ a| 
+Un tiroir est une armoire installée dans une armoire ou un rack. Il contient les composants matériels de la matrice de stockage. Il existe deux types de tiroirs : un tiroir contrôleur et un tiroir disque. Un tiroir contrôleur inclut des contrôleurs et des disques. Un tiroir disque inclut des modules d'entrée/sortie (IOM) et des disques.
+
+
+
+ a| 
+snapshot
+ a| 
+Une image Snapshot est une copie logique des données de volume, capturées à un point dans le temps spécifique. Comme un point de restauration, les images instantanées vous permettent de revenir à un jeu de données correct connu.
+
+
+
+ a| 
+SSD
+ a| 
+Les disques SSD sont des dispositifs de stockage de données qui utilisent la mémoire Flash pour stocker les données de manière persistante. Les SSD émulent des disques durs classiques et sont disponibles avec les mêmes interfaces que les disques durs.
+
+
+
+ a| 
+baie de stockage
+ a| 
+Une baie de stockage comprend des tiroirs, des contrôleurs, des disques, des logiciels et des firmwares.
+
+
+
+ a| 
+volumétrie
+ a| 
+Un volume est un conteneur dans lequel les applications, les bases de données et les systèmes de fichiers stockent les données. Il s'agit du composant logique créé pour que l'hôte puisse accéder au stockage de la matrice de stockage.
+
+
+
+ a| 
+charge de travail
+ a| 
+Un workload est un objet de stockage qui prend en charge une application. System Manager configure parfois la charge de travail de manière à contenir des volumes dont les caractéristiques des volumes sous-jacents sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads.
+
+|===

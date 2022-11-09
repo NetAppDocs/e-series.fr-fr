@@ -1,0 +1,39 @@
+---
+permalink: remote-storage-volumes/modify-remote-storage-task.html 
+sidebar: sidebar 
+keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
+summary: 'Vous pouvez modifier les paramètres de connexion de toute importation de stockage à distance configurée via l"option Afficher/Modifier les paramètres de l"écran stockage à distance du Gestionnaire système SANtricity.' 
+---
+= Modifier les paramètres de connexion du stockage distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier, ajouter ou supprimer des paramètres de connexion pour n'importe quelle configuration de stockage distant via l'option Afficher/Modifier les paramètres.
+
+Les modifications apportées aux propriétés de connexion affectent les importations en cours. Pour éviter les interruptions, modifiez uniquement les propriétés de connexion lorsque les importations ne sont pas en cours d'exécution.
+
+.Étapes
+. Dans l'écran stockage distant du Gestionnaire système SANtricity, sélectionnez l'objet stockage distant souhaité dans la section liste des résultats.
+. Cliquez sur *Afficher/Modifier les paramètres*.
++
+L'écran Paramètres de stockage à distance s'affiche.
+
+. Cliquez sur l'onglet *Propriétés de connexion*.
++
+Les paramètres d'adresse IP et de port configurés pour l'importation de stockage à distance s'affichent.
+
+. Effectuez l'une des opérations suivantes :
++
+** *Modifier* – cliquez sur *Modifier* en regard de l'élément de ligne correspondant à l'objet de stockage distant. Entrez l'adresse IP et/ou les informations de port révisées dans les champs.
+** *Ajouter* – cliquez sur *Ajouter*, puis entrez la nouvelle adresse IP et les informations de port dans les champs fournis. Cliquez sur *Ajouter* pour confirmer, puis la nouvelle connexion apparaît dans la liste des objets de stockage distants.
+** *Supprimer* – sélectionnez la connexion souhaitée dans la liste, puis cliquez sur *Supprimer*. Confirmer l'opération en tapant `delete` Dans le champ fourni, puis cliquez sur *Supprimer*. La connexion est supprimée de la liste des objets de stockage distants.
+
+
+. Cliquez sur *Enregistrer*.
++
+Les paramètres de connexion modifiés sont appliqués à l'objet de stockage distant.
+
+

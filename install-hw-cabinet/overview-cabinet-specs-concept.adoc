@@ -1,0 +1,450 @@
+---
+permalink: install-hw-cabinet/overview-cabinet-specs-concept.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet specs, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: 'Passez en revue la vue d"ensemble et les spécifications pour l"installation de l"armoire.' 
+---
+= Spécifications de l'armoire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'armoire 40U du modèle 3040 présente les caractéristiques suivantes :
+
+* Une porte arrière qui peut être verrouillée et verrouillée
+* Rails de support EIA (Electronic Industry Association) standard fournissant des trous de montage pour l'installation des appareils dans une armoire standard de 48.3 cm (19 in) de large
+* Quatre roulettes et quatre pieds réglables de mise à niveau situés sous l'armoire pour déplacer l'armoire, puis mettre l'armoire à niveau à son emplacement final
+* Un pied de stabilité qui stabilise l'armoire après son installation dans son emplacement permanent
+* Ouvertures d'accès pour les câbles d'interface
+* Deux unités de distribution d'alimentation CA (PDU) qui fournissent une connexion d'alimentation intégrée et une capacité de gestion de l'alimentation
+
+
+Les figures suivantes présentent une vue avant (gauche) et une vue arrière (droite) de l'armoire.
+
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[armoire 83000 07 dwg 3040 avec légendes]
+
+|===
+
+
+ a| 
+1.
+ a| 
+Couvercle de ventilation
+
+
+
+ a| 
+2.
+ a| 
+Ouvertures d'accès aux câbles d'interface
+
+
+
+ a| 
+3.
+ a| 
+Plaque arrière
+
+
+
+ a| 
+4.
+ a| 
+Rails de support EIA
+
+
+
+ a| 
+5.
+ a| 
+Rails de support verticaux
+
+
+
+ a| 
+6.
+ a| 
+Rails de montage de l'armoire
+
+
+
+ a| 
+7.
+ a| 
+Pied de stabilité
+
+
+
+ a| 
+8.
+ a| 
+Pieds réglables
+
+
+
+ a| 
+9.
+ a| 
+Unité de distribution de l'alimentation (une des deux)
+
+
+
+ a| 
+10.
+ a| 
+Boîtiers d'entrée d'alimentation secteur
+
+
+
+ a| 
+11.
+ a| 
+Avant de l'armoire
+
+
+
+ a| 
+12.
+ a| 
+Arrière de l'armoire
+
+|===
+
+CAUTION: *Risque de blessure corporelle* -- si la moitié inférieure de l'armoire est vide, n'installez pas de composants dans la moitié supérieure de l'armoire. Si la moitié supérieure de l'armoire est trop lourde pour la moitié inférieure, elle risque de tomber et de causer des blessures. Installez toujours un composant dans la position la plus basse disponible dans l'armoire.
+
+
+CAUTION: *Risque de blessure corporelle* -- déplacer seulement une armoire peuplée avec un chariot élévateur ou une aide adéquate d'autres personnes. Poussez toujours l'armoire par l'avant pour l'empêcher de tomber. Une armoire entièrement équipée peut peser plus de 909 kg (2000 lb). L'armoire est difficile à déplacer, même sur une surface plane. Si vous devez déplacer l'armoire le long d'une surface inclinée, retirez les composants de la moitié supérieure de l'armoire et assurez-vous d'avoir une aide suffisante.
+
+
+NOTE: Vous ne pouvez pas installer des tiroirs contrôleurs E2860 ou E5760 ou un tiroir disque DE460C dans une armoire 3040 40U.
+
+
+NOTE: Si une armoire 3040 est entièrement équipée avec des tiroirs DE6600, elle pèse plus de 1250.1 kg (2756 lb).
+
+
+
+== Exigences d'alimentation et dissipation thermique
+
+L'armoire comprend les spécifications suivantes pour l'alimentation et la dissipation thermique.
+
+
+
+=== Puissance nominale
+
+L'armoire 3040 40U a une capacité nominale comprise entre 200 VCA et 240 VCA à 50 Hz et 60 Hz, et fonctionne à ±10 % de cette plage.
+
+
+
+=== Unités de distribution d'alimentation (PDU)
+
+L'armoire comprend deux unités de distribution d'alimentation CA identiques (PDU), chacune fournissant jusqu'à 72A d'alimentation utilisable. Les PDU sont montées verticalement à l'arrière de l'armoire et chaque PDU comprend six blocs d'alimentation 12 A. Chaque banc d'alimentation contient quatre prises d'alimentation CEI 60320-C19 et un disjoncteur de 15 A. Chaque PDU dispose d'un total de 24 sorties et 6 disjoncteurs.
+
+Chacune des deux unités de distribution d'alimentation est équipée de trois boîtiers d'entrée d'alimentation, situés au bas de l'armoire. Chaque boîtier d'entrée fournit l'alimentation à huit des prises de courant, comme suit :
+
+* Le boîtier d'entrée d'alimentation 1, doté d'un cordon d'alimentation C1, alimente les huit prises inférieures
+* Le boîtier d'entrée d'alimentation 2, doté d'un cordon d'alimentation C2, alimente les huit prises centrales
+* Le boîtier d'entrée d'alimentation 3, doté d'un cordon d'alimentation C3, alimente les huit prises supérieures
+
+
+Les boîtiers d'entrée d'alimentation sont étiquetés C1, C2 et C3 à l'endroit où les cordons d'alimentation sont connectés aux modules.
+
+
+
+=== Calculs de puissance et de chaleur pour l'armoire
+
+|===
+| Composant | KVA | Watt | BTU/h 
+
+
+ a| 
+PDU de l'armoire (72A PDU)
+ a| 
+14.4
+ a| 
+14400
+ a| 
+49176
+
+
+
+ a| 
+Armoire PDU/batterie 12 a (PDU 72A)
+ a| 
+2.40*
+ a| 
+2400*
+ a| 
+8196*
+
+
+
+ a| 
+Plateau contrôleur E2612
+ a| 
+0.437
+ a| 
+433
+ a| 
+1476
+
+
+
+ a| 
+Tiroir contrôleur-disque E2624
+ a| 
+0.487
+ a| 
+482
+ a| 
+1644
+
+
+
+ a| 
+Tiroir disque contrôleur E2660
+ a| 
+1.128
+ a| 
+1117
+ a| 
+3810
+
+
+
+ a| 
+Tiroir disque contrôleur E2712
+ a| 
+0.516
+ a| 
+511
+ a| 
+1744
+
+
+
+ a| 
+Tiroir disque contrôleur E2724
+ a| 
+0.561
+ a| 
+555
+ a| 
+1894
+
+
+
+ a| 
+Tiroir contrôleur E2760
+ a| 
+1.205
+ a| 
+1193
+ a| 
+4072
+
+
+
+ a| 
+Plateau contrôleur E5412
+ a| 
+0.558
+ a| 
+552
+ a| 
+1883
+
+
+
+ a| 
+Le tiroir disque contrôleur E5424 et la baie Flash EF540
+ a| 
+0.607
+ a| 
+601
+ a| 
+2051
+
+
+
+ a| 
+Tiroir disque E5460
+ a| 
+1.254
+ a| 
+1242
+ a| 
+4237
+
+
+
+ a| 
+Tiroir disque E5512
+ a| 
+0.587
+ a| 
+581
+ a| 
+1982
+
+
+
+ a| 
+Le tiroir contrôleur E5524 et la baie Flash EF550
+ a| 
+0.637
+ a| 
+630
+ a| 
+2150
+
+
+
+ a| 
+Tiroir disque du contrôleur E5560
+ a| 
+1.285
+ a| 
+1272
+ a| 
+4342
+
+
+
+ a| 
+Tiroir contrôleur E5612 disque
+ a| 
+0.625
+ a| 
+619
+ a| 
+2111
+
+
+
+ a| 
+Tiroir contrôleur E5624 et baie Flash EF560
+ a| 
+0.675
+ a| 
+668
+ a| 
+2279
+
+
+
+ a| 
+Tiroir contrôleur E5660
+ a| 
+1.325
+ a| 
+1312
+ a| 
+4477
+
+
+
+ a| 
+Tiroir disque DE1600
+ a| 
+0.325
+ a| 
+322
+ a| 
+1099
+
+
+
+ a| 
+Tiroir disque DE5600
+ a| 
+0.375
+ a| 
+371
+ a| 
+1267
+
+
+
+ a| 
+Tiroir disque DE6600
+ a| 
+0.1.011
+ a| 
+1001
+ a| 
+3415
+
+|===
+
+
+== Nombre maximum de bacs
+
+Le nombre maximum de bacs que vous pouvez installer dans une armoire 3040 40U dépend de la hauteur de chaque bac des unités de rack (U).
+
+
+
+=== Hauteurs des plateaux en unités de rack (U)
+
+Chaque unité de rack est de 4.45 cm (1.75 pouces). Par exemple, vous pouvez installer jusqu'à dix tiroirs 4U, vingt tiroirs 2U ou une combinaison de tiroirs 2U et 4U, pour un maximum de 40U.
+
+|===
+| Plateau | Unités de rack (U) 
+
+
+ a| 
+Plateau du contrôleur E2x12 ou E2x24
+ a| 
+2U
+
+
+
+ a| 
+Plateau du contrôleur E2x60
+ a| 
+4U
+
+
+
+ a| 
+Tiroir contrôleur-lecteur E5x12 ou E5x24
+ a| 
+2U
+
+
+
+ a| 
+Tiroir contrôleur-lecteur E5x60
+ a| 
+4U
+
+
+
+ a| 
+Baie Flash EF5x0
+ a| 
+2U
+
+
+
+ a| 
+Tiroir disque DE1600
+ a| 
+2U
+
+
+
+ a| 
+Tiroir disque DE5600
+ a| 
+2U
+
+
+
+ a| 
+Tiroir disque DE6600
+ a| 
+4U
+
+|===

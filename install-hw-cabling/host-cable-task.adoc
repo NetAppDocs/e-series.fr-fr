@@ -1,0 +1,42 @@
+---
+permalink: install-hw-cabling/host-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, host cabling, direct-attached topology, switch topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C, 
+summary: Vous pouvez connecter un hôte directement à un contrôleur ou utiliser des commutateurs. 
+---
+= Câblage hôte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez connecter un hôte directement à un contrôleur (topologie à connexion directe) ou utiliser des commutateurs (topologie de commutateur) pour connecter un hôte à un contrôleur.
+
+
+
+== Câblage pour topologie à connexion directe
+
+Une topologie DAS connecte directement les adaptateurs hôtes aux contrôleurs de votre système de stockage.
+
+La figure suivante montre un exemple de connexion. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles.
+
+.Deux hôtes et deux contrôleurs
+image::../media/topology_host_direct_generic_web_low.png[site web générique de l'hôte de topologie direct]
+
+*(1)* _Connectez directement chaque port d'adaptateur hôte aux ports d'hôte des contrôleurs._
+
+
+
+== Câblage pour une topologie de commutateur
+
+Une topologie de commutateur utilise des commutateurs pour connecter les hôtes aux contrôleurs du système de stockage. Le commutateur doit prendre en charge le type de connexion utilisé entre l'hôte et le contrôleur.
+
+La figure suivante montre un exemple de connexion. Pour les commutateurs offrant une fonctionnalité de provisionnement, il est conseillé d'isoler chaque paire cible et initiateur.
+
+.Deux hôtes et deux commutateurs
+image::../media/topology_host_fabric_generic.png[topologie hôte structure générique]
+
+*(1)* _Connectez directement chaque carte hôte au commutateur._
+
+*(2)* _Connectez directement chaque commutateur aux ports hôte des contrôleurs. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles._
