@@ -13,13 +13,14 @@ summary: 'Remplacement d"un disque dans une baie EF600'
 [role="lead"]
 Vous pouvez remplacer un disque dans une baie EF600.
 
+.Description de la tâche
 La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des E/S.
 
 .Avant de commencer
 * Révision link:drives-overview-supertask-concept.html["Exigences relatives au remplacement des disques EF300 ou EF600"].
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une surface de travail plate et sans électricité statique.
@@ -137,4 +138,5 @@ Une fois la reconstruction du disque terminée, le groupe de volumes est à l'é
 . Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
 
 
+.Et la suite ?
 Le remplacement de votre disque est terminé. Vous pouvez reprendre les opérations normales.

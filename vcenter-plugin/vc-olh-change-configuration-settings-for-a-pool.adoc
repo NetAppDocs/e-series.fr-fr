@@ -17,6 +17,7 @@ summary: 'Modifiez les paramètres d"un pool, y compris son nom, ses paramètres
 [role="lead"]
 Vous pouvez modifier les paramètres d'un pool, notamment son nom, ses paramètres d'alertes de capacité, ses priorités de modification et sa capacité de conservation.
 
+.Description de la tâche
 Cette tâche explique comment modifier les paramètres de configuration d'un pool.
 
 
@@ -32,6 +33,7 @@ La boîte de dialogue Paramètres de pool s'affiche.
 . Sélectionnez l'onglet *Paramètres*, puis modifiez les paramètres de pool selon vos besoins.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

@@ -30,6 +30,7 @@ Une boîte de dialogue qui affiche les paramètres actuels de l'hôte s'affiche.
 . Pour modifier les propriétés de l'hôte, assurez-vous que l'onglet *Propriétés* est sélectionné, puis modifiez les paramètres selon les besoins.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -64,6 +65,7 @@ Vous pouvez modifier le type de système d'exploitation exécuté sur l'hôte qu
 . Pour modifier les paramètres du port, cliquez sur l'onglet *ports hôte*, puis modifiez les paramètres selon les besoins.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

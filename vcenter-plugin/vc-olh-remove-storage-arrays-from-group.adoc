@@ -17,6 +17,7 @@ summary: 'Supprimez une ou plusieurs matrices de stockage gérées d"un groupe s
 [role="lead"]
 Vous pouvez supprimer une ou plusieurs matrices de stockage gérées d'un groupe si vous ne souhaitez plus les gérer d'un groupe de stockage spécifique.
 
+.Description de la tâche
 Le retrait de matrices de stockage d'un groupe n'affecte en aucune façon la matrice de stockage ou ses données. Si la baie de stockage est gérée par System Manager, vous pouvez toujours la gérer à l'aide de votre navigateur. Si une matrice de stockage est accidentellement retirée d'un groupe, elle peut être ajoutée à nouveau.
 
 .Étapes

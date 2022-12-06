@@ -106,7 +106,7 @@ La fonction AutoSupport est activée ou désactivée lors de l'installation init
 Vous pouvez activer ou désactiver AutoSupport à l'aide du fichier ASUPConfig.xml, comme décrit dans les étapes ci-dessous. Vous pouvez également activer ou désactiver cette fonctionnalité via l'API en utilisant *Configuration* et *POST/asup*, puis en saisissant "true" ou "false".
 
 . Ouvrez le fichier ASUPConfig.xml dans le répertoire de travail.
-. Localiser les lignes pour `<asupdata enabled="(Boolean)" timestamp=>`
+. Localiser les lignes pour <asupdata enable="Boolean_value" timestamp="timestamp">
 . Entrez `true` (activer) ou `false` (désactiver). Par exemple :
 +
 [listing]

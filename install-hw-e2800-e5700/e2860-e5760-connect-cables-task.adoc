@@ -45,6 +45,7 @@ image:../media/sas_cable.png[""]
 
 |===
 +
+.Exemple A : un tiroir contrôleur E2860 avec deux tiroirs disques DE460C dans une configuration SAS standard.
 image:../media/example_a_2860.png[""]
 
 +
@@ -55,6 +56,7 @@ image:../media/example_a_2860.png[""]
 
 
 +
+.Exemple B : un tiroir contrôleur E2860 avec un tiroir disque DE460C dans une configuration SAS standard.
 image:../media/example_b_2860.png[""]
 
 +

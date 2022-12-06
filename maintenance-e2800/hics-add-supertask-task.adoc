@@ -14,6 +14,7 @@ summary: 'Ajoutez une carte d"interface hôte (HIC) à une baie E2800.'
 [role="lead"]
 Vous pouvez ajouter une carte d'interface hôte (HIC) aux boîtiers de contrôleur E2800 avec des ports hôtes de base. Cet ajout augmente le nombre de ports hôtes dans la baie de stockage E2800 et offre des protocoles hôtes supplémentaires.
 
+.Description de la tâche
 Au cours de cette procédure, vous devez mettre la baie de stockage hors tension, installer la carte HIC et mettre de nouveau sous tension.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Au cours de cette procédure, vous devez mettre la baie de stockage hors tension
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, cela est dû au fait que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Un tournevis cruciforme n° 1.
@@ -334,4 +335,5 @@ Si vous avez besoin d'instructions pour configurer et utiliser un nouveau protoc
 
 
 
+.Et la suite ?
 L'ajout d'une carte d'interface hôte à votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

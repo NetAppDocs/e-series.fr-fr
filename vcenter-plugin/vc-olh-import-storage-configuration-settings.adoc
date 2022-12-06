@@ -17,6 +17,7 @@ summary: 'Importez la configuration de stockage d"une matrice de stockage vers d
 [role="lead"]
 Vous pouvez importer la configuration de stockage d'une matrice de stockage vers d'autres matrices de stockage. Cette opération de traitement par lot permet de gagner du temps lorsque vous devez configurer plusieurs baies sur le réseau.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Le stockage est configuré dans System Manager pour la baie de stockage que vous souhaitez utiliser comme source.
@@ -41,6 +42,7 @@ Assurez-vous que :
 
 
 
+.Description de la tâche
 Les paramètres importés comprennent les volumes configurés (volumes épais et non référentiels uniquement), les groupes de volumes, les pools et les affectations de disques de secours.
 
 .Étapes
@@ -64,4 +66,5 @@ La page opérations affiche les résultats de l'opération d'importation. Si l'o
 
 
 
+.Résultat
 Les baies de stockage cibles sont désormais configurées avec la même configuration de stockage que la baie source.

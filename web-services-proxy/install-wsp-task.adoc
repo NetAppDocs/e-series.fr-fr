@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: 'L"installation implique le téléchargement du fichier, puis l"installation du package proxy sur un serveur Linux ou Windows.' 
 ---
-= Téléchargez et installez le fichier Web Services Proxy
+= Installez ou mettez à niveau le fichier Web Services Proxy
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-L'installation implique le téléchargement du fichier, puis l'installation du package proxy sur un serveur Linux ou Windows.
+L'installation implique le téléchargement du fichier, puis l'installation du package proxy sur un serveur Linux ou Windows. Vous pouvez également mettre à niveau le proxy à l'aide de ces instructions.
 
 
 
@@ -67,6 +67,10 @@ Le processus d'installation démarre et l'écran de démarrage de NetApp SANtric
 +
 Au cours de l'installation, vous êtes invité à activer plusieurs fonctionnalités et à saisir certains paramètres de configuration. Si nécessaire, vous pouvez modifier l'une de ces sélections ultérieurement dans les fichiers de configuration.
 
++
+
+NOTE: Lors d'une mise à niveau, vous n'êtes pas invité à entrer les paramètres de configuration.
+
 . Lorsque le message serveur Web démarré apparaît, cliquez sur *OK* pour terminer l'installation.
 +
 La boîte de dialogue installation terminée s'affiche.
@@ -95,6 +99,10 @@ Le processus d'installation démarre et le message lancer le programme d'install
 . Suivez les invites à l'écran.
 +
 Au cours de l'installation, vous êtes invité à activer plusieurs fonctionnalités et à saisir certains paramètres de configuration. Si nécessaire, vous pouvez modifier l'une de ces sélections ultérieurement dans les fichiers de configuration.
+
++
+
+NOTE: Lors d'une mise à niveau, vous n'êtes pas invité à entrer les paramètres de configuration.
 
 . Une fois l'installation terminée, appuyez sur *entrée* pour quitter le programme d'installation.
 

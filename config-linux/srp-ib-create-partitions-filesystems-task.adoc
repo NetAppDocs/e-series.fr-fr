@@ -13,11 +13,12 @@ summary: 'Une nouvelle LUN n"a pas de partition ni de système de fichiers lorsq
 [role="lead"]
 Comme une nouvelle LUN n'a pas de partition ni de système de fichiers lorsque l'hôte Linux le détecte pour la première fois, vous devez formater la LUN avant de pouvoir l'utiliser. Si vous le souhaitez, vous pouvez créer un système de fichiers sur la LUN.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * LUN détectée par l'hôte.
 * Une liste des disques disponibles. (Pour voir les disques disponibles, exécutez le `ls` dans le dossier /dev/mapper.)
 
 
+.Description de la tâche
 Vous pouvez initialiser le disque en tant que disque de base avec une table de partition GUID (GPT) ou un enregistrement de démarrage maître (MBR).
 
 Formatez la LUN avec un système de fichiers tel que ext4. Certaines applications ne nécessitent pas cette étape.

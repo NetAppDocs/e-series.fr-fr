@@ -102,14 +102,14 @@ Un utilisateur avec un accès au système en lecture seule. Cet utilisateur incl
 
 
  a| 
-rw
+rw (ancienne génération pour les baies plus anciennes)
  a| 
 L'utilisateur rw (read/write) comprend les rôles suivants : Storage.admin, support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
 
 
 
  a| 
-ro
+ro (ancienne génération de baies)
  a| 
 L'utilisateur ro (lecture seule) inclut uniquement le rôle Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.
 

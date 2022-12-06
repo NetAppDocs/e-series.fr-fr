@@ -14,11 +14,12 @@ summary: 'Si votre contrôleur inclut une connexion pour NVMe over RoCE \(RDMA o
 [role="lead"]
 Si votre contrôleur inclut une connexion pour NVMe over RoCE (RDMA over Converged Ethernet), vous pouvez configurer les paramètres du port NVMe à partir de la page Hardware ou System dans SANtricity System Manager.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un port hôte NVMe over RoCE sur votre contrôleur. Sinon, les paramètres NVMe over RoCE ne sont pas disponibles dans System Manager.
 * Adresse IP de la connexion hôte.
 
 
+.Description de la tâche
 Vous pouvez accéder à la configuration NVMe over RoCE à partir de la page *Hardware* ou du menu:Settings[System]. Cette tâche décrit comment configurer les ports à partir de la page matériel.
 
 

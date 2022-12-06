@@ -17,6 +17,7 @@ summary: 'Importez les certificats pour les baies de stockage afin qu"ils puisse
 [role="lead"]
 Si nécessaire, vous pouvez importer des certificats pour les baies de stockage afin qu'ils puissent s'authentifier auprès du système hébergeant le plug-in de stockage pour vCenter. Les certificats peuvent être signés par une autorité de certification ou être auto-signés.
 
+.Avant de commencer
 Si vous importez des certificats approuvés, les certificats doivent être importés pour les contrôleurs de la matrice de stockage à l'aide de System Manager.
 
 .Étapes

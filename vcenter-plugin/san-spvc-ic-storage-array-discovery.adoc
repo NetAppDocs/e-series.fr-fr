@@ -49,10 +49,10 @@ Le système effectue une vérification des informations d'identification sur cha
 
 . Cliquez sur *Suivant* pour passer à l'étape suivante de l'assistant.
 +
-Si les matrices de stockage possèdent des certificats valides, rendez-vous sur  3: Provide passwords.
+Si les matrices de stockage possèdent des certificats valides, rendez-vous sur <<Étape 3 : fournir des mots de passe>>.
 
 +
-Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche. Accédez à  2: Resolve untrusted certificates during discovery.
+Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche. Accédez à <<Étape 2 : résolution de certificats non approuvés lors de la découverte>>.
 
 +
 Si vous souhaitez importer des certificats signés par une autorité de certification, annulez hors de l'assistant de découverte et cliquez sur *gestion des certificats* dans le panneau de gauche. Reportez-vous à l'aide en ligne pour de plus amples instructions.

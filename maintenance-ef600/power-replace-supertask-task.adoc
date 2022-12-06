@@ -21,7 +21,7 @@ En cas de panne de l'alimentation, vous devez le remplacer dès que possible afi
 * Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une alimentation de remplacement prise en charge par votre tiroir contrôleur.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
@@ -91,4 +91,5 @@ Au besoin, installez la dernière version.
 
 
 
+.Et la suite ?
 Le remplacement de votre bloc d'alimentation est terminé. Vous pouvez reprendre les opérations normales.

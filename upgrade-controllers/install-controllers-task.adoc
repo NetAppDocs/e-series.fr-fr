@@ -13,9 +13,10 @@ summary: Après avoir retiré les anciens contrôleurs, vous pouvez installer de
 [role="lead"]
 Après avoir retiré les anciens contrôleurs, vous pouvez installer de nouveaux contrôleurs dans le plateau du lecteur de contrôleur
 
+.Description de la tâche
 Effectuez les opérations suivantes pour chaque contrôleur du plateau du lecteur de contrôleur Si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour installer le second boîtier de contrôleur.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un bracelet antistatique ou prendre d'autres précautions antistatiques.
 * Une batterie provenant du boîtier du contrôleur d'origine ou une batterie neuve que vous avez commandée.
 * Le nouveau boîtier du contrôleur.
@@ -88,4 +89,5 @@ NOTE: Si vous effectuez la mise à niveau vers les contrôleurs E2700 à partir 
 
 
 
+.Et la suite ?
 Si vous mettez à niveau les contrôleurs E2800 et E5700 alors que la fonction sécurité des disques est activée, rendez-vous sur link:upgrade-unlock-drives-task.html["Déverrouiller les lecteurs"]. Sinon, passez à link:complete-upgrade-controllers-task.html["Mise à niveau complète du contrôleur"].

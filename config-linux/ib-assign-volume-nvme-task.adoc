@@ -14,6 +14,7 @@ summary: 'Vous devez affecter un volume \(namespace\) à un hôte ou un cluster 
 [role="lead"]
 Vous devez affecter un volume (namespace) à un hôte ou à un cluster hôte afin de pouvoir utiliser les opérations d'E/S. Cette affectation permet à un hôte ou un cluster hôte d'accéder à un ou plusieurs namespaces d'une baie de stockage.
 
+.Description de la tâche
 Gardez ces consignes à l'esprit lorsque vous attribuez des volumes :
 
 * Vous ne pouvez affecter un volume qu'à un seul hôte ou cluster hôte à la fois.
@@ -49,6 +50,7 @@ Une boîte de dialogue s'affiche et répertorie tous les volumes pouvant être a
 . Cliquez sur *attribuer* pour terminer l'opération.
 
 
+.Résultat
 Après avoir attribué un ou plusieurs volumes à un hôte ou à un cluster hôte, le système effectue les opérations suivantes :
 
 * Le volume affecté reçoit le prochain NSID disponible. L'hôte utilise le NSID pour accéder au volume.

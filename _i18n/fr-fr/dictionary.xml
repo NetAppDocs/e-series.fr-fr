@@ -116,7 +116,6 @@
   <block id="dabaf1be0a9b702645c2034751bb93e4" category="paragraph">Prend en charge jusqu'à 96 disques SSD 2.5"</block>
   <block id="630bf7189f1f48a3d15afca1b43ffe75" category="section-title">Modèles EF300</block>
   <block id="d0b7c338ed0be5f3b1669af1d792b13b" category="paragraph">Disques et HIC :</block>
-  <block id="fd3993a989139216c6567b19ff6319e8" category="paragraph">Prend en charge jusqu'à 24 SSD NVMe avec une seule carte d'interface hôte (HIC) par contrôleur.</block>
   <block id="c4b9deb88d9cf1b1a2160cb28a2c41ca" category="list-text">ISCSI 25 Gb</block>
   <block id="caa2bae7a0bf9eeb472d0be37b3ddb33" category="list-text">32 Gb NVMe/Fibre Channel</block>
   <block id="ceec84279e4dcf98176b72979318c9cb" category="list-text">32 Gb SCSI/Fibre Channel</block>
@@ -132,7 +131,6 @@
   <block id="d5f44c6d91cc30efaab6d46dd6163d11" category="section-title">Modèles EF570</block>
   <block id="c28c25ae4438c2bd5f4ba6029ca86d13" category="paragraph">Prend en charge jusqu'à 120 disques SSD 2.5"</block>
   <block id="177e7abf37e275d36b66b48e65ce67fd" category="section-title">Modèles EF600</block>
-  <block id="167a31a7be26c9816ae2b5c7bec480cc" category="paragraph">Jusqu'à 24 SSD NVMe pris en charge, avec deux cartes d'interface hôte (HIC) par contrôleur.</block>
   <block id="02e7dbfc793e4b39dcedafabef1c51ea" category="list-text">Iser 200 Gb/IB</block>
   <block id="70b3564018ed1ee2f8101886edc0d765" category="list-text">NVMe/IB 200 Gb</block>
   <block id="3a01d70cdb33efe48884ef541815818b" category="list-text">NVMe/RoCE 200 Gb</block>
@@ -311,7 +309,6 @@
   <block id="d60c0bc605d3ea38eff56a862b5a189c" category="paragraph">En raison de la complexité de cette procédure, il est recommandé de procéder comme suit :</block>
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Lire toutes les étapes avant de commencer la procédure.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Assurez-vous que l'ajout à chaud d'un tiroir disque est la procédure adéquate.</block>
-  <block id="67b64abed949ae2b1a2626ebe211fd47" category="paragraph">Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570 ou EF300.</block>
   <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.</block>
   <block id="c5d218090776dbcf38627065b13e6caa" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)</block>
@@ -353,10 +350,6 @@
   <block id="a001f7630ca6df494681b2daba776c8b" category="admonition">Consultez les instructions d'installation de votre modèle pour connaître la procédure complète d'installation physique et de câblage d'alimentation. Les instructions d'installation de votre modèle incluent des notes et des avertissements que vous devez prendre en compte pour installer en toute sécurité une étagère de disques.</block>
   <block id="8e48f6475dbee2032869e2a0715b2460" category="list-text">Mettez le nouveau tiroir disque sous tension et vérifiez qu'aucun voyant d'avertissement orange n'est allumé sur le tiroir disque. Si possible, résolvez toute anomalie avant de poursuivre cette procédure.</block>
   <block id="e741aab45a4bd68c7c79e39d156c970e" category="section-title">Étape 3 : branchez le système sur le câble</block>
-  <block id="f56eb649ef27dab12f2b4eb0a88a0d8a" category="paragraph">Sélectionnez l'une des options suivantes, selon que vous câbler un système de stockage E2800 et E5700 ou un système de stockage EF300.</block>
-  <block id="6d1579b454943360f37cf77c92fdbd30" category="list-text"><block ref="d2d4be73706180bc7597d299c249d866" category="inline-xref-macro-rx"></block></block>
-  <block id="73a1596c6d50d92b7125c8d88323bace" category="list-text"><block ref="307f269e3c3fe9adffe68a2a198897ec" category="inline-xref-macro-rx"></block></block>
-  <block id="9831b6f8d53301f978e5645721ea5cc8" category="section-title">Option 1 : connectez le tiroir disque pour les systèmes E2800 et E5700</block>
   <block id="628770b160427a4fb650a632638d7a51" category="paragraph">Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.</block>
   <block id="37d23d5b85350384fbdd960e5a148cb3" category="list-text">Connectez le tiroir disque au contrôleur A.</block>
   <block id="243467d3e3a9a5fe56202ff382d14981" category="paragraph">La figure suivante montre un exemple de connexion entre un tiroir disque supplémentaire et le contrôleur A. Pour localiser les ports de votre modèle, reportez-vous à la section<block ref="5d49ffd87c57001d2b40191486fafc6a" category="inline-link-rx"></block>.</block>
@@ -378,7 +371,6 @@
   <block id="ebd1f3c2a319b70999092b11ab0edcb6" category="image-alt">chaud e5700 2</block>
   <block id="7260d6d9ae9fe1625d41a3d42ae918f7" category="list-text">Si ce n'est pas déjà fait, sélectionnez l'onglet *ESMS/IOMS* dans la boîte de dialogue *Paramètres de composant de tiroir*, puis sélectionnez *Afficher plus d'options*. Vérifiez que les communications de la carte sont *OUI*.</block>
   <block id="1eae9337ad28fcd392d68a768a69a453" category="admonition">L'état optimal indique que la perte d'erreur de redondance associée au nouveau tiroir disque a été résolue et que le système de stockage est stabilisé.</block>
-  <block id="f4ff3b64fac713387048943adcb0bfb5" category="section-title">Option 2 : connexion du tiroir disque pour EF300</block>
   <block id="44358da7cef962731faab21103a86c3e" category="inline-link-macro">Mise à niveau de SANtricity OS</block>
   <block id="2e769f075fc7c30e7206b0cb5e2b8799" category="list-text">Vous avez mis à jour votre micrologiciel à la dernière version. Pour mettre à jour votre micrologiciel, suivez les instructions de la section <block ref="bf6a098eae1df274d91ef498db89d4bb" category="inline-link-macro-rx"></block>.</block>
   <block id="65983bbf5ef58a0867c94fb0138a7307" category="list-text">Déconnectez les deux câbles du contrôleur côté A des ports IOM12 un et deux du dernier tiroir précédent de la pile, puis connectez-les aux nouveaux ports IOM12 du tiroir un et deux.</block>
@@ -951,7 +943,6 @@
   <block id="b9b2d068ee29b7338b3b4084ad2c7009" category="paragraph">Les paramètres de connexion modifiés sont appliqués à l'objet de stockage distant.</block>
   <block id="4b975641f24d9ce4b916fcd460528378" category="summary">L'importation du périphérique de stockage distant s'effectue via l'assistant d'importation de stockage distant sous le Gestionnaire système SANtricity. La fonction d'importation du stockage à distance permet de déplacer les données d'un périphérique de stockage distant vers la baie E-Series locale.</block>
   <block id="d4790f5db2dff8a22368c779e2937da8" category="paragraph">Pour lancer une importation du stockage à partir d'un système distant vers un système de stockage E-Series local, utilisez l'assistant d'importation de stockage distant dans l'interface utilisateur de SANtricity System Manager.</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">Ce dont vous avez besoin, 8217;ll</block>
   <block id="ff7a5ee9d3a075ae6b08cc5a1ef7322c" category="list-text">Le système de stockage E-Series doit être configuré pour communiquer avec le système de stockage distant. Voir <block ref="59980e0d24c2f402942563e5a23d8e20" category="inline-link-macro-rx"></block>.</block>
   <block id="8fdc3a9e6a1758fdec87641568205243" category="list-text">Pour le système de stockage distant, rassemblez les informations suivantes :</block>
   <block id="6e22f5676f1f626fd31d49d4c15229d5" category="list-text">IQN iSCSI</block>
@@ -1121,7 +1112,6 @@
   <block id="9779d294487414d92ca919d114654e00" category="list-text"><block ref="29363e1f838b703a5f0d926c5c21352a" category="inline-link-rx"></block> -- fournit la documentation VMware ESXi vCenter Server.</block>
   <block id="50b44e77204c03afe37922911ec47676" category="summary">Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en réseau côté baie et côté hôte. Vérifiez ensuite les connexions réseau IP.</block>
   <block id="1073617cb349d634023f3f6c0c581f80" category="doc">Réalisez des tâches spécifiques à iSCSI</block>
-  <block id="7e43b51d16efc204bf64cbc8fd4839e4" category="section-title">Étape 1 : configurer les commutateurs—​iSCSI, VMware</block>
   <block id="3fc34abf379078547de4c6d755b1e4c5" category="paragraph">La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.</block>
   <block id="d55a36a933d309c8f14fd52063711862" category="list-text">Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau.</block>
   <block id="f63ed564dfb8701d9a01a826ed8b7184" category="list-text">Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.</block>
@@ -1129,7 +1119,6 @@
   <block id="5c1f4c531be5dc78e029acb7423171cb" category="list-text">Le cas échéant, les trames jumbo activées.</block>
   <block id="565c3a2d9c34937aa961e9ed85bb8ba7" category="admonition">Les canaux de port/LACP n'est pas pris en charge sur les ports switchs du contrôleur. Le LACP côté hôte n'est pas recommandé. Le chemins d'accès multiples offre les mêmes avantages, voire meilleurs.</block>
   <block id="fa1a4bd3bc0839afda794c9adf85f500" category="paragraph">Consultez la documentation du fournisseur de votre commutateur.</block>
-  <block id="bb5b71b867bf5283ded7116e41b2e1f0" category="section-title">Étape 2 : configurer le réseau ​iSCSI VMware</block>
   <block id="664f6e0bf6d6470056c04546c10ee78f" category="paragraph">Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.</block>
   <block id="1040198bf6f7f968d14e3eb526c9e1f4" category="paragraph">Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performances, veillez à configurer la baie, les commutateurs et les hôtes pour utiliser des trames jumbo. Consultez la documentation de votre système d'exploitation et de vos commutateurs pour obtenir des informations sur l'activation des trames Jumbo sur les hôtes et sur les commutateurs. Pour activer les trames Jumbo sur la baie, suivez les étapes de l'étape 3.</block>
   <block id="e3c33c4d6f040ce1b7c6ce6945b882d8" category="paragraph">Lors de la planification de votre réseau iSCSI, n'oubliez pas que le<block ref="77dd64a7dc10e62a77dced60fd52828b" category="inline-link-rx"></block> Le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d'éviter la configuration de chemins trop nombreux.</block>
@@ -1139,7 +1128,6 @@
   <block id="0995e93f2d32176a9594170326076188" category="paragraph">Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaison de ports sur les baies de stockage E-Series.</block>
   <block id="4d58b104819df733df379625cb1928bb" category="paragraph">Pour garantir une bonne configuration de chemins d'accès multiples, utilisez plusieurs segments de réseau pour le réseau iSCSI. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de matrice sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Si possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.</block>
   <block id="f15f906f7bea6ec29e2979d8f1f2fcfb" category="admonition">Pour la surcharge IP, de nombreux commutateurs réseau doivent être configurés au-dessus de 9,000 octets. Consultez la documentation de votre commutateur pour plus d'informations.</block>
-  <block id="f7455ef6422846d98816708b27dee294" category="section-title">Étape 3 : configurer les réseaux côté baie—​iSCSI, VMware</block>
   <block id="e416e1de0c9f752b24a207ee8a149921" category="paragraph">Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.</block>
   <block id="abd85d61e0ca502e115118b250b321b5" category="list-text">L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.</block>
   <block id="7da05d75fd1c28b0ff4d04d30f85aa5b" category="list-text">Le mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du service LDAP et un service d'annuaire sont configurés pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.</block>
@@ -1185,7 +1173,6 @@
   <block id="6f16a33ada2180c9fa2760228064e1ba" category="paragraph">Sélectionnez cette option, puis entrez une adresse statique dans les champs. Pour IPv4, incluez le masque de sous-réseau réseau et la passerelle. Pour IPv6, incluez l'adresse IP routable et l'adresse IP du routeur.</block>
   <block id="1859e92122e266181cafb9c13d7400a0" category="list-text">Cliquez sur *Terminer*.</block>
   <block id="ad3af221db79214a4f22ecdc2ee12d40" category="list-text">Fermez System Manager.</block>
-  <block id="d6982b7cb99590941b0d9dd21f85a639" category="section-title">Étape 4 : configurer la mise en réseau côté hôte—​iSCSI</block>
   <block id="07400b5d0c1cefb8324f4f04590f28e5" category="paragraph">La configuration de la mise en réseau iSCSI côté hôte permet à l'initiateur iSCSI VMware d'établir une session avec la baie.</block>
   <block id="f5462cfa22506eb86e8f76429c946a72" category="paragraph">Dans cette méthode express pour configurer la mise en réseau iSCSI côté hôte, vous permettez à l'hôte ESXi de transmettre le trafic iSCSI via quatre chemins redondants vers le stockage.</block>
   <block id="130f3b7858a2c31d31c7f3dcd0d7db98" category="paragraph">Une fois cette tâche effectuée, l'hôte est configuré avec un seul vSwitch contenant à la fois des ports VMnics et des deux.</block>
@@ -1197,7 +1184,6 @@
   <block id="05b5dfc4fb1314c8f84b1aa1f6716ac8" category="list-text">Utilisez deux ports NIC pour le trafic iSCSI.</block>
   <block id="0e615d5b228749c24eb37ff17dbc56eb" category="list-text">Utilisez le client vSphere ou le client Web vSphere pour effectuer la configuration côté hôte.</block>
   <block id="4f2551c8e6a460403dafc0762e48ee59" category="paragraph">Les fonctionnalités des interfaces varient et le flux de travail exact varie.</block>
-  <block id="bed1d6d39d380a9f84c5ba4b6c11a167" category="section-title">Étape 5 : vérifiez les connexions réseau IP—​iSCSI, VMware</block>
   <block id="1ff0b97fd27edfb22e4024dee03fa784" category="paragraph">Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.</block>
   <block id="5b629af1ecdd34428fd106507876326b" category="list-text">Sur l'hôte, exécutez l'une des commandes suivantes, selon que les trames Jumbo sont activées ou non :</block>
   <block id="581ea1ede625cccd9a92ad8ae6b9c322" category="list-text">Si les trames Jumbo ne sont pas activées, exécutez la commande suivante :</block>
@@ -1246,7 +1232,6 @@
   <block id="7c7869777c18f39124da389c81664a9e" category="list-text">Créer une nouvelle zone qui inclut le premier port initiateur hôte et qui inclut également tous les ports cibles qui se connectent au même commutateur FC que l'initiateur.</block>
   <block id="1088b852c25195807c415eebd5e3c772" category="list-text">Créer des zones supplémentaires pour chaque port d'initiateur hôte FC dans le commutateur.</block>
   <block id="38b2faff78c86d10664d04002c0e6d64" category="list-text">Enregistrer les zones, puis activer la nouvelle configuration de zoning.</block>
-  <block id="1a1c52b433357855334fa98cf2fbdd0f" category="section-title">Étape 2 : identification des WWPN des ports hôtes—​NVMe/FC VMware</block>
   <block id="47fe6177a7ca4fc05ab663890e75ee90" category="paragraph">Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.</block>
   <block id="f33f5a2f363be35d2aef36d0895f8c7d" category="list-text">Connectez-vous à l'hôte ESXi à l'aide de SSH ou du shell ESXi.</block>
   <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Exécutez la commande suivante :</block>
@@ -1286,9 +1271,7 @@
   <block id="dc9a3adad931bcc95bb908edc1ca137c" category="summary">Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez les identifiants des ports hôte.</block>
   <block id="500f35e1a49050d329695333eb443f53" category="doc">Réalisez des tâches FC</block>
   <block id="d4d1574f3860bf39a465cd31ebecf0e8" category="admonition">Pour les modèles EF300 et EF600, vous devez définir une taille de bloc de 512 octets pour assurer la compatibilité avec VMware. Pour plus d'informations sur la définition d'un volume sur 512 octets, consultez l'aide en ligne de SANtricity System Manager.</block>
-  <block id="6e7cc21a437cf9286fc0875901a94774" category="section-title">Étape 1 : configurer les commutateurs FC—​VMware</block>
   <block id="2996f0172f73e90304548255cfe1f7b8" category="paragraph">La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.</block>
-  <block id="00f995e1d9cfe3e72e90c3642382bae8" category="section-title">Étape 2 : déterminez les WWPN du port hôte—​FC</block>
   <block id="937eaba2c714abd2c87056b5288c7f8f" category="section-title">Étape 3 : enregistrez votre configuration</block>
   <block id="272063612c247d680dc6dcce09f932e0" category="paragraph">Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage FC. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.</block>
   <block id="1b04b2e1fd89304e44491f1592b17f40" category="summary">Utilisez le protocole Dynamic Host Configuration Protocol \(DHCP\) pour fournir des adresses IP dans la méthode VMware express.</block>
@@ -1352,7 +1335,6 @@
   <block id="b0f960de2dedfc9d3e79ef5d7833170d" category="image-alt">1130 flw sys mgr vmware express guide tous les protocoles</block>
   <block id="4182da09b2e38e1306891b2c7db5433d" category="summary">Pour le protocole SAS, vous déterminez les adresses de port hôte et définissez les paramètres recommandés.</block>
   <block id="782074a892923ea9433c10e2d684625e" category="doc">Réalisez des tâches SAS-Specific</block>
-  <block id="31e25a16522d6e2086ecfa78b4821b3c" category="section-title">Étape 1 : détermination des identificateurs d'hôte SAS—​VMware</block>
   <block id="e987e7fa5c9abc75335a066329ba6eaa" category="paragraph">Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.</block>
   <block id="b769f2f457baf26b76c0285eaf26cac1" category="paragraph">Consultez les instructions relatives aux utilitaires HBA :</block>
   <block id="4191e9e13f8a201f560ff4eb7e03a2b8" category="list-text">La plupart des fournisseurs HBA proposent un utilitaire HBA.</block>
@@ -2179,13 +2161,10 @@
   <block id="7a0a9c41b30d67f285b02b6001f734dc" category="list-text">DE1600 ou DE5600</block>
   <block id="6f90f0e892dcbad9cc3c5c7a2f71e22a" category="list-text">E2612 ou E2624</block>
   <block id="e58072e70303cdd370fa9dc168dfa8e8" category="list-text">E5412, E5424, E5512 OU E5524</block>
-  <block id="10aa710125be51cc73af248b454958aa" category="section-title">Rack à deux montants — 2U</block>
   <block id="6c9c9493e3710515edb0e087658e5c24" category="inline-link">Installation d'un équipement 2U dans un rack à deux montants</block>
   <block id="0413abfef8aae89542d15125dba4d96b" category="paragraph">L'accès<block ref="fc9b704cab109303261cec9768bb3291" category="inline-link-rx"></block>.</block>
-  <block id="b3e8b82dc764d0e6bd4fd78c3ecd968d" category="section-title">Rack ou armoire à quatre montants — 2U</block>
   <block id="ae4141f22c2ed3b7878fa2ff3a1e6cfe" category="inline-link">Installation d'un boîtier 2U de 12 disques dans un rack ou une armoire à quatre montants</block>
   <block id="5eba68d12705561c14a5cf782039d9a6" category="paragraph">L'accès<block ref="790da98275795a97c8f97401754053cf" category="inline-link-rx"></block>.</block>
-  <block id="eef7cecc379e5c2c29880cbc37d1d2ad" category="section-title">Rack à quatre montants — SuperRail</block>
   <block id="a6d47447094eb5b7920c8d1f16d0d25d" category="paragraph">L'accès<block ref="384159b715a893ce026df1e06010cefa" category="inline-link-rx"></block>.</block>
   <block id="3c3f8e33386d2b91256fb1a3f1ed9389" category="doc">Parcourir les rapports techniques de sécurité</block>
   <block id="58e0dda41aec654996f2661ca9ee6f7b" category="section-title">Rapports techniques de sécurité</block>
@@ -2628,12 +2607,9 @@
   <block id="12693d4ef6502030dd3dd97adbaad017" category="list-text">Exécutez le programme d'installation de SANtricity. Double-cliquez sur le paquet d'installation SMIA*.exe à exécuter.</block>
   <block id="daf1eba575cbf1df7a338c4c3117f23a" category="list-text">Utilisez l'assistant d'installation pour installer le logiciel sur la station de gestion.</block>
   <block id="44fc66161e7a43ac157626f024173dde" category="paragraph">Pour le protocole iSCSI, vous devez configurer les commutateurs, configurer la mise en réseau côté baie et côté hôte, puis vérifier les connexions réseau IP.</block>
-  <block id="e21c632eff4dcb4c33312f2048c1bdfd" category="section-title">Étape 1 : configurer les commutateurs—​iSCSI, Windows</block>
   <block id="9c8c6bc1dd1c6a33336d55ccb262a475" category="list-text">Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau à l'aide de VLAN ou de deux réseaux distincts.</block>
-  <block id="96d6d5da6e7c9c318bc8a1f7571ca765" category="section-title">Étape 2 : configurer la mise en réseau—​iSCSI Windows</block>
   <block id="7a0cbf02537e0c5675240097a5e290c6" category="paragraph">Une stratégie efficace pour configurer le réseau iSCSI avec redondance de base consiste à connecter chaque port hôte et un port de chaque contrôleur pour séparer les commutateurs et partitionner chaque ensemble de ports hôte et contrôleur sur des segments réseau distincts à l'aide de VLAN.</block>
   <block id="193ade8f53ce0d3769717269d5021a04" category="paragraph">Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performances, veillez à configurer la baie, les commutateurs et les hôtes pour utiliser des trames jumbo. Consultez la documentation de votre système d'exploitation et de vos commutateurs pour obtenir des informations sur l'activation des trames Jumbo sur les hôtes et sur les commutateurs. Pour activer les trames Jumbo sur la baie, suivez la procédure décrite à l'étape 3.</block>
-  <block id="71aa525f4580797cdff57e0dd639aa22" category="section-title">Étape 3 : configurer la mise en réseau côté baie—​iSCSI, Windows</block>
   <block id="7a44acba5c86f8f1ca8ef18dcb107358" category="list-text">Mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du protocole LDAP, ainsi qu'un service d'annuaire configuré pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.</block>
   <block id="79ea1ff8d5f0ec26c8c8cc72a7085a20" category="list-text">Entrez le mot de passe du Gestionnaire système pour le rôle admin dans les champs définir le mot de passe administrateur et confirmer le mot de passe, puis sélectionnez le bouton *définir le mot de passe*.</block>
   <block id="5967546ab7bb830bfd3596e874f087ef" category="paragraph">Lorsque vous ouvrez System Manager et qu'aucun pool, groupe de volumes, charges de travail ou notifications n'a été configuré, l'assistant d'installation démarre.</block>
@@ -2664,7 +2640,6 @@
   <block id="11067f76259f391bcf91a2a3d2955b1e" category="list-text">Sélectionnez de nouveau *OK* pour revenir à la boîte de dialogue *connexion à la cible*.</block>
   <block id="385b4af64bde28fe3449616f51738066" category="list-text">Répétez cette procédure pour chaque port d'initiateur et session (chemin logique) vers la matrice de stockage que vous souhaitez établir.</block>
   <block id="15b6118a81aee81c1a1d53b3df6273bd" category="image-alt">82012 00</block>
-  <block id="1d67ee0bcd66df5d64d6595ef7f9d10e" category="section-title">Étape 5 : vérifier les connexions réseau IP—​iSCSI, Windows</block>
   <block id="e67855cd7e9b1c8568edde29dc1e19d1" category="list-text">Sélectionnez menu:Démarrer[tous les programmes &gt; Accessoires &gt; invite de commande], puis utilisez l'interface de ligne de commande Windows pour exécuter l'une des commandes suivantes, selon que les trames jumbo sont activées :</block>
   <block id="82b036dc1c9aac368948e60ed01a1cd4" category="list-text">Si les trames Jumbo sont activées, exécutez la commande ping avec une taille de charge utile de 8,972 octets. Les en-têtes combinés IP et ICMP sont de 28 octets, qui, lorsqu'ils sont ajoutés à la charge utile, sont égaux à 9,000 octets. Le commutateur -f règle le<block ref="1a7ab38808324b699e678289e28bcde0" prefix=" " category="inline-code"></block> bits. Le commutateur -l vous permet de définir la taille. Ces options permettent de transmettre avec succès des trames jumbo de 9,000 octets entre l'initiateur iSCSI et la cible.</block>
   <block id="36495d85fdafce51c0c18d44dc824473" category="list-text">Problème a<block ref="df911f0151f9ef021d410b4be5060972" prefix=" " category="inline-code"></block> Commande à partir de l'adresse d'initiateur de chaque hôte (l'adresse IP du port Ethernet hôte utilisé pour iSCSI) vers chaque port iSCSI de contrôleur. Effectuez cette action à partir de chaque serveur hôte de la configuration, en modifiant les adresses IP si nécessaire.</block>
@@ -2701,9 +2676,7 @@
   <block id="13461e28dcd114adac2af3049403e6ed" category="admonition">L'utilitaire dsmUtil est sensible à la casse.</block>
   <block id="31e6725ea9038f80c84ea9073561cdaf" category="list-text">Afficher les chemins vers la LUN et vérifier que vous disposez du nombre attendu de chemins. Dans le<block ref="6396f354ff98106e443c14d8fc6d48ef" prefix=" " category="inline-code"></block> Partie de la commande, utilisez l'ID cible que vous avez trouvé à l'étape précédente.</block>
   <block id="65a12855a97595b8d62e96a783f8df41" category="summary">Utilisez le protocole de configuration dynamique de l'hôte \(DHCP\) pour fournir des adresses IP dans la méthode express de Windows.</block>
-  <block id="2f04e704a7a815c0e774ed659cc504c3" category="section-title">Étape 1 : configurer les commutateurs FC—​Windows</block>
   <block id="5192c4044ff1350931950a13c0344c96" category="paragraph">Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.</block>
-  <block id="cf835a04573e0610ec8897238c527f88" category="section-title">Étape 2 : déterminez les WWPN des hôtes et définissez les paramètres recommandés—​FC, Windows</block>
   <block id="be45f039274998f659527af3c0750a6a" category="paragraph">Vous installez un utilitaire HBA FC, ce qui vous permet d'afficher le nom international du port (WWPN) de chaque port hôte. En outre, vous pouvez utiliser l'utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l'<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block> pour la configuration prise en charge.</block>
   <block id="726ce1b88701f14ff4fb2f28e5be2a4c" category="paragraph">Consultez les instructions suivantes pour les utilitaires HBA :</block>
   <block id="93872d516824e8ba4bd0ef2fca5923bf" category="list-text">La plupart des fournisseurs HBA proposent un utilitaire HBA. Vous aurez besoin de la version appropriée de HBA pour votre système d'exploitation hôte et votre processeur. Voici des exemples d'utilitaires FC HBA :</block>
@@ -2732,7 +2705,6 @@
   <block id="0c3f79a0168a623515b2c693becc646f" category="paragraph">Pour plus d'informations, consultez l'aide en ligne de SANtricity System Manager.</block>
   <block id="135d30ad6d2da4597cfa1d9690fba47a" category="summary">Pour le protocole SAS, vous déterminez les adresses des ports hôtes et définissez les paramètres recommandés.</block>
   <block id="d723a375133225f8e40ad6de1d56e805" category="paragraph">Pour le protocole SAS, vous déterminez les adresses de port hôte et définissez les paramètres appropriés.</block>
-  <block id="949def9e74c32b2d76220ef2a708fcd7" category="section-title">Étape 1 : détermination des identificateurs d'hôte SAS—​Windows</block>
   <block id="bfcd4b5a45e2121dd605c54a4da4bd65" category="paragraph">Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.</block>
   <block id="c06b839abd65c201b1c005767294828c" category="list-text">La plupart des fournisseurs HBA proposent un utilitaire HBA. En fonction du système d'exploitation hôte et de la CPU, utilisez l'utilitaire LSI-sas2flash(6G) ou sas3flash(12G).</block>
   <block id="24e8d96ea66cd40afc07c55bd24a3685" category="list-text">Téléchargez l'utilitaire LSI-sas2flash(6G) ou sas3flash(12G) sur le site Web de votre fournisseur de HBA.</block>
@@ -4896,7 +4868,6 @@
   <block id="fac8dec8997a2b6acc0da0c38c936391" category="list-text">Un bracelet antistatique ou prendre d'autres précautions antistatiques.</block>
   <block id="4ac60dfd435aae167fae752e804adc62" category="list-text">Étiquettes permettant d'identifier les nouveaux câbles. Pour plus d'informations sur le matériel compatible, reportez-vous au<block ref="a3e2ed1651134ba8d782e5dc8287cbc1" category="inline-link-rx"></block> ou le<block ref="654b66baa180d1959dc74b2dcae2e81b" category="inline-link-rx"></block>.</block>
   <block id="78e3c7b76bdce29005fd828d203f3811" category="list-text">Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports de contrôleur.</block>
-  <block id="57e1256d4794c404d0c7bcf46a11428e" category="section-title">Étape 1 : vérifier la référence du nouveau contrôleur</block>
   <block id="189edd72c022821058abae88a6795697" category="paragraph">Vérifier que le nouveau contrôleur possède la même référence que le contrôleur actuellement installé.</block>
   <block id="b6e156797ee2c8838880295fe99ef9f0" category="paragraph">*(1)* _adresse MAC:_ l'adresse MAC du port de gestion 1 (« P1 »). Si vous avez utilisé DHCP pour obtenir l'adresse IP du contrôleur d'origine, vous devez disposer de cette adresse pour vous connecter au nouveau contrôleur.</block>
   <block id="f6a075e9cc8deffc71a02b99c5e109a5" category="list-text">Dans le Gestionnaire système SANtricity, localisez la référence de remplacement du boîtier du contrôleur installé.</block>
@@ -6696,41 +6667,22 @@
   <block id="709295d41667a12a2422cc1249a7c754" category="paragraph">Types de matrices de stockage :</block>
   <block id="d44270fb1ddae7ebb5cb83a53e23ef19" category="list-text">*All Group* -- le groupe All est le groupe par défaut et inclut toutes les matrices de stockage découvertes dans votre organisation. Le groupe tous est accessible depuis la vue principale.</block>
   <block id="b5c09b7db12cbcf51e9484e2e0f172a6" category="list-text">*Groupe créé par l'utilisateur* -- Un groupe créé par l'utilisateur comprend les matrices de stockage que vous sélectionnez manuellement pour ajouter à ce groupe. Les groupes créés par l'utilisateur sont accessibles depuis la vue principale.</block>
-  <block id="4f5e7bcbe41e887700d69a7347fc4ec4" category="summary">Installez le plug-in de stockage SANtricity pour vCenter.</block>
-  <block id="480dbff7fe3f36c7e40bb55917ce4363" category="doc">Installez le plug-in de stockage pour vCenter</block>
-  <block id="b343a8501c81a39ccd85e7ffcb042c9a" category="paragraph">Vous pouvez installer le plug-in de stockage pour vCenter et vérifier l'enregistrement du plug-in.</block>
   <block id="f648da22c98e52c918faa560efe4f898" category="section-title">Passer en revue les conditions préalables à l'installation</block>
-  <block id="3f2d2f00d799dde329a804cc37f26a7c" category="paragraph">Assurez-vous que vos systèmes répondent aux exigences suivantes :</block>
   <block id="30ec052a906564798e129e10f7d39ab0" category="list-text">VMware vCenter Server Appliance prend en charge les versions suivantes : 6.7U3J, 7.0U1, 7.0U2, 7.0U3 et 8.0.</block>
   <block id="2ce43ab0f5d314b47dd9cb618dcc2844" category="list-text">Système d'exploitation NetApp SANtricity version 11.60.2 ou supérieure</block>
   <block id="35372cbcff3be2cc25be5129c31c81c6" category="list-text">Versions d'hôte d'application prises en charge : Windows 2016, Windows 2019, Windows 2022.</block>
-  <block id="85826baa206c427868f3feaff8a9870b" category="list-text">Configuration minimale requise pour le système hôte :</block>
-  <block id="02e5141224b0a2ac9f9a2b07a05b90b3" category="list-text">Mémoire système : 512 Mo</block>
-  <block id="567b36d352655c36a5a725d1ebf33c0f" category="list-text">Espace de stockage : 275 Mo + 200 Mo (journalisation)</block>
   <block id="dc7364d3899f846fdf1224ed73fd1f69" category="section-title">Installez le logiciel du plug-in</block>
   <block id="77ceebed4c1a4af4acd87fb741a6c682" category="paragraph">Pour installer le logiciel du plug-in :</block>
   <block id="96de9428e796ae7fd12aa7eb5f8c47eb" category="list-text">Copiez le fichier du programme d'installation sur l'hôte qui sera utilisé comme serveur d'applications, puis accédez au dossier où vous avez téléchargé le programme d'installation.</block>
   <block id="5615a5290f7916cea22366db3afe36ca" category="list-text">Double-cliquez sur le fichier d'installation :</block>
   <block id="7bf75a37617fe76a3416d2424deced05" category="paragraph"><block ref="5a9cd5d642783183d114842a69344976" prefix="" category="inline-code"></block></block>
   <block id="01eb9f6780fbba151f0f50844a4c1df7" category="paragraph">Dans le nom de fichier ci-dessus,<block ref="699ac6f9ea1aed3b414789e971975c3a" prefix=" " category="inline-code"></block> représente le numéro de version.</block>
-  <block id="7cfae2e1d2ea7368589cf5db38e58545" category="list-text">Lorsque l'installation démarre, suivez les invites à l'écran.</block>
-  <block id="0a15cde063d5ad5f4517618505eec23e" category="paragraph">Au cours de l'installation, vous êtes invité à saisir certains paramètres de configuration.</block>
-  <block id="d820ee7ec02fc2a6d8be199849df9b2f" category="list-text">Sur le premier écran, sélectionnez la langue de votre choix pour le logiciel et cliquez sur *OK*.</block>
-  <block id="b989796b66ff1d9406ec1c531d469666" category="list-text">Dans l'écran Introduction, cliquez sur *Suivant*.</block>
-  <block id="325b33ff6ecded6095d73d040e6a1fea" category="list-text">Dans l'écran Copyright, cliquez sur *Suivant*.</block>
-  <block id="5c8aa03abd50920e0f0c126d643020ea" category="list-text">Dans l'écran Contrat de licence, cochez la case accepter les termes, puis cliquez sur *Suivant*.</block>
-  <block id="0b231efa0d0ec3e7d3e43cf4892ac5bf" category="list-text">Sélectionnez le dossier dans lequel vous souhaitez installer le logiciel, puis cliquez sur *Suivant*.</block>
-  <block id="184a98dbb91e62e80b288dedf3c5a47b" category="list-text">Dans l'écran validation de certificat, conservez la case à cocher si vous souhaitez appliquer la validation de certificat entre le plug-in et les matrices de stockage. Avec cette mise en œuvre, les certificats de la matrice de stockage sont vérifiés pour être approuvés par rapport au plug-in. Si les certificats ne sont pas approuvés, ils ne sont pas autorisés à être ajoutés au plug-in. Si vous souhaitez remplacer la validation de certificat, décochez la case pour que toutes les matrices de stockage puissent être ajoutées au plug-in à l'aide de certificats auto-signés. Cliquez sur *Suivant*.</block>
-  <block id="330978dd5354b46e213f942edf959eb0" category="paragraph">Pour en savoir plus sur les certificats, reportez-vous à l'aide en ligne disponible à partir de l'interface du plug-in.</block>
-  <block id="9cae702ab26aef3182168c3ef66b420a" category="list-text">Dans l'écran Port de service Web HTTPS, laissez la valeur par défaut sur 8445 ou, si nécessaire, modifiez le numéro de port. Cliquez sur *Suivant*.</block>
-  <block id="116a92bc310fb5fa8eacab83ecfddf66" category="list-text">Dans l'écran Récapitulatif de pré-installation, cliquez sur *Suivant* pour installer les fichiers.</block>
   <block id="9964b55b18c628445831aa8f480ccdc5" category="list-text">Lorsque le message serveur Web démarré apparaît, cliquez sur *OK* pour terminer l'installation.</block>
   <block id="4f64b1596007c92e3ab2a4bf215f3ab0" category="admonition">Si nécessaire, vous pouvez modifier les paramètres validation de certificat et Port de service Web après l'installation. Dans le répertoire d'installation, ouvrez le fichier wsconfig.xml. Pour supprimer la validation de certificat sur les matrices de stockage, modifiez le<block ref="ff035a1dd7655da15295fa5fa89362a7" prefix=" " category="inline-code"></block> clé,<block ref="9c346a88d0e90550a29895d0f46c3623" prefix=" " category="inline-code"></block>, à<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>. Pour modifier le port Web Services, modifiez le<block ref="f430b8faf94eabfe1047bb1c35fd384c" prefix=" " category="inline-code"></block> valeur de la valeur de port souhaitée comprise entre 0 et 65535. Assurez-vous que le numéro de port utilisé ne se lie pas à un autre processus. Lorsque vous avez terminé, enregistrez les modifications et redémarrez le serveur Web du plug-in. Si la valeur de port du serveur Web du plug-in est modifiée après l'enregistrement du plugin sur un vCSA, alors vous devez annuler l'enregistrement et réenregistrer le plugin pour que le vCSA communique sur le port modifié au serveur Web du plugin.</block>
   <block id="9d17039867ca33fdd770d1d9de41479f" category="list-text">Vérifiez que le serveur d'applications a bien été installé en exécutant la commande *services.msc*.</block>
   <block id="220cd7bbad8213b2212fe72d054af003" category="list-text">Vérifiez que le service serveur d'applications (VCP) *le plug-in de stockage NetApp SANtricity pour vCenter* a été installé et que le service a démarré.</block>
   <block id="dd0f5711b4dbdc0f95aaf96b06c2d059" category="section-title">Enregistrez le plug-in avec une appliance vCenter Server</block>
   <block id="73d0e801912fc9ea82e6f5937e17c0cc" category="paragraph">Une fois le logiciel du plug-in installé, enregistrez le plugin avec un vCSA.</block>
-  <block id="145e65fcacf3fc703ceb2a4eaedbf1c9" category="admonition">Le plug-in ne peut être enregistré que sur un seul vCSA à la fois. Pour vous inscrire à une autre version de vCSA, vous devez annuler l'enregistrement du plug-in à partir de la version actuelle de vCSA et le désinstaller de l'hôte de l'application. Vous pouvez ensuite réinstaller le plug-in et l'enregistrer dans l'autre vCSA.</block>
   <block id="6bb899b55f01bce9e8af1c2f60672bc3" category="list-text">Exécutez le fichier *vcenter-register.bat* :<block ref="43910d9952e9d21d8474fc9540a8c634" prefix=" " category="inline-code"></block></block>
   <block id="c52d155f7acb8ad88031033b1cb3c79a" category="list-text">Vérifiez que le script a réussi.</block>
   <block id="c5c434aad7d7d3e6ed02ff2fc27ec08f" category="section-title">Vérifiez l'enregistrement du plug-in</block>
@@ -7953,9 +7905,7 @@
   <block id="c83a555962427b3fafdbf4afa3ef4e12" category="paragraph">L'utilisateur est responsable des ressources matérielles, des données de défaillance et des mises à niveau du micrologiciel. Cet utilisateur comprend les rôles suivants : support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.</block>
   <block id="08b5411f848a2581a41672a759c87380" category="paragraph">superviser</block>
   <block id="7190d6a7c60ba57f0e040dd38d0f3840" category="paragraph">Un utilisateur avec un accès au système en lecture seule. Cet utilisateur inclut uniquement le rôle Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.</block>
-  <block id="038c0dc8a958ffea17af047244fb6960" category="paragraph">rw</block>
   <block id="06389059e144364d36df5aa491caefa7" category="paragraph">L'utilisateur rw (read/write) comprend les rôles suivants : Storage.admin, support.admin et Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.</block>
-  <block id="3605c251087b88216c9bca890e07ad9c" category="paragraph">ro</block>
   <block id="f3b685b126aa5da84d79a12555b91220" category="paragraph">L'utilisateur ro (lecture seule) inclut uniquement le rôle Storage.Monitor. Ce compte est désactivé jusqu'à ce qu'un mot de passe soit défini.</block>
   <block id="a7febdf14c9271294814ce07e57de3f2" category="section-title">Chiffrement par mot de passe</block>
   <block id="86e5da53020f59199dc5c88501bcd76b" category="paragraph">Pour chaque mot de passe, vous pouvez appliquer un processus de chiffrement supplémentaire à l'aide de l'encodage de mot de passe SHA256 existant. Ce processus de chiffrement supplémentaire applique un ensemble aléatoire d'octets à chaque mot de passe (Salt) pour chaque chiffrement SHA256. Le chiffrement saled SHA256 est appliqué à tous les mots de passe nouvellement créés.</block>
@@ -8132,7 +8082,6 @@
   <block id="f53c8aca4a29351426197b65cd5ebc4a" category="paragraph">La fonction AutoSupport est activée ou désactivée lors de l'installation initiale du proxy de services Web, mais vous pouvez modifier ce paramètre dans le fichier de configuration de l'utilitaire.</block>
   <block id="0828dd7a23feb7374b137534d8ca660c" category="paragraph">Vous pouvez activer ou désactiver AutoSupport à l'aide du fichier ASUPConfig.xml, comme décrit dans les étapes ci-dessous. Vous pouvez également activer ou désactiver cette fonctionnalité via l'API en utilisant *Configuration* et *POST/asup*, puis en saisissant "true" ou "false".</block>
   <block id="b1421bfcff007d81c137a2b1a26be812" category="list-text">Ouvrez le fichier ASUPConfig.xml dans le répertoire de travail.</block>
-  <block id="feb82637a6c110761417be91fc1124d2" category="list-text">Localiser les lignes pour<block ref="e108a806ce07f1368462c8d0abffa412" prefix=" " category="inline-code"></block></block>
   <block id="6d246a645a6d81f96b7b3d8250715fca" category="list-text">Entrez<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block> (activer) ou<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> (désactiver). Par exemple :</block>
   <block id="2f9941ce39306cfceb39a95b6bd40bfe" category="admonition">L'entrée d'horodatage est superflue.</block>
   <block id="37d2d3abeb0c853792589ef5ef3ca6e2" category="section-title">Configurer la méthode de livraison AutoSupport</block>
@@ -8830,4 +8779,73 @@
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">Base de connaissances NetApp</block>
   <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ (connexion requise)</block>
   <block id="54708ac788109e3332a896f8d957e38f" category="sidebar">Téléchargements E-Series/SANtricity (connexion requise)</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Ce dont vous avez besoin</block>
+  <block id="6e45870f8629b562b79da969a290951f" category="section-title">Étape 2 : identification des WWPN des ports hôtes--NVMe/FC VMware</block>
+  <block id="2f5a12ce7256b2085ffbd47c6ada5cab" category="section-title">Étape 1 : configurer les commutateurs FC--VMware</block>
+  <block id="8177490e8cadc7f4b772200e86180fb2" category="section-title">Étape 2 : détermination des WWPN--FC du port hôte</block>
+  <block id="20ce9a06abc9195bebe0e59b26293e21" category="section-title">Étape 1 : configurer les commutateurs--iSCSI, VMware</block>
+  <block id="7ffd227cb5a9d8c313e27ae6d4060249" category="section-title">Étape 2 : configurer le réseau--iSCSI VMware</block>
+  <block id="c68a106f59b3a963f6045af07b07b0c6" category="section-title">Étape 3 : configurer les réseaux côté baie--iSCSI, VMware</block>
+  <block id="d8055035001bdb0000b27f355301370e" category="section-title">Étape 4 : configurer les réseaux côté hôte--iSCSI</block>
+  <block id="6a767cf6bee4c3579f40439895fda2b7" category="section-title">Étape 5 : vérifiez les connexions réseau IP--iSCSI, VMware</block>
+  <block id="063b0df0c14bee863fd6d206304aaf27" category="section-title">Étape 1 : détermination des identifiants d'hôtes SAS--VMware</block>
+  <block id="047294bc09f8ed4e396d9739a1462dab" category="section-title">Étape 1 : configurer les commutateurs FC--Windows</block>
+  <block id="e4211d8cdea679b81e26d9910d042052" category="section-title">Étape 2 : détermination des WWPN des hôtes et configuration des paramètres recommandés--FC, Windows</block>
+  <block id="eec7a038ccdf3e900f836e0ad0064352" category="section-title">Étape 1 : configurer les commutateurs--iSCSI, Windows</block>
+  <block id="86809c62a485c6e1f1cd50f8a442bedc" category="section-title">Étape 2 : configurer le réseau--iSCSI Windows</block>
+  <block id="8d7771526174dcfe25e99ed7f2ec957b" category="section-title">Étape 3 : configurer les réseaux côté baie--iSCSI, Windows</block>
+  <block id="5628dcecfdc23242b9050ffd0f4e0ca8" category="section-title">Étape 5 : vérifiez les connexions réseau IP--iSCSI, Windows</block>
+  <block id="a26b6112f0f78db7ee6507f0fe0deaeb" category="section-title">Étape 6 : enregistrez votre configuration</block>
+  <block id="3e2fccfcb2c1e5332c5dbf8b36d7aa80" category="section-title">Étape 1 : détermination des identificateurs d'hôte SAS--Windows</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
+  <block id="a6157a9850788d9c0341e93d5f79de31" category="summary">Conditions requises pour l'installation et la mise à niveau et considérations relatives au plug-in vCenter.</block>
+  <block id="d4dbf4915d26814b90635132e02de3a1" category="paragraph">Avant d'installer ou de mettre à niveau le plug-in de stockage SANtricity pour vCenter, vérifiez les exigences d'installation et la mise à niveau.</block>
+  <block id="dbb4458edca7c5733da82369529b938e" category="paragraph">Vous pouvez installer et configurer le plug-in de stockage pour vCenter sur un système hôte Windows. L'installation du plugin comprend les conditions suivantes.</block>
+  <block id="2e5d14f7919ff3c6138e7845aec4f915" category="paragraph">Versions prises en charge</block>
+  <block id="b41bb59cbbaa2802af53d977c440f2c8" category="paragraph">Pour plus d'informations sur la compatibilité, reportez-vous au<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>.</block>
+  <block id="361484a234b118c769c841cb7b8351d8" category="paragraph">Vous ne pouvez installer qu'une seule instance du plug-in de stockage pour vCenter sur un hôte Windows et ne pouvez l'enregistrer que sur un seul vCSA.</block>
+  <block id="11b02af429676c3e4ef0b14f72c58b44" category="paragraph">Le plug-in de stockage pour vCenter nécessite un espace suffisant pour l'exécution et la connexion. Assurez-vous que votre système répond aux exigences suivantes en matière d'espace disque :</block>
+  <block id="5f5fc15545b1dee5b3f1c2ee92f47de0" category="list-text">Espace d'installation requis : 275 Mo</block>
+  <block id="9bcf5bd8266f8eea99112a520f67ad79" category="list-text">Espace de stockage — 275 Mo + 200 Mo (enregistrement)</block>
+  <block id="4cdb1974fd7f08cb281a8396b499d8f7" category="list-text">Mémoire système : 512 Mo</block>
+  <block id="206c0580c23a54528ad2d285e97454b4" category="paragraph">Le plug-in de stockage pour vCenter est un produit autonome gratuit qui ne nécessite pas de clé de licence. Toutefois, les droits d'auteur et les conditions de service applicables s'appliquent.</block>
+  <block id="cdd47ce62ae0283ba81fbbfac98aa0be" category="paragraph">Si vous effectuez une mise à niveau à partir d'une version précédente, sachez que le plug-in doit être retiré du vCSA avant la mise à niveau.</block>
+  <block id="167e9fb1b11b78bdc503cae6390a6818" category="list-text">Pendant la mise à niveau, la plupart des paramètres de configuration précédents du plug-in sont conservés. Ces paramètres incluent les mots de passe utilisateur, tous les systèmes de stockage découverts, les certificats de serveur, les certificats approuvés et la configuration d'exécution du serveur.</block>
+  <block id="4dcf1264688d388f8c1ead31971aded6" category="list-text">Le processus de mise à niveau ne conserve pas les fichiers *vcenter.properties*, vous devez donc annuler l'enregistrement du plugin avant la mise à niveau. Une fois la mise à niveau réussie, vous pouvez enregistrer à nouveau le plugin sur le vCSA.</block>
+  <block id="23d80e8f2ebb14976e8d910eea4d386b" category="list-text">Tous les fichiers SANtricity OS précédemment chargés dans le référentiel sont supprimés pendant la mise à niveau.</block>
+  <block id="2e7d2097c91ceed4e818c5518afa994a" category="summary">Installez ou mettez à niveau le plug-in de stockage SANtricity pour vCenter.</block>
+  <block id="259aa472928a9297b2dc9f3f8b125b3b" category="doc">Installez ou mettez à niveau le plug-in de stockage pour vCenter</block>
+  <block id="3b840adf9a5dcc09c69daab725b7c465" category="paragraph">Procédez comme suit pour installer le plug-in de stockage pour vCenter et vérifier l'enregistrement du plug-in. Vous pouvez également mettre à niveau le plug-in en suivant ces instructions.</block>
+  <block id="bda87156c434adbda0ab9a9dfdf4203c" category="paragraph">Assurez-vous que vos systèmes répondent aux exigences de la section <block ref="20ce28c64503bb775dd7ac22c0aadd0e" category="inline-link-macro-rx"></block>.</block>
+  <block id="84f59f102df96e2886b696e130b28443" category="admonition">Le processus de mise à niveau ne conserve pas les fichiers *vcenter.properties*. Si vous effectuez une mise à niveau, vous devez annuler l'enregistrement du plug-in avant la mise à niveau. Une fois la mise à niveau réussie, vous pouvez enregistrer à nouveau le plugin sur le vCSA.</block>
+  <block id="a2c33f0d50276fb56d5066c659a36281" category="list-text">Lorsque l'installation démarre, suivez les invites à l'écran pour activer plusieurs fonctionnalités et saisir certains paramètres de configuration. Si nécessaire, vous pouvez modifier l'une de ces sélections ultérieurement dans les fichiers de configuration.</block>
+  <block id="685fd8088c2b843b61f4afa2c0588163" category="admonition">Lors d'une mise à niveau, vous n'êtes pas invité à entrer les paramètres de configuration.</block>
+  <block id="5a71fa4a4c3dcb9f7fb7866f2d54b837" category="admonition">Au cours de l'installation, vous êtes invité à valider votre certificat. Cochez cette case si vous souhaitez appliquer la validation de certificat entre le plug-in et les matrices de stockage. Avec cette mise en œuvre, les certificats de la matrice de stockage sont vérifiés pour être approuvés par rapport au plug-in. Si les certificats ne sont pas approuvés, ils ne sont pas autorisés à être ajoutés au plug-in. Si vous souhaitez remplacer la validation de certificat, décochez la case pour que toutes les matrices de stockage puissent être ajoutées au plug-in à l'aide de certificats auto-signés. Pour en savoir plus sur les certificats, reportez-vous à l'aide en ligne disponible à partir de l'interface du plug-in.</block>
+  <block id="9aa965893e984bad2c9729b6444a575c" category="list-text">Lorsque le message serveur Web démarré apparaît, cliquez sur *OK* pour terminer l'installation, puis cliquez sur *terminé*.</block>
+  <block id="127bf35b11d9e63d1023ec8556d4bcaf" category="admonition">Le plug-in ne peut être enregistré que sur un seul vCSA à la fois. Pour vous inscrire à une autre version de vCSA, vous devez annuler l'enregistrement du plug-in à partir de la version actuelle de vCSA et le désinstaller à partir de l'hôte de l'application. Vous pouvez ensuite réinstaller le plug-in et l'enregistrer dans l'autre vCSA.</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Et la suite ?</block>
+  <block id="6d4f7aaea60249778cba2f48ab44265c" category="list-text">Localiser les lignes pour &lt;asupdata enable="Boolean_value" timestamp="timestamp"&gt;</block>
+  <block id="9f8389aeec49fcf74df4811ae74671bb" category="paragraph">rw (ancienne génération pour les baies plus anciennes)</block>
+  <block id="da4eb5c5c70275ba4c87430e9eb2caa1" category="paragraph">ro (ancienne génération de baies)</block>
+  <block id="520ae3e14dc7dcddbce514f73ae5f9c9" category="doc">Installez ou mettez à niveau le fichier Web Services Proxy</block>
+  <block id="f036aa96cb85f83dc2dad71a70ca9ab9" category="paragraph">L'installation implique le téléchargement du fichier, puis l'installation du package proxy sur un serveur Linux ou Windows. Vous pouvez également mettre à niveau le proxy à l'aide de ces instructions.</block>
+  <block id="9ab5a43912057c3f252ae0aa5ffafa08" category="paragraph">Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC) par contrôleur :</block>
+  <block id="d7873c5a31e9fb583fb911435316e255" category="list-text">Disques SSD NVMe : jusqu'à 24 disques SSD NVMe dans le tiroir contrôleur</block>
+  <block id="99017918290ad98fceaa8544139404ea" category="list-text">Disques NL-SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C et DE460C ne doit pas dépasser 240 emplacements de disques NL-SAS et 4 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés, 8 tiroirs DE212C sont autorisés. Par exemple, 4 tiroirs DE460C ou 8 tiroirs DE212C, ou 2 tiroirs DE460C et 2 tiroirs.</block>
+  <block id="f7bdca5a10b1a8a32a0410aa51cc3658" category="list-text">Disques SSD SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C, DE224C et DE460C ne doit pas dépasser 96 emplacements de disque SSD SAS et 4 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés. 8 tiroirs DE212C sont autorisés. Par exemple, 1 tiroir DE460C plus 1 tiroir DE224C plus 1 tiroir DE212C, ou 4 tiroirs DE224C, ou 8 tiroirs DE212C.</block>
+  <block id="d4f4328db6f2e4f903874bc046fd613f" category="list-text">Disques NL-SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C et DE460C ne doit pas dépasser 420 emplacements de disques NL-SAS et 7 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés, 8 tiroirs DE212C sont autorisés. Par exemple, 7 tiroirs DE460C ou 8 tiroirs DE212C, ou 5 tiroirs DE460C et 2 tiroirs.</block>
+  <block id="538ff1eff5fd361d6f0b2adf6bbf0ed4" category="list-text">Disques SSD SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C, DE224C et DE460C ne doit pas dépasser 96 emplacements de disque SSD SAS et 7 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés. 8 tiroirs DE212C sont autorisés. Par exemple, 1 tiroir DE460C plus 1 tiroir DE224C plus 1 tiroir DE212C, ou 4 tiroirs DE224C, ou 8 tiroirs DE212C.</block>
+  <block id="731e4c243221cff11b35e735d54a097c" category="section-title">Rack à deux montants -- 2U</block>
+  <block id="08e15a26eb1bed02ff476c90993bb81d" category="section-title">Rack ou armoire à quatre montants -- 2U</block>
+  <block id="f7e582702fa43947010600df41688562" category="section-title">Rack à quatre montants -- SuperRail</block>
+  <block id="88587640720455d00dd679a1ce9fe099" category="paragraph-title">Exemple A : un tiroir contrôleur E2860 avec deux tiroirs disques DE460C dans une configuration SAS standard.</block>
+  <block id="5e2cc996382bb24824986ff473c63abc" category="paragraph-title">Exemple B : un tiroir contrôleur E2860 avec un tiroir disque DE460C dans une configuration SAS standard.</block>
+  <block id="7bb583eaeb72cab404957a32bf32e9fb" category="paragraph-title">Exemple A : tiroir contrôleur E5700 avec trois tiroirs disques DE212C/x4 dans une configuration SAS standard.</block>
+  <block id="ab945691a98936597c2ea25ebe10559a" category="paragraph-title">Exemple B : un tiroir contrôleur E5700 avec un tiroir disque DE212C/x4 dans une configuration SAS standard.</block>
+  <block id="45d7b912755be5cce50a63e39e38af8a" category="section-title">Étape 1 : vérifier la référence du nouveau contrôleur</block>
+  <block id="80517d3f6b5fb7efb65f606eaba16467" category="paragraph">Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570, EF300 ou EF600</block>
+  <block id="8a8126e8cdb353719a24e8201a310aee" category="list-text"><block ref="5b1d5e9837fad271f198b7479454fb9a" category="inline-xref-macro-rx"></block></block>
+  <block id="294b3397fedca884072c918fc613f61d" category="list-text"><block ref="b1d2c45bc75ed5d4a6faa0261f1569e8" category="inline-xref-macro-rx"></block></block>
+  <block id="04c5c6e14f0bbd925f3877a16bc2c6a5" category="section-title">Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700</block>
+  <block id="3519a93182c0883a5ee2951208ede7c9" category="section-title">Option 2 : connexion du tiroir disque pour EF300 ou EF600</block>
 </blocks>

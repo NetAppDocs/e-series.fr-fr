@@ -13,13 +13,15 @@ summary: 'Ajoutez un nouveau tiroir de disque pendant que l"alimentation est tou
 [role="lead"]
 Vous pouvez ajouter un nouveau tiroir disque pendant que l'alimentation est toujours appliquée aux autres composants du système de stockage. Vous pouvez configurer, reconfigurer, ajouter ou transférer la capacité du système de stockage sans interrompre l'accès des utilisateurs aux données.
 
+.Avant de commencer
 En raison de la complexité de cette procédure, il est recommandé de procéder comme suit :
 
 * Lire toutes les étapes avant de commencer la procédure.
 * Assurez-vous que l'ajout à chaud d'un tiroir disque est la procédure adéquate.
 
 
-Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570 ou EF300.
+.Description de la tâche
+Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570, EF300 ou EF600
 
 Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
 
@@ -107,17 +109,17 @@ NOTE: Consultez les instructions d'installation de votre modèle pour connaître
 
 == Étape 3 : branchez le système sur le câble
 
-Sélectionnez l'une des options suivantes, selon que vous câbler un système de stockage E2800 et E5700 ou un système de stockage EF300.
+Sélectionnez l'une des options suivantes :
 
-*  1: Connect the drive shelf for E2800 and E5700
-*  2: Connect the drive shelf for EF300
+* <<Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700>>
+* <<Option 2 : connexion du tiroir disque pour EF300 ou EF600>>
 
 
 Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
 
 
 
-=== Option 1 : connectez le tiroir disque pour les systèmes E2800 et E5700
+=== Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700
 
 Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.
 
@@ -170,7 +172,7 @@ NOTE: L'état optimal indique que la perte d'erreur de redondance associée au n
 
 
 
-=== Option 2 : connexion du tiroir disque pour EF300
+=== Option 2 : connexion du tiroir disque pour EF300 ou EF600
 
 Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.
 

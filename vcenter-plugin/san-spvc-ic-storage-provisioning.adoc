@@ -226,6 +226,7 @@ Le tableau répertorie les hôtes créés automatiquement.
 
 === Création manuelle de l'hôte
 
+.Avant de commencer
 Lisez les consignes suivantes :
 
 * Vous devez déjà avoir ajouté ou découvert des baies de stockage au sein de votre environnement.
@@ -340,6 +341,7 @@ Pour créer un datastore dans le client vSphere, reportez-vous à la rubrique su
 
 Vous pouvez augmenter la capacité indiquée (la capacité signalée aux hôtes) d'un volume en utilisant la capacité disponible dans le pool ou le groupe de volumes.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Une capacité disponible suffisante est disponible dans le pool ou le groupe de volumes associé du volume.
@@ -379,7 +381,7 @@ Cette boîte de dialogue affiche la capacité actuelle signalée du volume et la
 
 === Augmentation de la capacité du datastore existant en ajoutant des volumes
 
-. Vous pouvez augmenter la capacité d'un datastore en ajoutant des volumes. Suivez les étapes de la section  1: Create volumes.
+. Vous pouvez augmenter la capacité d'un datastore en ajoutant des volumes. Suivez les étapes de la section <<Étape 1 : créer des volumes>>.
 . Ensuite, attribuez les volumes à l'hôte souhaité pour augmenter la capacité du datastore. Reportez-vous à la rubrique suivante :
 +
 ** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^]

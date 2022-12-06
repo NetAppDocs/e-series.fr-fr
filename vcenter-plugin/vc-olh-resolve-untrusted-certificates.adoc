@@ -17,6 +17,7 @@ summary: 'Résolvez les certificats non approuvés en important un certificat au
 [role="lead"]
 À partir de la page certificat, vous pouvez résoudre les certificats non approuvés en important un certificat auto-signé de la matrice de stockage ou en important un certificat d'autorité de certification (CA) émis par un tiers de confiance.
 
+.Avant de commencer
 Si vous prévoyez d'importer un certificat signé par une autorité de certification, assurez-vous que :
 
 * Vous avez généré une demande de signature de certificat (.CSR file) pour chaque contrôleur de la matrice de stockage et l'avez envoyée à l'autorité de certification.
@@ -24,6 +25,7 @@ Si vous prévoyez d'importer un certificat signé par une autorité de certifica
 * Les fichiers de certificat sont disponibles sur votre système local.
 
 
+.Description de la tâche
 Des certificats non approuvés se produisent lorsqu'une matrice de stockage tente d'établir une connexion sécurisée au plug-in, mais la connexion ne parvient pas à confirmer la sécurité. Vous devrez peut-être installer d'autres certificats de confiance si l'un des éléments suivants est vrai :
 
 * Vous avez ajouté récemment une baie de stockage.

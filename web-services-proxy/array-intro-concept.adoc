@@ -31,6 +31,7 @@ Pour ajouter un système de stockage, il vous suffit de fournir une adresse IP o
 
 NOTE: Si vous tentez d'utiliser un protocole IPv6 pour détecter automatiquement les systèmes de stockage de la configuration du contrôleur après la connexion initiale, le processus risque d'échouer. Les causes possibles de la panne incluent les problèmes lors du transfert d'adresse IP ou de l'activation d'IPv6 sur les systèmes de stockage, mais pas d'activation sur le serveur.
 
+.Avant de commencer
 Avant d'activer les paramètres de découverte IPv6, vérifiez que votre infrastructure prend en charge la connectivité IPv6 avec les systèmes de stockage pour limiter les problèmes de connexion.
 
 .Étapes
@@ -62,6 +63,7 @@ Vous pouvez utiliser des terminaux API pour détecter et ajouter des systèmes d
 
 NOTE: Cette tâche décrit comment détecter et ajouter des systèmes de stockage à l'aide de l'API REST, pour que vous puissiez gérer ces systèmes dans la documentation interactive de l'API. Cependant, il peut être préférable de gérer les systèmes de stockage dans Unified Manager, ce qui constitue une interface simple d'utilisation. Pour plus d'informations, consultez l'aide en ligne disponible avec Unified Manager.
 
+.Avant de commencer
 Pour les systèmes de stockage avec SANtricity versions 11.30 et ultérieures, l'interface de gestion héritée pour le symbole doit être activée dans l'interface SANtricity System Manager. Dans le cas contraire, les noeuds finaux de découverte échouent. Pour trouver ce paramètre, ouvrez System Manager, puis accédez au menu :Paramètres[System > Paramètres supplémentaires > interface de gestion des changements].
 
 .Étapes

@@ -18,11 +18,11 @@ NOTE: Pour les modèles EF300 et EF600, vous devez définir une taille de bloc d
 
 
 
-== Étape 1 : configurer les commutateurs FC—​VMware
+== Étape 1 : configurer les commutateurs FC--VMware
 
 La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Identifiants d'administrateur pour les commutateurs.
 * WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
 
@@ -30,6 +30,7 @@ La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux h
 
 NOTE: L'utilitaire HBA d'un fournisseur peut être utilisé pour mettre à niveau et obtenir des informations spécifiques sur le HBA. Reportez-vous à la section support du site Web du fournisseur pour obtenir des instructions sur l'utilisation de l'utilitaire HBA.
 
+.Description de la tâche
 Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
 
 .Étapes
@@ -41,7 +42,7 @@ Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble d
 
 
 
-== Étape 2 : déterminez les WWPN du port hôte—​FC
+== Étape 2 : détermination des WWPN--FC du port hôte
 
 Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.
 

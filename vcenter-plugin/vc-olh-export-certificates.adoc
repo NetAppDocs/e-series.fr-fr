@@ -16,6 +16,7 @@ summary: Exportez un certificat pour afficher ses détails complets.
 [role="lead"]
 Vous pouvez exporter un certificat pour en afficher les détails complets.
 
+.Avant de commencer
 Pour ouvrir le fichier exporté, vous devez disposer d'une application de visionneuse de certificats.
 
 .Étapes

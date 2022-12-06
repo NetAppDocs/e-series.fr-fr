@@ -24,7 +24,7 @@ Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter l
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Étant donné que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous installez des cartes HIC.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Deux circuits intégrés compatibles avec vos contrôleurs.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.
@@ -288,4 +288,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le processus de mise à niveau d'une carte d'interface hôte dans votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

@@ -14,6 +14,7 @@ summary: 'Remplacement d"un tiroir disque dans un tiroir contrôleur E2860 ou un
 [role="lead"]
 Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E2860 ou un tiroir disque DE460C.
 
+.Description de la tâche
 La procédure à suivre pour remplacer un tiroir disque défectueux dans un tiroir contrôleur E2860 ou un tiroir disque DE460C dépend de la protection des volumes dans ce tiroir. Si tous les volumes du tiroir de disque se trouvent dans des pools de disques ou des groupes de volumes dotés de la protection contre la perte de tiroir, vous pouvez effectuer cette procédure en ligne. Dans le cas contraire, vous devez arrêter toutes les activités d'E/S des hôtes et mettre le shelf hors tension avant de remplacer le tiroir disque.
 
 .Avant de commencer
@@ -32,7 +33,7 @@ CAUTION: *Perte possible d'accès aux données* -- si un volume est déjà dans 
 
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un tiroir disque de remplacement.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une lampe de poche.
@@ -56,7 +57,7 @@ Si vous remplacez un tiroir d'une étagère par une protection contre les pertes
 .Étapes
 . Déterminez si le tiroir disque est sous tension.
 +
-** Si l'alimentation est éteinte, vous n'avez pas besoin d'exécuter la commande CLI. Accédez à  2: Remove cable chains.
+** Si l'alimentation est éteinte, vous n'avez pas besoin d'exécuter la commande CLI. Accédez à <<Étape 2 : déposer les chaînes de câble>>.
 ** Si le système est sous tension, passez à l'étape suivante.
 
 
@@ -88,7 +89,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ----
 . Déterminez si vous devez arrêter l'activité E/S de l'hôte, comme suit :
 +
-** Si la commande réussit, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte. Tous les disques du tiroir se trouvent dans des pools ou des groupes de volumes avec protection contre la perte de tiroirs. Accédez à  2: Remove cable chains.
+** Si la commande réussit, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte. Tous les disques du tiroir se trouvent dans des pools ou des groupes de volumes avec protection contre la perte de tiroirs. Accédez à <<Étape 2 : déposer les chaînes de câble>>.
 +
 
 CAUTION: *Dommages possibles aux lecteurs* -- attendez 30 secondes après la fin de la commande avant d'ouvrir le tiroir du lecteur. L'attente de 30 secondes permet aux disques de tourner, ce qui évite d'endommager le matériel.
@@ -151,6 +152,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 cont
 
 Retirez les deux chaînes de câble pour retirer et remplacer un tiroir disque défectueux.
 
+.Description de la tâche
 Chaque tiroir disque comporte des câbles en forme de chaîne gauche et droite. Les chaînes de câbles gauche et droite permettent aux tiroirs de glisser vers l'intérieur et l'extérieur.
 
 Les extrémités métalliques des chaînes de câbles coulissent dans les rails de guidage verticaux et horizontaux correspondants à l'intérieur du boîtier, comme suit :
@@ -384,6 +386,7 @@ CAUTION: *Risque de détérioration de l'équipement* -- cessez de pousser le ti
 
 Fixez les chaînes de câble pour pouvoir réinstaller les disques en toute sécurité dans le tiroir d'entraînement.
 
+.Description de la tâche
 Lors de la fixation d'une chaîne de câbles, inverser l'ordre utilisé lors du débranchement de la chaîne de câbles. Vous devez insérer le connecteur horizontal de la chaîne dans le rail de guidage horizontal du boîtier avant d'insérer le connecteur vertical de la chaîne dans le rail de guidage vertical du boîtier.
 
 .Étapes
@@ -531,4 +534,5 @@ CAUTION: *Risque de dysfonctionnement de l'équipement* -- Assurez-vous de ferme
 
 
 
+.Et la suite ?
 Le remplacement du tiroir de disque est terminé. Vous pouvez reprendre les opérations normales.

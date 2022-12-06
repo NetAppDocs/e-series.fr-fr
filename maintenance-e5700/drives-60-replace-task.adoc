@@ -14,6 +14,7 @@ summary: Remplacez un disque dans un tiroir E5700 à 60 disques.
 [role="lead"]
 Vous pouvez remplacer un disque dans un tiroir de 60 disques.
 
+.Description de la tâche
 La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des opérations d'E/S.
 
 Cette tâche s'applique aux tiroirs disques DCM et DC2.
@@ -22,7 +23,7 @@ Cette tâche s'applique aux tiroirs disques DCM et DC2.
 * Examinez les exigences de gestion des disques dans le link:drives-overview-supertask-concept.html["Conditions requises pour le remplacement des disques E5700"].
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
@@ -185,4 +186,5 @@ Une fois la reconstruction du disque terminée, le groupe de volumes est à l'é
 . Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
 
 
+.Et la suite ?
 Le remplacement de votre disque est terminé. Vous pouvez reprendre les opérations normales.

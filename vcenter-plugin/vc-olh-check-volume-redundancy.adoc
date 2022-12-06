@@ -28,6 +28,7 @@ Les données redondantes sont utilisées pour reconstruire rapidement les inform
 
 NOTE: Vérifiez la redondance des volumes uniquement lorsque vous y êtes invité par le gourou de la restauration et sous la supervision du support technique.
 
+.Description de la tâche
 Cette vérification n'est possible que sur un pool ou un groupe de volumes à la fois. Un contrôle de redondance des volumes effectue les actions suivantes :
 
 * Analyse les blocs de données d'un volume RAID 3, d'un volume RAID 5 ou d'un volume RAID 6, et vérifie les informations de redondance de chaque bloc. (RAID 3 ne peut être affecté qu'à des groupes de volumes à l'aide de l'interface de ligne de commande.)
@@ -58,6 +59,7 @@ La vérification de la redondance du volume démarre. Les volumes du pool ou du 
 
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

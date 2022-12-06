@@ -24,6 +24,7 @@ NOTE: Tous les horodatages pour les tâches de sauvegarde et de restauration ré
 
 Vous pouvez créer de nouvelles restaurations basées sur des images via la fonction Créer sur la page Restaurer de l'application SANtricity Cloud Connector.
 
+.Avant de commencer
 Vérifiez que vous disposez d'une sauvegarde basée sur des images disponible via SANtricity Cloud Connector.
 
 .Étapes
@@ -57,6 +58,7 @@ La restauration du volume hôte cible sélectionné est lancée et l'état de la
 
 Vous pouvez créer de nouvelles restaurations basées sur des fichiers via la fonction Créer de la page Restaurer de l'application SANtricity Cloud Connector.
 
+.Avant de commencer
 Vérifiez que vous disposez d'une sauvegarde basée sur des fichiers disponible via SANtricity Cloud Connector.
 
 .Étapes
@@ -94,6 +96,7 @@ La restauration du volume hôte cible sélectionné est lancée et l'état de la
 
 Vous pouvez utiliser la fonction Supprimer pour supprimer un élément de restauration sélectionné de la section liste des résultats de la page Restaurer.
 
+.Avant de commencer
 Assurez-vous qu'il y a un travail de restauration dont l'état est terminé, échec ou annulé.
 
 .Étapes

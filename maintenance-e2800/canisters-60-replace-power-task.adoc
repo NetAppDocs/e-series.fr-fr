@@ -18,6 +18,7 @@ Vous pouvez remplacer un canister dans une baie E2800 par un tiroir de 60 disque
 * Tiroir disque DE460C
 
 
+.Description de la tâche
 Chaque tiroir de contrôleur de 60 disques ou tiroir de disque comprend deux blocs d'alimentation pour la redondance de l'alimentation. En cas de panne d'une cartouche, vous devez la remplacer dès que possible pour vous assurer que la tablette dispose d'une source d'alimentation redondante.
 
 Vous pouvez remplacer une cartouche d'alimentation alors que votre matrice de stockage est sous tension et effectuer des opérations d'E/S de l'hôte, Tant que le deuxième réservoir d'alimentation de l'étagère dispose d'un état optimal et que le champ *OK pour retirer* de la zone Détails du gourou de la récupération dans le Gestionnaire de système SANtricity affiche *Oui*.
@@ -30,7 +31,7 @@ Pendant cette opération, l'autre cartouche d'alimentation alimente les deux ven
 * Vérifiez que le voyant d'avertissement orange sur le boîtier d'alimentation est allumé, ce qui indique que le réservoir présente une anomalie. Contactez le support technique pour obtenir de l'aide si les LED d'avertissement orange sont allumées dans les deux blocs d'alimentation du tiroir.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Cartouche d'alimentation de rechange prise en charge pour votre modèle de tiroir de contrôleur ou de tiroir de disque.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 
@@ -139,7 +140,7 @@ Vérifier que le nouveau réservoir d'alimentation fonctionne correctement, recu
 .Étapes
 . Sur le nouveau boîtier d'alimentation, vérifiez que le voyant d'alimentation vert est allumé et que le voyant d'avertissement orange est éteint.
 . Dans le gourou de la restauration de SANtricity System Manager, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
-. Si un réservoir d'alimentation défectueux est toujours en cours de signalement, répétez les étapes à la section  2: Remove failed power canister et po  3: Install new power canister. Si le problème persiste, contactez l'assistance technique.
+. Si un réservoir d'alimentation défectueux est toujours en cours de signalement, répétez les étapes à la section <<Étape 2 : retirer le boîtier d'alimentation défectueux>> et po <<Étape 3 : installer un nouveau réservoir d'alimentation>>. Si le problème persiste, contactez l'assistance technique.
 . Déposer la protection antistatique.
 . Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
 +
@@ -154,4 +155,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
 
 
+.Et la suite ?
 Le remplacement du réservoir d'alimentation est terminé. Vous pouvez reprendre les opérations normales.

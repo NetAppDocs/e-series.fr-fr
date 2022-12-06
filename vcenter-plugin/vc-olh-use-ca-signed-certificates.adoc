@@ -19,16 +19,16 @@ Vous pouvez obtenir et importer des certificats signés par une autorité de cer
 
 L'utilisation de certificats signés par l'autorité de certification est une procédure en trois étapes :
 
-*  1: Complete a CSR file.
-*  2: Submit CSR file.
-*  3: Import management certificates.
+* <<Étape 1 : remplissez un fichier CSR>>.
+* <<Étape 2 : soumettez le fichier CSR>>.
+* <<Étape 3 : certificats de gestion des importations>>.
 
 
 
 
 == Étape 1 : remplissez un fichier CSR
 
-Vous devez d'abord générer un fichier de demande de signature de certificat (CSR) qui identifie votre organisation et le système hôte sur lequel le plug-in est exécuté. Vous pouvez également générer un fichier CSR à l'aide d'un outil tel que OpenSSL et passer directement à  2: Submit CSR file.
+Vous devez d'abord générer un fichier de demande de signature de certificat (CSR) qui identifie votre organisation et le système hôte sur lequel le plug-in est exécuté. Vous pouvez également générer un fichier CSR à l'aide d'un outil tel que OpenSSL et passer directement à <<Étape 2 : soumettez le fichier CSR>>.
 
 .Étapes
 . Sélectionnez *gestion des certificats*.
@@ -99,4 +99,5 @@ Les noms de fichier s'affichent dans la boîte de dialogue.
 . Cliquez sur *Importer*.
 
 
+.Résultat
 Les fichiers sont chargés et validés. Les informations de certificat s'affichent sur la page gestion des certificats.

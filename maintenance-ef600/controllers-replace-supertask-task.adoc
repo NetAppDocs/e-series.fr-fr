@@ -14,6 +14,7 @@ summary: 'Remplacement d"un contrôleur unique dans un tiroir contrôleur EF300 
 [role="lead"]
 Vous pouvez remplacer un seul contrôleur par un tiroir de contrôleur EF300 ou EF600.
 
+.Description de la tâche
 Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retirer la batterie, l'alimentation, les modules DIMM, les ventilateurs et la carte d'interface hôte (HIC) du boîtier de contrôleur d'origine, puis les installer dans le boîtier de contrôleur de remplacement.
 
 .Avant de commencer
@@ -26,7 +27,7 @@ Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retire
 
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.
@@ -485,4 +486,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

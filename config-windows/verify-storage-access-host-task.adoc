@@ -13,6 +13,7 @@ summary: 'Vérifiez que l"hôte peut écrire les données vers la LUN et les lir
 [role="lead"]
 Avant d'utiliser le volume, vérifiez que l'hôte peut écrire les données sur la LUN et les lire de nouveau.
 
+.Ce dont vous avez besoin
 Vous devez avoir initialisé la LUN et la formater avec un système de fichiers.
 
 .Étapes

@@ -22,6 +22,7 @@ Vous redistribuez les volumes pour retransférer les volumes vers leurs proprié
 * Un pilote multivoie est installé sur tous les hôtes qui utilisent les volumes que vous souhaitez redistribuer, ou des erreurs d'E/S se produisent. Si vous souhaitez redistribuer les volumes sans pilote multivoie sur les hôtes, toutes les activités d'E/S des volumes pendant l'opération de redistribution doivent être arrêtées afin d'éviter les erreurs d'application.
 
 
+.Description de la tâche
 La plupart des pilotes de chemins d'accès multiples de l'hôte tentent d'accéder à chaque volume sur un chemin vers son propriétaire de contrôleur privilégié. Toutefois, si ce chemin préféré n'est plus disponible, le pilote multichemin de l'hôte bascule vers un autre chemin. Ce basculement peut entraîner le changement de propriété du volume vers le contrôleur secondaire. Une fois que vous avez résolu le problème à l'origine du basculement, certains hôtes peuvent retransférer automatiquement la propriété des volumes vers le propriétaire du contrôleur privilégié, mais dans certains cas, vous devrez peut-être redistribuer manuellement les volumes.
 
 .Étapes
@@ -34,4 +35,5 @@ La boîte de dialogue redistribuer les volumes s'affiche. Tous les volumes de la
 . Sélectionnez un ou plusieurs volumes à redistribuer et confirmez que vous souhaitez effectuer l'opération.
 
 
+.Résultat
 Le système déplace les volumes sélectionnés vers les propriétaires de contrôleur préférés ou une boîte de dialogue de redistribution des volumes est peut-être inutile.

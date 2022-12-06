@@ -26,6 +26,7 @@ L'accès en lecture et en écriture des disques n'est disponible que par l'inter
 * Tous les disques du pool ou du groupe de volumes doivent être des disques sécurisés.
 
 
+.Description de la tâche
 Si vous souhaitez utiliser la sécurité des lecteurs, sélectionnez un pool ou un groupe de volumes qui prend en charge la sécurité. Un pool ou un groupe de volumes peut contenir à la fois des disques sécurisés et non sécurisés, mais tous les disques doivent être sécurisés pour utiliser leurs fonctionnalités de chiffrement.
 
 Une fois la sécurité terminée, vous pouvez la supprimer uniquement en supprimant le pool ou le groupe de volumes, puis en effaçant les lecteurs.

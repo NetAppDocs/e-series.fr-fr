@@ -16,7 +16,7 @@ Pour configurer votre baie de stockage, utilisez l'assistant d'installation de S
 
 SANtricity System Manager est une interface web intégrée à chaque contrôleur. Pour accéder à l’interface utilisateur, pointez un navigateur vers l’adresse IP du contrôleur. Un assistant d'installation vous aide à commencer la configuration du système.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Gestion hors bande.
 * Station de gestion pour accéder à SANtricity System Manager incluant l'un des navigateurs suivants :
 +
@@ -60,6 +60,7 @@ Safari
 |===
 
 
+.Description de la tâche
 Si vous êtes un utilisateur iSCSI, assurez-vous que vous avez fermé l'assistant de configuration lors de la configuration d'iSCSI.
 
 L'assistant redémarre automatiquement lorsque vous ouvrez System Manager ou actualisez votre navigateur et _au moins une_ des conditions suivantes est remplie :

@@ -25,6 +25,7 @@ Utilisez cette option uniquement sous les instructions du support technique. Vou
 * Le volume est à l'état optimal et aucune opération de modification n'est en cours sur le volume.*attention : *vous ne pouvez pas annuler l'opération après son démarrage. Toutes les données de volume sont effacées. N'essayez pas cette opération à moins que le gourou de la restauration vous conseille de le faire. Contactez le support technique avant de commencer cette procédure.
 
 
+.Description de la tâche
 Lorsque vous initialisez un volume, celui-ci conserve son WWN, ses affectations d'hôtes, sa capacité allouée et ses paramètres de capacité réservée. Il conserve également les mêmes paramètres d'assurance de données et de sécurité.
 
 Impossible d'initialiser les types de volumes suivants :
@@ -49,6 +50,7 @@ La boîte de dialogue initialiser les volumes s'affiche. Tous les volumes de la 
 . Sélectionnez un ou plusieurs volumes à initialiser et confirmez que vous souhaitez effectuer l'opération.
 
 
+.Résultats
 Le système effectue les opérations suivantes :
 
 * Efface toutes les données des volumes qui ont été initialisés.

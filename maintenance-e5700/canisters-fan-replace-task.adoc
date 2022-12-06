@@ -18,6 +18,7 @@ Vous pouvez remplacer une cartouche de ventilateur dans une baie E5700 par une �
 * Tiroir disque DE460C
 
 
+.Description de la tâche
 Chaque tiroir de contrôleur ou tiroir de 60 disques comprend deux boîtiers de ventilateur. En cas de défaillance de la cartouche du ventilateur, vous devez la remplacer dès que possible pour vous assurer que la tablette dispose d'un refroidissement adéquat.
 
 
@@ -29,7 +30,7 @@ CAUTION: *Dommages possibles à l'équipement* -- si vous effectuez cette procé
 * Vérifier que le voyant d'avertissement orange sur le boîtier du ventilateur est allumé, ce qui indique que le ventilateur est défectueux. Contactez le support technique pour obtenir de l'aide si les voyants d'avertissement orange des deux ventilateurs du tiroir sont allumés.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une cartouche de ventilateur de remplacement prise en charge pour votre modèle de tiroir contrôleur ou de tiroir disque.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
@@ -133,7 +134,7 @@ Vérifier que le nouveau boîtier du ventilateur fonctionne correctement, recuei
 NOTE: Après avoir remplacé le boîtier du ventilateur, le voyant d'avertissement reste allumé (orange fixe) pendant que le micrologiciel vérifie que le boîtier du ventilateur est correctement installé. Le voyant s'éteint une fois le processus terminé.
 
 . Dans le gourou de la restauration de SANtricity System Manager, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
-. Si une cartouche de ventilateur défectueuse est toujours signalée, répéter les étapes à la section  2: Remove failed fan canister and install new one. Si le problème persiste, contactez le support technique.
+. Si une cartouche de ventilateur défectueuse est toujours signalée, répéter les étapes à la section <<Étape 2 : retirer le boîtier de ventilateur défectueux et en installer un nouveau>>. Si le problème persiste, contactez le support technique.
 . Déposer la protection antistatique.
 . Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
 +
@@ -151,4 +152,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
 
 
+.Et la suite ?
 Le remplacement du boîtier du ventilateur est terminé. Vous pouvez reprendre les opérations normales.

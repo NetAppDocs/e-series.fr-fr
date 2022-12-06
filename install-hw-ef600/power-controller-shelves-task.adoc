@@ -13,6 +13,7 @@ summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous
 [role="lead"]
 Découvrez comment connecter les câbles d'alimentation et mettre les tiroirs disques sous tension.
 
+.Avant de commencer
 Avant d'alimenter les tiroirs contrôleurs, assurez-vous d'effectuer les opérations suivantes :
 
 * Installez votre matériel.
@@ -47,6 +48,7 @@ CAUTION: L'accès à un boîtier de contrôleur EF300 ou EF600 à partir du tiro
 . Laissez le contrôleur démarrer pendant cinq minutes avant de terminer l'installation et la configuration du système de stockage.
 
 
+.Résultat
 Le contrôleur démarre automatiquement. Les LED clignotent et les ventilateurs commencent à indiquer que le contrôleur est sous tension.
 
 

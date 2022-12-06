@@ -17,6 +17,7 @@ summary: Redimensionnez un volume pour augmenter sa capacité indiquée.
 [role="lead"]
 Vous pouvez redimensionner un volume pour augmenter sa capacité indiquée.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Une capacité disponible suffisante est disponible dans le pool ou le groupe de volumes associé du volume.
@@ -24,6 +25,7 @@ Assurez-vous que :
 * Aucun disque de secours n'est utilisé dans le volume. (S'applique uniquement aux volumes de groupes de volumes.)
 
 
+.Description de la tâche
 Dans cette tâche, vous apprendrez à augmenter la capacité déclarée (la capacité signalée aux hôtes) d'un volume en utilisant la capacité disponible dans le pool ou le groupe de volumes. Veillez à prendre en compte vos besoins de capacité futurs pour d'autres volumes de ce pool ou de ce groupe de volumes.
 
 
@@ -47,4 +49,5 @@ La capacité du volume est augmentée en fonction de votre sélection. Notez que
 
 
 
+.Une fois que vous avez terminé
 Après avoir augmenté la capacité du volume, vous devez augmenter manuellement la taille du système de fichiers pour qu'elle corresponde. La façon dont vous faites cela dépend du système de fichiers que vous utilisez. Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.

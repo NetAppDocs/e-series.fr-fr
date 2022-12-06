@@ -17,6 +17,7 @@ keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter
 [role="lead"]
 Modifiez les paramètres du cache de lecture et d'écriture pour affecter les performances d'E/S globales d'un volume.
 
+.Description de la tâche
 Gardez ces consignes à l'esprit lorsque vous modifiez les paramètres de cache d'un volume :
 
 * Après avoir ouvert la boîte de dialogue Modifier les paramètres de cache, une icône peut s'afficher en regard des propriétés de cache sélectionnées. Cette icône indique que le contrôleur a temporairement suspendu les opérations de mise en cache. Cette action peut se produire lorsqu'une nouvelle batterie est en cours de chargement, lorsqu'un contrôleur a été retiré ou si le contrôleur a détecté une discordance dans les tailles de cache. Une fois la condition effacée, les propriétés de cache sélectionnées dans la boîte de dialogue deviennent actives. Si les propriétés de cache sélectionnées ne sont pas actives, contactez le support technique.
@@ -33,6 +34,7 @@ La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volu
 . Sélectionnez l'onglet *Basic* pour modifier les paramètres de mise en cache de lecture et d'écriture.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -48,6 +50,7 @@ La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volu
 . Sélectionnez l'onglet *Avancé* pour modifier les paramètres avancés pour les volumes épais. Les paramètres de cache avancés sont disponibles uniquement pour les volumes épais.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

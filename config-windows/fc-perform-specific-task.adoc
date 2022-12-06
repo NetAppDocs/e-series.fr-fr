@@ -15,15 +15,16 @@ Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez
 
 
 
-== Étape 1 : configurer les commutateurs FC—​Windows
+== Étape 1 : configurer les commutateurs FC--Windows
 
 La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Identifiants d'administrateur pour les commutateurs.
 * WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
 
 
+.Description de la tâche
 Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
 
 .Étapes
@@ -35,10 +36,11 @@ Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port in
 
 
 
-== Étape 2 : déterminez les WWPN des hôtes et définissez les paramètres recommandés—​FC, Windows
+== Étape 2 : détermination des WWPN des hôtes et configuration des paramètres recommandés--FC, Windows
 
 Vous installez un utilitaire HBA FC, ce qui vous permet d'afficher le nom international du port (WWPN) de chaque port hôte. En outre, vous pouvez utiliser l'utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l' http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour la configuration prise en charge.
 
+.Description de la tâche
 Consultez les instructions suivantes pour les utilitaires HBA :
 
 * La plupart des fournisseurs HBA proposent un utilitaire HBA. Vous aurez besoin de la version appropriée de HBA pour votre système d'exploitation hôte et votre processeur. Voici des exemples d'utilitaires FC HBA :

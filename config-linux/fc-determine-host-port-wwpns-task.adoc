@@ -15,6 +15,7 @@ Vous installez un utilitaire HBA FC, ce qui vous permet d'afficher le nom intern
 
 En outre, vous pouvez utiliser l'utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l' https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour la configuration prise en charge.
 
+.Description de la tâche
 Consultez les instructions suivantes pour les utilitaires HBA :
 
 * La plupart des fournisseurs HBA proposent un utilitaire HBA. Vous aurez besoin de la version appropriée de HBA pour votre système d'exploitation hôte et votre processeur. Voici des exemples d'utilitaires FC HBA :

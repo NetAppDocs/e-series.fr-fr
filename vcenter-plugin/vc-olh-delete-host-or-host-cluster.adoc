@@ -17,6 +17,7 @@ summary: Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes
 [role="lead"]
 Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes ne soient plus associés à cet hôte.
 
+.Description de la tâche
 Suivez les consignes ci-dessous lorsque vous supprimez un hôte ou un cluster hôte :
 
 * Toute affectation de volumes spécifique est supprimée et les volumes associés sont disponibles dans le cadre d'une nouvelle affectation.
@@ -37,6 +38,7 @@ La boîte de dialogue de confirmation s'affiche.
 . Confirmez que vous souhaitez effectuer l'opération, puis cliquez sur *Supprimer*.
 
 
+.Résultats
 Si vous avez supprimé un hôte, le système effectue les opérations suivantes :
 
 * Supprime l'hôte et, le cas échéant, le supprime du cluster hôte.

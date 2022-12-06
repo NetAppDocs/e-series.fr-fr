@@ -22,6 +22,7 @@ Les étapes à suivre dépendent des protocoles de début et de fin des ports h�
 
 Si vous aviez déjà des ports hôtes FC et que vous avez converti en iSCSI, vous devrez peut-être modifier votre configuration existante pour prendre en charge iSCSI. La procédure suivante s'applique uniquement si aucune HIC iSCSI n'est présente.
 
+.Description de la tâche
 Cette tâche s'applique uniquement si vous convertissez une matrice de stockage déjà utilisée.
 
 Cette tâche ne s'applique pas si vous convertissez une nouvelle baie de stockage qui ne possède pas encore d'hôtes et de volumes définis. Si vous avez converti le protocole hôte-port d'une nouvelle baie de stockage, reportez-vous à la section link:../install-hw-cabling/index.html["Procédures de câblage"] Pour installer les câbles et SFP. Suivez ensuite les instructions du link:../config-linux/index.html["Configuration Linux Express"], link:../config-windows/index.html["Configuration Windows Express"], ou link:../config-vmware/index.html["Configuration VMware Express"] pour terminer la configuration de chaque protocole.
@@ -67,6 +68,7 @@ L'option *Delete* ne supprime pas physiquement le port hôte. Cette option suppr
 . Remontez des volumes ou commencez à utiliser le volume en mode bloc.
 
 
+.Et la suite ?
 Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.
 
 
@@ -112,6 +114,7 @@ L'option *Delete* ne supprime pas physiquement le port hôte. Cette option suppr
 . Remontez des volumes ou commencez à utiliser le volume en mode bloc.
 
 
+.Et la suite ?
 Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.
 
 
@@ -131,4 +134,5 @@ Les paramètres spécifiques peuvent varier d'une distribution Linux à l'autre.
 
 
 
+.Et la suite ?
 Votre conversion de protocole hôte est terminée. Vous pouvez reprendre les opérations normales.

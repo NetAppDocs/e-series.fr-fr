@@ -22,11 +22,12 @@ Pour afficher et gérer les ressources de stockage dans le plug-in de stockage p
 * Les mots de passe de la baie de stockage doivent être configurés à l'aide de la mosaïque Access Management de System Manager.
 
 
+.Description de la tâche
 La découverte de la matrice est une procédure à plusieurs étapes :
 
-*  1: Enter network addresses for discovery
-*  2: Resolve untrusted certificates during discovery
-*  3: Provide passwords
+* <<Étape 1 : saisissez les adresses réseau pour la découverte>>
+* <<Étape 2 : résolution de certificats non approuvés lors de la découverte>>
+* <<Étape 3 : fournir des mots de passe>>
 
 
 
@@ -59,7 +60,7 @@ NOTE: Si aucune baie gérable n'est détectée, vérifiez que les matrices de st
 Le système effectue une vérification des informations d'identification sur chaque matrice que vous ajoutez au domaine de gestion. Vous devrez peut-être résoudre tous les problèmes avec des certificats non fiables avant de continuer.
 
 . Cliquez sur *Suivant* pour passer à l'étape suivante de l'assistant.
-. Si les matrices de stockage possèdent des certificats valides, rendez-vous sur  3: Provide passwords. Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche ; allez à  2: Resolve untrusted certificates during discovery. Si vous souhaitez importer des certificats signés par une autorité de certification, annulez les boîtes de dialogue de découverte et allez à link:vc-olh-import-certificates-for-arrays.html["Importer des certificats pour les tableaux"].
+. Si les matrices de stockage possèdent des certificats valides, rendez-vous sur <<Étape 3 : fournir des mots de passe>>. Si les matrices de stockage ne disposent pas de certificats valides, la boîte de dialogue résoudre les certificats auto-signés s'affiche ; allez à <<Étape 2 : résolution de certificats non approuvés lors de la découverte>>. Si vous souhaitez importer des certificats signés par une autorité de certification, annulez les boîtes de dialogue de découverte et allez à link:vc-olh-import-certificates-for-arrays.html["Importer des certificats pour les tableaux"].
 
 
 
@@ -95,6 +96,7 @@ Pour la dernière étape de la découverte, vous devez saisir les mots de passe 
 
 NOTE: La connexion du système aux baies de stockage spécifiées peut prendre plusieurs minutes.
 
+.Résultat
 Les matrices de stockage sont ajoutées à votre domaine de gestion et associées au groupe sélectionné (si spécifié).
 
 

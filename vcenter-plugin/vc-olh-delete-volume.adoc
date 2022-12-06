@@ -17,6 +17,7 @@ summary: 'Supprimez un ou plusieurs volumes pour augmenter la capacité disponib
 [role="lead"]
 Vous pouvez supprimer un ou plusieurs volumes pour augmenter la capacité disponible d'un pool ou d'un groupe de volumes.
 
+.Avant de commencer
 Sur les volumes que vous prévoyez de supprimer, vérifiez que :
 
 * Toutes les données sont sauvegardées.
@@ -24,6 +25,7 @@ Sur les volumes que vous prévoyez de supprimer, vérifiez que :
 * Tous les périphériques et systèmes de fichiers sont démontés.
 
 
+.Description de la tâche
 Généralement, vous supprimez des volumes si ceux-ci ont été créés avec des paramètres ou une capacité incorrects, ou si la configuration du stockage n'est plus adaptée. La suppression d'un volume augmente la capacité disponible dans le pool ou le groupe de volumes.
 
 

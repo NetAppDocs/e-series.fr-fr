@@ -63,6 +63,7 @@ image::../media/60_cabling.png[60 câblage]
 
 Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF300 ou EF600 à un tiroir disque DE212C, DE224C ou DE460.
 
+.Avant de commencer
 Avant de câbler une baie EF300 ou EF600, assurez-vous que la dernière version du firmware est mise à jour. Pour mettre à jour le micrologiciel, suivez les instructions de la section link:../upgrade-santricity/index.html["Mise à niveau de SANtricity OS"^].
 
 

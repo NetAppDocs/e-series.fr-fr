@@ -13,9 +13,9 @@ summary: 'Vous remontez des volumes si la mise à niveau du contrôleur entraîn
 [role="lead"]
 Si la mise à niveau du contrôleur entraîne la modification de l'ID fournisseur de LSI à NETAPP, suivez la procédure adéquate pour votre type d'hôte :
 
-*  volumes on an AIX host
-*  volumes on a VMware host
-*  volumes on a Windows host
+* <<Remontez des volumes sur un hôte AIX>>
+* <<Remontez des volumes sur un hôte VMware>>
+* <<Remontez des volumes sur un hôte Windows>>
 
 
 
@@ -24,6 +24,7 @@ Si la mise à niveau du contrôleur entraîne la modification de l'ID fournisseu
 
 Une fois les contrôleurs remplacés, il est possible que l'hôte affiche les nouveaux volumes de la baie de stockage, mais affiche également les volumes d'origine comme ayant échoué.
 
+.Étape
 Si des volumes défaillants apparaissent, exécutez la `cfgmgr` commande.
 
 

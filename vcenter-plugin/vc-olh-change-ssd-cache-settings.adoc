@@ -30,6 +30,7 @@ La boîte de dialogue SSD cache Settings s'affiche.
 . Vérifiez ou modifiez les paramètres de cache SSD, le cas échéant.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

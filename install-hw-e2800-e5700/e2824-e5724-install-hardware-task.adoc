@@ -13,6 +13,7 @@ summary: Installez le système E2800 ou E5700 dans un rack à deux montants ou d
 [role="lead"]
 Découvrez comment installer les systèmes E5724, EF570, EF280, E2812, E2824, Système de stockage DE212C ou DE224C dans un rack à deux montants ou dans une armoire système NetApp.
 
+.Avant de commencer
 Avant d'installer le matériel, assurez-vous d'effectuer les opérations suivantes :
 
 * Enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].

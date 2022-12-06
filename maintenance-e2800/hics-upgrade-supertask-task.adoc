@@ -14,6 +14,7 @@ summary: 'Mettre à niveau une carte d"interface hôte (HIC) sur une baie E2800.
 [role="lead"]
 Vous pouvez mettre à niveau une carte d'interface hôte (HIC) dans une baie E2800 pour augmenter le nombre de ports hôtes ou modifier les protocoles hôtes.
 
+.Description de la tâche
 Lorsque vous mettez à niveau les HIC, vous devez mettre hors tension la baie de stockage, supprimer la HIC existante de chaque contrôleur, installer une nouvelle HIC et mettre de nouveau sous tension.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Lorsque vous mettez à niveau les HIC, vous devez mettre hors tension la baie de
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, cela est dû au fait que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
@@ -356,4 +357,5 @@ NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support techniq
 . Connectez les câbles des ports hôtes du contrôleur aux hôtes de données.
 
 
+.Et la suite ?
 Le processus de mise à niveau d'une carte d'interface hôte dans votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

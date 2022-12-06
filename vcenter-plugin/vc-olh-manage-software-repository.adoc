@@ -17,8 +17,10 @@ summary: Vous pouvez afficher et gérer un référentiel logiciel qui répertori
 [role="lead"]
 Vous pouvez afficher et gérer un référentiel logiciel qui répertorie tous les fichiers logiciels associés au plug-in de stockage pour vCenter.
 
+.Avant de commencer
 Si vous utilisez le référentiel pour ajouter des fichiers SANtricity OS, assurez-vous que les fichiers OS sont disponibles sur votre système local.
 
+.Description de la tâche
 Vous pouvez utiliser l'option gérer le référentiel logiciel SANtricity OS pour importer un ou plusieurs fichiers OS vers le système hôte sur lequel le plug-in est exécuté. Vous pouvez également choisir de supprimer un ou plusieurs fichiers OS disponibles dans le référentiel logiciel.
 
 .Étapes
@@ -45,4 +47,5 @@ La boîte de dialogue gérer le référentiel logiciel SANtricity OS s'affiche.
 
 
 
+.Résultat
 Si vous avez sélectionné l'importation, le ou les fichiers sont téléchargés et validés. Si vous avez sélectionné Supprimer, les fichiers sont supprimés du référentiel logiciel.

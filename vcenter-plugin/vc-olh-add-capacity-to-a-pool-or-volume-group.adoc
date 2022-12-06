@@ -26,6 +26,7 @@ Vous pouvez ajouter des disques pour augmenter la capacité disponible dans un p
 
 Les disques sécurisés peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard).
 
+.Description de la tâche
 Dans cette tâche, vous pouvez ajouter de la capacité libre à inclure dans le pool ou le groupe de volumes. Vous pouvez utiliser cette capacité disponible pour créer des volumes supplémentaires. Les données des volumes restent accessibles lors de cette opération.
 
 Pour les pools, vous pouvez ajouter jusqu'à 60 disques à la fois. Pour les groupes de volumes, vous pouvez ajouter deux lecteurs au maximum à la fois. Si vous devez ajouter plus de lecteurs que le nombre maximal, répétez la procédure. (Un pool ne peut pas contenir plus de disques que la limite maximale d'une matrice de stockage.)
@@ -49,6 +50,7 @@ Le firmware du contrôleur organise les disques non assignés avec les meilleure
 
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -127,4 +129,5 @@ Si vous ajoutez des disques à un pool ou à un groupe de volumes, une boîte de
 . Pour continuer, cliquez sur *Oui* ; sinon, cliquez sur *Annuler*.
 
 
+.Résultat
 Après avoir ajouté les disques non assignés à un pool ou à un groupe de volumes, les données de chaque volume du pool ou du groupe de volumes sont redistribuées pour inclure les disques supplémentaires.

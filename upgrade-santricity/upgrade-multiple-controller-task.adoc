@@ -188,4 +188,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 La mise à niveau du logiciel du contrôleur est terminée. Vous pouvez reprendre les opérations normales.

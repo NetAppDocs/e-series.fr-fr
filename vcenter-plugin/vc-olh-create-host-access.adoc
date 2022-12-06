@@ -17,6 +17,7 @@ summary: Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous 
 [role="lead"]
 Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez découvrir ou définir chaque hôte du réseau.
 
+.Description de la tâche
 En créant un hôte, vous définissez les paramètres de l'hôte pour fournir une connexion à la matrice de stockage et un accès E/S aux volumes.
 
 Vous pouvez autoriser l'agent HCA (Host Context Agent) à détecter automatiquement les hôtes, puis vérifier que les informations sont correctes en sélectionnant *Afficher/Modifier les paramètres* dans la page configurer les hôtes. Cependant, l'HCA n'est pas disponible sur tous les systèmes d'exploitation pris en charge et vous devez créer l'hôte manuellement.
@@ -42,6 +43,7 @@ La boîte de dialogue Créer un hôte s'affiche.
 . Sélectionnez les paramètres de l'hôte, le cas échéant.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -95,6 +97,8 @@ Définissez le secret de l'initiateur CHAP
 . Si vous devez mettre à jour les informations sur l'hôte, sélectionnez-le dans le tableau et cliquez sur *Afficher/Modifier les paramètres*.
 
 
+.Résultat
 Une fois l'hôte créé, le système crée un nom par défaut pour chaque port hôte configuré pour l'hôte (libellé utilisateur). L'alias par défaut est `<Hostname_Port Number>`. Par exemple, l'alias par défaut du premier port créé pour l'IPT hôte est `IPT_1`.
 
+.Une fois que vous avez terminé
 Vous devez affecter un volume à un hôte afin qu'il puisse être utilisé pour les opérations d'E/S. Accédez à link:vc-olh-assign-volumes-to-hosts.html["Attribuez des volumes aux hôtes"].

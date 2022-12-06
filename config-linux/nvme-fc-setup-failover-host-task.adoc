@@ -13,12 +13,14 @@ summary: 'Configurez l"hôte pour exécuter le basculement.'
 [role="lead"]
 Pour fournir un chemin redondant à la matrice de stockage, vous pouvez configurer l'hôte pour qu'il exécute le basculement.
 
+.Ce dont vous avez besoin
 Vous devez installer les modules requis sur votre système.
 
 * Pour les hôtes Red Hat (RHEL), vérifiez que les packages sont installés en cours d'exécution `rpm -q device-mapper-multipath`
 * Pour les hôtes SLES, vérifiez que les packages sont installés en cours d'exécution `rpm -q multipath-tools`
 
 
+.Description de la tâche
 RHEL 7 et SLES 12 utilisent Device Mapper Multipath (DMMP) pour les chemins d'accès multiples lors de l'utilisation de NVMe sur Fibre Channel. RHEL 8, RHEL 9 et SLES 15 utilisent un basculement NVMe natif intégré. Selon le système d'exploitation que vous utilisez, une configuration supplémentaire de chemins d'accès multiples est requise pour assurer son bon fonctionnement.
 
 
@@ -67,6 +69,7 @@ devices {
 
 == Configuration des chemins d'accès multiples NVMe natifs pour RHEL 8
 
+.Description de la tâche
 Les chemins d'accès multiples NVMe natifs sont désactivés par défaut dans RHEL 8 et doivent être activés selon les étapes ci-dessous.
 
 .Étapes

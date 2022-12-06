@@ -14,6 +14,7 @@ summary: Remplacez un module DIMM dans une baie EF300 ou EF600.
 [role="lead"]
 Vous pouvez remplacer un module DIMM dans une baie EF300 ou EF600.
 
+.Description de la tâche
 Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre contrôleur, mettre le contrôleur hors ligne, retirer le contrôleur, retirer les modules DIMM et installer les nouveaux modules DIMM dans votre contrôleur. Vous pouvez ensuite remettre votre contrôleur en ligne et vérifier que la baie de stockage fonctionne correctement.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre 
 * Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un module DIMM de remplacement.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.
@@ -260,4 +261,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de votre DIMM est terminé. Vous pouvez reprendre les opérations normales.

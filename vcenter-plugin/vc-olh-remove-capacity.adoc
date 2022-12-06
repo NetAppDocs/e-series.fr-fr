@@ -19,6 +19,7 @@ Vous pouvez supprimer des disques pour réduire la capacité d'un pool existant 
 
 Après avoir supprimé des disques, les données de chaque volume du pool ou SSD cache sont redistribuées aux disques restants. Les disques retirés sont non assignés et leur capacité devient alors partie de la capacité libre totale de la baie de stockage.
 
+.Description de la tâche
 Suivez les consignes suivantes lorsque vous retirez de la capacité :
 
 * Vous ne pouvez pas supprimer le dernier disque d'un cache SSD sans supprimer au préalable le cache SSD.
@@ -56,4 +57,5 @@ Lorsque vous sélectionnez ou désélectionnez des lecteurs dans la liste, le ch
 . Cliquez sur *Supprimer*, puis confirmez que vous souhaitez supprimer les lecteurs.
 
 
+.Résultat
 La capacité réduite récemment du pool ou de SSD cache est reflétée dans la vue pools et groupes de volumes.

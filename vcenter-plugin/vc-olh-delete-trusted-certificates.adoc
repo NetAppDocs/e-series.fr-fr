@@ -16,6 +16,7 @@ summary: Supprimez un ou plusieurs certificats qui ne sont plus nécessaires.
 [role="lead"]
 Vous pouvez supprimer un ou plusieurs certificats qui ne sont plus nécessaires, tels qu'un certificat expiré.
 
+.Avant de commencer
 Importez le nouveau certificat avant de supprimer l'ancien.
 
 

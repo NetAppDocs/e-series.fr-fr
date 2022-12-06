@@ -19,11 +19,12 @@ Après avoir préparé la mise à niveau, vous pouvez retirer les contrôleurs e
 
 Retirez le boîtier du contrôleur pour pouvoir le mettre à niveau avec un nouveau. Vous devez débrancher tous les câbles et retirer les émetteurs-récepteurs SFP. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un bracelet antistatique ou prendre d'autres précautions antistatiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
 
 
+.Description de la tâche
 Effectuez les opérations suivantes pour chaque contrôleur du plateau du lecteur de contrôleur
 
 Si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur.
@@ -81,4 +82,5 @@ Retirez la batterie uniquement si vous prévoyez d'utiliser la batterie de l'anc
 . Retirez la batterie en la faisant glisser vers l'arrière de l'ancien boîtier du contrôleur.
 
 
+.Et la suite ?
 Accédez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].

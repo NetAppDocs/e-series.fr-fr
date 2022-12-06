@@ -14,8 +14,8 @@ summary: Remplacez la batterie.
 [role="lead"]
 La procédure de remplacement de la batterie dépend de la configuration recto-verso (deux contrôleurs) ou recto (un contrôleur).
 
-* Pour les configurations recto verso, reportez-vous à la section  controller online (duplex).
-* Pour les configurations recto, voir  up controller (simplex).
+* Pour les configurations recto verso, reportez-vous à la section <<Mise en ligne du contrôleur (duplex)>>.
+* Pour les configurations recto, voir <<Mise sous tension du contrôleur (simplex)>>.
 
 
 
@@ -93,6 +93,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.
 
 
@@ -154,4 +155,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.

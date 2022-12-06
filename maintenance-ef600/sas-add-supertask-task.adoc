@@ -14,6 +14,7 @@ summary: 'Ajoutez une carte d"extension SAS aux contrôleurs EF300 pour permettr
 [role="lead"]
 Vous pouvez ajouter une carte d'extension SAS à un contrôleur EF300 ou EF600 pour permettre l'extension du plateau de lecteur.
 
+.Description de la tâche
 Lorsque vous ajoutez une carte d'extension SAS, vous devez mettre la baie de stockage hors tension, installer la nouvelle carte d'extension SAS et mettre de nouveau sous tension.
 
 .Avant de commencer
@@ -24,7 +25,7 @@ Lorsque vous ajoutez une carte d'extension SAS, vous devez mettre la baie de sto
 
 CAUTION: Cette procédure doit être effectuée avec les deux boîtiers de contrôleur. Les configurations de contrôleur HIC doivent correspondre exactement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une carte d'extension SAS compatible avec votre contrôleur.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.
@@ -213,4 +214,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 NOTE: Pour raccorder votre extension SAS, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage du matériel E-Series"] pour obtenir des instructions.
 
+.Et la suite ?
 Le processus d'ajout d'une carte d'extension SAS dans votre matrice de stockage est terminé. Vous pouvez reprendre les opérations normales.

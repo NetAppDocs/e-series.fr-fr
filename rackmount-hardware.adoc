@@ -24,18 +24,18 @@ L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Install
 
 
 
-== Rack à deux montants — 2U
+== Rack à deux montants -- 2U
 
 L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installation d'un équipement 2U dans un rack à deux montants"^].
 
 
 
-== Rack ou armoire à quatre montants — 2U
+== Rack ou armoire à quatre montants -- 2U
 
 L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installation d'un boîtier 2U de 12 disques dans un rack ou une armoire à quatre montants"^].
 
 
 
-== Rack à quatre montants — SuperRail
+== Rack à quatre montants -- SuperRail
 
 L'accès https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installez le SuperRail dans un rack à quatre montants (tiroirs DE224C/DE460C)"^].

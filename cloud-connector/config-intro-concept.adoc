@@ -19,6 +19,7 @@ Une fois l'installation effectuée, vous pouvez configurer l'application SANtric
 
 Lors de la première initialisation du SANtricity Cloud Connector pour la première fois, vous devez saisir un mot de passe par défaut pour accéder à l'application.
 
+.Avant de commencer
 Vérifiez que vous avez accès à un navigateur connecté à Internet.
 
 .Étapes
@@ -86,6 +87,7 @@ La phrase de passe saisie pour l'application SANtricity Cloud Connector est acce
 
 Les fonctionnalités de sauvegarde et de restauration sont disponibles pour les types de cibles Amazon S3, AltaVault et StorageGRID via SANtricity Cloud Connector. Vous pouvez spécifier le type de cible de stockage souhaité pour l'application SANtricity Cloud Connector, dans la page Sélectionner le type cible.
 
+.Avant de commencer
 Vérifiez que vous disposez de l'un des éléments suivants : point de montage AltaVault, compte Amazon AWS ou compte StorageGRID.
 
 .Étapes
@@ -213,6 +215,7 @@ Le type cible spécifié pour SANtricity Cloud Connector est accepté et la page
 
 Les informations de connexion et de connexion du proxy de services Web utilisé conjointement avec le connecteur cloud SANtricity sont entrées via la page saisir l'URL et les informations d'identification du proxy de services Web.
 
+.Avant de commencer
 Vérifiez que vous avez bien établi une connexion au proxy de services Web SANtricity.
 
 .Étapes
@@ -233,6 +236,7 @@ Les informations d'identification proxy de services Web pour SANtricity Cloud Co
 
 En fonction des informations d'identification du proxy de services Web SANtricity saisies dans l'assistant de configuration, une liste des matrices de stockage disponibles s'affiche sous la page Sélectionner des matrices de stockage. Cette page vous permet de sélectionner les baies de stockage utilisées par SANtricity Cloud Connector pour les tâches de sauvegarde et de restauration.
 
+.Avant de commencer
 Assurez-vous que les matrices de stockage sont configurées pour votre application proxy de services Web SANtricity.
 
 
@@ -256,6 +260,7 @@ NOTE: Vous devez configurer un mot de passe valide pour toute matrice de stockag
 
 En fonction des baies de stockage hébergées par proxy de services Web sélectionnées via l'assistant de configuration, vous pouvez sélectionner un hôte disponible pour mapper les volumes de sauvegarde et de restauration des candidats vers l'application SANtricity Cloud Connector via la page Sélectionner les hôtes.
 
+.Avant de commencer
 Vérifiez que vous disposez d'un hôte disponible via le proxy de services Web SANtricity.
 
 .Étapes

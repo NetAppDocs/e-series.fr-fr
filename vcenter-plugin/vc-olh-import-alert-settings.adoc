@@ -17,6 +17,7 @@ summary: 'Importer les configurations d"alertes d"une matrice de stockage vers d
 [role="lead"]
 Vous pouvez importer des configurations d'alertes d'une matrice de stockage vers d'autres matrices de stockage. Cette opération de traitement par lot permet de gagner du temps lorsque vous devez configurer plusieurs baies sur le réseau.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Les alertes sont configurées dans System Manager (menu:Paramètres[alertes]) pour la baie de stockage que vous souhaitez utiliser comme source.
@@ -24,6 +25,7 @@ Assurez-vous que :
 * Vous avez étudié les exigences en matière de réplication des configurations de stockage dans link:vc-olh-import-settings-overview.html["Vue d'ensemble des paramètres d'importation"].
 
 
+.Description de la tâche
 Vous pouvez sélectionner des alertes par e-mail, SNMP ou syslog pour l'opération d'importation :
 
 * *Alertes par e-mail* -- Une adresse de serveur de messagerie et les adresses e-mail des destinataires de l'alerte.
@@ -52,4 +54,5 @@ La page opérations affiche les résultats de l'opération d'importation. Si l'o
 
 
 
+.Résultat
 Les baies de stockage cibles sont désormais configurées de façon à envoyer des alertes aux administrateurs par e-mail, SNMP ou syslog.

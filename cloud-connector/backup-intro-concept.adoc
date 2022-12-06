@@ -24,6 +24,7 @@ NOTE: Tous les horodatages pour les tâches de sauvegarde et de restauration ré
 
 Vous pouvez créer de nouvelles sauvegardes basées sur des images via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
 
+.Avant de commencer
 Vérifiez que vous disposez de baies de stockage du proxy de services Web enregistrées dans le Cloud Connector de SANtricity.
 
 .Étapes
@@ -76,6 +77,7 @@ La sauvegarde du volume E-Series sélectionné est initiée et l'état de la tâ
 
 Vous pouvez créer de nouvelles sauvegardes basées sur des dossiers ou des fichiers via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
 
+.Avant de commencer
 Vérifiez que vous disposez de baies de stockage du proxy de services Web enregistrées dans le Cloud Connector de SANtricity.
 
 Une sauvegarde basée sur des fichiers sauvegarde inconditionnellement tous les fichiers du système de fichiers que vous spécifiez. Toutefois, vous pouvez effectuer une restauration sélective de fichiers et de dossiers.
@@ -138,6 +140,7 @@ La sauvegarde du volume E-Series sélectionné est lancée et l'état de la tâc
 
 Vous pouvez effectuer des sauvegardes complètes et incrémentielles via la fonction Exécuter de la page sauvegardes. Les sauvegardes incrémentielles sont uniquement disponibles pour les sauvegardes basées sur des fichiers.
 
+.Avant de commencer
 Assurez-vous d'avoir créé une tâche de sauvegarde via SANtricity Cloud Connector.
 
 .Étapes
@@ -171,6 +174,7 @@ La demande de sauvegarde est initiée.
 
 La fonction Supprimer supprime les données sauvegardées à l'emplacement cible spécifié pour la sauvegarde sélectionnée et le jeu de sauvegarde.
 
+.Avant de commencer
 Assurez-vous qu'il y a une sauvegarde dont l'état est terminé, échec ou annulé.
 
 .Étapes

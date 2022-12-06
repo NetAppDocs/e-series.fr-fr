@@ -159,4 +159,5 @@ Attendez deux minutes que tous les disques soient arrêtés.
 
 
 
+.Et la suite ?
 Accédez à link:remove-controllers-task.html["Supprimer les contrôleurs"].

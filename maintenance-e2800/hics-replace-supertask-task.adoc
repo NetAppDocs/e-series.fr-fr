@@ -14,6 +14,7 @@ summary: 'Remplacez une carte d"interface hôte (HIC) défectueuse.'
 [role="lead"]
 Vous pouvez remplacer une carte d'interface hôte (HIC) qui a échoué.
 
+.Description de la tâche
 Lorsque vous remplacez une HIC, vous mettez le contrôleur hors ligne, retirez le boîtier du contrôleur, installez la nouvelle HIC, remplacez le boîtier du contrôleur et mettez le contrôleur en ligne.
 
 .Avant de commencer
@@ -22,7 +23,7 @@ Lorsque vous remplacez une HIC, vous mettez le contrôleur hors ligne, retirez l
 * Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs. Si deux contrôleurs sont présents, chaque contrôleur doit avoir des HIC identiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
@@ -36,8 +37,8 @@ Lorsque vous remplacez une HIC, vous mettez le contrôleur hors ligne, retirez l
 
 Les étapes de mise hors ligne d'un contrôleur dépendent du fait que vous disposez d'un contrôleur (simplex) ou de deux contrôleurs (duplex). Reportez-vous aux instructions appropriées pour :
 
-*  Place controller offline
-*  Power down the controller shelf
+* <<Duplex : mettez le contrôleur hors ligne>>
+* <<Simplex : mettez le tiroir contrôleur hors tension>>
 
 
 
@@ -498,4 +499,5 @@ Contactez l'assistance technique à l'adresse http://mysupport.netapp.com["Suppo
 
 
 
+.Et la suite ?
 Votre remplacement HIC est terminé. Vous pouvez reprendre les opérations normales.

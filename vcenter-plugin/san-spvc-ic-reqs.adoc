@@ -1,0 +1,73 @@
+---
+permalink: vcenter-plugin/san-spvc-ic-reqs.html 
+sidebar: sidebar 
+keywords: upgrade vCenter 
+summary: 'Conditions requises pour l"installation et la mise à niveau et considérations relatives au plug-in vCenter.' 
+---
+= Examinez les conditions d'installation et de mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer ou de mettre à niveau le plug-in de stockage SANtricity pour vCenter, vérifiez les exigences d'installation et la mise à niveau.
+
+
+
+== Conditions requises pour l'installation
+
+Vous pouvez installer et configurer le plug-in de stockage pour vCenter sur un système hôte Windows. L'installation du plugin comprend les conditions suivantes.
+
+[cols="35h,~"]
+|===
+| Conditions requises | Description 
+
+
+ a| 
+Versions prises en charge
+ a| 
+* VMware vCenter Server Appliance prend en charge les versions suivantes : 6.7U3J, 7.0U1, 7.0U2, 7.0U3 et 8.0.
+* Système d'exploitation NetApp SANtricity version 11.60.2 ou supérieure
+* Versions d'hôte d'application prises en charge : Windows 2016, Windows 2019, Windows 2022.
+
+
+Pour plus d'informations sur la compatibilité, reportez-vous au http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+ a| 
+Instances multiples
+ a| 
+Vous ne pouvez installer qu'une seule instance du plug-in de stockage pour vCenter sur un hôte Windows et ne pouvez l'enregistrer que sur un seul vCSA.
+
+
+
+ a| 
+La planification de la capacité
+ a| 
+Le plug-in de stockage pour vCenter nécessite un espace suffisant pour l'exécution et la connexion. Assurez-vous que votre système répond aux exigences suivantes en matière d'espace disque :
+
+* Espace d'installation requis : 275 Mo
+* Espace de stockage — 275 Mo + 200 Mo (enregistrement)
+* Mémoire système : 512 Mo
+
+
+
+
+ a| 
+Licence
+ a| 
+Le plug-in de stockage pour vCenter est un produit autonome gratuit qui ne nécessite pas de clé de licence. Toutefois, les droits d'auteur et les conditions de service applicables s'appliquent.
+
+|===
+
+
+== Mise à niveau
+
+Si vous effectuez une mise à niveau à partir d'une version précédente, sachez que le plug-in doit être retiré du vCSA avant la mise à niveau.
+
+* Pendant la mise à niveau, la plupart des paramètres de configuration précédents du plug-in sont conservés. Ces paramètres incluent les mots de passe utilisateur, tous les systèmes de stockage découverts, les certificats de serveur, les certificats approuvés et la configuration d'exécution du serveur.
+* Le processus de mise à niveau ne conserve pas les fichiers *vcenter.properties*, vous devez donc annuler l'enregistrement du plugin avant la mise à niveau. Une fois la mise à niveau réussie, vous pouvez enregistrer à nouveau le plugin sur le vCSA.
+* Tous les fichiers SANtricity OS précédemment chargés dans le référentiel sont supprimés pendant la mise à niveau.
+

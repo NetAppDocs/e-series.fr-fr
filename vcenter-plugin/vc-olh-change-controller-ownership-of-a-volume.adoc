@@ -17,8 +17,10 @@ summary: 'Modifiez la propriété de contrôleur préférée d"un volume, afin d
 [role="lead"]
 Vous pouvez modifier la propriété de contrôleur préférée d'un volume, de sorte que les E/S des applications hôtes soient dirigées par le nouveau chemin.
 
+.Avant de commencer
 Si vous n'utilisez pas de pilote multivoie, toutes les applications hôtes qui utilisent actuellement le volume doivent être arrêtées. Cette action évite les erreurs d'application lorsque le chemin d'E/S change.
 
+.Description de la tâche
 Vous pouvez modifier la propriété du contrôleur pour un ou plusieurs volumes d'un pool ou d'un groupe de volumes.
 
 .Étapes

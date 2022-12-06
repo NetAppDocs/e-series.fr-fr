@@ -105,7 +105,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
-Si vous avez déjà activé vos fichiers logiciels, allez à  4: Complete software and firmware upgradesinon, aller à  3: Activate software files.
+Si vous avez déjà activé vos fichiers logiciels, allez à <<Étape 4 : mise à niveau complète du logiciel et du firmware>>sinon, aller à <<Étape 3 : activation des fichiers logiciels>>.
 
 
 
@@ -257,4 +257,5 @@ Contactez le support technique pour résoudre ce problème.
 |===
 
 
+.Et la suite ?
 La mise à niveau du logiciel du contrôleur est terminée. Vous pouvez reprendre les opérations normales.

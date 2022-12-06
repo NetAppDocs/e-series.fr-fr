@@ -17,6 +17,7 @@ summary: 'Lorsque deux hôtes ou plus requièrent l"accès E/S aux mêmes volume
 [role="lead"]
 Lorsque deux hôtes ou plus requièrent l'accès E/S aux mêmes volumes, vous pouvez créer un cluster hôte.
 
+.Description de la tâche
 Notez les consignes suivantes lorsque vous créez un cluster hôte :
 
 * Cette opération ne démarre que si la création du cluster comporte au moins deux hôtes.
@@ -60,6 +61,8 @@ DA augmente l'intégrité des données dans l'ensemble du système de stockage. 
 
 
 
+.Résultat
 Le nouveau cluster hôte apparaît dans le tableau, avec les hôtes affectés dans les lignes en dessous.
 
+.Une fois que vous avez terminé
 Vous devez affecter un volume à un cluster hôte afin qu'il puisse être utilisé pour les opérations d'E/S. Accédez à link:vc-olh-assign-volumes-to-hosts.html["Attribuez des volumes aux hôtes"].

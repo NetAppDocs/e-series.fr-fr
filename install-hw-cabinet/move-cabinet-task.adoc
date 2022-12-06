@@ -24,6 +24,7 @@ Vous devez évaluer toutes les rampes pour vous assurer que le centre de gravit�
 
 
 
+.Description de la tâche
 La plupart des armoires sont remplies avec des tiroirs disques. Cette situation entraîne la majeure partie du poids dans la partie avant de l'armoire, ce qui rapproche le centre de gravité de l'avant.
 
 .Étapes

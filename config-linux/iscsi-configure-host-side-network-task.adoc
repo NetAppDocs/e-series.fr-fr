@@ -13,6 +13,7 @@ summary: Configurez la mise en réseau iSCSI côté hôte.
 [role="lead"]
 Pour configurer la mise en réseau côté hôte, vous devez effectuer plusieurs étapes.
 
+.Description de la tâche
 Vous configurez la mise en réseau iSCSI côté hôte en définissant le nombre de sessions de nœud par chemin physique, en activant les services iSCSI appropriés, en configurant le réseau pour les ports iSCSI, en créant des liaisons de face iSCSI et en établissant des sessions iSCSI entre les initiateurs et les cibles.
 
 Dans la plupart des cas, vous pouvez utiliser l'initiateur logiciel de la boîte de réception pour iSCSI CNA/NIC. Il n'est pas nécessaire de télécharger la dernière version du pilote, du micrologiciel et du BIOS. Reportez-vous à la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour déterminer les exigences en matière de code.

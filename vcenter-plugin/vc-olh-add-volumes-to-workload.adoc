@@ -17,6 +17,7 @@ summary: Ajoutez des volumes non attribués à une nouvelle charge de travail ou
 [role="lead"]
 Vous pouvez ajouter des volumes non attribués à une nouvelle charge de travail ou existante.
 
+.Description de la tâche
 Les volumes ne sont pas associés à une charge de travail s'ils ont été créés à l'aide de l'interface de ligne de commande ou s'ils ont été migrés (importés/exportés) à partir d'une autre baie de stockage.
 
 .Étapes

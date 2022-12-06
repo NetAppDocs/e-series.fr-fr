@@ -24,6 +24,7 @@ Vous pouvez créer un pool manuellement si votre configuration ne répond pas au
 * Lors de la configuration d'une baie de stockage EF600 ou EF300, assurez-vous que chaque contrôleur a accès à un nombre égal de disques dans les 12 premiers emplacements et à un nombre égal de disques dans les 12 derniers slots. Cette configuration permet aux contrôleurs d'utiliser plus efficacement les deux bus PCIe côté disque. Pour créer un pool, vous devez utiliser tous les disques de la matrice de stockage.
 
 
+.Description de la tâche
 Lors de la création des pools, vous déterminez ses caractéristiques, telles que le type de disque, les capacités de sécurité, l'assurance des données (DA), la protection contre la perte de tiroirs et la protection contre la perte de tiroirs.
 
 Pour les baies de stockage EF600 et EF300, les paramètres comprennent également le provisionnement des ressources et la taille des blocs de volume.
@@ -43,6 +44,7 @@ Le tableau des résultats répertorie tous les pools possibles que vous pouvez c
 . Sélectionnez le candidat du pool que vous souhaitez utiliser en fonction des caractéristiques suivantes, puis cliquez sur *Créer*.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

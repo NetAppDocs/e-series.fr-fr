@@ -13,6 +13,7 @@ summary: 'Avant d"utiliser le namespace, vérifiez que l"hôte peut écrire les 
 [role="lead"]
 Avant d'utiliser le namespace, vérifiez que l'hôte peut écrire les données dans le namespace et les lire de nouveau.
 
+.Ce dont vous avez besoin
 Espace de noms initialisé au format avec un système de fichiers.
 
 .Étapes
@@ -21,4 +22,5 @@ Espace de noms initialisé au format avec un système de fichiers.
 . Exécutez le `diff` pour comparer les fichiers copiés aux originaux.
 
 
+.Une fois que vous avez terminé
 Supprimez le fichier et le dossier que vous avez copiés.

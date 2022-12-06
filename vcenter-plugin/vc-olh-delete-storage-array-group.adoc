@@ -17,6 +17,7 @@ summary: Supprimez un ou plusieurs groupes de matrices de stockage qui ne sont p
 [role="lead"]
 Vous pouvez supprimer un ou plusieurs groupes de matrices de stockage qui ne sont plus nécessaires.
 
+.Description de la tâche
 Cette opération supprime uniquement le groupe de matrices de stockage. Les matrices de stockage associées au groupe supprimé restent accessibles via la vue gérer tout ou tout autre groupe auquel elles sont associées.
 
 .Étapes

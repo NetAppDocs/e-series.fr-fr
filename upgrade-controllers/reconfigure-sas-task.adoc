@@ -15,6 +15,7 @@ Si nécessaire, vous pouvez reconfigurer votre système SAS-2 pour qu'il soit ut
 
 Les baies SAS-2 approuvées comprennent les systèmes E2700, E550/EF5500 et E5600/EF560. Les tiroirs disques SAS-2 agréés sont notamment DE1600, DE5600 et DE6600. Les baies SAS-3 approuvées incluent les systèmes E2800 et E5700/EF570. Les tiroirs disques SAS-3 approuvés sont les systèmes DE212C, DE224C et DE460C.
 
+.Description de la tâche
 Dans cette procédure, vous convertissez le tiroir contrôleur en baie SAS-2 approuvée en tiroir disque, puis placez-le derrière une nouvelle baie SAS-3 approuvée et des tiroirs disques, sans préserver les données.
 
 Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
@@ -22,6 +23,7 @@ Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
 
 NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
 
+.Avant de commencer
 En raison de la complexité de cette procédure, les éléments suivants sont nécessaires :
 
 * Vous devez faire une demande FPVR (Feature Product variance Request). Pour déposer une FPVR, contactez les services professionnels NetApp.

@@ -34,6 +34,7 @@ Le proxy de services Web utilise SSL (Secure Sockets Layer) pour la sécurité, 
 ----
 
 
+.Résultat
 Lorsque le serveur démarre avec SSL configuré, le serveur recherche les fichiers du magasin de clés et du magasin de certificats.
 
 * Si le serveur ne trouve pas de magasin de clés, le serveur utilise l'adresse IP de la première adresse IPv4 non-bouclage détectée pour générer un magasin de clés, puis ajoute un certificat auto-signé au magasin de clés.

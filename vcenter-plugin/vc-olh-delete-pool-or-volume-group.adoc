@@ -37,6 +37,7 @@ Vous ne pouvez sélectionner qu'un seul pool ou groupe de volumes à la fois. Fa
 . Sélectionnez menu:tâches rares[Supprimer] et confirmez.
 
 
+.Résultats
 Le système effectue les opérations suivantes :
 
 * Supprime toutes les données du pool ou du groupe de volumes.

@@ -17,6 +17,7 @@ summary: 'Importez les paramètres système d"une matrice de stockage vers d"aut
 [role="lead"]
 Vous pouvez importer les paramètres système d'une matrice de stockage vers d'autres matrices de stockage. Cette opération de traitement par lot permet de gagner du temps lorsque vous devez configurer plusieurs baies sur le réseau.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Les paramètres système sont configurés dans System Manager pour la matrice de stockage que vous souhaitez utiliser comme source.
@@ -24,6 +25,7 @@ Assurez-vous que :
 * Vous avez étudié les exigences en matière de réplication des configurations de stockage dans link:vc-olh-import-settings-overview.html["Vue d'ensemble des paramètres d'importation"].
 
 
+.Description de la tâche
 Les paramètres importés incluent les paramètres de numérisation des supports pour un volume, les paramètres SSD pour les contrôleurs et l'équilibrage automatique de la charge (n'inclut pas les rapports de connectivité hôte).
 
 .Étapes
@@ -47,4 +49,5 @@ La page opérations affiche les résultats de l'opération d'importation. Si l'o
 
 
 
+.Résultat
 Les matrices de stockage cibles sont maintenant configurées avec les mêmes paramètres système que la matrice source.

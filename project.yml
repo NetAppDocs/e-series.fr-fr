@@ -743,6 +743,8 @@ sidebar:
         url: "/vcenter-plugin/san-spvc-ic-overview.html"
       - title: Commencez
         entries:
+        - title: Examen des conditions requises
+          url: "/vcenter-plugin/san-spvc-ic-reqs.html"
         - title: Installez le plug-in
           url: "/vcenter-plugin/san-spvc-ic-installation.html"
         - title: Configurez les autorisations d'accès

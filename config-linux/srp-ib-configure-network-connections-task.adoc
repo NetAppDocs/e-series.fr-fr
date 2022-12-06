@@ -13,6 +13,7 @@ summary: Si votre configuration utilise le protocole SRP sur Infiniband, suivez 
 [role="lead"]
 Si votre configuration utilise le protocole SRP sur Infiniband, suivez les étapes de cette section.
 
+.Ce dont vous avez besoin
 Pour connecter l'hôte Linux à la matrice de stockage, vous devez activer la pile de pilotes InfiniBand avec les options appropriées. Les paramètres spécifiques peuvent varier d'une distribution Linux à l'autre. Vérifier le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour des instructions spécifiques et des paramètres supplémentaires recommandés spécifiques à votre solution.
 
 .Étapes

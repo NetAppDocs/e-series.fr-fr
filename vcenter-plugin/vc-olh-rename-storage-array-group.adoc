@@ -17,6 +17,7 @@ summary: 'Modifiez le nom d"un groupe de matrices de stockage lorsque le nom act
 [role="lead"]
 Vous pouvez modifier le nom d'un groupe de matrices de stockage lorsque le nom actuel n'a plus de sens ou s'applique.
 
+.Description de la tâche
 Gardez ces directives à l'esprit.
 
 * Un nom peut être composé de lettres, de chiffres et de traits de soulignement (_), de traits d'Union (-) et de livres (#). Si vous choisissez d'autres caractères, un message d'erreur s'affiche. Vous êtes invité à choisir un autre nom.

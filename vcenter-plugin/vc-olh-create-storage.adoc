@@ -23,6 +23,7 @@ Dans le plug-in de stockage pour vCenter, vous créez le stockage en créant d'a
 
 Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application.
 
+.Description de la tâche
 Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.
 
 Le système ne recommande une configuration de volume optimisée que pour les types d'applications suivants :
@@ -50,6 +51,7 @@ La boîte de dialogue Créer une charge de travail d'application s'affiche.
 
 Vous créez des volumes pour ajouter de la capacité de stockage à une charge de travail spécifique aux applications et rendre les volumes créés visibles pour un hôte ou un cluster hôte spécifique.
 
+.Description de la tâche
 La plupart des types d'applications sont par défaut définis par l'utilisateur pour une configuration de volume, tandis que les autres types ont une configuration intelligente appliquée lors de la création du volume. Par exemple, si vous créez des volumes pour une application Microsoft Exchange, vous devez connaître le nombre de boîtes aux lettres dont vous avez besoin, les besoins moyens de vos boîtes aux lettres et le nombre de copies de la base de données que vous souhaitez. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins.
 
 Vous pouvez créer des volumes à partir du menu:Provisioning[Manage volumes > Create > volumes] ou à partir du menu:Provisioning[Configure pools and Volume Groups > Create > volumes]. La procédure est la même pour l'une ou l'autre sélection.
@@ -62,6 +64,7 @@ Le processus de création d'un volume est une procédure à plusieurs étapes.
 
 Dans la première étape, vous pouvez sélectionner un hôte ou un cluster hôte spécifique pour le volume, ou vous pouvez choisir d'affecter l'hôte ultérieurement.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Des hôtes ou des clusters hôtes valides ont été définis (accédez au menu :provisionnement[configurer les hôtes]).
@@ -69,6 +72,7 @@ Assurez-vous que :
 * La connexion hôte doit prendre en charge Data assurance (DA) si vous prévoyez de créer des volumes compatibles DA. Si l'une des connexions hôte sur les contrôleurs de votre matrice de stockage ne prend pas en charge DA, les hôtes associés ne peuvent pas accéder aux données sur les volumes DA.
 
 
+.Description de la tâche
 Gardez ces consignes à l'esprit lorsque vous attribuez des volumes :
 
 * Le système d'exploitation d'un hôte peut disposer de limites spécifiques sur le nombre de volumes accessibles par l'hôte. Gardez cette limitation à l'esprit lorsque vous créez des volumes pour une utilisation par un hôte spécifique.
@@ -101,6 +105,7 @@ La boîte de dialogue Sélectionner la charge de travail s'affiche.
 
 Dans la deuxième étape, vous sélectionnez une charge de travail pour personnaliser la configuration de la baie de stockage d'une application spécifique, comme VMware.
 
+.Description de la tâche
 Cette tâche décrit comment créer des volumes pour une charge de travail. En règle générale, une charge de travail contient des volumes aux caractéristiques similaires, optimisés en fonction du type d'application prise en charge par la charge de travail. Vous pouvez définir une charge de travail à cette étape ou sélectionner des charges de travail existantes.
 
 Tenez compte des recommandations suivantes :
@@ -158,6 +163,7 @@ Dans la troisième étape, vous définissez la configuration du volume.
 * Pour créer un volume provisionné en ressources, tous les disques doivent être des disques NVMe avec l'option DULBE (Logical Block Error) désallocation ou non écrite.
 
 
+.Description de la tâche
 Vous créez des volumes à partir de pools ou de groupes de volumes éligibles, affichés dans la boîte de dialogue Ajouter/Modifier des volumes. Pour chaque pool et groupe de volumes éligibles, le nombre de disques disponibles et la capacité totale disponible s'affichent.
 
 Pour certaines charges de travail spécifiques à une application, chaque pool ou groupe de volumes éligible affiche la capacité proposée en fonction de la configuration de volume suggérée et indique la capacité libre restante en Gio. Pour les autres charges de travail, la capacité proposée s'affiche lors de l'ajout de volumes à un pool ou à un groupe de volumes, puis lorsque vous spécifiez la capacité indiquée.
@@ -168,6 +174,7 @@ Pour certaines charges de travail spécifiques à une application, chaque pool o
 ** *Autre* -- cliquez sur *Ajouter nouveau volume* dans chaque pool ou groupe de volumes que vous souhaitez utiliser pour créer un ou plusieurs volumes.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -239,6 +246,7 @@ Ressource provisionnée (EF300 et EF600 uniquement)
 ** *Charge de travail spécifique à une application* -- cliquez sur *Suivant* pour accepter les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée, ou cliquez sur *Modifier les volumes* pour modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

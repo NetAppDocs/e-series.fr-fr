@@ -17,6 +17,7 @@ summary: 'Modifier les paramètres d"un volume, comme son nom, l"affectation d"h
 [role="lead"]
 Vous pouvez modifier les paramètres d'un volume : son nom, son affectation hôte, sa taille, sa priorité de modification, sa mise en cache, et ainsi de suite.
 
+.Avant de commencer
 Assurez-vous que le volume que vous souhaitez modifier est en état optimal.
 
 .Étapes
@@ -29,6 +30,7 @@ La boîte de dialogue Paramètres du volume s'affiche. Les paramètres de config
 . Sélectionnez l'onglet *Basic* pour modifier le nom du volume et l'affectation de l'hôte.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -84,6 +86,7 @@ Affiche les identifiants du volume sélectionné.
 . Sélectionnez l'onglet *Avancé* pour modifier les paramètres de configuration supplémentaires d'un volume dans un pool ou dans un groupe de volumes.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -151,4 +154,5 @@ Cache SSD
 . Cliquez sur *Enregistrer*.
 
 
+.Résultat
 Les paramètres de volume sont modifiés en fonction de vos sélections.

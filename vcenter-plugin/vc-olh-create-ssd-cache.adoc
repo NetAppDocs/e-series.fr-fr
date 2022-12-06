@@ -17,11 +17,13 @@ summary: 'Pour accélérer dynamiquement les performances du système, vous pouv
 [role="lead"]
 Pour accélérer dynamiquement les performances du système, vous pouvez utiliser la fonctionnalité SSD cache pour mettre en cache les données les plus fréquemment utilisées (données actives) sur des disques SSD à faible latence. SSD cache est exclusivement utilisé pour les lectures d'hôte.
 
+.Avant de commencer
 Votre baie de stockage doit contenir des disques SSD.
 
 
 NOTE: SSD cache n'est pas disponible sur les systèmes de stockage EF600 ou EF300.
 
+.Description de la tâche
 Lorsque vous créez SSD cache, vous pouvez utiliser un ou plusieurs disques. Comme le cache de lecture se trouve dans la baie de stockage, la mise en cache est partagée entre toutes les applications qui utilisent la baie de stockage. Vous sélectionnez les volumes à mettre en cache, puis la mise en cache est automatique et dynamique.
 
 Suivez ces instructions lors de la création de SSD cache.
@@ -46,6 +48,7 @@ La boîte de dialogue Créer une mémoire cache SSD s'affiche.
 . Sélectionnez la capacité SSD cache candidate à utiliser en fonction des caractéristiques suivantes.
 +
 .Détails du champ
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

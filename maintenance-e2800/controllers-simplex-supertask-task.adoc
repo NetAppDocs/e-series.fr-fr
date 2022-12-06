@@ -18,9 +18,10 @@ Vous pouvez remplacer une cartouche de contrôleur défectueuse dans une configu
 * Tiroir contrôleur E2824
 
 
+.Description de la tâche
 Le boîtier du contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option. Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
@@ -515,4 +516,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

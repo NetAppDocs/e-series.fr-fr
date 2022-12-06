@@ -14,6 +14,7 @@ summary: 'Remplacez la batterie d"une baie EF300 ou EF600.'
 [role="lead"]
 Vous pouvez remplacer une batterie d'un système de stockage EF300 ou EF600.
 
+.Description de la tâche
 Chaque boîtier de contrôleur comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur. Si le gourou de la restauration de SANtricity System Manager indique un état « batterie défaillante » ou un état « remplacement de batterie requis », vous devez remplacer la batterie concernée.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Chaque boîtier de contrôleur comprend une batterie qui préserve les données 
 * Vérifiez le link:batteries-overview-requirements-concept.html["Exigences relatives au remplacement de la batterie EF300 ou EF600"].
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * La batterie de rechange.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.
@@ -234,4 +235,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.

@@ -16,6 +16,7 @@ summary: 'Restaurez le certificat de gestion à l"état d"origine auto-signé en
 [role="lead"]
 Pour le système de gestion hébergeant le plug-in de stockage pour vCenter, vous pouvez rétablir le certificat de gestion à l'état d'origine auto-signé en usine.
 
+.Description de la tâche
 Cette tâche supprime le certificat de gestion actuel du système hôte sur lequel le plug-in de stockage pour vCenter est exécuté. Une fois le certificat réinitialisé, le système hôte reprend à l'aide du certificat auto-signé.
 
 .Étapes
@@ -30,4 +31,5 @@ Une fois que votre navigateur a été actualisé, le navigateur risque de bloque
 
 
 
+.Résultat
 Le système revient à utiliser le certificat auto-signé à partir du serveur. Par conséquent, le système invite les utilisateurs à accepter manuellement le certificat auto-signé pour leurs sessions.

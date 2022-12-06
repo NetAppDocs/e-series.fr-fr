@@ -14,6 +14,7 @@ summary: 'SANtricity System Manager vous permet de définir les hôtes qui envoi
 [role="lead"]
 SANtricity System Manager vous permet de définir les hôtes qui envoient des données à la baie de stockage. La définition d'un hôte est l'une des étapes requises pour permettre à la matrice de stockage de savoir quels hôtes lui sont connectés et d'autoriser l'accès E/S aux volumes.
 
+.Description de la tâche
 Lorsque vous définissez un hôte, tenez compte des consignes suivantes :
 
 * Vous devez définir les ports d'identificateur d'hôte associés à l'hôte.
@@ -84,6 +85,7 @@ Vous devez ajouter un identificateur de port hôte à la fois pour l'associer à
 . Cliquez sur *Créer*.
 
 
+.Résultat
 Une fois l'hôte créé, SANtricity System Manager crée un nom par défaut pour chaque port hôte configuré pour l'hôte.
 
 L'alias par défaut est ``<Hostname_Port Number>``. Par exemple, l'alias par défaut du premier port créé pour `host IPT is IPT_1`.

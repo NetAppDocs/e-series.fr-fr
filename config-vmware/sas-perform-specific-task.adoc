@@ -15,10 +15,11 @@ Pour le protocole SAS, vous déterminez les adresses de port hôte et définisse
 
 
 
-== Étape 1 : détermination des identificateurs d'hôte SAS—​VMware
+== Étape 1 : détermination des identifiants d'hôtes SAS--VMware
 
 Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.
 
+.Description de la tâche
 Consultez les instructions relatives aux utilitaires HBA :
 
 * La plupart des fournisseurs HBA proposent un utilitaire HBA.

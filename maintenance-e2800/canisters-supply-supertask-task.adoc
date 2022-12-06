@@ -21,6 +21,7 @@ Vous pouvez remplacer un bloc d'alimentation dans une baie E2800 par un tiroir d
 * Tiroir disque DE224C
 
 
+.Description de la tâche
 Chaque tiroir contrôleur ou tiroir disque de 12 ou 24 disques comporte deux blocs d'alimentation avec ventilateurs intégrés. Il s'agit de _blocs-ventilateurs_ dans SANtricity System Manager. En cas de panne de l'absorbeur, remplacez-le dès que possible afin d'assurer une source d'alimentation redondante et un refroidissement adéquat.
 
 Vous pouvez remplacer un bloc d'alimentation alors que la baie de stockage est sous tension et que les opérations d'E/S de l'hôte sont en cours, Tant que le deuxième bloc d'alimentation du tiroir dispose d'un état optimal et que le champ *OK pour supprimer* de la zone Détails du Recovery Guru dans SANtricity System Manager affiche *Oui*.
@@ -31,7 +32,7 @@ Vous pouvez remplacer un bloc d'alimentation alors que la baie de stockage est s
 * Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux. Pour obtenir de l'aide, contactez le support technique si les deux blocs d'alimentation du tiroir disposent de LED d'avertissement orange.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 
@@ -156,7 +157,7 @@ Vérifiez que la nouvelle alimentation fonctionne correctement, rassemblez les d
 .Étapes
 . Sur le nouveau bloc d'alimentation, vérifiez que le voyant d'alimentation vert est allumé et que le voyant d'avertissement orange est éteint.
 . Dans le gourou de la restauration de SANtricity System Manager, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
-. Si une panne d'alimentation est toujours signalée, répétez les étapes de la section  2: Remove failed power supply, et dans  3: Install new power supply. Si le problème persiste, contactez l'assistance technique.
+. Si une panne d'alimentation est toujours signalée, répétez les étapes de la section <<Étape 2 : retirer l'alimentation défectueuse>>, et dans <<Étape 3 : installez une nouvelle alimentation>>. Si le problème persiste, contactez l'assistance technique.
 . Déposer la protection antistatique.
 . Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
 +
@@ -171,4 +172,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
 
 
+.Et la suite ?
 Le remplacement de votre bloc d'alimentation est terminé. Vous pouvez reprendre les opérations normales.

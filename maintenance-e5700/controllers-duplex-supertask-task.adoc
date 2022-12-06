@@ -18,12 +18,13 @@ Vous pouvez remplacer un boîtier de contrôleur dans une configuration duplex (
 * Tiroir contrôleur E5760
 
 
+.Description de la tâche
 Chaque boîtier de contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option. Lors du remplacement d'un boîtier de contrôleur, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine, puis les installer dans le boîtier de contrôleur de remplacement.
 
 
 NOTE: Cette tâche s'applique uniquement aux matrices de stockage avec deux contrôleurs (configuration duplex).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez. (Voir l'étape 1 pour vérifier le numéro de pièce.)
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Tournevis cruciforme n° 1.
@@ -449,4 +450,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

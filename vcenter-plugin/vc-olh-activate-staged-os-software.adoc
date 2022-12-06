@@ -17,6 +17,7 @@ summary: 'Vous pouvez choisir d"activer le fichier logiciel à un moment plus op
 [role="lead"]
 Vous pouvez choisir d'activer le fichier logiciel immédiatement ou attendre jusqu'à ce qu'il soit plus pratique. Cette procédure suppose que vous avez choisi d'activer le fichier logiciel ultérieurement.
 
+.Description de la tâche
 Vous pouvez transférer les fichiers du micrologiciel sans les activer. Vous pouvez choisir de l'activer ultérieurement pour les raisons suivantes :
 
 * *Temps de jour* -- l'activation du logiciel peut prendre un certain temps, vous pouvez donc attendre que les charges d'E/S soient plus légères. Les contrôleurs redémarrent et basculent pendant l'activation pour que les performances soient inférieures à la normale jusqu'à la fin de la mise à niveau.

@@ -200,4 +200,5 @@ NOTE: La collecte des données de support peut affecter temporairement les perfo
 
 
 
+.Et la suite ?
 Si la mise à niveau de votre contrôleur entraîne la modification de l'ID fournisseur de LSI à NETAPP, rendez-vous sur link:remount-volumes-lsi-task.html["Remontez des volumes après avoir changé le fournisseur de LSI à NETAPP"]sinon, la mise à niveau du contrôleur est terminée et vous pouvez reprendre le fonctionnement normal.

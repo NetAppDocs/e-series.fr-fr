@@ -17,6 +17,7 @@ summary: Mettez à niveau une ou plusieurs matrices de stockage avec le dernier 
 [role="lead"]
 Mettez à niveau une ou plusieurs matrices de stockage avec le dernier logiciel et NVSRAM pour vous assurer que vous disposez des dernières fonctionnalités et correctifs. La NVSRAM du contrôleur est un fichier de contrôleur qui spécifie les paramètres par défaut des contrôleurs.
 
+.Avant de commencer
 Assurez-vous que :
 
 * Les derniers fichiers SANtricity OS sont disponibles sur le système hôte sur lequel le plug-in est exécuté.

@@ -20,6 +20,7 @@ L'option Paramètres permet de modifier les configurations actuelles de l'applic
 
 Vous pouvez modifier les paramètres S3 de l'application SANtricity Cloud Connector dans la fenêtre Paramètres des comptes S3.
 
+.Avant de commencer
 Lorsque vous modifiez les paramètres d'URL ou d'étiquette du compartiment S3, notez que l'accès aux sauvegardes existantes configurées via le connecteur cloud SANtricity est affecté.
 
 .Étapes
@@ -91,6 +92,7 @@ La matrice de stockage sélectionnée est supprimée de l'hôte SANtricity Cloud
 
 Vous pouvez modifier les paramètres proxy de services Web existants pour l'application SANtricity Cloud Connector dans la fenêtre Paramètres proxy de services Web.
 
+.Avant de commencer
 Le proxy de services Web utilisé avec SANtricity Cloud Connector doit être ajouté aux baies appropriées et définir le mot de passe correspondant.
 
 .Étapes

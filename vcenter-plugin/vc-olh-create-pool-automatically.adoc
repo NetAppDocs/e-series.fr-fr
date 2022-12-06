@@ -17,12 +17,14 @@ summary: Vous pouvez créer des pools automatiquement lorsque le système détec
 [role="lead"]
 Vous pouvez créer des pools automatiquement lorsque le système détecte au moins 11 disques non assignés ou détecte un disque non affecté éligible pour un pool existant. Un pool est un ensemble de disques regroupés de manière logique.
 
+.Avant de commencer
 Vous pouvez lancer la boîte de dialogue Configuration automatique du pool lorsque l'une des conditions suivantes est vraie :
 
 * Au moins un lecteur non affecté a été détecté qui peut être ajouté à un pool existant avec des types de disques similaires.
 * Onze (11) disques non assignés ou plus ont été détectés qui peuvent être utilisés pour créer un nouveau pool (s'ils ne peuvent pas être ajoutés à un pool existant en raison de types de disques différents).
 
 
+.Description de la tâche
 La création automatique de pool vous permet de configurer facilement tous les disques non assignés dans la baie de stockage dans un pool et d'ajouter des disques aux pools existants.
 
 Gardez à l'esprit les éléments suivants :

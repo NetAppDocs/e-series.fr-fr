@@ -692,4 +692,5 @@ La migration du Feature Pack commence. Les deux contrôleurs redémarrent automa
 
 
 
+.Et la suite ?
 Accédez à link:hpp-complete-protocol-conversion-task.html["Conversion de protocole hôte complète"].

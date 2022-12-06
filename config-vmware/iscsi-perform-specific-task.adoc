@@ -16,11 +16,11 @@ Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en r�
 
 
 
-== Étape 1 : configurer les commutateurs—​iSCSI, VMware
+== Étape 1 : configurer les commutateurs--iSCSI, VMware
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau.
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
@@ -30,15 +30,16 @@ La configuration des commutateurs est conforme aux recommandations du fournisseu
 
 NOTE: Les canaux de port/LACP n'est pas pris en charge sur les ports switchs du contrôleur. Le LACP côté hôte n'est pas recommandé. Le chemins d'accès multiples offre les mêmes avantages, voire meilleurs.
 
+.Étapes
 Consultez la documentation du fournisseur de votre commutateur.
 
 
 
-== Étape 2 : configurer le réseau ​iSCSI VMware
+== Étape 2 : configurer le réseau--iSCSI VMware
 
 Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
 * Le cas échéant, les trames jumbo activées.
@@ -47,6 +48,7 @@ Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performa
 
 
 
+.Description de la tâche
 Lors de la planification de votre réseau iSCSI, n'oubliez pas que le https://configmax.vmware.com/home["Valeurs maximales de configuration VMware"^] Le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d'éviter la configuration de chemins trop nombreux.
 
 Par défaut, l'initiateur logiciel VMware iSCSI crée une seule session par cible iSCSI lorsque vous n'utilisez pas la liaison de port iSCSI.
@@ -58,6 +60,7 @@ Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaiso
 
 Pour garantir une bonne configuration de chemins d'accès multiples, utilisez plusieurs segments de réseau pour le réseau iSCSI. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de matrice sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Si possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.
 
+.Étapes
 Consultez la documentation du fournisseur de votre commutateur.
 
 
@@ -65,15 +68,16 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 
 
-== Étape 3 : configurer les réseaux côté baie—​iSCSI, VMware
+== Étape 3 : configurer les réseaux côté baie--iSCSI, VMware
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
 * Le mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du service LDAP et un service d'annuaire sont configurés pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.
 
 
+.Description de la tâche
 Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres > configurer les ports iSCSI].
 
 
@@ -187,10 +191,11 @@ Sélectionnez cette option, puis entrez une adresse statique dans les champs. Po
 
 
 
-== Étape 4 : configurer la mise en réseau côté hôte—​iSCSI
+== Étape 4 : configurer les réseaux côté hôte--iSCSI
 
 La configuration de la mise en réseau iSCSI côté hôte permet à l'initiateur iSCSI VMware d'établir une session avec la baie.
 
+.Description de la tâche
 Dans cette méthode express pour configurer la mise en réseau iSCSI côté hôte, vous permettez à l'hôte ESXi de transmettre le trafic iSCSI via quatre chemins redondants vers le stockage.
 
 Une fois cette tâche effectuée, l'hôte est configuré avec un seul vSwitch contenant à la fois des ports VMnics et des deux.
@@ -211,7 +216,7 @@ Les fonctionnalités des interfaces varient et le flux de travail exact varie.
 
 
 
-== Étape 5 : vérifiez les connexions réseau IP—​iSCSI, VMware
+== Étape 5 : vérifiez les connexions réseau IP--iSCSI, VMware
 
 Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
 

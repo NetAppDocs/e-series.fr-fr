@@ -17,6 +17,7 @@ summary: Supprimez une ou plusieurs baies de stockage si vous ne souhaitez plus 
 [role="lead"]
 Vous pouvez supprimer une ou plusieurs baies de stockage si vous ne souhaitez plus la gérer depuis le plug-in de stockage pour vCenter.
 
+.Description de la tâche
 Vous ne pouvez accéder à aucune des baies de stockage que vous supprimez. Vous pouvez cependant établir une connexion avec n'importe quelle baie de stockage supprimée en pointant directement un navigateur vers son adresse IP ou son nom d'hôte.
 
 La suppression d'une matrice de stockage n'affecte en aucune façon la matrice de stockage ou ses données. Si une matrice de stockage est accidentellement retirée, elle peut être ajoutée à nouveau.

@@ -235,6 +235,7 @@ NOTE: Les deux autres trous de vis sont utilisés pour monter le bac
 
 Pour terminer l'installation de l'armoire, mettez les composants de l'armoire sous tension.
 
+.Description de la tâche
 Pendant que les bacs exécutent la procédure de mise sous tension, les voyants situés à l'avant et à l'arrière des bacs clignotent. Selon votre configuration, la procédure de mise sous tension peut prendre plusieurs minutes.
 
 .Étapes
@@ -281,4 +282,5 @@ NOTE: Patientez 30 secondes après la mise sous tension des tiroirs du disque av
 . Patientez 30 secondes après la mise sous tension des tiroirs disques, puis remettez-le sous tension à tous les tiroirs disques du contrôleur de l'armoire.
 
 
+.Résultat
 L'installation de l'armoire est terminée. Vous pouvez reprendre les opérations normales.

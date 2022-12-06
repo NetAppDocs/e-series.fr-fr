@@ -14,6 +14,7 @@ summary: Remplacer une HIC dans un système E5700.
 [role="lead"]
 Vous pouvez remplacer une carte d'interface hôte (HIC) qui a échoué.
 
+.Description de la tâche
 Lorsque vous remplacez une HIC, mettez le contrôleur hors ligne (pour les configurations duplex), retirez le boîtier du contrôleur, installez la nouvelle HIC, puis remplacez le boîtier du contrôleur.
 
 .Avant de commencer
@@ -23,7 +24,7 @@ Lorsque vous remplacez une HIC, mettez le contrôleur hors ligne (pour les confi
 * Dans le Gestionnaire système SANtricity, vérifiez les détails du gourou de la restauration pour confirmer que vous avez une HIC défectueuse et pour garantir qu'aucun autre élément ne doit être résolu avant que vous ne puissiez retirer et remplacer la HIC.
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Deux circuits intégrés compatibles avec vos contrôleurs.
 +
 Pour les configurations duplex (deux contrôleurs), les circuits intégrés installés dans les deux boîtiers de contrôleur doivent être identiques. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.
@@ -347,4 +348,5 @@ Contactez l'assistance technique à l'adresse http://mysupport.netapp.com["Suppo
 
 
 
+.Et la suite ?
 Votre remplacement HIC est terminé. Vous pouvez reprendre les opérations normales.

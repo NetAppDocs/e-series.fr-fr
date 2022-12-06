@@ -29,6 +29,7 @@ Les baies E-Series sont disponibles dans les modèles suivants :
 
 == Modèles E2800
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -76,6 +77,7 @@ Disponible avec les interfaces suivantes :
 
 == Modèles EF280
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -109,6 +111,7 @@ Disponible avec les interfaces suivantes :
 
 == Modèles EF300
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -123,7 +126,12 @@ Tailles de rack :
  a| 
 Disques et HIC :
  a| 
-Prend en charge jusqu'à 24 SSD NVMe avec une seule carte d'interface hôte (HIC) par contrôleur.
+Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC) par contrôleur :
+
+* Disques SSD NVMe : jusqu'à 24 disques SSD NVMe dans le tiroir contrôleur
+* Disques NL-SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C et DE460C ne doit pas dépasser 240 emplacements de disques NL-SAS et 4 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés, 8 tiroirs DE212C sont autorisés. Par exemple, 4 tiroirs DE460C ou 8 tiroirs DE212C, ou 2 tiroirs DE460C et 2 tiroirs.
+* Disques SSD SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C, DE224C et DE460C ne doit pas dépasser 96 emplacements de disque SSD SAS et 4 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés. 8 tiroirs DE212C sont autorisés. Par exemple, 1 tiroir DE460C plus 1 tiroir DE224C plus 1 tiroir DE212C, ou 4 tiroirs DE224C, ou 8 tiroirs DE212C.
+
 
 
 
@@ -146,6 +154,7 @@ Disponible avec les interfaces suivantes :
 
 == Modèles E5700
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -197,6 +206,7 @@ Disponible avec les interfaces suivantes :
 
 == Modèles EF570
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -235,6 +245,7 @@ Disponible avec les interfaces suivantes :
 
 == Modèles EF600
 
+[cols="35h,~"]
 |===
 | Composant | Spécifications 
 
@@ -249,7 +260,12 @@ Tailles de rack :
  a| 
 Disques et HIC :
  a| 
-Jusqu'à 24 SSD NVMe pris en charge, avec deux cartes d'interface hôte (HIC) par contrôleur.
+Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC) par contrôleur :
+
+* Disques SSD NVMe : jusqu'à 24 disques SSD NVMe dans le tiroir contrôleur
+* Disques NL-SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C et DE460C ne doit pas dépasser 420 emplacements de disques NL-SAS et 7 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés, 8 tiroirs DE212C sont autorisés. Par exemple, 7 tiroirs DE460C ou 8 tiroirs DE212C, ou 5 tiroirs DE460C et 2 tiroirs.
+* Disques SSD SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C, DE224C et DE460C ne doit pas dépasser 96 emplacements de disque SSD SAS et 7 tiroirs d'extension, sauf si seuls les tiroirs DE212C sont utilisés. 8 tiroirs DE212C sont autorisés. Par exemple, 1 tiroir DE460C plus 1 tiroir DE224C plus 1 tiroir DE212C, ou 4 tiroirs DE224C, ou 8 tiroirs DE212C.
+
 
 
 

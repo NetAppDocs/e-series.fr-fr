@@ -14,6 +14,7 @@ summary: Ajouter une HIC dans un système E5700.
 [role="lead"]
 Vous pouvez ajouter une carte d'interface hôte (HIC) aux boîtiers de contrôleur E5700 avec des ports hôtes de base. Cette fonctionnalité augmente le nombre de ports hôtes dans votre baie de stockage et offre des protocoles hôtes supplémentaires.
 
+.Description de la tâche
 Lorsque vous ajoutez des HIC, vous devez mettre hors tension la baie de stockage, installer la HIC et mettre de nouveau l'alimentation.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Lorsque vous ajoutez des HIC, vous devez mettre hors tension la baie de stockage
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
 * Nouveau matériel hôte installé pour les nouveaux ports hôte, tels que les commutateurs ou les adaptateurs de bus hôte (HBA).
 * Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports hôte.
@@ -343,4 +344,5 @@ Si vous avez besoin d'instructions pour configurer et utiliser un nouveau protoc
 
 
 
+.Et la suite ?
 L'ajout d'une carte d'interface hôte à votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

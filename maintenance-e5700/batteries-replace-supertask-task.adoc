@@ -14,6 +14,7 @@ summary: 'Remplacement d"une batterie défectueuse dans un système de stockage 
 [role="lead"]
 Vous pouvez remplacer une batterie défectueuse dans un système de stockage E5700.
 
+.Description de la tâche
 Chaque boîtier de contrôleur E5700 comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur. Si le gourou de la restauration de SANtricity System Manager indique un état « batterie défaillante » ou un état « remplacement de batterie requis », vous devez remplacer la batterie concernée.
 
 .Avant de commencer
@@ -21,7 +22,7 @@ Chaque boîtier de contrôleur E5700 comprend une batterie qui préserve les don
 * Révision link:batteries-intro-concept.html["Conditions requises pour le remplacement de la batterie E5700"].
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Une batterie de rechange.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
@@ -352,4 +353,5 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+.Et la suite ?
 Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.

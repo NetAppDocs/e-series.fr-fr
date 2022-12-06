@@ -17,6 +17,7 @@ summary: 'Vous pouvez créer un groupe de volumes pour un ou plusieurs volumes a
 [role="lead"]
 Vous pouvez créer un groupe de volumes pour un ou plusieurs volumes accessibles à l'hôte. Un groupe de volumes est un conteneur pour les volumes dont les caractéristiques sont partagées telles que le niveau RAID et la capacité.
 
+.Avant de commencer
 Consultez les directives suivantes :
 
 * Vous avez besoin d'au moins un lecteur non affecté.
@@ -32,6 +33,7 @@ Vérifiez la façon dont votre choix du niveau RAID affecte la capacité résult
 * Si vous sélectionnez RAID 6, vous devez ajouter au moins cinq lecteurs pour créer le groupe de volumes.
 
 
+.Description de la tâche
 Lors de la création d'un groupe de volumes, vous déterminez les caractéristiques du groupe, telles que le nombre de disques, les fonctionnalités de sécurité, l'assurance des données, la protection contre les pertes de tiroirs et la protection contre les pertes de tiroirs.
 
 Pour les baies de stockage EF600 et EF300, les paramètres comprennent également le provisionnement des ressources, la taille des blocs de disque et la taille des blocs de volume.

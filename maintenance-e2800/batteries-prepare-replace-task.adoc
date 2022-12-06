@@ -14,8 +14,8 @@ summary: Préparez le remplacement de la batterie de la baie E2800 en suivant le
 [role="lead"]
 Les étapes à suivre pour préparer le remplacement de la batterie dépendent de la configuration recto-verso (deux contrôleurs) ou recto (un contrôleur).
 
-* Pour les configurations recto verso, reportez-vous à la section  controller offline (duplex).
-* Pour les configurations recto, voir  down the controller shelf (simplex).
+* Pour les configurations recto verso, reportez-vous à la section <<Mettez le contrôleur hors ligne (duplex)>>.
+* Pour les configurations recto, voir <<Mettez le tiroir contrôleur hors tension (simplex)>>.
 
 
 .Avant de commencer

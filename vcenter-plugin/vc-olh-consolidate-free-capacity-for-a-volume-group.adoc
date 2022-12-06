@@ -23,6 +23,7 @@ Utilisez l'option consolider la capacité libre pour consolider les extensions l
 * Les opérations de modification de volume ne doivent pas être en cours, telles que la modification de la taille du segment d'un volume.
 
 
+.Description de la tâche
 Vous ne pouvez pas annuler l'opération après son démarrage. Vos données restent accessibles lors de l'opération de consolidation.
 
 Vous pouvez lancer la boîte de dialogue consolider la capacité libre en utilisant l'une des méthodes suivantes :
@@ -32,6 +33,7 @@ Vous pouvez lancer la boîte de dialogue consolider la capacité libre en utilis
 
 
 .En savoir plus sur les zones de capacité disponibles
+[%collapsible]
 ====
 Une zone de capacité libre est la capacité disponible pouvant résulter de la suppression d'un volume ou de l'absence de toute capacité disponible lors de la création du volume. Lorsque vous créez un volume dans un groupe de volumes disposant d'une ou plusieurs zones de capacité libre, la capacité du volume est limitée à la plus grande zone de capacité libre de ce groupe de volumes. Par exemple, si un groupe de volumes dispose d'une capacité libre totale de 15 Gio et si la zone la plus large de capacité libre est de 10 Gio, le plus grand volume possible est de 10 Gio.
 
@@ -51,6 +53,8 @@ La boîte de dialogue consolider la capacité libre s'affiche.
 . Cliquez sur *consolider*.
 
 
+.Résultat
 Le système commence à consolider (défragmenter) les zones de capacité libre du groupe de volumes en une quantité contiguë pour les tâches de configuration du stockage ultérieures.
 
+.Une fois que vous avez terminé
 Dans la barre latérale de navigation, sélectionnez *opérations* pour afficher la progression de l'opération consolider la capacité libre. Cette opération peut être longue et peut affecter les performances du système.

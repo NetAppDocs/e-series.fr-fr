@@ -204,4 +204,5 @@ Contactez le support technique pour résoudre ce problème.
 |===
 
 
+.Et la suite ?
 La mise à niveau du micrologiciel de votre lecteur est terminée. Vous pouvez reprendre les opérations normales.

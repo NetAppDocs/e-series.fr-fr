@@ -15,8 +15,8 @@ Si vous mettez à niveau les contrôleurs E2800 et E5700, la fonctionnalité de 
 
 Suivre la procédure appropriée pour :
 
-*  key management
-*  key management
+* <<Gestion interne des clés>>
+* <<Gestion externe des clés>>
 
 
 
@@ -25,6 +25,7 @@ Suivre la procédure appropriée pour :
 
 Procédez comme suit pour la gestion interne des clés lorsque tous les disques sont verrouillés.
 
+.Description de la tâche
 Les contrôleurs récemment échangés se verrouillent avec un code d'affichage à sept segments de *L5*. Ce verrouillage se produit lorsqu'aucun lecteur ne peut effectuer la synchronisation de code automatique (ACS). Une fois la clé de sécurité importée, ACS reprend et met à jour les nouveaux contrôleurs.
 
 
@@ -54,6 +55,7 @@ Les contrôleurs continueront le processus de synchronisation par code automatiq
 
 Procédez comme suit pour gérer les clés externes lorsque tous les disques sont verrouillés.
 
+.Description de la tâche
 Les contrôleurs récemment échangés se verrouillent avec un code d'affichage à sept segments de *L5*. Ce verrouillage se produit lorsqu'aucun lecteur ne peut effectuer la synchronisation de code automatique (ACS). Une fois la clé de sécurité importée, ACS reprend et met à jour les nouveaux contrôleurs.
 
 
