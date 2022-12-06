@@ -2248,6 +2248,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Examen des conditions requises"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Examen des conditions requises
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installez le plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:22:17 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:56:40 +0000">12/06/2022</time>
     
   
 
@@ -6436,13 +6445,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-1-configurer-les-commutateursiscsi-vmware">Étape 1 : configurer les commutateurs—​iSCSI, VMware</h2>
+<h2 id="étape-1-configurer-les-commutateursiscsi-vmware">Étape 1 : configurer les commutateurs&#8212;&#8203;iSCSI, VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d&#8217;iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Deux réseaux distincts pour la haute disponibilité. Assurez-vous d&#8217;isoler votre trafic iSCSI pour séparer les segments du réseau.</p>
@@ -6471,18 +6480,19 @@ Les canaux de port/LACP n&#8217;est pas pris en charge sur les ports switchs du 
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Étapes</div>
 <p>Consultez la documentation du fournisseur de votre commutateur.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-2-configurer-le-réseau-iscsi-vmware">Étape 2 : configurer le réseau ​iSCSI VMware</h2>
+<h2 id="étape-2-configurer-le-réseauiscsi-vmware">Étape 2 : configurer le réseau&#8212;&#8203;iSCSI VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Activation du contrôle de flux matériel d&#8217;envoi et de réception <strong>de bout en bout</strong>.</p>
@@ -6499,6 +6509,7 @@ Les canaux de port/LACP n&#8217;est pas pris en charge sur les ports switchs du 
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Lors de la planification de votre réseau iSCSI, n&#8217;oubliez pas que le <a href="https://configmax.vmware.com/home" target="_blank" rel="noopener">"Valeurs maximales de configuration VMware"</a> Le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d&#8217;éviter la configuration de chemins trop nombreux.</p>
 </div>
 <div class="paragraph">
@@ -6523,6 +6534,7 @@ La liaison du port iSCSI VMware est une fonctionnalité qui force tous les ports
 <p>Pour garantir une bonne configuration de chemins d&#8217;accès multiples, utilisez plusieurs segments de réseau pour le réseau iSCSI. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de matrice sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Si possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.</p>
 </div>
 <div class="paragraph">
+<div class="title">Étapes</div>
 <p>Consultez la documentation du fournisseur de votre commutateur.</p>
 </div>
 <div class="admonitionblock note">
@@ -6540,13 +6552,13 @@ Pour la surcharge IP, de nombreux commutateurs réseau doivent être configurés
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-3-configurer-les-réseaux-côté-baieiscsi-vmware">Étape 3 : configurer les réseaux côté baie—​iSCSI, VMware</h2>
+<h2 id="étape-3-configurer-les-réseaux-côté-baieiscsi-vmware">Étape 3 : configurer les réseaux côté baie&#8212;&#8203;iSCSI, VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous utilisez l&#8217;interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>L&#8217;adresse IP ou le nom de domaine de l&#8217;un des contrôleurs de la matrice de stockage.</p>
@@ -6557,6 +6569,7 @@ Pour la surcharge IP, de nombreux commutateurs réseau doivent être configurés
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres &gt; configurer les ports iSCSI].</p>
 </div>
 <div class="admonitionblock note">
@@ -6744,12 +6757,13 @@ Les cartes d&#8217;interface hôte iSCSI 25 Gb disponibles en option sur les con
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-4-configurer-la-mise-en-réseau-côté-hôteiscsi">Étape 4 : configurer la mise en réseau côté hôte—​iSCSI</h2>
+<h2 id="étape-4-configurer-les-réseaux-côté-hôteiscsi">Étape 4 : configurer les réseaux côté hôte&#8212;&#8203;iSCSI</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La configuration de la mise en réseau iSCSI côté hôte permet à l&#8217;initiateur iSCSI VMware d&#8217;établir une session avec la baie.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Dans cette méthode express pour configurer la mise en réseau iSCSI côté hôte, vous permettez à l&#8217;hôte ESXi de transmettre le trafic iSCSI via quatre chemins redondants vers le stockage.</p>
 </div>
 <div class="paragraph">
@@ -6787,7 +6801,7 @@ Les cartes d&#8217;interface hôte iSCSI 25 Gb disponibles en option sur les con
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-5-vérifiez-les-connexions-réseau-ipiscsi-vmware">Étape 5 : vérifiez les connexions réseau IP—​iSCSI, VMware</h2>
+<h2 id="étape-5-vérifiez-les-connexions-réseau-ipiscsi-vmware">Étape 5 : vérifiez les connexions réseau IP&#8212;&#8203;iSCSI, VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous pouvez vérifier les connexions réseau IP à l&#8217;aide des tests ping afin de vous assurer que l&#8217;hôte et la matrice sont en mesure de communiquer.</p>

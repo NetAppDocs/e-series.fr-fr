@@ -2246,6 +2246,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Examen des conditions requises"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Examen des conditions requises
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installez le plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:22:17 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:56:40 +0000">12/06/2022</time>
     
   
 
@@ -6442,6 +6451,7 @@
 <p>Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d&#8217;application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.</p>
 </div>
 <div class="paragraph">
@@ -6495,6 +6505,7 @@
 <p>Vous créez des volumes pour ajouter de la capacité de stockage à une charge de travail spécifique aux applications et rendre les volumes créés visibles pour un hôte ou un cluster hôte spécifique.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>La plupart des types d&#8217;applications sont par défaut définis par l&#8217;utilisateur pour une configuration de volume, tandis que les autres types ont une configuration intelligente appliquée lors de la création du volume. Par exemple, si vous créez des volumes pour une application Microsoft Exchange, vous devez connaître le nombre de boîtes aux lettres dont vous avez besoin, les besoins moyens de vos boîtes aux lettres et le nombre de copies de la base de données que vous souhaitez. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins.</p>
 </div>
 <div class="paragraph">
@@ -6509,6 +6520,7 @@
 <p>Dans la première étape, vous pouvez sélectionner un hôte ou un cluster hôte spécifique pour le volume, ou vous pouvez choisir d&#8217;affecter l&#8217;hôte ultérieurement.</p>
 </div>
 <div class="paragraph">
+<div class="title">Avant de commencer</div>
 <p>Assurez-vous que :</p>
 </div>
 <div class="ulist">
@@ -6525,6 +6537,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Gardez ces consignes à l&#8217;esprit lorsque vous attribuez des volumes :</p>
 </div>
 <div class="ulist">
@@ -6591,6 +6604,7 @@ L&#8217;affectation d&#8217;un volume à un hôte échoue si vous tentez d&#8217
 <p>Dans la deuxième étape, vous sélectionnez une charge de travail pour personnaliser la configuration de la baie de stockage d&#8217;une application spécifique, comme VMware.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Cette tâche décrit comment créer des volumes pour une charge de travail. En règle générale, une charge de travail contient des volumes aux caractéristiques similaires, optimisés en fonction du type d&#8217;application prise en charge par la charge de travail. Vous pouvez définir une charge de travail à cette étape ou sélectionner des charges de travail existantes.</p>
 </div>
 <div class="paragraph">
@@ -6709,6 +6723,7 @@ L&#8217;affectation d&#8217;un volume à un hôte échoue si vous tentez d&#8217
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Vous créez des volumes à partir de pools ou de groupes de volumes éligibles, affichés dans la boîte de dialogue Ajouter/Modifier des volumes. Pour chaque pool et groupe de volumes éligibles, le nombre de disques disponibles et la capacité totale disponible s&#8217;affichent.</p>
 </div>
 <div class="paragraph">
@@ -6723,8 +6738,8 @@ L&#8217;affectation d&#8217;un volume à un hôte échoue si vous tentez d&#8217
 <ul>
 <li>
 <p><strong>Autre</strong>&#8201;&#8212;&#8201;cliquez sur <strong>Ajouter nouveau volume</strong> dans chaque pool ou groupe de volumes que vous souhaitez utiliser pour créer un ou plusieurs volumes.</p>
-<div class="exampleblock">
-<div class="title">Exemple 1. Détails du champ</div>
+<details>
+<summary class="title">Détails du champ</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6829,12 +6844,12 @@ L&#8217;affectation d&#8217;un volume à un hôte échoue si vous tentez d&#8217
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p><strong>Charge de travail spécifique à une application</strong>&#8201;&#8212;&#8201;cliquez sur <strong>Suivant</strong> pour accepter les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée, ou cliquez sur <strong>Modifier les volumes</strong> pour modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système pour la charge de travail sélectionnée.</p>
-<div class="exampleblock">
-<div class="title">Exemple 2. Détails du champ</div>
+<details>
+<summary class="title">Détails du champ</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6947,7 +6962,7 @@ L&#8217;affectation d&#8217;un volume à un hôte échoue si vous tentez d&#8217
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 </ul>
 </div>

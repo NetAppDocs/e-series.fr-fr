@@ -2248,6 +2248,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Examen des conditions requises"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Examen des conditions requises
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installez le plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:22:17 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:56:40 +0000">12/06/2022</time>
     
   
 
@@ -6436,13 +6445,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-1-configurer-les-commutateurs-fcwindows">Étape 1 : configurer les commutateurs FC—​Windows</h2>
+<h2 id="étape-1-configurer-les-commutateurs-fcwindows">Étape 1 : configurer les commutateurs FC&#8212;&#8203;Windows</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l&#8217;aide de l&#8217;interface de gestion.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Identifiants d&#8217;administrateur pour les commutateurs.</p>
@@ -6453,6 +6462,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port initiateur doit se trouver dans une zone distincte avec l&#8217;ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.</p>
 </div>
 <div class="olist arabic">
@@ -6475,12 +6485,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="étape-2-déterminez-les-wwpn-des-hôtes-et-définissez-les-paramètres-recommandésfc-windows">Étape 2 : déterminez les WWPN des hôtes et définissez les paramètres recommandés—​FC, Windows</h2>
+<h2 id="étape-2-détermination-des-wwpn-des-hôtes-et-configuration-des-paramètres-recommandésfc-windows">Étape 2 : détermination des WWPN des hôtes et configuration des paramètres recommandés&#8212;&#8203;FC, Windows</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous installez un utilitaire HBA FC, ce qui vous permet d&#8217;afficher le nom international du port (WWPN) de chaque port hôte. En outre, vous pouvez utiliser l&#8217;utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l' <a href="http://mysupport.netapp.com/matrix" target="_blank" rel="noopener">"Matrice d&#8217;interopérabilité NetApp"</a> pour la configuration prise en charge.</p>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Consultez les instructions suivantes pour les utilitaires HBA :</p>
 </div>
 <div class="ulist">
