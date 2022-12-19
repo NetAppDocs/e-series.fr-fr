@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head class="at-element-marker">
-  <title>Création de systèmes de fichiers (RHEL 8, RHEL 9, SLES 15)</title>
+  <title>Ajout à chaud d&#8217;un tiroir disque</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Création de systèmes de fichiers (RHEL 8, RHEL 9, SLES 15)" />
+  <meta property="og:title" content="Ajout à chaud d&#8217;un tiroir disque" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/fr-fr/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" />
-	<meta property="og:description" content="Pour RHEL 8 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers." />
+	<meta property="og:url" content="https://docs.netapp.com/fr-fr/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" />
+	<meta property="og:description" content="Ajoutez un nouveau tiroir de disque pendant que l"alimentation est toujours appliquée aux autres composants." />
   <meta property="og:image" content="https://docs.netapp.com/fr-fr/e-series/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Pour RHEL 8 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.">
-  <meta name="keywords" content=" file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Ajoutez un nouveau tiroir de disque pendant que l"alimentation est toujours appliquée aux autres composants.">
+  <meta name="keywords" content=" cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C"><!-- Icons -->
   <link rel="icon" href="/fr-fr/e-series/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -160,7 +160,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Création de systèmes de fichiers (RHEL 8, RHEL 9, SLES 15)](https://docs.netapp.com/fr-fr/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/fr-fr/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/config-linux/nvme-fc-create-filesystems-sles-15.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/e-series/images/edit-sm.svg" alt="" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/e-series/images/article-sm.svg" alt="" class="github-icon" />Guide des contributeurs</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/e-series/issues/new?body=Page%3A%20[Ajout à chaud d&#8217;un tiroir disque](https://docs.netapp.com/fr-fr/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/fr-fr/e-series/images/discuss-sm.svg" alt="" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/e-series/blob/main/maintenance-ef600/drives-hotadd-drive-shelf-task.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/e-series/images/edit-sm.svg" alt="" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/e-series/images/article-sm.svg" alt="" class="github-icon" />Guide des contributeurs</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">SUR CETTE PAGE</div>
@@ -283,19 +283,19 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/fr-fr/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -1105,8 +1105,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
 
@@ -1472,6 +1470,10 @@
 
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
         </li>
       </ul>
     
@@ -1766,6 +1768,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1959,6 +1963,8 @@
             Disques
           </a>
           
+
+
 
 
 
@@ -4096,7 +4102,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Création de systèmes de fichiers (RHEL 8, RHEL 9 et SLES 15)"
       data-li-level="4#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/fr-fr/e-series/config-linux/nvme-fc-create-filesystems-sles-15-task.html">
         Création de systèmes de fichiers (RHEL 8, RHEL 9 et SLES 15)
       </a></li><li 
@@ -4583,6 +4589,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-ef600/drives-replace-supertask-task.html">
         Remplacez le disque EF600
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ajoutez à chaud un tiroir de disque"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-ef600/drives-hotadd-drive-shelf-task.html">
+        Ajoutez à chaud un tiroir de disque
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="EF300-EF600 assure la maintenance des ventilateurs"
@@ -4897,6 +4910,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-e2800/drives-60-supertask-task.html">
         Remplacement du tiroir disque (60 disques)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ajoutez à chaud un tiroir de disque"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-e2800/drives-hotadd-drive-shelf-task.html">
+        Ajoutez à chaud un tiroir de disque
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="E2800 maintenance des HIC"
@@ -5100,6 +5120,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-e5700/drives-drawer-supertask-task.html">
         Remplacement du tiroir disque (60 disques)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ajoutez à chaud un tiroir de disque"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/e-series/maintenance-e5700/drives-hotadd-drive-shelf-task.html">
+        Ajoutez à chaud un tiroir de disque
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="E5700 maintien des HIC"
@@ -6420,14 +6447,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Création de systèmes de fichiers (RHEL 8, RHEL 9, SLES 15)</h1>
+  <h1 class="n-doc__component-detail-heading">Ajout à chaud d&#8217;un tiroir disque</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:22:17 +0000">11/15/2022</time>
+    <time datetime="2022-12-19 17:31:09 +0000">12/19/2022</time>
     
   
 
@@ -6437,75 +6464,508 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Pour RHEL 8, RHEL 9 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.</p>
+<p>Vous pouvez ajouter un nouveau tiroir disque pendant que l&#8217;alimentation est toujours appliquée aux autres composants du système de stockage. Vous pouvez configurer, reconfigurer, ajouter ou transférer la capacité du système de stockage sans interrompre l&#8217;accès des utilisateurs aux données.</p>
+</div>
+<div class="paragraph">
+<div class="title">Avant de commencer</div>
+<p>En raison de la complexité de cette procédure, il est recommandé de procéder comme suit :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lire toutes les étapes avant de commencer la procédure.</p>
+</li>
+<li>
+<p>Assurez-vous que l&#8217;ajout à chaud d&#8217;un tiroir disque est la procédure adéquate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Description de la tâche</div>
+<p>Cette procédure s&#8217;applique à l&#8217;ajout à chaud d&#8217;un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570, EF300 ou EF600</p>
+</div>
+<div class="paragraph">
+<p>Cette procédure s&#8217;applique aux tiroirs disques IOM12 et IOM12B.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d&#8217;installer ou de mettre à niveau vers un IOM12B.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Cette procédure concerne les remplacements ou les remplacements à chaud de module d&#8217;E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu&#8217;un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section <a href="https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057" target="_blank" rel="noopener">"Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Pour préserver l&#8217;intégrité du système, vous devez suivre la procédure exactement dans l&#8217;ordre indiqué.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="étape-1-préparez-vous-à-ajouter-le-tiroir-disque">Étape 1 : préparez-vous à ajouter le tiroir disque</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour préparer l&#8217;ajout à chaud d&#8217;un tiroir disque, vérifiez la présence d&#8217;événements critiques et le statut des IOM.</p>
+</div>
+<div class="ulist">
+<div class="title">Avant de commencer</div>
+<ul>
+<li>
+<p>La source d&#8217;alimentation de votre système de stockage doit être capable de répondre aux besoins en alimentation du nouveau tiroir disque. Pour connaître les spécifications d&#8217;alimentation de votre tiroir disque, reportez-vous au <a href="https://hwu.netapp.com/Controller/Index?platformTypeId=2357027" target="_blank" rel="noopener">"Hardware Universe"</a>.</p>
+</li>
+<li>
+<p>Le modèle de câblage du système de stockage existant doit correspondre à l&#8217;un des schémas applicables présentés dans cette procédure.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Étapes</div>
 <ol class="arabic">
 <li>
-<p>Exécutez la commande multipath -ll pour obtenir la liste des périphériques nvme.</p>
-<div class="listingblock">
+<p>Dans SANtricity System Manager, sélectionnez <strong>support</strong> &gt; <strong>support Center</strong> &gt; <strong>Diagnostics</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>collecter les données de support</strong>.</p>
+<div class="paragraph">
+<p>La boîte de dialogue récupérer les données de support s&#8217;affiche.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>collect</strong>.</p>
+<div class="paragraph">
+<p>Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom support-data.7z. Les données ne sont pas automatiquement envoyées au support technique.</p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>support</strong> &gt; <strong>Journal des événements</strong>.</p>
+<div class="paragraph">
+<p>La page Journal des événements affiche les données d&#8217;événement.</p>
+</div>
+</li>
+<li>
+<p>Sélectionnez l&#8217;en-tête de la colonne <strong>priorité</strong> pour trier les événements critiques en haut de la liste.</p>
+</li>
+<li>
+<p>Examinez les événements critiques du système pour les événements survenus au cours des deux à trois dernières semaines et vérifiez que tous les événements critiques récents ont été résolus ou résolus.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Si des événements critiques non résolus se sont produits au cours des deux à trois semaines précédentes, arrêtez la procédure et contactez le support technique. Continuer la procédure uniquement lorsque le problème est résolu.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>matériel</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez l&#8217;icône <strong>modules d&#8217;E/S (IOM)</strong>.</p>
+<div class="imageblock">
 <div class="content">
-<pre># multipath -ll</pre>
+<img src="../media/sam1130_ss_hardware_iom_icon.gif" alt="sam1130 ss icône module d&#8217;e/s matériel">
 </div>
 </div>
 <div class="paragraph">
-<p>Le résultat de cette commande peut être utilisé pour rechercher les périphériques associés <code>/dev/disk/by-id/nvme-eui.[uuid#]</code> emplacement. Dans l&#8217;exemple ci-dessous, il s&#8217;agit de <code>/dev/disc/by-id/nvme-eui.000082dd5c05d39300a0980000a52225</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>eui.000082dd5c05d39300a0980000a52225 [nvme]:nvme0n6 NVMe,NetApp E-Series,08520000
-size=4194304 features='n/a' hwhandler='ANA' wp=rw
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:0:1 nvme0c0n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:1:1 nvme0c1n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=10 status=non-optimized
-| `- 0:2:1 nvme0c2n1 0:0 n/a non-optimized live
-`-+- policy='n/a' prio=10 status=non-optimized
-  `- 0:3:1 nvme0c3n1 0:0 n/a non-optimized live</pre>
-</div>
+<p>La boîte de dialogue Paramètres des composants de la tablette s&#8217;affiche avec l&#8217;onglet <strong>IOM (ESM)</strong> sélectionné.</p>
 </div>
 </li>
 <li>
-<p>Créez un système de fichiers sur la partition du périphérique nvme souhaité à l&#8217;aide de l&#8217;emplacement <code>/dev/disk/by-id/nvme-eui.[id#]</code>.</p>
-<div class="paragraph">
-<p>La méthode de création d&#8217;un système de fichiers varie en fonction du système de fichiers choisi. Cet exemple illustre la création d&#8217;un système de fichiers ext4.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># mkfs.ext4 /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225
-mke2fs 1.42.11 (22-Oct-2019)
-Creating filesystem with 2620928 4k blocks and 655360 inodes
-Filesystem UUID: 97f987e9-47b8-47f7-b434-bf3ebbe826d0
-Superblock backups stored on blocks:
-        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
-
-Allocating group tables: done
-Writing inode tables: done
-Creating journal (32768 blocks): done
-Writing superblocks and filesystem accounting information: done</pre>
-</div>
-</div>
+<p>Assurez-vous que l&#8217;état indiqué pour chaque IOM/ESM est <em>optimal</em>.</p>
 </li>
 <li>
-<p>Créez un dossier pour monter le nouveau périphérique.</p>
-<div class="listingblock">
-<div class="content">
-<pre># mkdir /mnt/ext4</pre>
-</div>
-</div>
+<p>Cliquez sur <strong>Afficher plus de paramètres</strong>.</p>
 </li>
 <li>
-<p>Montez l&#8217;appareil.</p>
-<div class="listingblock">
-<div class="content">
-<pre># mount /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225 /mnt/ext4</pre>
-</div>
+<p>Vérifiez que les conditions suivantes sont réunies :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Le nombre de modules de gestion des E/S détectés correspond au nombre d&#8217;modules de gestion des E/S installés dans le système et à celui de chaque tiroir de disque.</p>
+</li>
+<li>
+<p>Les deux EDM/modules d&#8217;E/S montrent que la communication est correcte.</p>
+</li>
+<li>
+<p>Le débit de données est de 12 Gbit/s pour les tiroirs disques DE212C, DE224C et DE460C ou de 6 Gbit/s pour les autres tiroirs disques.</p>
+</li>
+</ul>
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="étape-2-installer-le-tiroir-disque-et-mettre-sous-tension">Étape 2 : installer le tiroir disque et mettre sous tension</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vous installez un nouveau tiroir disque ou un tiroir disque installé précédemment, mettez sous tension et vérifiez si les LED nécessitent une intervention.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Si vous installez un tiroir disque qui a déjà été installé dans un système de stockage, retirez les lecteurs. Les lecteurs doivent être installés un par un plus tard dans cette procédure.</p>
+<div class="paragraph">
+<p>Si l&#8217;historique d&#8217;installation du tiroir disque que vous installez est inconnu, vous devez supposer qu&#8217;il a été précédemment installé dans un système de stockage.</p>
+</div>
+</li>
+<li>
+<p>Installez le tiroir disque dans le rack qui contient les composants du système de stockage.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Consultez les instructions d&#8217;installation de votre modèle pour connaître la procédure complète d&#8217;installation physique et de câblage d&#8217;alimentation. Les instructions d&#8217;installation de votre modèle incluent des notes et des avertissements que vous devez prendre en compte pour installer en toute sécurité une étagère de disques.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Mettez le nouveau tiroir disque sous tension et vérifiez qu&#8217;aucun voyant d&#8217;avertissement orange n&#8217;est allumé sur le tiroir disque. Si possible, résolvez toute anomalie avant de poursuivre cette procédure.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="étape-3-branchez-le-système-sur-le-câble">Étape 3 : branchez le système sur le câble</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sélectionnez l&#8217;une des options suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#option-1-connexion-du-tiroir-disque-pour-les-systèmes-e2800-ou-e5700">Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700</a></p>
+</li>
+<li>
+<p><a href="#option-2-connexion-du-tiroir-disque-pour-ef300-ou-ef600">Option 2 : connexion du tiroir disque pour EF300 ou EF600</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section <a href="https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057" target="_blank" rel="noopener">"Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="option-1-connexion-du-tiroir-disque-pour-les-systèmes-e2800-ou-e5700">Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700</h3>
+<div class="paragraph">
+<p>Vous connectez le tiroir disque au contrôleur A, confirmez l&#8217;état du module d&#8217;E/S et connectez le tiroir disque au contrôleur B.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Connectez le tiroir disque au contrôleur A.</p>
+<div class="paragraph">
+<p>La figure suivante montre un exemple de connexion entre un tiroir disque supplémentaire et le contrôleur A. Pour localiser les ports de votre modèle, reportez-vous à la section <a href="https://hwu.netapp.com/Controller/Index?platformTypeId=2357027" target="_blank" rel="noopener">"Hardware Universe"</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_e5700_0.png" alt="chaud e5700 0">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_e5700_1.png" alt="chaud e5700 1">
+</div>
+</div>
+</li>
+<li>
+<p>Dans le Gestionnaire système SANtricity, cliquez sur <strong>matériel</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+À ce stade de la procédure, un seul chemin d&#8217;accès actif vers le tiroir contrôleur n&#8217;est disponible.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Faites défiler vers le bas si nécessaire pour voir tous les tiroirs disques du nouveau système de stockage. Si le nouveau tiroir disque n&#8217;est pas affiché, résolvez le problème de connexion.</p>
+</li>
+<li>
+<p>Sélectionnez l&#8217;icône <strong>ESMS/IOMS</strong> pour la nouvelle étagère de disques.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/sam1130_ss_hardware_iom_icon.gif" alt="sam1130 ss icône module d&#8217;e/s matériel">
+</div>
+</div>
+<div class="paragraph">
+<p>La boîte de dialogue <strong>Paramètres de composant de tiroir</strong> s&#8217;affiche.</p>
+</div>
+</li>
+<li>
+<p>Sélectionnez l&#8217;onglet <strong>ESMS/IOMS</strong> dans la boîte de dialogue <strong>Paramètres de composant de tiroir</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Afficher plus d&#8217;options</strong> et vérifiez les éléments suivants :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>IOM/ESM A figure dans la liste.</p>
+</li>
+<li>
+<p>Le débit de données actuel est de 12 Gbit/s pour un tiroir disque SAS-3.</p>
+</li>
+<li>
+<p>Les communications de la carte sont correctes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Débrancher tous les câbles d&#8217;extension du contrôleur B.</p>
+</li>
+<li>
+<p>Connectez le tiroir disque au contrôleur B.</p>
+<div class="paragraph">
+<p>La figure suivante montre un exemple de connexion entre un tiroir disque supplémentaire et le contrôleur B. Pour localiser les ports de votre modèle, reportez-vous à la section <a href="https://hwu.netapp.com/Controller/Index?platformTypeId=2357027" target="_blank" rel="noopener">"Hardware Universe"</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_e5700_2.png" alt="chaud e5700 2">
+</div>
+</div>
+</li>
+<li>
+<p>Si ce n&#8217;est pas déjà fait, sélectionnez l&#8217;onglet <strong>ESMS/IOMS</strong> dans la boîte de dialogue <strong>Paramètres de composant de tiroir</strong>, puis sélectionnez <strong>Afficher plus d&#8217;options</strong>. Vérifiez que les communications de la carte sont <strong>OUI</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+L&#8217;état optimal indique que la perte d&#8217;erreur de redondance associée au nouveau tiroir disque a été résolue et que le système de stockage est stabilisé.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="option-2-connexion-du-tiroir-disque-pour-ef300-ou-ef600">Option 2 : connexion du tiroir disque pour EF300 ou EF600</h3>
+<div class="paragraph">
+<p>Vous connectez le tiroir disque au contrôleur A, confirmez l&#8217;état du module d&#8217;E/S et connectez le tiroir disque au contrôleur B.</p>
+</div>
+<div class="ulist">
+<div class="title">Avant de commencer</div>
+<ul>
+<li>
+<p>Vous avez mis à jour votre micrologiciel à la dernière version. Pour mettre à jour votre micrologiciel, suivez les instructions de la section <a href="../upgrade-santricity/index.html">"Mise à niveau de SANtricity OS"</a>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Déconnectez les deux câbles du contrôleur côté A des ports IOM12 un et deux du dernier tiroir précédent de la pile, puis connectez-les aux nouveaux ports IOM12 du tiroir un et deux.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/de224c_sides.png" alt="de224c côtés">
+</div>
+</div>
+</li>
+<li>
+<p>Connectez les câbles aux ports IOM12 latéraux A trois et quatre du nouveau tiroir aux ports 1 et 2 du dernier tiroir IOM12 précédent.</p>
+<div class="paragraph">
+<p>La figure suivante montre un exemple de connexion côté entre un tiroir disque supplémentaire et le dernier tiroir précédent. Pour localiser les ports de votre modèle, reportez-vous à la section <a href="https://hwu.netapp.com/Controller/Index?platformTypeId=2357027" target="_blank" rel="noopener">"Hardware Universe"</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_ef_0.png" alt="ef chaud 0">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_ef_1.png" alt="ef chaud 1">
+</div>
+</div>
+</li>
+<li>
+<p>Dans le Gestionnaire système SANtricity, cliquez sur <strong>matériel</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+À ce stade de la procédure, un seul chemin d&#8217;accès actif vers le tiroir contrôleur n&#8217;est disponible.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Faites défiler vers le bas si nécessaire pour voir tous les tiroirs disques du nouveau système de stockage. Si le nouveau tiroir disque n&#8217;est pas affiché, résolvez le problème de connexion.</p>
+</li>
+<li>
+<p>Sélectionnez l&#8217;icône <strong>ESMS/IOMS</strong> pour la nouvelle étagère de disques.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/sam1130_ss_hardware_iom_icon.gif" alt="sam1130 ss icône module d&#8217;e/s matériel">
+</div>
+</div>
+<div class="paragraph">
+<p>La boîte de dialogue <strong>Paramètres de composant de tiroir</strong> s&#8217;affiche.</p>
+</div>
+</li>
+<li>
+<p>Sélectionnez l&#8217;onglet <strong>ESMS/IOMS</strong> dans la boîte de dialogue <strong>Paramètres de composant de tiroir</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Afficher plus d&#8217;options</strong> et vérifiez les éléments suivants :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>IOM/ESM A figure dans la liste.</p>
+</li>
+<li>
+<p>Le débit de données actuel est de 12 Gbit/s pour un tiroir disque SAS-3.</p>
+</li>
+<li>
+<p>Les communications de la carte sont correctes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Déconnectez les deux câbles du contrôleur côté B des ports IOM12 un et deux du dernier tiroir précédent de la pile, puis connectez-les aux nouveaux ports IOM12 du tiroir un et deux.</p>
+</li>
+<li>
+<p>Connectez les câbles aux ports IOM12 du côté B trois et quatre du nouveau shelf aux ports IOM12 du dernier tiroir précédent un et deux.</p>
+<div class="paragraph">
+<p>La figure suivante montre un exemple de connexion côté B entre un tiroir disque supplémentaire et le dernier tiroir précédent. Pour localiser les ports de votre modèle, reportez-vous à la section <a href="https://hwu.netapp.com/Controller/Index?platformTypeId=2357027" target="_blank" rel="noopener">"Hardware Universe"</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/hot_ef_2.png" alt="ef 2 chaud">
+</div>
+</div>
+</li>
+<li>
+<p>Si ce n&#8217;est pas déjà fait, sélectionnez l&#8217;onglet <strong>ESMS/IOMS</strong> dans la boîte de dialogue <strong>Paramètres de composant de tiroir</strong>, puis sélectionnez <strong>Afficher plus d&#8217;options</strong>. Vérifiez que les communications de la carte sont <strong>OUI</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+L&#8217;état optimal indique que la perte d&#8217;erreur de redondance associée au nouveau tiroir disque a été résolue et que le système de stockage est stabilisé.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="étape-4-ajout-à-chaud-complet">Étape 4 : ajout à chaud complet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour terminer l&#8217;ajout à chaud, vérifiez s&#8217;il n&#8217;y a pas d&#8217;erreur et vérifiez que le tiroir disque ajouté utilise le dernier firmware.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Dans le Gestionnaire système SANtricity, cliquez sur <strong>Accueil</strong>.</p>
+</li>
+<li>
+<p>Si le lien intitulé <strong>Recover from problemes</strong> apparaît au centre de la page, cliquez sur le lien et résolvez les problèmes indiqués dans le Recovery Guru.</p>
+</li>
+<li>
+<p>Dans le Gestionnaire système SANtricity, cliquez sur <strong>matériel</strong>, puis faites défiler la liste vers le bas si nécessaire pour afficher le nouveau tiroir disque ajouté.</p>
+</li>
+<li>
+<p>Pour les disques qui ont été installés dans un autre système de stockage, ajoutez un disque à la fois au tiroir qui vient d&#8217;être installé. Attendez que chaque lecteur soit reconnu avant d&#8217;insérer le disque suivant.</p>
+<div class="paragraph">
+<p>Lorsqu&#8217;un lecteur est reconnu par le système de stockage, la représentation de l&#8217;emplacement du lecteur dans la page <strong>Hardware</strong> s&#8217;affiche sous la forme d&#8217;un rectangle bleu.</p>
+</div>
+</li>
+<li>
+<p>Sélectionnez l&#8217;onglet <strong>support</strong> &gt; <strong>support Center</strong> &gt; <strong>support Resources</strong>.</p>
+</li>
+<li>
+<p>Cliquez sur le lien <strong>Software and Firmware Inventory</strong>, puis vérifiez quelles versions du firmware IOM/ESM et du firmware du lecteur sont installées sur le nouveau tiroir.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/e-series/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Vous devrez peut-être faire défiler la page pour accéder à ce lien.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Si nécessaire, mettez à niveau le micrologiciel du lecteur.</p>
+<div class="paragraph">
+<p>Le firmware IOM/ESM est automatiquement mis à niveau vers la dernière version, sauf si vous avez désactivé la fonctionnalité de mise à niveau.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>La procédure d&#8217;ajout à chaud est terminée. Vous pouvez reprendre les opérations normales.</p>
+</div>
+</div>
 </div>
 
     </article>
