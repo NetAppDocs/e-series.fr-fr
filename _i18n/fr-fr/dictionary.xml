@@ -310,7 +310,6 @@
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Lire toutes les étapes avant de commencer la procédure.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Assurez-vous que l'ajout à chaud d'un tiroir disque est la procédure adéquate.</block>
   <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.</block>
-  <block id="c5d218090776dbcf38627065b13e6caa" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block>.</block>
@@ -8556,7 +8555,6 @@
   <block id="e1e3f682a15638acc6104e20368ac56c" category="paragraph">Si nécessaire, vous pouvez reconfigurer votre système SAS-2 pour qu'il soit utilisé derrière un nouveau tiroir contrôleur SAS-3.</block>
   <block id="d5bfcfac792646a9cb8556a9dc0e1711" category="paragraph">Les baies SAS-2 approuvées comprennent les systèmes E2700, E550/EF5500 et E5600/EF560. Les tiroirs disques SAS-2 agréés sont notamment DE1600, DE5600 et DE6600. Les baies SAS-3 approuvées incluent les systèmes E2800 et E5700/EF570. Les tiroirs disques SAS-3 approuvés sont les systèmes DE212C, DE224C et DE460C.</block>
   <block id="8b8d78c67ae658c8f5789c07f6ec4ff5" category="paragraph">Dans cette procédure, vous convertissez le tiroir contrôleur en baie SAS-2 approuvée en tiroir disque, puis placez-le derrière une nouvelle baie SAS-3 approuvée et des tiroirs disques, sans préserver les données.</block>
-  <block id="e2acb831b00c32f1c83710aa634a7625" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="f71b20f3b0d45a3de46bfc2994245cef" category="paragraph">En raison de la complexité de cette procédure, les éléments suivants sont nécessaires :</block>
   <block id="58e56f993ed9dd2d088442ff59a40d30" category="list-text">Vous devez faire une demande FPVR (Feature Product variance Request). Pour déposer une FPVR, contactez les services professionnels NetApp.</block>
   <block id="a739f0261e28d98823a19d4400689648" category="admonition">L'échec de l'acquisition d'une FPVR avant de lancer cette procédure peut entraîner une panne de disque et le verrouillage du contrôleur.</block>
@@ -8848,4 +8846,7 @@
   <block id="294b3397fedca884072c918fc613f61d" category="list-text"><block ref="b1d2c45bc75ed5d4a6faa0261f1569e8" category="inline-xref-macro-rx"></block></block>
   <block id="04c5c6e14f0bbd925f3877a16bc2c6a5" category="section-title">Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700</block>
   <block id="3519a93182c0883a5ee2951208ede7c9" category="section-title">Option 2 : connexion du tiroir disque pour EF300 ou EF600</block>
+  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
+  <block id="562b06bc197dd94e4462675caa7022b0" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
+  <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Ajoutez à chaud un tiroir de disque</block>
 </blocks>

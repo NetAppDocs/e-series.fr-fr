@@ -1,13 +1,5 @@
----
-permalink: install-hw-cabling/hotadd-drive-shelf-task.html 
-sidebar: sidebar 
-keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
-summary: 'Ajoutez un nouveau tiroir de disque pendant que l"alimentation est toujours appliquée aux autres composants.' 
----
-= Ajout à chaud d'un tiroir disque
+= Étape 1 : préparez-vous à ajouter le tiroir disque
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

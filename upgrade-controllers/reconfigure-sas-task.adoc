@@ -21,7 +21,7 @@ Dans cette procédure, vous convertissez le tiroir contrôleur en baie SAS-2 app
 Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
 
 
-NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.07.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
+NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
 
 .Avant de commencer
 En raison de la complexité de cette procédure, les éléments suivants sont nécessaires :

@@ -507,6 +507,8 @@ sidebar:
           url: "/maintenance-ef600/drives-replace-EF300-task.html"
         - title: Remplacez le disque EF600
           url: "/maintenance-ef600/drives-replace-supertask-task.html"
+        - title: Ajoutez à chaud un tiroir de disque
+          url: "/maintenance-ef600/drives-hotadd-drive-shelf-task.html"
       - title: Ventilateurs
         pdf-filename: EF300-EF600 assure la maintenance des ventilateurs
         entries:
@@ -600,6 +602,8 @@ sidebar:
           url: "/maintenance-e2800/drives-60-replace-task.html"
         - title: Remplacement du tiroir disque (60 disques)
           url: "/maintenance-e2800/drives-60-supertask-task.html"
+        - title: Ajoutez à chaud un tiroir de disque
+          url: "/maintenance-e2800/drives-hotadd-drive-shelf-task.html"
       - title: Cartes d'interface hôte
         pdf-filename: E2800 maintenance des HIC
         entries:
@@ -661,6 +665,8 @@ sidebar:
           url: "/maintenance-e5700/drives-60-replace-task.html"
         - title: Remplacement du tiroir disque (60 disques)
           url: "/maintenance-e5700/drives-drawer-supertask-task.html"
+        - title: Ajoutez à chaud un tiroir de disque
+          url: "/maintenance-e5700/drives-hotadd-drive-shelf-task.html"
       - title: Cartes d'interface hôte
         pdf-filename: E5700 maintien des HIC
         entries:
