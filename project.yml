@@ -504,9 +504,9 @@ sidebar:
         - title: Présentation et configuration requise
           url: "/maintenance-ef600/drives-overview-supertask-concept.html"
         - title: Remplacez le lecteur EF300
-          url: "/maintenance-ef600/drives-replace-EF300-task.html"
+          url: "/maintenance-ef600/drives-replace-EF300-supertask-task.html"
         - title: Remplacez le disque EF600
-          url: "/maintenance-ef600/drives-replace-supertask-task.html"
+          url: "/maintenance-ef600/drives-replace-EF600-supertask-task.html"
         - title: Ajoutez à chaud un tiroir de disque
           url: "/maintenance-ef600/drives-hotadd-drive-shelf-task.html"
       - title: Ventilateurs
