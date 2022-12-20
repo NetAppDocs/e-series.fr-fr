@@ -1,5 +1,5 @@
 ---
-permalink: config-linux/nvme-fc-create-filesystems-sles-15.html 
+permalink: config-linux/nvme-fc-create-filesystems-sles-15-task.html 
 sidebar: sidebar 
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Pour RHEL 8 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers. 
