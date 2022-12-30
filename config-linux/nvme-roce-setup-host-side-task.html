@@ -6454,7 +6454,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-06 22:56:40 +0000">12/06/2022</time>
+    <time datetime="2022-12-30 21:01:04 +0000">12/30/2022</time>
     
   
 
@@ -6469,7 +6469,7 @@
 </div>
 <div class="paragraph">
 <div class="title">Ce dont vous avez besoin</div>
-<p>Vous devez exécuter le tout dernier système d&#8217;exploitation compatible RHEL 7, RHEL 8 et RHEL 9 SUSE Linux Enterprise Server 12 et 15 Service Pack. Voir la <a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">"Matrice d&#8217;interopérabilité NetApp"</a> pour obtenir la liste complète des dernières exigences.</p>
+<p>Vous devez exécuter le tout dernier système d&#8217;exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la <a href="https://mysupport.netapp.com/matrix" target="_blank" rel="noopener">"Matrice d&#8217;interopérabilité NetApp"</a> pour obtenir la liste complète des dernières exigences.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Étapes</div>
@@ -6492,6 +6492,25 @@
 <div class="content">
 <pre># yum install rdma-core
 # yum install nvme-cli</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Pour RHEL 8 et RHEL 9, installez les scripts réseau :</p>
+<div class="paragraph">
+<p><strong>RHEL 8</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># yum install network-scripts</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>RHEL 9</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># yum install NetworkManager-initscripts-updown</pre>
 </div>
 </div>
 </li>
@@ -6546,7 +6565,7 @@ STARTMODE='auto'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>RHEL 7, RHEL 8 ET RHEL 9</strong></p>
+<p><strong>RHEL 7 ou RHEL 8</strong></p>
 </div>
 <div class="paragraph">
 <p>Créez le fichier exemple <code>/etc/sysconfig/network-scripts/ifcfg-eth4</code> avec les contenus suivants.</p>
@@ -6580,6 +6599,59 @@ NAME='MT27800 Family [ConnectX-5]'
 NETWORK=
 REMOTE_IPADDR=
 STARTMODE='auto'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>RHEL 9</strong></p>
+</div>
+<div class="paragraph">
+<p>Utilisez le <code>nmtui</code> outil permettant d&#8217;activer et de modifier une connexion. Voici un exemple de fichier <code>/etc/NetworkManager/system-connections/eth4.nmconnection</code> l&#8217;outil génère :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[connection]
+id=eth4
+uuid=&lt;unique uuid&gt;
+type=ethernet
+interface-name=eth4
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.1.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Voici un exemple de fichier <code>/etc/NetworkManager/system-connections/eth5.nmconnection</code> l&#8217;outil génère :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[connection]
+id=eth5
+uuid=&lt;unique uuid&gt;
+type=ethernet
+interface-name=eth5
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.2.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]</pre>
 </div>
 </div>
 </li>
