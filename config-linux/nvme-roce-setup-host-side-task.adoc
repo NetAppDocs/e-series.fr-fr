@@ -14,7 +14,7 @@ summary: 'La configuration de l"initiateur NVMe dans un environnement RoCE inclu
 La configuration de l'initiateur NVMe dans un environnement RoCE inclut l'installation et la configuration des packages rdma-core et nvme-cli, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.
 
 .Ce dont vous avez besoin
-Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8 et RHEL 9 SUSE Linux Enterprise Server 12 et 15 Service Pack. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste complète des dernières exigences.
+Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste complète des dernières exigences.
 
 .Étapes
 . Installez les packages rdma et nvme-cli :
@@ -37,6 +37,23 @@ Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, 
 
 # yum install rdma-core
 # yum install nvme-cli
+----
+. Pour RHEL 8 et RHEL 9, installez les scripts réseau :
++
+*RHEL 8*
+
++
+[listing]
+----
+# yum install network-scripts
+----
++
+*RHEL 9*
+
++
+[listing]
+----
+# yum install NetworkManager-initscripts-updown
 ----
 . Procurez-vous le NQN hôte, qui sera utilisé pour configurer l'hôte sur une matrice.
 +
@@ -86,7 +103,7 @@ REMOTE_IPADDR=
 STARTMODE='auto'
 ----
 +
-*RHEL 7, RHEL 8 ET RHEL 9*
+*RHEL 7 ou RHEL 8*
 
 +
 Créez le fichier exemple `/etc/sysconfig/network-scripts/ifcfg-eth4` avec les contenus suivants.
@@ -121,6 +138,61 @@ NAME='MT27800 Family [ConnectX-5]'
 NETWORK=
 REMOTE_IPADDR=
 STARTMODE='auto'
+----
++
+*RHEL 9*
+
++
+Utilisez le `nmtui` outil permettant d'activer et de modifier une connexion. Voici un exemple de fichier `/etc/NetworkManager/system-connections/eth4.nmconnection` l'outil génère :
+
++
+[listing]
+----
+
+[connection]
+id=eth4
+uuid=<unique uuid>
+type=ethernet
+interface-name=eth4
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.1.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+----
++
+Voici un exemple de fichier `/etc/NetworkManager/system-connections/eth5.nmconnection` l'outil génère :
+
++
+[listing]
+----
+
+[connection]
+id=eth5
+uuid=<unique uuid>
+type=ethernet
+interface-name=eth5
+
+[ethernet]
+mtu=4200
+
+[ipv4]
+address1=192.168.2.87/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
 ----
 . Activez les interfaces réseau :
 +

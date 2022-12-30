@@ -3398,7 +3398,6 @@
   <block id="23a1a118541ab0d1766faa1805b06432" category="paragraph">Vous pouvez accéder à ces périphériques de bloc via le<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> le périphérique ou le<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> dans<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block>; par exemple :</block>
   <block id="c612d2b91ede7407a062457604df3133" category="summary">La configuration de l'initiateur NVMe dans un environnement RoCE inclut l'installation et la configuration des packages rdma-core et nvme-cli, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.</block>
   <block id="7962181454b192f5714ecc94bc40c37a" category="doc">Configurez NVMe over RoCE côté hôte</block>
-  <block id="04d05aed6c7b8c4bb3939966572e118e" category="paragraph">Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8 et RHEL 9 SUSE Linux Enterprise Server 12 et 15 Service Pack. Voir la<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste complète des dernières exigences.</block>
   <block id="5efb38dd01fabddcbff948ba98eb16ed" category="list-text">Installez les packages rdma et nvme-cli :</block>
   <block id="04595c79a616b5c392556737aaa7347d" category="paragraph">*RHEL 7, RHEL 8 ET RHEL 9*</block>
   <block id="f402a19f86f854f295aa371b9abbbb90" category="list-text">Configurez les adresses IP IPv4 sur les ports ethernet utilisés pour connecter NVMe over RoCE. Pour chaque interface réseau, créez un script de configuration qui contient les différentes variables de cette interface.</block>
@@ -8849,4 +8848,11 @@
   <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="562b06bc197dd94e4462675caa7022b0" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Ajoutez à chaud un tiroir de disque</block>
+  <block id="83af49c7a44a4352fd5c07a021524fea" category="paragraph">Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste complète des dernières exigences.</block>
+  <block id="889869e1d3bab19951bb91f386d721de" category="list-text">Pour RHEL 8 et RHEL 9, installez les scripts réseau :</block>
+  <block id="8b8d5d75fe765c0900e1083326e233eb" category="paragraph">*RHEL 8*</block>
+  <block id="40ae81b37293ba1a886134269b1c76e5" category="paragraph">*RHEL 9*</block>
+  <block id="3babbb5880d0a0a22e662b27203c0dbe" category="paragraph">*RHEL 7 ou RHEL 8*</block>
+  <block id="8ce810d5ab2863c317f14fafb62a5090" category="paragraph">Utilisez le<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> outil permettant d'activer et de modifier une connexion. Voici un exemple de fichier<block ref="a8490166956a7c69a385a3a3169f183e" prefix=" " category="inline-code"></block> l'outil génère :</block>
+  <block id="e5e4c27b43623332619bb7b742c025ee" category="paragraph">Voici un exemple de fichier<block ref="4a417e605245176a0337befebb3390ec" prefix=" " category="inline-code"></block> l'outil génère :</block>
 </blocks>
