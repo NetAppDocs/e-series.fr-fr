@@ -29,12 +29,10 @@ node.session.nr_sessions = 1
 +
 [listing]
 ----
-node.session.timeo.replacement_timeout=20
+node.session.timeo.replacement_timeout = 20
 ----
+. Vous pouvez également définir `node.startup = automatic` dans /etc/iscsi/iscsid.conf avant d'exécuter toute `iscsiadm` les commandes pour que les sessions persistent après le redémarrage.
 . Bien sûr `iscsid` et `(open-)iscsi` les services sont activés et activés pour le démarrage.
-+
-*Red Hat Enterprise Linux 7, 8 et 9 (RHEL 7, RHEL 8 et RHEL9)*
-
 +
 [listing]
 ----
@@ -43,25 +41,13 @@ node.session.timeo.replacement_timeout=20
 # systemctl enable iscsi
 # systemctl enable iscsid
 ----
-+
-*SUSE Linux Enterprise Server 12 et 15 (SLES 12 et SLES 15)*
-
-+
-[listing]
-----
-# systemctl start iscsid.service
-# systemctl enable iscsid.service
-----
-+
-Vous avez éventuellement défini `node.startup = automatic` dans /etc/iscsi/iscsid.conf avant d'exécuter toute `iscsiadm` les commandes pour que les sessions persistent après le redémarrage.
-
 . Obtenir le nom de l'initiateur IQN de l'hôte, qui sera utilisé pour configurer l'hôte sur une matrice.
 +
 [listing]
 ----
 # cat /etc/iscsi/initiatorname.iscsi
 ----
-. Configurez le réseau pour les ports iSCSI :
+. Configurez le réseau pour les ports iSCSI. Voici des exemples d'instructions pour RHEL et SLES :
 +
 
 NOTE: En plus du port de réseau public, les initiateurs iSCSI doivent utiliser au moins deux cartes réseau sur des segments privés ou des VLAN distincts.
@@ -70,39 +56,69 @@ NOTE: En plus du port de réseau public, les initiateurs iSCSI doivent utiliser 
 .. Déterminez les noms des ports iSCSI à l'aide du `ifconfig -a` commande.
 .. Définissez l'adresse IP des ports d'initiateur iSCSI. Les ports d'initiateur doivent être présents sur le même sous-réseau que les ports cibles iSCSI.
 +
-*Red Hat Enterprise Linux 7, 8 et 9 (RHEL 7, RHEL 8 et RHEL9)*
+*Red Hat Enterprise Linux 7 et 8 (RHEL 7 et RHEL 8)*
+
++
+Créez le fichier exemple `/etc/sysconfig/network-scripts/ifcfg-<NIC port>` avec les contenus suivants.
 
 +
 [listing]
 ----
-# vim /etc/sysconfig/network-scripts/ifcfg-<NIC port>
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=<NIC port>
+UUID=<unique UUID>
+DEVICE=<NIC port>
+ONBOOT=yes
+IPADDR=192.168.xxx.xxx
+PREFIX=24
+NETMASK=255.255.255.0
+NM_CONTROLLED=no
+MTU=
 ----
++
+Ajouts facultatifs concernant IPv6 :
+
++
+[listing]
+----
+IPV6INIT=yes
+IPV6_AUTOCONF=no
+IPV6ADDR=fdxx::192:168:xxxx:xxxx/32
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=eui64
+----
++
+*Red Hat Enterprise Linux 9 (RHEL 9)*
+
++
+Utilisez le `nmtui` outil permettant d'activer et de modifier une connexion. L'outil génère un `<NIC port>.nmconnection` fichier dans `/etc/NetworkManager/system-connections/`.
+
 +
 *SUSE Linux Enterprise Server 12 et 15 (SLES 12 et SLES 15)*
 
 +
-[listing]
-----
-# vim /etc/sysconfig/network/ifcfg-<NIC port>
-----
-+
-Modifier :
+Créez le fichier exemple `/etc/sysconfig/network/ifcfg-<NIC port>` avec les contenus suivants.
 
 +
 [listing]
 ----
-BOOTPROTO=none
-ONBOOT=yes
-NM_CONTROLLED=no
+IPADDR='192.168.xxx.xxx/24'
+BOOTPROTO='static'
+STARTMODE='auto'
 ----
 +
-Ajouter :
+Ajout facultatif concernant IPv6 :
 
 +
 [listing]
 ----
-IPADDR=192.168.xxx.xxx
-NETMASK=255.255.255.0
+IPADDR_0='fdxx::192:168:xxxx:xxxx/32'
 ----
 +
 
@@ -117,9 +133,9 @@ NOTE: Veillez à définir l'adresse des deux ports d'initiateur iSCSI.
 .. Assurez-vous que le serveur Linux peut envoyer une commande ping _All_ des ports cibles iSCSI.
 
 
-. Établir les sessions iSCSI entre les initiateurs et les cibles (quatre au total).
+. Établissez les sessions iSCSI entre les initiateurs et les cibles (quatre au total) par l'une des deux méthodes suivantes.
 +
-.. Lors de l'utilisation de ces interfaces, configurez les interfaces iSCSI en créant deux liaisons iSCSI iface.
+.. (Facultatif) lors de l'utilisation des interfaces, configurez les interfaces iSCSI en créant deux liaisons iSCSI iface.
 +
 [listing]
 ----
@@ -138,16 +154,21 @@ NOTE: Pour lister les interfaces, utilisez `iscsiadm -m iface`.
 
 .. Détection des cibles iSCSI Enregistrez l'IQN (il sera le même avec chaque découverte) dans la feuille de travail pour l'étape suivante.
 +
-[listing]
-----
-# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0 -P 1
-----
-+
-ou
+*Méthode 1 (avec ifâces)*
 
 +
 [listing]
 ----
+# iscsiadm -m discovery -t sendtargets -p <target_ip_address>:<target_tcp_listening_port> -I iface0
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0
+----
++
+*Méthode 2 (sans lacets)*
+
++
+[listing]
+----
+# iscsiadm -m discovery -t sendtargets -p <target_ip_address>:<target_tcp_listening_port>
 # iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260
 ----
 +
@@ -161,13 +182,16 @@ iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
 ----
 .. Créez la connexion entre les initiateurs iSCSI et les cibles iSCSI.
 +
+*Méthode 1 (avec ifâces)*
+
++
 [listing]
 ----
-# iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
--p 192.168.0.1:3260 -I iface0 -l
+# iscsiadm -m node -T <target_iqn> -p <target_ip_address>:<target_tcp_listening_port> -I iface0 -l
+# iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3 -p 192.168.0.1:3260 -I iface0 -l
 ----
 +
-ou
+*Méthode 2 (sans lacets)*
 
 +
 [listing]
