@@ -2894,13 +2894,10 @@
   <block id="d40e479d6bc1cf9824be2cfa7e837140" category="list-text">Activez et démarrez le<block ref="6b64648adbe124ad96531f7f0dd977a4" prefix=" " category="inline-code"></block> services.</block>
   <block id="5199a73d3ec25068a8e5789109022997" category="summary">La configuration d'un initiateur NVMe dans un environnement InfiniBand inclut l'installation et la configuration des packages infiniband, nvme-cli et rdma, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.</block>
   <block id="9e54c935a03ff772bcf7612b86de79a1" category="doc">Configuration de la technologie NVMe over InfiniBand côté hôte</block>
-  <block id="941060fc12806a5c3d9302d2624cb774" category="paragraph">Vous devez exécuter la dernière version compatible du système d'exploitation RHEL 7, RHEL 8, RHEL9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste complète des dernières exigences.</block>
   <block id="c35fc67c4b5efd31552d96e3eec5e293" category="list-text">Installer les packages rdma, nvme-cli et infiniband :</block>
   <block id="ddeec0610c6dfff21c284cac06924a6e" category="paragraph">*SLES 12 ou SLES 15*</block>
   <block id="1f34187b1a209107eee63f82ab42cc05" category="paragraph">*RHEL 7, RHEL 8 OU RHEL 9*</block>
-  <block id="76769149b150e336b1382f8eef619a50" category="list-text">Activer<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>. Modifiez le fichier /etc/rdma/rdma.conf et modifiez l'entrée à charger<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>:</block>
   <block id="5536244c6a701b654692a01af6b8b81c" category="list-text">Procurez-vous le NQN hôte, qui sera utilisé pour configurer l'hôte sur une matrice.</block>
-  <block id="e180dcda700b7114bbf7cbdb821df4a6" category="list-text">Vérifiez que les deux liaisons de port ib sont activées et que l'état = actif :</block>
   <block id="22b4a25f95365479298f378bbf161e6f" category="list-text">Configurez les adresses IP IPv4 sur les ports ib.</block>
   <block id="08fa0114b0d6dc928f4c7ac5eb67c374" category="paragraph">Créez le fichier /etc/sysconfig/network/ifcfg-ib0 avec le contenu suivant.</block>
   <block id="ba5d5a8fa23f831ccd6827dc3b611469" category="paragraph">Créez ensuite le fichier /etc/sysconfig/network/ifcfg-ib1 :</block>
@@ -8855,4 +8852,9 @@
   <block id="3babbb5880d0a0a22e662b27203c0dbe" category="paragraph">*RHEL 7 ou RHEL 8*</block>
   <block id="8ce810d5ab2863c317f14fafb62a5090" category="paragraph">Utilisez le<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> outil permettant d'activer et de modifier une connexion. Voici un exemple de fichier<block ref="a8490166956a7c69a385a3a3169f183e" prefix=" " category="inline-code"></block> l'outil génère :</block>
   <block id="e5e4c27b43623332619bb7b742c025ee" category="paragraph">Voici un exemple de fichier<block ref="4a417e605245176a0337befebb3390ec" prefix=" " category="inline-code"></block> l'outil génère :</block>
+  <block id="775835480314574c6cd9244c8c9b879b" category="list-text">Pour RHEL 8 ou RHEL 9, installez les scripts réseau :</block>
+  <block id="6836b58aebbdd815358ecf435e05e390" category="list-text">Pour RHEL 7, activez<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>. Modifiez le fichier /etc/rdma/rdma.conf et modifiez l'entrée à charger<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>:</block>
+  <block id="0cd1f8d86f769c38f1483db60702ae30" category="list-text">Vérifiez que les deux liaisons de port IB sont activées et que l'état = actif :</block>
+  <block id="b19174b79ffa987ea20abbce564e973e" category="paragraph">Utilisez le<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> outil permettant d'activer et de modifier une connexion. Voici un exemple de fichier<block ref="9c2912b95ccba22459cf5353437988de" prefix=" " category="inline-code"></block> l'outil génère :</block>
+  <block id="2662a31940eac2df0a6809d02c631cbb" category="paragraph">Voici un exemple de fichier<block ref="c9f0a91feab8e55b8d9d166acc79562e" prefix=" " category="inline-code"></block> l'outil génère :</block>
 </blocks>
