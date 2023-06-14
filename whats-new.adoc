@@ -18,17 +18,8 @@ Les tableaux suivants décrivent les nouvelles fonctionnalités de SANtricity OS
 
 == Nouvelles fonctionnalités de la version 11.75
 
-[cols="35,65"]
-|===
-| Nouvelle fonction | Description 
+Les systèmes doivent exécuter la version 11.70.5 pour effectuer une mise à niveau vers la version 11.80.x ou ultérieure.
 
-
- a| 
-Autoriser les mises à niveau vers 11.80.x
- a| 
-Les systèmes doivent exécuter la version 11.70.5 pour effectuer une mise à niveau vers la version 11.80.x ou ultérieure. La norme FIPS 140-3 est désormais prise en charge sur certains disques pour les SSD SAS et NVMe. Les disques SSD de niveau FIPS 140-3 peuvent coexister avec les disques SSD de niveau FIPS 140-2, à condition que ces disques soient tous basés sur NVMe ou sur SAS. Lorsque vous utilisez une combinaison de ces niveaux dans des groupes de volumes et des pools de disques, notez que le groupe ou le pool fonctionnera alors au niveau inférieur de sécurité (140-2).
-
-|===
 
 
 == Nouvelles fonctionnalités de la version 11.74
