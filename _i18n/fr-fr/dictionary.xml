@@ -8867,4 +8867,7 @@
   <block id="4d34b8dd475537b31eded726b5f109a4" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Configurer les hôtes</block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Six</block>
   <block id="8cb633130263590fcb215001ddbab715" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Configurer le stockage</block>
+  <block id="17fbe20fbbd5b537dbcef5b0ec0d1dea" category="section-title">Nouvelles fonctionnalités de la version 11.75</block>
+  <block id="a4b7d4d589fe2fdcc52596432d9392ed" category="paragraph">Autoriser les mises à niveau vers 11.80.x</block>
+  <block id="7c2f19d039e9dc3e3394a748e8ac016e" category="paragraph">Les systèmes doivent exécuter la version 11.70.5 pour effectuer une mise à niveau vers la version 11.80.x ou ultérieure. La norme FIPS 140-3 est désormais prise en charge sur certains disques pour les SSD SAS et NVMe. Les disques SSD de niveau FIPS 140-3 peuvent coexister avec les disques SSD de niveau FIPS 140-2, à condition que ces disques soient tous basés sur NVMe ou sur SAS. Lorsque vous utilisez une combinaison de ces niveaux dans des groupes de volumes et des pools de disques, notez que le groupe ou le pool fonctionnera alors au niveau inférieur de sécurité (140-2).</block>
 </blocks>
