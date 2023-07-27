@@ -25,15 +25,16 @@ Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retire
 ** La LED d'avertissement orange sur le boîtier du contrôleur est allumée, ce qui indique que le contrôleur est défectueux.
 
 
+* Assurez-vous de disposer des éléments suivants :
++
+** Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Un tournevis cruciforme n° 1
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une zone de travail plate et sans électricité statique.
-* Un tournevis cruciforme n° 1
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

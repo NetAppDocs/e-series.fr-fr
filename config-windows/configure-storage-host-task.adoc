@@ -15,8 +15,11 @@ Comme une nouvelle LUN est hors ligne et n'a pas de partition ou de système de 
 
 Vous pouvez initialiser le disque en tant que disque de base avec une table de partition GPT ou MBR. En général, le format de la LUN est utilisé avec un système de fichiers tel que NTFS (New Technology File System).
 
-.Ce dont vous avez besoin
-LUN détectée par l'hôte.
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* LUN détectée par l'hôte.
+
 
 .Étapes
 . À partir d'une invite de commande Windows, entrez le `diskpart` contexte.

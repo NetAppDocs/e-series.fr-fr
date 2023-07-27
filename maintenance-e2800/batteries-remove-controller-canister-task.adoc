@@ -15,7 +15,9 @@ Vous devez retirer le boîtier du contrôleur du shelf contrôleur afin que vous
 
 Lorsque vous retirez un boîtier de contrôleur, vous devez débrancher tous les câbles. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
 

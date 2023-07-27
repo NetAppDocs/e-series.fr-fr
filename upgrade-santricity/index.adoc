@@ -20,4 +20,4 @@ Ces procédures de mise à niveau comprennent des instructions distinctes pour :
 * Lecteur -- contient des instructions pour la mise à niveau du micrologiciel du lecteur.
 
 
-Avant de commencer la mise à niveau, vérifiez le link:overview-upgrade-consider-task.html["Mise à niveau"].
+Avant de commencer la mise à niveau, vérifiez le  link:overview-upgrade-consider-task.html["Mise à niveau"^].

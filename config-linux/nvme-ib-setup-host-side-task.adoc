@@ -13,7 +13,7 @@ summary: 'La configuration d"un initiateur NVMe dans un environnement InfiniBand
 [role="lead"]
 La configuration d'un initiateur NVMe dans un environnement InfiniBand inclut l'installation et la configuration des packages infiniband, nvme-cli et rdma, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste complète des dernières exigences.
 
 .Étapes
@@ -282,16 +282,17 @@ Comme indiqué dans l'exemple ci-dessous, l'adresse IP pour `ib1` est `11.11.11.
     inet6 fe80::202:c903:31:7851/64 scope link
        valid_lft forever preferred_lft forever
 ----
-. Configurez la couche NVMe-of sur l'hôte. Créez les fichiers suivants sous /etc/modules-load.d/ pour charger le `nvme-rdma` module noyau et assurez-vous que le module noyau sera toujours activé, même après un redémarrage :
+. Configurez la couche NVMe-of sur l'hôte. Créez les fichiers suivants sous /etc/modules-load.d/ pour charger le `nvme_rdma` module noyau et assurez-vous que le module noyau sera toujours activé, même après un redémarrage :
 +
 [listing]
 ----
 
-# cat /etc/modules-load.d/nvme-rdma.conf
-  nvme-rdma
+# cat /etc/modules-load.d/nvme_rdma.conf
+  nvme_rdma
 ----
+. Redémarrez l'hôte.
 +
-Pour vérifier le `nvme-rdma` le module du noyau est chargé, exécutez la commande suivante :
+Pour vérifier le `nvme_rdma` le module du noyau est chargé, exécutez la commande suivante :
 
 +
 [listing]

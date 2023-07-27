@@ -13,7 +13,7 @@ summary: 'L"importation du périphérique de stockage distant s"effectue via l"a
 [role="lead"]
 Pour lancer une importation du stockage à partir d'un système distant vers un système de stockage E-Series local, utilisez l'assistant d'importation de stockage distant dans l'interface utilisateur de SANtricity System Manager.
 
-.Ce dont vous avez besoin
+.Ce dont vous aurez besoin
 * Le système de stockage E-Series doit être configuré pour communiquer avec le système de stockage distant. Voir link:setup-remote-volumes-concept.html["Configuration du matériel"].
 * Pour le système de stockage distant, rassemblez les informations suivantes :
 +

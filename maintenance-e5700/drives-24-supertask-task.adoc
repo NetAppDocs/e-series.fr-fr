@@ -19,12 +19,13 @@ La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disq
 
 .Avant de commencer
 * Examinez les exigences de gestion des disques dans le link:drives-overview-supertask-concept.html["Conditions requises pour le remplacement des disques E5700"].
+* Assurez-vous de disposer des éléments suivants :
++
+** Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

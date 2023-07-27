@@ -27,6 +27,7 @@ Le contrôle d'accès basé sur des rôles (RBAC) associe des utilisateurs préd
 
 Le tableau suivant décrit chaque rôle.
 
+[cols="35h,~"]
 |===
 | Rôle | Description 
 
@@ -62,6 +63,7 @@ Les comptes utilisateur par défaut sont définis dans le fichier users.properti
 
 Le tableau suivant répertorie les connexions utilisateur disponibles pour le proxy de services Web.
 
+[cols="35h,~"]
 |===
 | Connexion utilisateur prédéfinie | Description 
 

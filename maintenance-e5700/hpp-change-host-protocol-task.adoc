@@ -112,6 +112,10 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e5700.
 .. Sélectionnez la mosaïque *support Center*.
 .. Dans l'onglet Ressources de support, localisez et sélectionnez le lien *profil de matrice de stockage*.
 .. Saisissez *ID du sous-modèle du pack de fonctionnalités* dans la zone de texte, puis cliquez sur *Rechercher*.
++
+
+NOTE: « Sous-modèle » peut également être écrit en tant que « sous-modèle ».
+
 .. Localisez l'ID du sous-modèle du pack de fonctionnalités pour la configuration de départ.
 +
 image::../media/storage_array_profile2_maint-e5700.gif[profil des baies de stockage 2 maint. e5700]

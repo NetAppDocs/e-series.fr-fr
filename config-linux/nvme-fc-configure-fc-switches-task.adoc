@@ -13,7 +13,9 @@ summary: 'La configuration de \(zoning\) les commutateurs Fibre Channel \(FC\) p
 [role="lead"]
 La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Identifiants d'administrateur pour les commutateurs.
 * WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
 

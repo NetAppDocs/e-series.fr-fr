@@ -14,9 +14,9 @@ summary: 'Installez l" EF300 ou EF600 dans un rack à deux montants ou dans une 
 Vous pouvez installer un système de stockage EF300 ou EF600 dans un rack à deux montants ou dans une armoire système NetApp.
 
 .Avant de commencer
-Avant d'installer un système de stockage EF300 ou EF600, veillez à effectuer les opérations suivantes :
+Assurez-vous de faire ce qui suit :
 
-* Enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
 * Préparez une zone de travail plate et sans électricité statique.
 * Prenez les précautions anti-statiques.
 

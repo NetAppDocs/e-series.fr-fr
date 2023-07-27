@@ -32,15 +32,18 @@ La procédure à suivre pour remplacer un tiroir disque défectueux dans un tiro
 
 CAUTION: *Perte possible d'accès aux données* -- si un volume est déjà dans un état dégradé et que vous retirez des disques du tiroir de lecteur, le volume peut échouer.
 
-.Ce dont vous avez besoin
-* Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une lampe de poche.
-* Un marqueur permanent pour noter l'emplacement exact de chaque lecteur lorsque vous retirez le lecteur du tiroir.
-* Accès à l'interface de ligne de commande de la baie de stockage. Si vous ne disposez pas d'un accès à l'interface de ligne de commandes, vous pouvez effectuer l'une des opérations suivantes :
+* Assurez-vous de disposer des éléments suivants :
 +
-** *Pour SANtricity System Manager (version 11.60 et supérieure)* -- Télécharger le paquet CLI (fichier zip) depuis System Manager. Accédez au menu:Paramètres[système > modules complémentaires > interface de ligne de commande]. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
-** *Pour SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Suivez les instructions du guide express pour télécharger et installer le logiciel. Vous pouvez exécuter des commandes CLI à partir de l'EMW en sélectionnant menu:Outils[Exécuter script].
+** Disque de remplacement pris en charge par NetApp pour le tiroir contrôleur ou le tiroir disque.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une lampe de poche.
+** Un marqueur permanent pour noter l'emplacement exact de chaque lecteur lorsque vous retirez le lecteur du tiroir.
+** Accès à l'interface de ligne de commande de la baie de stockage. Si vous ne disposez pas d'un accès à l'interface de ligne de commandes, vous pouvez effectuer l'une des opérations suivantes :
++
+*** *Pour SANtricity System Manager (version 11.60 et supérieure)* -- Télécharger le paquet CLI (fichier zip) depuis System Manager. Accédez au menu:Paramètres[système > modules complémentaires > interface de ligne de commande]. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
+*** *Pour SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Suivez les instructions du guide express pour télécharger et installer le logiciel. Vous pouvez exécuter des commandes CLI à partir de l'EMW en sélectionnant menu:Outils[Exécuter script].
+
+
 
 
 
@@ -195,10 +198,10 @@ La chaîne de câbles supérieure est fixée au tiroir d'entraînement 1. La cha
 image::../media/trafford_cable_rail_1_maint-e5700.gif[rail de câble trafford 1 prise e5700]
 
 +
-*(1)* _connecteur vertical (connecté au fond de panier central)_
+*(1)* _chaîne de câbles_
 
 +
-*(2)* _chaîne de câble_
+*(2)* _connecteur vertical (connecté au fond de panier central)_
 
 +
 *(3)* _connecteur horizontal (connecté au tiroir)_

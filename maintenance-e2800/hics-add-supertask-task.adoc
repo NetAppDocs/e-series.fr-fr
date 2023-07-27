@@ -20,19 +20,20 @@ Au cours de cette procédure, vous devez mettre la baie de stockage hors tension
 .Avant de commencer
 * Révision link:hics-overview-supertask-concept.html["Conditions requises pour le remplacement de la carte HIC E2800"].
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, cela est dû au fait que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
-
-
-.Ce dont vous avez besoin
-* Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Un tournevis cruciforme n° 1.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Tout matériel hôte requis installé pour les nouveaux ports hôte, tels que les commutateurs ou les adaptateurs de bus hôte (HBA).
-* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports hôte.
+* Assurez-vous de disposer des éléments suivants :
++
+** Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Un tournevis cruciforme n° 1.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Tout matériel hôte requis installé pour les nouveaux ports hôte, tels que les commutateurs ou les adaptateurs de bus hôte (HBA).
+** Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports hôte.
 +
 Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] et le http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
 
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
 
 
 

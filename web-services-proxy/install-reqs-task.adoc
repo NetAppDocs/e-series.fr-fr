@@ -21,6 +21,7 @@ Vous pouvez installer et configurer le proxy de services Web sur un système hô
 
 L'installation du proxy comprend les conditions suivantes.
 
+[cols="35h,~"]
 |===
 | Conditions requises | Description 
 

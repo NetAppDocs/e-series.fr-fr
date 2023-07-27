@@ -21,7 +21,9 @@ Vous pouvez remplacer une cartouche de contrôleur défectueuse dans une configu
 .Description de la tâche
 Le boîtier du contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option. Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.

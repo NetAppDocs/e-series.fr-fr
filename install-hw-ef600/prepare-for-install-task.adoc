@@ -21,7 +21,7 @@ Si vous procédez au câblage de votre EF300 pour l'extension SAS, consultez les
 
 
 .Étapes
-. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
 . Assurez-vous que les éléments suivants se trouvent dans la boîte que vous avez reçue.
 +
 |===
@@ -125,11 +125,10 @@ image:../media/management_station_inst-hw-ef600_g60b3.png[""]
  a| 
 Navigateur pris en charge pour le logiciel de gestion :
 
-** Google Chrome (version 78 et ultérieure)
-** Microsoft Internet Explorer (version 11 et ultérieure)
-** Microsoft Edge (88 et versions ultérieures)
-** Mozilla Firefox (version 70 et ultérieure)
-** Safari (version 12 et ultérieure)
+** Google Chrome (version 89 et ultérieure)
+** Microsoft Edge (90 et versions ultérieures)
+** Mozilla Firefox (version 80 et ultérieure)
+** Safari (version 14 et ultérieure)
 
 
 |===

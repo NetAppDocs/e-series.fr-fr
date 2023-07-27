@@ -17,7 +17,9 @@ Vous pouvez remplacer un ventilateur d'une baie EF300 ou EF600.
 .Description de la tâche
 Chaque tiroir contrôleur ou tiroir disque EF300 et EF600 comprend cinq ventilateurs. En cas de panne d'un ventilateur, vous devez le remplacer dans les plus brefs délais afin de vérifier que le shelf présente une climatisation adéquate.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Un ventilateur de remplacement.
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Une zone de travail plate et sans électricité statique.

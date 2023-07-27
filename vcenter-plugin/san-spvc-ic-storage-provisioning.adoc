@@ -330,10 +330,7 @@ Le système effectue les opérations suivantes :
 
 == Étape 3 : création d'un datastore dans vSphere client
 
-Pour créer un datastore dans le client vSphere, reportez-vous à la rubrique suivante de VMware Doc Center :
-
-* https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-7EB0CE06-02DD-4B31-85C7-E54993CC06DC.html["Créez un datastore VMFS dans le client vSphere"^]
-
+Pour créer un datastore dans le client vSphere, reportez-vous à la section https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-5AC611E0-7CEB-4604-A03C-F600B1BA2D23.html["Créez un datastore VMFS dans le client vSphere"^] Dans le Centre de documentation VMware.
 
 
 
@@ -370,11 +367,7 @@ Cette boîte de dialogue affiche la capacité actuelle signalée du volume et la
 . Utilisez la case *augmenter la capacité signalée en ajoutant...* pour ajouter de la capacité à la capacité actuellement disponible. Vous pouvez modifier la valeur de capacité pour l'afficher en mébioctets (Mio), gibioctets (Tio) ou tébioctets (Tio).
 . Cliquez sur *augmenter*.
 . Affichez le volet tâches récentes pour connaître la progression de l'opération augmenter la capacité en cours d'exécution pour le volume sélectionné. Cette opération peut être longue et peut affecter les performances du système.
-. Une fois la capacité du volume terminée, vous devez augmenter manuellement la taille de VMFS pour la mettre en correspondance, comme décrit dans la rubrique suivante :
-+
-** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^]
-
-
+. Une fois la capacité du volume terminée, vous devez augmenter manuellement la taille VMFS pour qu'elle corresponde à la configuration décrite dans le https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D57FEF5D-75F1-433D-B337-E760732282FC.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^] Sous VMware Doc Center.
 
 
 
@@ -382,9 +375,8 @@ Cette boîte de dialogue affiche la capacité actuelle signalée du volume et la
 === Augmentation de la capacité du datastore existant en ajoutant des volumes
 
 . Vous pouvez augmenter la capacité d'un datastore en ajoutant des volumes. Suivez les étapes de la section <<Étape 1 : créer des volumes>>.
-. Ensuite, attribuez les volumes à l'hôte souhaité pour augmenter la capacité du datastore. Reportez-vous à la rubrique suivante :
+. Ensuite, attribuez les volumes à l'hôte souhaité pour augmenter la capacité du datastore.
 +
-** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^]
-
+Voir la https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Augmenter la capacité du datastore VMFS dans le client vSphere"^] Pour plus d'informations, reportez-vous à la rubrique sous VMware Doc Center.
 
 

@@ -21,6 +21,7 @@ La fonctionnalité AutoSupport (ASUP) transmet automatiquement des messages à N
 
 Chaque message AutoSupport est un ensemble de fichiers journaux, de données de configuration, de données d'état et de mesures de performances. Par défaut, AutoSupport transmet les fichiers répertoriés dans le tableau suivant à l'équipe de support NetApp une fois par semaine.
 
+[cols="35h,~"]
 |===
 | Nom du fichier | Description 
 
@@ -129,6 +130,7 @@ Vous pouvez configurer la fonction AutoSupport pour qu'elle utilise les méthode
 . Accédez au fichier ASUPConfig.xml dans le répertoire de travail.
 . Dans la chaîne, `<delivery type="n">`, entrez 1, 2 ou 3 comme décrit dans le tableau :
 +
+[cols="25h,~"]
 |===
 | Valeur | Description 
 

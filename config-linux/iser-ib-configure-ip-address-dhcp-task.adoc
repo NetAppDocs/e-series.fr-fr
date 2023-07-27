@@ -13,8 +13,9 @@ summary: 'Utilisez le protocole de configuration dynamique de l"hôte \(DHCP\) p
 [role="lead"]
 Pour configurer les communications entre la station de gestion et la matrice de stockage, utilisez le protocole DHCP (Dynamic Host Configuration Protocol) pour fournir des adresses IP.
 
-.Ce dont vous avez besoin
-Un serveur DHCP installé et configuré sur le même sous-réseau que les ports de gestion du stockage.
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+* Un serveur DHCP installé et configuré sur le même sous-réseau que les ports de gestion du stockage.
 
 .Description de la tâche
 Chaque baie de stockage dispose d'un contrôleur (simplex) ou de deux contrôleurs (duplex), et chaque contrôleur dispose de deux ports de gestion du stockage. Une adresse IP est attribuée à chaque port de gestion.

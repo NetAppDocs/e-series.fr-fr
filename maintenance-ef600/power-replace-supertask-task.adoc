@@ -19,12 +19,13 @@ En cas de panne de l'alimentation, vous devez le remplacer dès que possible afi
 .Avant de commencer
 * Passez en revue les détails du Recovery Guru afin de vérifier qu'il y a un problème avec l'alimentation. Sélectionnez *revérification* dans Recovery Guru pour vous assurer qu'aucun autre élément ne doit être traité en premier.
 * Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux.
+* Assurez-vous de disposer des éléments suivants :
++
+** Une alimentation de remplacement prise en charge par votre tiroir contrôleur.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Une alimentation de remplacement prise en charge par votre tiroir contrôleur.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

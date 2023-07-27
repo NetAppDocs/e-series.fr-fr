@@ -13,7 +13,9 @@ summary: Installez une batterie neuve.
 [role="lead"]
 Après avoir retiré la batterie défectueuse, vous pouvez l'installer.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * La batterie de rechange.
 * Une surface plane et sans statique.
 

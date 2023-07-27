@@ -14,7 +14,9 @@ summary: Configurez la mise en réseau iSCSI côté baie.
 [role="lead"]
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
 * Mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du protocole LDAP, ainsi qu'un service d'annuaire configuré pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.
 

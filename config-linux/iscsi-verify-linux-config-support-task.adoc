@@ -2,7 +2,7 @@
 permalink: config-linux/iscsi-verify-linux-config-support-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Pour garantir un fonctionnement fiable, vous créez un plan d"implémentation, puis utilisez la matrice d"interopérabilité NetApp \(IMT\) pour vérifier que l"ensemble de la configuration est pris en charge.' 
+summary: 'Pour assurer un fonctionnement fiable, vous créez un plan d"implémentation, puis utilisez la matrice d"interopérabilité (IMT) de NetApp afin de vérifier que l"ensemble de la configuration est pris en charge.' 
 ---
 = Vérifiez que la configuration Linux est prise en charge
 :allow-uri-read: 

@@ -20,14 +20,15 @@ Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre 
 .Avant de commencer
 * Révision link:dimms-overview-supertask-concept.html["Conditions requises pour remplacer un module DIMM EF300 ou EF600"].
 * Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+* Assurez-vous de disposer des éléments suivants :
++
+** Un module DIMM de remplacement.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Un module DIMM de remplacement.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une zone de travail plate et sans électricité statique.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

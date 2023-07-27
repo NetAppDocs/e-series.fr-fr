@@ -14,7 +14,7 @@ summary: Pour installer les systèmes E2860, E5760 ou DE460, créez un compte et
 Découvrez comment vous préparer à installer votre système de stockage E2860, E5760 ou DE460.
 
 .Étapes
-. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
 . Assurez-vous que les éléments suivants se trouvent dans la boîte que vous avez reçue.
 +
 |===
@@ -130,11 +130,10 @@ image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
  a| 
 Navigateur pris en charge pour le logiciel de gestion :
 
-** Google Chrome (version 47 et ultérieure)
-** Microsoft Internet Explorer (version 11 et ultérieure)
-** Microsoft Edge (EdgeHTML 12 et version ultérieure)
-** Mozilla Firefox (version 31 et ultérieure)
-** Safari (version 9 et ultérieure)
+** Google Chrome (version 89 et ultérieure)
+** Microsoft Edge (version 90 et ultérieure)
+** Mozilla Firefox (version 80 et ultérieure)
+** Safari (version 14 et ultérieure)
 
 
 |===

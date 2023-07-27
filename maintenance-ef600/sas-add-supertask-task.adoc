@@ -20,18 +20,20 @@ Lorsque vous ajoutez une carte d'extension SAS, vous devez mettre la baie de sto
 .Avant de commencer
 * Révision link:sas-overview-supertask-concept.html["Exigences relatives au remplacement des cartes d'extension SAS EF300 et EF600"].
 * Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès.
-
-
++
 
 CAUTION: Cette procédure doit être effectuée avec les deux boîtiers de contrôleur. Les configurations de contrôleur HIC doivent correspondre exactement.
 
-.Ce dont vous avez besoin
-* Une carte d'extension SAS compatible avec votre contrôleur.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une zone de travail plate et sans électricité statique.
-* Un tournevis cruciforme n° 1.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+* Assurez-vous de disposer des éléments suivants :
++
+** Une carte d'extension SAS compatible avec votre contrôleur.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Un tournevis cruciforme n° 1.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
 
 
 

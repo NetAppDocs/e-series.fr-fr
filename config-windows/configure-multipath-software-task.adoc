@@ -13,8 +13,11 @@ summary: Installez le package DSM, qui contient le logiciel multipath pour Windo
 [role="lead"]
 Pour fournir un chemin redondant à la matrice de stockage, vous pouvez installer le package SANtricity Windows DSM et utiliser le package multipath pour Windows.
 
-.Ce dont vous avez besoin
-Les privilèges administrateur ou superutilisateur appropriés.
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Les privilèges administrateur ou superutilisateur appropriés.
+
 
 .Description de la tâche
 Le logiciel multivoie fournit un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques. Avant de pouvoir utiliser le multipathing, vous devez installer le package SANtricity Windows DSM. Ce module contient le logiciel multipath pour Windows.

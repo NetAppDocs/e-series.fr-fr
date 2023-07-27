@@ -20,7 +20,9 @@ Pour le protocole iSCSI, vous devez configurer les commutateurs, configurer la m
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau à l'aide de VLAN ou de deux réseaux distincts.
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
@@ -41,7 +43,9 @@ Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos 
 
 Une stratégie efficace pour configurer le réseau iSCSI avec redondance de base consiste à connecter chaque port hôte et un port de chaque contrôleur pour séparer les commutateurs et partitionner chaque ensemble de ports hôte et contrôleur sur des segments réseau distincts à l'aide de VLAN.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
 * Le cas échéant, les trames jumbo activées.
@@ -62,7 +66,7 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 * L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
 * Mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du protocole LDAP, ainsi qu'un service d'annuaire configuré pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.
 
@@ -198,7 +202,9 @@ Sélectionnez cette option pour activer le paramètre qui détermine la priorit�
 
 Vous devez configurer la mise en réseau iSCSI côté hôte pour que l'initiateur iSCSI Microsoft puisse établir des sessions avec la baie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Commutateurs entièrement configurés qui seront utilisés pour supporter le trafic de stockage iSCSI.
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*
 * Contrôle de flux prioritaire désactivé.

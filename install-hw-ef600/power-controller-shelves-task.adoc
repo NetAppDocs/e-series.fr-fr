@@ -14,7 +14,7 @@ summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous
 Découvrez comment connecter les câbles d'alimentation et mettre les tiroirs disques sous tension.
 
 .Avant de commencer
-Avant d'alimenter les tiroirs contrôleurs, assurez-vous d'effectuer les opérations suivantes :
+Assurez-vous de procéder comme suit :
 
 * Installez votre matériel.
 * Prenez les précautions anti-statiques.

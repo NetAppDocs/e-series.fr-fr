@@ -20,13 +20,14 @@ Chaque boîtier de contrôleur E5700 comprend une batterie qui préserve les don
 .Avant de commencer
 * Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
 * Révision link:batteries-intro-concept.html["Conditions requises pour le remplacement de la batterie E5700"].
+* Assurez-vous de disposer des éléments suivants :
++
+** Une batterie de rechange.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Une batterie de rechange.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

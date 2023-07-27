@@ -17,7 +17,9 @@ Vous pouvez ajouter un second canister dans la baie E2800.
 .Description de la tâche
 Cette tâche décrit comment ajouter un second bidon de contrôleur à la version simplex d'un tiroir contrôleur E2812, un tiroir contrôleur E2824 ou une baie Flash EF280. Cette procédure est également appelée conversion recto-verso, une procédure en ligne. Vous pouvez accéder aux données de la matrice de stockage pendant cette procédure.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Un nouveau boîtier de contrôleur portant le même numéro de pièce que le boîtier de contrôleur actuellement installé. (Voir l'étape 1 pour vérifier le numéro de pièce.)
 * Nouvelle HIC identique à celle de la HIC dans le boîtier de contrôleur actuellement installé (uniquement nécessaire si le boîtier de contrôleur actuellement installé comporte une carte d'interface hôte).
 * Un bracelet antistatique ou prendre d'autres précautions antistatiques.

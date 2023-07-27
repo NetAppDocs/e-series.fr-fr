@@ -24,7 +24,9 @@ Chaque boîtier de contrôleur contient une carte contrôleur, une batterie et u
 
 NOTE: Cette tâche s'applique uniquement aux matrices de stockage avec deux contrôleurs (configuration duplex).
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez. (Voir l'étape 1 pour vérifier le numéro de pièce.)
 * Un bracelet antistatique ou d'autres précautions antistatiques.
 * Tournevis cruciforme n° 1.

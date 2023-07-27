@@ -47,6 +47,8 @@ Vous devez d'abord créer une clé de sécurité interne, puis importer la clé 
 
 .. Créer une clé de sécurité interne
 .. Remplacez le contrôleur par une gestion interne des clés et par un ou plusieurs disques sécurisés
+.. Exécutez la commande SMclient, `set allDrives nativeState`.
+.. Attendez que les deux contrôleurs redémarrent.
 
 
 
@@ -77,6 +79,8 @@ Vous devez d'abord déverrouiller les lecteurs sécurisés à l'aide de la proc�
 
 .. Remplacez le contrôleur par une gestion interne des clés et par un ou plusieurs disques sécurisés
 .. Créer une clé de sécurité externe
+.. Exécutez la commande SMclient, `set allDrives nativeState`.
+.. Attendez que les deux contrôleurs redémarrent.
 
 
 

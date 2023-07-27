@@ -20,7 +20,9 @@ Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en r�
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau.
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
@@ -39,7 +41,9 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
 * Le cas échéant, les trames jumbo activées.
@@ -72,7 +76,9 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
 * L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
 * Le mot de passe de l'interface graphique System Manager, du contrôle d'accès basé sur des rôles (RBAC) ou du service LDAP et un service d'annuaire sont configurés pour l'accès de sécurité approprié à la baie de stockage. Pour plus d'informations sur la gestion des accès, consultez l'aide en ligne de SANtricity System Manager.
 

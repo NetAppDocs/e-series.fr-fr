@@ -14,7 +14,7 @@ summary: Installez le système E2800 ou E5700 dans un rack à deux montants ou d
 Découvrez comment installer un système de stockage E2860, E5760 ou DE460 dans un rack à deux montants ou une armoire système NetApp.
 
 .Avant de commencer
-* Enregistrez votre matériel sur http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
 * Préparez une zone de travail plate et sans électricité statique.
 * Procurez-vous un bracelet antistatique et prenez les précautions anti-statiques.
 

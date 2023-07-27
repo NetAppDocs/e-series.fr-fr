@@ -13,8 +13,11 @@ summary: 'Avant d"utiliser le volume, vérifiez que l"hôte peut écrire les don
 [role="lead"]
 Avant d'utiliser le volume, vérifiez que l'hôte peut écrire les données sur le volume et les lire de nouveau.
 
-.Ce dont vous avez besoin
-Volume initialisé au format avec un système de fichiers.
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Volume initialisé au format avec un système de fichiers.
+
 
 .Étapes
 . Sur l'hôte, copiez un ou plusieurs fichiers vers le point de montage du disque.

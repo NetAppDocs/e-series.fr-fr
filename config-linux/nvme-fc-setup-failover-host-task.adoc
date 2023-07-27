@@ -13,7 +13,7 @@ summary: 'Configurez l"hôte pour exécuter le basculement.'
 [role="lead"]
 Pour fournir un chemin redondant à la matrice de stockage, vous pouvez configurer l'hôte pour qu'il exécute le basculement.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 Vous devez installer les modules requis sur votre système.
 
 * Pour les hôtes Red Hat (RHEL), vérifiez que les packages sont installés en cours d'exécution `rpm -q device-mapper-multipath`

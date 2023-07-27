@@ -21,14 +21,15 @@ Lorsque vous remplacez une HIC, vous mettez le contrôleur hors ligne, retirez l
 * Révision link:hics-overview-supertask-concept.html["Conditions requises pour le remplacement de la carte HIC E2800"].
 * Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, cela est dû au fait que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
 * Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+* Assurez-vous de disposer des éléments suivants :
++
+** Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs. Si deux contrôleurs sont présents, chaque contrôleur doit avoir des HIC identiques.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Un tournevis cruciforme n° 1.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Un ou deux circuits intégrés, selon que vous possédez un ou deux contrôleurs dans la baie de stockage. Les circuits intégrés doivent être compatibles avec vos contrôleurs. Si deux contrôleurs sont présents, chaque contrôleur doit avoir des HIC identiques.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Un tournevis cruciforme n° 1.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

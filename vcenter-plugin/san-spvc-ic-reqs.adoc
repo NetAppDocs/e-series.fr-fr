@@ -50,7 +50,7 @@ Le plug-in de stockage pour vCenter nécessite un espace suffisant pour l'exécu
 
 * Espace d'installation requis : 275 Mo
 * Espace de stockage — 275 Mo + 200 Mo (enregistrement)
-* Mémoire système : 512 Mo
+* Mémoire système : 1.5 Go
 
 
 

@@ -22,19 +22,21 @@ Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter l
 .Avant de commencer
 * Révision link:hics-overview-supertask-concept.html["Conditions requises pour les mises à niveau des HIC EF300 ou EF600"].
 * Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Étant donné que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous installez des cartes HIC.
-
-
-.Ce dont vous avez besoin
-* Deux circuits intégrés compatibles avec vos contrôleurs.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une zone de travail plate et sans électricité statique.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Un tournevis cruciforme n° 1.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
-
-
+* Assurez-vous de disposer des éléments suivants :
++
+** Deux circuits intégrés compatibles avec vos contrôleurs.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Un tournevis cruciforme n° 1.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
 
 CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur EF300 ou EF600 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, les deux contrôleurs et les deux HIC doivent être identiques. La présence de circuits intégrés incompatibles ou non concordants provoque le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+
+
+
 
 
 

@@ -13,7 +13,7 @@ summary: 'Configurer le logiciel multivoie afin qu"il puisse fournir un chemin r
 [role="lead"]
 Pour fournir un chemin redondant à la baie de stockage, vous pouvez configurer le logiciel multivoie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 Vous devez installer les modules requis sur votre système.
 
 * Pour les hôtes Red Hat (RHEL), vérifiez que les packages sont installés en cours d'exécution `rpm -q device-mapper-multipath`.

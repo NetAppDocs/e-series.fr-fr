@@ -27,12 +27,13 @@ Vous pouvez remplacer un bloc d'alimentation alors que la baie de stockage est s
 * Révision link:canisters-overview-supertask-concept.html["Conditions requises pour le remplacement de l'absorbeur E5700"].
 * Passez en revue les détails du Recovery Guru afin de vérifier qu'il y a un problème avec l'alimentation. Sélectionnez *revérification* dans Recovery Guru pour vous assurer qu'aucun autre élément ne doit être traité en premier.
 * Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux. Pour obtenir de l'aide, contactez le support technique si les deux blocs d'alimentation du tiroir disposent de LED d'avertissement orange.
+* Assurez-vous de disposer des éléments suivants :
++
+** Une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

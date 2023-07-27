@@ -29,13 +29,14 @@ Pendant cette opération, l'autre cartouche d'alimentation alimente les deux ven
 * Révision link:canisters-overview-supertask-concept.html["Conditions requises pour le remplacement de l'absorbeur E5700"].
 * Passez en revue les détails du gourou de la restauration pour confirmer qu'il y a un problème avec une batterie et pour vous assurer qu'aucun autre élément ne doit être résolu en premier.
 * Vérifiez que le voyant d'avertissement orange sur le boîtier d'alimentation est allumé, ce qui indique que le réservoir présente une anomalie. Contactez le support technique pour obtenir de l'aide si les LED d'avertissement orange sont allumées dans les deux blocs d'alimentation du tiroir.
+* Assurez-vous de disposer des éléments suivants :
++
+** Une cartouche d'alimentation installée et en marche.
+** Cartouche d'alimentation de rechange prise en charge pour votre modèle de tiroir de contrôleur ou de tiroir de disque.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* Une cartouche d'alimentation installée et en marche.
-* Cartouche d'alimentation de rechange prise en charge pour votre modèle de tiroir de contrôleur ou de tiroir de disque.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 

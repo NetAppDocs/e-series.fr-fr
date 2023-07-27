@@ -13,8 +13,11 @@ summary: 'Avant d"utiliser le namespace, vérifiez que l"hôte peut écrire les 
 [role="lead"]
 Avant d'utiliser le namespace, vérifiez que l'hôte peut écrire les données dans le namespace et les lire de nouveau.
 
-.Ce dont vous avez besoin
-Espace de noms initialisé au format avec un système de fichiers.
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Espace de noms initialisé au format avec un système de fichiers.
+
 
 .Étapes
 . Sur l'hôte, copiez un ou plusieurs fichiers vers le point de montage du disque.

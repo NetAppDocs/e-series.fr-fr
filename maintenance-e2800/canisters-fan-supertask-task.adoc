@@ -28,11 +28,12 @@ CAUTION: *Dommages possibles à l'équipement* -- si vous effectuez cette procé
 * Passer en revue les exigences relatives au boîtier du ventilateur dans link:canisters-overview-supertask-concept.html["Exigences relatives au remplacement de l'absorbeur"].
 * Passez en revue les détails dans le gourou de la récupération pour confirmer qu'il y a un problème avec la cartouche de ventilateur et sélectionnez *revérifier* dans le gourou de la récupération pour s'assurer qu'aucun autre élément ne doit être traité en premier.
 * Vérifier que le voyant d'avertissement orange sur le boîtier du ventilateur est allumé, ce qui indique que le ventilateur est défectueux. Contactez le support technique pour obtenir de l'aide si les voyants d'avertissement orange des deux ventilateurs du tiroir sont allumés.
+* Assurez-vous de disposer des éléments suivants :
++
+** Une cartouche de ventilateur de remplacement prise en charge pour votre modèle de tiroir contrôleur ou de tiroir disque.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
 
 
-.Ce dont vous avez besoin
-* Une cartouche de ventilateur de remplacement prise en charge pour votre modèle de tiroir contrôleur ou de tiroir disque.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
 
 
 

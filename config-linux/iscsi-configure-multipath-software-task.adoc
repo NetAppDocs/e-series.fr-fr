@@ -13,7 +13,7 @@ summary: 'Configurer le logiciel multivoie, qui fournit un chemin redondant à l
 [role="lead"]
 Pour fournir un chemin redondant à la baie de stockage, vous pouvez configurer le logiciel multivoie.
 
-.Ce dont vous avez besoin
+.Avant de commencer
 Vous devez installer les modules requis sur votre système.
 
 * Pour les hôtes Red Hat (RHEL), vérifiez que les packages sont installés en cours d'exécution `rpm -q device-mapper-multipath`.
@@ -59,8 +59,7 @@ systemctl enable multipathd
 dracut --force --add multipath
 ----
 . Utilisez le https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Créer l'hôte manuellement"] procédure de l'aide en ligne pour vérifier si les hôtes sont définis. Vérifiez que chaque paramètre de type d'hôte est basé sur les informations du noyau recueillies dans <<step4,étape 4>>.
-
-
++
 
 NOTE: L'équilibrage automatique de la charge est désactivé pour tous les volumes mappés vers les hôtes exécutant le noyau 3.9 ou version antérieure.
 

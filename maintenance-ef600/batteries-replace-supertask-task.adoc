@@ -20,14 +20,15 @@ Chaque boîtier de contrôleur comprend une batterie qui préserve les données 
 .Avant de commencer
 * Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
 * Vérifiez le link:batteries-overview-requirements-concept.html["Exigences relatives au remplacement de la batterie EF300 ou EF600"].
+* Assurez-vous de disposer des éléments suivants :
++
+** La batterie de rechange.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
-.Ce dont vous avez besoin
-* La batterie de rechange.
-* Un bracelet antistatique ou d'autres précautions antistatiques.
-* Une zone de travail plate et sans électricité statique.
-* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
-* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
 
 
 
