@@ -47,7 +47,7 @@ Lorsqu'ils sont expédiés, chaque tiroir inclut du matériel de montage en rack
 Les instructions d'installation et de configuration (étape 1) comprennent des instructions pour connecter les câbles. Toutefois, si vous avez besoin de listes de câbles et d'émetteurs-récepteurs pris en charge, de bonnes pratiques pour le câblage et d'informations détaillées sur les ports hôtes de votre contrôleur, accédez aux instructions suivantes :
 
 [role="quick-margin-list"]
-* link:../install-hw-cabling/index.html["Brancher les câbles du matériel E-Series"]
+* link:../install-hw-cabling/index.html["Brancher les câbles du matériel E-Series"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"] Configurer les hôtes
@@ -55,9 +55,9 @@ Les instructions d'installation et de configuration (étape 1) comprennent des i
 Pour rendre le stockage disponible à un hôte, sélectionnez un guide pour le type de système d'exploitation de l'hôte :
 
 [role="quick-margin-list"]
-* link:../config-linux/index.html["Configuration Linux Express"]
-* link:../config-vmware/index.html["Configuration VMware Express"]
-* link:../config-windows/index.html["Configuration Windows Express"]
+* link:../config-linux/index.html["Configuration Linux Express"^]
+* link:../config-vmware/index.html["Configuration VMware Express"^]
+* link:../config-windows/index.html["Configuration Windows Express"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Six"] Configurer le stockage
@@ -68,6 +68,7 @@ Pour configurer le stockage, vous pouvez accéder à l'interface Web, System Man
 Sélectionnez l'interface que vous souhaitez utiliser :
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide de SANtricity System Manager pour 11,7 fois"]
-* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Aide de SANtricity System Manager pour 11,6 x"]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.7x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Aide en ligne de SANtricity System Manager pour 11,6x"^]
 

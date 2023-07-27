@@ -44,7 +44,6 @@
   <block id="141fde4ba7cde941e1590d0f5d6d1580" category="list-text"><block ref="141fde4ba7cde941e1590d0f5d6d1580" category="inline-link-rx"></block></block>
   <block id="85e9bf543d76b21d1d000a334e3359db" category="paragraph">Les instructions d'installation et de configuration (étape 1) comprennent des instructions pour connecter les câbles. Toutefois, si vous avez besoin de listes de câbles et d'émetteurs-récepteurs pris en charge, de bonnes pratiques pour le câblage et d'informations détaillées sur les ports hôtes de votre contrôleur, accédez aux instructions suivantes :</block>
   <block id="e716b652b3e3b8c2ecc764925c3d152b" category="inline-link-macro">Brancher les câbles du matériel E-Series</block>
-  <block id="61ebb23dfb23d5322222d22abfb363a7" category="list-text"><block ref="61ebb23dfb23d5322222d22abfb363a7" category="inline-link-macro-rx"></block></block>
   <block id="23f5c5a2cb4745a537bec1d583b5d6cc" category="paragraph">Pour rendre le stockage disponible à un hôte, sélectionnez un guide pour le type de système d'exploitation de l'hôte :</block>
   <block id="6529ede3a3683ce3b1133cf98fb4cec7" category="inline-link-macro">Configuration Linux Express</block>
   <block id="584ba4e1f9de8bb64deb26d3ff20be27" category="list-text"><block ref="584ba4e1f9de8bb64deb26d3ff20be27" category="inline-link-macro-rx"></block></block>
@@ -54,10 +53,6 @@
   <block id="2cd2251585c7977d833c133e2d86f6ab" category="list-text"><block ref="2cd2251585c7977d833c133e2d86f6ab" category="inline-link-macro-rx"></block></block>
   <block id="9bc4dbdc4b0ba32e879477f6d380d1f2" category="paragraph">Pour configurer le stockage, vous pouvez accéder à l'interface Web, System Manager, en pointant un navigateur vers l'adresse IP du contrôleur. Un assistant d'installation vous aide à commencer la configuration du système. Vous pouvez également utiliser l'interface de ligne de commandes.</block>
   <block id="dc319fa18c0e449181d9af17b46cb41d" category="paragraph">Sélectionnez l'interface que vous souhaitez utiliser :</block>
-  <block id="82c87a954533f4f73c4568a90d45d795" category="inline-link">Aide de SANtricity System Manager pour 11,7 fois</block>
-  <block id="b6adf77a8fd2cb1ee566051ed64b7bbb" category="list-text"><block ref="b6adf77a8fd2cb1ee566051ed64b7bbb" category="inline-link-rx"></block></block>
-  <block id="73ea8f8143966cdb241af48e230354bb" category="inline-link">Aide de SANtricity System Manager pour 11,6 x</block>
-  <block id="00f0cc59eb519b0e3ccef23f32fc3242" category="list-text"><block ref="00f0cc59eb519b0e3ccef23f32fc3242" category="inline-link-rx"></block></block>
   <block id="2703edfa4919c58a8b79beb4a3174be5" category="summary">Ce site contient des informations sur les versions, modèles et composants spécifiques des baies E-Series.</block>
   <block id="2f68c2c4e738fd96a0fe692eefed7ab9" category="doc">Ce que ce site comprend</block>
   <block id="ad32e4a428834c3f0dd6d07dbd6fe60a" category="cell">Fonctionnalités incluses</block>
@@ -8836,4 +8831,19 @@
   <block id="9fed5991090e027f2348c873d605f4d6" category="admonition">Le EF300 prend en charge les configurations de tiroirs d'extension sans lecteur dans le bac de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.</block>
   <block id="dae6baa86f1f6e4135f2552862c8b191" category="list-text">Disques SSD SAS avec tiroirs d'extension : toute combinaison de tiroirs DE212C, DE224C et DE460C ne doit pas dépasser 96 emplacements SSD SAS et 7 tiroirs d'extension. Sauf si des tiroirs DE212C sont utilisés, 8 tiroirs DE212C sont autorisés. Par exemple, 1 tiroir DE460C plus 1 tiroir DE224C plus 1 tiroir DE212C, ou 4 tiroirs DE224C ou 8 tiroirs DE212C</block>
   <block id="e1602ccaec81c1829eb2a83bd391bfb8" category="admonition">La baie EF600 prend en charge les configurations de tiroirs d'extension sans disque dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.</block>
+  <block id="70a5ac954926edc08c5f6fc4c248a4a6" category="section-title">SANtricity version 11.7</block>
+  <block id="f7b52729af7c7aa177e09390f0afd194" category="list-text"><block ref="f7b52729af7c7aa177e09390f0afd194" category="inline-link-rx"></block></block>
+  <block id="797222f106ff986b71e9f972dd342bc3" category="list-text"><block ref="797222f106ff986b71e9f972dd342bc3" category="inline-link-rx"></block></block>
+  <block id="3effdbd16c4bb389ee66095c1d8d2ee9" category="inline-link">11.80 Notes de mise à jour</block>
+  <block id="b1aa5c2649b826498df008931f57355f" category="list-text"><block ref="b1aa5c2649b826498df008931f57355f" category="inline-link-rx"></block></block>
+  <block id="c190aac6a3d3fb7d9f71ca0ce7ca264f" category="list-text"><block ref="c190aac6a3d3fb7d9f71ca0ce7ca264f" category="inline-link-macro-rx"></block></block>
+  <block id="f923e6588ebbb58f38eadd7304100a8f" category="list-text"><block ref="f923e6588ebbb58f38eadd7304100a8f" category="inline-link-macro-rx"></block></block>
+  <block id="2000cb1e7de82e823717ad308e491d64" category="list-text"><block ref="2000cb1e7de82e823717ad308e491d64" category="inline-link-macro-rx"></block></block>
+  <block id="872316f2e40e5f7164acd94c4ac49c16" category="list-text"><block ref="872316f2e40e5f7164acd94c4ac49c16" category="inline-link-macro-rx"></block></block>
+  <block id="7cac9f30e199e7ecb1c7454e8193ea25" category="inline-link">Aide en ligne de SANtricity System Manager pour 11.8x</block>
+  <block id="f96ffc1296cfb22e1010ea2a5c153c7d" category="list-text"><block ref="f96ffc1296cfb22e1010ea2a5c153c7d" category="inline-link-rx"></block></block>
+  <block id="e310bf04394efde500bf9f4c81acb37c" category="inline-link">Aide en ligne de SANtricity System Manager pour 11.7x</block>
+  <block id="57ceabd1bd2acd18e97acd2a27a09688" category="list-text"><block ref="57ceabd1bd2acd18e97acd2a27a09688" category="inline-link-rx"></block></block>
+  <block id="cf7b3313bd605518202463f0e3fe1b45" category="inline-link">Aide en ligne de SANtricity System Manager pour 11,6x</block>
+  <block id="8200e232e26f3c94f328c9f6cf840844" category="list-text"><block ref="8200e232e26f3c94f328c9f6cf840844" category="inline-link-rx"></block></block>
 </blocks>
