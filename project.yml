@@ -1043,9 +1043,9 @@ homepage:
       url: https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf
   - title: Logiciel SANtricity
     links:
-    - title: SANtricity System Manager 11.7
+    - title: Gestionnaire système SANtricity 11.8
       url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: SANtricity Unified Manager 5
+    - title: SANtricity Unified Manager 6
       url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
     - title: Référence de l'interface de ligne de commande (CLI)
       url: https://docs.netapp.com/us-en/e-series-cli/index.html
