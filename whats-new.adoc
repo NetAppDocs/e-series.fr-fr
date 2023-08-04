@@ -63,12 +63,31 @@ Gestion du serveur de clés externe - taille de la clé de certificat
  a| 
 La nouvelle taille de clé de certificat par défaut est de 3072 bits (à partir de 2048). Les tailles de clé jusqu'à 4096 bits sont prises en charge. Un bit NVSRAM doit être modifié pour prendre en charge les tailles de clé autres que celles par défaut.
 
+Les valeurs de sélection de taille de clé sont les suivantes :
+
+* VALEUR PAR DÉFAUT = 0
+* LONGUEUR 2048 = 1
+* LONGUEUR 3072 = 2
+* LONGUEUR 4096 = 3
+
+
+Pour modifier la taille de la clé à 4096 via SMcli :
+
+`set controller[b] globalnvsrambyte[0xc0]=3;`
+`set controller[a] globalnvsrambyte[0xc0]=3;`
+
+Interroger la taille de la clé :
+
+`show allcontrollers globalnvsrambyte[0xc0];`
+
 
 
  a| 
-Prise en charge de pools de disques dynamiques de plus grande taille à l'aide de disques avec des tailles de bloc de 512 octets
+Amélioration des pools de disques
  a| 
-Les clients qui utilisent le type de version de pool de la version 1 peuvent désormais disposer d'un pool de disques de 48 To maximum. L'ancienne version prend en charge un pool de disques de 24 To maximum. Si les pools de disques existants doivent être convertis à la taille la plus grande, tous les volumes doivent être supprimés en premier. Une opération de mise à niveau vers une version antérieure est limitée lorsqu'un pool de disques de la version 1 existe.
+Les pools de disques créés avec des contrôleurs exécutant la version 11.80 ou supérieure seront des pools _version 1_ et non des pools _version 0_. Une opération de mise à niveau vers une version antérieure est limitée lorsqu'un pool de disques _version 1_ existe.
+
+La version d'un pool de disques peut être identifiée dans le profil de la matrice de stockage.
 
 
 
