@@ -8860,4 +8860,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Amélioration des pools de disques</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">Les pools de disques créés avec des contrôleurs exécutant la version 11.80 ou supérieure seront des pools _version 1_ et non des pools _version 0_. Une opération de mise à niveau vers une version antérieure est limitée lorsqu'un pool de disques _version 1_ existe.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La version d'un pool de disques peut être identifiée dans le profil de la matrice de stockage.</block>
+  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Il s'agit d'un PDF imprimable contenant des instructions étape par étape et des liens en direct vers du contenu supplémentaire.</block>
+  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Voici les instructions de configuration décrites sur ce site.</block>
 </blocks>
