@@ -94,7 +94,9 @@ La version d'un pool de disques peut être identifiée dans le profil de la matr
  a| 
 System Manager et Unified Manager ne se lancent que si la configuration minimale requise pour le navigateur est respectée
  a| 
-Une version minimale de l'explorateur est requise avant le lancement de System Manager ou d'Unified Manager. Les versions minimales prises en charge sont les suivantes :
+Une version minimale de l'explorateur est requise avant le lancement de System Manager ou d'Unified Manager.
+
+Les versions minimales prises en charge sont les suivantes :
 
 * Firefox version minimale 80
 * Chrome version minimale 89
@@ -136,5 +138,101 @@ Les configurations de contrôleurs EF300 et EF600 sans disques NVMe dans le bac 
 Ports USB désactivés pour toutes les plates-formes
  a| 
 Les ports USB sont maintenant désactivés sur toutes les plates-formes.
+
+
+
+ a| 
+Cache de lecture SSD amélioré
+ a| 
+Cache de lecture SSD de 5 à 8 To maximum.
+
+
+
+ a| 
+Attribuez un cache de lecture 100 % Flash à un seul volume dans les configurations duplex
+ a| 
+Tous les cache de lecture SSD peuvent désormais être affectés au même volume sur les systèmes duplex lorsqu'un seul volume utilise l'intégralité du cache SSD.
+
+
+
+ a| 
+Numéro de série du lecteur ajouté au tableau récapitulatif du lecteur du profil de matrice de stockage
+ a| 
+Le numéro de série du lecteur a été ajouté au tableau récapitulatif du lecteur dans le profil Storage Array.
+
+
+
+ a| 
+Ajout de dom0-misc-logs à l'ASUP quotidien
+ a| 
+Les journaux dom0-misc pour les contrôleurs A et B ont été ajoutés aux ASUPs quotidiens.
+
+
+
+ a| 
+Le port 443 est maintenant utilisé par défaut pour les applications qui communiquent avec les services Web intégrés
+ a| 
+Le port 443 est maintenant utilisé par défaut lors de la communication avec le serveur Web intégré. Le  `-useLegacyTransferPort` La commande CLI a été ajoutée pour ceux qui souhaitent utiliser le port de transfert 8443 existant. Pour plus d'informations sur la nouvelle commande -useLegacyTransferPort CLI, reportez-vous au https://docs.netapp.com/us-en/e-series-cli/whats-new.html["Nouveautés de l'interface de ligne de commande SANtricity"].
+
+
+
+ a| 
+Capacité de progression de la parité du volume de numérisation
+ a| 
+Les commandes CLI suivantes ont été implémentées pour prendre en charge les opérations d'analyse de parité de volume basées sur des travaux :
+
+* Commencez par vérifier la parité du volume
+* Enregistrer les erreurs de la tâche de parité du volume de vérification
+* Arrêter la vérification de la parité du volume
+* Affiche le ou les travaux de vérification de parité de volume
+
+
+Pour plus d'informations sur les nouvelles commandes CLI de l'analyse de parité de volume basée sur les tâches, reportez-vous au https://docs.netapp.com/us-en/e-series-cli/whats-new.html["Nouveautés de l'interface de ligne de commande SANtricity"].
+
+
+
+ a| 
+Prise en charge de MFA pour Unified Manager
+ a| 
+La prise en charge de l'authentification multifacteur (MFA) est désormais prise en charge dans Unified Manager.
+
+
+
+ a| 
+Icône de basculement pour la vue matérielle avant-arrière
+ a| 
+Dans la vue matériel de System Manager/Unified Manager, les deux onglets suivants sont désormais disponibles pour contrôler les vues avant et arrière :
+
+* Onglet lecteurs
+* Onglet contrôleurs et composants
+
+
+
+
+ a| 
+Plug-in vCenter Storage
+ a| 
+Le plug-in vCenter Storage a été mis à jour pour assurer la compatibilité avec la version E-Series 11.80.
+
+
+
+ a| 
+Proxy de services Web 6.0
+ a| 
+Le proxy de services Web a été mis à jour vers la version 6.0 pour assurer la compatibilité avec la version 11.80 du système E-Series.
+
+
+
+ a| 
+Suppression de l'indicateur de création de dossier ASUP pour les événements de température nominale et maximale dépassés de la gamme E-Series
+ a| 
+L'indicateur de création de cas est maintenant désactivé pour les événements de dépassement de température nominale et maximale ne nécessitant aucune action.
+
+
+
+ a| 
+Indicateur de création de cas prioritaire activé pour l'événement Mel 0x1209
+ a| 
+Un indicateur de création de cas est maintenant créé pour le `MEL_EV_DEGRADE_CHANNEL 0x1209` Événement MEL.
 
 |===
