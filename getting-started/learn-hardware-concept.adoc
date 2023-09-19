@@ -26,7 +26,7 @@ Les baies E-Series sont disponibles dans les modèles suivants :
 
 
 
-NOTE: Tous les ports USB sont désactivés sur les systèmes E2800, EF280, E5700, EF570, EF600, Et EF300.
+NOTE: Pour les systèmes d'exploitation SANtricity 11.80GA et versions supérieures, tous les ports USB sont désactivés sur les systèmes E2800, EF280, E5700, EF570, EF600, et EF300.
 
 
 
@@ -137,7 +137,7 @@ Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC
 
 
 
-NOTE: Le EF300 prend en charge les configurations de tiroirs d'extension sans lecteur dans le bac de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
+NOTE: Pour SANtricity OS 11.80GA et supérieur, l'EF300 prend en charge les configurations de tiroirs d'extension sans disques dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
 
 
 
@@ -274,7 +274,7 @@ Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC
 
 
 
-NOTE: La baie EF600 prend en charge les configurations de tiroirs d'extension sans disque dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
+NOTE: Pour SANtricity OS 11.80GA et supérieur, la baie EF600 prend en charge les configurations de tiroirs d'extension sans disques dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
 
 
 
