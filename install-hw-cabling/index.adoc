@@ -70,6 +70,4 @@ E2760, E5660
 DE460C
 
 |===
-Pour plus d'informations sur les autres options de câblage, reportez-vous au https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Guide du câblage matériel E-Series"^] pour les systèmes plus anciens.
-
 Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous à la section https://www.netapp.com/us/media/tr-4656.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].
