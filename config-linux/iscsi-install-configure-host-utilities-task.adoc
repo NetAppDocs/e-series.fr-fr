@@ -1,7 +1,7 @@
 ---
 permalink: config-linux/iscsi-install-configure-host-utilities-task.html 
 sidebar: sidebar 
-keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: 'Installez les utilitaires hôtes unifiés Linux lors de l"utilisation d"iSCSI.' 
 ---
 = Installer et configurer Linux Unified Host Utilities
@@ -21,6 +21,6 @@ Les versions sont répertoriées dans une colonne de chaque configuration prise 
 . Téléchargez les utilitaires d'hôtes unifiés à partir de https://mysupport.netapp.com/site/["Support NetApp"^].
 +
 
-NOTE: Vous pouvez également utiliser l'utilitaire SMDevices de SANtricity pour exécuter les mêmes fonctions que l'utilitaire hôte unifié. L'utilitaire SMDevices est inclus dans le package SMutils. Le package SMutils est un ensemble d'utilitaires qui permettent de vérifier ce que l'hôte voit de la matrice de stockage. Il est inclus dans l'installation du logiciel SANtricity.
+NOTE: Vous pouvez également utiliser la commande SMcli `-identifyDevices` Pour exécuter les mêmes fonctions que l'outil Unified Host Utility. Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 
 

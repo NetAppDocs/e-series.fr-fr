@@ -51,7 +51,6 @@ Consultez les instructions suivantes pour les utilitaires HBA :
 ** QConverge Console de QLogic pour les HBA QLogic
 
 
-* Les ports d'E/S hôte peuvent s'enregistrer automatiquement si l'agent de contexte hôte est installé.
 
 
 .Étapes

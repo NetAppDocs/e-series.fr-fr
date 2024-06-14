@@ -26,6 +26,19 @@ Vous pouvez déterminer si le boîtier de contrôleur est défectueux de deux fa
 
 * Le gourou de la restauration de SANtricity System Manager vous indique de remplacer le boîtier du contrôleur.
 * La LED d'avertissement orange sur le boîtier du contrôleur est allumée, ce qui indique que le contrôleur est défectueux.
++
+[]
+====
+
+NOTE: Le voyant d'avertissement orange du contrôleur s'éteint dès que les conditions de remplacement suivantes sont réunies :
+
+** Echec du chemin du lecteur Alt
+** Tiroir ouvert/manquant
+** Le ventilateur est défectueux/manquant
+** Alimentation manquante
+
+
+====
 
 
 image::../media/e5700_attention_led_callout.png[légende d'avertissement de la baie e5700]

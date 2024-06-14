@@ -182,44 +182,9 @@ Sécurité
 
 == Étape 2 : création d'un accès aux hôtes et attribution de volumes
 
-Un hôte peut être créé automatiquement ou manuellement :
-
-* *Automatique* -- la création automatique d'hôte pour les hôtes basés sur SCSI (et non sur NVMe-of) est initiée par l'agent de contexte hôte (HCA). Le HCA est un utilitaire que vous pouvez installer sur chaque hôte connecté à la matrice de stockage. Chaque hôte sur lequel le HCA est installé transmet ses informations de configuration aux contrôleurs de la matrice de stockage via le chemin d'E/S. En fonction des informations sur l'hôte, les contrôleurs créent automatiquement l'hôte et les ports hôtes associés et définissent le type d'hôte. Si nécessaire, vous pouvez apporter des modifications supplémentaires à la configuration de l'hôte. Une fois que l'HCA a effectué sa détection automatique, l'hôte est automatiquement configuré avec les attributs suivants :
-+
-** Nom d'hôte dérivé du nom système de l'hôte.
-** Les ports d'identifiant hôte associés à l'hôte.
-** Type de système d'exploitation hôte de l'hôte.
-
-
-
-
-
-NOTE: Le logiciel Host Context Agent pour Linux et Windows est disponible à partir de https://mysupport.netapp.com/site/downloads["Support NetApp - Téléchargements"^].
-
-
-NOTE: Les hôtes sont créés en tant qu'hôtes autonomes ; le HCA ne crée pas ou n'ajoute pas automatiquement aux clusters hôtes.
+Un hôte peut être créé manuellement :
 
 * *Manuel* – lors de la création manuelle d'un hôte, vous associez des identificateurs de port hôte en les sélectionnant dans une liste ou en les saisissant manuellement. Une fois que vous avez créé un hôte, vous pouvez lui attribuer des volumes ou l'ajouter à un cluster hôte si vous prévoyez de partager l'accès aux volumes.
-
-
-
-
-=== Utilisation de l'HCA pour détecter automatiquement l'hôte
-
-Vous pouvez autoriser l'agent HCA (Host Context Agent) à détecter automatiquement les hôtes, puis vérifier que les informations sont correctes.
-
-.Étapes
-. Sur la page gérer, sélectionnez la matrice de stockage avec la connexion hôte.
-. Sélectionnez menu:Provisioning [Configure Hosts].
-+
-La page configurer les hôtes s'ouvre.
-
-. Sélectionnez menu:Storage[hosts].
-+
-Le tableau répertorie les hôtes créés automatiquement.
-
-. Vérifiez que les informations fournies par l'HCA sont correctes (nom, type d'hôte, identifiants de port hôte).
-. Si vous devez modifier l'une des informations, sélectionnez l'hôte, puis cliquez sur *Afficher/Modifier les paramètres*.
 
 
 

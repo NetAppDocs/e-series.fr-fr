@@ -506,6 +506,23 @@ Le contrôleur va redémarrer automatiquement.
 .. Si l'état n'est pas optimal, mettez le contrôleur en surbrillance et sélectionnez *placer en ligne*.
 
 
+. Lorsque le contrôleur est de nouveau en ligne, vérifiez si une incompatibilité NVSRAM est signalée dans Recovery Guru.
++
+.. Si une incompatibilité NVSRAM est signalée, mettez à niveau NVSRAM à l'aide de la commande SMcli suivante :
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Le `-k` le paramètre est requis si la baie n'est pas sécurisée par https.
+
+
+
++
+
+NOTE: Si la commande SMcli ne peut pas être terminée, contactez https://www.netapp.com/company/contact-us/support/["Support technique NetApp"^] vous pouvez également vous connecter au https://mysupport.netapp.com["Site de support NetApp"^] pour créer un cas.
+
 . Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
 +
 .. Sélectionnez menu :support[Centre de support > *Diagnostics].

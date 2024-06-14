@@ -1,7 +1,7 @@
 ---
 permalink: config-linux/nvme-ib-display-devices-visible-host-task.html 
 sidebar: sidebar 
-keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: 'Utilisez l"outil SMDevices, qui fait partie du package nvme-cli, pour afficher les volumes actuellement visibles sur l"hôte. Il s"agit d"une alternative à la commande nvme list.' 
 ---
 = Afficher les volumes visibles pour l'hôte

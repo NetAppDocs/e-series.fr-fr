@@ -133,7 +133,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 . Modifiez la partition hôte pour ajouter les ID de port hôte iSCSI et supprimer les ID de port hôte FC.
 . Après le redémarrage des hôtes iSCSI, utilisez les procédures applicables sur les hôtes pour enregistrer les volumes et les rendre disponibles sur votre système d'exploitation.
 +
-** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous pouvez utiliser la commande SMcli `-identifyDevices` pour afficher les noms de périphériques applicables pour les volumes. Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 ** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
 
 
@@ -170,7 +170,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 . Modifiez la partition hôte pour ajouter les ID de port hôte FC et supprimer les ID de port hôte iSCSI.
 . Une fois les nouveaux hôtes FC redémarrés, appliquez les procédures applicables sur les hôtes pour enregistrer les volumes et les mettre à disposition de votre système d'exploitation.
 +
-** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous pouvez utiliser la commande SMcli `-identifyDevices` pour afficher les noms de périphériques applicables pour les volumes. Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 ** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
 
 
@@ -207,7 +207,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 . Modifiez la partition hôte pour ajouter les ID de port hôte FC et supprimer les ID de port hôte iSCSI.
 . Une fois les nouveaux hôtes FC redémarrés, appliquez les procédures applicables sur les hôtes pour enregistrer les volumes et les mettre à disposition de votre système d'exploitation.
 +
-** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous pouvez utiliser la commande SMcli `-identifyDevices` pour afficher les noms de périphériques applicables pour les volumes. Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 ** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
 
 
@@ -243,7 +243,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 . Modifiez la partition hôte pour ajouter les ID de port hôte iSCSI et supprimer les ID de port hôte FC.
 . Après le redémarrage des nouveaux hôtes iSCSI, utilisez les procédures applicables sur les hôtes pour enregistrer les volumes et les rendre disponibles sur votre système d'exploitation.
 +
-** Selon votre système d'exploitation, deux utilitaires sont inclus avec le logiciel de gestion du stockage (hot_add et SMDevices). Ces utilitaires permettent d'enregistrer les volumes avec les hôtes et affichent également les noms de périphériques applicables aux volumes.
+** Vous pouvez utiliser la commande SMcli `-identifyDevices` pour afficher les noms de périphériques applicables pour les volumes. Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 ** Vous devrez peut-être utiliser des outils et des options spécifiques fournis avec votre système d'exploitation pour rendre les volumes disponibles (par exemple, attribuer des lettres de lecteur, créer des points de montage, etc.). Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
 
 

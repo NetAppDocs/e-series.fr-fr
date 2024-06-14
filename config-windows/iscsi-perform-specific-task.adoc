@@ -247,7 +247,7 @@ Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de
 +
 [listing]
 ----
-ping -s <hostIP\> <targetIP\>
+ping -S <hostIP\> <targetIP\>
 ----
 ** Si les trames Jumbo sont activées, exécutez la commande ping avec une taille de charge utile de 8,972 octets. Les en-têtes combinés IP et ICMP sont de 28 octets, qui, lorsqu'ils sont ajoutés à la charge utile, sont égaux à 9,000 octets. Le commutateur -f règle le `don’t fragment (DF)` bits. Le commutateur -l vous permet de définir la taille. Ces options permettent de transmettre avec succès des trames jumbo de 9,000 octets entre l'initiateur iSCSI et la cible.
 +

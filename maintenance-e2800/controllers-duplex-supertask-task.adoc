@@ -432,7 +432,24 @@ CAUTION: *Perte possible d'accès aux données* -- si le contrôleur que vous ve
 
 
 
-. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
+. Lorsque le contrôleur est de nouveau en ligne, vérifiez si une incompatibilité NVSRAM est signalée dans Recovery Guru.
++
+.. Si une incompatibilité NVSRAM est signalée, mettez à niveau NVSRAM à l'aide de la commande SMcli suivante :
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Le `-k` le paramètre est requis si la baie n'est pas sécurisée par https.
+
+
+
++
+
+NOTE: Si la commande SMcli ne peut pas être terminée, contactez https://www.netapp.com/company/contact-us/support/["Support technique NetApp"^] vous pouvez également vous connecter au https://mysupport.netapp.com["Site de support NetApp"^] pour créer un cas.
+
+. Vérifiez que l'état du système est optimal et que les LED d'avertissement du tiroir contrôleur sont visibles.
 +
 Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
 
@@ -446,7 +463,7 @@ NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support techniq
 .. Sélectionner menu:plus[rerépartir les volumes].
 
 
-. Cliquez sur Menu:matériel [support > Centre de mise à niveau] pour vous assurer que la dernière version du logiciel SANtricity OS (micrologiciel du contrôleur) est installée.
+. Cliquez sur menu:matériel[support > Centre de mise à niveau] pour vous assurer que les versions du micrologiciel et de la NVSRAM sur le système correspondent aux niveaux souhaités.
 +
 Au besoin, installez la dernière version.
 

@@ -341,8 +341,8 @@ Dans la dernière étape, vous examinez un récapitulatif des volumes que vous e
 .Une fois que vous avez terminé
 * Dans vSphere client, créez des datastores pour les volumes.
 * Apportez les modifications nécessaires au système d'exploitation sur l'hôte de l'application afin que les applications puissent utiliser le volume.
-* Exécutez soit le système basé sur l'hôte `hot_add` utilitaire ou utilitaire propre à un système d'exploitation (disponible auprès d'un fournisseur tiers), puis exécutez le `SMdevices` utilitaire permettant de mettre en corrélation les noms des volumes avec les noms des matrices de stockage hôte.
+* Exécutez l'utilitaire spécifique au système d'exploitation (disponible auprès d'un fournisseur tiers), puis exécutez la commande SMcli `-identifyDevices` pour mettre en corrélation les noms de volumes avec les noms de matrices de stockage hôte.
 +
-Le `hot_add` utilitaire et le `SMdevices` l'utilitaire est inclus dans le `SMutils` création de package. Le `SMutils` package est un ensemble d'utilitaires permettant de vérifier ce que l'hôte voit de la baie de stockage. Il est inclus dans l'installation du logiciel SANtricity.
+Le logiciel SMcli est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^].
 
 

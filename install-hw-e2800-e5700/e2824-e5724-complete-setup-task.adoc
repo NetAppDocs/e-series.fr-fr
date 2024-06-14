@@ -146,6 +146,10 @@ Port de gestion P1 du contrôleur E5700
 
 |===
 . Ouvrez un navigateur et utilisez l'adresse IP par défaut (169.254.128.101) pour établir une connexion au contrôleur. Le contrôleur renvoie un certificat auto-signé. Le navigateur vous informe que la connexion n'est pas sécurisée.
++
+
+NOTE: Pour les plates-formes exécutant SANtricity 11.60 et versions supérieures, le masque de sous-réseau par défaut est 255.255.0.0.
+
 . Suivez les instructions du navigateur pour continuer et lancer SANtricity System Manager.
 +
 

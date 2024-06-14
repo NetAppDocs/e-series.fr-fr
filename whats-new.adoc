@@ -16,6 +16,56 @@ Le tableau suivant décrit les nouvelles fonctionnalités de SANtricity OS 11.8 
 
 
 
+== Nouvelles fonctionnalités de la version 11.80.1
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+`-identifyDevices` paramètre
+ a| 
+Une nouvelle `-identifyDevices` Le paramètre est maintenant disponible dans le SMcli. Ce nouveau paramètre vous permet de rechercher tous les périphériques de bloc natifs SCSI associés à vos matrices de stockage. Pour plus d'informations, voir le lien : Paramètres de ligne de commande https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices[Downloadable SMcli^].
+
+
+
+ a| 
+Statistiques du noyau Ethernet
+ a| 
+Une nouvelle option Ethernet Kernel Statistics est désormais disponible dans la page View iSCSI Statistics Packages de System Manager. Cette nouvelle option vous permet d'afficher les statistiques des pilotes de noyau de plate-forme du périphérique iSCSI. Pour plus d'informations, consultez le lien : progiciels de statistiques iSCSI https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html[View^].
+
+
+
+ a| 
+Filtrage amélioré pour les disques non attribués et activés sécurisés dans System Manager
+ a| 
+System Manager filtre désormais les lecteurs activés non attribués et sécurisés lors de la sélection de lecteurs manuels. Par conséquent, le nombre de sélections de disques de System Manager correspond désormais à la liste des candidats à la sélection automatique de disques disponible sur l'interface de ligne de commandes et l'API REST. Une icône unique et un texte de survol sont désormais également appliqués aux disques non attribués et sécurisés activés dans System Manager.
+
+
+
+ a| 
+Ajout de la possibilité de bloquer les adresses IP via un terminal d'API REST
+ a| 
+Les utilisateurs peuvent désormais bloquer des adresses IP spécifiques via le noeud final Settings (`/devmgr/v2/settings`). Une fois configuré via le noeud final Settings, seules les adresses IP spécifiées via une liste blanche peuvent communiquer avec le périphérique de stockage. Cette nouvelle fonctionnalité prend en charge les listes d'adresses IPv4 et IPv6.
+
+
+
+ a| 
+Plug-in vCenter Storage
+ a| 
+Le plug-in vCenter Storage a été mis à jour pour assurer la compatibilité avec la version E-Series 11.80.1.
+
+
+
+ a| 
+Proxy de services Web
+ a| 
+Le proxy de services Web a été mis à jour vers la version 6.1 pour assurer la compatibilité avec la version 11.80.1 du système E-Series.
+
+|===
+
+
 == Nouvelles fonctionnalités de la version 11.80
 
 [cols="35h,~"]

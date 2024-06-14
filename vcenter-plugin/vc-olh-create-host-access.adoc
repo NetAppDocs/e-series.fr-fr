@@ -20,8 +20,6 @@ Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez dé
 .Description de la tâche
 En créant un hôte, vous définissez les paramètres de l'hôte pour fournir une connexion à la matrice de stockage et un accès E/S aux volumes.
 
-Vous pouvez autoriser l'agent HCA (Host Context Agent) à détecter automatiquement les hôtes, puis vérifier que les informations sont correctes en sélectionnant *Afficher/Modifier les paramètres* dans la page configurer les hôtes. Cependant, l'HCA n'est pas disponible sur tous les systèmes d'exploitation pris en charge et vous devez créer l'hôte manuellement.
-
 Lorsque vous créez un hôte, gardez les consignes suivantes à l'esprit :
 
 * Vous devez définir les ports d'identificateur d'hôte associés à l'hôte.

@@ -23,7 +23,6 @@ Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS
 Consultez les instructions relatives aux utilitaires HBA :
 
 * La plupart des fournisseurs HBA proposent un utilitaire HBA. En fonction du système d'exploitation hôte et de la CPU, utilisez l'utilitaire LSI-sas2flash(6G) ou sas3flash(12G).
-* Les ports d'E/S hôte peuvent s'enregistrer automatiquement si l'agent de contexte hôte est installé.
 
 
 .Étapes

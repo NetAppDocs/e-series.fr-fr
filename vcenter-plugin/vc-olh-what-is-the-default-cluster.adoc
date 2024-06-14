@@ -19,7 +19,7 @@ Le cluster par défaut est une entité définie par le système qui permet à to
 Un identificateur de port hôte non associé est un port hôte qui n'est pas logiquement associé à un hôte donné mais qui est physiquement installé dans un hôte et connecté à la matrice de stockage.
 
 
-NOTE: Si vous souhaitez que les hôtes disposent d'un accès spécifique à certains volumes de la matrice de stockage, vous ne devez pas utiliser le cluster par défaut. À la place, vous devez associer les identificateurs de port hôte à leurs hôtes correspondants. Cette tâche peut être effectuée manuellement pendant l'opération Créer un hôte ou automatiquement à l'aide de l'agent de contexte hôte (HCA) installé sur chaque hôte. Ensuite, vous affectez des volumes à un hôte individuel ou à un cluster hôte.
+NOTE: Si vous souhaitez que les hôtes disposent d'un accès spécifique à certains volumes de la matrice de stockage, vous ne devez pas utiliser le cluster par défaut. À la place, vous devez associer les identificateurs de port hôte à leurs hôtes correspondants. Cette tâche peut être effectuée manuellement pendant l'opération Créer un hôte. Ensuite, vous affectez des volumes à un hôte individuel ou à un cluster hôte.
 
 Vous ne devez utiliser le cluster par défaut que dans des situations spéciales où votre environnement de stockage externe est recommandé pour permettre à tous les hôtes et tous les identifiants de port hôte connectés à la baie de stockage ont accès à tous les volumes (mode tout accès). sans spécifiquement faire connaître les hôtes à la matrice de stockage ou à l'interface utilisateur.
 

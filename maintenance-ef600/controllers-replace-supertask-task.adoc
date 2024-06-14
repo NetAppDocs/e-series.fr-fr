@@ -23,6 +23,20 @@ Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retire
 +
 ** Le gourou de la restauration de SANtricity System Manager vous indique de remplacer le boîtier du contrôleur.
 ** La LED d'avertissement orange sur le boîtier du contrôleur est allumée, ce qui indique que le contrôleur est défectueux.
++
+[]
+====
+
+NOTE: Le voyant d'avertissement orange du contrôleur s'éteint dès que les conditions de remplacement suivantes sont réunies :
+
+*** Défaillance de l'alimentation alternative
+*** Echec du chemin du lecteur Alt
+*** Tiroir ouvert/manquant
+*** Le ventilateur est défectueux/manquant
+*** Alimentation manquante
+
+
+====
 
 
 * Assurez-vous de disposer des éléments suivants :
@@ -129,7 +143,6 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 +
 Comme vous devez retirer la HIC du contrôleur défaillant, vous devez retirer tous les SFP des ports HIC. Lorsque vous reconnectez les câbles, vous pouvez déplacer ces SFP vers le nouveau boîtier de contrôleur.
 
-. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
 image::../media/remove_controller_5.png[déposer le contrôleur 5]
@@ -454,7 +467,24 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 ** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
 
 
-. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
+. Lorsque le contrôleur est de nouveau en ligne, vérifiez si une incompatibilité NVSRAM est signalée dans Recovery Guru.
++
+.. Si une incompatibilité NVSRAM est signalée, mettez à niveau NVSRAM à l'aide de la commande SMcli suivante :
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Le `-k` le paramètre est requis si la baie n'est pas sécurisée par https.
+
+
+
++
+
+NOTE: Si la commande SMcli ne peut pas être terminée, contactez https://www.netapp.com/company/contact-us/support/["Support technique NetApp"^] vous pouvez également vous connecter au https://mysupport.netapp.com["Site de support NetApp"^] pour créer un cas.
+
+. Vérifiez que l'état du système est optimal et que les LED d'avertissement du tiroir contrôleur sont visibles.
 +
 Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
 
@@ -462,7 +492,7 @@ Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé,
 
 NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
 
-. Cliquez sur Menu:matériel [support > Centre de mise à niveau] pour vous assurer que la dernière version de SANtricity OS est installée.
+. Cliquez sur menu:matériel[support > Centre de mise à niveau] pour vous assurer que les versions du micrologiciel et de la NVSRAM sur le système correspondent aux niveaux souhaités.
 +
 Au besoin, installez la dernière version.
 

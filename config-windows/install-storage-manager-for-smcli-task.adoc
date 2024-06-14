@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install Storage Manager Windows, install CLI Windows, install command line interface, install Host Context Agent, install HCA, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Installez Storage Manager pour CLI et HCA dans la méthode Windows Express. 
 ---
-= Installation de SANtricity Storage Manager pour SMcli et de l'agent HCA (Host Context Agent)
+= Installer SANtricity Storage Manager pour SMcli (logiciel SANtricity version 11.53 ou antérieure).
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -17,7 +17,10 @@ Si vous utilisez le logiciel SANtricity 11.53 ou une version antérieure, vous p
 SANtricity Storage Manager inclut l'interface de ligne de commande (CLI) pour des tâches de gestion supplémentaires, ainsi que l'agent de contexte hôte pour la communication des informations de configuration de l'hôte aux contrôleurs de la baie de stockage via le chemin d'E/S.
 
 
-NOTE: Si vous utilisez le logiciel SANtricity 11.60 ou une version ultérieure, vous n'avez pas besoin de suivre ces étapes. L'interface de ligne de commande sécurisée SANtricity (SMcli) est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement du SMcli via le Gestionnaire système SANtricity, reportez-vous à la rubrique _Télécharger l'interface de ligne de commande (CLI)_ de l'aide en ligne de SANtricity System Manager.
+NOTE: Si vous utilisez le logiciel SANtricity 11.60 ou une version ultérieure, vous n'avez pas besoin de suivre ces étapes. L'interface de ligne de commande sécurisée SANtricity (SMcli) est inclus dans le système d'exploitation SANtricity et téléchargeable via SANtricity System Manager. Pour plus d'informations sur le téléchargement de SMcli via le Gestionnaire système SANtricity, reportez-vous au link:https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Téléchargez la rubrique de l'interface de ligne de commande dans l'aide en ligne de SANtricity System Manager"^]
+
+
+NOTE: À partir de la version 11.80.1 du logiciel SANtricity, l'agent de contexte hôte n'est plus pris en charge.
 
 .Avant de commencer
 Assurez-vous de disposer des éléments suivants :

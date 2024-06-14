@@ -20,5 +20,3 @@ Lorsque vous disposez de ces informations, sélectionnez les identificateurs de 
 
 
 CAUTION: Assurez-vous de sélectionner les identificateurs de port hôte appropriés pour l'hôte que vous créez. Si vous associez des identificateurs de port hôte incorrects, vous risquez de provoquer un accès involontaire d'un autre hôte à ces données.
-
-Si vous créez automatiquement des hôtes à l'aide de l'agent HCA (Host Context Agent) installé sur chaque hôte, l'HCA doit automatiquement associer les identificateurs de port hôte à chaque hôte et les configurer de manière appropriée.
