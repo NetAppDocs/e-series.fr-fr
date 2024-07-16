@@ -38,13 +38,6 @@ Une nouvelle option Ethernet Kernel Statistics est désormais disponible dans la
 
 
  a| 
-Filtrage amélioré pour les disques non attribués et activés sécurisés dans System Manager
- a| 
-System Manager filtre désormais les lecteurs activés non attribués et sécurisés lors de la sélection de lecteurs manuels. Par conséquent, le nombre de sélections de disques de System Manager correspond désormais à la liste des candidats à la sélection automatique de disques disponible sur l'interface de ligne de commandes et l'API REST. Une icône unique et un texte de survol sont désormais également appliqués aux disques non attribués et sécurisés activés dans System Manager.
-
-
-
- a| 
 Ajout de la possibilité de bloquer les adresses IP via un terminal d'API REST
  a| 
 Les utilisateurs peuvent désormais bloquer des adresses IP spécifiques via le noeud final Settings (`/devmgr/v2/settings`). Une fois configuré via le noeud final Settings, seules les adresses IP spécifiées via une liste blanche peuvent communiquer avec le périphérique de stockage. Cette nouvelle fonctionnalité prend en charge les listes d'adresses IPv4 et IPv6.
