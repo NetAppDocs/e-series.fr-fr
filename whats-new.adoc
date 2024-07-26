@@ -16,6 +16,21 @@ Le tableau suivant décrit les nouvelles fonctionnalités de SANtricity OS 11.8 
 
 
 
+== Nouvelles fonctionnalités de la version 11.80.1R1
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Augmentation de la longueur des clés des nouveaux certificats de gestion auto-signés et signés par une autorité de certification.
+ a| 
+La taille de la clé de certificat de gestion pour le certificat auto-signé des applications SANtricity System Manager et Unified Manager a été modifiée de 2048 à 3072 bits. Cette modification s'applique aux certificats nouvellement générés auto-signés et signés par une autorité de certification à partir des applications SANtricity. La longueur de clé est fixe et n'est pas affectée par les définitions de taille de clé par défaut dans NVSRAM.
+
+|===
+
+
 == Nouvelles fonctionnalités de la version 11.80.1
 
 [cols="35h,~"]
