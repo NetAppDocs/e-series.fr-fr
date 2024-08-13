@@ -70,4 +70,4 @@ E2760, E5660
 DE460C
 
 |===
-Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous à la section https://www.netapp.com/us/media/tr-4656.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].
+Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous au https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].

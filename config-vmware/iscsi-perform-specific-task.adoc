@@ -60,7 +60,7 @@ Par défaut, l'initiateur logiciel VMware iSCSI crée une seule session par cibl
 
 NOTE: La liaison du port iSCSI VMware est une fonctionnalité qui force tous les ports VMKernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Il doit être utilisé avec les baies présentant une adresse réseau unique pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison du port iSCSI. Pour plus d'informations, reportez-vous au http://kb.vmware.com/["Base de connaissances VMware"] Pour l'article concernant les considérations relatives à l'utilisation de la liaison du port iSCSI logiciel dans ESX/ESXi. Si l'hôte ESXi est relié au stockage d'un autre fournisseur, NetApp vous recommande d'utiliser des ports vmkernel iSCSI distincts pour éviter tout conflit avec la liaison des ports.
 
-Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaison de ports sur les baies de stockage E-Series. Voir https://www.netapp.com/media/17017-tr4789.pdf["Tr-4789 : Guide de configuration VMware pour l'intégration iSCSI SANtricity E-Series avec ESXi 6.x et 7.x."] pour en savoir plus.
+Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaison de ports sur les baies de stockage E-Series. Voir https://www.netapp.com/media/17017-tr4789.pdf["Tr-4789 : Guide de configuration VMware pour l'intégration iSCSI SANtricity E-Series avec ESXi 6.x et 7.x."^] pour plus d'informations.
 
 Pour garantir une bonne configuration de chemins d'accès multiples, utilisez plusieurs segments de réseau pour le réseau iSCSI. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de matrice sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Si possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.
 
@@ -87,7 +87,7 @@ Assurez-vous de disposer des éléments suivants :
 Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres > configurer les ports iSCSI].
 
 
-NOTE: Pour plus d'informations sur la configuration de la mise en réseau côté baie sur votre configuration VMware, consultez le rapport technique suivant : https://www.netapp.com/us/media/tr-4789.pdf["Guide de configuration VMware pour l'intégration d'iSCSI SANtricity E-Series avec ESXi 6.x et 7.x"].
+NOTE: Pour plus d'informations sur la configuration de la mise en réseau côté baie sur votre configuration VMware, consultez le rapport technique suivant : https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guide de configuration VMware pour l'intégration d'iSCSI SANtricity E-Series avec ESXi 6.x et 7.x"^].
 
 .Étapes
 . Depuis votre navigateur, saisissez l'URL suivante : `+https://<DomainNameOrIPAddress>+`
