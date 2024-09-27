@@ -48,6 +48,9 @@ CAUTION: *Perte possible d'accès aux données* -- si un volume est déjà dans 
 
 
 
+NOTE: Pour plus d'informations sur le remplacement d'un tiroir d'extension E-Series DE460c, reportez-vous au https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de connaissances NetApp"^].
+
+
 
 == Étape 1 : préparation du remplacement du tiroir disque
 
