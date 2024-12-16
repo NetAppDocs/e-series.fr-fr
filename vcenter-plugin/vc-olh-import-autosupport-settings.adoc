@@ -11,7 +11,7 @@ summary: 'Importez une configuration AutoSupport d"une baie de stockage vers d"a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

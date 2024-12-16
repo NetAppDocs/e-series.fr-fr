@@ -21,7 +21,7 @@ En raison de la complexité de cette procédure, il est recommandé de procéder
 
 
 .Description de la tâche
-Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à une baie E2800, E2800B, EF280, E5700, E5700B, Tiroir contrôleur EF570, EF300 ou EF600
+Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à un tiroir contrôleur E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 ou E4000.
 
 Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
 
@@ -67,21 +67,25 @@ La page Journal des événements affiche les données d'événement.
 
 NOTE: Si des événements critiques non résolus se sont produits au cours des deux à trois semaines précédentes, arrêtez la procédure et contactez le support technique. Continuer la procédure uniquement lorsque le problème est résolu.
 
-. Sélectionnez *matériel*.
-. Sélectionnez l'icône *modules d'E/S (IOM)*.
+. Si des modules d'E/S sont connectés au matériel, procédez comme suit. Sinon, passez à l' <<step2_install_drive_shelf,Étape 2 : installez le tiroir disque et mettez-le sous tension.>>
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icône module d'e/s matériel]
+.. Sélectionnez *matériel*.
+.. Sélectionnez l'icône *modules d'E/S (IOM)*.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icône IOM (ESMS)]
 
 +
 La boîte de dialogue Paramètres des composants de la tablette s'affiche avec l'onglet *IOM (ESM)* sélectionné.
 
-. Assurez-vous que l'état indiqué pour chaque IOM/ESM est _optimal_.
-. Cliquez sur *Afficher plus de paramètres*.
-. Vérifiez que les conditions suivantes sont réunies :
+.. Assurez-vous que l'état indiqué pour chaque IOM/ESM est _optimal_.
+.. Cliquez sur *Afficher plus de paramètres*.
+.. Vérifiez que les conditions suivantes sont réunies :
 +
-** Le nombre de modules de gestion des E/S détectés correspond au nombre d'modules de gestion des E/S installés dans le système et à celui de chaque tiroir de disque.
-** Les deux EDM/modules d'E/S montrent que la communication est correcte.
-** Le débit de données est de 12 Gbit/s pour les tiroirs disques DE212C, DE224C et DE460C ou de 6 Gbit/s pour les autres tiroirs disques.
+*** Le nombre de modules de gestion des E/S détectés correspond au nombre d'modules de gestion des E/S installés dans le système et à celui de chaque tiroir de disque.
+*** Les deux EDM/modules d'E/S montrent que la communication est correcte.
+*** Le débit de données est de 12 Gbit/s pour les tiroirs disques DE212C, DE224C et DE460C ou de 6 Gbit/s pour les autres tiroirs disques.
+
+
 
 
 
@@ -109,18 +113,12 @@ NOTE: Consultez les instructions d'installation de votre modèle pour connaître
 
 == Étape 3 : branchez le système sur le câble
 
-Sélectionnez l'une des options suivantes :
-
-* <<Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700>>
-* <<Option 2 : connexion du tiroir disque pour EF300 ou EF600>>
-
-
 Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
 
-
-
-=== Option 1 : connexion du tiroir disque pour les systèmes E2800 ou E5700
-
+[role="tabbed-block"]
+====
+.Connectez le tiroir disque pour les systèmes E2800 ou E5700
+--
 Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.
 
 .Étapes
@@ -129,10 +127,10 @@ Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'
 La figure suivante montre un exemple de connexion entre un tiroir disque supplémentaire et le contrôleur A. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_0.png[chaud e5700 0]
+image::../media/hot_e5700_0.png[Connectez le tiroir disque au contrôleur]
 
 +
-image::../media/hot_e5700_1.png[chaud e5700 1]
+image::../media/hot_e5700_1.png[Connectez le tiroir disque au contrôleur]
 
 . Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
 +
@@ -142,7 +140,7 @@ NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir
 . Faites défiler vers le bas si nécessaire pour voir tous les tiroirs disques du nouveau système de stockage. Si le nouveau tiroir disque n'est pas affiché, résolvez le problème de connexion.
 . Sélectionnez l'icône *ESMS/IOMS* pour la nouvelle étagère de disques.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icône module d'e/s matériel]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icône ESMS/IOM]
 
 +
 La boîte de dialogue *Paramètres de composant de tiroir* s'affiche.
@@ -161,7 +159,7 @@ La boîte de dialogue *Paramètres de composant de tiroir* s'affiche.
 La figure suivante montre un exemple de connexion entre un tiroir disque supplémentaire et le contrôleur B. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_2.png[chaud e5700 2]
+image::../media/hot_e5700_2.png[Exemple de connexion de tiroir disque]
 
 . Si ce n'est pas déjà fait, sélectionnez l'onglet *ESMS/IOMS* dans la boîte de dialogue *Paramètres de composant de tiroir*, puis sélectionnez *Afficher plus d'options*. Vérifiez que les communications de la carte sont *OUI*.
 +
@@ -170,10 +168,9 @@ NOTE: L'état optimal indique que la perte d'erreur de redondance associée au n
 
 
 
-
-
-=== Option 2 : connexion du tiroir disque pour EF300 ou EF600
-
+--
+.Connectez le tiroir disque pour EF300 ou EF600
+--
 Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.
 
 .Avant de commencer
@@ -183,17 +180,17 @@ Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'
 .Étapes
 . Déconnectez les deux câbles du contrôleur côté A des ports IOM12 un et deux du dernier tiroir précédent de la pile, puis connectez-les aux nouveaux ports IOM12 du tiroir un et deux.
 +
-image::../media/de224c_sides.png[de224c côtés]
+image::../media/de224c_sides.png[Déconnectez les câbles du contrôleur A et connectez-les au nouveau tiroir]
 
 . Connectez les câbles aux ports IOM12 latéraux A trois et quatre du nouveau tiroir aux ports 1 et 2 du dernier tiroir IOM12 précédent.
 +
 La figure suivante montre un exemple de connexion côté entre un tiroir disque supplémentaire et le dernier tiroir précédent. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_0.png[ef chaud 0]
+image::../media/hot_ef_0.png[Exemple de câblage de tiroir disque]
 
 +
-image::../media/hot_ef_1.png[ef chaud 1]
+image::../media/hot_ef_1.png[Exemple de câblage de tiroir disque]
 
 . Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
 +
@@ -203,7 +200,7 @@ NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir
 . Faites défiler vers le bas si nécessaire pour voir tous les tiroirs disques du nouveau système de stockage. Si le nouveau tiroir disque n'est pas affiché, résolvez le problème de connexion.
 . Sélectionnez l'icône *ESMS/IOMS* pour la nouvelle étagère de disques.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icône module d'e/s matériel]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icône ESMS/IOM]
 
 +
 La boîte de dialogue *Paramètres de composant de tiroir* s'affiche.
@@ -222,7 +219,7 @@ La boîte de dialogue *Paramètres de composant de tiroir* s'affiche.
 La figure suivante montre un exemple de connexion côté B entre un tiroir disque supplémentaire et le dernier tiroir précédent. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_2.png[ef 2 chaud]
+image::../media/hot_ef_2.png[Exemple de câblage de tiroir disque]
 
 . Si ce n'est pas déjà fait, sélectionnez l'onglet *ESMS/IOMS* dans la boîte de dialogue *Paramètres de composant de tiroir*, puis sélectionnez *Afficher plus d'options*. Vérifiez que les communications de la carte sont *OUI*.
 +
@@ -231,6 +228,51 @@ NOTE: L'état optimal indique que la perte d'erreur de redondance associée au n
 
 
 
+--
+.Connectez le tiroir disque pour E4000
+--
+Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'E/S et connectez le tiroir disque au contrôleur B.
+
+.Étapes
+. Connectez le tiroir disque au contrôleur A.
++
+image::../media/hot_e4000_cabling_1.png[Câblage du tiroir disque]
+
+. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
++
+
+NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir contrôleur n'est disponible.
+
+. Faites défiler vers le bas si nécessaire pour voir tous les tiroirs disques du nouveau système de stockage. Si le nouveau tiroir disque n'est pas affiché, résolvez le problème de connexion.
+. Sélectionnez l'icône *ESMS/IOMS* pour la nouvelle étagère de disques.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icône matériel de module d'E/S.]
+
++
+La boîte de dialogue *Paramètres de composant de tiroir* s'affiche.
+
+. Sélectionnez l'onglet *ESMS/IOMS* dans la boîte de dialogue *Paramètres de composant de tiroir*.
+. Sélectionnez *Afficher plus d'options* et vérifiez les éléments suivants :
++
+** IOM/ESM A figure dans la liste.
+** Le débit de données actuel est de 12 Gbit/s pour un tiroir disque SAS-3.
+** Les communications de la carte sont correctes.
+
+
+. Débrancher tous les câbles d'extension du contrôleur B.
+. Connectez le tiroir disque au contrôleur B.
++
+image::../media/hot_e4000_cabling_2.png[Câblage du tiroir disque]
+
+. Si ce n'est pas déjà fait, sélectionnez l'onglet *ESMS/IOMS* dans la boîte de dialogue *Paramètres de composant de tiroir*, puis sélectionnez *Afficher plus d'options*. Vérifiez que les communications de la carte sont *OUI*.
++
+
+NOTE: L'état optimal indique que la perte d'erreur de redondance associée au nouveau tiroir disque a été résolue et que le système de stockage est stabilisé.
+
+
+
+--
+====
 
 
 == Étape 4 : ajout à chaud complet

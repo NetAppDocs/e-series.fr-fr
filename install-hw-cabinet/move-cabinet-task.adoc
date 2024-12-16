@@ -31,6 +31,6 @@ La plupart des armoires sont remplies avec des tiroirs disques. Cette situation 
 . Retirez les dispositifs les plus hauts de votre armoire pour vous assurer que l'armoire est bien transportée jusqu'à son emplacement final. Ceci est particulièrement important si une rampe a une pente ou un déclin supérieur à 10 degrés.
 . Déplacez l'armoire à son emplacement permanent en utilisant la méthode indiquée dans la figure suivante. Assurez-vous de pousser sur l'avant de l'armoire et non l'arrière.
 +
-image::../media/83004_01.gif[83004 01]
+image::../media/83004_01.gif[Avertissement de déplacement de l'armoire]
 
 

@@ -13,4 +13,4 @@ summary: 'Consultez le processus d"installation et de configuration d"un systèm
 [role="lead"]
 Avant d'installer et d'installer votre nouveau système de stockage, familiarisez-vous avec le processus d'installation :
 
-image::../media/ef600_isi_workflow_v_2_inst-hw-ef600.bmp[flux de production isi ef600 v 2 inst hw ef600]
+image::../media/ef600_isi_workflow_v_2_inst-hw-ef600.bmp[Workflow du processus d'installation des baies EF600 et EF300]

@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller 
 summary: 'Vous pouvez mettre à niveau votre baie de stockage en remplaçant vos contrôleurs. Un contrôleur se compose d"une carte, d"un micrologiciel et d"un logiciel. Il contrôle les entraînements et met en œuvre les fonctions du logiciel de gestion.' 
 ---
 = Mettre à niveau les contrôleurs E-Series

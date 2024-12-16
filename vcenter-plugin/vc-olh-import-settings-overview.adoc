@@ -10,7 +10,7 @@ summary: 'La fonction Importer les paramètres est une opération par lots qui v
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

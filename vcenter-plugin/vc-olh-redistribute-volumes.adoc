@@ -11,7 +11,7 @@ summary: Redistribuez les volumes pour déplacer de nouveau les volumes vers les
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

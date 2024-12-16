@@ -19,7 +19,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche s
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au sous-système. Dans la version SANtricity OS 11.50, nous prenons en charge une connexion unique entre chaque hôte et un contrôleur de sous-système, comme illustré ci-dessous. Dans cette configuration, un port HCA (adaptateur de canal hôte) de chaque hôte doit se trouver sur le même sous-réseau que le port de contrôleur E-Series auquel il est connecté, mais sur un sous-réseau différent de celui de l'autre port HCA.
 
-image::../media/nvmeof_direct_connect.gif[connexion directe nvmeof]
+image::../media/nvmeof_direct_connect.gif[Exemple de connexion directe NVME over RoCE]
 
 Un exemple de configuration qui satisfait aux exigences se compose de quatre sous-réseaux réseau comme suit :
 
@@ -35,7 +35,7 @@ Un exemple de configuration qui satisfait aux exigences se compose de quatre sou
 
 Dans une topologie en structure, un ou plusieurs commutateurs sont utilisés. Reportez-vous à la section https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste des commutateurs pris en charge.
 
-image::../media/nvmeof_switch_connect.gif[connexion du commutateur nvmeof]
+image::../media/nvmeof_switch_connect.gif[Exemple de connexion de switch NVMe over RoCE]
 
 
 

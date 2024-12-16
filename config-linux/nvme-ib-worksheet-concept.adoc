@@ -67,7 +67,7 @@ s/o
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au sous-système. Dans la version SANtricity OS 11.50, nous prenons en charge une connexion unique entre chaque hôte et un contrôleur de sous-système, comme illustré ci-dessous. Dans cette configuration, un port HCA (adaptateur de canal hôte) de chaque hôte doit se trouver sur le même sous-réseau que le port de contrôleur E-Series auquel il est connecté, mais sur un sous-réseau différent de celui de l'autre port HCA.
 
-image::../media/nvmeof_direct_connect.gif[connexion directe nvmeof]
+image::../media/nvmeof_direct_connect.gif[Exemple de connexion directe NVMe over Infiniband]
 
 
 

@@ -10,7 +10,7 @@ summary: 'Le cluster par défaut est une entité définie par le système qui pe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

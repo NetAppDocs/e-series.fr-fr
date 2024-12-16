@@ -10,7 +10,7 @@ summary: 'La capacité de conservation correspond à la capacité (nombre de dis
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

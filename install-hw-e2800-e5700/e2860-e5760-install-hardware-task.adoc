@@ -37,7 +37,7 @@ NOTE: Pour les armoires à trous carrés, vous devez d'abord installer les écro
 
 
  a| 
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Poser les rails"]
 
 |===
 . Installer le shelf.
@@ -51,14 +51,14 @@ CAUTION: Une tablette vide pèse environ 60 kg (132 lb). Un dispositif de levage
 
 
 +
-image:../media/4_person_lift_source.png[""]
+image:../media/4_person_lift_source.png["Quatre personnes sont nécessaires pour soulever la tablette dans l'armoire"]
 
 . Fixer le shelf.
 +
 .. Insérez des vis dans les premier et troisième trous du haut du shelf des deux côtés pour le fixer à l'avant de l'armoire.
 .. Placez deux supports arrière de chaque côté de la section supérieure arrière de la tablette. Insérez les vis dans le premier et le troisième trous de chaque support pour fixer l'arrière de l'armoire.
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Fixez les supports à l'arrière de la tablette"]
 
 
 
@@ -92,7 +92,7 @@ image:../media/trafford_secure.png[""]
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Installez le cache"]
 
 
 

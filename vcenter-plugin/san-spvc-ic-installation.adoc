@@ -11,7 +11,7 @@ summary: Installez ou mettez à niveau le plug-in de stockage SANtricity pour vC
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

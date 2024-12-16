@@ -27,6 +27,9 @@ Utilisez le workflow suivant :
 
 
 
+NOTE: Les volumes de stockage distant SANtricity ne sont actuellement pas pris en charge sur les systèmes E4000.
+
+
 
 == Trouvez plus d'informations
 

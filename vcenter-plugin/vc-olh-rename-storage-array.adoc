@@ -10,7 +10,7 @@ summary: Modifiez le nom de la matrice de stockage affichée sur la page gérer.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

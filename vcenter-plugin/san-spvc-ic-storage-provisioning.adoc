@@ -11,7 +11,7 @@ summary: Utilisez le plug-in vCenter pour créer des volumes, attribuer des volu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

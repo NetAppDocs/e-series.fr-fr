@@ -10,7 +10,7 @@ summary: Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

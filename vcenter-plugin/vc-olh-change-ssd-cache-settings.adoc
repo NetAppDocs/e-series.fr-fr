@@ -11,7 +11,7 @@ summary: 'Modifiez le nom de la mémoire SSD cache et affichez son état, ses ca
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -6,7 +6,12 @@ summary: Rapports techniques sur les E-Series
 ---
 = Parcourir les rapports techniques de sécurité
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur la sécurité relatifs au matériel E-Series et au logiciel SANtricity. Les liens vous mènent à un autre site de documentation.
 
 
 

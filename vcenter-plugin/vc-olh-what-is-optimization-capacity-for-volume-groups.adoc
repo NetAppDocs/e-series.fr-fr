@@ -10,7 +10,7 @@ summary: 'Les disques SSD auront une durée de vie plus longue et de meilleures 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

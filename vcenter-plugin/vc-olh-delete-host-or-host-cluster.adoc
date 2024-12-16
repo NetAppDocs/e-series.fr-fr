@@ -11,7 +11,7 @@ summary: Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

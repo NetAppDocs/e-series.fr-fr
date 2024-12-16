@@ -11,7 +11,7 @@ summary: 'Modifiez le nom d"un groupe de matrices de stockage lorsque le nom act
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

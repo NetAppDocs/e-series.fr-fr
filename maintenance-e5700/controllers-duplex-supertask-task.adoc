@@ -51,7 +51,7 @@ NOTE: Les contrôleurs de remplacement sont préinstallés avec 16 Go de mémoir
 
 . Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
 +
-image::../media/e5700_mac_address_and_fru_part_number.png[adresse mac e5700 et référence fru]
+image::../media/e5700_mac_address_and_fru_part_number.png[Adresse MAC et numéro de référence des FRU sur le contrôleur E5700 »]
 
 +
 *(1)* _adresse MAC:_ l'adresse MAC du port de gestion 1 (« P1 »). Si vous avez utilisé DHCP pour obtenir l'adresse IP du contrôleur d'origine, vous devez disposer de cette adresse pour vous connecter au nouveau contrôleur.
@@ -65,7 +65,7 @@ Lorsqu'un contrôleur présente une défaillance et doit être remplacé, la ré
 
 +
 .. Sélectionnez *matériel*.
-.. Recherchez le tiroir contrôleur, marqué par l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e5700.gif[""].
+.. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e5700.gif["Icône du contrôleur"].
 .. Cliquez sur l'icône du contrôleur.
 .. Sélectionnez le contrôleur et cliquez sur *Suivant*.
 .. Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
@@ -165,7 +165,7 @@ Comme vous devez retirer la HIC du contrôleur défaillant, vous devez retirer t
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -177,7 +177,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -210,7 +210,7 @@ Retirez la batterie pour pouvoir installer le nouveau contrôleur.
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[Voyant de cache interne actif]
 
 +
 *(1)* _LED active cache interne_
@@ -221,7 +221,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 . Repérez le loquet de dégagement bleu de la batterie.
 . Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 retirer le bloc-batterie e5700]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Déposer la batterie]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -244,7 +244,7 @@ Si le boîtier du contrôleur comporte une carte d'interface hôte (HIC), retire
 Il y a quatre vis : une sur le dessus, une sur le côté et deux sur l'avant.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Retirez la façade du contrôleur]
 
 . Retirez la plaque HIC.
 . À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez les trois vis à molette qui fixent le HIC à la carte contrôleur.
@@ -254,7 +254,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 v
 NOTE: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Retirer HIC de la carte contrôleur »]
 
 +
 *(1)* _carte d'interface hôte (HIC)_
@@ -284,7 +284,7 @@ Vous devez insérer la bride métallique située à l'avant de la batterie dans 
 Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 insérez la pile dans le logement e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Réinstallez la batterie]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -300,11 +300,11 @@ CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de l
 +
 ** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Bride métallique correcte"]
 
 ** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Bride métallique incorrecte"]
 
 
 
@@ -328,7 +328,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif['Réinstaller HIC sur la carte contrôleur']
 
 +
 *(1)* _carte d'interface hôte (HIC)_
@@ -342,7 +342,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 . À l'aide d'un tournevis cruciforme n° 1, fixez la carte HIC que vous avez retirée du boîtier de contrôleur d'origine sur le nouveau boîtier de contrôleur à l'aide de quatre vis.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Réinstallez le cache »]
 
 
 
@@ -357,7 +357,7 @@ Après avoir installé la batterie et la carte d'interface hôte (HIC), si l'une
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -366,7 +366,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _poignée de came_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -400,7 +400,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/e5700_hic_3_callouts_maint-e5700.gif["LED du contrôleur E5700 »"]
 +
 *(1)* _LED Host Link_
 

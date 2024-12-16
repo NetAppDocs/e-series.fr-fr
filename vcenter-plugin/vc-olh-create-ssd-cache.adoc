@@ -11,7 +11,7 @@ summary: 'Pour accélérer dynamiquement les performances du système, vous pouv
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

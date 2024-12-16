@@ -13,7 +13,7 @@ summary: Utilisez cette feuille de calcul pour enregistrer les informations de c
 [role="lead"]
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche de travail suivante pour enregistrer les informations de configuration du stockage SRP sur InfiniBand. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
 
-image::../media/port_identifiers_ib_srp.gif[identificateurs de port ib srp]
+image::../media/port_identifiers_ib_srp.gif[Identificateurs de port SRB sur IB]
 
 
 

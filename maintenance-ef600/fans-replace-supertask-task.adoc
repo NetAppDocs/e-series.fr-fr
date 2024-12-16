@@ -90,7 +90,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 . Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
-image::../media/remove_controller_5.png[déposer le contrôleur 5]
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
@@ -98,7 +98,7 @@ image::../media/remove_controller_5.png[déposer le contrôleur 5]
 CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
 
 +
-image::../media/remove_controller_6.png[déposer le contrôleur 6]
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
 
 . Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 
@@ -117,7 +117,7 @@ Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de
 
 . Soulever doucement le ventilateur défectueux du contrôleur.
 +
-image::../media/fan_2.png[ventilateur 2]
+image::../media/fan_2.png[Déposer le ventilateur]
 
 
 
@@ -130,10 +130,10 @@ Installez un nouveau ventilateur pour remplacer le ventilateur défectueux.
 .Étapes
 . Faites glisser le ventilateur de remplacement complètement dans la tablette.
 +
-image::../media/fan_3.png[ventilateur 3]
+image::../media/fan_3.png[Poser le ventilateur dans le contrôleur]
 
 +
-image::../media/fan_3_a.png[ventilateur 3 a]
+image::../media/fan_3_a.png[Poser le ventilateur dans le contrôleur]
 
 
 
@@ -151,7 +151,7 @@ Après avoir installé le nouveau ventilateur, réinstallez le boîtier du contr
 NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
 
 +
-image::../media/remove_controller_7.png[déposer le contrôleur 7]
+image::../media/remove_controller_7.png[Installez le contrôleur dans le tiroir]
 
 
 

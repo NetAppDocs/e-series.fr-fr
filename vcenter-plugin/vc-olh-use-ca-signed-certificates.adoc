@@ -11,7 +11,7 @@ summary: Obtenir et importer des certificats signés par une autorité de certif
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

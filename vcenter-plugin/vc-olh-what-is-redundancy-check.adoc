@@ -10,7 +10,7 @@ summary: 'Une vérification de redondance détermine si les données d"un volume
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
 summary: 'Procédez à la mise à niveau du contrôleur en mettant le tiroir contrôleur sous tension et en validant la version logicielle du contrôleur. Vous pouvez ensuite recueillir des données d"assistance et reprendre les opérations.' 
 ---
 = Mise à niveau complète du contrôleur
@@ -88,7 +88,7 @@ Vous devez d'abord déverrouiller les lecteurs sécurisés à l'aide de la proc�
  a| 
 Tous les disques sécurisés, gestion externe des clés, vous n'avez pas temporairement activé la gestion interne des clés pour la procédure de remplacement du contrôleur
  a| 
-Remplacement du contrôleur par une gestion externe des clés et sécurisation de tous les disques
+Remplacez le contrôleur par une gestion externe des clés et tous les disques sont sécurisés. Voir https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Gestion externe des clés"^] pour des instructions détaillées.
 
 |===
 
@@ -102,10 +102,10 @@ Vous pouvez utiliser les voyants et le logiciel de gestion du stockage pour vér
 .Étapes
 . Vérifiez les LED du contrôleur A pour vous assurer qu'il est correctement en cours de démarrage.
 +
-Les voyants d'action du service Host Link requis deviennent verts au cours du redémarrage. L'écran à sept segments montre la séquence OS+ SD+ vide- pour indiquer que le contrôleur exécute le traitement de début de journée (SOD).
+Les voyants d'action du service Host Link requis deviennent verts au cours du redémarrage.
 
 +
-Une fois le redémarrage terminé, l'écran à sept segments affiche l'ID du bac correspondant à l'affichage à sept segments sur le second contrôleur. Vous pouvez ensuite découvrir la nouvelle cartouche de contrôleur à l'aide du logiciel de gestion du stockage.
+Une fois le redémarrage du contrôleur terminé, vous pouvez détecter le nouveau boîtier du contrôleur à l'aide du logiciel de gestion du stockage.
 
 . Si l'un des voyants d'action de service requis du plateau du contrôleur est _on_, ou si le voyant d'action de service requise du contrôleur est _on_ :
 +
@@ -124,12 +124,6 @@ Une fois le redémarrage terminé, l'écran à sept segments affiche l'ID du bac
 Vous devez vous assurer que vos nouveaux contrôleurs fonctionnent correctement avec le système d'exploitation (micrologiciel du contrôleur) et la NVSRAM.
 
 .Étapes
-. Effectuez l'une des opérations suivantes :
-+
-** Si vous effectuez la mise à niveau vers des contrôleurs qui ne prennent pas en charge SANtricity 11.30 et le micrologiciel des contrôleurs 8.30, vérifiez que la version exécutée sur les nouveaux contrôleurs correspond à la dernière version exécutée sur les contrôleurs d'origine. En principe, il s'agit de la version la plus récente prise en charge par les anciens contrôleurs. Si nécessaire, installez la version appropriée sur les nouveaux contrôleurs.
-** Si vous effectuez une mise à niveau vers des contrôleurs exécutant SANtricity 11.30 et le micrologiciel du contrôleur 8.30, téléchargez et installez la dernière NVSRAM après avoir mis les nouveaux contrôleurs sous tension.
-
-
 . Si votre mise à niveau du contrôleur implique une modification de protocole (par exemple, Fibre Channel vers iSCSI) et que vous avez déjà des hôtes définis pour votre baie de stockage, associez les nouveaux ports hôte à vos hôtes :
 +
 .. Dans System Manager, sélectionnez menu :Storage[hosts].
@@ -156,7 +150,7 @@ Pour plus d'informations sur le matériel compatible, reportez-vous au https://m
 +
 La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
 
-.. Sélectionnez l'onglet *Basic* et modifiez les paramètres de mise en cache de lecture et d'écriture.
+.. Sélectionnez l'onglet *Basic* et activez les paramètres de mise en cache de lecture et d'écriture.
 .. Cliquez sur *Enregistrer*.
 
 
@@ -168,10 +162,9 @@ La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volu
 
 . Rassemblez les données de support relatives à votre baie de stockage à l'aide de l'interface utilisateur graphique ou de l'interface de ligne de commande :
 +
-** Utilisez System Manager ou la fenêtre de gestion de baie de Storage Manager pour collecter et enregistrer un pack de support de votre baie de stockage.
+** Utilisez System Manager pour collecter et enregistrer un pack de support de votre baie de stockage.
 +
 *** Dans System Manager, sélectionnez menu :support [support Center > onglet Diagnostics]. Sélectionnez ensuite *Collect support Data* et cliquez sur *collect*.
-*** Dans la barre d'outils de la fenêtre gestion des matrices, sélectionnez menu:Monitor[Health > Collect support Data Manually]. Entrez ensuite un nom et spécifiez un emplacement sur votre système où vous souhaitez stocker le bundle de support.
 +
 Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `support-data.7z`.
 
@@ -205,4 +198,4 @@ NOTE: La collecte des données de support peut affecter temporairement les perfo
 
 
 .Et la suite ?
-Si la mise à niveau de votre contrôleur entraîne la modification de l'ID fournisseur de LSI à NETAPP, rendez-vous sur link:remount-volumes-lsi-task.html["Remontez des volumes après avoir changé le fournisseur de LSI à NETAPP"]sinon, la mise à niveau du contrôleur est terminée et vous pouvez reprendre le fonctionnement normal.
+La mise à niveau du contrôleur est terminée et vous pouvez reprendre vos activités normales.

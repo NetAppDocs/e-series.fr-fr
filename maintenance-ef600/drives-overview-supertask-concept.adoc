@@ -36,7 +36,7 @@ Suivez ces règles pour éviter d'endommager les lecteurs de votre matrice de st
 ** Ne forcez jamais un lecteur dans une étagère et n'utilisez pas de pression légère et ferme pour engager complètement le loquet d'entraînement.
 ** Placez les entraînements sur des surfaces amorties et ne placez jamais de disques sur l'un de l'autre.
 ** Ne pas heurter les entraînements contre d'autres surfaces.
-** Avant de retirer un lecteur d'une étagère, déverrouillez la poignée et attendez 30 secondes que le lecteur tourne.
+** Avant de retirer un lecteur d'une étagère, déverrouillez la poignée et attendez 60 secondes que le lecteur tourne.
 ** Lors de l'expédition des disques, utilisez toujours l'emballage approuvé.
 
 
@@ -52,10 +52,10 @@ Les champs magnétiques peuvent détruire toutes les données du lecteur et caus
 
 Les tiroirs standard de 24 disques nécessitent des disques échelonnant. La figure suivante montre le numéro des disques dans chaque shelf (le cadre avant du shelf a été retiré).
 
-image::../media/ef600_drives_numbered.png[lecteurs ef600 numérotés]
+image::../media/ef600_drives_numbered.png[Numérotation des disques dans un tiroir de 24 disques]
 
 Lorsque vous insérez moins de 24 disques dans un contrôleur EF300 ou EF600, vous devez alterner entre les deux moitiés du contrôleur. En commençant par l'extrémité gauche, puis en se déplaçant vers l'extrémité droite, placez les lecteurs un par un.
 
 La figure suivante montre comment décaler les entraînements entre les deux moitiés.
 
-image::../media/ef600_drives_staggering.png[décalage des disques ef600]
+image::../media/ef600_drives_staggering.png[Décalage du disque dans un tiroir de 24 disques]

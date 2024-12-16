@@ -20,7 +20,7 @@ Après avoir retiré le boîtier du contrôleur du shelf, vous pouvez retirer la
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interne led maint e2800 active]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[Voyant de cache interne actif]
 
 +
 *(1)* _cache interne actif_
@@ -31,7 +31,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Repérez le loquet de dégagement bleu de la batterie.
 . Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retirer le bloc-batterie e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retirez la batterie du contrôleur]
 
 +
 *(1)* _loquet de dégagement de la batterie_

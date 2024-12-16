@@ -11,7 +11,7 @@ summary: Supprimez un pool ou un groupe de volumes pour renforcer la capacité n
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

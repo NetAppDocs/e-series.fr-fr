@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Préparez la mise à niveau des contrôleurs en enregistrant la clé de sécurité du disque, en rassemblant les données de support et en mettant le contrôleur hors ligne. 
 ---
 = Préparation à la mise à niveau des contrôleurs
@@ -94,10 +94,9 @@ Vous avez besoin de ce numéro de série pour effectuer les étapes du link:comp
 
 . Rassemblez les données de support relatives à votre baie de stockage à l'aide de l'interface utilisateur graphique ou de l'interface de ligne de commande :
 +
-** Utilisez System Manager ou la fenêtre de gestion de baie dans Storage Manager pour collecter et enregistrer un pack de support de votre baie de stockage.
+** Utilisez System Manager pour collecter et enregistrer un pack de support de votre baie de stockage.
 +
 *** Dans System Manager, sélectionnez menu :support [support Center > onglet Diagnostics]. Sélectionnez ensuite *Collect support Data* et cliquez sur *collect*.
-*** Dans la barre d'outils de la fenêtre gestion des matrices, sélectionnez menu:Monitor[Health > Collect support Data Manually]. Entrez ensuite un nom et spécifiez un emplacement sur votre système où vous souhaitez stocker le bundle de support.
 +
 Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom `support-data.7z`.
 
@@ -133,7 +132,7 @@ CAUTION: *Perte de données possible* -- si vous continuez cette procédure pend
 +
 La boîte de dialogue Modifier les paramètres de cache s'affiche. Tous les volumes de la matrice de stockage s'affichent dans cette boîte de dialogue.
 
-.. Sélectionnez l'onglet *Basic* et modifiez les paramètres de mise en cache de lecture et d'écriture.
+.. Sélectionnez l'onglet *Basic* et désactivez les paramètres de mise en cache de lecture et d'écriture.
 .. Cliquez sur *Enregistrer*.
 .. Attendez cinq minutes pour permettre au disque d'avoir transféré toutes les données de la mémoire cache.
 

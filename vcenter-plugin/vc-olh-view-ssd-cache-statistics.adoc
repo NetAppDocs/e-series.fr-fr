@@ -11,7 +11,7 @@ summary: 'Afficher les statistiques du SSD cache, telles que les lectures, les Ã
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

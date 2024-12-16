@@ -10,7 +10,7 @@ summary: 'La sécurité du lecteur est une fonction qui empêche tout accès non
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

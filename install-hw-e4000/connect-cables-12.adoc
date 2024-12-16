@@ -1,0 +1,81 @@
+---
+permalink: install-hw-e4000/connect-cables-12.html 
+sidebar: sidebar 
+keywords: E4000, connect power cables 
+summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous tension.' 
+---
+= Branchement des câbles (E4012)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Découvrez comment connecter les câbles d'alimentation et mettre les tiroirs disques sous tension.
+
+.Avant de commencer
+* Installez votre matériel.
+* Prenez les précautions anti-statiques.
+
+
+Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+
+.Étapes
+. Branchez les câbles des tiroirs.
++
+Branchez les câbles du système en fonction de votre configuration. Si vous avez besoin de plus d'options de câblage que les exemples présentés, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage"].
+
++
+Pour les exemples présentés, vous avez besoin des câbles suivants :
+
++
+|===
+
+
+ a| 
+image:../media/sas_cable.png["Câble SAS"]
+ a| 
+*Câbles SAS*
+
+|===
++
+.Exemple A : un tiroir contrôleur E4000 doté de trois tiroirs disques DE212C/DE224C dans une configuration SAS standard.
+.. Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
+.. Reliez le module d'E/S A du premier tiroir de disque au module d'E/S A du second tiroir de disque.
+.. Reliez le module d'E/S A du second tiroir de disque au module d'E/S A du troisième tiroir de disque.
+.. Reliez le contrôleur B au module d'E/S B du tiroir de troisième disque.
+.. Reliez le module d'E/S par seconde au module d'E/S B du tiroir de troisième disque.
+.. Sur les câbles du premier tiroir de disque, le module d'E/S B du second tiroir.
+
+
++
+.Exemple B : un tiroir contrôleur E4000 avec un tiroir disque DE212C/DE224C dans une configuration SAS standard.
+.. Reliez le contrôleur A au module A.
+.. Le câble du contrôleur B vers l'IOM B.
+
+
+. Met les tiroirs disques sous tension.
++
+Vous avez besoin des câbles suivants :
+
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-e2800-e5700.png["Câble d'alimentation"]
+ a| 
+* Câbles d'alimentation*
+
+|===
++
+
+CAUTION: Vérifiez que les boutons d'alimentation des tiroirs disques sont éteints.
+
++
+.. Connectez les deux câbles d'alimentation de chaque shelf à différentes unités de distribution de l'alimentation dans l'armoire ou le rack.
+.. Si vous avez des tiroirs disques, mettez d'abord les deux commutateurs de mise sous tension. Attendre 2 minutes avant d'appliquer la mise sous tension du tiroir contrôleur.
+.. Allumer les deux boutons marche/arrêt sur le tiroir contrôleur.
+
+
+

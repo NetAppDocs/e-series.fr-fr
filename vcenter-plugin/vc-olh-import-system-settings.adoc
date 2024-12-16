@@ -11,7 +11,7 @@ summary: 'Importez les paramètres système d"une matrice de stockage vers d"aut
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

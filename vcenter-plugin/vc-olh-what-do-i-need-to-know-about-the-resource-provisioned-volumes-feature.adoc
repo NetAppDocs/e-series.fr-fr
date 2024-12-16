@@ -11,7 +11,7 @@ summary: 'La fonctionnalité de provisionnement des ressources est disponible da
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

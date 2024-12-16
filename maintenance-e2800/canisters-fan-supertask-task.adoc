@@ -56,7 +56,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Dans le Gestionnaire système SANtricity, déterminez quelle cartouche de ventilateur est défectueuse.
 +
 .. Sélectionnez *matériel*.
-.. Regarder le ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icône à droite des listes déroulantes *Shelf* pour déterminer quelle étagère est dotée de la cartouche défectueuse du ventilateur.
+.. Regardez l'icône de ventilateur à image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icône de ventilateur"]droite des listes déroulantes *Shelf* pour déterminer quelle étagère est dotée du boîtier de ventilateur défectueux.
 +
 Si un composant est défectueux, cette icône est rouge.
 
@@ -80,7 +80,7 @@ Vous pouvez également trouver des informations sur le canister de ventilateur d
 Vous devez remplacer le boîtier du ventilateur dont le voyant d'avertissement est allumé.
 
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e2800.gif[28 dwg e2860 de460c canister à ventilateur unique avec symbole led maint e2800]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e2800.gif[LED du boîtier du ventilateur]
 
 +
 *(1)* _LED attention_. Si ce voyant s'affiche en orange fixe, cela signifie que le ventilateur est défectueux.
@@ -103,14 +103,14 @@ Conservez tous les matériaux d'emballage pour les réutiliser lors du retour du
 
 . Appuyez sur la languette orange pour libérer la poignée du boîtier du ventilateur.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[28 dwg e2860 de460c canister à ventilateur unique avec languette orange légende maint e2800]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[]
 
 +
 *(1)* _taquet que vous appuyez pour relâcher la poignée du boîtier du ventilateur_
 
 . Utiliser la poignée du boîtier du ventilateur pour extraire le boîtier du ventilateur de l'étagère.
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[28 dwg e2860 de460c poignée de la cartouche du ventilateur avec légende e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Poignée de tirage du boîtier du ventilateur]
 
 +
 *(1)* _poignée pour tirer le canister du ventilateur vers l'extérieur_

@@ -10,7 +10,7 @@ summary: 'Pour les systèmes EF300 et EF600, un volume peut être défini pour p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

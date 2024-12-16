@@ -23,7 +23,7 @@ L'armoire 40U du modèle 3040 présente les caractéristiques suivantes :
 
 Les figures suivantes présentent une vue avant (gauche) et une vue arrière (droite) de l'armoire.
 
-image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[armoire 83000 07 dwg 3040 avec légendes]
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[3040 présentation de l'armoire]
 
 |===
 

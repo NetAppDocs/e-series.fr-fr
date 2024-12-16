@@ -11,7 +11,7 @@ summary: 'Lorsque deux hôtes ou plus requièrent l"accès E/S aux mêmes volume
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

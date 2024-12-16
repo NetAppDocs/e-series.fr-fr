@@ -27,14 +27,14 @@ Lisez toutes les instructions avant de suivre les étapes ci-dessous.
 . Déballez le contenu du matériel, puis inventoriez le matériel de fixation contre le bordereau d'emballage.
 . Installer les rails.
 +
-Si des instructions ont été fournies avec le matériel de montage en rack, reportez-vous à ces instructions pour obtenir des informations détaillées sur l'installation des rails. Pour des instructions supplémentaires de montage en rack, reportez-vous à la section link:../rackmount-hardware.html["Matériel de montage en rack"].
+Si des instructions ont été fournies avec le matériel de montage en rack, reportez-vous à ces instructions pour obtenir des informations détaillées sur l'installation des rails. Pour obtenir des instructions de montage en rack supplémentaires, reportez-vous à link:../rackmount-hardware.html["Matériel de montage en rack"^]la section .
 
 +
 
 NOTE: Installez le matériel en partant du bas du rack ou de l'armoire jusqu'en haut pour éviter que l'équipement ne se renverse.
 
 +
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Poser les rails"]
 
 . Installer le shelf.
 +
@@ -43,7 +43,7 @@ CAUTION: Lorsqu'ils sont entièrement chargés avec des disques, chaque tiroir p
 
 +
 .. En commençant avec le shelf que vous souhaitez au bas de l'armoire, placez l'arrière du shelf (extrémité avec les connecteurs) sur les rails.
-.. En soutenant le shelf par le bas, faites-le glisser dans l'armoire.image:../media/4_person_lift_source.png[""]
+.. En soutenant l'étagère par le bas, faites-la glisser dans l'armoire. image:../media/4_person_lift_source.png["Quatre personnes sont nécessaires pour soulever la tablette dans l'armoire"]
 
 
 . Fixer le shelf.
@@ -56,7 +56,7 @@ Fixez le shelf sur le rack comme indiqué dans link:../rackmount-hardware.html["
 
 
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Fixez les supports à l'arrière de la tablette"]
 
 . Installez le cadre ou les embouts.
 +
@@ -69,4 +69,4 @@ image:../media/trafford_secure.png[""]
 
 
 
-image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Installez le cache"]

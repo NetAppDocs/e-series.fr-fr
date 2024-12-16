@@ -10,7 +10,7 @@ summary: 'Lorsque vous implémentez la fonction sécurité du lecteur, vous pouv
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

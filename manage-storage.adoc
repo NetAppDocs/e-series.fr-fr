@@ -6,6 +6,8 @@ summary: Gérer le stockage
 ---
 = Gérer le stockage
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

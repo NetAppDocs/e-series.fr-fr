@@ -11,7 +11,7 @@ summary: 'Vous devez affecter un volume à un hôte ou à un cluster hôte afin 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

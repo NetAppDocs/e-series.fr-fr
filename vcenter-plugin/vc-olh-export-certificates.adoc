@@ -10,7 +10,7 @@ summary: Exportez un certificat pour afficher ses détails complets.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

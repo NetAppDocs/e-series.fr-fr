@@ -21,20 +21,20 @@ Avant d'installer l'armoire 3040 40U, assurez-vous de disposer des outils et de 
 
 
  a| 
-image:../media/83009_02.gif[""]
+image:../media/83009_02.gif["Clé 3/4-in et clé Allen"]
  a| 
 *3/4-in. Clé* (fournie dans la caisse d'expédition) -- pour relever et abaisser les pieds de mise à niveau sous l'armoire.
 
 *4 po Clé Allen* -- pour relever et abaisser le pied de stabilité à l'avant de l'armoire.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Inclus avec l'armoire"]
 
 
 
  a| 
 *NEMA L6-30*
 
-image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
+image:../media/73121_01_dwg_nema_l6_30_power_cord.gif["Cordon NEMA L6-30"]
  a| 
 *Cordons d'alimentation CA* -- pour connecter l'armoire à des sources d'alimentation externes (prises murales).
 
@@ -45,19 +45,19 @@ image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
 
 NOTE: Chaque PDU doit être connectée à une source d'alimentation indépendante.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Inclus avec l'armoire"]
 
 
 
  a| 
 **CEI-60309**
 
-image:../media/73122_01_dwg_iec_60309_power_cord.gif[""]
+image:../media/73122_01_dwg_iec_60309_power_cord.gif["Cordon CEI-60309"]
 
 
 
  a| 
-image:../media/78038_21.png[""]
+image:../media/78038_21.png["Inclus avec l'armoire"]
  a| 
 **Câbles SAS** (en option) – deux câbles sont inclus avec chaque plateau de disque, tandis que les câbles côté hôte doivent être achetés séparément.
 
@@ -69,11 +69,11 @@ Reportez-vous au guide d'installation du plateau du contrôleur approprié pour 
 
 
  a| 
-image:../media/77038_06.gif[""]
+image:../media/77038_06.gif["Câbles SAS et de communication"]
  a| 
 **Bobines de câble montables** – installées sur les deux côtés des sorties de distribution d'alimentation verticales pour permettre l'acheminement des câbles et des câbles en trop long. Deux bobines de câble sont fournies avec chaque plateau d'entraînement du contrôleur Les bobines de câble sont également livrées avec des tiroirs disques autonomes.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Bobines de câble montables"]
 
 
 

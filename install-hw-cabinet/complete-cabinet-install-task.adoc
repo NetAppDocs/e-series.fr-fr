@@ -29,7 +29,7 @@ Les pieds de mise à niveau sont situés près de chaque coin inférieur de l'ar
 La figure suivante offre une vue rapprochée du pied de stabilité et des pieds de mise à niveau.
 
 +
-image::../media/83000_08.gif[83000 08]
+image::../media/83000_08.gif[Pieds de mise à niveau et de stabilité]
 
 +
 |===
@@ -83,7 +83,7 @@ Après avoir réinstallé les bacs, installez les bobines de câble et les attac
 .Étape
 . Poser les bobines de câble et les attaches le long des deux côtés des sorties de distribution d'alimentation verticales.
 +
-image::../media/83003_01_dwg_3040_cable_spools.gif[83003 01 dwg 3040 bobines de câble]
+image::../media/83003_01_dwg_3040_cable_spools.gif[Attache et bobine de câble]
 
 +
 |===
@@ -123,7 +123,6 @@ Il est nécessaire de couvrir les espaces vides pour maintenir le débit d'air c
 
 == Étape 5 : installer des rails de montage supplémentaires
 
-[role="lead"]
 Si vous installez des tiroirs de lecteurs de contrôleur ou des tiroirs de disques livrés séparément (non déjà installés dans l'armoire), vous devrez peut-être installer des rails de montage supplémentaires dans l'armoire.
 
 .Étapes
@@ -140,7 +139,7 @@ Si vous installez des tiroirs de lecteurs de contrôleur ou des tiroirs de disqu
 
 . Utilisez les marqueurs de mesure situés sur les supports verticaux avant droit et avant gauche pour fixer les rails de montage à la même position de chaque côté de l'armoire.
 +
-image::../media/92042_06.gif[92042 06]
+image::../media/92042_06.gif[Montage sur rail]
 
 +
 |===
@@ -248,7 +247,7 @@ NOTE: Vous devez connecter chaque PDU à une source d'alimentation indépendante
 
 . Mettre les 12 disjoncteurs en position marche (vers le haut).
 +
-image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 pdu d'armoire dwg 3040]
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[Disjoncteurs et prises électriques]
 
 +
 |===
@@ -277,9 +276,9 @@ Boîtiers d'entrée électrique
 . Mettez tous les tiroirs disques de l'armoire sous tension.
 +
 
-NOTE: Patientez 30 secondes après la mise sous tension des tiroirs du disque avant de mettre les tiroirs du contrôleur sous tension.
+NOTE: Patientez 60 secondes après la mise sous tension des tiroirs du disque avant de mettre les tiroirs du contrôleur sous tension.
 
-. Patientez 30 secondes après la mise sous tension des tiroirs disques, puis remettez-le sous tension à tous les tiroirs disques du contrôleur de l'armoire.
+. Patientez 60 secondes après la mise sous tension des tiroirs disques, puis remettez-le sous tension à tous les tiroirs disques du contrôleur de l'armoire.
 
 
 .Résultat

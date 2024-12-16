@@ -47,7 +47,7 @@ Conservez tous les matériaux d'emballage pour pouvoir les utiliser lors du reto
 
 . Repérez la languette située à droite du bloc d'alimentation et appuyez dessus vers le bloc d'alimentation.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Appuyez sur la languette située à côté du bloc d'alimentation]
 
 . Repérez la poignée à l'avant du bloc d'alimentation.
 . Utilisez la poignée pour faire glisser le bloc d'alimentation hors du système.
@@ -56,7 +56,7 @@ image::../media/psup_2.png[psup 2]
 CAUTION: Lors de la dépose d'une alimentation électrique, toujours utiliser deux mains pour soutenir son poids.
 
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Retirez le bloc d'alimentation en le faisant glisser]
 
 
 
@@ -76,7 +76,7 @@ Les blocs d'alimentation sont munis de clés et ne peuvent être installés qu'u
 CAUTION: N'utilisez pas de force excessive lorsque vous faites glisser le bloc d'alimentation dans le système ; vous risquez d'endommager le connecteur.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Installez l'alimentation dans le contrôleur]
 
 . Vérifier que son état est optimal et vérifier les LED d'avertissement du tiroir contrôleur.
 +

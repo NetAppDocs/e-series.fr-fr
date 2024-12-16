@@ -59,7 +59,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Dans SANtricity System Manager, déterminez quelle alimentation a échoué. Vous pouvez trouver ces informations dans la zone Détails du gourou de la restauration ou vérifier les informations affichées pour la tiroir.
 +
 .. Sélectionnez *matériel*.
-.. Regardez la puissance image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] et ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Des icônes à droite des listes déroulantes *Shelf* pour déterminer quel shelf possède l'alimentation défectueuse.
+.. Examinez les icônes d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif["Icône d'alimentation"] et de ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Icône de ventilateur"]situées à droite des listes déroulantes *Shelf* pour déterminer quel shelf est celui qui présente le bloc d'alimentation défectueux.
 +
 Si un composant est défectueux, l'une des icônes ou les deux sont rouges.
 
@@ -80,12 +80,12 @@ CAUTION: Si le second boîtier d'alimentation de l'étagère ne dispose pas de l
 Vous devez remplacer l'alimentation sur laquelle la LED d'avertissement est allumée.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[alimentation 28 dwg 913w vue arrière maint. e5700]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[LED d'avertissement du bloc d'alimentation]
 
 +
-** Si le voyant d'alimentation image:../media/drw_sas_power_icon_maint-e5700.gif[""] est *vert fixe*, l'alimentation fonctionne correctement. S'il est *hors tension*, le bloc d'alimentation est défectueux, l'interrupteur CA est éteint, le cordon d'alimentation CA n'est pas correctement installé ou la tension d'entrée du cordon d'alimentation CA n'est pas dans la marge (il y a un problème à l'extrémité de la source du cordon d'alimentation CA).
+** Si le voyant d'alimentation image:../media/drw_sas_power_icon_maint-e5700.gif["Icône du voyant d'alimentation"]est *vert fixe*, le bloc d'alimentation fonctionne correctement. S'il est *hors tension*, le bloc d'alimentation est défectueux, l'interrupteur CA est éteint, le cordon d'alimentation CA n'est pas correctement installé ou la tension d'entrée du cordon d'alimentation CA n'est pas dans la marge (il y a un problème à l'extrémité de la source du cordon d'alimentation CA).
 +
-Si la LED attention s'allume image:../media/drw_sas_fault_icon_maint-e5700.gif[""] est de type orange fixe*, le bloc d'alimentation ou son ventilateur intégré est défectueux.
+Si le voyant d'avertissement image:../media/drw_sas_fault_icon_maint-e5700.gif["Icône d'erreur"]est *orange fixe*, le bloc d'alimentation ou son ventilateur intégré est défectueux.
 
 
 
@@ -111,7 +111,7 @@ Conservez tous les matériaux d'emballage pour pouvoir les utiliser lors du reto
 
 . Appuyez sur le loquet de la poignée de came du bloc d'alimentation, puis ouvrez la poignée de came pour libérer complètement le bloc d'alimentation du plan central.
 +
-image::../media/drw_2600_psu_maint-e5700.gif[bloc d'alimentation drw 2600 e5700]
+image::../media/drw_2600_psu_maint-e5700.gif[Utilisez le loquet pour libérer l'alimentation du plan central]
 
 . Utilisez la poignée de came pour faire glisser le bloc d'alimentation hors du système.
 +

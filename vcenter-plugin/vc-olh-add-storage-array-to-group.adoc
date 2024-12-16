@@ -11,7 +11,7 @@ summary: 'Ajoutez une ou plusieurs matrices de stockage à un groupe créé par 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

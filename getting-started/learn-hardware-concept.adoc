@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-hardware-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
 summary: Les baies de stockage E-Series sont disponibles dans plusieurs configurations et modèles. 
 ---
 = Présentation du matériel E-Series
@@ -20,6 +20,7 @@ Les baies E-Series sont disponibles dans les modèles suivants :
 * E2800 Series - hybride d'entrée de gamme
 * Gamme EF280 – baies 100 % Flash d'entrée de gamme
 * Gamme EF300 - 100 % NVMe, 100 % Flash d'entrée de gamme
+* E4000 Series - hybride d'entrée de gamme
 * E5700 Series - milieu de gamme hybride
 * Gamme EF570 : stockage 100 % Flash de milieu de gamme
 * Gamme EF600 - stockage 100 % NVMe, 100 % Flash de milieu de gamme
@@ -28,34 +29,28 @@ Les baies E-Series sont disponibles dans les modèles suivants :
 
 NOTE: Pour les systèmes d'exploitation SANtricity 11.80GA et versions supérieures, tous les ports USB sont désactivés sur les systèmes E2800, EF280, E5700, EF570, EF600, et EF300.
 
-
-
-== Modèles E2800
-
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
-
-
- a| 
-Tailles de rack :
- a| 
+[role="tabbed-block"]
+====
+.Modèles E2800
+--
+Tailles de rack::
++
+--
 * 2U/12 (2 unités de rack ; 12 disques)
 * 2U/24 (2 unités de rack ; 24 disques)
 +
-image::../media/e2800_2u_front.gif[e2800 2u à l'avant]
+image::../media/e2800_2u_front.gif[E2800 2U]
 
 * 4U60 (4 unités de rack ; 60 disques)
 +
-image::../media/e2860_front.gif[e2860 avant]
+image::../media/e2860_front.gif[« E2800 4U »]
 
 
 
-
-
- a| 
-Disques :
- a| 
+--
+Disques::
++
+--
 Prend en charge les types de disques suivants :
 
 * NL-SAS 3.5" (jusqu'à 180)
@@ -63,11 +58,10 @@ Prend en charge les types de disques suivants :
 * Disque dur SAS 2.5" (jusqu'à 180)
 
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * SAS 12 Gb
@@ -75,33 +69,29 @@ Disponible avec les interfaces suivantes :
 * Fibre Channel 16 Gb ou 32 Gb
 
 
-|===
+--
 
 
-== Modèles EF280
+--
+.Modèles EF280
+--
+Tailles de rack::
++
+--
+2U/24 (2 unités de rack ; 24 disques)
 
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
+image:../media/ef570_front.gif["EF280 2U"]
 
-
- a| 
-Tailles de rack :
- a| 
-2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Disques :
- a| 
+--
+Disques::
++
+--
 Prend en charge jusqu'à 96 disques SSD 2.5"
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * SAS 12 Gb
@@ -109,26 +99,23 @@ Disponible avec les interfaces suivantes :
 * Fibre Channel 16 Gb ou 32 Gb
 
 
-|===
+--
 
 
-== Modèles EF300
+--
+.Modèles EF300
+--
+Tailles de rack::
++
+--
+2U/24 (2 unités de rack ; 24 disques)
 
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
+image:../media/ef570_front.gif["EF300 2U"]
 
-
- a| 
-Tailles de rack :
- a| 
-2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Disques et HIC :
- a| 
+--
+Disques et HIC::
++
+--
 Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC) par contrôleur :
 
 * Disques SSD NVMe : jusqu'à 24 disques SSD NVMe dans le tiroir contrôleur
@@ -139,11 +126,10 @@ Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC
 
 NOTE: Pour SANtricity OS 11.80GA et supérieur, l'EF300 prend en charge les configurations de tiroirs d'extension sans disques dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * ISCSI 25 Gb
@@ -155,34 +141,29 @@ Disponible avec les interfaces suivantes :
 * 100 Gb NVMe/RoCE
 
 
-|===
+--
 
 
-== Modèles E5700
-
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
-
-
- a| 
-Tailles de rack :
- a| 
+--
+.Modèles E5700
+--
+Tailles de rack::
++
+--
 * 2U/24 (2 unités de rack ; 24 disques)
 +
-image::../media/e2800_2u_front.gif[e2800 2u à l'avant]
+image::../media/e2800_2u_front.gif[E5700 2U]
 
 * 4U60 (4 unités de rack ; 60 disques)
 +
-image::../media/e2860_front.gif[e2860 avant]
+image::../media/e2860_front.gif[E5700 4U]
 
 
 
-
-
- a| 
-Disques :
- a| 
+--
+Disques::
++
+--
 Prend en charge jusqu'à 480 des types de disques suivants :
 
 * Disques NL-SAS 3.5"
@@ -190,11 +171,10 @@ Prend en charge jusqu'à 480 des types de disques suivants :
 * Disques durs SAS 2.5"
 
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * SAS 12 Gb
@@ -207,33 +187,29 @@ Disponible avec les interfaces suivantes :
 * 100 Gb NVMe/RoCE
 
 
-|===
+--
 
 
-== Modèles EF570
+--
+.Modèles EF570
+--
+Tailles de rack::
++
+--
+2U/24 (2 unités de rack ; 24 disques)
 
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
+image:../media/ef570_front.gif["EF570 2U"]
 
-
- a| 
-Tailles de rack :
- a| 
-2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Disques :
- a| 
+--
+Disques::
++
+--
 Prend en charge jusqu'à 120 disques SSD 2.5"
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * SAS 12 Gb
@@ -246,26 +222,23 @@ Disponible avec les interfaces suivantes :
 * 100 Gb NVMe/RoCE
 
 
-|===
+--
 
 
-== Modèles EF600
+--
+.Modèles EF600
+--
+Tailles de rack::
++
+--
+2U/24 (2 unités de rack ; 24 disques)
 
-[cols="35h,~"]
-|===
-| Composant | Spécifications 
+image:../media/ef570_front.gif["EF600 2U"]
 
-
- a| 
-Tailles de rack :
- a| 
-2U/24 (2 unités de rack ; 24 disques)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Disques et HIC :
- a| 
+--
+Disques et HIC::
++
+--
 Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC) par contrôleur :
 
 * Disques SSD NVMe : jusqu'à 24 disques SSD NVMe dans le tiroir contrôleur
@@ -276,11 +249,10 @@ Prend en charge les disques suivants avec une seule carte d'interface hôte (HIC
 
 NOTE: Pour SANtricity OS 11.80GA et supérieur, la baie EF600 prend en charge les configurations de tiroirs d'extension sans disques dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension.
 
-
-
- a| 
-Interfaces :
- a| 
+--
+Interfaces::
++
+--
 Disponible avec les interfaces suivantes :
 
 * ISCSI 25 Gb
@@ -295,4 +267,49 @@ Disponible avec les interfaces suivantes :
 * NVMe/RoCE 200 Gb
 
 
-|===
+--
+
+
+--
+.Modèles E4000
+--
+Tailles de rack::
++
+--
+* 2U/12 (2 unités de rack ; 12 disques)
++
+image::../media/e4000_2u_front.png[E4000 2U]
+
+* 4U60 (4 unités de rack ; 60 disques)
++
+image::../media/e4000_4u_front.png[E4000 4U]
+
+
+
+--
+Disques::
++
+--
+Prend en charge les types de disques suivants :
+
+* NL-SAS 3.5" (jusqu'à 300)
+* SSD SAS 2.5" (jusqu'à 120)
+
+
+--
+Interfaces::
++
+--
+Disponible avec les interfaces suivantes :
+
+* SAS 12 Gb
+* ISCSI 1 Go ou 10GBASE-T
+* ISCSI 1 Go, 10 Gb ou 25 Gb
+* FC 8 Gb, 16 Gb ou 32 Gb
+
+
+--
+
+
+--
+====

@@ -70,7 +70,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche t
 
 L'illustration montre un hôte connecté à une baie de stockage E-Series dans deux zones. Une zone est indiquée par la ligne bleue ; l'autre zone est indiquée par la ligne rouge. Chaque port unique possède deux chemins d'accès au stockage (un pour chaque contrôleur).
 
-image::../media/port_identifiers_host_and_target_conf-win.gif[les identificateurs de port hôte et cible gagnent]
+image::../media/port_identifiers_host_and_target_conf-win.gif[Identificateurs de port Fibre Channel]
 
 
 

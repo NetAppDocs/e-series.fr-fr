@@ -10,7 +10,7 @@ summary: 'Les volumes ne sont pas associés à une charge de travail s"ils ont �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

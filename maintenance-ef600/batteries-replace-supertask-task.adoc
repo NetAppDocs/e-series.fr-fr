@@ -94,7 +94,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 . Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
-image::../media/remove_controller_5.png[déposer le contrôleur 5]
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
@@ -102,7 +102,7 @@ image::../media/remove_controller_5.png[déposer le contrôleur 5]
 CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
 
 +
-image::../media/remove_controller_6.png[déposer le contrôleur 6]
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
 
 . Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 
@@ -122,15 +122,15 @@ Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de
 . Repérez la languette « PRESS » située sur le côté du contrôleur.
 . Déverrouillez la batterie en appuyant sur la languette et en appuyant sur le boîtier de la batterie.
 +
-image::../media/batt_3.png[batterie 3]
+image::../media/batt_3.png[« Appuyez sur la languette pour déverrouiller la batterie]
 
 . Presser doucement le boîtier du connecteur le câblage de la batterie. Tirez la batterie vers le haut, en la débranchant de la carte.
 +
-image::../media/batt_2.png[batterie 2]
+image::../media/batt_2.png[Déposer le connecteur du câblage de la batterie]
 
 . Soulevez la batterie hors du contrôleur et placez-la sur une surface plane et sans électricité statique.
 +
-image::../media/batt_4.png[batterie 4]
+image::../media/batt_4.png[Soulever la batterie hors du contrôleur]
 
 . Suivez les procédures appropriées pour votre emplacement afin de recycler ou de mettre au rebut la batterie défectueuse.
 +
@@ -153,7 +153,7 @@ NOTE: Conformément aux réglementations de sécurité IATA, les batteries de re
 
 . Insérer la batterie dans le contrôleur en alignant le boîtier de la batterie avec les loquets métalliques situés sur le côté du contrôleur.
 +
-image::../media/batt_5.png[batterie 5]
+image::../media/batt_5.png[Insérez la batterie]
 
 +
 La batterie s'enclenche.
@@ -175,7 +175,7 @@ Réinstallez le contrôleur dans le tiroir du contrôleur.
 NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
 
 +
-image::../media/remove_controller_7.png[déposer le contrôleur 7]
+image::../media/remove_controller_7.png[Installez le contrôleur dans le shelf]
 
 
 

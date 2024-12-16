@@ -14,6 +14,9 @@ summary: Connectez votre système de stockage à un réseau Ethernet pour la ges
 Vous pouvez connecter votre système de stockage à un réseau Ethernet pour la gestion hors bande des baies de stockage. Vous devez utiliser des câbles Ethernet pour toutes les connexions de gestion de la baie de stockage.
 
 
+NOTE: Les modèles EF300, EF600 et E4000 ne disposent que d'un seul port de gestion ethernet hors bande.
+
+
 
 == Topologie directe
 
@@ -22,7 +25,7 @@ Une topologie directe connecte votre contrôleur directement à un réseau Ether
 Vous devez connecter le port de gestion 1 de chaque contrôleur pour la gestion hors bande et laisser le port 2 disponible pour accéder à la baie de stockage par le support technique.
 
 .Connexions directes de la gestion du stockage
-image::../media/74167.gif[74167]
+image::../media/74167.gif[Connexions directes de la gestion du stockage]
 
 
 
@@ -33,4 +36,4 @@ Une topologie de structure utilise un commutateur pour connecter votre contrôle
 Vous devez connecter le port de gestion 1 de chaque contrôleur pour la gestion hors bande et laisser le port 2 disponible pour accéder à la baie de stockage par le support technique.
 
 .Les connexions de la gestion du stockage de la structure
-image::../media/74110.gif[74110]
+image::../media/74110.gif[Les connexions de la gestion du stockage de la structure]

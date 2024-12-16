@@ -10,7 +10,7 @@ summary: 'Lors de l"opération Importer les paramètres, il se peut que certaine
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

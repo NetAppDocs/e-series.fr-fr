@@ -22,7 +22,7 @@ NOTE: Seuls les HIC FC/iSCSI 10 Gb et les ports de base optique d'un contrôleur
 
 La figure ci-dessous illustre l'arrière d'un contrôleur E2800 doté de deux ports hôte SFP+ (optiques) *(1)* et de quatre ports HIC SFP+ (optiques) *(2)*.
 
-image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base optique quad sfp]
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[Ports hôte et HIC sur un contrôleur E2800 »]
 
 
 NOTE: Une HIC deux ports est également disponible.
@@ -275,7 +275,7 @@ Avant et après la conversion, la mise en miroir se produit sur le port FC le pl
 Lorsque vous appliquez le pack de fonctionnalités, la prise en charge de la mise en miroir passe du port hôte de la carte de base numéro le plus élevé (appelé *1* dans la figure) au port HIC le plus numéroté (appelé *2* dans la figure).
 
 +
-image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc iscsi to fc]
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[Ports d'un contrôleur E2800 »]
 
 +
 |===

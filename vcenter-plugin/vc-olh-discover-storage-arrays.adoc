@@ -10,7 +10,7 @@ summary: Pour afficher et gérer les ressources de stockage dans le plug-in de s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

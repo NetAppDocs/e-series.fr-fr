@@ -145,7 +145,7 @@ Comme vous devez retirer la HIC du contrôleur défaillant, vous devez retirer t
 
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
-image::../media/remove_controller_5.png[déposer le contrôleur 5]
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
@@ -153,7 +153,7 @@ image::../media/remove_controller_5.png[déposer le contrôleur 5]
 CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
 
 +
-image::../media/remove_controller_6.png[déposer le contrôleur 6]
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
 
 . Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 
@@ -169,10 +169,10 @@ Retirez la batterie du boîtier du contrôleur défectueux afin de pouvoir l'ins
 . Repérez la languette « PRESS » située sur le côté du contrôleur.
 . Déverrouillez la batterie en appuyant sur la languette et en appuyant sur le boîtier de la batterie.
 +
-image::../media/batt_3.png[batterie 3]
+image::../media/batt_3.png[« Appuyez sur la languette pour déverrouiller la batterie]
 
-. Presser doucement le boîtier du connecteur le câblage de la batterie. Tirez la batterie vers le haut, en la débranchant de la carte.image:../media/batt_2.png[""]
-. Soulevez la batterie hors du contrôleur et placez-la sur une surface plane et sans électricité statique.image:../media/batt_4.png[""]
+. Presser doucement le boîtier du connecteur le câblage de la batterie. Tirez vers le haut, en débranchant la batterie de la carte.image:../media/batt_2.png["Déposer le connecteur du câblage de la batterie"]
+. Retirez la batterie du contrôleur et placez-la sur une surface plane et antistatique.image:../media/batt_4.png["Soulever la batterie hors du contrôleur"]
 
 
 
@@ -184,7 +184,7 @@ Si le boîtier du contrôleur comporte une HIC, vous devez retirer la HIC du bo�
 .Étapes
 . À l'aide d'un tournevis cruciforme, retirez les deux vis qui fixent le cadran HIC au boîtier du contrôleur.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Déposer la façade HIC]
 
 +
 
@@ -193,7 +193,7 @@ NOTE: L'image ci-dessus est un exemple, l'apparence de votre HIC peut varier.
 . Retirez la plaque HIC.
 . À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez la vis à molette unique qui fixent le HIC à la carte contrôleur.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Desserrez les vis à molette HIC]
 
 +
 
@@ -205,7 +205,7 @@ NOTE: La HIC est fournie avec trois emplacements de vis sur le dessus mais est f
 CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Retirez le HIC de la carte contrôleur]
 
 . Placez le HIC sur une surface plane et sans électricité statique.
 
@@ -225,12 +225,12 @@ Retirez le bloc d'alimentation afin de pouvoir l'installer dans le nouveau contr
 
 . Repérez la languette située à droite du bloc d'alimentation et appuyez dessus vers le bloc d'alimentation.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Appuyez sur la languette située à côté du bloc d'alimentation]
 
 . Repérez la poignée à l'avant du bloc d'alimentation.
 . Utilisez la poignée pour faire glisser le bloc d'alimentation hors du système.
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Retirez le bloc d'alimentation en le faisant glisser]
 
 +
 
@@ -257,10 +257,10 @@ NOTE: Une encoche située au bas du DIMM vous aide à aligner le DIMM pendant l'
 NOTE: Tenez soigneusement le module DIMM par les bords pour éviter toute pression sur les composants de la carte de circuit DIMM.
 
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Appuyez sur la languette de l'éjecteur située sur le logement DIMM]
 
 +
-image::../media/dimim_3.png[dime 3]
+image::../media/dimim_3.png[Retirez le module DIMM]
 
 
 
@@ -273,7 +273,7 @@ Retirez les ventilateurs pour pouvoir les installer dans le nouveau contrôleur.
 .Étapes
 . Soulever doucement le ventilateur du contrôleur.
 +
-image::../media/fan_2.png[ventilateur 2]
+image::../media/fan_2.png[Déposer le ventilateur]
 
 . Répétez l'opération jusqu'à ce que tous les ventilateurs soient retirés.
 
@@ -301,7 +301,7 @@ Installer la batterie dans le boîtier de contrôleur de remplacement.
 
 . Insérer la batterie dans le contrôleur en alignant le boîtier de la batterie avec les loquets métalliques situés sur le côté du contrôleur.
 +
-image::../media/batt_5.png[batterie 5]
+image::../media/batt_5.png[Installez la batterie]
 
 +
 La batterie s'enclenche.
@@ -322,7 +322,7 @@ Si vous avez retiré une HIC du boîtier de contrôleur d'origine, vous devez in
 Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Installer le HIC]
 
 +
 
@@ -338,7 +338,7 @@ CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne p
 N'utilisez pas de tournevis, sinon vous risquez de trop serrer la vis.
 
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Serrez les vis à molette HIC à la main sur le contrôleur]
 
 +
 
@@ -363,7 +363,7 @@ Les blocs d'alimentation sont munis de clés et ne peuvent être installés qu'u
 CAUTION: N'utilisez pas de force excessive lorsque vous faites glisser le bloc d'alimentation dans le système ; vous risquez d'endommager le connecteur.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Installez l'alimentation dans le contrôleur]
 
 
 
@@ -380,7 +380,7 @@ L'encoche entre les broches du DIMM doit être alignée avec la languette du sup
 
 . Insérez le module DIMM directement dans le logement.
 +
-image::../media/dimm_4.png[dimm 4]
+image::../media/dimm_4.png[Installez le module DIMM dans le slot du contrôleur]
 
 +
 Le module DIMM s'insère bien dans le logement, mais devrait être facilement installé. Si ce n'est pas le cas, réalignez le module DIMM avec le logement et réinsérez-le.
@@ -395,7 +395,7 @@ NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien align�
 NOTE: Les modules DIMM s'adaptent bien. Vous devrez peut-être appuyer doucement d'un côté à la fois et le fixer à l'aide de chaque languette individuellement.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Appuyez sur les loquets du logement DIMM pour le fixer]
 
 
 
@@ -408,10 +408,10 @@ Installer les ventilateurs dans le boîtier de contrôleur de remplacement.
 .Étapes
 . Faites glisser le ventilateur complètement dans le contrôleur de remplacement.
 +
-image::../media/fan_3.png[ventilateur 3]
+image::../media/fan_3.png[Poser le ventilateur dans le contrôleur]
 
 +
-image::../media/fan_3_a.png[ventilateur 3 a]
+image::../media/fan_3_a.png[Poser le ventilateur dans le contrôleur]
 
 . Répétez l'opération jusqu'à ce que tous les ventilateurs soient installés.
 
@@ -430,7 +430,7 @@ En dernier lieu, installez le nouveau boîtier de contrôleur dans le shelf de c
 NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
 
 +
-image::../media/remove_controller_7.png[déposer le contrôleur 7]
+image::../media/remove_controller_7.png[Installez le contrôleur dans le tiroir]
 
 . Installez les SFP à partir du contrôleur d'origine dans les ports hôte du nouveau contrôleur, s'ils ont été installés sur le contrôleur d'origine, et reconnectez tous les câbles.
 +

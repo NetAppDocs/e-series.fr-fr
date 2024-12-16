@@ -67,7 +67,7 @@ s/o
 
 Les configurations recommandées se composent de deux ports hôtes (initiateurs) et de quatre ports cibles.
 
-image::../media/port_identifiers_ib_iser.gif[identificateur de port ib iser]
+image::../media/port_identifiers_ib_iser.gif[Configuration réseau iser sur IB]
 
 
 

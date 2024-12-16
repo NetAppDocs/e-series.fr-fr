@@ -41,7 +41,7 @@ NOTE: Le voyant d'avertissement orange du contrôleur s'éteint dès que les con
 ====
 
 
-image::../media/e5700_attention_led_callout.png[légende d'avertissement de la baie e5700]
+image::../media/e5700_attention_led_callout.png[LED d'avertissement du contrôleur E5700]
 
 *(1)* _LED attention_
 

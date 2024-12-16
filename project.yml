@@ -78,6 +78,7 @@ sidebar:
           url: "/install-hw-e2800-e5700/e2824-e5724-connect-cables-task.html"
         - title: Configuration complète du système de stockage
           url: "/install-hw-e2800-e5700/e2824-e5724-complete-setup-task.html"
+    - section: install-hw-e4000
     - title: 3040 armoire 40U
       entries:
       - title: Présentation
@@ -453,10 +454,6 @@ sidebar:
         url: "/upgrade-controllers/upgrade-unlock-drives-task.html"
       - title: Mise à niveau complète du contrôleur
         url: "/upgrade-controllers/complete-upgrade-controllers-task.html"
-      - title: Remontez des volumes après avoir changé le fournisseur de LSI à NETAPP
-        url: "/upgrade-controllers/remount-volumes-lsi-task.html"
-      - title: Reconfigurez le système SAS-2
-        url: "/upgrade-controllers/reconfigure-sas-task.html"
     - title: SANtricity OS
       pdf-filename: Mise à niveau logicielle de SANtricity
       entries:
@@ -624,6 +621,7 @@ sidebar:
           url: "/maintenance-e2800/hpp-change-host-protocol-task.html"
         - title: Conversion de protocole hôte complète
           url: "/maintenance-e2800/hpp-complete-protocol-conversion-task.html"
+    - section: maintenance-e4000
     - title: E5700
       pdf-filename: E5700 assure la maintenance du système
       entries:

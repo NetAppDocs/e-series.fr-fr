@@ -57,7 +57,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 . Dans le Gestionnaire système SANtricity, déterminez quelle cartouche d'alimentation est défectueuse.
 +
 .. Sélectionnez *matériel*.
-.. Regardez la puissance image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Icône à droite des listes déroulantes *Shelf* pour déterminer quelle étagère possède la cartouche d'alimentation défectueuse.
+.. Regardez l'icône d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"]située à droite des listes déroulantes *Shelf* pour déterminer quel shelf est le boîtier d'alimentation défectueux.
 +
 Si un composant est défectueux, cette icône est rouge.
 
@@ -82,7 +82,7 @@ NOTE: Vous pouvez également trouver des informations sur le réservoir d'alimen
 Vous devez remplacer le boîtier d'alimentation dont le voyant d'avertissement est allumé.
 
 +
-image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e2800.gif[28 dwg e2860 de460c psu avec légendes maint e2800]
+image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e2800.gif[LED du boîtier d'alimentation]
 
 +
 *(1)* _voyants d'alimentation_. S'il est *vert fixe*, le boîtier d'alimentation fonctionne correctement. S'il est *éteint*, le boîtier d'alimentation est défectueux, l'interrupteur CA est éteint, le cordon d'alimentation CA n'est pas correctement installé ou la tension d'entrée du cordon d'alimentation CA n'est pas dans la marge (il y a un problème à l'extrémité de la source du cordon d'alimentation CA).

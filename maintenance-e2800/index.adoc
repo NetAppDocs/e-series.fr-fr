@@ -11,40 +11,58 @@ summary: Effectuez les opérations de maintenance sur les composants E2800.
 
 
 [role="lead"]
+Vous devrez peut-être effectuer des procédures de maintenance sur votre matériel. Cette section décrit les procédures spécifiques à la maintenance des composants du système E2800.
+
+Les procédures décrites dans cette section supposent que le système E2800 a déjà été déployé dans l'environnement E-Series.
+
+
+
+== Composants du système
+
 Pour le système de stockage E2800, vous pouvez effectuer les procédures de maintenance des composants suivants.
 
+[cols="25,65"]
+|===
 
 
-== Batteries
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/batteries-overview-requirements-concept.html["Batteries"]
+ a| 
 Chaque boîtier de contrôleur comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur.
 
 
 
-== Contrôleurs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/controllers-overview-supertask-concept.html["Contrôleurs"]
+ a| 
 Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager.
 
 
 
-== Canisters
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-overview-supertask-concept.html["Canisters"]
+ a| 
 Les boîtiers sont constitués de trois types différents : des blocs d'alimentation (blocs d'alimentation) qui fournissent une source d'alimentation redondante et un refroidissement adéquat dans un tiroir de contrôleur ou tiroir de 24 disques de 12 ou de disques, des blocs d'alimentation qui sont utilisés pour la redondance de l'alimentation dans un tiroir de contrôleur ou un tiroir de 60 disques, les boîtiers de ventilateur utilisés pour la climatisation du tiroir de contrôleur de 60 disques ou du tiroir disque.
 
 
 
-== Disques
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-overview-supertask-concept.html["Disques"]
+ a| 
 Un lecteur est un dispositif électromagnétique mécanique qui fournit le support de stockage physique pour les données.
 
 
 
-== Cartes d'interface hôte (HIC)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/hics-overview-supertask-concept.html["Cartes d'interface hôte (HIC)"]
+ a| 
 Une carte d'interface hôte (HIC) peut être installée en option dans un boîtier de contrôleur. Le contrôleur E2800 inclut des ports hôtes intégrés sur la carte contrôleur elle-même, ainsi que des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés au contrôleur sont appelés ports hôtes de base. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.
 
 
 
-== Protocole de port hôte
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e2800/hpp-overview-supertask-concept.html["Protocole de port hôte"]
+ a| 
 Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.
+
+|===

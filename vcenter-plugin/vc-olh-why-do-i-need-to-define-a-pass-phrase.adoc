@@ -10,7 +10,7 @@ summary: La phrase de passe est utilisée pour crypter et décrypter le fichier 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,58 +11,79 @@ summary: Maintenance du matériel EF300 et EF600
 
 
 [role="lead"]
+Vous devrez peut-être effectuer des procédures de maintenance sur votre matériel. Cette section présente les procédures spécifiques à la maintenance des composants du système EF300 ou EF600.
+
+Les procédures décrites dans cette section supposent que le système EF300 ou EF600 a déjà été déployé dans l'environnement E-Series.
+
+
+
+== Composants du système
+
 Pour les systèmes de stockage EF300 et EF600, vous pouvez effectuer les procédures de maintenance concernant les composants suivants.
 
+[cols="25,65"]
+|===
 
 
-== Batteries
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html["Batteries"]
+ a| 
 Une batterie est fournie avec un contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.
 
 
 
-== Contrôleurs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html["Contrôleurs"]
+ a| 
 Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les disques et met en œuvre les fonctions de SANtricity System Manager.
 
 
 
-== Modules DIMM
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/dimms-overview-supertask-concept.html["Modules DIMM"]
+ a| 
 Vous devez remplacer un module DIMM (module de mémoire double en ligne) en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux.
 
 
 
-== Disques
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Disques"]
+ a| 
 Un lecteur est un périphérique qui fournit le support de stockage physique pour les données.
 
 
 
-== Ventilateurs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/fans-overview-requirements-replacing2-concept.html["Ventilateurs"]
+ a| 
 Chaque tiroir contrôleur ou tiroir disque EF300 ou EF600 comprend cinq ventilateurs pour assurer la climatisation du contrôleur
 
 
 
-== Cartes d'interface hôte (HIC)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html["Cartes d'interface hôte (HIC)"]
+ a| 
 Une carte d'interface hôte (HIC) doit être installée dans un boîtier de contrôleur. Le contrôleur EF600 inclut des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.
 
 
 
-== Protocole de port hôte
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html["Protocole de port hôte"]
+ a| 
 Vous pouvez convertir le protocole d'un hôte en un protocole différent afin d'établir la compatibilité et la communication.
 
 
 
-== Blocs d'alimentation
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/power-overview-requirements2-concept.html["Blocs d'alimentation"]
+ a| 
 Une alimentation électrique fournit une source d'alimentation redondante dans un tiroir contrôleur.
 
 
 
-== Cartes d'extension SAS
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html["Cartes d'extension SAS"]
+ a| 
 Une carte d'extension SAS peut être installée dans un boîtier de contrôleur. Le contrôleur EF300 prend en charge l'extension SAS.
+
+|===

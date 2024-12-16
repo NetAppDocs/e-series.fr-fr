@@ -11,7 +11,7 @@ summary: Si vous mettez à niveau les contrôleurs E2800 et E5700 alors que la f
 
 
 [role="lead"]
-Si vous mettez à niveau les contrôleurs E2800 et E5700, la fonctionnalité de sécurité des disques de ces contrôleurs verrouille les disques partiellement, externes ou internes. Si la fonction sécurité du lecteur est activée, vous devez déverrouiller manuellement ces lecteurs.
+La fonction de sécurité du lecteur de ces contrôleurs verrouille les lecteurs partiellement, en externe ou en interne. Si la fonction sécurité du lecteur est activée, vous devez déverrouiller manuellement ces lecteurs.
 
 Suivre la procédure appropriée pour :
 

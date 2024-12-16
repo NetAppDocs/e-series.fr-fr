@@ -70,20 +70,20 @@ Conservez tous les matériaux d'emballage.
 
 . Appuyez sur le bouton de déverrouillage du disque défectueux.
 +
-image::../media/drw_drive_latch_maint-e5700.gif[loquet d'entraînement de l'arrière du système e5700]
+image::../media/drw_drive_latch_maint-e5700.gif[Appuyez sur le bouton de déverrouillage pour retirer le disque défectueux]
 
 +
 ** Pour les disques des tiroirs contrôleurs E5724 ou les tiroirs disques DE224C, le bouton de libération est situé en haut du disque. La poignée de came sur les ressorts d'entraînement s'ouvre partiellement et l'entraînement se dégage du fond de panier central.
 
 
 . Ouvrez la poignée de came et faites glisser légèrement l'entraînement vers l'extérieur.
-. Attendre 30 secondes.
+. Attendre 60 secondes.
 . A l'aide des deux mains, retirez le disque du shelf.
 . Placez le lecteur sur une surface antistatique avec amorti, à l'écart des champs magnétiques.
-. Attendez 30 secondes que le logiciel reconnaisse que le lecteur a été retiré.
+. Attendez 60 secondes que le logiciel reconnaisse que le lecteur a été retiré.
 +
 
-NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 30 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
+NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
 
 
 
@@ -119,7 +119,7 @@ Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement p
 
 +
 ** La LED d'alimentation est allumée ou clignote et la LED d'avertissement est éteinte : indique que le nouveau disque fonctionne correctement.
-** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 30 secondes, puis réinstallez-le.
+** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 60 secondes, puis réinstallez-le.
 ** La LED d'avertissement est allumée : indique que le nouveau disque est susceptible d'être défectueux. Remplacez-le par un autre lecteur neuf.
 
 

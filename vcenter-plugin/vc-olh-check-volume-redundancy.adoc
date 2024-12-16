@@ -11,7 +11,7 @@ summary: 'Vous pouvez vérifier la redondance d"un volume dans un pool ou un gro
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

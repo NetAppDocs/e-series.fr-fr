@@ -10,7 +10,7 @@ summary: 'Pour accélérer le processus de création de volumes, vous pouvez ign
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

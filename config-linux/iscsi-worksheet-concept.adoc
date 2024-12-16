@@ -19,7 +19,7 @@ Vous pouvez générer et imprimer un fichier PDF de cette page, puis utiliser la
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
 
-image::../media/50001_01_conf-lin.gif[50001 01 conf lin]
+image::../media/50001_01_conf-lin.gif[Configuration réseau iSCSI]
 
 
 

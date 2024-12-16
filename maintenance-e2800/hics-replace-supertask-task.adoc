@@ -204,7 +204,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 contrôleur attn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache actif sur le contrôleur E2800]
 
 +
 *(1)* _cache LED active_
@@ -214,7 +214,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 cont
 La figure suivante illustre un tiroir contrôleur E2812, un tiroir contrôleur E2824 ou une baie Flash EF280 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -226,7 +226,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E2860 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 ajouter la cartouche de contrôleur maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -263,7 +263,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interne led maint e2800 active]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[Voyant cache interne actif]
 
 +
 *(1)* _LED active cache interne_
@@ -282,7 +282,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Réinstallez HIC sur la carte contrôleur]
 
 +
 *(1)* _carte d'interface hôte_
@@ -296,7 +296,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 . À l'aide d'un tournevis cruciforme n° 1, fixez la nouvelle carte HIC sur le boîtier du contrôleur à l'aide des quatre vis que vous avez retirées précédemment.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Réinstallez le cache sur le contrôleur. »]
 
 
 
@@ -313,7 +313,7 @@ Après avoir installé le HIC, réinstallez le boîtier du contrôleur dans le s
 La figure suivante illustre un tiroir contrôleur E2824 ou une baie Flash EF280 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Réinstallez le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -325,7 +325,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E2860 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 ajouter la cartouche de contrôleur maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif['Réinstallez le boîtier du contrôleur']
 
 +
 *(1)* _canister_
@@ -369,7 +369,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["LED du contrôleur E2800 »"]
 +
 *(1)* _voyant attention (ambre)_
 
@@ -463,7 +463,7 @@ NOTE: Effectuez cette tâche uniquement si votre matrice de stockage dispose d'u
 NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg voyant attn 7s maint. e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[LED du contrôleur E2800 »]
 
 +
 *(1)* _voyant attention (ambre)_

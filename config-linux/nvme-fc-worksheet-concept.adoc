@@ -19,7 +19,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche t
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au contrôleur.
 
-image::../media/nvme_fc_direct_topology.png[topologie directe nnvme fc]
+image::../media/nvme_fc_direct_topology.png[Exemple de topologie de connexion directe]
 
 * Port 1 de l'adaptateur HBA hôte 1 et port 1 du contrôleur A
 * Port 2 de l'adaptateur HBA hôte 1 et port 1 du contrôleur B
@@ -37,7 +37,7 @@ image::../media/nvme_fc_direct_topology.png[topologie directe nnvme fc]
 
 Dans une topologie en structure, un ou plusieurs commutateurs sont utilisés. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste des commutateurs pris en charge.
 
-image::../media/nvme_fc_fabric_topology.png[topologie de la structure fc nvme]
+image::../media/nvme_fc_fabric_topology.png[Exemple de topologie de connexion de commutateur]
 
 
 

@@ -11,7 +11,7 @@ summary: Redimensionnez un volume pour augmenter sa capacité indiquée.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

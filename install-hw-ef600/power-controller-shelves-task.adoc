@@ -27,7 +27,7 @@ Assurez-vous de procéder comme suit :
 
 
  a| 
-image:../media/power_cable_inst-hw-ef600.png[""]
+image:../media/power_cable_inst-hw-ef600.png["Câbles d'alimentation"]
  a| 
 * Câbles d'alimentation*
 
@@ -37,7 +37,7 @@ image:../media/power_cable_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/cabling_power.png[""]
+image:../media/cabling_power.png["Câblage d'alimentation EF600/EF300"]
 
 |===
 . Connectez les deux câbles d'alimentation, un de chaque contrôleur, à deux unités de distribution d'alimentation séparées dans l'armoire ou le rack.

@@ -13,4 +13,4 @@ summary: Utilisez le workflow de configuration de Windows Express.
 [role="lead"]
 Ce workflow vous guide dans la méthode expresse de configuration de votre baie de stockage et de SANtricity System Manager pour mettre le stockage à la disposition d'un hôte Windows.
 
-image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[1130 flw sys mgr windows guide tous les protocoles]
+image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[Flux de production du guide Windows Express]

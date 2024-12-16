@@ -37,7 +37,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 La figure suivante illustre un tiroir contrôleur E2812, un tiroir contrôleur E2824 ou une baie Flash EF280 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[réinstallation du contrôleur de lecteur 24]
 
 +
 *(1)* _canister_
@@ -49,7 +49,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E2860 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 ajouter la cartouche de contrôleur maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[réinstallation du contrôleur de lecteur 60]
 
 +
 *(1)* _canister_

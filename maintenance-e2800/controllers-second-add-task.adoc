@@ -39,7 +39,7 @@ Vérifier que le nouveau contrôleur possède la même référence que le contr�
 . Déballez le nouveau boîtier du contrôleur et placez-le sur une surface plane et sans électricité statique.
 . Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 dwg e2800 labels maint e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[Adresse MAC et numéro de référence des FRU sur le contrôleur E2800]
 
 +
 *(1)* _adresse MAC:_ l'adresse MAC du port de gestion 1 (« P1 »). Si vous avez utilisé DHCP pour obtenir l'adresse IP du contrôleur d'origine, vous devez disposer de cette adresse pour vous connecter au nouveau contrôleur.
@@ -50,7 +50,7 @@ image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 dwg e2800 labels maint e2
 . Dans le Gestionnaire système SANtricity, localisez la référence de remplacement du boîtier du contrôleur installé.
 +
 .. Sélectionnez *matériel*.
-.. Recherchez le tiroir contrôleur, marqué par l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Icône du contrôleur"].
 .. Cliquez sur l'icône du contrôleur.
 .. Sélectionnez le contrôleur et cliquez sur *Suivant*.
 .. Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
@@ -88,7 +88,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Installer HIC sur le contrôleur]
 
 +
 *(1)* _carte d'interface hôte_
@@ -102,7 +102,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 . À l'aide d'un tournevis cruciforme n° 1, fixez la nouvelle carte HIC sur le boîtier du contrôleur à l'aide des quatre vis que vous avez retirées précédemment.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Installez le cache]
 
 . Réinstallez le couvercle sur le boîtier du contrôleur en faisant glisser le couvercle de l'arrière vers l'avant jusqu'à ce que le bouton s'enclenche.
 . Mettez le boîtier du contrôleur de côté jusqu'à ce que vous soyez prêt à l'installer.
@@ -286,7 +286,7 @@ Installez un second boîtier de contrôleur pour modifier une configuration rect
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
 +
-image::../media/28_dwg_e2824_add_controller_canister.gif[28 dwg e2824 ajout de cartouche de contrôleur]
+image::../media/28_dwg_e2824_add_controller_canister.gif[Poser le deuxième boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -312,7 +312,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["LED du contrôleur E2800"]
 +
 *(1)* _voyant attention (ambre)_
 
@@ -380,7 +380,7 @@ Le bouton Modifier la propriété est activé.
 
 .. Pour chaque volume que vous souhaitez redistribuer, sélectionnez *contrôleur B* dans la liste *propriétaire préféré*.
 +
-image::../media/sam1130_ss_change_volume_ownership.gif[sam1130 ss modifier la propriété du volume]
+image::../media/sam1130_ss_change_volume_ownership.gif[Écran Gestionnaire système pour modifier la propriété du volume]
 
 .. Cliquez sur *changer la propriété*.
 +

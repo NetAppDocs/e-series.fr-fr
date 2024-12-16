@@ -10,7 +10,7 @@ summary: 'Affichez l"état du système à partir du plug-in de stockage pour vCe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

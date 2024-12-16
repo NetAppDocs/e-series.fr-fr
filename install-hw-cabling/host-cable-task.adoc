@@ -22,9 +22,12 @@ Une topologie DAS connecte directement les adaptateurs hôtes aux contrôleurs d
 La figure suivante montre un exemple de connexion. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles.
 
 .Deux hôtes et deux contrôleurs
-image::../media/topology_host_direct_generic_web_low.png[site web générique de l'hôte de topologie direct]
+image::../media/topology_host_direct_generic_web_low.png[Câblage entre deux hôtes et deux contrôleurs]
 
 *(1)* _Connectez directement chaque port d'adaptateur hôte aux ports d'hôte des contrôleurs._
+
+
+NOTE: Pour le modèle E4000, connectez-vous aux ports hôtes e0a et e0b.
 
 
 
@@ -35,8 +38,11 @@ Une topologie de commutateur utilise des commutateurs pour connecter les hôtes 
 La figure suivante montre un exemple de connexion. Pour les commutateurs offrant une fonctionnalité de provisionnement, il est conseillé d'isoler chaque paire cible et initiateur.
 
 .Deux hôtes et deux commutateurs
-image::../media/topology_host_fabric_generic.png[topologie hôte structure générique]
+image::../media/topology_host_fabric_generic.png[Câblage entre deux hôtes et deux switchs]
 
 *(1)* _Connectez directement chaque carte hôte au commutateur._
 
 *(2)* _Connectez directement chaque commutateur aux ports hôte des contrôleurs. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles._
+
+
+NOTE: Pour le modèle E4000, connectez-vous aux ports hôtes e0a et e0b.

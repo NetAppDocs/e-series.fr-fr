@@ -10,7 +10,7 @@ summary: Utilisez la fonctionnalité Add/Discover pour trouver et ajouter les ba
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

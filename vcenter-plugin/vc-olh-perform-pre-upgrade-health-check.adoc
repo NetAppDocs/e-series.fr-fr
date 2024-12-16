@@ -11,7 +11,7 @@ summary: 'Une vérification de l"état s"exécute dans le cadre du processus de 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

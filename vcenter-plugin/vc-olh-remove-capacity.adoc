@@ -11,7 +11,7 @@ summary: 'Vous pouvez supprimer des disques pour réduire la capacité d"un pool
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

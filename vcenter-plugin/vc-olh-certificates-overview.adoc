@@ -10,7 +10,7 @@ summary: 'La gestion des certificats vous permet de créer des demandes de signa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

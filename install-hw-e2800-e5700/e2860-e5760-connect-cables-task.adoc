@@ -39,14 +39,14 @@ Pour les exemples présentés dans cette section, vous avez besoin des câbles s
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Câbles SAS"]
  a| 
 *Câbles SAS*
 
 |===
 +
 .Exemple A : un tiroir contrôleur E2860 avec deux tiroirs disques DE460C dans une configuration SAS standard.
-image:../media/example_a_2860.png[""]
+image:../media/example_a_2860.png["Contrôleur E2860 en configuration SAS"]
 
 +
 .. Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
@@ -57,7 +57,7 @@ image:../media/example_a_2860.png[""]
 
 +
 .Exemple B : un tiroir contrôleur E2860 avec un tiroir disque DE460C dans une configuration SAS standard.
-image:../media/example_b_2860.png[""]
+image:../media/example_b_2860.png["Contrôleur E2860 en configuration SAS"]
 
 +
 .. Reliez le contrôleur A au module A.
@@ -73,7 +73,7 @@ Vous avez besoin des câbles suivants :
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Câbles d'alimentation"]
  a| 
 * Câbles d'alimentation*
 
@@ -97,7 +97,7 @@ Au cours de l'amorçage, l'écran à sept segments affiche la séquence répét�
 
 
  a| 
-*Exemple : les connexions d'alimentation se trouvent à l'arrière de l'étagère.*image:../media/trafford_power.png[""]
+*Exemple : les connexions d'alimentation se trouvent à l'arrière du shelf.* image:../media/trafford_power.png["Connexions d'alimentation à l'arrière du shelf"]
 
 |===
 

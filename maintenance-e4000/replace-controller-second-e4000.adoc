@@ -1,0 +1,343 @@
+---
+permalink: maintenance-e4000/replace-controller-second-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Ajouter un deuxième réservoir dans E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter un second canister dans la baie E4000.
+
+.Description de la tâche
+Ajout d'un second boîtier de contrôleur à la version simplex d'un tiroir contrôleur E4012. Cette procédure est également appelée conversion recto-verso, une procédure en ligne. Vous pouvez accéder aux données de la matrice de stockage pendant cette procédure.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Un nouveau boîtier de contrôleur portant le même numéro de pièce que le boîtier de contrôleur actuellement installé. (Voir l'étape 1 pour vérifier le numéro de pièce.)
+* Un bracelet antistatique ou prendre d'autres précautions antistatiques.
+* Un tournevis cruciforme n° 1.
+* Étiquettes permettant d'identifier les nouveaux câbles. Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"] ou au http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports de contrôleur.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : vérifier la référence du nouveau contrôleur
+
+Vérifier que le nouveau contrôleur possède la même référence que le contrôleur actuellement installé.
+
+.Étapes
+. Déballez le nouveau boîtier du contrôleur et placez-le sur une surface plane et sans électricité statique. Conservez tous les matériaux d'emballage à utiliser lors de l'expédition du boîtier du contrôleur défectueux.
+. Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
+. Dans le Gestionnaire système SANtricity, localisez la référence de remplacement du boîtier du contrôleur installé.
++
+.. Sélectionnez *matériel*.
+.. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur.
+.. Cliquez sur l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF de l'icône du contrôleur"].
+.. Sélectionnez le contrôleur et cliquez sur *Suivant*.
+.. Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
+
+
+. Vérifier que la référence de pièce de rechange pour le contrôleur installé est identique à celle de la référence FRU pour le nouveau contrôleur.
++
+
+CAUTION: *Perte possible d'accès aux données* — si les deux numéros de pièce ne sont pas les mêmes, ne pas tenter cette procédure. La présence de contrôleurs non concordants entraîne le verrouillage du nouveau contrôleur lorsque vous le mettez en ligne.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur. Effectuez les opérations suivantes dans System Manager :
+
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier *Téléchargements* de votre navigateur sous le nom *configurationData- <arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Étape 2 : installez la carte d'interface hôte
+
+Si le contrôleur actuellement installé inclut une carte d'interface hôte (HIC), vous devez installer le même modèle de HIC dans le second boîtier du contrôleur.
+
+.Étapes
+. Déballez le nouveau HIC et vérifiez qu'il est identique au HIC existant.
++
+
+CAUTION: *Perte possible d'accès aux données* : les HIC installés dans les deux boîtiers de contrôleur doivent être identiques. Si la HIC de remplacement n'est pas identique à la HIC que vous remplacez, ne pas effectuer cette procédure. La présence de circuits intégrés non concordants provoque le blocage du nouveau contrôleur lorsqu'il est connecté.
+
+. Retirez le cadre de la carte HIC en le faisant glisser hors du module de contrôleur.
+. Prenez la carte HIC et alignez-la sur le support de la carte mère.
+. Poussez doucement la carte vers le bas pour l'insérer dans la prise.
+. Serrez les trois vis moletées.
++
+
+CAUTION: Veillez à ne pas trop serrer les vis, car cela pourrait endommager la carte HIC.
+
+. Réinstallez le cadre de la carte HIC.
+
+
+
+
+== Étape 3 : collecte des données de support
+
+Collectez les données de support avant et après le remplacement d'un composant pour vous assurer que vous pouvez envoyer un ensemble complet de journaux au support technique si le remplacement ne résout pas le problème.
+
+.Étapes
+. Dans la page d'accueil de SANtricity System Manager, assurez-vous que la baie de stockage affiche un état optimal.
++
+Si le statut n'est pas optimal, utilisez le gourou de la restauration ou contactez le support technique pour résoudre le problème. Ne pas poursuivre cette procédure.
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte possible de données* — si vous continuez cette procédure pendant que des opérations d'E/S se produisent, vous risquez de perdre des données.
+
+
+
+
+
+
+
+== Étape 4 : changez la configuration en mode recto verso
+
+Avant d'ajouter un second contrôleur au tiroir du contrôleur, vous devez modifier la configuration en mode duplex en installant un nouveau fichier NVSRAM et en utilisant l'interface de ligne de commande pour définir la matrice de stockage en mode duplex. La version duplex du fichier NVSRAM est incluse dans le fichier de téléchargement du logiciel SANtricity OS (micrologiciel du contrôleur).
+
+.Étapes
+. Téléchargez le dernier fichier NVSRAM du site de support NetApp pour votre client de gestion.
++
+.. Dans le Gestionnaire système SANtricity, sélectionnez *support › Centre de mise à niveau*. Dans la zone intitulée « mise à niveau du logiciel SANtricity OS », cliquez sur *téléchargements de NetApp SANtricity OS*.
+.. Sur le site de support NetApp, sélectionnez *logiciel de contrôleur de système d'exploitation SANtricity E-Series*.
+.. Suivez les instructions en ligne pour sélectionner la version de NVSRAM que vous souhaitez installer, puis terminez le téléchargement du fichier. Assurez-vous de sélectionner la version recto verso de la NVSRAM (le fichier a “D” près de la fin de son nom).
++
+Le nom de fichier sera similaire à : *N290X-830834-D01.dlp*
+
+
+
+. Mettez à niveau les fichiers à l'aide de SANtricity System Manager.
++
+
+CAUTION: *Risque de perte de données ou risque d'endommagement de la baie de stockage* — ne modifiez pas la baie de stockage pendant la mise à niveau. Maintenez l'alimentation de la baie de stockage.
+
++
+Vous pouvez annuler l'opération pendant le contrôle d'intégrité de pré-mise à niveau, mais pas pendant le transfert ou l'activation.
+
++
+** Depuis SANtricity System Manager :
++
+... Sous *mise à niveau du logiciel SANtricity OS*, cliquez sur *commencer la mise à niveau*.
+... En regard de *Select Controller NVSRAM file*, cliquez sur *Browse*, puis sélectionnez le fichier NVSRAM que vous avez téléchargé.
+... Cliquez sur *Démarrer*, puis confirmez que vous souhaitez effectuer l'opération.
++
+La mise à niveau commence et les événements suivants se produisent :
+
++
+**** La vérification préalable à la mise à niveau commence. Si la vérification préalable à la mise à niveau de l'état du système échoue, utilisez le gourou de la restauration ou contactez le support technique afin de résoudre le problème.
+**** Les fichiers du contrôleur sont transférés et activés. Le temps nécessaire dépend de la configuration de votre matrice de stockage.
+**** Le contrôleur redémarre automatiquement pour appliquer les nouveaux paramètres.
+
+
+
+
+** Vous pouvez également utiliser la commande suivante de l'interface de ligne de commande pour effectuer la mise à niveau :
++
+[listing]
+----
+download storageArray NVSRAM file="filename" healthCheckMelOverride=FALSE;
+----
++
+Dans cette commande, `filename` est le chemin d'accès au fichier et le nom du fichier pour la version recto verso du fichier NVSRAM du contrôleur (le fichier portant le nom « D »). Placez le chemin du fichier et le nom du fichier entre guillemets (" "). Par exemple :
+
++
+[listing]
+----
+file="C:\downloads\N290X-830834-D01.dlp"
+----
+
+
+. (Facultatif) pour afficher la liste des mises à niveau, cliquez sur *Enregistrer le journal*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *latest-upgrade-log-TIMESTAMP.txt*.
+
++
+** Après la mise à niveau de la NVSRAM du contrôleur, vérifiez ce qui suit dans le Gestionnaire système SANtricity :
++
+*** Accédez à la page matériel et vérifiez que tous les composants s'affichent.
+*** Accédez à la boîte de dialogue Inventaire des logiciels et micrologiciels (accédez à *support › Centre de mise à niveau*, puis cliquez sur le lien *Inventaire des logiciels et micrologiciels*). Vérifiez les nouvelles versions du logiciel et du micrologiciel.
+
+
+** Lorsque vous mettez à niveau la NVSRAM du contrôleur, tous les paramètres personnalisés que vous avez appliqués à la NVSRAM existante sont perdus pendant le processus d'activation. Vous devez à nouveau appliquer les paramètres personnalisés à la NVSRAM une fois le processus d'activation terminé.
+
+
+. Définissez le paramètre de la matrice de stockage sur duplex à l'aide des commandes CLI. Pour utiliser l'interface de ligne de commande, vous pouvez ouvrir une invite de commande si vous avez téléchargé le pack de l'interface de ligne de commande.
++
+** À partir d'une invite de commande :
++
+... Utilisez la commande suivante pour passer de la baie de disques simplex à duplex :
++
+[listing]
+----
+set storageArray redundancyMode=duplex;
+----
+... Utiliser la commande suivante pour réinitialiser le contrôleur.
++
+[listing]
+----
+reset controller [a];
+----
+
+
+
+
+
+
+Après le redémarrage du contrôleur, un message d'erreur "contrôleur alternatif manquant" s'affiche. Ce message indique que le contrôleur A a a été correctement converti en mode duplex. Ce message persiste jusqu'à ce que vous installiez le second contrôleur et connectiviez les câbles hôtes.
+
+
+
+== Étape 5 : retirez le cache du contrôleur
+
+Retirez le cache du contrôleur avant d'installer le second contrôleur. Un espace vide contrôleur est installé dans les tiroirs contrôleurs qui ne disposent que d'un seul contrôleur.
+
+.Étapes
+. Appuyez sur le loquet de la poignée de came du cache du contrôleur jusqu'à ce qu'il se relâche, puis ouvrez la poignée de came vers la droite.
+. Faites glisser le boîtier du contrôleur vide hors de l'étagère et mettez-le de côté.
++
+Lorsque vous retirez le cache du contrôleur, un rabat se met en place pour bloquer la baie vide.
+
+
+
+
+
+== Étape 6 : installez le deuxième boîtier de contrôleur
+
+Installez un second boîtier de contrôleur pour modifier une configuration recto-verso.
+
+. Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
+. Alignez l'extrémité du module de contrôleur avec l'ouverture du châssis, puis poussez doucement le module de contrôleur à mi-course dans le système.
+. Avec la poignée de came en position ouverte, poussez fermement le module de contrôleur jusqu'à ce qu'il rencontre le fond de panier et soit bien en place, puis fermez la poignée de came en position verrouillée.
++
+
+NOTE: Ne forcez pas trop lorsque vous faites glisser le module de contrôleur dans le châssis pour éviter d'endommager les connecteurs. Le contrôleur commence à démarrer dès qu'il est assis dans le châssis.
+
+. Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.
+. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
+
+
+
+
+== Étape 7 : Ajout d'un second contrôleur complet
+
+Terminez le processus d'ajout d'un second contrôleur en vérifiant qu'il fonctionne correctement, réinstallez le fichier NVSRAM duplex, distribuez les volumes entre les contrôleurs et collectez les données de support.
+
+.Étapes
+. Mettez le contrôleur en ligne.
++
+.. Dans System Manager, accédez à la page *matériel*.
+.. Sélectionnez *Afficher le verso du contrôleur*.
+.. Sélectionner le contrôleur remplacé.
+.. Sélectionnez *placer en ligne* dans la liste déroulante.
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Mettez à jour les paramètres de la matrice du mode recto au mode recto verso à l'aide de la commande CLI suivante :
++
+`set storageArray redundancyMode=duplex;`
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Réinstallez la version duplex du fichier NVSRAM à l'aide du Gestionnaire système SANtricity.
++
+Cette étape garantit que les deux contrôleurs ont une version identique de ce fichier.
+
++
+
+CAUTION: Risque de perte de données ou risque d'endommagement de la baie de stockage : ne modifiez pas la baie de stockage pendant la mise à niveau. Maintenez l'alimentation de la baie de stockage.
+
++
+
+NOTE: Vous devez installer le logiciel SANtricity OS lorsque vous installez un nouveau fichier NVSRAM à l'aide du Gestionnaire système SANtricity. Si vous disposez déjà de la dernière version du logiciel SANtricity OS, vous devez réinstaller cette version.
+
++
+.. Cliquez sur *matériel › support › Centre de mise à niveau* pour vous assurer que la dernière version de SANtricity OS est installée. Au besoin, installez la dernière version.
+.. Dans System Manager, accédez au *Upgrade Center*.
+.. Sous *mise à niveau du logiciel SANtricity OS*, cliquez sur *commencer la mise à niveau*.
+.. Cliquez sur *Parcourir* et sélectionnez le fichier logiciel SANtricity OS.
+.. Cliquez sur *Parcourir* et sélectionnez le fichier NVSRAM du contrôleur.
+.. Cliquez sur *Démarrer* et confirmez que vous souhaitez effectuer l'opération.
++
+Le transfert du contrôle commence.
+
+
+
+. Après le redémarrage des contrôleurs, distribuer en option les volumes entre le contrôleur A et le nouveau contrôleur B.
++
+.. Sélectionnez *stockage › volumes*.
+.. Dans l'onglet tous les volumes, sélectionnez *plus › Modifier la propriété*.
+.. Tapez la commande suivante dans la zone de texte : `change ownership`
++
+Le bouton Modifier la propriété est activé.
+
+.. Pour chaque volume que vous souhaitez redistribuer, sélectionnez *contrôleur B* dans la liste *propriétaire préféré*.
+.. Cliquez sur *changer la propriété*.
++
+Lorsque le processus est terminé, la boîte de dialogue Modifier la propriété du volume affiche les nouvelles valeurs pour *propriétaire préféré* et *propriétaire actuel*.
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+.Et la suite ?
+Le processus d'ajout d'un second contrôleur est terminé. Vous pouvez reprendre les opérations normales.

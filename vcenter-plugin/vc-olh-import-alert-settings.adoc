@@ -11,7 +11,7 @@ summary: 'Importer les configurations d"alertes d"une matrice de stockage vers d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -69,7 +69,7 @@ Conservez tous les matériaux d'emballage.
 
 . Appuyez sur le bouton de déverrouillage du disque défectueux.
 +
-image::../media/drw_drive_latch_maint-e2800.gif[loquet d'entraînement drw maint. 2800]
+image::../media/drw_drive_latch_maint-e2800.gif[Appuyez sur le bouton de déverrouillage pour retirer le disque défectueux]
 
 +
 ** Pour les disques des tiroirs contrôleurs E2812 ou des tiroirs disques DE212C, le bouton de déblocage est situé à gauche du disque.
@@ -77,13 +77,13 @@ image::../media/drw_drive_latch_maint-e2800.gif[loquet d'entraînement drw maint
 
 
 . Ouvrez la poignée de came et faites glisser légèrement l'entraînement vers l'extérieur.
-. Attendre 30 secondes.
+. Attendre 60 secondes.
 . A l'aide des deux mains, retirez le disque du shelf.
 . Placez le lecteur sur une surface antistatique avec amorti, à l'écart des champs magnétiques.
-. Attendez 30 secondes que le logiciel reconnaisse que le lecteur a été retiré.
+. Attendez 60 secondes que le logiciel reconnaisse que le lecteur a été retiré.
 +
 
-NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 30 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
+NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
 
 
 
@@ -119,7 +119,7 @@ Procédez au remplacement du lecteur pour vérifier que le nouveau disque foncti
 . Vérifiez le voyant d'alimentation et la LED d'avertissement du disque que vous avez remplacé. (Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement peut s'allume. Toutefois, le voyant devrait s'éteindre en moins d'une minute.)
 +
 ** La LED d'alimentation est allumée ou clignote et la LED d'avertissement est éteinte : indique que le nouveau disque fonctionne correctement.
-** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 30 secondes, puis réinstallez-le.
+** Le voyant d'alimentation est éteint : indique que le lecteur n'est peut-être pas installé correctement. Retirez le lecteur, attendez 60 secondes, puis réinstallez-le.
 ** La LED d'avertissement est allumée : indique que le nouveau disque est susceptible d'être défectueux. Remplacez-le par un autre lecteur neuf.
 
 

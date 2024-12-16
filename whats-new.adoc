@@ -1,19 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.73 
+keywords: whats new, new features, SANtricity 11.90 
 summary: Nouvelles fonctionnalités de SANtricity OS. 
 ---
 = Nouveautés de SANtricity OS
 :allow-uri-read: 
 :experimental: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
-Le tableau suivant décrit les nouvelles fonctionnalités de SANtricity OS 11.8 pour la gestion intégrée des contrôleurs EF300, EF600, E2800/EF280 et E5700/EF570.
+Le tableau suivant décrit les nouvelles fonctionnalités des dernières versions de SANtricity OS pour la gestion intégrée des contrôleurs E4000, EF300, EF600, E2800/EF280 et E5700/EF570.
 
+
+
+== Nouvelles fonctionnalités de la version 11.90
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Nouveau modèle de système de stockage E4000
+ a| 
+Cette version présente le système de stockage économique E4000. Le E4000 prend en charge 12 et 60 lecteurs et une seule carte d'interface hôte (HIC) par contrôleur. Dans la version initiale, les cartes d'interface hôte prises en charge incluent iSCSI et Fibre Channel. Les systèmes de stockage E4000 et les autres systèmes de stockage E-Series peuvent être affichés et gérés dans Unified Manager.
+
+
+
+ a| 
+Capacité accrue pour les pools de disques dynamiques
+ a| 
+La capacité des pools de disques dynamiques (DDP) est passée à 12 po lorsque la capacité de chacun des disques du pool est supérieure à 23 To. Si la capacité d'un disque est inférieure à 23 To, la capacité du DDP est de 6 po.
+
+
+
+ a| 
+Augmentation des paramètres de numérisation des supports par défaut
+ a| 
+Le taux de numérisation des supports par défaut a été porté à 120 jours.
+
+
+
+ a| 
+Clé privée acceptée pour la gestion externe des clés
+ a| 
+Le fichier de requête de signature de certificat (CSR) généré en externe via des paires de clés privées et publiques peut désormais être importé via System Manager.
+
+
+
+ a| 
+La fonction de verrouillage de connexion est maintenant disponible pour les services Web
+ a| 
+Configurable via l'API REST uniquement, un nouveau paramètre de verrouillage de connexion est désormais disponible pour les services Web intégrés et proxy.
+
+|===
 
 
 == Nouvelles fonctionnalités de la version 11.80.1R1

@@ -53,12 +53,12 @@ Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performa
 
 
 .Description de la tâche
-Lors de la planification de votre réseau iSCSI, n'oubliez pas que le https://configmax.vmware.com/home["Valeurs maximales de configuration VMware"^] Le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d'éviter la configuration de chemins trop nombreux.
+Lors de la planification de votre réseau iSCSI, n'oubliez pas https://configmax.broadcom.com/home["Valeurs maximales de configuration VMware"^] que le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d'éviter la configuration de chemins trop nombreux.
 
 Par défaut, l'initiateur logiciel VMware iSCSI crée une seule session par cible iSCSI lorsque vous n'utilisez pas la liaison de port iSCSI.
 
 
-NOTE: La liaison du port iSCSI VMware est une fonctionnalité qui force tous les ports VMKernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Il doit être utilisé avec les baies présentant une adresse réseau unique pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison du port iSCSI. Pour plus d'informations, reportez-vous au http://kb.vmware.com/["Base de connaissances VMware"] Pour l'article concernant les considérations relatives à l'utilisation de la liaison du port iSCSI logiciel dans ESX/ESXi. Si l'hôte ESXi est relié au stockage d'un autre fournisseur, NetApp vous recommande d'utiliser des ports vmkernel iSCSI distincts pour éviter tout conflit avec la liaison des ports.
+NOTE: La liaison du port iSCSI VMware est une fonctionnalité qui force tous les ports VMKernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Il doit être utilisé avec les baies présentant une adresse réseau unique pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison du port iSCSI. Pour plus d'informations, reportez-vous à https://support.broadcom.com/["Base de connaissances VMware"] l'article de la pour en savoir plus sur les considérations relatives à l'utilisation de la liaison logicielle des ports iSCSI dans ESX/ESXi. Si l'hôte ESXi est relié au stockage d'un autre fournisseur, NetApp vous recommande d'utiliser des ports vmkernel iSCSI distincts pour éviter tout conflit avec la liaison des ports.
 
 Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaison de ports sur les baies de stockage E-Series. Voir https://www.netapp.com/media/17017-tr4789.pdf["Tr-4789 : Guide de configuration VMware pour l'intégration iSCSI SANtricity E-Series avec ESXi 6.x et 7.x."^] pour plus d'informations.
 
@@ -280,7 +280,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche s
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
 
-image::../media/50001_01_conf-vmw.gif[50001 01 conf]
+image::../media/50001_01_conf-vmw.gif[Identifiant du port iSCSI]
 
 
 

@@ -151,14 +151,14 @@ La LED verte cache actif située à l'arrière du contrôleur est allumée lorsq
 NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 contrôleur attn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED active du cache E2800]
 
 +
 *(1)* _cache LED active_
 
 . Appuyez sur le loquet de la poignée de came jusqu'à ce qu'il se libère, puis ouvrez la poignée de came vers la droite pour libérer le boîtier du contrôleur du fond de panier central.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retirer la cartouche de contrôleur simplex maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -191,7 +191,7 @@ Après avoir retiré le boîtier du contrôleur du shelf, retirez la batterie.
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interne led maint e2800 active]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[Voyant de cache interne actif]
 
 +
 *(1)* _cache interne actif_
@@ -202,7 +202,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Repérez le loquet de dégagement bleu de la batterie.
 . Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 retirer le bloc-batterie e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retirer la batterie du boîtier du contrôleur]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -225,7 +225,7 @@ Si le boîtier du contrôleur comporte une carte d'interface hôte (HIC), retire
 Il y a quatre vis : une sur le dessus, une sur le côté et deux sur l'avant.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Retirez la façade du boîtier du contrôleur]
 
 . Retirez la plaque HIC.
 . À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez les trois vis à molette qui fixent le HIC à la carte contrôleur.
@@ -235,7 +235,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 v
 CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retirez le HIC de la carte contrôleur]
 
 +
 *(1)* _carte d'interface hôte_
@@ -274,7 +274,7 @@ Vous devez insérer la bride métallique située à l'avant de la batterie dans 
 Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insérer la pile dans le bloc e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif['Réinstaller la batterie sur le boîtier du contrôleur']
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -290,11 +290,11 @@ CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de l
 +
 ** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Bride métallique correcte"]
 
 ** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Bride métallique incorrecte"]
 
 
 
@@ -318,7 +318,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 vis moletées maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Réinstallez HIC sur le contrôleur]
 
 +
 *(1)* _carte d'interface hôte_
@@ -332,7 +332,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 . À l'aide d'un tournevis cruciforme n° 1, fixez la carte HIC que vous avez retirée du boîtier de contrôleur d'origine sur le nouveau boîtier de contrôleur à l'aide de quatre vis.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 dwg e2800 vis à face arrière maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Réinstallez le cache sur le contrôleur. »]
 
 
 
@@ -347,7 +347,7 @@ Après avoir installé la batterie et le HIC, vous pouvez installer le nouveau b
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 retirer la cartouche de contrôleur simplex maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[Réinstallez le boîtier du contrôleur dans le tiroir contrôleur]
 
 +
 *(1)* _canister_
@@ -426,7 +426,7 @@ Mettez le tiroir contrôleur sous tension, collectez les données de support et 
 NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg voyant attn 7s maint. e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[LED du contrôleur E2800]
 
 +
 *(1)* _voyant attention (ambre)_

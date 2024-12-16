@@ -11,7 +11,7 @@ summary: 'Vous pouvez modifier le nom, le type de système d"exploitation hôte 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

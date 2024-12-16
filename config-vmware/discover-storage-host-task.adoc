@@ -19,5 +19,5 @@ Par défaut, un hôte ESXi effectue automatiquement une nouvelle analyse toutes 
 . Créez un ou plusieurs volumes et affectez-les à l'hôte ESXi.
 . Si vous utilisez un serveur vCenter, ajoutez l'hôte à l'inventaire du serveur.
 . Utilisez le client vSphere ou le client Web vSphere pour vous connecter directement à vCenter Server ou à l'hôte ESXi.
-. Pour savoir comment effectuer une nouvelle analyse du stockage sur un hôte ESXi, recherchez le https://kb.vmware.com/s/["Base de connaissances VMware"^] article sur ce sujet.
+. Pour obtenir des instructions sur la façon d'effectuer une nouvelle analyse du stockage sur un hôte ESXi, recherchez l' https://support.broadcom.com/["Base de connaissances VMware"^]article sur cette rubrique.
 

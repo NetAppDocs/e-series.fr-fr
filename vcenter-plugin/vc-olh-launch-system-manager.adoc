@@ -10,7 +10,7 @@ summary: 'Pour gérer une baie unique, utilisez l"option de lancement pour ouvri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

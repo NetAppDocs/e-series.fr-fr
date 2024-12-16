@@ -1,0 +1,385 @@
+---
+permalink: maintenance-e4000/replace-hic-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Remplacer HIC dans E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défectueuse dans une matrice E4000.
+
+.Description de la tâche
+Lorsque vous remplacez un HIC défectueux, vous devez mettre la matrice de stockage hors tension (simplex) ou mettre le contrôleur affecté hors ligne (duplex), remplacer le HIC et remettre l'alimentation (simplex) ou mettre le contrôleur en ligne (duplex).
+
+.Avant de commencer
+* Si vous disposez d'une configuration recto, planifiez une fenêtre de maintenance de temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès.
+* Assurez-vous de disposer des éléments suivants :
++
+** Des circuits intégrés compatibles avec votre ou vos contrôleurs.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Un tournevis cruciforme n° 1.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+
+CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur E4000 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, les deux contrôleurs et les deux circuits intégrés doivent être identiques dans une configuration en duplex. La présence de circuits intégrés incompatibles ou non concordants provoque le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+
+
+
+
+
+
+== Étape 1 : préparez-vous à remplacer le HIC
+
+Mettez le tiroir contrôleur (recto) hors tension ou mettez le contrôleur affecté hors ligne (recto verso) afin de pouvoir remplacer les circuits intégrés en toute sécurité.
+
+[role="tabbed-block"]
+====
+.Mettez le tiroir contrôleur hors tension (simplex)
+--
+.Étapes
+. Si possible, notez la version du logiciel SANtricity OS actuellement installée sur le contrôleur. Ouvrez le Gestionnaire système SANtricity et sélectionnez *support › Centre de mise à niveau › Afficher l'inventaire des logiciels et micrologiciels*.
+. Si la fonction de sécurité du lecteur est activée, assurez-vous qu'une clé enregistrée existe et que vous connaissez la phrase de passe requise pour l'installer.
++
+
+CAUTION: *Perte possible de l'accès aux données* — si tous les lecteurs de la matrice de stockage sont sécurisés, le nouveau contrôleur ne pourra pas accéder à la matrice de stockage tant que vous ne déverrouillerez pas les lecteurs sécurisés à l'aide de la fenêtre de gestion d'entreprise de SANtricity Storage Manager.
+
++
+Pour enregistrer la clé (peut ne pas être possible, selon l'état du contrôleur) :
+
++
+.. Dans le Gestionnaire système SANtricity, sélectionnez *Paramètres › système*.
+.. Sous *gestion des clés de sécurité*, sélectionnez *touche de sauvegarde*.
+.. Dans les champs *définir une phrase de passe/saisir à nouveau une phrase de passe*, entrez et confirmez une phrase de passe pour cette copie de sauvegarde.
+.. Cliquez sur *Backup*.
+.. Enregistrez vos informations de clé dans un emplacement sécurisé, puis cliquez sur *Fermer*.
+
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... *Sélectionnez support › Centre de support › Diagnostics*.
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. *Sélectionnez support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte possible de données* — si vous continuez cette procédure pendant que des opérations d'E/S se produisent, vous risquez de perdre des données.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Dans la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
+. Vérifiez que toutes les opérations ont été effectuées avant de passer à l'étape suivante.
+. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.
+. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+. Sélectionnez *revérification* dans Recovery Guru, et confirmez que le champ *OK pour supprimer* dans la zone Détails affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant. Les données de la matrice de stockage ne seront accessibles qu'après avoir remplacé le boîtier du contrôleur.
+
+
+--
+.Mettez le contrôleur hors ligne (duplex)
+--
+.Étapes
+. Déballez le nouveau boîtier du contrôleur et placez-le sur une surface plane et sans électricité statique.
++
+Conservez les matériaux d'emballage à utiliser lors de l'expédition du boîtier de contrôleur défectueux.
+
+. Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
+. Dans le Gestionnaire système SANtricity, recherchez la référence de remplacement du boîtier du contrôleur que vous remplacez.
++
+Lorsqu'un contrôleur présente une défaillance et doit être remplacé, la référence du remplacement est affichée dans la zone Détails du Recovery Guru. Si vous devez trouver ce numéro manuellement, procédez comme suit :
+
++
+.. Sélectionnez *matériel*.
+.. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur.
+.. Cliquez sur l'icône du contrôleur.
+.. Sélectionnez le contrôleur et cliquez sur *Suivant*.
+.. Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
+
+
+. Vérifiez que le numéro de référence de la référence de remplacement du contrôleur défectueux est identique à celui de la référence de l'unité remplaçable sur site du contrôleur de remplacement.
++
+
+CAUTION: *Perte possible d'accès aux données* — si les deux numéros de pièce ne sont pas les mêmes, ne pas tenter cette procédure. La présence de contrôleurs non concordants entraîne le verrouillage du nouveau contrôleur lorsque vous le mettez en ligne.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez *support › Centre de support › Diagnostics*.
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+[listing]
+----
+save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";
+----
+
+
+. Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les disques durs, sélectionnez *Afficher le verso du tiroir* pour afficher les contrôleurs.
+... Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
+... Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager à l'aide du contrôleur que vous tentez de mettre hors ligne, un message SANtricity System Manager indisponible s'affiche. Sélectionnez connexion à une autre connexion réseau pour accéder automatiquement au Gestionnaire système SANtricity à l'aide de l'autre contrôleur.
+
+
+
+** Vous pouvez également mettre les contrôleurs hors ligne en utilisant les commandes de l'interface de ligne de commandes suivantes :
++
+*Pour le contrôleur A* : `set controller [a] availability=offline`
+
++
+*Pour le contrôleur B* : `set controller [b] availability=offline`
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+. Sélectionnez *revérification* dans Recovery Guru, et confirmez que le champ *OK pour supprimer* dans la zone Détails affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
+
+
+--
+====
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Retirez le boîtier du contrôleur du système, puis retirez le couvercle du boîtier du contrôleur.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Desserrez le crochet et la sangle de boucle reliant les câbles au dispositif de gestion des câbles, puis débranchez les câbles système et les SFP (si nécessaire) du boîtier du contrôleur, en gardant la trace de l'endroit où les câbles ont été connectés.
++
+Laissez les câbles dans le périphérique de gestion des câbles de sorte que lorsque vous réinstallez le périphérique de gestion des câbles, les câbles sont organisés.
+
+. Retirez et mettez de côté les dispositifs de gestion des câbles des côtés gauche et droit du boîtier du contrôleur.
+. Appuyez sur le loquet de la poignée de la came jusqu'à ce qu'elle se libère, ouvrez complètement la poignée de la came pour libérer le boîtier du contrôleur du fond de panier central, puis, de deux mains, retirez le boîtier du contrôleur du châssis.
+. Retournez le boîtier du contrôleur et placez-le sur une surface plane et stable.
+. Ouvrez le capot en appuyant sur les boutons bleus situés sur les côtés du boîtier du contrôleur pour libérer le capot, puis faites pivoter le capot vers le haut et hors du boîtier du contrôleur.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Ouvrir le couvercle du boîtier du contrôleur.]
+
+
+
+
+
+== Étape 3 : remplacer la HIC
+
+Remplacer le HIC.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Déposer le HIC :
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retirer le HIC et la façade.]
+
++
+.. Retirez la façade HIC en la faisant glisser hors du module de contrôleur.
+.. Desserrez les vis moletées du HIC et soulevez-le.
+
+
+. Réinstallez le HIC :
++
+.. Alignez le support de la fiche HIC de remplacement sur le support de la carte mère, puis insérez doucement la carte dans le support.
+.. Serrez les trois vis moletées sur le HIC.
+.. Réinstallez le cache HIC.
+
+
+. Réinstallez le capot du module de contrôleur et verrouillez-le en place.
+
+
+
+
+== Étape 4 : réinstallez le boîtier du contrôleur
+
+Réinstallez le boîtier du contrôleur dans le châssis.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.
+. Retournez le boîtier du contrôleur et alignez l'extrémité sur l'ouverture du châssis.
+. Poussez doucement le boîtier du contrôleur à mi-chemin dans le système. Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.
++
+
+NOTE: N'insérez pas complètement le boîtier du contrôleur dans le châssis avant d'y être invité.
+
+. Recâblage du système, selon les besoins.
++
+Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
+
+. Terminer la réinstallation du boîtier du contrôleur :
++
+.. Avec la poignée de la came en position ouverte, poussez fermement le boîtier du contrôleur jusqu'à ce qu'il rencontre le fond de panier central et qu'il soit bien en place, puis fermez la poignée de la came en position verrouillée.
++
+
+NOTE: N'appliquez pas de force excessive lorsque vous faites glisser le boîtier du contrôleur dans le châssis pour éviter d'endommager les connecteurs.
+
++
+Si vous disposez d'une configuration recto verso, le contrôleur commence à démarrer dès qu'il est installé dans le châssis.
+
+.. Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.
+.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
+
+
+
+
+
+
+== Étape 5 : remplacement HIC complet
+
+Mettez le contrôleur sous tension (simplex) ou mettez-le en ligne (duplex), collectez les données de support et reprenez les opérations.
+
+[role="tabbed-block"]
+====
+.Mise sous tension du contrôleur (simplex)
+--
+.Étapes
+. Allumer les deux boutons d'alimentation à l'arrière du tiroir contrôleur.
++
+** N'éteignez pas les interrupteurs d'alimentation pendant le processus de mise sous tension, qui dure généralement 90 secondes ou moins.
+** Les ventilateurs de chaque shelf sont très bruyants lors du premier démarrage. Le bruit est normal au démarrage.
+
+
+. Une fois le contrôleur remis en ligne, vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et vérifiez que la batterie et le boîtier du contrôleur sont correctement installés. Si nécessaire, retirez et réinstallez le boîtier du contrôleur et la batterie.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique. Si nécessaire, collectez les données d'assistance de votre baie de stockage à l'aide de SANtricity System Manager.
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez collecter les données de support.
+.. Cliquez sur collecter.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+--
+.Mise en ligne du contrôleur (duplex)
+--
+.Étapes
+. Mettre le contrôleur en ligne à l'aide de SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les lecteurs, sélectionnez *Afficher le verso du tiroir*.
+... Sélectionnez le contrôleur que vous souhaitez placer en ligne.
+... Sélectionnez *placer en ligne* dans le menu contextuel et confirmez que vous souhaitez effectuer l'opération.
++
+Le système met le contrôleur en ligne.
+
+
+
+** Vous pouvez également remettre le contrôleur en ligne à l'aide des commandes CLI suivantes :
++
+*Pour le contrôleur A* : `set controller [a] availability=online`;
+
++
+*Pour le contrôleur B* : `set controller [b] availability=online`;
+
+
+
+. Une fois le contrôleur remis en ligne, vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et vérifiez que la batterie et le boîtier du contrôleur sont correctement installés. Si nécessaire, retirez et réinstallez le boîtier du contrôleur et la batterie.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique. Si nécessaire, collectez les données d'assistance de votre baie de stockage à l'aide de SANtricity System Manager.
+
+. Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
++
+.. Sélectionnez *stockage › volumes*. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez *plus › Modifier la propriété* pour afficher les propriétaires de volumes.
+.. Si les volumes appartiennent tous au propriétaire privilégié, passez à l'étape 5.
+.. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Aller à *plus › redistribuer les volumes*.
+.. Si seuls certains des volumes sont renvoyés à leur propriétaire préféré après la distribution automatique ou manuelle, vous devez vérifier la fonctionnalité Recovery Guru pour détecter les problèmes de connectivité hôte.
+.. Si aucun Recovery Guru n'est présent ou si, après avoir suivi les étapes de Recovery Guru, les volumes ne sont toujours pas renvoyés à leurs propriétaires préférés, contactez le support technique.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez collecter les données de support.
+.. Cliquez sur collecter.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+--
+====
+.Et la suite ?
+Le remplacement de votre carte d'interface hôte est terminé. Vous pouvez reprendre les opérations normales.

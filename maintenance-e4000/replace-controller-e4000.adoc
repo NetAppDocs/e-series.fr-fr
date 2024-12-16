@@ -1,0 +1,540 @@
+---
+permalink: maintenance-e4000/replace-controller-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Remplacez le contrôleur dans E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer un boîtier de contrôleur défectueux.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
+
+
+
+
+== Étape 1 : préparer le remplacement du contrôleur
+
+Préparez-vous à remplacer un boîtier de contrôleur en enregistrant la clé de sécurité du lecteur, en sauvegardant la configuration et en recueillant les données de support. Vous pouvez ensuite arrêter les opérations d'E/S de l'hôte, mettre le contrôleur hors ligne ou le mettre hors tension.
+
+[role="tabbed-block"]
+====
+.Mettez le tiroir contrôleur hors tension (simplex)
+--
+.Étapes
+. Si possible, notez la version du logiciel SANtricity OS actuellement installée sur le contrôleur. Ouvrez le Gestionnaire système SANtricity et sélectionnez *support › Centre de mise à niveau › Afficher l'inventaire des logiciels et micrologiciels*.
+. Si la fonction de sécurité du lecteur est activée, assurez-vous qu'une clé enregistrée existe et que vous connaissez la phrase de passe requise pour l'installer.
++
+
+CAUTION: *Perte possible de l'accès aux données* — si tous les lecteurs de la matrice de stockage sont sécurisés, le nouveau contrôleur ne pourra pas accéder à la matrice de stockage tant que vous ne déverrouillerez pas les lecteurs sécurisés à l'aide de la fenêtre de gestion d'entreprise de SANtricity Storage Manager.
+
++
+Pour enregistrer la clé (peut ne pas être possible, selon l'état du contrôleur) :
+
++
+.. Dans le Gestionnaire système SANtricity, sélectionnez *Paramètres › système*.
+.. Sous *gestion des clés de sécurité du lecteur*, sélectionnez *touche de sauvegarde*.
+.. Dans les champs *définir une phrase de passe/saisir à nouveau une phrase de passe*, entrez et confirmez une phrase de passe pour cette copie de sauvegarde.
+.. Cliquez sur *Backup*.
+.. Enregistrez vos informations de clé dans un emplacement sécurisé, puis cliquez sur *Fermer*.
+
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... *Sélectionnez support › Centre de support › Diagnostics*.
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. *Sélectionnez support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte possible de données* — si vous continuez cette procédure pendant que des opérations d'E/S se produisent, vous risquez de perdre des données.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Dans la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
+. Vérifiez que toutes les opérations ont été effectuées avant de passer à l'étape suivante.
+. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.
+. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+. Sélectionnez *revérification* dans Recovery Guru, et confirmez que le champ *OK pour supprimer* dans la zone Détails affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant. Les données de la matrice de stockage ne seront accessibles qu'après avoir remplacé le boîtier du contrôleur.
+
+
+--
+.Mettez le contrôleur hors ligne (duplex)
+--
+.Étapes
+. Déballez le nouveau boîtier du contrôleur et placez-le sur une surface plane et sans électricité statique.
++
+Conservez les matériaux d'emballage à utiliser lors de l'expédition du boîtier de contrôleur défectueux.
+
+. Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
+. Dans le Gestionnaire système SANtricity, recherchez la référence de remplacement du boîtier du contrôleur que vous remplacez.
++
+Lorsqu'un contrôleur présente une défaillance et doit être remplacé, la référence du remplacement est affichée dans la zone Détails du Recovery Guru. Si vous devez trouver ce numéro manuellement, procédez comme suit :
+
++
+.. Sélectionnez *matériel*.
+.. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur.
+.. Cliquez sur l'icône du contrôleur.
+.. Sélectionnez le contrôleur et cliquez sur *Suivant*.
+.. Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
+
+
+. Vérifiez que le numéro de référence de la référence de remplacement du contrôleur défectueux est identique à celui de la référence de l'unité remplaçable sur site du contrôleur de remplacement.
++
+
+CAUTION: *Perte possible d'accès aux données* — si les deux numéros de pièce ne sont pas les mêmes, ne pas tenter cette procédure. La présence de contrôleurs non concordants entraîne le verrouillage du nouveau contrôleur lorsque vous le mettez en ligne.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez *support › Centre de support › Diagnostics*.
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+** Vous pouvez également sauvegarder la base de données de configuration à l'aide de la commande CLI suivante :
++
+[listing]
+----
+save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";
+----
+
+
+. Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
++
+** Depuis SANtricity System Manager :
++
+... Sélectionnez *matériel*.
+... Si le graphique montre les disques durs, sélectionnez *Afficher le verso du tiroir* pour afficher les contrôleurs.
+... Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
+... Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager à l'aide du contrôleur que vous tentez de mettre hors ligne, un message SANtricity System Manager indisponible s'affiche. Sélectionnez connexion à une autre connexion réseau pour accéder automatiquement au Gestionnaire système SANtricity à l'aide de l'autre contrôleur.
+
+
+
+** Vous pouvez également mettre les contrôleurs hors ligne en utilisant les commandes de l'interface de ligne de commandes suivantes :
++
+*Pour le contrôleur A* : `set controller [a] availability=offline`
+
++
+*Pour le contrôleur B* : `set controller [b] availability=offline`
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+. Sélectionnez *revérification* dans Recovery Guru, et confirmez que le champ *OK pour supprimer* dans la zone Détails affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
+
+
+--
+====
+
+
+== Étape 2 : retirer le contrôleur défectueux
+
+Remplacez le réservoir défectueux par un neuf.
+
+.Étapes
+. Déposer un boîtier de contrôleur.
++
+.. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+.. Etiqueter chaque câble relié au boîtier du contrôleur.
+.. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+.. Si nécessaire, retirez les émetteurs-récepteurs SFP.
+.. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
++
+La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
+
+.. Appuyez sur le loquet de la poignée de la came jusqu'à ce qu'elle se libère, ouvrez complètement la poignée de la came pour libérer le boîtier du contrôleur du fond de panier central, puis, de deux mains, retirez le boîtier du contrôleur du châssis.
+.. Retournez le boîtier du contrôleur et placez-le sur une surface plane et stable.
+.. Ouvrez le capot en appuyant sur les boutons bleus situés sur les côtés du boîtier du contrôleur pour libérer le capot, puis faites pivoter le capot vers le haut et hors du boîtier du contrôleur.
+
+
+
+
+
+
+== Étape 3 : retirez la batterie
+
+Retirez la batterie du contrôleur défectueux et installez-la dans le contrôleur de remplacement.
+
+.Étapes
+. Retirez la batterie du boîtier du contrôleur :
++
+.. Appuyez sur le bouton bleu situé sur le côté du boîtier du contrôleur.
+.. Faites glisser la batterie vers le haut jusqu'à ce qu'elle se dégage des supports de fixation, puis retirez la batterie du boîtier du contrôleur.
+.. Débranchez la fiche mâle batterie en appuyant sur le clip situé sur la face avant de la fiche mâle batterie pour la débrancher de la prise, puis débranchez le câble de batterie de la prise.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Déposer la batterie.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Une icône]
+| Languette de déverrouillage de la batterie 
+
+
+ a| 
+image::../media/legend_icon_02.png[Deux icônes]
+| Connecteur d'alimentation de la batterie 
+|===
+
+
+. Déplacez la batterie dans le boîtier de contrôleur de remplacement et installez-la :
++
+.. Alignement de la batterie avec les supports de fixation sur la paroi latérale en tôle.
+.. Faites glisser la batterie vers le bas jusqu'à ce que le loquet de la batterie s'enclenche et s'enclenche dans l'ouverture de la paroi latérale.
++
+
+NOTE: Ne branchez pas encore la batterie. Vous le branchez une fois que les autres composants sont déplacés vers le boîtier de contrôleur de remplacement.
+
+
+
+
+
+
+
+== Étape 4 : retirez la HIC
+
+Retirez le cadre HIC et la carte PCIe HIC du module de contrôleur défectueux.
+
+.Étapes
+. Retirez le cadre HIC en le faisant glisser hors du module de contrôleur.
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retirer le HIC du module de contrôleur.]
+
+. Desserrez les vis moletées du HIC.
++
+
+NOTE: Vous pouvez desserrer les vis moletées avec vos doigts ou un tournevis.
+
+. Soulevez le HIC et mettez-le de côté sur une surface antistatique.
+
+
+
+
+== Étape 5 : déplacez les modules DIMM
+
+Retirez les modules DIMM du boîtier du contrôleur défectueux et installez-les dans le boîtier du contrôleur de remplacement.
+
+.Étapes
+. Localisez les modules DIMM sur le boîtier de votre contrôleur.
++
+
+NOTE: Notez l'emplacement du module DIMM dans les supports afin de pouvoir insérer le module DIMM au même emplacement dans le boîtier du contrôleur de remplacement et dans le bon sens. Retirez les modules DIMM du boîtier du contrôleur défectueux :
+
++
+.. Éjectez le module DIMM de son logement en écartant lentement les deux pattes d'éjection du module DIMM situées de chaque côté du module DIMM.
++
+Le module DIMM pivote légèrement vers le haut.
+
+.. Faites pivoter le module DIMM aussi loin que possible, puis faites-le glisser hors du support.
++
+
+NOTE: Tenez soigneusement le module DIMM par les bords pour éviter toute pression sur les composants de la carte de circuit DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Retirez les MODULES DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[Une icône]
+| Languettes d'éjection du module DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[Deux icônes]
+| DIMM 
+|===
+
+
+. Vérifier que la batterie n'est pas branchée dans le boîtier du contrôleur de remplacement.
+. Installez les modules DIMM dans le contrôleur de remplacement au même endroit qu'ils se trouvaient dans le contrôleur défectueux :
++
+.. Poussez délicatement, mais fermement, sur le bord supérieur du module DIMM jusqu'à ce que les languettes de l'éjecteur s'enclenchent sur les encoches situées aux extrémités du module DIMM.
++
+Le module DIMM s'insère bien dans le logement, mais devrait être facilement installé. Si ce n'est pas le cas, réalignez le module DIMM avec le logement et réinsérez-le.
+
++
+
+NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien aligné et complètement inséré dans le logement.
+
+
+
+. Répétez ces étapes pour l'autre module DIMM.
+
+
+
+
+== Étape 6 : installer le HIC
+
+Installer le HIC dans le boîtier de contrôleur de remplacement.
+
+.Étapes
+. Alignez le support de la fiche HIC de remplacement sur le support de la carte mère, puis insérez doucement la carte dans le support.
+. Serrez les trois vis moletées sur le HIC.
+. Réinstallez le cache HIC.
+
+
+
+
+== Étape 7 : installez la batterie
+
+Installer la batterie dans le boîtier de contrôleur de remplacement.
+
+.Étapes
+. Rebranchez la fiche de la batterie dans la prise située sur le boîtier du contrôleur.
++
+Assurez-vous que la fiche se verrouille dans la prise batterie de la carte mère.
+
+. Alignement de la batterie avec les supports de fixation sur la paroi latérale en tôle.
+. Faites glisser la batterie vers le bas jusqu'à ce que le loquet de la batterie s'enclenche et s'enclenche dans l'ouverture de la paroi latérale.
+. Réinstallez le couvercle du boîtier du contrôleur et verrouillez-le en place.
+
+
+
+
+== Étape 8 : remplacement complet du contrôleur
+
+Rétablissez la connexion au tiroir contrôleur, collectez les données du support et reprenez les opérations.
+
+[role="tabbed-block"]
+====
+.Mettez le tiroir contrôleur sous tension (simplex).
+--
+.Étapes
+. Installez le contrôleur de remplacement sur l'appliance.
++
+.. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
+.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'appareil.
+.. Déplacez la poignée de came vers la gauche pour verrouiller le contrôleur en place.
+.. Remplacez les câbles.
+.. Mettez le tiroir contrôleur sous tension.
+.. Attendez que le contrôleur E4000 redémarre.
+.. Déterminez la manière dont vous allez attribuer une adresse IP au contrôleur de remplacement.
++
+
+NOTE: Les étapes d'attribution d'une adresse IP au contrôleur de remplacement dépendent de la connexion du port de gestion à un réseau avec un serveur DHCP et de la sécurisation de tous les lecteurs.
+
++
+Si le port de gestion 1 est connecté à un réseau avec un serveur DHCP, le nouveau contrôleur obtient son adresse IP auprès du serveur DHCP. Cette valeur peut être différente de l'adresse IP du contrôleur d'origine.
+
+
+
+. Si la matrice de stockage est dotée de disques sécurisés, importez la clé de sécurité du lecteur ; sinon, passez à l'étape suivante. Suivez la procédure appropriée ci-dessous pour une matrice de stockage avec tous les disques sécurisés ou un mélange de disques sécurisés et non sécurisés.
++
+
+NOTE: _Disques non sécurisés_ sont des disques non attribués, des disques de secours globaux ou des disques faisant partie d'un groupe de volumes ou d'un pool qui n'est pas sécurisé par la fonction de sécurité du lecteur. Les lecteurs sécurisés sont des lecteurs attribués qui font partie d'un groupe de volumes sécurisé ou d'un pool de disques à l'aide de Drive Security.
+
++
+** *Disques sécurisés uniquement (pas de disques non sécurisés)* :
++
+... Accéder à l'interface de ligne de commande de la baie de stockage.
+... Chargez la NVSRAM simplex appropriée sur le contrôleur.
++
+Par exemple : `download storageArray NVSRAM file=\"N4000-881834-SG4.dlp\" forceDownload=TRUE;`
+
+... Vérifiez que le contrôleur est *optimal* après le chargement de la NVSRAM simplex.
+... Si vous utilisez une gestion externe des clés de sécurité, https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["configurer la gestion des clés externes sur le contrôleur"].
+... Si vous utilisez la gestion interne des clés de sécurité, entrez la commande suivante pour importer la clé de sécurité :
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+où ?
+
++
+**** `C:/file.slk` représente l'emplacement du répertoire et le nom de la clé de sécurité de votre lecteur
+**** `passPhrase` Est l'expression de passe nécessaire pour déverrouiller le fichier après l'importation de la clé de sécurité, le redémarrage du contrôleur et l'adoption par le nouveau contrôleur des paramètres enregistrés pour la matrice de stockage.
+
+
+... Passer à l'étape suivante pour vérifier que le nouveau contrôleur est optimal.
+
+
+** *Combinaison de disques sécurisés et non sécurisés* :
++
+... Collectez le pack de support et ouvrez le profil de la matrice de stockage.
+... Recherchez et enregistrez tous les emplacements des lecteurs non sécurisés, qui se trouvent dans le pack de support.
+... Mettez le système hors tension.
+... Retirez les lecteurs non sécurisés.
+... Remplacer le contrôleur.
+... Mettez le système sous tension.
+... Dans le Gestionnaire système SANtricity, sélectionnez *Paramètres › système*.
+... Dans la section gestion des clés de sécurité, sélectionnez *Créer/changer la clé* pour créer une nouvelle clé de sécurité.
+... Sélectionnez *déverrouiller les lecteurs sécurisés* pour importer la clé de sécurité que vous avez enregistrée.
+... Exécutez le `set allDrives nativeState` Commande CLI.
+... Le contrôleur va redémarrer automatiquement.
+... Attendez que le contrôleur s'amorce et que l'écran à sept segments indique le numéro du bac ou un L5 clignotant.
+... Mettez le système hors tension.
+... Réinstallez les disques non sécurisés.
+... Réinitialise le contrôleur en utilisant SANtricity System Manager.
+... Mettez le système sous tension et attendez que l'écran à sept segments affiche le numéro du bac.
+... Passer à l'étape suivante pour vérifier que le nouveau contrôleur est optimal.
+
+
+
+
+. Depuis SANtricity System Manager, vérifiez que le nouveau contrôleur est optimal.
++
+.. Sélectionnez *matériel*.
+.. Pour le tiroir contrôleur, sélectionnez *Afficher l'arrière du tiroir*.
+.. Sélectionnez le boîtier du contrôleur que vous avez remplacé.
+.. Sélectionnez *Paramètres d'affichage*.
+.. Vérifiez que le *Status* du contrôleur est optimal.
+.. Si l'état n'est pas optimal, mettez le contrôleur en surbrillance et sélectionnez *placer en ligne*.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+--
+.Mise en ligne du contrôleur (duplex)
+--
+.Étapes
+. Installez le contrôleur de remplacement sur l'appliance.
++
+.. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
+.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'appareil.
+.. Déplacez la poignée de came vers la gauche pour verrouiller le contrôleur en place.
+.. Remplacez les câbles.
+.. Si le contrôleur d'origine utilise DHCP pour l'adresse IP, localisez l'adresse MAC sur l'étiquette située à l'arrière du contrôleur de remplacement. Demandez à votre administrateur réseau d'associer le DNS/réseau et l'adresse IP du contrôleur que vous avez supprimé à l'adresse MAC du contrôleur de remplacement.
++
+
+NOTE: Si le contrôleur d'origine n'a pas utilisé DHCP pour l'adresse IP, le nouveau contrôleur adopte l'adresse IP du contrôleur que vous avez retiré.
+
+
+
+. Mettez le contrôleur en ligne.
++
+.. Dans System Manager, accédez à la page *matériel*.
+.. Sélectionnez *Afficher le verso du contrôleur*.
+.. Sélectionner le contrôleur remplacé.
+.. Sélectionnez *placer en ligne* dans la liste déroulante.
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+** Le voyant d'avertissement orange du contrôleur s'allume puis s'éteint, à moins qu'une erreur ne s'affiche.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Une fois le contrôleur reen ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Si nécessaire, redistribuez tous les volumes au propriétaire de votre choix à l'aide de SANtricity System Manager.
++
+.. Sélectionnez *stockage › volumes*.
+.. Sélectionnez *plus › redistribuer les volumes*.
+
+
+. Cliquez sur *matériel › support › Centre de mise à niveau* pour vous assurer que la dernière version du logiciel SANtricity OS (micrologiciel du contrôleur) est installée.
++
+Au besoin, installez la dernière version.
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+--
+====
+.Et la suite ?
+Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

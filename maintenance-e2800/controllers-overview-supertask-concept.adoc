@@ -36,9 +36,9 @@ Vous pouvez ajouter un second boîtier de contrôleur à la version simplex des 
 
 Les figures montrent un exemple de tiroir de contrôleur avant d'ajouter un second contrôleur (une cartouche de contrôleur et un cache de contrôleur) et après l'ajout d'un second contrôleur (deux boîtiers de contrôleur).
 
-image::../media/28_dwg_2800_controller_simplex.gif[contrôleur 28 dwg 2800 simplex]
+image::../media/28_dwg_2800_controller_simplex.gif[Configuration E2800 simplex]
 
-image::../media/28_dwg_2800_controller_duplex.gif[contrôleur duplex 28 dwg 2800]
+image::../media/28_dwg_2800_controller_duplex.gif[Configuration E2800 duplex]
 
 
 NOTE: Les figures montrent des exemples de boîtiers de contrôleur. Les ports hôte de vos boîtiers de contrôleur peuvent être différents.
@@ -91,7 +91,7 @@ NOTE: Le voyant d'avertissement orange du contrôleur s'éteint dès que les con
 ====
 
 
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 contrôleur attn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED d'avertissement E2800]
 
 *(1)* _LED attention_
 

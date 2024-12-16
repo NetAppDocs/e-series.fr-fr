@@ -10,7 +10,7 @@ summary: 'Pour optimiser les performances d"un groupe de volumes, vous devez sé
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

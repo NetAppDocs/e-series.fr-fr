@@ -111,7 +111,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 . Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
-image::../media/remove_controller_5.png[déposer le contrôleur 5]
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
@@ -119,7 +119,7 @@ image::../media/remove_controller_5.png[déposer le contrôleur 5]
 CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
 
 +
-image::../media/remove_controller_6.png[déposer le contrôleur 6]
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
 
 . Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 
@@ -144,10 +144,10 @@ NOTE: Une encoche située au bas du DIMM vous aide à aligner le DIMM pendant l'
 
 . Poussez lentement les deux languettes d'éjection du module DIMM de chaque côté du module DIMM pour éjecter le module DIMM de son logement, puis faites-le glisser hors du logement.
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Appuyez sur la languette de l'éjecteur située sur le logement DIMM]
 
 +
-image::../media/dimim_3.png[dime 3]
+image::../media/dimim_3.png[Retirez le module DIMM]
 
 +
 
@@ -183,7 +183,7 @@ NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien align�
 NOTE: Les modules DIMM s'adaptent bien. Vous devrez peut-être appuyer doucement d'un côté à la fois et le fixer à l'aide de chaque languette individuellement.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Insérez LES MODULES DIMM dans le logement et fixez-les à l'aide de languettes]
 
 
 
@@ -201,7 +201,7 @@ Après avoir installé les nouveaux modules DIMM, réinstallez le boîtier du co
 NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
 
 +
-image::../media/remove_controller_7.png[déposer le contrôleur 7]
+image::../media/remove_controller_7.png[Installez le module DIMM dans le slot du contrôleur]
 
 . Rebranchez tous les câbles.
 

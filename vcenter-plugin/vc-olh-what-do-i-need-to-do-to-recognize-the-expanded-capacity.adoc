@@ -10,7 +10,7 @@ summary: 'Si vous augmentez la capacité d"un volume, il est possible que l"hôt
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Dans la boîte de dialogue Add Capacity, tous les disques ne sont pas d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

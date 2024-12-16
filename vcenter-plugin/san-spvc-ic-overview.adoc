@@ -37,7 +37,7 @@ Le plug-in nécessite un serveur VMware vCenter Server Appliance déployé dans 
 
 Pour plus d'informations sur les communications dans l'environnement vCenter, reportez-vous à la figure suivante.
 
-image:../media/vcenter_communication2.png[""]
+image:../media/vcenter_communication2.png["Environnement de communication vCenter"]
 
 
 

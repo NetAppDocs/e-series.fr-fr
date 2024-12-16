@@ -10,7 +10,7 @@ summary: Conservez la protection contre les pertes de tiroirs et de tiroirs pour
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

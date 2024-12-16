@@ -22,7 +22,7 @@ NOTE: Seuls les ports de base optique d'un contrôleur E5700 peuvent être conve
 
 La figure suivante montre le système E5700 avec ses ports hôtes de base SFP+ (optiques) *(1)* et les deux ports IB HIC *(2)* en option.
 
-image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 avec 2 ports 100 g edr infiniband hic avec légende]
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Ports hôte et HIC sur le contrôleur E5700]
 
 
 

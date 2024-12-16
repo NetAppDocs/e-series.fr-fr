@@ -1,0 +1,65 @@
+---
+permalink: maintenance-e4000/replace-drive-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary: Avant de remplacer un lecteur E4000, vérifiez les exigences et les considérations. 
+---
+= Remplacement du lecteur E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer un lecteur E4000, vérifiez les exigences et les considérations.
+
+
+
+== Types de tiroirs
+
+Vous pouvez remplacer un disque par un tiroir contrôleur ou un tiroir disque de 12, 24 ou 60 disques.
+
+
+NOTE: Les tiroirs standard de 24 disques nécessitent des disques échelonnant. Lorsque vous insérez moins de 24 lecteurs dans un contrôleur E4000, vous devez alterner entre les deux moitiés du contrôleur. En commençant par l'extrémité gauche, puis en se déplaçant vers l'extrémité droite, placez les lecteurs un par un.
+
+
+
+== Gestion des disques
+
+Les lecteurs de votre matrice de stockage sont fragiles. Une manipulation incorrecte des disques est l'une des principales causes de défaillance des disques.
+
+Suivez ces règles pour éviter d'endommager les lecteurs de votre matrice de stockage :
+
+* Prévention des décharges électrostatiques (ESD) :
++
+** Conservez le lecteur dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+** N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
++
+Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux.
+
+** Conservez le sac ESD et tous les matériaux d'emballage au cas où vous devrez retourner un disque plus tard.
+** Portez toujours un bracelet antistatique relié à la terre sur une surface non peinte du châssis de votre boîtier de stockage.
++
+Si un bracelet n'est pas disponible, touchez une surface non peinte du châssis de votre boîtier de stockage avant de manipuler le lecteur.
+
+
+
+* Manipulez les disques avec précaution :
++
+** Utilisez toujours deux mains lors du retrait, de l'installation ou du transport d'un lecteur.
+** Ne forcez jamais un lecteur dans une étagère et n'utilisez pas de pression légère et ferme pour engager complètement le loquet d'entraînement.
+** Placez les entraînements sur des surfaces amorties et ne placez jamais de disques sur l'un de l'autre.
+** Ne pas heurter les entraînements contre d'autres surfaces.
+** Avant de retirer un lecteur d'une étagère, déverrouillez la poignée et attendez 60 secondes que le lecteur tourne.
+** Lors de l'expédition des disques, utilisez toujours l'emballage approuvé.
+
+
+* Éviter les champs magnétiques :
++
+** Tenir les disques à l'écart des dispositifs magnétiques.
++
+Les champs magnétiques peuvent détruire toutes les données du lecteur et causer des dommages irréparables au circuit d'entraînement.
+
+
+
+

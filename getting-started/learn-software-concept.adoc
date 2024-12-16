@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-software-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
 summary: 'Les systèmes E-Series incluent le logiciel SANtricity pour le provisionnement du stockage et d"autres tâches.' 
 ---
 = Présentation du logiciel SANtricity
@@ -36,56 +36,56 @@ System Manager offre de nombreuses fonctionnalités de gestion :
 
 
  a| 
-image:../media/sam1130_icon_performance.gif[""] *Performance*
+image:../media/sam1130_icon_performance.gif["Performances"] *Performances*
  a| 
 Affiche jusqu'à 30 jours de données de performances, notamment la latence d'E/S, les IOPS, l'utilisation du CPU et le débit.
 
 
 
  a| 
-image:../media/sam1130_icon_volumes.gif[""] *Stockage*
+image:../media/sam1130_icon_volumes.gif["Stockage"] *Stockage*
  a| 
 Provisionnez le stockage à l'aide de pools ou de groupes de volumes et créez des charges de travail applicatives.
 
 
 
  a| 
-image:../media/sam1130_icon_async_mirroring.gif[""] *Protection des données*
+image:../media/sam1130_icon_async_mirroring.gif["Protection des données"] *Protection des données*
  a| 
 Effectuez des sauvegardes et des reprises après incident à l'aide des snapshots, de la copie de volume et de la mise en miroir à distance.
 
 
 
  a| 
-image:../media/sam1130_icon_controllers.gif[""] *Matériel*
+image:../media/sam1130_icon_controllers.gif["Sous-jacent"] *Matériel*
  a| 
 Vérifiez l'état des composants et exécutez certaines fonctions associées à ces composants, telles que l'attribution de disques de secours.
 
 
 
  a| 
-image:../media/sam1130_icon_alerts.gif[""] *Alertes*
+image:../media/sam1130_icon_alerts.gif["Alertes"] *Alertes*
  a| 
 Informez les administrateurs des événements importants survenant sur la baie de stockage. Les alertes peuvent être envoyées par e-mail, des traps SNMP et des syslog.
 
 
 
  a| 
-image:../media/sam1140_icon_active_directory.gif[""] *Gestion de l'accès*
+image:../media/sam1140_icon_active_directory.gif["'Gestion des accès'"] *Gestion des accès*
  a| 
 Configurez l'authentification utilisateur qui exige que les utilisateurs se connectent au système avec des informations d'identification attribuées.
 
 
 
  a| 
-image:../media/sam1130_icon_settings.gif[""] *Paramètres système*
+image:../media/sam1130_icon_settings.gif["Paramètres système"] *Paramètres système*
  a| 
 Configurez d'autres fonctionnalités de performances du système, telles que le cache SSD et l'équilibrage automatique des charges.
 
 
 
  a| 
-image:../media/sam1130_icon_support.gif[""] *Support*
+image:../media/sam1130_icon_support.gif["Assistance"] *Support*
  a| 
 Affichez les données de diagnostic, gérez les mises à niveau et configurez AutoSupport, qui surveille l'état de santé d'une baie de stockage et envoie des interventions automatiques au support technique.
 
@@ -94,7 +94,7 @@ Affichez les données de diagnostic, gérez les mises à niveau et configurez Au
 
 == SANtricity Unified Manager
 
-Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. Une vue centrale permet de voir l'état des baies E-Series et EF-Series les plus récentes, notamment les systèmes E2800, EF280, EF300, E5700, EF570, Et EF600. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
+Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570 et EF600. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
 
 Unified Manager est installé sur un serveur de gestion avec le proxy de services Web. Pour accéder à Unified Manager, ouvrez un navigateur et entrez l'URL pointant vers le serveur sur lequel le proxy de services Web est installé.
 
@@ -104,56 +104,56 @@ Unified Manager offre de nombreuses fonctionnalités de gestion, notamment :
 
 
  a| 
-image:../media/artboard_9.png[""] *Découvrir les matrices de stockage*
+image:../media/artboard_9.png["Découvrir les baies de stockage"] *Découvrir les matrices de stockage*
  a| 
 Trouvez et ajoutez les baies de stockage que vous souhaitez gérer sur le réseau de votre entreprise. Vous pouvez alors afficher l'état de toutes les matrices de stockage à partir d'une seule page.
 
 
 
  a| 
-image:../media/artboard_11.png[""] *Lancement*
+image:../media/artboard_11.png["Lancement"] *Lancement*
  a| 
 Ouvrez une instance de System Manager pour effectuer des opérations de gestion individuelles sur une baie de stockage particulière.
 
 
 
  a| 
-image:../media/sam1130_icon_system.gif[""] *Paramètres d'importation*
+image:../media/sam1130_icon_system.gif["Importer les paramètres"] *Paramètres d'importation*
  a| 
 Effectuez une importation par lots d'une matrice de stockage vers plusieurs baies, notamment des paramètres d'alertes, de AutoSupport et de services d'annuaire.
 
 
 
  a| 
-image:../media/sam1130_icon_async_mirroring.gif[""] * Mise en miroir*
+image:../media/sam1130_icon_async_mirroring.gif["Mise en miroir"] *Mise en miroir*
  a| 
 Configurez des paires en miroir synchrones ou asynchrones entre deux baies de stockage.
 
 
 
  a| 
-image:../media/artboard_10.png[""] *Gérer les groupes*
+image:../media/artboard_10.png["Gérer les groupes"] *Gérer les groupes*
  a| 
 Organisez les baies de stockage en groupes pour une gestion simplifiée.
 
 
 
  a| 
-image:../media/sam1130_icon_upgrade_center.gif[""] *Centre de mise à niveau*
+image:../media/sam1130_icon_upgrade_center.gif["Centre de mise à niveau"] *Centre de mise à niveau*
  a| 
 Mettez à niveau le logiciel du système d'exploitation SANtricity sur plusieurs baies de stockage.
 
 
 
  a| 
-image:../media/sam1140_icon_certs.gif[""] * Certificats*
+image:../media/sam1140_icon_certs.gif["Certificats"] *Certificats*
  a| 
 Créez des demandes de signature de certificat (RSC), importez des certificats et gérez des certificats existants pour plusieurs matrices de stockage.
 
 
 
  a| 
-image:../media/sam1140_icon_active_directory.gif[""] *Gestion de l'accès*
+image:../media/sam1140_icon_active_directory.gif["Gestion des accès"] *Gestion des accès*
  a| 
 Configurez l'authentification utilisateur qui exige que les utilisateurs se connectent à Unified Manager avec les informations d'identification attribuées.
 

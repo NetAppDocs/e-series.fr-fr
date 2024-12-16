@@ -127,7 +127,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -139,7 +139,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -172,7 +172,7 @@ Après avoir retiré le boîtier du contrôleur du shelf, retirez la batterie.
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[Voyant de cache interne actif]
 
 +
 *(1)* _LED active cache interne_
@@ -183,7 +183,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 . Repérez le loquet de dégagement bleu de la batterie.
 . Déverrouillez la batterie en appuyant sur le loquet de déverrouillage vers le bas et en l'éloignant du boîtier du contrôleur.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 retirer le bloc-batterie e5700]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Déposer la batterie]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -221,7 +221,7 @@ Vous devez insérer la bride métallique située à l'avant de la batterie dans 
 Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 insérez la pile dans le logement e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Installez la batterie]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -237,11 +237,11 @@ CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de l
 +
 ** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Bride de batterie correcte"]
 
 ** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Bride de batterie incorrecte"]
 
 
 
@@ -258,7 +258,7 @@ Après avoir installé la nouvelle batterie, réinstallez le boîtier du contrô
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Réinstallez le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -267,7 +267,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _poignée de came_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Réinstallez le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -300,7 +300,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/e5700_hic_3_callouts_maint-e5700.gif["LED du contrôleur E5700"]
 +
 *(1)* _LED Host Link_
 

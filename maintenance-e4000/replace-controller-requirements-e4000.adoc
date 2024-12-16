@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e4000/replace-controller-requirements-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Conditions requises pour le remplacement du contrôleur E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer ou d'ajouter un contrôleur E4000, vérifiez les exigences et les considérations.
+
+Chaque boîtier de contrôleur contient une carte contrôleur et une batterie. Vous pouvez ajouter un second contrôleur à une configuration simplex ou remplacer un contrôleur défectueux.
+
+
+
+== Conditions requises pour l'ajout du second contrôleur
+
+Vous pouvez ajouter un second boîtier de contrôleur à la version simplex du tiroir contrôleur E4000. Avant d'ajouter un second contrôleur, vous devez disposer :
+
+* Un nouveau boîtier de contrôleur portant le même numéro de pièce que le boîtier de contrôleur actuellement installé.
++
+
+NOTE: Cela ne s'applique pas aux dispositifs StorageGRID.
+
+* Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) nécessaires pour connecter les nouveaux ports de contrôleur.
++
+Pour plus d'informations sur le matériel compatible, reportez-vous au https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"] ou au http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+
+* Pilote multivoie installé sur l'hôte pour que vous puissiez utiliser les deux contrôleurs. Reportez-vous à https://docs.netapp.com/us-en/e-series/config-linux/index.html["Configuration Linux Express"] la , https://docs.netapp.com/us-en/e-series/config-windows/index.html["Configuration Windows Express"] à la ou https://docs.netapp.com/us-en/e-series/config-vmware/index.html["Configuration VMware Express"] à la pour obtenir des instructions.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Un tournevis cruciforme n° 1.
+* Étiquettes permettant d'identifier les nouveaux câbles.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+Vous pouvez également effectuer certaines opérations à l'aide de l'interface de ligne de commandes. Pour SANtricity System Manager (version 11.60 et ultérieure), vous pouvez télécharger le pack de l'interface de ligne de commandes (fichier zip) depuis System Manager. Pour ce faire, accédez à *Paramètres > système > modules complémentaires > interface de ligne de commande* dans System Manager. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
+
+
+
+
+
+== Conditions requises pour remplacer le contrôleur
+
+Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retirer la batterie, le HIC et les modules DIMM du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
+
+Vous pouvez déterminer si le boîtier de contrôleur est défectueux de deux façons :
+
+* Le gourou de la restauration de SANtricity System Manager vous indique de remplacer le boîtier du contrôleur.
+* La LED d'avertissement orange sur le boîtier du contrôleur est allumée, ce qui indique que le contrôleur est défectueux.
+
+
+Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
+
+* Un boîtier de contrôleur de remplacement portant le même numéro de pièce que le boîtier de contrôleur que vous remplacez.
+* Un bracelet antistatique ou d'autres précautions antistatiques.
+* Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+* Tournevis cruciforme n° 1.
+* Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+Vous pouvez également effectuer certaines opérations à l'aide de l'interface de ligne de commandes. Pour SANtricity System Manager (version 11.60 et ultérieure), vous pouvez télécharger le pack de l'interface de ligne de commandes (fichier zip) depuis System Manager. Pour ce faire, accédez à *Paramètres > système > modules complémentaires > interface de ligne de commande* dans System Manager. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.
+
+
+
+
+
+=== Configuration du mode recto verso requise
+
+Si le tiroir contrôleur est doté de deux contrôleurs (configuration duplex), vous pouvez remplacer un absorbeur de contrôleurs alors que votre baie de stockage est sous tension et effectuer des opérations d'E/S sur l'hôte, tant que les conditions suivantes sont vraies :
+
+* Le second boîtier du contrôleur situé sur le shelf présente un état optimal.
+* Le champ *OK à supprimer* de la zone Détails du gourou de la restauration dans le Gestionnaire de système SANtricity affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.
+
+
+
+
+=== Configuration requise pour la configuration recto
+
+Si vous ne disposez que d'un seul boîtier de contrôleur (configuration simplex), les données de la matrice de stockage ne seront pas accessibles tant que vous n'aurez pas remplacé le boîtier de contrôleur. Vous devez arrêter les opérations d'E/S de l'hôte et mettre la baie de stockage hors tension.

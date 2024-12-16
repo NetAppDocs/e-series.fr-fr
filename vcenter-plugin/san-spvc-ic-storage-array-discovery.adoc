@@ -10,7 +10,7 @@ summary: 'Utilisez l"interface Plug-in pour vCenter pour découvrir les adresses
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

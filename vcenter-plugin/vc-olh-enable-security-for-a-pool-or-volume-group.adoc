@@ -11,7 +11,7 @@ summary: 'Vous pouvez activer la sécurité des disques pour un pool ou un group
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

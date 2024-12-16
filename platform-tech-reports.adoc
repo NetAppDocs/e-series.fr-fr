@@ -6,7 +6,12 @@ summary: Rapports techniques sur les E-Series
 ---
 = Parcourir les rapports techniques sur la plateforme
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur les plateformes E-Series. Les liens vous mènent à un autre site de documentation.
 
 
 
@@ -28,8 +33,8 @@ summary: Rapports techniques sur les E-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800 : présentation des fonctionnalités des baies EF600*"] |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800 : présentation des fonctionnalités des baies EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001 : présentation des fonctionnalités des baies E4000*"^] |  
 
 
-| Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF600 et les nouvelles fonctionnalités de SANtricity OS. |  |  
+| Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF600 et les nouvelles fonctionnalités de SANtricity OS. | Décrit les fonctionnalités matérielles et logicielles de la baie hybride E4000 et les dernières fonctionnalités de SANtricity OS. |  
 |===

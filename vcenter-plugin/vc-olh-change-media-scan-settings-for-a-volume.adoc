@@ -11,7 +11,7 @@ summary: Une analyse des supports est une opération en arrière-plan qui analys
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -129,3 +129,16 @@ Le noeud final */certificats/rechargement* renvoie généralement une réponse h
 En utilisant une session de navigation privée ou incognito, vous pouvez ouvrir une connexion au serveur sans utiliser les données enregistrées des sessions de navigation précédentes.
 
 
+
+
+
+== Fonction de verrouillage de connexion
+
+Configurable via l'API REST uniquement, vous pouvez limiter le nombre de tentatives de connexion pour les services Web intégrés et proxy. En fonction de vos paramètres, la fonction de verrouillage est activée lorsque le nombre de tentatives de connexion pour les services Web est dépassé.
+
+.Étapes
+. Connectez-vous au link:install-login-task.html["Documentation interactive sur les API"].
+. Accédez au menu déroulant en haut à droite, puis sélectionnez *v2*.
+. Cliquez sur le noeud final *GET:/settings/Lockout* pour récupérer les paramètres de verrouillage.
+. Cliquez sur le noeud final *POST:/settings/Lockout*, puis cliquez sur *essayez-le* pour configurer les paramètres de verrouillage.
+

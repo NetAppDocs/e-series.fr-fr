@@ -10,7 +10,7 @@ summary: 'Si vous souhaitez que deux hôtes ou plus partagent l"accès au même 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

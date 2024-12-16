@@ -10,7 +10,7 @@ summary: 'Les volumes snapshot avec un volume de base DA ne peuvent pas être af
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

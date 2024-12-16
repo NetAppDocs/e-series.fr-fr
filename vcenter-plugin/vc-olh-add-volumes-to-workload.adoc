@@ -11,7 +11,7 @@ summary: Ajoutez des volumes non attribués à une nouvelle charge de travail ou
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

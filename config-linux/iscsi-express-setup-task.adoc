@@ -2,7 +2,7 @@
 permalink: config-linux/iscsi-express-setup-task.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: 'Vous pouvez utiliser le protocole iSCSI avec un hôte Linux d"un système E-Series.' 
 ---
 = Configuration iSCSI Express
 :allow-uri-read: 
@@ -10,3 +10,5 @@ summary:
 :imagesdir: ../media/
 
 
+[role="lead"]
+Vous pouvez utiliser le protocole iSCSI avec un hôte Linux d'un système E-Series.

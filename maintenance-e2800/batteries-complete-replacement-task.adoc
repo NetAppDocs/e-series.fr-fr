@@ -39,7 +39,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["Affichage LED E2800"]
 +
 *(1)* _voyant attention (ambre)_
 
@@ -122,7 +122,7 @@ NOTE: Effectuez cette tâche uniquement si votre matrice de stockage dispose d'u
 NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg voyant attn 7s maint. e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[Affichage LED E2800]
 
 +
 *(1)* _voyant attention (ambre)_

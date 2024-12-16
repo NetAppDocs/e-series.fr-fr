@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/index.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, 
 summary: Ce site contient des informations sur les versions, modèles et composants spécifiques des baies E-Series. 
 ---
 = Ce que ce site comprend
@@ -22,7 +22,7 @@ Ce site fournit des informations sur les versions et types de composants suivant
 
 * *Logiciel SANtricity* -- version 11.50 et ultérieure.
 * *Micrologiciel de contrôleur* -- version 8.50 et ultérieure.
-* *Types de contrôleurs* -- tous les modèles E2800, EF280, EF300, E5700, EF570, Des modèles EF600.
+* *Types de contrôleurs* -- tous les modèles E4000, E2800, EF280, EF300, E5700, EF570 et EF600.
 * *Types d'interface* -- Fibre Channel, iSCSI, iser, SAS et NVMe.
 * *Systèmes d'exploitation installés sur les hôtes* -- Linux, VMware et Windows.
 +

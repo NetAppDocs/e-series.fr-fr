@@ -10,7 +10,7 @@ summary: Si vous avez créé des volumes sur toute la capacité utilisable dispo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

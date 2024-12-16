@@ -22,5 +22,11 @@ Vous devez connecter les alimentations de chaque composant pour séparer les cir
 La source d'alimentation de votre système de stockage doit être capable de répondre aux besoins en alimentation du nouveau tiroir disque. Pour plus d'informations sur la consommation d'énergie de votre système de stockage, reportez-vous au https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 .Étape
+. Connectez un câble d'alimentation à chacune des unités d'alimentation de votre système de stockage.
 . Connectez les deux câbles d'alimentation de chaque shelf à différentes unités de distribution de l'alimentation dans l'armoire ou le rack.
+. Mettre les deux interrupteurs d'alimentation sous tension.
++
+
+NOTE: Les systèmes de stockage EF300 et EF600 ne disposent pas de switchs d'alimentation. Ils se mettent sous tension dès que les câbles sont connectés.
+
 

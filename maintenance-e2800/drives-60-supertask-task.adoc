@@ -96,7 +96,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Si la commande réussit, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte. Tous les disques du tiroir se trouvent dans des pools ou des groupes de volumes avec protection contre la perte de tiroirs. Accédez à <<Étape 2 : déposer les chaînes de câble>>.
 +
 
-CAUTION: *Dommages possibles aux lecteurs* -- attendez 30 secondes après la fin de la commande avant d'ouvrir le tiroir du lecteur. L'attente de 30 secondes permet aux disques de tourner, ce qui évite d'endommager le matériel.
+CAUTION: *Dommages possibles aux lecteurs* -- attendez 60 secondes après la fin de la commande avant d'ouvrir le tiroir du lecteur. L'attente de 60 secondes permet aux disques de tourner, ce qui évite d'endommager le matériel.
 
 ** Si un avertissement s'affiche indiquant que cette commande n'a pas pu être exécutée, vous devez arrêter l'activité d'E/S de l'hôte avant de retirer le tiroir. L'avertissement s'affiche car un ou plusieurs lecteurs du tiroir affecté se trouvent dans des pools ou des groupes de volumes sans protection contre la perte de tiroir. Pour éviter de perdre des données, procédez comme suit pour arrêter les activités d'E/S de l'hôte et pour mettre le tiroir disque et le tiroir contrôleur hors tension.
 
@@ -122,7 +122,7 @@ CAUTION: *Perte de données possible* -- si vous continuez cette procédure pend
 La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 contrôleur attn led maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache actif sur le contrôleur E2800]
 
 +
 *(1)* _cache LED active_
@@ -177,7 +177,7 @@ CAUTION: *Dommages matériels possibles* -- si le plateau d'entraînement est so
 La figure montre la poignée de la cartouche de ventilateur déployée et libérée de la languette orange sur la gauche.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[28 dwg e2860 de460c poignée de la cartouche du ventilateur avec légende e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Poignée du boîtier du ventilateur]
 
 +
 *(1)* _poignée du canister du ventilateur_
@@ -198,7 +198,7 @@ CAUTION: *Dommages possibles à l'équipement en raison d'une surchauffe* -- si 
 La chaîne de câbles supérieure est fixée au tiroir d'entraînement 1. La chaîne de câbles inférieure est fixée au tiroir d'entraînement 5. Les légendes du tiroir de disque 1 sont fournies.
 
 +
-image::../media/trafford_cable_rail_1_maint-e2800.gif[rail de câbles trafford 1 maint e2800]
+image::../media/trafford_cable_rail_1_maint-e2800.gif[Chaîne de câbles et connecteurs pour le tiroir d'entraînement]
 
 +
 *(1)* _chaîne de câble_
@@ -216,7 +216,7 @@ image::../media/trafford_cable_rail_1_maint-e2800.gif[rail de câbles trafford 1
 +
 .. A l'aide d'une lampe de poche, repérez l'anneau orange à l'extrémité de la chaîne de câbles qui est connectée au rail de guidage vertical dans le boîtier.
 +
-image::../media/trafford_cable_rail_3_maint-e2800.gif[rail de câbles trafford 3 maint e2800]
+image::../media/trafford_cable_rail_3_maint-e2800.gif[Anneau orange pour rail vertical et chaîne de câbles pour le tiroir d'entraînement]
 
 +
 *(1)* _bague orange sur rail de guidage vertical_
@@ -235,7 +235,7 @@ image::../media/trafford_cable_rail_3_maint-e2800.gif[rail de câbles trafford 3
 La figure montre le connecteur horizontal sur la droite et la chaîne de câbles déconnectée et partiellement tirée sur le côté gauche.
 
 +
-image::../media/trafford_cable_rail_2_maint-e2800.gif[rail de câbles trafford 2 maint e2800]
+image::../media/trafford_cable_rail_2_maint-e2800.gif[Anneau orange pour rail horizontal et chaîne de câbles pour le tiroir d'entraînement]
 
 +
 *(1)* _bague orange sur rail de guidage horizontal_
@@ -312,7 +312,7 @@ CAUTION: *Perte possible d'accès aux données* -- les champs magnétiques peuve
 . A l'aide des leviers étendus, tirez doucement le tiroir d'entraînement vers l'extérieur jusqu'à ce qu'il s'arrête. Ne retirez pas complètement le tiroir disque.
 . Si des volumes ont déjà été créés et affectés, utilisez un marqueur permanent pour noter l'emplacement exact de chaque disque. Par exemple, en utilisant le dessin suivant comme référence, inscrivez le numéro de logement approprié sur le dessus de chaque lecteur.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[tiroir dwg trafford avec disques durs associés maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Numéros des connecteurs de lecteur]
 
 +
 
@@ -324,7 +324,7 @@ CAUTION: **Perte possible d'accès aux données** -- Assurez-vous d'enregistrer 
 .. Relever la poignée d'entraînement à la verticale.
 .. Utilisez la poignée pour soulever le lecteur du tiroir.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 installez ou retirez le maint d'entraînement e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilisez la poignée de came pour soulever l'entraînement du tiroir]
 
 .. Placez le lecteur sur une surface plane et exempte d'électricité statique et à l'écart des dispositifs magnétiques.
 
@@ -333,7 +333,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6
 +
 .. Repérez le levier de déverrouillage en plastique de chaque côté du tiroir d'entraînement.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[92 pht de6600 levier de déverrouillage du tiroir de disque maint e2800]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Relâchez le levier pour retirer le tiroir]
 
 +
 *(1)* _levier de déverrouillage du tiroir d'entraînement_
@@ -357,7 +357,7 @@ Installez un nouveau tiroir de disque pour remplacer le tiroir défectueux.
 L'ensemble à bascule de verrouillage est une fonction de sécurité qui vous empêche d'ouvrir plusieurs tiroirs d'entraînement à la fois.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[92 pht de6600 verrouillage du tubeur à détail tubeur maint e2800]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[Contrepoids de verrouillage et guide de tiroir]
 
 +
 *(1)* _bascule de verrouillage_
@@ -419,7 +419,7 @@ CAUTION: *Risque de dysfonctionnement de l'équipement* -- Assurez-vous de faire
 La figure montre les rails de guidage horizontaux et verticaux du second tiroir de lecteur dans le boîtier.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[2860 dwg dans le cas des deux rails de guidage e2800]
+image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[Rails de guidage horizontaux et verticaux]
 
 +
 *(1)* _rail de guidage horizontal_
@@ -491,7 +491,7 @@ CAUTION: *Perte possible d'accès aux données* -- vous devez installer chaque l
 .. A l'aide des leviers étendus, tirez doucement le tiroir d'entraînement vers l'extérieur jusqu'à ce qu'il s'arrête. Ne retirez pas complètement le tiroir disque.
 .. Déterminez le lecteur à installer dans chaque logement en utilisant les notes que vous avez faites lors du retrait des lecteurs.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[tiroir dwg trafford avec disques durs associés maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Numéros des connecteurs de lecteur]
 
 .. Relever la poignée de l'entraînement à la verticale.
 .. Alignez les deux boutons en relief de chaque côté du lecteur avec les encoches du tiroir.
@@ -499,14 +499,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[tiroir dw
 La figure montre la vue du côté droit d'un lecteur, indiquant l'emplacement des boutons relevés.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c drive cru maint e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[Le bouton relevé du support de lecteur doit correspondre au canal de lecteur du tiroir de lecteur]
 
 +
 *(1)* _bouton relevé sur le côté droit de l'entraînement_
 
 .. Abaissez le lecteur tout droit, en veillant à ce qu'il soit complètement enfoncé dans la baie, puis faites pivoter la poignée du lecteur vers le bas jusqu'à ce qu'il s'enclenche.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 installez ou retirez le maint d'entraînement e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilisez la poignée pour abaisser le lecteur sur le tiroir]
 
 .. Répétez ces étapes pour installer tous les lecteurs.
 

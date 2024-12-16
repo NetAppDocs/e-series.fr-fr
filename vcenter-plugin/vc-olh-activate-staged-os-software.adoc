@@ -11,7 +11,7 @@ summary: 'Vous pouvez choisir d"activer le fichier logiciel à un moment plus op
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

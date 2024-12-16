@@ -11,7 +11,7 @@ summary: 'Importez la configuration de stockage d"une matrice de stockage vers d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

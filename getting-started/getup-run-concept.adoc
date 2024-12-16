@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
 summary: Pour mettre en service les systèmes E-Series, vous devez installer des composants matériels, configurer les systèmes hôtes et configurer le stockage. 
 ---
 = Démarrage rapide de la gamme E-Series
@@ -21,6 +21,7 @@ Pour installer le matériel E-Series, accédez aux instructions d'installation e
 * link:../install-hw-ef600/index.html["EF600 ou EF300 avec tiroir de 24 disques"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Gamme E2800/EF280 ou E5700/EF570 avec tiroirs de 12 ou 24 disques"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["E2800 ou E5700 Series avec tiroir de 60 disques"^]
+* link:../install-hw-e4000/index.html["Série E4000 avec tiroir de 12 ou 60 disques"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Installer l'armoire

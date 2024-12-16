@@ -6,6 +6,8 @@ summary: Montez le matériel en rack.
 ---
 = Matériel de montage en rack
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

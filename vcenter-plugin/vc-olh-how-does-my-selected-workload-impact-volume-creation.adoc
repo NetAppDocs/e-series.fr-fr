@@ -10,7 +10,7 @@ summary: 'Lors de la création du volume, vous êtes invité à fournir des info
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,228 @@
+---
+permalink: maintenance-e4000/replace-hic-upgrade-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Mettez à niveau HIC dans E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter le nombre de ports hôtes ou pour modifier les protocoles hôtes.
+
+.Description de la tâche
+* Lorsque vous mettez à niveau les circuits intégrés, vous devez mettre hors tension la baie de stockage, mettre à niveau les circuits intégrés et réappliquer l'alimentation.
+* Lors de la mise à niveau des circuits intégrés d'un contrôleur E4000, répétez toutes les étapes pour retirer le second contrôleur, mettre à niveau les circuits intégrés du second contrôleur et réinstaller le second contrôleur avant de remettre le tiroir du contrôleur sous tension.
+
+
+.Avant de commencer
+* Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous modifiez la configuration HIC. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.
+* Assurez-vous de disposer des éléments suivants :
++
+** Deux circuits intégrés compatibles avec vos contrôleurs.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une zone de travail plate et sans électricité statique.
+** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.
+** Un tournevis cruciforme n° 1.
+** Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)
++
+
+CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans un boîtier de contrôleur E4000 si cette HIC a été conçue pour un autre contrôleur E-Series. En outre, les deux contrôleurs et les deux HIC doivent être identiques. La présence de circuits intégrés incompatibles ou non concordants provoque le blocage des contrôleurs lorsque vous mettez le système sous tension.
+
+
+
+
+
+
+
+== Étape 1 : mettez le tiroir contrôleur hors ligne
+
+Mettez le tiroir contrôleur hors ligne afin de pouvoir mettre à niveau les HIC en toute sécurité.
+
+.Étapes
+. Dans la page d'accueil de SANtricity System Manager, assurez-vous que la baie de stockage affiche un état optimal.
++
+Si le statut n'est pas optimal, utilisez le gourou de la restauration ou contactez le support technique pour résoudre le problème. Ne pas poursuivre cette procédure.
+
+. Cliquez sur *support > Centre de mise à niveau* pour vous assurer que la dernière version de SANtricity OS est installée.
++
+Au besoin, installez la dernière version.
+
+. Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.
++
+Si un problème survient lorsque vous supprimez un contrôleur, vous pouvez utiliser le fichier enregistré pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques sur le contrôleur.
+
++
+** Depuis System Manager :
++
+... Sélectionnez *support > Centre de support > Diagnostics*.
+... Sélectionnez *collecter les données de configuration*.
+... Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre la matrice de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les opérations suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes de la baie.
++
+
+NOTE: Les étapes exactes permettant d'arrêter les opérations d'E/S de l'hôte dépendent du système d'exploitation hôte et de la configuration, qui dépassent le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S des hôtes dans votre environnement, essayez d'arrêter l'hôte.
+
++
+
+CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pendant les opérations d'E/S, l'application hôte risque de perdre l'accès aux données car le stockage n'est pas accessible.
+
+
+
+. Attendez que les données de la mémoire cache soient écrites sur les disques.
++
+La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
+
+. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Met le tiroir contrôleur hors tension.
++
+.. Etiqueter puis débrancher les deux câbles d'alimentation du tiroir contrôleur.
+.. Attendre que toutes les LED du tiroir contrôleur s'éteignent.
+
+
+
+
+
+
+== Étape 2 : déposer le boîtier du contrôleur
+
+Retirez le boîtier du contrôleur du système, puis retirez le couvercle du boîtier du contrôleur.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Desserrez le crochet et la sangle de boucle reliant les câbles au dispositif de gestion des câbles, puis débranchez les câbles système et les SFP (si nécessaire) du boîtier du contrôleur, en gardant la trace de l'endroit où les câbles ont été connectés.
++
+Laissez les câbles dans le périphérique de gestion des câbles de sorte que lorsque vous réinstallez le périphérique de gestion des câbles, les câbles sont organisés.
+
+. Retirez et mettez de côté les dispositifs de gestion des câbles des côtés gauche et droit du boîtier du contrôleur.
+. Appuyez sur le loquet de la poignée de la came jusqu'à ce qu'elle se libère, ouvrez complètement la poignée de la came pour libérer le boîtier du contrôleur du fond de panier central, puis, de deux mains, retirez le boîtier du contrôleur du châssis.
+. Retournez le boîtier du contrôleur et placez-le sur une surface plane et stable.
+. Ouvrez le capot en appuyant sur les boutons bleus situés sur les côtés du boîtier du contrôleur pour libérer le capot, puis faites pivoter le capot vers le haut et hors du boîtier du contrôleur.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Ouvrir le couvercle du boîtier du contrôleur.]
+
+
+
+
+
+== Étape 3 : mettre à niveau la HIC
+
+Déposer et remplacer le HIC.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Déposer le HIC :
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retirer le HIC du module de contrôleur.]
+
++
+.. Retirez le cache HIC en desserrant toutes les vis et en le faisant glisser hors du module de contrôleur.
+.. Desserrez les vis moletées du HIC et soulevez le HIC.
+
+
+. Réinstallez le HIC :
++
+.. Alignez le support de la fiche HIC de remplacement sur le support de la carte mère, puis insérez doucement la carte dans le support.
+.. Serrez les trois vis moletées sur le HIC.
+.. Réinstallez le cache HIC.
+
+
+. Réinstallez le capot du module de contrôleur et verrouillez-le en place.
+
+
+
+
+== Étape 4 : réinstallez le boîtier du contrôleur
+
+Réinstallez le boîtier du contrôleur dans le châssis.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.
+. Retournez le boîtier du contrôleur et alignez l'extrémité sur l'ouverture du châssis.
+. Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.
++
+
+NOTE: N'insérez pas complètement le boîtier du contrôleur dans le châssis avant d'y être invité.
+
+. Recâblage du système, selon les besoins.
++
+Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
+
+. Terminer la réinstallation du boîtier du contrôleur :
++
+.. Avec la poignée de la came en position ouverte, poussez fermement le boîtier du contrôleur jusqu'à ce qu'il rencontre le fond de panier central et qu'il soit bien en place, puis fermez la poignée de la came en position verrouillée.
++
+
+NOTE: N'appliquez pas de force excessive lorsque vous faites glisser le boîtier du contrôleur dans le châssis pour éviter d'endommager les connecteurs.
+
+.. Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.
+.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
+
+
+. Répétez <<step2_remove_controller_canister,Étape 2 : déposer le boîtier du contrôleur>>les étapes , <<step3_upgrade_hic,Étape 3 : mettre à niveau la HIC>>et <<step4_reinstall_controller,Étape 4 : réinstallez le boîtier du contrôleur>> pour le second contrôleur.
+
+
+
+
+== Étape 5 : effectuez la mise à niveau HIC
+
+Placez les deux contrôleurs en ligne, collectez les données de support et reprenez les opérations.
+
+.Étapes
+. Mettre les contrôleurs en ligne.
++
+.. Branchez les câbles d'alimentation.
+
+
+. Au démarrage des contrôleurs, vérifiez les LED du contrôleur.
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Une fois les contrôleurs remis en ligne, vérifiez que leur état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que les boîtiers du contrôleur sont correctement installés. Si nécessaire, déposer et réinstaller les boîtiers du contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support technique.
+
+. Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
++
+.. Sélectionnez *stockage › volumes*. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez *plus › Modifier la propriété* pour afficher les propriétaires de volumes.
+.. Si les volumes appartiennent tous au propriétaire préféré, passez à l'étape 6.
+.. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Aller à *plus › redistribuer les volumes*.
+.. Si seulement certains volumes sont renvoyés à leurs propriétaires préférés après la distribution automatique ou manuelle, vous devez vérifier le Recovery Guru pour les problèmes de connectivité hôte.
+.. S'il n'y a pas de Recovery Guru présent ou si vous suivez les étapes de Recovery guru, les volumes ne sont toujours pas retournés à leurs propriétaires préférés contactez le support.
+
+
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+.. Sélectionnez *support > Centre de support > Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+.Et la suite ?
+Le processus de mise à niveau d'une carte d'interface hôte dans votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.

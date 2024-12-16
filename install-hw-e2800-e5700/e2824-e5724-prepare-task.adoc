@@ -21,14 +21,14 @@ Découvrez comment vous préparer à installer les systèmes E5724, EF570, EF280
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Tiroir avec disques et panneau installés"]
  a| 
 Tiroir avec disques installés (panneau vendu séparément)
 
 
 
  a| 
-image:../media/superrails_inst-hw-e2800-e5700.png[""]
+image:../media/superrails_inst-hw-e2800-e5700.png["Matériel de montage en rack"]
  a| 
 Matériel de montage en rack
 
@@ -42,7 +42,7 @@ Le tableau suivant identifie les types de câbles que vous pouvez recevoir. Si v
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Câbles Ethernet"]
  a| 
 Câbles Ethernet
 
@@ -53,7 +53,7 @@ Connexion de gestion
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["Câbles d'E/S."]
  a| 
 Câbles d'E/S.
 
@@ -64,7 +64,7 @@ Câblage des hôtes de données
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Câbles d'alimentation"]
  a| 
 Câbles d'alimentation
 
@@ -75,7 +75,7 @@ Mise sous tension du système de stockage
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Câbles SAS"]
  a| 
 Câbles SAS inclus uniquement avec les tiroirs disques
  a| 
@@ -88,28 +88,28 @@ Câbles SAS
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Tournevis Phillips n°2"]
  a| 
 Tournevis Phillips n°2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Lampe de poche"]
  a| 
 Lampe de poche
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["Bracelet ESD"]
  a| 
 Bracelet ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png["Rack 2U »"]
  a| 
 Espace rack 2U : configuration standard de 19 pouces (48.30 cm) rack permettant d'installer les étagères 2U des dimensions suivantes.
 
@@ -126,7 +126,7 @@ Espace rack 2U : configuration standard de 19 pouces (48.30 cm) rack permettant 
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Station de gestion avec navigateur pris en charge pour le logiciel de gestion"]
  a| 
 Navigateur pris en charge pour le logiciel de gestion :
 

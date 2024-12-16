@@ -126,7 +126,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic avec led cache texte associé maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache actif sur le contrôleur E5700]
 
 +
 *(1)* _cache LED active_
@@ -136,7 +136,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic a
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -148,7 +148,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -185,7 +185,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[Voyant de cache interne actif]
 
 +
 *(1)* _LED active cache interne_
@@ -204,7 +204,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Installez HIC sur la carte contrôleur]
 
 +
 *(1)* _carte d'interface hôte_
@@ -218,7 +218,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 . À l'aide d'un tournevis cruciforme n° 1, fixez la nouvelle carte HIC sur le boîtier du contrôleur à l'aide des quatre vis que vous avez retirées précédemment.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Installez la façade sur le contrôleur]
 
 
 
@@ -235,7 +235,7 @@ Après avoir installé le HIC, réinstallez le boîtier du contrôleur dans le s
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -247,7 +247,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -285,7 +285,7 @@ Lorsque la communication avec l'autre contrôleur est rétablie :
 +
 ** L'affichage à sept segments montre la séquence répétée *OS*, *OL*, *_blank_* pour indiquer que le contrôleur est hors ligne.
 ** Le voyant d'avertissement orange reste allumé.
-** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte. image:../media/e5700_hic_3_callouts_maint-e5700.gif["LED du contrôleur E5700 »"]
 +
 *(1)* _LED Host Link_
 

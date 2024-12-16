@@ -10,7 +10,7 @@ summary: 'Restaurez le certificat de gestion à l"état d"origine auto-signé en
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -36,7 +36,7 @@ Vous pouvez remplacer une alimentation dans les tiroirs suivants :
 
 La figure ci-dessous présente un tiroir contrôleur E5724 avec deux blocs d'alimentation (blocs d'alimentation). Les tiroirs disques DE224C sont identiques, mais ils incluent des modules d'E/S (IOM) à la place des boîtiers de contrôleur.
 
-image::../media/e5700_power_supply_callout.png[légende du bloc d'alimentation e5700]
+image::../media/e5700_power_supply_callout.png[Alimentation du contrôleur E5700]
 
 *(1)* _étagère de contrôleur avec deux blocs d'alimentation (blocs d'alimentation) sous les boîtiers de contrôleur._
 
@@ -82,11 +82,11 @@ Les rubriques _Replace POWER Canister_ ne décrivent pas comment remplacer un bo
 
 La figure suivante montre l'arrière d'un tiroir disque DE460C avec deux blocs d'alimentation :
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c arrière sans légende maint. e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C avec deux blocs d'alimentation]
 
 La figure suivante montre une cartouche de puissance :
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[28 dwg e2860 de460c psu maint. e5700]
+image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Réservoir d'alimentation]
 
 
 
@@ -130,11 +130,11 @@ Les rubriques _Replace Fan canister_ ne décrivent pas comment remplacer un boî
 
 La figure suivante montre une cartouche de ventilateur :
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[28 dwg e2860 de460c canister de ventilateur simple sans légendes maint e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[Boîtier de ventilateur]
 
 La figure suivante montre l'arrière d'un tiroir DE460C avec deux boîtiers de ventilation :
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c arrière sans légende maint. e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C avec deux boîtiers de ventilation]
 
 
 CAUTION: *Dommages possibles à l'équipement* -- si vous remplacez une cartouche de ventilateur sous tension, vous devez effectuer la procédure de remplacement dans les 30 minutes afin d'éviter toute surchauffe de l'équipement.

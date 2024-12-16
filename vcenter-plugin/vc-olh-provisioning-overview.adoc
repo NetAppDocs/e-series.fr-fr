@@ -10,7 +10,7 @@ summary: 'Vous pouvez créer des conteneurs de données, appelés volumes, afin 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

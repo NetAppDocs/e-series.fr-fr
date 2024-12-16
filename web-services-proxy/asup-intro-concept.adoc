@@ -125,7 +125,7 @@ NOTE: L'entrée d'horodatage est superflue.
 
 === Configurer la méthode de livraison AutoSupport
 
-Vous pouvez configurer la fonction AutoSupport pour qu'elle utilise les méthodes de distribution HTTPS, HTTP ou SMTP. HTTPS est la méthode de livraison par défaut.
+Vous pouvez configurer la fonction AutoSupport pour qu'elle utilise des méthodes de livraison HTTPS ou SMTP. HTTPS est la méthode de livraison par défaut.
 
 . Accédez au fichier ASUPConfig.xml dans le répertoire de travail.
 . Dans la chaîne, `<delivery type="n">`, entrez 1, 2 ou 3 comme décrit dans le tableau :
@@ -146,15 +146,6 @@ Vous pouvez configurer la fonction AutoSupport pour qu'elle utilise les méthode
 
  a| 
 2
- a| 
-*HTTP*
-
-<type de livraison="2">
-
-
-
- a| 
-3
  a| 
 *SMTP* -- pour configurer correctement le type de distribution AutoSupport sur SMTP, vous devez inclure l'adresse du serveur de messagerie SMTP, ainsi que les e-mails de l'expéditeur et du destinataire, comme dans l'exemple suivant :
 

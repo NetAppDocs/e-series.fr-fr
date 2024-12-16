@@ -10,7 +10,7 @@ summary: 'Si vous créez manuellement un hôte, vous devez d"abord utiliser l"ut
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

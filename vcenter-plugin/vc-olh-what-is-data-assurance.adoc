@@ -10,7 +10,7 @@ summary: 'Data assurance (DA) implémente la norme T10PI, qui améliore l"intég
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

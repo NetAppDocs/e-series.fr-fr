@@ -1,7 +1,7 @@
 ---
 permalink: install-hw-cabling/driveshelf-cable-task.html 
 sidebar: sidebar 
-keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Connectez chaque contrôleur du tiroir contrôleur à un module d"E/S (IOM) d"un tiroir disque.' 
 ---
 = Câblage du tiroir disque
@@ -29,34 +29,27 @@ Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE46
 
 Les informations suivantes s'appliquent au câblage des systèmes E2800, E2800B, EF280, E5700, EF5700B, Ou tiroir contrôleur EF570 vers un tiroir disque DE212C, DE224C ou DE460.
 
-
-
-=== Câblage d'un tiroir de 12 ou 24 disques
-
+[role="tabbed-block"]
+====
+.tiroir de 12 ou 24 disques
+--
 Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 12 ou 24 disques.
 
 L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/12_24_cabling.png[Un tiroir contrôleur et des tiroirs de 12 ou 24 disques]
 
-
-==== Un tiroir contrôleur et des tiroirs de 12 ou 24 disques
-
-image::../media/12_24_cabling.png[12 24 câblage]
-
-
-
-=== Câblage d'un tiroir de 60 disques
-
+--
+.tiroir de 60 disques
+--
 Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.
 
 L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/60_cabling.png[Un tiroir contrôleur et des tiroirs de 60 disques]
 
-
-==== Un tiroir contrôleur et des tiroirs de 60 disques
-
-image::../media/60_cabling.png[60 câblage]
-
+--
+====
 
 
 == Câblage EF300 et EF600
@@ -66,30 +59,47 @@ Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF30
 .Avant de commencer
 Avant de câbler une baie EF300 ou EF600, assurez-vous que la dernière version du firmware est mise à jour. Pour mettre à jour le micrologiciel, suivez les instructions de la section link:../upgrade-santricity/index.html["Mise à niveau de SANtricity OS"^].
 
-
-
-=== Câblage d'un tiroir de 12 ou 24 disques
-
+[role="tabbed-block"]
+====
+.tiroir de 12 ou 24 disques
+--
 Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 12 ou 24 disques.
 
 L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/ef_to_de224c_four_shelves.png[Un tiroir contrôleur et des tiroirs de 12 ou 24 disques]
 
-
-==== Un tiroir contrôleur et des tiroirs de 12 ou 24 disques
-
-image::../media/ef_to_de224c_four_shelves.png[ef pour de224c quatre tiroirs]
-
-
-
-=== Câblage d'un tiroir de 60 disques
-
+--
+.tiroir de 60 disques
+--
 Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.
 
 L'image suivante montre une représentation du tiroir contrôleur et des tiroirs disques. Pour localiser les ports de votre modèle, reportez-vous à la section https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/ef_to_de460c.png[Un tiroir contrôleur et des tiroirs de 60 disques]
+
+--
+====
 
 
-==== Un tiroir contrôleur et des tiroirs de 60 disques
+== Câblage E4000
 
-image::../media/ef_to_de460c.png[ef à dé460c]
+Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur E4000 à un tiroir disque DE212C, DE224C ou DE460.
+
+[role="tabbed-block"]
+====
+.tiroir de 12 disques
+--
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 12 disques.
+
+image::../media/e4012_cabling.png[Un tiroir contrôleur et un tiroir de 12 disques]
+
+--
+.tiroir de 60 disques
+--
+Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.
+
+image::../media/e4060_cabling.png[Un tiroir contrôleur et des tiroirs de 60 disques]
+
+--
+====

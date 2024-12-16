@@ -102,7 +102,7 @@ En fonction du type de HIC auquel vous effectuez la mise à niveau, vous pourrez
 . Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
-image::../media/remove_controller_5.png[déposer le contrôleur 5]
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
@@ -110,7 +110,7 @@ image::../media/remove_controller_5.png[déposer le contrôleur 5]
 CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
 
 +
-image::../media/remove_controller_6.png[déposer le contrôleur 6]
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
 
 . Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 
@@ -129,7 +129,7 @@ Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de
 
 . À l'aide d'un tournevis cruciforme, retirez les deux vis qui fixent le cadran HIC au boîtier du contrôleur.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Déposer la façade HIC]
 
 +
 
@@ -138,7 +138,7 @@ NOTE: L'image ci-dessus est un exemple ; l'apparence de votre HIC peut varier.
 . Retirez la plaque HIC.
 . À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez la vis à molette unique qui fixent le HIC à la carte contrôleur.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Desserrez les vis à molette HIC]
 
 +
 
@@ -154,7 +154,7 @@ NOTE: L'image ci-dessus est un exemple ; l'apparence de votre HIC peut varier.
 CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Retirez le HIC de la carte contrôleur]
 
 +
 
@@ -184,7 +184,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: **Dommages possibles à l'équipement** -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et la vis à molette.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Installer le HIC]
 
 +
 
@@ -211,7 +211,7 @@ Après avoir remplacé l'HIC, réinstallez le boîtier du contrôleur dans le sh
 NOTE: Le contrôleur émet un déclic sonore lorsqu'il est correctement installé dans le tiroir.
 
 +
-image::../media/remove_controller_7.png[déposer le contrôleur 7]
+image::../media/remove_controller_7.png[Installez le contrôleur dans le tiroir]
 
 . Installez les SFP dans la nouvelle HIC et reconnectez tous les câbles.
 +

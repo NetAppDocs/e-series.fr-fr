@@ -102,7 +102,7 @@ CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pen
 La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic avec led cache texte associé maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache actif sur le contrôleur E5700]
 
 +
 *(1)* _cache LED active_
@@ -138,7 +138,7 @@ En fonction du type de HIC auquel vous effectuez la mise à niveau, vous pourrez
 La LED verte cache actif située à l'arrière du contrôleur est allumée lorsqu'il est nécessaire d'écrire les données en cache sur les disques. Vous devez attendre que ce voyant s'éteigne avant de retirer le boîtier du contrôleur.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic avec led cache texte associé maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache actif sur le contrôleur E5700]
 
 +
 *(1)* _cache LED active_
@@ -148,7 +148,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic a
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -160,7 +160,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Déposer le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -193,7 +193,7 @@ Supprimez la carte HIC d'origine pour la remplacer par une carte mise à niveau.
 Si ce voyant vert est allumé, le contrôleur utilise toujours l'alimentation de la batterie. Vous devez attendre que ce voyant s'éteigne avant de retirer des composants.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interne led active maint. e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[Voyant cache actif]
 
 +
 *(1)* _cache LED active_
@@ -206,7 +206,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 Il y a quatre vis : une sur le dessus, une sur le côté et deux sur l'avant.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Retirez la façade du contrôleur]
 
 . Retirez la plaque HIC.
 . À l'aide de vos doigts ou d'un tournevis cruciforme, desserrez les trois vis à molette qui fixent le HIC à la carte contrôleur.
@@ -216,7 +216,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 v
 CAUTION: Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus de la carte contrôleur.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Retirez le HIC de la carte contrôleur]
 
 +
 *(1)* _carte d'interface hôte (HIC)_
@@ -240,7 +240,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 . Déballez la nouvelle HIC et la nouvelle plaque HIC.
 . À l'aide d'un tournevis cruciforme n° 1, retirez les quatre vis qui fixent le cadran HIC au boîtier du contrôleur, puis retirez le cache.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 dwg e2800 vis à face arrière maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Installez la façade sur le contrôleur]
 
 . Alignez les trois vis moletées de la HIC avec les trous correspondants du contrôleur, puis alignez le connecteur situé au bas de la HIC avec le connecteur d'interface HIC de la carte contrôleur.
 +
@@ -252,7 +252,7 @@ Veillez à ne pas rayer ou heurter les composants au bas de la HIC ou au-dessus 
 CAUTION: *Dommages possibles à l'équipement* -- faites très attention de ne pas pincer le connecteur ruban doré pour les voyants du contrôleur entre la HIC et les vis à molette.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 vis à molette hic maint e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Installez HIC sur la carte contrôleur]
 
 +
 *(1)* _carte d'interface hôte (HIC)_
@@ -281,7 +281,7 @@ Après avoir installé la nouvelle HIC, réinstallez le boîtier du contrôleur 
 La figure suivante présente un tiroir contrôleur E5724 :
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -293,7 +293,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figure suivante présente un exemple de tiroir contrôleur E5760 :
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 ajout de la cartouche de contrôleur maint. e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Poser le boîtier du contrôleur]
 
 +
 *(1)* _canister_
@@ -333,7 +333,7 @@ Vérifier les LED du contrôleur et l'affichage à sept segments et vérifier qu
 NOTE: La figure montre un exemple de cartouche de contrôleur. Votre contrôleur peut avoir un nombre différent et un type différent de ports hôtes.
 
 +
-image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 symboles maint e5700]
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[LED du contrôleur E5700 »]
 
 +
 *(1)* _voyant Host Link (orange)_

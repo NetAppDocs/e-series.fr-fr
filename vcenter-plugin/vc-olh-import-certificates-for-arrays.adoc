@@ -11,7 +11,7 @@ summary: 'Importez les certificats pour les baies de stockage afin qu"ils puisse
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: 'Importez une configuration de services d"annuaire d"une matrice de sto
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

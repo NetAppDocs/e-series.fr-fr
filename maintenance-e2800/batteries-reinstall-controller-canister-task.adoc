@@ -18,7 +18,7 @@ Réinstallez le boîtier du contrôleur dans le shelf contrôleur après avoir i
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Avec la poignée de came en position ouverte, faites glisser le boîtier du contrôleur complètement dans la tablette du contrôleur.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 retirer la cartouche du contrôleur maint. e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[réinstallation du contrôleur de lecteur 24]
 
 +
 *(1)* _canister_
@@ -27,7 +27,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _poignée de came_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 ajouter la cartouche de contrôleur maint e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[réinstallation du contrôleur de lecteur 60]
 
 +
 *(1)* _canister_

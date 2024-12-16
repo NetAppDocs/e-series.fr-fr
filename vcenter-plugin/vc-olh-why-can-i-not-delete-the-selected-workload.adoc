@@ -10,7 +10,7 @@ summary: Les volumes de cette charge de travail ne sont pas associés à une cha
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

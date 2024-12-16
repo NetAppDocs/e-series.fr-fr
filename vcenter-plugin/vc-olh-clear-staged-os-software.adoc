@@ -11,7 +11,7 @@ summary: 'Vous pouvez supprimer le logiciel OS préparé pour vous assurer qu"un
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

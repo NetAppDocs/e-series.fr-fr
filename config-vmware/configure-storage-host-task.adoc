@@ -17,5 +17,5 @@ Toutes les versions 6._x_ et 7 _x_ d'ESXi prennent en charge les versions 5 et 6
 
 .Étapes
 . Assurez-vous que les volumes mappés vers l'hôte ESXi ont été détectés correctement.
-. Pour obtenir des instructions sur la création de datastores VMFS ou l'utilisation de volumes comme RDM avec vSphere client ou vSphere Web client, consultez le https://www.vmware.com/support/pubs/["Site de documentation VMware"^].
+. Pour obtenir des instructions sur la création de datastores VMFS ou l'utilisation de volumes en tant que RDM avec le client vSphere ou le client Web vSphere, reportez-vous au https://docs.vmware.com/index.html["Site de documentation VMware"^] .
 

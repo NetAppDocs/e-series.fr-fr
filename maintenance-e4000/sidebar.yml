@@ -1,0 +1,44 @@
+---
+section: maintenance-e4000
+title: E4000
+entries:
+- title: Batteries
+  url: "/maintenance-e4000/replace-battery-e4000.html"
+- title: Contrôleurs
+  entries:
+  - title: Considérations et exigences
+    url: "/maintenance-e4000/replace-controller-requirements-e4000.html"
+  - title: Ajouter un second boîtier de contrôleur
+    url: "/maintenance-e4000/replace-controller-second-e4000.html"
+  - title: Remplacer le contrôleur
+    url: "/maintenance-e4000/replace-controller-e4000.html"
+- title: Canisters
+  entries:
+  - title: Remplacement du bloc d'alimentation (E4012)
+    url: "/maintenance-e4000/replace-power-supply.html"
+  - title: Remplacement du boîtier d'alimentation (E4060)
+    url: "/maintenance-e4000/replace-power-canister.html"
+  - title: Remplacer le boîtier du ventilateur (E4060)
+    url: "/maintenance-e4000/replace-fan-canister.html"
+- title: Modules DIMM
+  url: "/maintenance-e4000/replace-dimms-e4000.html"
+- title: Disques
+  entries:
+  - title: Considérations et exigences
+    url: "/maintenance-e4000/replace-drive-e4000.html"
+  - title: Remplacez le lecteur
+    entries:
+    - title: lecteur 12 ou 24
+      url: "/maintenance-e4000/replace-drives-12-24.html"
+    - title: entraînement 60
+      url: "/maintenance-e4000/replace-drives-60.html"
+  - title: Remplacement du tiroir du lecteur (4060)
+    url: "/maintenance-e4000/drive-drawer-60.html"
+  - title: Ajoutez à chaud un tiroir de disque
+    url: "/maintenance-e4000/replace-drives-hotadd-drive-shelf.html"
+- title: Cartes d'interface hôte
+  entries:
+  - title: Surclassement HIC
+    url: "/maintenance-e4000/replace-hic-upgrade-e4000.html"
+  - title: Remplacer le HIC défectueux
+    url: "/maintenance-e4000/replace-hic-e4000.html"

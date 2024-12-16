@@ -36,7 +36,7 @@ Vous devez insérer la bride métallique située à l'avant de la batterie dans 
 Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dans une fente métallique du châssis.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 insérer la pile dans le bloc e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[Insérez la pile E2800]
 
 +
 *(1)* _loquet de dégagement de la batterie_
@@ -54,10 +54,10 @@ CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de l
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Insert de bride de batterie correct"]
 
 +
-** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans la fente du contrôleur : +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans la fente du contrôleur : + image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Insert de bride de batterie incorrect"]
 
 
 . Accédez à link:batteries-reinstall-controller-canister-task.html["Réinstallez le boîtier du contrôleur E2800"].

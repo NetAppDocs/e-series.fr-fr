@@ -11,7 +11,7 @@ summary: 'Supprimez une ou plusieurs matrices de stockage gérées d"un groupe s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

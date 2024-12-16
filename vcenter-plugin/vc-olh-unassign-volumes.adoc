@@ -11,7 +11,7 @@ summary: 'Si vous n"avez plus besoin d"accéder aux E/S à un volume, vous pouve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

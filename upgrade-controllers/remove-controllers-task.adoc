@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/remove-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
 summary: 'La première étape de la mise à niveau des contrôleurs est d"enlever les anciens contrôleurs et, éventuellement, la batterie.' 
 ---
 = Supprimer les contrôleurs
@@ -51,7 +51,7 @@ CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pince
 La figure suivante est un exemple de l'emplacement général des poignées de version sur les modèles de contrôleur. La configuration des tiroirs contrôleurs et des tiroirs disques à contrôleurs est similaire pour les poignées de version.
 
 +
-image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Déposer le boîtier du contrôleur"]
 
 +
 *(1)* _canister_
@@ -75,12 +75,7 @@ Retirez la batterie uniquement si vous prévoyez d'utiliser la batterie de l'anc
 
 .Étapes
 . Appuyez sur les deux boutons de verrouillage du capot supérieur de l'ancien boîtier du contrôleur et faites glisser le capot supérieur vers l'arrière du boîtier.
-. Effectuez l'une des options suivantes, en fonction de votre modèle de plateau de contrôleur, pour libérer l'ancienne batterie :
-+
-** Pour le plateau du contrôleur E2600 ou E2700, dévissez la vis qui fixe la batterie au boîtier du contrôleur.
-** Pour les E5400, EF540, E5500, EF550, E5600, Ou le plateau du lecteur de contrôleur EF600, libérez la languette qui fixe la batterie au boîtier du contrôleur.
-
-
+. Sur votre modèle de plateau de contrôleur, libérez la languette qui fixe la batterie au boîtier du contrôleur pour libérer l'ancienne batterie.
 . Retirez la batterie en la faisant glisser vers l'arrière de l'ancien boîtier du contrôleur.
 
 

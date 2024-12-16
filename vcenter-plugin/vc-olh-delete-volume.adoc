@@ -11,7 +11,7 @@ summary: 'Supprimez un ou plusieurs volumes pour augmenter la capacité disponib
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

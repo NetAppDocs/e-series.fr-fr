@@ -11,7 +11,7 @@ summary: 'Utilisez l"option consolider la capacité libre pour consolider les ex
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
