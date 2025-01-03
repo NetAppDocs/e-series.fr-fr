@@ -21,7 +21,7 @@ Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur les p
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725 : présentation des baies E2800*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724 : les baies E5700 offrent une vue d'ensemble +++*"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877 : présentation des baies EF300++*"] 
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725 : présentation des baies E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724 : les baies E5700 offrent une vue d'ensemble +++*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877 : présentation des baies EF300++*"^] 
 
 
 | Décrit les fonctionnalités matérielles et logicielles de la baie hybride E2800 et les dernières fonctionnalités de SANtricity OS. | Décrit les informations produit E5700, notamment les nouvelles fonctionnalités matérielles et logicielles introduites dans la dernière version d'SANtricity. | Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF300 et les nouvelles fonctionnalités de SANtricity OS. 
@@ -33,7 +33,7 @@ Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur les p
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800 : présentation des fonctionnalités des baies EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001 : présentation des fonctionnalités des baies E4000*"^] |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800 : présentation des fonctionnalités des baies EF600*"^] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001 : présentation des fonctionnalités des baies E4000*"^] |  
 
 
 | Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF600 et les nouvelles fonctionnalités de SANtricity OS. | Décrit les fonctionnalités matérielles et logicielles de la baie hybride E4000 et les dernières fonctionnalités de SANtricity OS. |  

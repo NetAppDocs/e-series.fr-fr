@@ -76,14 +76,14 @@ où ?
 ** `array_password` est le mot de passe de la matrice de stockage. Vous devez inclure la valeur de array_password entre guillemets (").
 ** `[trayID]` est l'identifiant du tiroir disque qui contient le tiroir disque que vous souhaitez remplacer. Les valeurs des ID de tiroir disque sont 0 à 99. Vous devez inclure la valeur de `trayID` entre crochets.
 ** `[drawerID]` est l'identifiant du tiroir de lecteur que vous souhaitez remplacer. Les valeurs d'ID du tiroir sont 1 (tiroir supérieur) à 5 (tiroir inférieur). Vous devez inclure la valeur de `drawerID` entre crochets. Cette commande permet de supprimer le tiroir le plus haut du tiroir 10 :
-
-
 +
 [listing]
 ----
 SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
+
+
 . Déterminez si vous devez arrêter l'activité E/S de l'hôte, comme suit :
 +
 ** Si la commande réussit, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte. Tous les disques du tiroir se trouvent dans des pools ou des groupes de volumes avec protection contre la perte de tiroirs. Accédez à <<Étape 2 : déposer les chaînes de câble>>.

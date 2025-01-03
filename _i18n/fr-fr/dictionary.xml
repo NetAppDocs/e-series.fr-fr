@@ -775,16 +775,12 @@
   <block id="4fca16c33bb8244a7b60dd7da4eec715" category="doc">Parcourir les rapports techniques sur la plateforme</block>
   <block id="775ecf6ed5e3db61059ce09b5b398110" category="section-title">Rapports techniques sur les plateformes</block>
   <block id="a28b8b732f1d7a87c511f615fe886bc4" category="inline-link">*TR-4725 : présentation des baies E2800*</block>
-  <block id="fac7424958d70cf4f8d849fb90db1f68" category="cell"><block ref="fac7424958d70cf4f8d849fb90db1f68" category="inline-link-rx"></block></block>
   <block id="16ee0112605f5c7f44d31ab4fb0f7c73" category="inline-link">*+++TR-4724 : les baies E5700 offrent une vue d'ensemble +++*</block>
-  <block id="cdbe326a711e037f4bddbe4b226edfa6" category="cell"><block ref="cdbe326a711e037f4bddbe4b226edfa6" category="inline-link-rx"></block></block>
   <block id="346bfe6c5f1a40af18c578c446b216aa" category="inline-link">*+++TR-4877 : présentation des baies EF300++*</block>
-  <block id="ca74b797e6d3bd7c698dff9a991616e6" category="cell"><block ref="ca74b797e6d3bd7c698dff9a991616e6" category="inline-link-rx"></block></block>
   <block id="c3bad4531ac09819ae11c8f1eef46379" category="cell">Décrit les fonctionnalités matérielles et logicielles de la baie hybride E2800 et les dernières fonctionnalités de SANtricity OS.</block>
   <block id="170c5373a5aea2b6d6daa41c328182fc" category="cell">Décrit les informations produit E5700, notamment les nouvelles fonctionnalités matérielles et logicielles introduites dans la dernière version d'SANtricity.</block>
   <block id="6bf4f338106e6cad43fd2f2fecfcaafa" category="cell">Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF300 et les nouvelles fonctionnalités de SANtricity OS.</block>
   <block id="f3a3500a11e0c13b98d7092f5af6a6c7" category="inline-link">*TR-4800 : présentation des fonctionnalités des baies EF600*</block>
-  <block id="567d596a04a1bf27275d8aa991230778" category="cell"><block ref="567d596a04a1bf27275d8aa991230778" category="inline-link-rx"></block></block>
   <block id="6b4552e99c78bda589322e0594a1d89b" category="cell">Décrit les fonctionnalités matérielles et logicielles de la baie 100 % Flash EF600 et les nouvelles fonctionnalités de SANtricity OS.</block>
   <block id="dc3265a6d68d7948c3a13845233a88a0" category="summary">Vous pouvez supprimer tout objet de stockage distant configuré via SANtricity System Manager.</block>
   <block id="618469f48d7ad0f29a8c28d1289019ec" category="doc">Supprime un objet de stockage distant</block>
@@ -7769,12 +7765,6 @@
   <block id="824a3a83a007a97494ec5981cebf67a5" category="cell">Nouvelle fonction</block>
   <block id="f54101aa6702c025c4f74ec5ada7bae3" category="summary">Gérer le stockage</block>
   <block id="14ad3096f7edeb7d23e22e3ab3539e0f" category="paragraph">Utilisez les liens ci-dessous pour accéder à une documentation décrivant la configuration, la gestion et la surveillance des objets de stockage et des systèmes de stockage E-Series. Les liens vous mènent à un autre site de documentation.</block>
-  <block id="55b9698df8d5ce238fd672cacb45db33" category="section-title">Aide en ligne de System Manager 11.7</block>
-  <block id="bb0f94cdcadb9a7fe9605a5b5978bc9f" category="inline-link">Aide en ligne de SANtricity System Manager 11.7</block>
-  <block id="ff584d910a943e131a1a33c07ee376cf" category="paragraph">Accédez au<block ref="4f3037dfe9e12b0599983cd81724b08c" category="inline-link-rx"></block>, où vous pouvez trouver des informations sur la planification, la configuration, la gestion et le dépannage de votre matrice de stockage.</block>
-  <block id="08bdf5ba02a44ea1089a7356e56323d3" category="section-title">Aide en ligne de Unified Manager 5</block>
-  <block id="d9b69b9cb75561d821d13badf467853f" category="inline-link">Aide en ligne de SANtricity Unified Manager 5</block>
-  <block id="a9a112f936967fe8b7a02587778320ab" category="paragraph">Accédez au<block ref="777f091bde7329e4b8f42b44c5184089" category="inline-link-rx"></block>, où vous pouvez apprendre à exécuter des commandes de gestion du stockage sur plusieurs baies de stockage réseau.</block>
   <block id="6e8602d76e9fef34df4842cd3e73e25b" category="section-title">Référence de commande</block>
   <block id="173fec560797244d437c91da004ea89c" category="paragraph">Accédez au<block ref="60cc209e7041626253d52f9b6ac8557b" category="inline-link-rx"></block>, Où vous pouvez apprendre à configurer et à surveiller vos matrices de stockage à l'aide des commandes de l'interface de ligne de commande (CLI).</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Les mentions légales donnent accès aux déclarations de copyright, aux marques, aux brevets, etc.</block>
@@ -9462,4 +9452,15 @@
   <block id="7dca1699f8152d82864de292753389fc" category="sidebar">Remplacement du tiroir du lecteur (4060)</block>
   <block id="676d3cbad89c6a95fe470771db65cfaa" category="sidebar">Surclassement HIC</block>
   <block id="f1de52c9b2e0108b121235152081f684" category="sidebar">Remplacer le HIC défectueux</block>
+  <block id="54941a8cb8785fb145b01e1bb947b67f" category="section-title">Aide en ligne de System Manager</block>
+  <block id="a4cf386ebe9065ef38c507aa0138fca1" category="inline-link">Aide en ligne de SANtricity System Manager</block>
+  <block id="022c96b1591a4fe3fe2e854b113c6c33" category="paragraph">Accédez au<block ref="4060ff1e62df840ae8eeaa66b7bc4ef3" category="inline-link-rx"></block>, où vous pouvez trouver des informations sur la planification, la configuration, la gestion et le dépannage de votre matrice de stockage.</block>
+  <block id="68b5d7bbc938636a6430a66ddd3590d0" category="section-title">Aide en ligne d'Unified Manager</block>
+  <block id="703be4c8c3307cd5e44163a39538eb58" category="inline-link">Aide en ligne de SANtricity Unified Manager</block>
+  <block id="4c0bdc96ec6314c064f33faae57a0c02" category="paragraph">Accédez au<block ref="d6978b00f819ec3b99c59933f313d81f" category="inline-link-rx"></block>, où vous pouvez apprendre à exécuter des commandes de gestion du stockage sur plusieurs matrices de stockage réseau.</block>
+  <block id="5b4f9cf27402df2737b167e7393669c2" category="cell"><block ref="5b4f9cf27402df2737b167e7393669c2" category="inline-link-rx"></block></block>
+  <block id="034410ce2cd58a6a56e6772fadec879b" category="cell"><block ref="034410ce2cd58a6a56e6772fadec879b" category="inline-link-rx"></block></block>
+  <block id="6c33c8a01a7b3f83682789dc2c3e0a6e" category="cell"><block ref="6c33c8a01a7b3f83682789dc2c3e0a6e" category="inline-link-rx"></block></block>
+  <block id="ec476342469d41cbc06b7065ffea021e" category="cell"><block ref="ec476342469d41cbc06b7065ffea021e" category="inline-link-rx"></block></block>
+  <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Fiche technique E4000</block>
 </blocks>

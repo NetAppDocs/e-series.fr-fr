@@ -53,10 +53,10 @@ Fixez le shelf sur le rack comme indiqué dans link:../rackmount-hardware.html["
 +
 .. Insérez des vis dans les premier et troisième trous du haut du shelf des deux côtés pour le fixer à l'avant de l'armoire.
 .. Placez deux supports arrière de chaque côté de la section supérieure arrière de la tablette. Insérez les vis dans le premier et le troisième trous de chaque support pour fixer l'arrière de l'armoire.
-
-
 +
 image:../media/trafford_secure.png["Fixez les supports à l'arrière de la tablette"]
+
+
 
 . Installez le cadre ou les embouts.
 +

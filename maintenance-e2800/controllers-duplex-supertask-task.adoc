@@ -306,17 +306,14 @@ CAUTION: *Dommages matériels possibles* -- la bride métallique à l'avant de l
 
 +
 ** *Correct* -- la bride métallique de la batterie est complètement insérée dans le logement du contrôleur :
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Bride métallique correcte"]
 
-+
 ** *Incorrect* -- la bride métallique de la batterie n'est pas insérée dans le logement du contrôleur :
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Bride métallique incorrecte"]
+
+
 
 
 

@@ -16,6 +16,8 @@ indexpage:
     links:
     - title: Démarrage rapide
       url: "/getting-started/getup-run-concept.html"
+    - title: Fiche technique E4000
+      url: https://www.netapp.com/pdf.html?item=/media/116571-ds-4309-hybrid-flash-arrays-e4060-e4012.pdf
     - title: Fiche technique des systèmes EF-Series
       url: https://www.netapp.com/pdf.html?item=/media/19339-DS-4082.pdf
     - title: Fiche technique E5700

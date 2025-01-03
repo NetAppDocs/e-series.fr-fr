@@ -48,10 +48,10 @@ CAUTION: Une tablette vide pèse environ 60 kg (132 lb). Un dispositif de levage
 +
 .. Si vous soulevez la tablette à la main, fixez les quatre poignées de levage. Poussez sur chaque poignée jusqu'à ce qu'elle s'enclenche.
 .. En soutenant le shelf par le bas, faites-le glisser dans l'armoire. Si les poignées de levage sont utilisées, retirez-les un par un lorsque la tablette glisse dans l'armoire. Pour retirer les poignées, tirez le loquet de déverrouillage, poussez-le vers le bas, puis tirez-le hors de la tablette.
-
-
 +
 image:../media/4_person_lift_source.png["Quatre personnes sont nécessaires pour soulever la tablette dans l'armoire"]
+
+
 
 . Fixer le shelf.
 +
