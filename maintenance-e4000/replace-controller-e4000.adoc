@@ -160,6 +160,19 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 ----
 
 
+. Collecte des données de support de votre baie de stockage à l'aide de SANtricity System Manager
++
+En cas de problème lors de la suppression d'un contrôleur, vous pouvez utiliser le fichier enregistré pour résoudre le problème. Le système enregistre les données d'inventaire, d'état et de performances de votre matrice de stockage dans un seul fichier.
+
++
+.. *Sélectionnez support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Cliquez sur *collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
 . Si le contrôleur n'est pas encore hors ligne, mettez-le hors ligne maintenant en utilisant SANtricity System Manager.
 +
 ** Depuis SANtricity System Manager :

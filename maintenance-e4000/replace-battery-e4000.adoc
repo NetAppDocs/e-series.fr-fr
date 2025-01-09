@@ -186,7 +186,10 @@ Assurez-vous de disposer des éléments suivants :
 CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
 
 . Si les ports hôtes du boîtier du contrôleur utilisent des émetteurs-récepteurs SFP+, laissez-les installés.
-. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
+. Vérifiez que les voyants cache Active à l'arrière du contrôleur et la façade du contrôleur sont éteints.
++
+Si l'un des voyants est allumé, le contrôleur utilise toujours l'alimentation par batterie. Tous les voyants doivent être éteints avant de poursuivre cette procédure.
+
 . Appuyez sur le loquet de la poignée de la came jusqu'à ce qu'elle se libère, ouvrez complètement la poignée de la came pour libérer le boîtier du contrôleur du fond de panier central, puis, de deux mains, retirez le boîtier du contrôleur à mi-chemin du châssis.
 
 
