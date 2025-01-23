@@ -176,6 +176,7 @@ Laissez les câbles dans le périphérique de gestion des câbles de sorte que l
 
 . Retirez et mettez de côté les dispositifs de gestion des câbles des côtés gauche et droit du boîtier du contrôleur.
 . Appuyez sur le loquet de la poignée de la came jusqu'à ce qu'elle se libère, ouvrez complètement la poignée de la came pour libérer le boîtier du contrôleur du fond de panier central, puis, de deux mains, retirez le boîtier du contrôleur du châssis.
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Retournez le boîtier du contrôleur et placez-le sur une surface plane et stable.
 . Ouvrez le capot en appuyant sur les boutons bleus situés sur les côtés du boîtier du contrôleur pour libérer le capot, puis faites pivoter le capot vers le haut et hors du boîtier du contrôleur.
 +

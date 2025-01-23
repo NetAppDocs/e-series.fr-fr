@@ -39,7 +39,7 @@ Découvrez comment connecter les câbles d'alimentation et mettre sous tension l
 * link:../install-hw-e4000/connect-cables-60.html["Câble matériel E4060"^]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Quatre"] Terminez la configuration du système de stockage
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"] Terminez la configuration du système de stockage
 [role="quick-margin-para"]
 Découvrez comment câbler les contrôleurs à votre réseau et configurer un système de stockage.
 

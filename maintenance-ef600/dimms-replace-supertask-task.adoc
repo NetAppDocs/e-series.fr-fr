@@ -108,11 +108,11 @@ Retirez le boîtier de contrôleur défectueux pour remplacer les modules DIMM p
 
 CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
 
-. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
 +
 image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
 
+. Vérifiez que la LED du cache actif située à l'arrière du contrôleur est éteinte.
 . A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
 +
 

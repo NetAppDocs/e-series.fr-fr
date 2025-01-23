@@ -240,6 +240,10 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retirer le HIC et la 
 +
 .. Retirez la façade HIC en la faisant glisser hors du module de contrôleur.
 .. Desserrez les vis moletées du HIC et soulevez-le.
++
+
+NOTE: Si vous utilisez vos doigts pour desserrer la vis moletée, vous devrez peut-être appuyer sur la languette de dégagement de la batterie et la faire pivoter vers le haut pour un meilleur accès.
+
 
 
 . Réinstallez le HIC :
