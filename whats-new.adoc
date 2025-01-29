@@ -59,6 +59,18 @@ Configurable via l'API REST uniquement, un nouveau paramètre de verrouillage de
 |===
 
 
+== Nouvelles fonctionnalités de la version 11.80.1R3
+
+Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
+
+
+
+== Nouvelles fonctionnalités de la version 11.80.1R2
+
+Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
+
+
+
 == Nouvelles fonctionnalités de la version 11.80.1R1
 
 [cols="35h,~"]

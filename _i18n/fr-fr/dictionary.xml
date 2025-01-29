@@ -9466,4 +9466,7 @@
   <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Si l'un des voyants est allumé, le contrôleur utilise toujours l'alimentation par batterie. Tous les voyants doivent être éteints avant de poursuivre cette procédure.</block>
   <block id="5509a7e2ae2dbdec2ed18ae433b4cec6" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Terminez la configuration du système de stockage</block>
   <block id="492fcae0b90e6f4d11439a1f70e422cf" category="admonition">Si vous utilisez vos doigts pour desserrer la vis moletée, vous devrez peut-être appuyer sur la languette de dégagement de la batterie et la faire pivoter vers le haut pour un meilleur accès.</block>
+  <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nouvelles fonctionnalités de la version 11.80.1R3</block>
+  <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.</block>
+  <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nouvelles fonctionnalités de la version 11.80.1R2</block>
 </blocks>
