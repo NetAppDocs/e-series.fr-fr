@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: convert EF300 host protocol, convert EF600 host protocol, 
+keywords: convert host protocol, EF600, EF300, EF600C, EF300C 
 summary: Consultez les exigences et les considérations avant de convertir le protocole hôte EF300 ou EF600. 
 ---
 = Exigences en matière de conversion des protocoles hôte EF300 ou EF600
@@ -11,7 +11,7 @@ summary: Consultez les exigences et les considérations avant de convertir le pr
 
 
 [role="lead"]
-Avant de convertir le protocole hôte pour une baie EF300 ou EF600, vérifiez les exigences suivantes.
+Avant de convertir le protocole hôte d'une baie EF300, EF600, EF300C ou EF600C, vérifiez les conditions suivantes.
 
 * Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt.
 * Vous devez arrêter les opérations d'E/S hôte lors de la conversion. Vous ne pouvez pas accéder aux données de la baie de stockage tant que la conversion n'est pas terminée.

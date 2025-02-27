@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, fan fail 
+keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: 'Remplacement d"un ventilateur dans un EF300 ou EF600' 
 ---
 = Remplacement d'un ventilateur EF300 ou EF600
@@ -12,7 +12,7 @@ summary: 'Remplacement d"un ventilateur dans un EF300 ou EF600'
 
 
 [role="lead"]
-Vous pouvez remplacer un ventilateur d'une baie EF300 ou EF600.
+Vous pouvez remplacer un ventilateur des baies EF300, EF600, EF300C ou EF600C.
 
 .Description de la tâche
 Chaque tiroir contrôleur ou tiroir disque EF300 et EF600 comprend cinq ventilateurs. En cas de panne d'un ventilateur, vous devez le remplacer dans les plus brefs délais afin de vérifier que le shelf présente une climatisation adéquate.

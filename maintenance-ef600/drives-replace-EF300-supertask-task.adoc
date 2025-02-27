@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF300-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 drive, replace EF600 drive, drive failure 
+keywords: EF300, EF300C, replace drive, drive failure 
 summary: Remplacez un lecteur dans une matrice EF300. 
 ---
 = Remplacez le lecteur dans une matrice EF300
@@ -11,9 +11,9 @@ summary: Remplacez un lecteur dans une matrice EF300.
 
 
 [role="lead"]
-Vous pouvez remplacer un lecteur dans une matrice EF300.
+Vous pouvez remplacer un lecteur dans une matrice EF300 ou EF300C.
 
-L' EF300 prend en charge l'extension SAS avec des tiroirs de 24 et 60 disques. La procédure à suivre dépend du fait que vous disposez d'un tiroir de 24 disques ou de 60 disques :
+Les systèmes EF300 et EF300C prennent en charge l'extension SAS avec des tiroirs de 24 et 60 disques. La procédure à suivre dépend du fait que vous disposez d'un tiroir de 24 disques ou de 60 disques :
 
 * <<Remplacement du disque par un tiroir EF300 (24 disques)>>
 * <<Remplacement du disque par un tiroir EF300 (60 disques)>>

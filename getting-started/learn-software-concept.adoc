@@ -94,7 +94,7 @@ Affichez les données de diagnostic, gérez les mises à niveau et configurez Au
 
 == SANtricity Unified Manager
 
-Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570 et EF600. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
+Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C et EF600C. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
 
 Unified Manager est installé sur un serveur de gestion avec le proxy de services Web. Pour accéder à Unified Manager, ouvrez un navigateur et entrez l'URL pointant vers le serveur sur lequel le proxy de services Web est installé.
 

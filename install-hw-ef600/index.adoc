@@ -1,10 +1,10 @@
 ---
 permalink: install-hw-ef600/index.html 
 sidebar: sidebar 
-keywords: EF300, EF600, installation 
+keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Installation et configuration des baies EF300 et EF600 
 ---
-= Installation et configuration des systèmes de stockage EF300 et EF600
+= Installez et configurez les systèmes de stockage EF300, EF600, EF300C et EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hics-upgrade-intro.html 
 sidebar: sidebar 
-keywords: upgrade EF300 HIC, upgrade EF600 HIC, increase host ports, change host protocol 
+keywords: EF600, EF300, EF300C, EF600C, upgrade HIC, upgrade HIC, increase host ports, change host protocol 
 summary: 'Vous mettez à niveau une carte d"interface hôte (HIC) pour augmenter le nombre de ports hôtes ou pour modifier les protocoles hôtes.' 
 ---
 = Mise à niveau de la carte d'interface hôte EF300 ou EF600 (HIC)
@@ -16,7 +16,7 @@ Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter l
 
 .Description de la tâche
 * Lorsque vous mettez à niveau les circuits intégrés, vous devez mettre hors tension la baie de stockage, mettre à niveau les circuits intégrés et réappliquer l'alimentation.
-* Lorsque vous mettez à niveau des circuits intégrés dans un contrôleur EF300 ou EF600, répétez toutes les étapes pour retirer le second contrôleur, mettez à niveau les circuits intégrés du deuxième contrôleur, puis réinstallez le second contrôleur avant d'appliquer de nouveau l'alimentation au tiroir du contrôleur.
+* Lors de la mise à niveau des HIC dans un contrôleur EF300, EF600, EF300C ou EF600C, répétez toutes les étapes pour retirer le second contrôleur, mettre à niveau les HIC du second contrôleur et réinstaller le second contrôleur avant de remettre le tiroir contrôleur sous tension.
 
 
 .Avant de commencer

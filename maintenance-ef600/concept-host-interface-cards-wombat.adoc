@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/concept-host-interface-cards-wombat.html 
 sidebar: sidebar 
-keywords: host, interface, card, hic, install, controller, canister, ef600, port 
+keywords: host, interface, card, hic, install, controller, canister, ef600, EF300, EF300C, EF600C, port 
 summary: 'Une carte d"interface hôte \(HIC\) doit être installée dans un boîtier de contrôleur. Le contrôleur EF600 inclut des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.' 
 ---
 = Cartes d'interface hôte

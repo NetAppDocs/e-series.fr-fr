@@ -172,7 +172,6 @@
   <block id="33d6fe66d2b404f7c25080e8098edd9c" category="list-text">Disques 3.5" et 2.5" (NL-SAS, SAS et SSD)</block>
   <block id="3fcdd0c9c8fbc91f7bb9df81e95c618f" category="paragraph">*NE224:*</block>
   <block id="73fe55efcdaa2ad95e010a4bac9165df" category="list-text">Disques SSD NVMe 2.5"</block>
-  <block id="ee42e406b098eeee6019f729810f7302" category="list-text">Contrôleurs EF300 et EF600</block>
   <block id="034b4ee4c356def2b8224b87f088c841" category="summary">Découvrez les systèmes E-Series, qui incluent du matériel et des logiciels intégrés pour répondre aux besoins de stockage de données de votre entreprise.</block>
   <block id="e04137252fedc7e9af87dd09f9516981" category="doc">Découvrez les systèmes E-Series</block>
   <block id="a30c4e694d7edde326fee8d00122908f" category="paragraph">Découvrez les systèmes E-Series, qui incluent du matériel et des logiciels intégrés pour répondre aux besoins de stockage de données de votre entreprise.</block>
@@ -227,7 +226,6 @@
   <block id="1458d41ed1532a66aec83e0f005887a5" category="paragraph">Les informations de câblage s'appliquent aux modèles matériels suivants.</block>
   <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">* Étagère contrôleur*</block>
   <block id="0980e5858005022a7297657f3c4b364f" category="cell">*Étagère de disques*</block>
-  <block id="f212760efdd1ee6ecc6a822f380627cd" category="paragraph">EF300, EF600</block>
   <block id="a49b136089a95385ac24b13d585982b3" category="paragraph">DE212C, DE224C, DE460</block>
   <block id="e2601a92435cce9fb17f276fae4332e9" category="paragraph">DE212C ET DE224C</block>
   <block id="56d5920f093315d1b4acca4634ea813e" category="paragraph">DE460C</block>
@@ -363,7 +361,6 @@
   <block id="aafac493f2e35b6f1c326279401ced51" category="paragraph">Vous pouvez connecter le tiroir de votre contrôleur à un ou plusieurs tiroirs de 60 disques.</block>
   <block id="9829150d11210fb5e6fc62e793db934e" category="section-title">Un tiroir contrôleur et des tiroirs de 60 disques</block>
   <block id="add241dc5ececee27088b6736250072e" category="section-title">Câblage EF300 et EF600</block>
-  <block id="aa7f7f642f0f31272aec24455af2999f" category="paragraph">Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF300 ou EF600 à un tiroir disque DE212C, DE224C ou DE460.</block>
   <block id="e20bd51b5e818feb7ae7162ff2a5040b" category="paragraph">Avant de câbler une baie EF300 ou EF600, assurez-vous que la dernière version du firmware est mise à jour. Pour mettre à jour le micrologiciel, suivez les instructions de la section <block ref="2834c74834ca1d1cb0e165f8c6e2c750" category="inline-link-macro-rx"></block>.</block>
   <block id="f9bcb67d08f727c5a322f1f2c7b1e5c5" category="summary">Connectez votre système de stockage à un réseau Ethernet pour la gestion hors bande.</block>
   <block id="87b0d15661ae00d3361b6ec13b87b677" category="doc">Câblage Ethernet pour une station de gestion</block>
@@ -1015,7 +1012,6 @@
   <block id="aebb270a0f1270c10fb5b2e56830535a" category="list-text"><block ref="18f041f08534fbeb53ae160ad78cfbc4" category="inline-link-rx"></block> (Une base de données d'articles) - fournit des informations de dépannage, des FAQ et des instructions pour une large gamme de produits et technologies NetApp.</block>
   <block id="fc4773230b262d26eed69c2a96bd9708" category="list-text"><block ref="b1540a3ec25c7d8277b499a1cc1d920b" category="inline-link-rx"></block> -- vous permet de rechercher des configurations de produits et de composants NetApp conformes aux normes et aux exigences spécifiées par NetApp.</block>
   <block id="0f2f72ef3f176b98134caf100a06cf5f" category="inline-link">Valeurs maximales de configuration VMware</block>
-  <block id="5ec68760b690fe27d275d8ef065433df" category="list-text"><block ref="3efd8448d2410829795078709782a7da" category="inline-link-rx"></block> -- décrit comment configurer le stockage physique et virtuel pour qu'il reste dans les limites autorisées prises en charge par ESX/ESXi.</block>
   <block id="094bf2c199fb9ef7ac29e64a12fd7cad" category="inline-link">Exigences et restrictions du stockage NVMe de VMware</block>
   <block id="8f853bc18ffad192705726f50eff4144" category="list-text"><block ref="6e8a1449bb92590a7f42c1a30534b1da" category="inline-link-rx"></block>.</block>
   <block id="4666fc2f640685636f115f8b2b6b8ce0" category="inline-link">Documentation VMware vSphere</block>
@@ -1278,8 +1274,6 @@
   <block id="8006375c263283630c341e2cae580bed" category="paragraph">Pilote, micrologiciel et code d'amorçage de la carte d'interface réseau (NIC)</block>
   <block id="1eca441f881a292b05722ddcd5c7605a" category="summary">Remplacez un lecteur dans une matrice EF300.</block>
   <block id="1b311fbfc664dabdc89169b6d43903d6" category="doc">Remplacez le lecteur dans une matrice EF300</block>
-  <block id="59958ca616aba014e914263121b83c15" category="paragraph">Vous pouvez remplacer un lecteur dans une matrice EF300.</block>
-  <block id="61bc4bd99c5e65055b2b91cdea8b08ea" category="paragraph">L' EF300 prend en charge l'extension SAS avec des tiroirs de 24 et 60 disques. La procédure à suivre dépend du fait que vous disposez d'un tiroir de 24 disques ou de 60 disques :</block>
   <block id="2ca85a3dda1d5669703da1eb7e07b7c2" category="list-text"><block ref="9a51b9a38de70279b358d3c9ff153239" category="inline-xref-macro-rx"></block></block>
   <block id="8073ddd7ebb4e905ea4015f335f42663" category="list-text"><block ref="f8c16ddb5f1fc7bc0310ed900e3efbe6" category="inline-xref-macro-rx"></block></block>
   <block id="d8e732631daed1812191326c689a203e" category="section-title">Remplacement du disque par un tiroir EF300 (24 disques)</block>
@@ -1374,7 +1368,6 @@
   <block id="f351a77cc39dfc4db4a4cc279e285fb1" category="list-text">Vérifiez le voyant d'alimentation et la LED d'avertissement du disque que vous avez remplacé. (Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement peut s'allume. Toutefois, le voyant devrait s'éteindre en moins d'une minute.)</block>
   <block id="8af1af6830937a72d5cd88e0d6c25265" category="summary">Ajoutez une carte d'extension SAS aux contrôleurs EF300 pour permettre l'extension du plateau de disque.</block>
   <block id="cf505540e6b324232d096ecbbeb36457" category="doc">Ajoutez une carte d'extension SAS à EF300 et EF600</block>
-  <block id="a06914d93f698c6a8bb3f09a21efd671" category="paragraph">Vous pouvez ajouter une carte d'extension SAS à un contrôleur EF300 ou EF600 pour permettre l'extension du plateau de lecteur.</block>
   <block id="76b6d67ba2d43b0e0d5354712cf5475c" category="paragraph">Lorsque vous ajoutez une carte d'extension SAS, vous devez mettre la baie de stockage hors tension, installer la nouvelle carte d'extension SAS et mettre de nouveau sous tension.</block>
   <block id="b18049a57fbb2ec5fd47fae049bd965b" category="inline-link-macro">Exigences relatives au remplacement des cartes d'extension SAS EF300 et EF600</block>
   <block id="8cce61d9b8e3a90145210a9516fd4eb4" category="list-text">Révision <block ref="171e03e043e11d80ccbb4c5420424ae5" category="inline-link-macro-rx"></block>.</block>
@@ -1459,7 +1452,6 @@
   <block id="1814520cf0b22a6f3d8fa7cf48e4ee44" category="paragraph">Le processus d'ajout d'une carte d'extension SAS dans votre matrice de stockage est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="08c0021d60441f8c3dd78eeb49362807" category="summary">Maintenance du matériel EF300 et EF600</block>
   <block id="3b22a7c15f94b211436d1caea39710ca" category="doc">Maintenance du matériel EF300 et EF600</block>
-  <block id="042bdb0acc6382a72eab016fef01741f" category="paragraph">Pour les systèmes de stockage EF300 et EF600, vous pouvez effectuer les procédures de maintenance concernant les composants suivants.</block>
   <block id="a64ff6813a8c7e2d19e29501ae213675" category="section-title">Batteries</block>
   <block id="0e11944ef8baa0cd23d9027846dfb479" category="paragraph">Une batterie est fournie avec un contrôleur et conserve les données mises en cache en cas de panne de l'alimentation secteur.</block>
   <block id="cbfb14f470701bf93424d757c624369a" category="section-title">Contrôleurs</block>
@@ -1480,8 +1472,6 @@
   <block id="04a3d4071a9450f7356dbc04b8b8747c" category="paragraph">Une carte d'extension SAS peut être installée dans un boîtier de contrôleur. Le contrôleur EF300 prend en charge l'extension SAS.</block>
   <block id="b1a61a0b6874805bc03293f8b7b15c87" category="summary">Consultez les exigences et les considérations avant de remplacer les modules DIMM EF300 ou EF600.</block>
   <block id="4732b406385a15d1aed763a9717a6553" category="doc">Conditions requises pour remplacer un module DIMM EF300 ou EF600</block>
-  <block id="b41535bd642ffdba4076bba7b4364713" category="paragraph">Avant de remplacer un module DIMM dans une baie de stockage EF300 ou EF600, vérifiez les exigences et les considérations à prendre en compte.</block>
-  <block id="e63ed0f2769c54f901255268d095c0e5" category="paragraph">Vous devez remplacer un module DIMM en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux. Assurez-vous de vérifier la configuration de votre contrôleur EF300 ou EF600 pour vous assurer que la taille de DIMM correcte est remplacée.</block>
   <block id="8a9e4c00db6a24a4fb43dc345c83d072" category="admonition">Notez que les modules DIMM de votre matrice de stockage sont fragiles ; une manipulation incorrecte peut entraîner des dommages.</block>
   <block id="3a53668c4902beecdd7f5dafc89b8449" category="paragraph">Suivez ces règles pour éviter d'endommager les modules DIMM de votre matrice de stockage :</block>
   <block id="b5304f8e1c2fe7dd643a8a5ff191537b" category="list-text">Prévention des décharges électrostatiques (ESD) :</block>
@@ -1497,7 +1487,6 @@
   <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un seul contrôleur ou les deux contrôleurs de votre tiroir contrôleur EF300 ou EF600.</block>
   <block id="8530051dab9b284655e9ee0a33594d15" category="summary">Remplacez les blocs d'alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.</block>
   <block id="da0fe5b0a30a5d2ccf0e0f907ffc5a0a" category="doc">Remplacez une alimentation EF300 ou EF600</block>
-  <block id="bf0f0f2eda9ccf4d28bab16ee4feba30" category="paragraph">Vous pouvez remplacer un bloc d'alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.</block>
   <block id="539a53ce95a48163a8ce44101d02382c" category="paragraph">En cas de panne de l'alimentation, vous devez le remplacer dès que possible afin que le tiroir contrôleur dispose d'une source d'alimentation redondante.</block>
   <block id="eb2f4b76f9038a436060f3cd723b8ba3" category="list-text">Passez en revue les détails du Recovery Guru afin de vérifier qu'il y a un problème avec l'alimentation. Sélectionnez *revérification* dans Recovery Guru pour vous assurer qu'aucun autre élément ne doit être traité en premier.</block>
   <block id="e90d7aeee831e4a2cfd7fbc26b8159ad" category="list-text">Vérifiez que le voyant d'avertissement orange du bloc d'alimentation est allumé, ce qui indique que le bloc d'alimentation ou son ventilateur intégré est défectueux.</block>
@@ -1530,7 +1519,6 @@
   <block id="bc8be72fdc9d6054f356bb2b7f80fd12" category="inline-link">Matrice d'interopérabilité NetApp</block>
   <block id="df2839c02c12ce7fb5ee89d23d2cc262" category="paragraph">Certains paramètres peuvent varier. Vérifier le<block ref="ae69c67e09c854d61b64be1ef166878d" category="inline-link-rx"></block> pour des instructions spécifiques et des paramètres supplémentaires recommandés pour votre solution.</block>
   <block id="9fc2bc5f7d7e9f2a3f0e92f0c5b35a3a" category="summary">Examinez les exigences et les considérations avant de remplacer les disques dans EF300 ou EF600.</block>
-  <block id="02551e5490f3f4380082de0056ba7479" category="paragraph">Avant de remplacer un disque d'une baie EF300 ou EF600, vérifiez les exigences et les points à prendre en compte.</block>
   <block id="b7f04984f163dce73778dbbca2a8c990" category="admonition">Notez que les disques de votre matrice de stockage sont fragiles ; une manipulation incorrecte des disques est l'une des principales causes de panne de disque.</block>
   <block id="c4a87fb79210c9a2631561ef1487b358" category="section-title">Exigences de remplacement des disques</block>
   <block id="8bf743d2b01e922c2beea9b6f528211c" category="paragraph">Suivez ces règles pour éviter d'endommager les lecteurs de votre matrice de stockage :</block>
@@ -1551,7 +1539,6 @@
   <block id="038d1aa9b29ca0e8ff6cb31c36fea4fb" category="paragraph">La figure suivante montre comment décaler les entraînements entre les deux moitiés.</block>
   <block id="e9e795fffc66424c5fceeda72cc6702b" category="summary">Remplacement d'un contrôleur unique dans un tiroir contrôleur EF300 ou EF600</block>
   <block id="317ae44d33c81077bc69598e4bf59e9f" category="doc">Remplacez le contrôleur EF300 ou EF600</block>
-  <block id="2188af472c4062f3129d65412671fd19" category="paragraph">Vous pouvez remplacer un seul contrôleur par un tiroir de contrôleur EF300 ou EF600.</block>
   <block id="1b6ca6cd4db8e59c76840995016904f5" category="paragraph">Lorsque vous remplacez un boîtier de contrôleur défectueux, vous devez retirer la batterie, l'alimentation, les modules DIMM, les ventilateurs et la carte d'interface hôte (HIC) du boîtier de contrôleur d'origine, puis les installer dans le boîtier de contrôleur de remplacement.</block>
   <block id="3d1512805f23039d65a3a0867cf2b647" category="inline-link-macro">Exigences relatives au remplacement des contrôleurs EF300 ou EF600</block>
   <block id="5e28583a8af8a4bc782f82438b0b0a20" category="list-text">Révision <block ref="e99335e3a347f599f32fcd88a9e4a4a4" category="inline-link-macro-rx"></block>.</block>
@@ -1667,13 +1654,11 @@
   <block id="f64ac56cef1f5e4f7896043e6750dc53" category="paragraph">Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="2e2090d7bf10ea829ed979fce6127fca" category="summary">Examinez les exigences et les considérations avant de remplacer un bloc d'alimentation EF300 ou EF600.</block>
   <block id="b4bdfc68a2be9043c46c8629fec0e8fe" category="doc">Exigences relatives au remplacement des blocs d'alimentation EF300 ou EF600</block>
-  <block id="d2f1edd900d2d5c61c52c428e56d8c4b" category="paragraph">Avant de remplacer un bloc d'alimentation dans une baie EF300 ou EF600, vérifiez les exigences suivantes.</block>
   <block id="92a8e5a68dee2a2df8de1337cfd37b9c" category="list-text">Vous devez disposer d'une alimentation de remplacement prise en charge par votre modèle de tiroir contrôleur ou de tiroir disque.</block>
   <block id="f2c505979298b93cfd8e71dc78ddd1b0" category="admonition">Ne mélangez pas les blocs d'alimentation de différents types de tension. Toujours remplacer comme pour similaire.</block>
   <block id="041df313fbdbf7db4e8d5e9c87ebdf66" category="list-text">Vous devez avoir un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.</block>
   <block id="fc94ac1d2bdfb27ac4210c2680f2d5fe" category="summary">Consultez les exigences et les considérations avant de convertir le protocole hôte EF300 ou EF600.</block>
   <block id="c901677705b5230445795815d2367528" category="doc">Exigences en matière de conversion des protocoles hôte EF300 ou EF600</block>
-  <block id="9d528dc333e33dbe25bda7c346243c3b" category="paragraph">Avant de convertir le protocole hôte pour une baie EF300 ou EF600, vérifiez les exigences suivantes.</block>
   <block id="12b88a904502434a63f50fce060243e4" category="list-text">Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt.</block>
   <block id="03e368a22e511c58d3a3dad40e86377f" category="list-text">Vous devez arrêter les opérations d'E/S hôte lors de la conversion. Vous ne pouvez pas accéder aux données de la baie de stockage tant que la conversion n'est pas terminée.</block>
   <block id="75e7f67348e4a26031725587e6fbd19c" category="list-text">Vous utilisez la gestion hors bande. (Vous ne pouvez pas utiliser la gestion intrabande pour terminer cette procédure.)</block>
@@ -1685,7 +1670,6 @@
   <block id="bc039edb7d55e1907c81473c3517e560" category="paragraph">Vous pouvez mettre à niveau les cartes d'interface hôte (HIC) pour augmenter le nombre de ports hôtes ou pour modifier les protocoles hôtes.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">Description de la tâche</block>
   <block id="bb0ded29eb0a4b47fbd60d4574760d4d" category="list-text">Lorsque vous mettez à niveau les circuits intégrés, vous devez mettre hors tension la baie de stockage, mettre à niveau les circuits intégrés et réappliquer l'alimentation.</block>
-  <block id="a7b18eda0422ef0dfb82b129d03ac773" category="list-text">Lorsque vous mettez à niveau des circuits intégrés dans un contrôleur EF300 ou EF600, répétez toutes les étapes pour retirer le second contrôleur, mettez à niveau les circuits intégrés du deuxième contrôleur, puis réinstallez le second contrôleur avant d'appliquer de nouveau l'alimentation au tiroir du contrôleur.</block>
   <block id="1c86ab1787822f5d802a7e5fe80c780f" category="inline-link-macro">Conditions requises pour les mises à niveau des HIC EF300 ou EF600</block>
   <block id="b41453ef0eae35f2df2004c1773786fb" category="list-text">Révision <block ref="23b7aefccff24bae71374f469da3fa9d" category="inline-link-macro-rx"></block>.</block>
   <block id="a02dc1b9d7142c3522def499f6dfc937" category="list-text">Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Étant donné que les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous installez des cartes HIC.</block>
@@ -1711,7 +1695,6 @@
   <block id="a23dd0aafd5877a2e518f1317e8acbfb" category="paragraph">Le processus de mise à niveau d'une carte d'interface hôte dans votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="cf161815430bebc8ee6771d30a156397" category="summary">Remplacez la batterie d'une baie EF300 ou EF600.</block>
   <block id="39ada1b1281d103dd18b2f68149694a0" category="doc">Remplacez la batterie EF300 ou EF600</block>
-  <block id="e00dafa45847ab907f34044e9b23920f" category="paragraph">Vous pouvez remplacer une batterie d'un système de stockage EF300 ou EF600.</block>
   <block id="9148c3ad76e0662ac4cda746c7b8fc25" category="paragraph">Chaque boîtier de contrôleur comprend une batterie qui préserve les données en mémoire cache en cas de panne de l'alimentation secteur. Si le gourou de la restauration de SANtricity System Manager indique un état « batterie défaillante » ou un état « remplacement de batterie requis », vous devez remplacer la batterie concernée.</block>
   <block id="3aae92281d2c76bfdb03ce5a4ca9bcc5" category="list-text">Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.</block>
   <block id="9edad8491a8585b842f4ac6201b8d622" category="inline-link-macro">Exigences relatives au remplacement de la batterie EF300 ou EF600</block>
@@ -1743,7 +1726,6 @@
   <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Blocs d'alimentation</block>
   <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">Vous devez remplacer un module DIMM en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux.</block>
   <block id="3445e7362b27e4ba74cabda5b497847f" category="summary">Examinez les exigences et les considérations avant de remplacer une HIC EF300 ou EF600.</block>
-  <block id="bce135c4d36e87cac4fa46df29044acd" category="paragraph">Avant de mettre à niveau ou de remplacer une carte d'interface hôte (HIC) dans une baie EF300 ou EF600, vérifiez les points suivants.</block>
   <block id="7ff977d3382830f3eff92120544b15ab" category="list-text">Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous modifiez la configuration HIC. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.</block>
   <block id="cc3ec06987332d6dbb0413ed7e4c657b" category="list-text">Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) sont nécessaires pour connecter les nouveaux ports hôte.</block>
   <block id="695868bdbd5393e02d0542a0622b9543" category="paragraph">Pour plus d'informations sur le matériel compatible, reportez-vous au<block ref="a3e2ed1651134ba8d782e5dc8287cbc1" category="inline-link-rx"></block> ou le<block ref="654b66baa180d1959dc74b2dcae2e81b" category="inline-link-rx"></block>.</block>
@@ -1755,7 +1737,6 @@
   <block id="12d81cfc2d4212cb9a4099e19a0660cb" category="list-text">Le port 2 de la carte HIC des contrôleurs EF300 doit être doté d'une carte d'interface HIC pour la connectivité hôte.</block>
   <block id="0473e45a7d7f9557ae9f5ca07ab2315a" category="summary">Remplacez une carte d'interface hôte (HIC) EF300 ou EF600 défectueuse.</block>
   <block id="821d24c9ba446ee4c7b02961af65c2df" category="doc">Remplacement de la carte d'interface hôte (HIC) défectueuse dans EF300 ou EF600</block>
-  <block id="1d26fe6e02d3739f6d0eb3a75694ed4e" category="paragraph">Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défectueuse dans une baie EF300 ou EF600.</block>
   <block id="862acd5892fdfacc876441454483bc88" category="paragraph">Lorsque vous remplacez une HIC défectueuse, vous devez mettre la baie de stockage hors tension, remplacer la HIC et mettre de nouveau l'alimentation.</block>
   <block id="a3910b9f5e509531bb5260b4c20c05a2" category="list-text">HIC compatibles avec vos contrôleurs.</block>
   <block id="641da5252bd37830e3c9e814b73958c5" category="section-title">Étape 1 : mettre le contrôleur hors ligne</block>
@@ -1772,7 +1753,6 @@
   <block id="a04de9b76d1a0c278d274156abe30b49" category="list-text">Sélectionnez le contrôleur avec la carte d'interface hôte remplacée.</block>
   <block id="fc01077c1af24b483d9d96834b5c4d66" category="paragraph">Le remplacement de votre carte d'interface hôte est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="5e1f9a9f3fe7461846141cef4f73476d" category="summary">Exigences et facteurs à prendre en compte lors du remplacement des contrôleurs EF300 ou EF600</block>
-  <block id="c50f07ebaae0c1c05f1a49284f9e77c9" category="paragraph">Avant de remplacer un contrôleur EF300 ou EF600, vérifiez les exigences et considérations.</block>
   <block id="bfb064f41224e7af37470eb32a8ab384" category="section-title">Exigences de remplacement des contrôleurs</block>
   <block id="2088b23955526da1e8989b34f36f915a" category="paragraph">Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :</block>
   <block id="c983c5653c1e6540544cc1b919b655a9" category="section-title">Remplacement sous tension</block>
@@ -1780,7 +1760,6 @@
   <block id="57c68021dbcd118e7d2ccece06f119da" category="list-text">Le second boîtier du contrôleur situé sur le shelf présente un état optimal.</block>
   <block id="e62f8b89bfbf2c5df30a0d8c61ee521a" category="list-text">Le champ *OK à supprimer* de la zone Détails du gourou de la restauration dans le Gestionnaire de système SANtricity affiche *Oui*, indiquant qu'il est sûr de supprimer ce composant.</block>
   <block id="73e73c660285cf0012c92dc423418372" category="summary">Modifiez le protocole du port hôte pour une matrice EF300 ou EF600.</block>
-  <block id="3143078d1b5def855687d8b871a96006" category="paragraph">Suivez cette procédure pour modifier le protocole du port hôte dans une matrice EF300 ou EF600. Cette procédure ne s'applique qu'aux cartes d'interface hôte (HIC) utilisant des protocoles Infiniband (IB) ou Fibre Channel (FC).</block>
   <block id="4ad13ed0f8c6dc3b675c1012c53f09d8" category="section-title">Étape 1 : obtenir la clé du pack de fonctions</block>
   <block id="95e811ea8d7fc10ecb21e53428c11d23" category="paragraph">Pour obtenir la clé du pack de fonctionnalités, vous avez besoin du numéro de série du tiroir du contrôleur, d'un code d'activation de la fonction et de l'identifiant d'activation de la fonctionnalité de la matrice de stockage.</block>
   <block id="2e144d20feb9f271912d0849bd7ac791" category="list-text">Recherchez le numéro de série.</block>
@@ -1908,7 +1887,6 @@
   <block id="58dc8f8b596835dda6ee537004b83559" category="inline-link-macro">Conversion de protocole hôte complète</block>
   <block id="7698e6f3e6142fc3c6d002cd43d50079" category="paragraph">Accédez à <block ref="96616e2404f8fb711fbdc45541d51b7a" category="inline-link-macro-rx"></block>.</block>
   <block id="571b1ead863e404cb63de04e9e14c21d" category="summary">Exigences et considérations relatives au remplacement des batteries EF300 ou EF600</block>
-  <block id="33f5fc7c0c7f3df402c75b558ca4f2b8" category="paragraph">Avant de remplacer une batterie EF300 ou EF600, vérifiez les exigences et considérations.</block>
   <block id="056be41130481a3cc30a2995ea8da74b" category="section-title">Alertes Recovery Guru</block>
   <block id="dd5310bc98ba6cb05aaa3b8d79f654ae" category="paragraph">Si le gourou de la restauration de SANtricity System Manager indique un des États suivants, vous devez remplacer la batterie affectée :</block>
   <block id="1a315353804509db15a73a72ee15925d" category="list-text">La batterie est défectueuse</block>
@@ -1929,11 +1907,9 @@
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Cartes d'interface hôte</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Examinez les exigences et les considérations avant de remplacer les ventilateurs EF300 ou EF600.</block>
   <block id="ccccec3135cfde6cfdbeb41f2c09065e" category="doc">Exigences relatives au remplacement des ventilateurs EF300 ou EF600</block>
-  <block id="81e19282d1e4ebf8f62639f9c89c358d" category="paragraph">Avant de remplacer un ventilateur défectueux dans une baie EF300 ou EF600, vérifiez les exigences suivantes.</block>
   <block id="1f0e561212d6f8a00a46e7e96276d4cc" category="list-text">Vous disposez d'un ventilateur de remplacement pris en charge par votre modèle de tiroir contrôleur ou de tiroir disque.</block>
   <block id="f0df890160164bf2b2f1dc2577fa1273" category="admonition">Si le gourou de la restauration indique qu'il n'est pas OK de supprimer le ventilateur, contactez le support technique.</block>
   <block id="4a3c8c03cdcb016f4690174be36a72be" category="summary">Consultez les conditions requises et les considérations avant de remplacer une carte d'extension SAS EF300.</block>
-  <block id="9f5dcc5008bfb9c123def7609109a915" category="paragraph">Si vous prévoyez d'ajouter une carte d'extension SAS à un système EF300 ou EF600, vérifiez les exigences suivantes.</block>
   <block id="c5e4de94858244e1042696464bdaa282" category="inline-link-macro">Installation et configuration des systèmes de stockage EF300 et EF600</block>
   <block id="3d52e0419c7f8a010e6fc5f98c25da0f" category="list-text">Vous devez suivre le <block ref="333b8feab226020b2ee6e03f5e462ace" category="inline-link-macro-rx"></block> pour configurer votre contrôleur.</block>
   <block id="ae1aaca96a065fbfcfe3174c8cf8c2dd" category="list-text">Vous devez mettre à jour votre micrologiciel avec la dernière version. Pour mettre à jour votre micrologiciel, suivez les instructions de la section <block ref="bf6a098eae1df274d91ef498db89d4bb" category="inline-link-macro-rx"></block>.</block>
@@ -1942,7 +1918,6 @@
   <block id="e4005cc04ad30971023ff0ce6398ae8e" category="list-text">Une carte d'extension SAS peut être installée sur les contrôleurs EF300 dans le port 1 pour permettre l'extension du plateau de lecteur.</block>
   <block id="fd293cf77acfdd97249a46e8f0f881ef" category="summary">Remplacement d'un disque dans une baie EF600</block>
   <block id="c2d869aaa5bfd00a5deb58e0c2033910" category="doc">Remplacement du disque dans une baie EF600</block>
-  <block id="248c1549e6f83551c44f661321efdd2d" category="paragraph">Vous pouvez remplacer un disque dans une baie EF600.</block>
   <block id="090c16503867f8c38598a1963600e1f8" category="list-text">Révision <block ref="a3053473be5cf3d84a95cd722c986422" category="inline-link-macro-rx"></block>.</block>
   <block id="d9de1ae5a4126bb7bbc28768a5dd593d" category="section-title">Étape 1 : préparer le remplacement de l'entraînement</block>
   <block id="8a1d026d92ef5e15588a139fbb9c0b7d" category="paragraph">Préparation au remplacement des disques par la fonctionnalité Recovery Guru dans SANtricity System Manager et réalisation des étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.</block>
@@ -1955,7 +1930,6 @@
   <block id="ff2bc06fec8afad4f4fef6613d515032" category="paragraph">Procédez au remplacement du lecteur pour vérifier que le nouveau disque fonctionne correctement.</block>
   <block id="0c72a6417d4140802a553e2534452e92" category="summary">Remplacement d'un ventilateur dans un EF300 ou EF600</block>
   <block id="08975a768d5ba6909e25278ac5469941" category="doc">Remplacement d'un ventilateur EF300 ou EF600</block>
-  <block id="b7ad64ed9554dc2f60ac2823757adebd" category="paragraph">Vous pouvez remplacer un ventilateur d'une baie EF300 ou EF600.</block>
   <block id="0d72942e30e9c18f566da0461c8288db" category="paragraph">Chaque tiroir contrôleur ou tiroir disque EF300 et EF600 comprend cinq ventilateurs. En cas de panne d'un ventilateur, vous devez le remplacer dans les plus brefs délais afin de vérifier que le shelf présente une climatisation adéquate.</block>
   <block id="35ad30a0d0cb54f752269652fd523cf3" category="list-text">Un ventilateur de remplacement.</block>
   <block id="3561aed7d51ffd3f85bdf2b7412b2568" category="paragraph">Placez le boîtier du contrôleur hors ligne pour pouvoir remplacer le ventilateur défectueux en toute sécurité.</block>
@@ -1975,7 +1949,6 @@
   <block id="d6475123c80be4addf74127c7fdabcec" category="paragraph">Le remplacement de votre ventilateur est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="4649f22302dc58915bd0c297f379d683" category="summary">Remplacez un module DIMM dans une baie EF300 ou EF600.</block>
   <block id="fc66672be674c1a0d3c77416bba78aaf" category="doc">Remplacez les modules DIMM dans EF300 ou EF600</block>
-  <block id="3b00e6dae1c985bb3451ba742a69d556" category="paragraph">Vous pouvez remplacer un module DIMM dans une baie EF300 ou EF600.</block>
   <block id="e8bc418a1334db89f56000cf271db6e1" category="paragraph">Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre contrôleur, mettre le contrôleur hors ligne, retirer le contrôleur, retirer les modules DIMM et installer les nouveaux modules DIMM dans votre contrôleur. Vous pouvez ensuite remettre votre contrôleur en ligne et vérifier que la baie de stockage fonctionne correctement.</block>
   <block id="41be7544de3e0a025756e0b0464afdc9" category="list-text">Révision <block ref="13c2dbe2bfcf1cade167bfec3b040713" category="inline-link-macro-rx"></block>.</block>
   <block id="07b2beae7b7fb948dee7a18cc3c868d1" category="list-text">Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.</block>
@@ -5051,7 +5024,6 @@
   <block id="67f289221dc2b8315be57c85a28e0619" category="inline-xref-macro">Avant l'installation</block>
   <block id="3079e347289e92245a099fa67979025d" category="paragraph">Voici les instructions de configuration en ligne décrites sur ce site. Commencez par <block ref="362aaee1fd434b3c40eb6233ad5d544d" category="inline-xref-macro-rx"></block> pour commencer.</block>
   <block id="0a5007e0321faf4985d50a7bb7ba0e2e" category="summary">Pour installer un EF300 ou EF600, créez un compte et enregistrez votre matériel.</block>
-  <block id="d63189d25566dd6ce02071e79b58fa61" category="paragraph">Découvrez comment vous préparer à l'installation de votre système de stockage EF300 ou EF600.</block>
   <block id="d835a4a9669f275077940ef187446bc5" category="paragraph">Si vous procédez au câblage de votre EF300 pour l'extension SAS, consultez les informations suivantes :</block>
   <block id="ae4728ced8957babaccab930d6730f18" category="inline-link-macro">Ajoutez des cartes d'extension SAS</block>
   <block id="ed340a74210414952184f18bdea46abb" category="list-text"><block ref="59592944f1499a5ed0c513d73204b10a" category="inline-link-macro-rx"></block> Pour l'installation de la carte d'extension SAS.</block>
@@ -5094,7 +5066,6 @@
   <block id="c4c758aa103c97f5ed7c97cfec548724" category="admonition">Les ventilateurs sont très bruyants lors de leur première mise sous tension.</block>
   <block id="602581c7f4fef4e0ffc7c312b3efa341" category="summary">Installez l' EF300 ou EF600 dans un rack à deux montants ou dans une armoire système NetApp.</block>
   <block id="923a86c9f908f09f61d33d7831905371" category="doc">Installer le matériel de fixation</block>
-  <block id="d751bcfe66df83ffc12435f4dd821d73" category="paragraph">Vous pouvez installer un système de stockage EF300 ou EF600 dans un rack à deux montants ou dans une armoire système NetApp.</block>
   <block id="2d25dc407855f99aa2a0fe96d3aaffc7" category="list-text">Préparez une zone de travail plate et sans électricité statique.</block>
   <block id="9ad20405ed7442681aff80b87cb2dba2" category="list-text">Déballez le matériel.</block>
   <block id="ddaca6e351d1a3c9ab3d82db4c028ff5" category="list-text">Déballez le contenu et procédez à l'inventaire du matériel de fixation contre le bordereau d'expédition.</block>
@@ -7159,8 +7130,6 @@
   <block id="77e309486c3d835aea70d40429cd8763" category="inline-link-macro">Configurer le proxy de services Web</block>
   <block id="cc4bf58dba772738539b000ef7815fde" category="list-text"><block ref="a5854a34a0c5ab2777626906b175ead4" category="inline-link-macro-rx"></block>.</block>
   <block id="7e90e7aafc41dd2ae860ea7d075f0a24" category="list-text">Unified Manager -- l'installation proxy inclut SANtricity Unified Manager, une interface web qui permet d'accéder à une configuration plus récente des systèmes de stockage E-Series et EF-Series. Pour plus d'informations, consultez l'aide en ligne de Unified Manager, disponible depuis son interface utilisateur ou depuis<block ref="173d089ddf996dbd066dc04ffeb10dca" category="inline-link-rx"></block>.</block>
-  <block id="2fd0d86a248b2472ae69f3f3c21669c9" category="inline-link">Exemples de services Web NetApp</block>
-  <block id="6dcc47dbb36dc1602e64f7f0d0883dc8" category="list-text">Référentiel GitHub : le stockage GitHub contient un référentiel pour la collecte et l'organisation d'exemples de scripts illustrant l'utilisation de l'API des services Web NetApp SANtricity. Pour accéder au référentiel, voir<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="e6983df1f2fb0f2d7d84ad113702685d" category="inline-link">Styles architecturaux et conception d'architectures logicielles réseau</block>
   <block id="32eac081ab8132e42611dc0066282fe9" category="list-text">Representational State Transfer (REST) -- les services Web sont une API RESTful qui permet d'accéder à quasiment toutes les fonctionnalités de gestion de SANtricity. Il est donc préférable de vous familiariser avec les concepts REST. Pour plus d'informations, voir<block ref="f6676be33ff47b799bb2e0366943e72b" category="inline-link-rx"></block>.</block>
   <block id="eac91314cd5cb68114846b750625ea6e" category="inline-link">Présentation de JSON</block>
@@ -7442,8 +7411,6 @@
   <block id="3aa8db601a262e6c7ce55106cbfb88cf" category="paragraph">Utilisé dans le proxy de services Web pour indiquer que le système de stockage demandé est actuellement inaccessible. Par conséquent, les services Web ne peuvent pas satisfaire la demande.</block>
   <block id="858d9ef3cff533a963578b1a8a8d4a62" category="paragraph">429 trop de demandes</block>
   <block id="036fbcb66eb52eb94ad85dbcb48f8fce" category="paragraph">Indique qu'une limite de demande a été dépassée et qu'elle doit être relancée ultérieurement.</block>
-  <block id="fc53c036602508ed6c2afc18e2fbdf51" category="section-title">Exemples de scripts</block>
-  <block id="c44a76942b050cc49aec1fa7f5570bec" category="paragraph">GitHub contient un référentiel pour la collecte et l'organisation d'exemples de scripts illustrant l'utilisation de l'API des services Web NetApp SANtricity. Pour accéder au référentiel, voir<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="c2818061f0b9c0d7a07cd2cbfc93b16a" category="doc">Présentation des services Web et de Unified Manager</block>
   <block id="c0d25939d469bb628bef1593149aba5c" category="paragraph">Avant d'installer et de configurer le proxy de services Web, lisez la présentation des services Web et de SANtricity Unified Manager.</block>
   <block id="2c10282d2a9ce8be1576d7af8091d09e" category="section-title">Services Web</block>
@@ -8483,7 +8450,6 @@
   <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous au<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
   <block id="3885d6d9f5a5030ec46ec3ce038af96c" category="inline-link">Base de connaissances NetApp</block>
   <block id="780fe86b24958c45b0b8792fad1e9b3c" category="admonition">Pour plus d'informations sur le remplacement d'un tiroir d'extension E-Series DE460c, reportez-vous au<block ref="b46c4d97d6f1694e2cd029493cdb5475" category="inline-link-rx"></block>.</block>
-  <block id="2db2ab880afe48bd41e6405e510d18a3" category="paragraph">Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à un tiroir contrôleur E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 ou E4000.</block>
   <block id="cefb29f3645d6d69acdc85d8770aa08a" category="inline-xref">Étape 2 : installez le tiroir disque et mettez-le sous tension.</block>
   <block id="346a8c796c407b91a19c527df6110dbf" category="list-text">Si des modules d'E/S sont connectés au matériel, procédez comme suit. Sinon, passez à l' <block ref="ced5ba5343128d91ca8bbc4aaf5b23cf" category="inline-xref-macro-rx"></block></block>
   <block id="88c9d5369051df6e8e46d78e3d1f7a01" category="image-alt">Icône IOM (ESMS)</block>
@@ -8528,7 +8494,6 @@
   <block id="2163e0da7fb01e2bb8b011e0bbb5bb9a" category="paragraph">Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur le matériel E-Series et le logiciel SANtricity. Les liens vous mènent à un autre site de documentation.</block>
   <block id="231fee8476ab72cb095e76bba043405b" category="inline-link-macro">Série E4000 avec tiroir de 12 ou 60 disques</block>
   <block id="e7898b0cd5dffab6be90aba697d20fbc" category="list-text"><block ref="e7898b0cd5dffab6be90aba697d20fbc" category="inline-link-macro-rx"></block></block>
-  <block id="b1a34a1559f9d1375a007a5b84964084" category="list-text">*Types de contrôleurs* -- tous les modèles E4000, E2800, EF280, EF300, E5700, EF570 et EF600.</block>
   <block id="ac04abe31dcd141500e5d9732b2ac56b" category="list-text">E4000 Series - hybride d'entrée de gamme</block>
   <block id="d8b8562346c10d2efbbb129845379264" category="list-text">Tailles de rack</block>
   <block id="1c2bd945de8ed1b6e853b76b3def6a6d" category="image-alt">E2800 2U</block>
@@ -8538,7 +8503,6 @@
   <block id="db1f17f8825c1b566a696300d91ea1b0" category="paragraph"><block ref="db1f17f8825c1b566a696300d91ea1b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa3181e7a7fa68b8f072afb1fee51cc" category="inline-image-macro">EF300 2U</block>
   <block id="ca3611d1131613ffa7a890d7f6e42416" category="paragraph"><block ref="ca3611d1131613ffa7a890d7f6e42416" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5f324d184d0af564d12941f12dcae69f" category="list-text">Disques et HIC</block>
   <block id="9f3c652bfc849caad5b2686a7b942865" category="image-alt">E5700 2U</block>
   <block id="87d79e15bbf55dbb02286cca22f13ff0" category="image-alt">E5700 4U</block>
   <block id="3a0386059e2d44c807d709da53f78d9a" category="inline-image-macro">EF570 2U</block>
@@ -8575,7 +8539,6 @@
   <block id="de8011abde4e4344c82af51912b3ce19" category="paragraph"><block ref="2bce2265bb1e82bb0d0858adf2dafedf" category="inline-image-macro-rx" type="image"></block> *Paramètres système*</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="inline-image-macro">Assistance</block>
   <block id="9dcfdd4141be874fb7eb13880a5fd525" category="paragraph"><block ref="1cb7eabea009b4b9cfe98093989eadbf" category="inline-image-macro-rx" type="image"></block> *Support*</block>
-  <block id="0c7e65219517f5881dd4fc4cbac2dbf6" category="paragraph">Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570 et EF600. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.</block>
   <block id="7ac1c3c4fd9181221a17809a9e2420ed" category="paragraph"><block ref="fa1a238df1b067ec5821498fc2b49a78" category="inline-image-macro-rx" type="image"></block> *Découvrir les matrices de stockage*</block>
   <block id="9506f0fd0f7f1b07960b15b4c9e68d1a" category="inline-image-macro">Lancement</block>
   <block id="dd5912f8cf835c33b2a3b61d5e141ff0" category="paragraph"><block ref="59d02cad0b7ca821298861a148459521" category="inline-image-macro-rx" type="image"></block> *Lancement*</block>
@@ -9334,7 +9297,6 @@
   <block id="43407d291e0a258a2c0f50fea060ead5" category="image-alt">Retirez le disque du shelf</block>
   <block id="5790149daceb0d5059957b49f27f38bc" category="image-alt">Le profil de la baie de stockage</block>
   <block id="6eb64fbdee0c658692fc6db01e28a15a" category="image-alt">Boîte de dialogue Modifier le pack de fonctions</block>
-  <block id="c26d5c551bc45d9cf360b6ebab870ac2" category="paragraph">Vous devrez peut-être effectuer des procédures de maintenance sur votre matériel. Cette section présente les procédures spécifiques à la maintenance des composants du système EF300 ou EF600.</block>
   <block id="d1ff77c85f0bb81f5e031dab7a099ac2" category="paragraph">Les procédures décrites dans cette section supposent que le système EF300 ou EF600 a déjà été déployé dans l'environnement E-Series.</block>
   <block id="4228df1f41617005f9a6966cc97e2b6d" category="paragraph"><block ref="4228df1f41617005f9a6966cc97e2b6d" category="inline-link-rx"></block></block>
   <block id="2758f7dbcf963c3ec6e9b39bf3319e8f" category="paragraph"><block ref="2758f7dbcf963c3ec6e9b39bf3319e8f" category="inline-link-rx"></block></block>
@@ -9469,4 +9431,51 @@
   <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nouvelles fonctionnalités de la version 11.80.1R3</block>
   <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.</block>
   <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nouvelles fonctionnalités de la version 11.80.1R2</block>
+  <block id="166d62a1d721192a2058e6d8b4d89c04" category="paragraph">Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à un tiroir contrôleur E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600, EF300C, EF600C ou E4000.</block>
+  <block id="8a7e170acd5f2688800925b2b4a8d261" category="list-text"><block ref="537606410175a12a150f722cd71e55fb" category="inline-link-rx"></block> -- décrit comment configurer le stockage virtuel et physique pour rester dans les limites maximales autorisées prises en charge par ESX/ESXi.</block>
+  <block id="d088dea69b1345c1729f1c0d46d8053d" category="list-text">*Types de contrôleurs* -- tous les modèles E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300, EF600C et EF300C.</block>
+  <block id="4720d0b863e013bea6899b10e0989bda" category="list-text">Gamme EF600C - stockage 100 % NVMe, 100 % Flash de milieu de gamme</block>
+  <block id="b9f7cef2dc8f05405c94daa2cb4fa6ae" category="list-text">Gamme EF300C - stockage 100 % NVMe, 100 % Flash de milieu de gamme</block>
+  <block id="5ca6952c7c9ae5d4b8be61e6386f0222" category="open-title">Modèles EF300C</block>
+  <block id="595f8cc3ac0c1f12a0f83c3b1dad7c19" category="list-text">Prise en charge des disques SSD NVMe de 30 To et 60 To de capacité</block>
+  <block id="f8a3ff8be0bd051ecc8c3ec31daa0195" category="admonition">Pour SANtricity OS 11.80GA et supérieur, la baie EF300 prend en charge les configurations de tiroirs d'extension sans disques dans le tiroir de base Lorsque vous utilisez cette configuration, assurez-vous que les disques sont installés dans le tiroir d'extension et correctement connectés au plateau de base avant de mettre le système sous tension. *</block>
+  <block id="14a2fa7582e1084e3800dde50d8cde03" category="open-title">Modèles EF600C</block>
+  <block id="0db8edfb04068c99ae28246efebb6d4d" category="list-text">SAS 12gb</block>
+  <block id="689052b8726f00a4623e9ada4d36af90" category="list-text">EF300, EF600. Contrôleurs EF300C et EF600C</block>
+  <block id="16736d8feb91d19d335e7acdefc20ef7" category="paragraph">Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C et EF600C. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.</block>
+  <block id="0fabf178487912291e67bdafbadfe77d" category="paragraph">Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF300, EF600, EF300C ou EF600C vers un tiroir disque DE212C, DE224C ou DE460.</block>
+  <block id="f1c197c528faee0553e4d6ce534048a7" category="paragraph">EF300, EF600, EF300C, EF600C</block>
+  <block id="57274295d5ba7bc8f4d4ebba2d325b92" category="doc">Installez et configurez les systèmes de stockage EF300, EF600, EF300C et EF600C</block>
+  <block id="915fd81c3f189c50233446daf085a8f7" category="paragraph">Vous pouvez installer un système de stockage EF300, EF600, EF300C ou EF600C dans un rack à deux montants ou une armoire système NetApp.</block>
+  <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Découvrez comment préparer l'installation de votre système de stockage séries EF300, EF600, EF300C ou EF600C.</block>
+  <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Avant de remplacer une batterie EF300, EF600, EF300C ou EF600C, consultez les exigences et les considérations.</block>
+  <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">Vous pouvez remplacer une batterie dans un système de stockage EF300, EF600, EF300C ou EF600C.</block>
+  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section explique comment remplacer un seul contrôleur ou les deux contrôleurs du tiroir contrôleur EF300, EF600, EF300C ou EF600C.</block>
+  <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Avant de remplacer un système EF300, EF600 Le contrôleur EF300C, ou EF600C, examine les exigences et les considérations.</block>
+  <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Vous pouvez remplacer un seul contrôleur dans votre tiroir contrôleur EF300, EF600, EF300C ou EF600C.</block>
+  <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Avant de remplacer un module DIMM dans une baie de stockage EF300, EF600, EF600C ou EF300C, vérifiez les exigences et les points à prendre en compte.</block>
+  <block id="4c9ef3b0d9ab6aa77110cf9315115626" category="paragraph">Vous devez remplacer un module DIMM en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux. Vérifiez la configuration de votre contrôleur EF300, EF600, EF300C ou EF600C afin de vous assurer que la taille de module DIMM appropriée est remplacée.</block>
+  <block id="c7834d39f5a9eddcdd20194da1039c37" category="paragraph">Vous pouvez remplacer un module DIMM dans une baie EF300, EF600, EF300C ou EF600C.</block>
+  <block id="49d1f2fe6e0ad23ead3ed2632a9f74a7" category="paragraph">Avant de remplacer un disque dans une baie EF300, EF600, EF300C ou EF600C, consultez les exigences et les considérations.</block>
+  <block id="fce247b37d4a827b7ed5a9564626b863" category="paragraph">Vous pouvez remplacer un lecteur dans une matrice EF300 ou EF300C.</block>
+  <block id="c2554b135d504cffd8df4d719c7ebb57" category="paragraph">Les systèmes EF300 et EF300C prennent en charge l'extension SAS avec des tiroirs de 24 et 60 disques. La procédure à suivre dépend du fait que vous disposez d'un tiroir de 24 disques ou de 60 disques :</block>
+  <block id="857d3299fb961938b057413c5d00a579" category="paragraph">Vous pouvez remplacer un disque dans une baie EF600 ou EF600C.</block>
+  <block id="a802c9dd2801c3a0ba58f7be36493829" category="paragraph">Avant de remplacer un ventilateur défaillant dans une baie EF300, EF600, EF300C ou EF600C, vérifiez les points suivants.</block>
+  <block id="7ecbec8e887541f42291f1c5ee0927e8" category="paragraph">Vous pouvez remplacer un ventilateur des baies EF300, EF600, EF300C ou EF600C.</block>
+  <block id="a318e7b9e1756aadd7beb97eea16e82e" category="paragraph">Avant de mettre à niveau ou de remplacer une carte d'interface hôte (HIC) sur une baie EF300, EF600, EF300C ou EF600C, vérifiez les conditions suivantes.</block>
+  <block id="9c440a2b6a047a7287398066cdcd91a2" category="paragraph">Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défectueuse dans une baie EF300, EF600, EF300C ou EF600C.</block>
+  <block id="8a72a6ac569b2623ae7ef2e6169d9622" category="list-text">Lors de la mise à niveau des HIC dans un contrôleur EF300, EF600, EF300C ou EF600C, répétez toutes les étapes pour retirer le second contrôleur, mettre à niveau les HIC du second contrôleur et réinstaller le second contrôleur avant de remettre le tiroir contrôleur sous tension.</block>
+  <block id="df4b87988905a767129e6eea7d20dfb4" category="paragraph">Suivez cette procédure pour modifier le protocole du port hôte dans une baie EF300, EF600, EF300C ou EF600C. Cette procédure ne s'applique qu'aux cartes d'interface hôte (HIC) utilisant des protocoles Infiniband (IB) ou Fibre Channel (FC).</block>
+  <block id="6105255a43d604b71a2db2ed1e1078e5" category="paragraph">Avant de convertir le protocole hôte d'une baie EF300, EF600, EF300C ou EF600C, vérifiez les conditions suivantes.</block>
+  <block id="ddfc2f522bfc9f9d65e985188108c273" category="paragraph">Vous devrez peut-être effectuer des procédures de maintenance sur votre matériel. Cette section présente les procédures spécifiques à la maintenance des composants de votre système EF300, EF600, EF300C ou EF600C.</block>
+  <block id="fcde763d3b5acba51777c9f806555e8a" category="paragraph">Pour les systèmes de stockage EF300, EF600, EF300C et EF600C, vous pouvez effectuer les procédures de maintenance sur les composants suivants.</block>
+  <block id="202d35201cc74c9968e9a40c7cc30171" category="paragraph">Avant de remplacer un bloc d'alimentation d'une baie EF300, EF600, EF300C ou EF600C, vérifiez les points suivants.</block>
+  <block id="5f8f97ec195542ed337bbddedab32598" category="paragraph">En cas de défaillance de votre contrôleur EF300, EF600, EF300C ou EF600C, vous pouvez remplacer un bloc d'alimentation.</block>
+  <block id="64c37d5d57b631b9fb2968c7586932f3" category="paragraph">Vous pouvez ajouter une carte d'extension SAS à un contrôleur EF300, EF600, EF300C et EF600C pour permettre l'extension du tiroir disque.</block>
+  <block id="0e7081ec1cfc70b91c941e13e9fa52c5" category="paragraph">Si vous prévoyez d'ajouter une carte d'extension SAS à un système EF300, EF600, EF300C ou EF600C, vérifiez les conditions suivantes.</block>
+  <block id="0b2035b979e0933fbb24230f41a4faa9" category="section-title">Nouvelles fonctionnalités de la version 11.90.1</block>
+  <block id="efe2c9d7be92af10ac48d790dd8ccfed" category="paragraph">Nouveaux modèles de systèmes de stockage : EF300C et EF600C</block>
+  <block id="7c4ed7bb875e7af6303e23e1e7df86c3" category="paragraph">Cette version présente les systèmes de stockage NVMe 100 % Flash EF300C et EF600C. EF300C et EF600C sont des versions Flash haute capacité des systèmes de stockage EF300 et EF600 déjà en place. Les disques SSD NVMe haute capacité de 30 To et 60 To sont pris en charge par les systèmes EF300C et EF600C.</block>
+  <block id="c4c050a1cbe127eb24c705844a070872" category="paragraph">Prise en charge des interfaces SAS 12 Gb sur EF4000</block>
+  <block id="e8b3561f4b15fa164cdd5717ae511188" category="paragraph">Le contrôleur E4000 prend désormais en charge les cartes d'interface hôte SAS 12 Gb.</block>
 </blocks>

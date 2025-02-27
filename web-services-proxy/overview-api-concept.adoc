@@ -213,8 +213,3 @@ Indique qu'une limite de demande a été dépassée et qu'elle doit être relanc
 Non
 
 |===
-
-
-== Exemples de scripts
-
-GitHub contient un référentiel pour la collecte et l'organisation d'exemples de scripts illustrant l'utilisation de l'API des services Web NetApp SANtricity. Pour accéder au référentiel, voir https://github.com/NetApp/webservices-samples["Exemples de services Web NetApp"^].

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/dimms-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM 
+keywords: EF300, EF600, EF300C, EF600C, replace DIMM 
 summary: Remplacez un module DIMM dans une baie EF300 ou EF600. 
 ---
 = Remplacez les modules DIMM dans EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Remplacez un module DIMM dans une baie EF300 ou EF600.
 
 
 [role="lead"]
-Vous pouvez remplacer un module DIMM dans une baie EF300 ou EF600.
+Vous pouvez remplacer un module DIMM dans une baie EF300, EF600, EF300C ou EF600C.
 
 .Description de la tâche
 Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre contrôleur, mettre le contrôleur hors ligne, retirer le contrôleur, retirer les modules DIMM et installer les nouveaux modules DIMM dans votre contrôleur. Vous pouvez ensuite remettre votre contrôleur en ligne et vérifier que la baie de stockage fonctionne correctement.

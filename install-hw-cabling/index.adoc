@@ -28,7 +28,7 @@ Les informations de câblage s'appliquent aux modèles matériels suivants.
 
 
  a| 
-EF300, EF600
+EF300, EF600, EF300C, EF600C
  a| 
 DE212C, DE224C, DE460
 

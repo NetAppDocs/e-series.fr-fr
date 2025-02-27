@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-overview-requirements-replacing2-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, 
+keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Examinez les exigences et les considérations avant de remplacer les ventilateurs EF300 ou EF600. 
 ---
 = Exigences relatives au remplacement des ventilateurs EF300 ou EF600
@@ -11,7 +11,7 @@ summary: Examinez les exigences et les considérations avant de remplacer les ve
 
 
 [role="lead"]
-Avant de remplacer un ventilateur défectueux dans une baie EF300 ou EF600, vérifiez les exigences suivantes.
+Avant de remplacer un ventilateur défaillant dans une baie EF300, EF600, EF300C ou EF600C, vérifiez les points suivants.
 
 * Vous disposez d'un ventilateur de remplacement pris en charge par votre modèle de tiroir contrôleur ou de tiroir disque.
 * Vous avez un bracelet ESD, ou vous avez pris d'autres précautions antistatiques.

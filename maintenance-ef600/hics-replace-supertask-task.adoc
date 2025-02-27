@@ -12,7 +12,7 @@ summary: 'Remplacez une carte d"interface hôte (HIC) EF300 ou EF600 défectueus
 
 
 [role="lead"]
-Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défectueuse dans une baie EF300 ou EF600.
+Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défectueuse dans une baie EF300, EF600, EF300C ou EF600C.
 
 .Description de la tâche
 Lorsque vous remplacez une HIC défectueuse, vous devez mettre la baie de stockage hors tension, remplacer la HIC et mettre de nouveau l'alimentation.

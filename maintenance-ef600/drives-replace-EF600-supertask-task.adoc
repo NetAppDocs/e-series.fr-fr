@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF600-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, drive failure 
+keywords: EF600, EF600C replace DIMM, drive failure 
 summary: 'Remplacement d"un disque dans une baie EF600' 
 ---
 = Remplacement du disque dans une baie EF600
@@ -11,7 +11,7 @@ summary: 'Remplacement d"un disque dans une baie EF600'
 
 
 [role="lead"]
-Vous pouvez remplacer un disque dans une baie EF600.
+Vous pouvez remplacer un disque dans une baie EF600 ou EF600C.
 
 .Description de la tâche
 La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des E/S.

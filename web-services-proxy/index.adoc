@@ -30,7 +30,6 @@ L'installation et la configuration du proxy de services Web implique les étapes
 == Trouvez plus d'informations
 
 * Unified Manager -- l'installation proxy inclut SANtricity Unified Manager, une interface web qui permet d'accéder à une configuration plus récente des systèmes de stockage E-Series et EF-Series. Pour plus d'informations, consultez l'aide en ligne de Unified Manager, disponible depuis son interface utilisateur ou depuis https://docs.netapp.com/us-en/e-series-santricity/index.html["Documentation sur le logiciel SANtricity"^].
-* Référentiel GitHub : le stockage GitHub contient un référentiel pour la collecte et l'organisation d'exemples de scripts illustrant l'utilisation de l'API des services Web NetApp SANtricity. Pour accéder au référentiel, voir https://github.com/NetApp/webservices-samples["Exemples de services Web NetApp"^].
 * Representational State Transfer (REST) -- les services Web sont une API RESTful qui permet d'accéder à quasiment toutes les fonctionnalités de gestion de SANtricity. Il est donc préférable de vous familiariser avec les concepts REST. Pour plus d'informations, voir http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["Styles architecturaux et conception d'architectures logicielles réseau"^].
 * JavaScript Object notation (JSON) -- parce que les données des services Web sont codées via JSON, vous devez être familier des concepts de programmation JSON. Pour plus d'informations, voir http://www.json.org["Présentation de JSON"^].
 

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-hotadd-drive-shelf-task.html 
 sidebar: sidebar 
-keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C. EF300C, EF600C 
 summary: 'Ajoutez un nouveau tiroir de disque pendant que l"alimentation est toujours appliquée aux autres composants.' 
 ---
 = Ajout à chaud d'un tiroir disque
@@ -21,7 +21,7 @@ En raison de la complexité de cette procédure, il est recommandé de procéder
 
 
 .Description de la tâche
-Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à un tiroir contrôleur E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 ou E4000.
+Cette procédure s'applique à l'ajout à chaud d'un tiroir disque DE212C, DE224C ou DE460C à un tiroir contrôleur E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600, EF300C, EF600C ou E4000.
 
 Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
 

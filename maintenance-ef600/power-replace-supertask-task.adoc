@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/power-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 power supply, replace EF600 power supply, 
+keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: 'Remplacez les blocs d"alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.' 
 ---
 = Remplacez une alimentation EF300 ou EF600
@@ -12,7 +12,7 @@ summary: 'Remplacez les blocs d"alimentation en cas de défaillance dans votre c
 
 
 [role="lead"]
-Vous pouvez remplacer un bloc d'alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.
+En cas de défaillance de votre contrôleur EF300, EF600, EF300C ou EF600C, vous pouvez remplacer un bloc d'alimentation.
 
 En cas de panne de l'alimentation, vous devez le remplacer dès que possible afin que le tiroir contrôleur dispose d'une source d'alimentation redondante.
 

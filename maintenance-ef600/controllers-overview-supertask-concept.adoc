@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 controller, replace EF600 controller, 
+keywords: replace controller, EF300, EF600, EF300C, EF600C 
 summary: Exigences et facteurs à prendre en compte lors du remplacement des contrôleurs EF300 ou EF600 
 ---
 = Exigences relatives au remplacement des contrôleurs EF300 ou EF600
@@ -11,7 +11,7 @@ summary: Exigences et facteurs à prendre en compte lors du remplacement des con
 
 
 [role="lead"]
-Avant de remplacer un contrôleur EF300 ou EF600, vérifiez les exigences et considérations.
+Avant de remplacer un système EF300, EF600 Le contrôleur EF300C, ou EF600C, examine les exigences et les considérations.
 
 Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les disques et met en œuvre les fonctions de SANtricity System Manager.
 

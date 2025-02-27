@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-change-supertask-task.html 
 sidebar: sidebar 
-keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Modifiez le protocole du port hôte pour une matrice EF300 ou EF600. 
 ---
 = Modification du protocole hôte pour un système EF300 ou EF600
@@ -12,7 +12,7 @@ summary: Modifiez le protocole du port hôte pour une matrice EF300 ou EF600.
 
 
 [role="lead"]
-Suivez cette procédure pour modifier le protocole du port hôte dans une matrice EF300 ou EF600. Cette procédure ne s'applique qu'aux cartes d'interface hôte (HIC) utilisant des protocoles Infiniband (IB) ou Fibre Channel (FC).
+Suivez cette procédure pour modifier le protocole du port hôte dans une baie EF300, EF600, EF300C ou EF600C. Cette procédure ne s'applique qu'aux cartes d'interface hôte (HIC) utilisant des protocoles Infiniband (IB) ou Fibre Channel (FC).
 
 
 
