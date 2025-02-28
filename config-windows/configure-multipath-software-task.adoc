@@ -28,4 +28,14 @@ Les installations Windows utilisent le pilote natif du module DSM (MPIO Device S
 . Téléchargez le package *SANtricity Windows DSM* à partir du https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["Page du logiciel SANtricity OS"^]. Sélectionnez votre version du logiciel, acceptez le contrat de licence et sélectionnez *SANtricity Windows DSM* sous Téléchargements supplémentaires.
 . Exécutez le programme d'installation *SANtricity Windows DSM*. Double-cliquez sur le package d'installation à exécuter.
 . Utilisez l'assistant d'installation pour installer le package sur la station de gestion.
+. Si nécessaire, exécutez `mpclaim` la commande pour vérifier l'installation du progiciel DSM.
++
+[source, cli]
+----
+C:\Users\Administrator>mpclaim -s -d
+----
++
+
+NOTE: La fonctionnalité MPIO doit être installée sur le serveur Windows pour exécuter la `mpclaim` commande.
+
 

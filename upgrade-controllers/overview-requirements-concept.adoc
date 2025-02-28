@@ -58,6 +58,14 @@ Si vous remplacez les contrôleurs par une mise à niveau vers un nouveau modèl
 +
 Lorsque vous mettez à niveau votre contrôleur E-Series, vous devez désactiver les fonctionnalités premium utilisées sur votre baie de stockage qui ne sont pas prises en charge par les nouveaux contrôleurs.
 
+* *Gestion intrabande à l'aide du volume d'accès*
++
+** Le E4000 ne prend pas en charge la gestion intrabande à l'aide du volume Access.
++
+Avant de procéder à la mise à niveau vers les contrôleurs E4000, annulez le mappage du volume d'accès à partir de tous les hôtes et clusters hôtes définis.
+
+
+
 
 
 
@@ -84,6 +92,7 @@ Commandez une nouvelle batterie.
 * E4000 ne peut prendre en charge que 512 volumes
 * E4000 ne prend pas en charge les configurations SAS
 * E4000 ne prend pas en charge les volumes de stockage distants
+* Le E4000 ne prend pas en charge la gestion intrabande à l'aide du volume Access.
 
  a| 
 Les contrôleurs E4000 doivent utiliser des tiroirs SAS-3.
@@ -107,6 +116,8 @@ Commandez une nouvelle batterie.
 
 * La prise en charge de la carte d'interface hôte InfiniBand n'est pas disponible
 * E4000 ne prend pas en charge les configurations SAS
+* E4000 ne prend pas en charge les volumes de stockage distants
+* Le E4000 ne prend pas en charge la gestion intrabande à l'aide du volume Access.
 
  a| 
 Les contrôleurs E4000 doivent utiliser des tiroirs SAS-3.

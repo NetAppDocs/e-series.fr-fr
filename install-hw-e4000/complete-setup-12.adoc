@@ -19,6 +19,9 @@ Découvrez comment câbler les contrôleurs à votre réseau et configurer un sy
 
 Branchez les câbles du système en fonction de la topologie de votre réseau.
 
+
+NOTE: Les ports hôtes situés en bas à gauche (e1a, e1b, e1c et e1d) et en haut à droite (e0a et e0b) du contrôleur peuvent être utilisés pour le câblage des hôtes de données.
+
 [role="tabbed-block"]
 ====
 .Option 1 : topologie à connexion directe
@@ -27,8 +30,11 @@ L'exemple suivant montre le câblage aux hôtes de données via une topologie de
 
 image:../media/drw_e4012_direct_topology_ieops-2047.svg["E4012 topologie directe, largeur=1000 px"]
 
-. Si aucun tiroir d'extension n'est installé, connectez directement chaque adaptateur hôte aux ports hôtes e0a et e0b des contrôleurs.
+. Connectez chaque port HBA hôte aux ports hôtes des contrôleurs (e1a, e1b, e1c et e1d ou e0a et e0b).
 
+
+
+NOTE: Pour obtenir des exemples de schémas de câblage supplémentaires, reportez-vous àla section https://docs.netapp.com/us-en/e-series/install-hw-cabling/host-cable-task.html#cabling-for-a-direct-attached-topology["Câblage hôte"^].
 
 --
 .Option 2 : topologie de la structure
@@ -38,7 +44,7 @@ L'exemple suivant montre le câblage vers les hôtes de données via une topolog
 image:../media/drw_e4012_fabric_topology_ieops-2046.svg["Topologie de structure E4012, largeur=1000 px"]
 
 . Connectez chaque adaptateur hôte directement au commutateur.
-. Connectez chaque commutateur directement aux ports hôtes e0a et e0b des contrôleurs.
+. Connectez chaque switch directement aux ports hôtes des contrôleurs (e1a, e1b, e1c et e1d ou e0a et e0b).
 
 
 --

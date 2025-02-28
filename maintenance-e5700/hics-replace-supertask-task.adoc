@@ -19,15 +19,10 @@ Lorsque vous remplacez une HIC, mettez le contrôleur hors ligne (pour les confi
 
 .Avant de commencer
 * Révision link:hics-overview-supertask-concept.html["Conditions requises pour le remplacement de la carte E5700 HIC"].
-* Planifiez une fenêtre de maintenance des temps d'arrêt pour cette procédure. L'alimentation doit être éteinte lorsque vous installez des HIC. Vous ne pouvez donc pas accéder aux données sur la baie de stockage tant que cette procédure n'est pas terminée. (Dans une configuration duplex, les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension.)
 * Vérifiez qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
 * Dans le Gestionnaire système SANtricity, vérifiez les détails du gourou de la restauration pour confirmer que vous avez une HIC défectueuse et pour garantir qu'aucun autre élément ne doit être résolu avant que vous ne puissiez retirer et remplacer la HIC.
 * Assurez-vous de disposer des éléments suivants :
 +
-** Deux circuits intégrés compatibles avec vos contrôleurs.
-+
-Pour les configurations duplex (deux contrôleurs), les circuits intégrés installés dans les deux boîtiers de contrôleur doivent être identiques. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.
-
 ** Un bracelet antistatique ou d'autres précautions antistatiques.
 ** Un tournevis cruciforme n° 1.
 ** Étiquettes permettant d'identifier chaque câble connecté au boîtier du contrôleur.

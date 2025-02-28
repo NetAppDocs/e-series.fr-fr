@@ -249,7 +249,10 @@ NOTE: Si vous utilisez vos doigts pour desserrer la vis moletée, vous devrez pe
 . Réinstallez le HIC :
 +
 .. Alignez le support de la fiche HIC de remplacement sur le support de la carte mère, puis insérez doucement la carte dans le support.
-.. Serrez les trois vis moletées sur le HIC.
+.. Serrez à la main les trois vis moletées sur le HIC.
++
+N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
+
 .. Réinstallez le cache HIC.
 
 

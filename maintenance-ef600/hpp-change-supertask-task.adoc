@@ -604,7 +604,11 @@ image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_c
 +
 ** Numéro de série du châssis
 ** Code d'activation de la fonction
-** IDENTIFIANT d'activation de la fonctionnalité REMARQUE : le site Web d'activation de la fonction Premium comprend un lien vers « instructions d'activation de la fonction Premium ». N'essayez pas d'utiliser ces instructions pour cette procédure.
+** Identifiant d'activation de fonctionnalité
++
+
+NOTE: Le site Web d'activation de la fonction Premium comprend un lien vers « instructions d'activation de la fonction Premium ». N'essayez pas d'utiliser ces instructions pour cette procédure.
+
 
 
 . Choisissez de recevoir le fichier clé du pack de fonctionnalités dans un e-mail ou de le télécharger directement à partir du site.

@@ -56,12 +56,7 @@ Effectuez les opérations suivantes dans l'ordre :
  a| 
 Gestion externe des clés, tous les disques verrouillés, vous ne pouvez *pas* passer à une gestion interne des clés pour le remplacement du contrôleur.
  a| 
-Effectuez les opérations suivantes dans l'ordre :
-
-.. Enregistrez l'adresse du serveur KMS externe et le numéro de port. Dans System Manager, accédez au menu:Paramètres[système > gestion des clés de sécurité > Afficher/Modifier les paramètres du serveur de gestion des clés].
-.. Assurez-vous que les certificats client et serveur sont disponibles sur votre hôte local afin que la matrice de stockage et le serveur de gestion des clés puissent s'authentifier une fois le remplacement du contrôleur terminé. Utilisez le `save storageArray keyManagementCertificate` Commande CLI pour enregistrer les certificats. Veillez à exécuter la commande deux fois, une fois avec le `certificateType` paramètre défini sur `client`, et l'autre avec le paramètre défini sur `server`.
-.. Exportez le fichier de clé de sécurité interne vers un emplacement connu du client de gestion (le système avec un navigateur utilisé pour accéder à System Manager). Utilisez le `export storageArray securityKey` Commande CLI. Vous devez fournir la phrase de passe associée à la clé de sécurité et spécifier l'emplacement où vous souhaitez enregistrer la clé.
-
+Contactez le support client.
 
 
 

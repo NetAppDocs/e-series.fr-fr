@@ -19,15 +19,22 @@ Vous pouvez connecter un hôte directement à un contrôleur (topologie à conne
 
 Une topologie DAS connecte directement les adaptateurs hôtes aux contrôleurs de votre système de stockage.
 
-La figure suivante montre un exemple de connexion. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles.
+Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles.
 
-.Deux hôtes et deux contrôleurs
-image::../media/topology_host_direct_generic_web_low.png[Câblage entre deux hôtes et deux contrôleurs]
+.Un hôte avec deux HBA
+La figure suivante montre un exemple d'un hôte avec deux HBA installés.
 
-*(1)* _Connectez directement chaque port d'adaptateur hôte aux ports d'hôte des contrôleurs._
+image::../media/1host_2hbas_ieops-2145.svg[Un hôte/deux HBA et deux câbles de contrôleur]
 
+.Un hôte avec deux HBA (câblage alternatif)
+La figure suivante montre un exemple d'un hôte avec deux HBA installés.
 
-NOTE: Pour le modèle E4000, connectez-vous aux ports hôtes e0a et e0b.
+image::../media/1host_2hbas_alternate_wkflw_ieops-2147.svg[Un hôte/deux HBA et deux contrôleurs (câblage alternatif)]
+
+.Deux hôtes avec deux HBA par hôte
+La figure suivante montre un exemple de deux hôtes chacun avec deux HBA installés.
+
+image::../media/2hosts_4hbas_ieops-2146.svg[Deux hôtes/quatre HBA et deux contrôleurs]
 
 
 
@@ -43,6 +50,3 @@ image::../media/topology_host_fabric_generic.png[Câblage entre deux hôtes et d
 *(1)* _Connectez directement chaque carte hôte au commutateur._
 
 *(2)* _Connectez directement chaque commutateur aux ports hôte des contrôleurs. Pour garantir des performances optimales, utilisez tous les ports d'adaptateur hôte disponibles._
-
-
-NOTE: Pour le modèle E4000, connectez-vous aux ports hôtes e0a et e0b.

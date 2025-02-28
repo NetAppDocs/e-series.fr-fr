@@ -69,7 +69,8 @@ Pour configurer le stockage, vous pouvez accéder à l'interface Web, System Man
 Sélectionnez l'interface que vous souhaitez utiliser :
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.9x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.8x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Aide en ligne de SANtricity System Manager pour 11.7x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Aide en ligne de SANtricity System Manager pour 11,6x"^]
 
