@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Vous devez remplacer la batterie concernée dans votre appareil E4000 si le gourou de la récupération dans le Gestionnaire système SANtricity indique un état « batterie en panne » ou « Remplacement de la batterie requis ». Pour protéger vos données, la batterie doit être remplacée dès que possible.
+Vous devez remplacer la batterie concernée dans votre E4000 si le gourou de la récupération dans le Gestionnaire système SANtricity indique un état « batterie en panne » ou « Remplacement de la batterie requis ». Pour protéger vos données, la batterie doit être remplacée dès que possible.
 
 Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité Recovery Guru qui confirme la présence d'un problème au niveau de la batterie et pour garantir qu'aucun autre élément ne doit être résolu en premier.
 
@@ -258,28 +258,14 @@ Après avoir remplacé les composants du boîtier du contrôleur, réinstallez-l
 .Étapes
 . Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
 . Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.
-. Retournez le boîtier du contrôleur et alignez l'extrémité sur l'ouverture du châssis.
-. Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.
+. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
+. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'étagère.
+. Remplacez les câbles.
 +
 
-NOTE: N'insérez pas complètement le boîtier du contrôleur dans le châssis avant d'y être invité.
+NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
 
-. Recâblage du système, selon les besoins.
-. Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
-. Terminer la réinstallation du boîtier du contrôleur :
-+
-.. Avec la poignée de la came en position ouverte, poussez fermement le boîtier du contrôleur jusqu'à ce qu'il rencontre le fond de panier central et qu'il soit bien en place, puis fermez la poignée de la came en position verrouillée.
-+
-
-NOTE: N'appliquez pas de force excessive lorsque vous faites glisser le boîtier du contrôleur dans le châssis pour éviter d'endommager les connecteurs.
-
-+
-Le contrôleur commence à démarrer dès qu'il est assis dans le châssis.
-
-.. Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.
-.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
-
-
+. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
 
 
 

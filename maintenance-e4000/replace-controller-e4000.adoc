@@ -390,12 +390,17 @@ Rétablissez la connexion au tiroir contrôleur, collectez les données du suppo
 .Mettez le tiroir contrôleur sous tension (simplex).
 --
 .Étapes
-. Installez le contrôleur de remplacement sur l'appliance.
+. Installez le contrôleur de remplacement dans le shelf.
 +
+.. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
 .. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
-.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'appareil.
-.. Déplacez la poignée de came vers la gauche pour verrouiller le contrôleur en place.
+.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'étagère.
 .. Remplacez les câbles.
++
+
+NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
+
+.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
 .. Mettez le tiroir contrôleur sous tension.
 .. Attendez que le contrôleur E4000 redémarre.
 .. Déterminez la manière dont vous allez attribuer une adresse IP au contrôleur de remplacement.
@@ -490,12 +495,18 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 .Mise en ligne du contrôleur (duplex)
 --
 .Étapes
-. Installez le contrôleur de remplacement sur l'appliance.
+. Installez le contrôleur de remplacement dans le shelf.
 +
+.. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+.. Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.
 .. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
-.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'appareil.
-.. Déplacez la poignée de came vers la gauche pour verrouiller le contrôleur en place.
+.. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'étagère.
 .. Remplacez les câbles.
++
+
+NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
+
+.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
 .. Si le contrôleur d'origine utilise DHCP pour l'adresse IP, localisez l'adresse MAC sur l'étiquette située à l'arrière du contrôleur de remplacement. Demandez à votre administrateur réseau d'associer le DNS/réseau et l'adresse IP du contrôleur que vous avez supprimé à l'adresse MAC du contrôleur de remplacement.
 +
 

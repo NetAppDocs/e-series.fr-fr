@@ -242,6 +242,7 @@ Lorsque vous retirez le cache du contrôleur, un rabat se met en place pour bloq
 
 Installez un second boîtier de contrôleur pour modifier une configuration recto-verso.
 
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
 . Retournez le boîtier du contrôleur, de sorte que le capot amovible soit orienté vers le bas.
 . Alignez l'extrémité du module de contrôleur avec l'ouverture du châssis, puis poussez doucement le module de contrôleur à mi-course dans le système.
 . Avec la poignée de came en position ouverte, poussez fermement le module de contrôleur jusqu'à ce qu'il rencontre le fond de panier et soit bien en place, puis fermez la poignée de came en position verrouillée.

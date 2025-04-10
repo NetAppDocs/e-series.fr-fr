@@ -1481,7 +1481,6 @@
   <block id="ff40532dff4b037ce856913e299ba082" category="list-text">Ne forcez jamais un module DIMM dans une étagère et n'utilisez pas de pression légère et ferme pour engager complètement le loquet.</block>
   <block id="66f6bddfd3a19d26b876f64fd0a5904d" category="list-text">Utilisez toujours un emballage approuvé lors de l'expédition des DIMM.</block>
   <block id="dd198dc6de0b4192b1ff66f211b2b5cf" category="list-text">Éviter les champs magnétiques. Conservez les DIMM à l'écart des périphériques magnétiques.</block>
-  <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un seul contrôleur ou les deux contrôleurs de votre tiroir contrôleur EF300 ou EF600.</block>
   <block id="8530051dab9b284655e9ee0a33594d15" category="summary">Remplacez les blocs d'alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.</block>
   <block id="da0fe5b0a30a5d2ccf0e0f907ffc5a0a" category="doc">Remplacez une alimentation EF300 ou EF600</block>
   <block id="539a53ce95a48163a8ce44101d02382c" category="paragraph">En cas de panne de l'alimentation, vous devez le remplacer dès que possible afin que le tiroir contrôleur dispose d'une source d'alimentation redondante.</block>
@@ -1507,7 +1506,6 @@
   <block id="b15fcbb0e2b660f1f1850816bf57f89b" category="list-text">Vérifier que son état est optimal et vérifier les LED d'avertissement du tiroir contrôleur.</block>
   <block id="f6dc5868c20eb29c31ee714e66081346" category="list-text">Dans SANtricity System Manager, cliquez sur menu :support[Upgrade Center] pour vérifier que la dernière version de SANtricity OS est installée.</block>
   <block id="3dbc4b1fda3f7e5b612f7b6c5b1c62db" category="paragraph">Le remplacement de votre bloc d'alimentation est terminé. Vous pouvez reprendre les opérations normales.</block>
-  <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">Vous pouvez convertir le protocole d'un hôte en un protocole différent afin de garantir une compatibilité optimale. De plus, vous pouvez convertir le protocole de vos connexions hôtes en un protocole différent en fonction des besoins de votre infrastructure.</block>
   <block id="48e2b045fa39b95719036a981e221f27" category="doc">Conversion de protocole de port hôte</block>
   <block id="acb59c490b88aab163fb28f7093d5473" category="summary">Après la conversion du protocole des ports hôtes, effectuez des étapes supplémentaires pour utiliser le nouveau protocole.</block>
   <block id="3f0c3171c468bf6044f31c2b3ca39357" category="doc">Conversion de protocole hôte complète pour un système EF300 ou EF600</block>
@@ -1720,8 +1718,6 @@
   <block id="7c0227c6fb5206af3eba6ba6a4349b86" category="paragraph">Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur.</block>
   <block id="3aea2395eb1945801b3ad83556c9d15a" category="list-text">Cliquez sur menu:support [Centre de mise à niveau] pour vous assurer que la dernière version de SANtricity OS est installée.</block>
   <block id="efd279df83f7980b63864ad37d922c7b" category="paragraph">Le remplacement de la batterie est terminé. Vous pouvez reprendre les opérations normales.</block>
-  <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Blocs d'alimentation</block>
-  <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">Vous devez remplacer un module DIMM en cas de non-concordance de mémoire, ou si vous avez un module DIMM défectueux.</block>
   <block id="3445e7362b27e4ba74cabda5b497847f" category="summary">Examinez les exigences et les considérations avant de remplacer une HIC EF300 ou EF600.</block>
   <block id="7ff977d3382830f3eff92120544b15ab" category="list-text">Cette procédure a été effectuée à l'aide d'une fenêtre de maintenance des temps d'arrêt. Vous ne pouvez pas accéder aux données de la matrice de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, l'alimentation doit être éteinte lorsque vous modifiez la configuration HIC. La présence de circuits intégrés non concordants provoque le verrouillage du contrôleur avec la HIC de remplacement lorsque vous le met en ligne.</block>
   <block id="cc3ec06987332d6dbb0413ed7e4c657b" category="list-text">Tous les câbles, émetteurs-récepteurs, commutateurs et adaptateurs de bus hôte (HBA) sont nécessaires pour connecter les nouveaux ports hôte.</block>
@@ -1899,7 +1895,6 @@
   <block id="3a35aeaf167e71373e4f42c63fa412a6" category="paragraph">Vous pouvez également effectuer certaines opérations à l'aide de l'interface de ligne de commandes. Si vous ne disposez pas d'un accès à l'interface de ligne de commandes, vous pouvez effectuer l'une des opérations suivantes :</block>
   <block id="31380923165d24c4bc7be3835c03f97d" category="list-text">*Pour SANtricity System Manager (version 11.60 et supérieure)* -- Télécharger le paquet CLI (fichier zip) depuis System Manager. Accédez au menu:Paramètres[système &gt; modules complémentaires &gt; interface de ligne de commande]. Vous pouvez ensuite lancer des commandes CLI à partir d'une invite du système d'exploitation, telle que l'invite DOS C:.</block>
   <block id="d4e243a780f83aeb7aba4ed3ddb02aab" category="list-text">*Pour SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Suivez les instructions du guide express pour télécharger et installer le logiciel. Vous pouvez exécuter des commandes CLI à partir de l'EMW en sélectionnant menu:Outils[Exécuter script].</block>
-  <block id="9ec28cb381dd9edd5e1a4ad5641fba96" category="summary">Une carte d'interface hôte \(HIC\) doit être installée dans un boîtier de contrôleur. Le contrôleur EF600 inclut des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.</block>
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Cartes d'interface hôte</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Examinez les exigences et les considérations avant de remplacer les ventilateurs EF300 ou EF600.</block>
   <block id="ccccec3135cfde6cfdbeb41f2c09065e" category="doc">Exigences relatives au remplacement des ventilateurs EF300 ou EF600</block>
@@ -2586,7 +2581,6 @@
   <block id="33178e031c2c47daf3f226ddb1c2d09d" category="list-text">Si le point de montage temporaire ne dispose pas d'autorisations d'exécution, définissez le<block ref="c7b8d09207024f44e1e1557794eaf6cb" prefix=" " category="inline-code"></block> variable. Exemple :<block ref="ba74ff5ce50b1f0da85f943832c4abd1" prefix=" " category="inline-code"></block></block>
   <block id="cf05f726d236e8f5cf320cb338e0ae41" category="list-text">Exécutez le<block ref="6874cbf67da1cf746d2da2fa616ef84b" prefix=" " category="inline-code"></block> commande permettant d'accorder l'autorisation d'exécution au fichier.</block>
   <block id="aae0720da624e87d7a1715de8bc345b7" category="list-text">Exécutez le<block ref="89467e6a99e589ee4c00f3ebe8ffca6e" prefix=" " category="inline-code"></block> pour démarrer le programme d'installation.</block>
-  <block id="f849cbf8f2231f3f35d369655c870a3e" category="doc">Configuration iSCSI Express</block>
   <block id="045974d2f2f790a851a04cb91a6f273f" category="doc">Accédez à SANtricity System Manager et utilisez l'assistant de configuration</block>
   <block id="0c6af110b63e1c65cc44419feea8f957" category="summary">Vérifiez les conditions d'utilisation de la méthode express pour configurer une baie E-Series et un hôte Linux.</block>
   <block id="dba3433866b5db3692b0b3bfbc55bb97" category="paragraph">La méthode Linux express est basée sur les hypothèses suivantes :</block>
@@ -2774,7 +2768,6 @@
   <block id="234576335503cf5628466bba5d971b1d" category="paragraph">Après avoir attribué un ou plusieurs volumes à un hôte ou à un cluster hôte, le système effectue les opérations suivantes :</block>
   <block id="917b830bef791dbce4285c83adef2377" category="list-text">Le volume affecté reçoit le prochain NSID disponible. L'hôte utilise le NSID pour accéder au volume.</block>
   <block id="2b05781e34e2d192e693365f7f3be3e0" category="list-text">Le nom de volume fourni par l'utilisateur apparaît dans les listes de volumes associées à l'hôte.</block>
-  <block id="fe4b136586896fd70617258689052356" category="summary">Installation SRP sur InfiniBand Express</block>
   <block id="f83d8dbcd02328e3d5b9105033a3d23f" category="summary">Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction de votre version de Linux.</block>
   <block id="147c2a561fc8233057480b38f1176725" category="doc">Accès aux volumes NVMe pour les cibles de périphériques NVMe physiques</block>
   <block id="71a0145e77943169ac5f0e901f7138e7" category="paragraph">Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction du système d'exploitation (et de la méthode de chemins d'accès multiples de l'extension) que vous utilisez.</block>
@@ -3046,9 +3039,6 @@
   <block id="a602b51c709c08f2a0056a93c3f7347c" category="paragraph">Notez que le<block ref="c76a5e84e4bdee527e274ea30c680d79" prefix=" " category="inline-code"></block> chemin fait référence à<block ref="7bce0d9d390dfad879c5e708e087fc04" prefix=" " category="inline-code"></block>, De sorte que les E/S sont dirigées sur ce chemin vers le contrôleur B.</block>
   <block id="6ee2d18851ba4498d7c9ba43881528c3" category="admonition">Avant de configurer le gestionnaire de sous-réseau, vous devez installer le package infiniband-diags pour obtenir l'ID global unique (GUID) via le<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> commande. Voir <block ref="59608be4b8a68b7f95e7aa6a8924d39f" category="inline-xref-macro-rx"></block> pour plus d'informations sur l'installation du package infiniband-diags.</block>
   <block id="2e71e539473524a77fed5be033e08099" category="list-text">Utilisez le<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> commande à rechercher<block ref="7804c104033334dfd1f4483b356e7e80" prefix=" " category="inline-code"></block> et<block ref="a343d59b38a9422b5e453e8b5ab007c0" prefix=" " category="inline-code"></block> Des ports HBA. Par exemple :</block>
-  <block id="7e9eed90ab06645af09e14e4688144a5" category="summary">Vous pouvez utiliser NVMe avec le protocole réseau RDMA over Converged Ethernet \(RoCE\).</block>
-  <block id="e5acd4f564771f3dbba3bdeb6b6bcfe5" category="doc">Configuration NVMe over RoCE Express</block>
-  <block id="d94efd3fa425e38d7761fba32eb7bc67" category="paragraph">Vous pouvez utiliser NVMe avec le protocole réseau RDMA over Converged Ethernet (RoCE).</block>
   <block id="44da8255024278223616706dabffdcf2" category="admonition">Avant de configurer le gestionnaire de sous-réseau, vous devez installer le package infiniband-diags pour obtenir l'ID global unique (GUID) via le<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> commande. Voir <block ref="8968844fa75d7274ef053da34cb4323f" category="inline-xref-macro-rx"></block> pour plus d'informations sur l'installation du package infiniband-diags.</block>
   <block id="2cda2abb38b68dfe292b9358bd33f81c" category="summary">Utilisez cette fiche pour enregistrer les informations de configuration du stockage NVMe over RoCE.</block>
   <block id="6d41d914d8534cc142bcbdf1bdd611d4" category="doc">Enregistrez votre configuration NVMe over RoCE</block>
@@ -3061,7 +3051,6 @@
   <block id="decdd7cb14919e61d850e61099b2b701" category="list-text">Sous-réseau 4 : hôte 2 HCA Port 2 et contrôleur 2 Port hôte 2</block>
   <block id="c318d779fc072ffe72c7c3dd1e42553c" category="paragraph">Dans une topologie en structure, un ou plusieurs commutateurs sont utilisés. Reportez-vous à la section<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste des commutateurs pris en charge.</block>
   <block id="257b40198f0083663eee051dc8899cd7" category="cell">Initiateur logiciel NQN</block>
-  <block id="1914877215ade75b06ba34ce70bb51dd" category="summary">Configuration SAS Express</block>
   <block id="1bfd8936faf8d2d6e911732cc86fad64" category="doc">Configuration Express Fibre Channel</block>
   <block id="2d59c1932fb82d6e7c73a375ed97221d" category="summary">Configurer le logiciel multivoie afin qu'il puisse fournir un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques.</block>
   <block id="7bfe6a8c2694c58155bcb8132f65ecd8" category="list-text">Activez le<block ref="8732863da72605a20ed96b4eee87a5fb" prefix=" " category="inline-code"></block> démon au démarrage.</block>
@@ -3144,7 +3133,6 @@
   <block id="fc9c6bf5eb7d76688cd8db54a383c5cc" category="paragraph">Hôte 1, port 2</block>
   <block id="f15f41cd112f9c6bb8005736b53199ec" category="paragraph">(Facultatif) hôte 2, port 2</block>
   <block id="3a12d0edc81531758f12c83024fbc77e" category="summary">LInstall Linux Unified Host Utilities lors de l'utilisation de iser.</block>
-  <block id="c96c96aa9e9942faabac2551c9847a4a" category="doc">Configuration iser sur InfiniBand Express</block>
   <block id="ee732210e813ba3c59eefd70d8487e35" category="summary">La pile de pilotes OFED InfiniBand prend en charge l'exécution simultanée de iser et SRP sur les mêmes ports, de sorte qu'aucun matériel supplémentaire n'est requis.</block>
   <block id="fd53582d98576d62eda5f16303b353cc" category="doc">Configurer la mise en réseau des hôtes connectés au stockage</block>
   <block id="f5468ecf76be3bb4cf77cf63a591d098" category="paragraph">Si votre configuration utilise le protocole iser over InfiniBand, suivez les étapes de cette section.</block>
@@ -3183,8 +3171,6 @@
   <block id="8d78f4535f282487a2ab3ddd133fb30b" category="list-text">Vérifiez l'état de la session iscsi à partir de l'hôte :</block>
   <block id="c76785f55adb8111b0f0c955e99aaf58" category="list-text">Vérifiez l'état de la session iscsi à partir de la baie de disques. Dans SANtricity System Manager, accédez à *Baie de stockage* &gt; *iser* &gt; *Afficher/Terminer sessions*.</block>
   <block id="b91274a21d960f7520a6ac949c997991" category="paragraph">Lorsque le service OFED/RDMA démarre, le ou les modules de noyau iser se charge par défaut lorsque les services iSCSI sont en cours d'exécution. Pour terminer la configuration de la connexion iser, le ou les modules iser doivent être chargés. L'hôte doit actuellement être redémarré.</block>
-  <block id="eade6022b2fef6a4e03ff35469374cb0" category="summary">Vous pouvez utiliser NVMe avec le protocole Fibre Channel.</block>
-  <block id="62896be8239b3396f0ed277cf184b062" category="doc">Configuration Express NVMe over Fibre Channel</block>
   <block id="5dd9d62ce4e8e03736012f8834a6e4fd" category="summary">Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction de votre version de Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles.</block>
   <block id="23a1a118541ab0d1766faa1805b06432" category="paragraph">Vous pouvez accéder à ces périphériques de bloc via le<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> le périphérique ou le<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> dans<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block>; par exemple :</block>
   <block id="c612d2b91ede7407a062457604df3133" category="summary">La configuration de l'initiateur NVMe dans un environnement RoCE inclut l'installation et la configuration des packages rdma-core et nvme-cli, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.</block>
@@ -3234,8 +3220,6 @@
   <block id="59c71eb9f304131ed908d87a5f9303f9" category="paragraph">Pour RHEL 7 et SLES 12, vous créez un système de fichiers sur le périphérique dm souhaité et montez le système de fichiers.</block>
   <block id="4253eb4054c56db3b585ae3a53e1819f" category="inline-xref-macro">Fiche technique iser sur InfiniBand</block>
   <block id="210c9515d4a1e9c78e2608d073aeef56" category="list-text">Enregistrez les GUID de l'initiateur sur le <block ref="00a1f89a34dac59e8a714860454ae51a" category="inline-xref-macro-rx"></block>.</block>
-  <block id="041b8a1391f923a8043830be4a716cdd" category="summary">Vous pouvez utiliser NVMe avec le protocole réseau InfiniBand.</block>
-  <block id="97cdaaff2a74763683828420ccda083e" category="doc">Configuration NVMe over InfiniBand Express</block>
   <block id="11fdd43137cfc836a71e2c84f0134b65" category="summary">Vous pouvez nous aider à améliorer la qualité de notre documentation en nous envoyant vos commentaires. Vous pouvez recevoir une notification automatique lorsque la documentation au niveau de production \(GA/FCS\) est publiée au départ ou que des modifications importantes sont apportées aux documents existants de niveau de production.</block>
   <block id="6ab85e747e0c76cd7c95b5eb2dd03018" category="doc">Comment envoyer des commentaires sur la documentation et recevoir des notifications de mise à jour</block>
   <block id="7a5f2d68b34e39986049259c8de51697" category="paragraph">Vous pouvez nous aider à améliorer la qualité de notre documentation en nous envoyant vos commentaires. Vous pouvez recevoir une notification automatique lorsque la documentation au niveau de production (GA/FCS) est publiée au départ ou lorsque des modifications importantes sont apportées aux documents existants de niveau de production.</block>
@@ -3310,7 +3294,6 @@
   <block id="c8cb4f1aee2006fe3f3c0847fae9a018" category="list-text">Mettez le contrôleur hors ligne (duplex uniquement).</block>
   <block id="b84a32808ea116d00e7fef9e14fae971" category="list-text">Mettre le contrôleur en ligne (duplex uniquement).</block>
   <block id="7e6bf0538a1689eacb3091a1694f8c9a" category="paragraph">Si vous envisagez de remplacer une batterie défectueuse, vous devez disposer des éléments suivants :</block>
-  <block id="e977f6bbcbae61c33920c421cdc41ec2" category="summary">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment remplacer un contrôleur dans une configuration duplex.</block>
   <block id="b10f1122a2ac0ae08f749f3130b4f503" category="summary">Examinez les types et les exigences des contrôleurs E5700.</block>
   <block id="c1c40e6814bdd362b18d4101c72b2d1e" category="doc">Conditions requises pour le remplacement du contrôleur E5700</block>
   <block id="c0e2f9e7c4b0a4605e8d83697b8df464" category="paragraph">Avant de remplacer un contrôleur E5700, vérifiez les exigences et les facteurs à prendre en compte.</block>
@@ -3857,7 +3840,6 @@
   <block id="5811caab16d9ae3e7df8465579187dda" category="list-text">*OE*, *L6*, *_blank_* (HIC non pris en charge) *attention:* *perte possible d'accès aux données* -- si le contrôleur que vous venez d'installer affiche l'un de ces codes et que l'autre contrôleur est réinitialisé pour quelque raison que ce soit, le second contrôleur pourrait également se verrouiller.</block>
   <block id="738a8c736dcf0a5ae4920a6448ab8da7" category="paragraph">Contactez l'assistance technique à l'adresse<block ref="2ff36e7792a0e0257d19a11dce8cade8" category="inline-link-rx"></block>, 888-463-8277 (Amérique du Nord), 00-800-44-638277 (Europe) ou +800-800-80-800 (Asie/Pacifique) si vous avez besoin du numéro RMA.</block>
   <block id="2af7d274631cea316011b977d54e2eaf" category="paragraph">Votre remplacement HIC est terminé. Vous pouvez reprendre les opérations normales.</block>
-  <block id="d3852022ece859a54c514fe09a6eef63" category="summary">Une carte d'interface hôte \(HIC\) peut être installée en option dans un boîtier de contrôleur. Le contrôleur E5700 inclut des ports hôtes intégrés sur la carte contrôleur elle-même, ainsi que des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés au contrôleur sont appelés ports hôtes de base. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.</block>
   <block id="5d669a1e6a80e786e403fd16f85a1e2a" category="summary">Remplacez le bloc d'alimentation E5700 à 60 disques.</block>
   <block id="aaccbc9da8dec9dbab3d34901242fe76" category="doc">Remplacez le boîtier d'alimentation E5700 (60 disques)</block>
   <block id="3ddcf70e76476f70be4a8451775a8b25" category="paragraph">Vous pouvez remplacer un bloc d'alimentation dans une baie E5700 par un tiroir de 60 disques, qui inclut les types de tiroirs suivants :</block>
@@ -4422,7 +4404,6 @@
   <block id="60d316243482b983279f012f7ac8a95b" category="list-text">Pour les disques des tiroirs contrôleurs E2812 ou des tiroirs disques DE212C, le bouton de déblocage est situé à gauche du disque.</block>
   <block id="e99674c63b14b473817a8dc0329f1339" category="list-text">Pour les disques des tiroirs contrôleurs E2824, la baie Flash EF280, pour les tiroirs disques DE224C, le bouton de libération est situé en haut du disque. La poignée de came sur les ressorts d'entraînement s'ouvre partiellement et l'entraînement se dégage du fond de panier central.</block>
   <block id="015f72387622e8d8e9832059673d7bfc" category="admonition">Installez le disque de remplacement dès que possible après avoir retiré le disque défectueux. Dans le cas contraire, il existe un risque de surchauffe de l'équipement.</block>
-  <block id="98c3987fb58d5d61350074733f52ec4f" category="summary">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section décrit comment convertir en configuration duplex en ajoutant un second contrôleur et comment remplacer un contrôleur dans une configuration simplex et dans une configuration duplex.</block>
   <block id="10776f286927857ffa70d5d301faab1e" category="summary">Pour retirer la batterie, retirer d'abord le boîtier du contrôleur du shelf.</block>
   <block id="0f1b0823e4a8e767cbab21b0145e90cb" category="doc">Retirer le boîtier du contrôleur E2800</block>
   <block id="972e983ac66ba64cc0037a9f8736b122" category="paragraph">Vous devez retirer le boîtier du contrôleur du shelf contrôleur afin que vous puissiez retirer la batterie.</block>
@@ -4432,7 +4413,6 @@
   <block id="471134ff89f00a0992e23c558e979451" category="paragraph">Si vous retirez le canister d'un tiroir contrôleur E2812, d'un tiroir de contrôleur E2824 ou de la baie Flash EF280, un rabat peut être mis en place pour bloquer la baie vide, ce qui permet de maintenir le débit d'air et le refroidissement.</block>
   <block id="8aae91f7c25304b5182731c073084c4a" category="inline-link-macro">Retirez la batterie du système E2800 défectueuse</block>
   <block id="bced074790a883c309e038959834cf06" category="list-text">Accédez à <block ref="f671322c24b2fab62ba8db77a08ebe3f" category="inline-link-macro-rx"></block>.</block>
-  <block id="a3c03452327012e5141c33e5726e73c7" category="summary">Les blocs consistent en trois types différents : les blocs d'alimentation \(blocs d'alimentation\) qui fournissent une source d'alimentation redondante et le refroidissement adéquat dans un tiroir de contrôleur ou tiroir de disque de 12 ou 24 disques, les blocs d'alimentation utilisés pour la redondance de l'alimentation dans un tiroir de contrôleur ou un tiroir de 60 disques. les boîtiers de ventilateur utilisés pour la climatisation du tiroir de contrôleur de 60 disques ou du tiroir disque.</block>
   <block id="1c8033b3dd4d1a237da90cc9e4c5ab54" category="doc">Remplacez le contrôleur par le mode duplex E2800</block>
   <block id="e699f1fef3855bd699703308bf429d5d" category="list-text">Tiroir contrôleur E2812</block>
   <block id="93c82328e47f61de6003453f218e91f6" category="list-text">Tiroir contrôleur E2824</block>
@@ -4994,7 +4974,6 @@
   <block id="81b73f57f5eaadbb0debd615b8d8a87e" category="list-text">Arrêt des opérations d'E/S hôte</block>
   <block id="d0fb6c28a70013ac853ddbd9195f1f70" category="list-text">Mettez le tiroir contrôleur sous tension.</block>
   <block id="d95b1e656b4478a5d1b618e968328907" category="section-title">Conditions requises pour le remplacement d'une batterie</block>
-  <block id="00f9ce66241621004c58b2e973a895fd" category="summary">Une carte d'interface hôte \(HIC\) peut être installée en option dans un boîtier de contrôleur. Le contrôleur E2800 inclut des ports hôtes intégrés sur la carte contrôleur elle-même, ainsi que des ports hôtes sur la carte HIC en option. Les ports hôtes intégrés au contrôleur sont appelés ports hôtes de base. Les ports hôtes intégrés dans la HIC sont appelés ports HIC.</block>
   <block id="ca3f06e5fa240b33862857b1c460326e" category="summary">Remplacez le boîtier du ventilateur dans un tiroir de contrôleur de 60 disques ou un tiroir de disque.</block>
   <block id="94886d4bc25d5c64534b6b7644bf6900" category="doc">Remplacement du boîtier du ventilateur E2800 (60 disques)</block>
   <block id="b1e76414d9a6da60a71f4556eb629a30" category="paragraph">Vous pouvez remplacer un boîtier de ventilation dans une baie E2800 par un tiroir de 60 disques, qui inclut les types de tiroirs suivants :</block>
@@ -7059,9 +7038,6 @@
   <block id="4330a8333a41a5ff25585b550f40c179" category="paragraph">Une fois votre matériel installé, utilisez le logiciel SANtricity pour configurer et gérer votre système de stockage.</block>
   <block id="cbb059200dfb7db372e5958a687a7f40" category="list-text">Utilisez le logiciel SANtricity pour configurer et gérer vos baies de stockage.</block>
   <block id="20a131c60e6c405bb973f52c70e6d104" category="list-text">Dans la configuration réseau la plus simple, connectez votre contrôleur à un navigateur Web et utilisez SANtricity System Manager pour gérer une seule baie de stockage E2800 ou E5700 Series.</block>
-  <block id="efe6d51a14336eb7344b08061d81c223" category="summary">Ces instructions expliquent comment installer et configurer votre nouveau système de stockage et fournissent des liens vers des contenus supplémentaires.</block>
-  <block id="098f41693365f8de503868e97f04f4c4" category="doc">Instructions d'installation et de configuration pour les systèmes E5724, EF570, EF280, E2812, E2824, DE212C et DE224C</block>
-  <block id="01a6b4e59365da6ed554e20bb2ab5362" category="doc">Instructions d'installation et de configuration pour les systèmes E2860, E5760 et DE460C</block>
   <block id="e786e438e29d8dc368d2945b22614052" category="summary">Pour installer les systèmes E5724, EF570, EF280, E2812, E2824, DE212C ou DE224C, créez un compte et enregistrez votre matériel.</block>
   <block id="f0c8dd26a4545387eecf2a5210874ccc" category="paragraph">Découvrez comment vous préparer à installer les systèmes E5724, EF570, EF280, E2812, E2824, Système de stockage DE212C ou DE224C.</block>
   <block id="4aef9ac85da2801779223aa21342d5bd" category="paragraph">Tiroir avec disques installés (panneau vendu séparément)</block>
@@ -8336,8 +8312,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Amélioration des pools de disques</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">Les pools de disques créés avec des contrôleurs exécutant la version 11.80 ou supérieure seront des pools _version 1_ et non des pools _version 0_. Une opération de mise à niveau vers une version antérieure est limitée lorsqu'un pool de disques _version 1_ existe.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La version d'un pool de disques peut être identifiée dans le profil de la matrice de stockage.</block>
-  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Il s'agit d'un PDF imprimable contenant des instructions étape par étape et des liens en direct vers du contenu supplémentaire.</block>
-  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Voici les instructions de configuration décrites sur ce site.</block>
   <block id="746ff5a72ad1791e39c47dc0abcdffe3" category="paragraph">Une version minimale de l'explorateur est requise avant le lancement de System Manager ou d'Unified Manager.</block>
   <block id="488c35a42ee48966247c5cc643d96708" category="paragraph">Les versions minimales prises en charge sont les suivantes :</block>
   <block id="5f7273b60d2186e7b7a65eb2cee83294" category="paragraph">Cache de lecture SSD amélioré</block>
@@ -8440,19 +8414,14 @@
   <block id="6a177f60e2c78aeead82deed1b7f79bd" category="image-alt">Exemple de câblage de tiroir disque</block>
   <block id="97d8dba52fc751664d17d634de384761" category="open-title">Connectez le tiroir disque pour E4000</block>
   <block id="5d48bd8c60ef301164497e794ae727ca" category="image-alt">Icône matériel de module d'E/S.</block>
-  <block id="c5f2c8e37ae34577d9aa27dc0a6d9d6a" category="summary">Vous pouvez utiliser le protocole Fibre Channel avec un hôte Linux d'un système E-Series.</block>
   <block id="a51352079fbf62de5b216fbcf5f8547f" category="image-alt">Configuration réseau FC</block>
-  <block id="2c14a3be6c3b57db7707ac6ae99aeb97" category="summary">Vous pouvez utiliser le protocole iSCSI avec un hôte Linux d'un système E-Series.</block>
   <block id="035b18714bc5d7aa7c3b19a557b2784d" category="image-alt">Configuration réseau iSCSI</block>
-  <block id="279607469d0ed6f0d6a8dfabbc5b63e2" category="summary">Vous pouvez utiliser le protocole iser over InfiniBand avec un hôte Linux sur un système E-Series.</block>
   <block id="f6d2572a98e17f547b50d07bd60a4357" category="image-alt">Configuration réseau iser sur IB</block>
   <block id="e25b62b71db71b440f775e632a958e5e" category="image-alt">Exemple de topologie de connexion directe</block>
   <block id="3d673c4735715944ce52ebdb6281a20d" category="image-alt">Exemple de topologie de connexion de commutateur</block>
   <block id="5a60c0d89257784a23a8dd439204f7f1" category="image-alt">Exemple de connexion directe NVMe over Infiniband</block>
   <block id="37370b7d172047a016f376cc6b5258c9" category="image-alt">Exemple de connexion directe NVME over RoCE</block>
   <block id="65311bced825a83f85718b09cc4ab673" category="image-alt">Exemple de connexion de switch NVMe over RoCE</block>
-  <block id="846fb8d171e9dfcce4fd56289d380608" category="summary">Vous pouvez utiliser le protocole SAS avec un hôte Linux sur un système E-Series.</block>
-  <block id="ecf0c5c7f835375b8d9275312b470c82" category="summary">Vous pouvez utiliser le protocole SRP sur InfiniBand avec un hôte Linux sur un système E-Series.</block>
   <block id="025f0fcb18e01db2892910a53d657f57" category="image-alt">Identificateurs de port SRB sur IB</block>
   <block id="a9a8836056eb3cc8d01f51eb5c6e7eec" category="list-text">Pour obtenir des instructions sur la création de datastores VMFS ou l'utilisation de volumes en tant que RDM avec le client vSphere ou le client Web vSphere, reportez-vous au<block ref="b15a5268225569436f01a761f08cccf7" category="inline-link-rx"></block> .</block>
   <block id="ebaab7c3245c99578b7dd1e67138cccf" category="list-text">Pour obtenir des instructions sur la façon d'effectuer une nouvelle analyse du stockage sur un hôte ESXi, recherchez l'<block ref="151d2130fd8b5e8e7d0d3b596c1bdeb5" category="inline-link-rx"></block>article sur cette rubrique.</block>
@@ -8889,7 +8858,6 @@
   <block id="2f2564b7bd12fa4c137f3761c14d73a3" category="paragraph">Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E4060 ou un tiroir disque DE460C.</block>
   <block id="3748f377726945770a9a282453272357" category="paragraph">La procédure à suivre pour remplacer un tiroir disque défectueux dans un tiroir contrôleur E4060 ou un tiroir disque DE460C dépend de la protection des volumes dans ce tiroir. Si tous les volumes du tiroir de disque se trouvent dans des pools de disques ou des groupes de volumes dotés de la protection contre la perte de tiroir, vous pouvez effectuer cette procédure en ligne. Dans le cas contraire, vous devez arrêter toutes les activités d'E/S des hôtes et mettre le shelf hors tension avant de remplacer le tiroir disque.</block>
   <block id="1103b7e629028daaccac02c0a8fc98d2" category="doc">Remplacez la batterie dans E4000</block>
-  <block id="543025215967bae569d97988a7e97cbc" category="paragraph">Vous devez remplacer la batterie concernée dans votre appareil E4000 si le gourou de la récupération dans le Gestionnaire système SANtricity indique un état « batterie en panne » ou « Remplacement de la batterie requis ». Pour protéger vos données, la batterie doit être remplacée dès que possible.</block>
   <block id="9af92606abb4b31a8818023a6515b3ec" category="list-text">Station de gestion avec un navigateur qui peut accéder au Gestionnaire système SANtricity du contrôleur. (Pour ouvrir l'interface System Manager, pointez le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.)</block>
   <block id="ec6e5e75653734bb428b87afb93f7f41" category="section-title">Étape 1 : préparez-vous à remplacer la batterie</block>
   <block id="3df752ee7e92a3dba58c1061c5d0a4a6" category="list-text">Sauvegardez la base de données de configuration de la baie de stockage à l'aide de SANtricity System Manager.</block>
@@ -8929,15 +8897,7 @@
   <block id="7eed6664ecacefe81e2b660f47a5cfaf" category="list-text">Réinstallez le couvercle du boîtier du contrôleur et verrouillez-le en place.</block>
   <block id="aa4ecd2631b0a57f27425bbdf9cc91b7" category="paragraph">Après avoir remplacé les composants du boîtier du contrôleur, réinstallez-le dans le châssis.</block>
   <block id="954c99d35fff8ed108602add34a47b93" category="list-text">Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.</block>
-  <block id="9c17c595e56b6b01c7d703a94b943e71" category="list-text">Retournez le boîtier du contrôleur et alignez l'extrémité sur l'ouverture du châssis.</block>
-  <block id="44df050c94969c9c5f783babbd55fb7e" category="list-text">Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.</block>
-  <block id="40d0d24050f8aac90dc03655f2738fb3" category="admonition">N'insérez pas complètement le boîtier du contrôleur dans le châssis avant d'y être invité.</block>
-  <block id="4e4cd7bd59f82bab02590366f27be3e5" category="list-text">Recâblage du système, selon les besoins.</block>
   <block id="7bfce735a4505a06fb1c4b7a2d076c1e" category="list-text">Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.</block>
-  <block id="5d971d684708429fbfc1d12fc0823b1c" category="list-text">Terminer la réinstallation du boîtier du contrôleur :</block>
-  <block id="b34c1b37f135bc5b382d7862f82e025c" category="list-text">Avec la poignée de la came en position ouverte, poussez fermement le boîtier du contrôleur jusqu'à ce qu'il rencontre le fond de panier central et qu'il soit bien en place, puis fermez la poignée de la came en position verrouillée.</block>
-  <block id="69008785977983cf8a33f9f78ff2b7c9" category="admonition">N'appliquez pas de force excessive lorsque vous faites glisser le boîtier du contrôleur dans le châssis pour éviter d'endommager les connecteurs.</block>
-  <block id="0332f86520cc7552e1fb152e32977600" category="paragraph">Le contrôleur commence à démarrer dès qu'il est assis dans le châssis.</block>
   <block id="1245c13fabc810ad6fbb6f05277ad356" category="list-text">Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.</block>
   <block id="82cd534d691845f1af190a9df38d753d" category="list-text">Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.</block>
   <block id="91418c565341bd8a889226a195dd2fa2" category="section-title">Étape 5 : remplacement complet de la batterie</block>
@@ -9010,10 +8970,7 @@
   <block id="f4d6345a40a4387a35c3eb6ef8f51b15" category="section-title">Étape 8 : remplacement complet du contrôleur</block>
   <block id="a7c932e7525739cefdfd19d17123207c" category="paragraph">Rétablissez la connexion au tiroir contrôleur, collectez les données du support et reprenez les opérations.</block>
   <block id="62241759bfd404c01951d43ae57f4bbe" category="open-title">Mettez le tiroir contrôleur sous tension (simplex).</block>
-  <block id="04803538074d9bd9b55f9adc380717f2" category="list-text">Installez le contrôleur de remplacement sur l'appliance.</block>
   <block id="fe69546640a5330ecd9f461f1cdbd1ee" category="list-text">Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.</block>
-  <block id="f5b18529473e7fbcbdcf4601ffe30597" category="list-text">Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'appareil.</block>
-  <block id="0dc7aaae2ab89a4fa299f4f2e42c1646" category="list-text">Déplacez la poignée de came vers la gauche pour verrouiller le contrôleur en place.</block>
   <block id="85caa39a88f7091fb2db841ad6b83ffd" category="list-text">Remplacez les câbles.</block>
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Mettez le tiroir contrôleur sous tension.</block>
   <block id="4b55c79852e2203088ca03f4c8fb4b3c" category="list-text">Attendez que le contrôleur E4000 redémarre.</block>
@@ -9103,7 +9060,6 @@
   <block id="1ea4267c90825f4bf9c52932b0bd8e1a" category="list-text">Réinstallez le couvercle du boîtier du contrôleur.</block>
   <block id="48a57bdd7334ad13cd1585ba2a663c46" category="section-title">Étape 5 : réinstallez le boîtier du contrôleur</block>
   <block id="af32241ae4a2afd71e33a8646b775b1f" category="paragraph">Réinstallez le boîtier du contrôleur dans le châssis.</block>
-  <block id="0a5704c96cc972ac4c49e76417f83282" category="list-text">Poussez doucement le boîtier du contrôleur à mi-chemin dans le système. Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.</block>
   <block id="660a0f2c7dddd5ead3b175899a5d429c" category="section-title">Étape 6 : remplacement complet des modules DIMM</block>
   <block id="315927c4ed1f1d8b1d0b704a5a67026e" category="list-text">Une fois le contrôleur remis en ligne, vérifiez que son état est optimal et vérifiez les LED d'avertissement du tiroir contrôleur.</block>
   <block id="805863d0c877d6358a86a2607e79ed0d" category="paragraph">Si l'état n'est pas optimal ou si l'un des voyants d'avertissement est allumé, vérifiez que tous les câbles sont correctement installés et que le boîtier du contrôleur est correctement installé. Au besoin, déposer et réinstaller le boîtier du contrôleur. REMARQUE : si vous ne parvenez pas à résoudre le problème, contactez le support technique.</block>
@@ -9146,7 +9102,6 @@
   <block id="fe831c9a1ec5f0798f7d995bb682d1af" category="list-text">Desserrez les vis moletées du HIC et soulevez-le.</block>
   <block id="cb588a37aac0cb396a69cd9c6fa260a7" category="list-text">Réinstallez le HIC :</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Réinstallez le capot du module de contrôleur et verrouillez-le en place.</block>
-  <block id="528b8ab8a2997d60c930f6610d03301f" category="paragraph">Si vous disposez d'une configuration recto verso, le contrôleur commence à démarrer dès qu'il est installé dans le châssis.</block>
   <block id="613ffef3aed34fbf482f6ca198dbe765" category="section-title">Étape 5 : remplacement HIC complet</block>
   <block id="fd3355f16365c925e530b446f01146af" category="paragraph">Mettez le contrôleur sous tension (simplex) ou mettez-le en ligne (duplex), collectez les données de support et reprenez les opérations.</block>
   <block id="3e741422cd2bc3082e4d5328242d9d60" category="doc">Mettez à niveau HIC dans E4000</block>
@@ -9419,7 +9374,6 @@
   <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Découvrez comment préparer l'installation de votre système de stockage séries EF300, EF600, EF300C ou EF600C.</block>
   <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Avant de remplacer une batterie EF300, EF600, EF300C ou EF600C, consultez les exigences et les considérations.</block>
   <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">Vous pouvez remplacer une batterie dans un système de stockage EF300, EF600, EF300C ou EF600C.</block>
-  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met en œuvre les fonctions de System Manager. Cette section explique comment remplacer un seul contrôleur ou les deux contrôleurs du tiroir contrôleur EF300, EF600, EF300C ou EF600C.</block>
   <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Avant de remplacer un système EF300, EF600 Le contrôleur EF300C, ou EF600C, examine les exigences et les considérations.</block>
   <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Vous pouvez remplacer un seul contrôleur dans votre tiroir contrôleur EF300, EF600, EF300C ou EF600C.</block>
   <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Avant de remplacer un module DIMM dans une baie de stockage EF300, EF600, EF600C ou EF300C, vérifiez les exigences et les points à prendre en compte.</block>
@@ -9495,4 +9449,7 @@
   <block id="baee5b8c18b240b4edfcc1ae3fe154f0" category="section-title">Nouvelles fonctionnalités de la version 11.90R1</block>
   <block id="0b2fb9383075b5994701c94b27e4b6ee" category="paragraph">Cette version présente les systèmes de stockage NVMe 100 % Flash EF300C et EF600C. EF300C et EF600C sont des versions Flash haute capacité des systèmes de stockage EF300 et EF600 déjà en place. Les disques SSD NVMe haute capacité de 30 To ou 60 To sont pris en charge par les systèmes EF300C et EF600C. Les baies EF300C/EF600C sont compatibles avec les pools de disques dynamiques, mais elles ne prennent pas en charge les configurations RAID existantes.</block>
   <block id="8af7f744c39ae6285a380b6eb402fcb2" category="paragraph">Prise en charge des interfaces SAS 12 Gb sur les contrôleurs E4000</block>
+  <block id="7a3a71e57296fe130d591f2dd4a7a06c" category="paragraph">Vous devez remplacer la batterie concernée dans votre E4000 si le gourou de la récupération dans le Gestionnaire système SANtricity indique un état « batterie en panne » ou « Remplacement de la batterie requis ». Pour protéger vos données, la batterie doit être remplacée dès que possible.</block>
+  <block id="8c34b0fdf9a967369992b78c08820091" category="list-text">Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'étagère.</block>
+  <block id="1b6c46128dc1faef9365a16d700d5e74" category="list-text">Installez le contrôleur de remplacement dans le shelf.</block>
 </blocks>

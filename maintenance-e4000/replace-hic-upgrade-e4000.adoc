@@ -153,27 +153,14 @@ Réinstallez le boîtier du contrôleur dans le châssis.
 .Étapes
 . Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
 . Si ce n'est pas déjà fait, remettre en place le couvercle sur le boîtier du contrôleur.
-. Retournez le boîtier du contrôleur et alignez l'extrémité sur l'ouverture du châssis.
-. Alignez l'extrémité du boîtier du contrôleur avec l'ouverture du châssis, puis poussez doucement le boîtier du contrôleur à mi-chemin dans le système.
+. Retournez le contrôleur pour que le capot amovible soit orienté vers le bas.
+. Avec la poignée de came en position ouverte, faites glisser le contrôleur complètement dans l'étagère.
+. Remplacez les câbles.
 +
 
-NOTE: N'insérez pas complètement le boîtier du contrôleur dans le châssis avant d'y être invité.
+NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
 
-. Recâblage du système, selon les besoins.
-+
-Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oubliez pas de les réinstaller si vous utilisez des câbles à fibre optique.
-
-. Terminer la réinstallation du boîtier du contrôleur :
-+
-.. Avec la poignée de la came en position ouverte, poussez fermement le boîtier du contrôleur jusqu'à ce qu'il rencontre le fond de panier central et qu'il soit bien en place, puis fermez la poignée de la came en position verrouillée.
-+
-
-NOTE: N'appliquez pas de force excessive lorsque vous faites glisser le boîtier du contrôleur dans le châssis pour éviter d'endommager les connecteurs.
-
-.. Si ce n'est déjà fait, réinstallez le périphérique de gestion des câbles.
-.. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
-
-
+. Fixez les câbles au dispositif de gestion des câbles à l'aide du crochet et de la sangle de boucle.
 . Répétez <<step2_remove_controller_canister,Étape 2 : déposer le boîtier du contrôleur>>les étapes , <<step3_upgrade_hic,Étape 3 : mettre à niveau la HIC>>et <<step4_reinstall_controller,Étape 4 : réinstallez le boîtier du contrôleur>> pour le second contrôleur.
 
 
