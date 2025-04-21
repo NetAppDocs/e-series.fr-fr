@@ -44,28 +44,6 @@ Le contrôleur E4000 prend désormais en charge les cartes d'interface hôte SAS
 |===
 
 
-== Nouvelles fonctionnalités de la version 11.90.1
-
-[cols="35h,~"]
-|===
-| Nouvelle fonction | Description 
-
-
- a| 
-Nouveaux modèles de systèmes de stockage : EF300C et EF600C
- a| 
-Cette version présente les systèmes de stockage NVMe 100 % Flash EF300C et EF600C. EF300C et EF600C sont des versions Flash haute capacité des systèmes de stockage EF300 et EF600 déjà en place. Les disques SSD NVMe haute capacité de 30 To et 60 To sont pris en charge par les systèmes EF300C et EF600C.
-
-
-
- a| 
-Prise en charge des interfaces SAS 12 Gb sur EF4000
- a| 
-Le contrôleur E4000 prend désormais en charge les cartes d'interface hôte SAS 12 Gb.
-
-|===
-
-
 == Nouvelles fonctionnalités de la version 11.90
 
 [cols="35h,~"]
