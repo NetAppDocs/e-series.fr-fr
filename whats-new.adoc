@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90 
+keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
 summary: Nouvelles fonctionnalités de SANtricity OS. 
 ---
 = Nouveautés de SANtricity OS
@@ -85,6 +85,12 @@ La fonction de verrouillage de connexion est maintenant disponible pour les serv
 Configurable via l'API REST uniquement, un nouveau paramètre de verrouillage de connexion est désormais disponible pour les services Web intégrés et proxy.
 
 |===
+
+
+== Nouvelles fonctionnalités de la version 11.80.1R4
+
+Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
+
 
 
 == Nouvelles fonctionnalités de la version 11.80.1R3
