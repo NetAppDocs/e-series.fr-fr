@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive fan canister, replacing E2800 fan canister, E2800 replace fan, E2800, E-Series, eseries 
 summary: Remplacez le boîtier du ventilateur dans un tiroir de contrôleur de 60 disques ou un tiroir de disque. 
 ---
-= Remplacement du boîtier du ventilateur E2800 (60 disques)
+= Remplacement du boîtier du ventilateur - E2800 (60 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-unassign-volumes.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Si vous n"avez plus besoin d"accéder aux E/S à un volume, vous pouvez annuler l"affectation du cluster hôte ou hôte.' 
 ---
-= Annuler l'attribution des volumes
+= Annulez l'affectation des volumes dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

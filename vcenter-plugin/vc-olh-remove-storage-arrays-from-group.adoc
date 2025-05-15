@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Supprimez une ou plusieurs matrices de stockage gérées d"un groupe si vous ne souhaitez plus les gérer d"un groupe de stockage spécifique.' 
 ---
-= Retirez les matrices de stockage du groupe
+= Supprimez des baies de stockage d'un groupe dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

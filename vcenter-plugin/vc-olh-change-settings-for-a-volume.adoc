@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Modifier les paramètres d"un volume, comme son nom, l"affectation d"hôte, la taille du segment, la priorité de modification, la mise en cache, et ainsi de suite.' 
 ---
-= Modifiez les paramètres d'un volume
+= Modifiez les paramètres d'un volume dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

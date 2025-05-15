@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Windows Unified Host Utilities, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: Installez la méthode Windows Unified Host Utilities pour Windows Express. 
 ---
-= Installer et configurer les utilitaires d'hôtes unifiés Windows
+= Installez et configurez les utilitaires d'hôtes unifiés Linux dans E-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

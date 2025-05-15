@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-settings-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'La fonction Importer les paramètres est une opération par lots qui vous permet de répliquer les paramètres d"une seule matrice de stockage (la source) vers plusieurs matrices (les cibles).' 
 ---
-= Vue d'ensemble des paramètres d'importation
+= Découvrez la fonctionnalité Paramètres d'importation dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

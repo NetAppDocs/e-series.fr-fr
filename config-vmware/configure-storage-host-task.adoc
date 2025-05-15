@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Vous pouvez utiliser le stockage affecté à un hôte ESXi en tant que datastore Virtual machine File System \(VMFS\) ou en tant que mappage de périphériques bruts \(RDM\). Les RDM ne sont pas pris en charge par le protocole NVMe over Fibre Channel.' 
 ---
-= Configurer le stockage sur l'hôte
+= Configurez le stockage sur l'hôte dans E-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

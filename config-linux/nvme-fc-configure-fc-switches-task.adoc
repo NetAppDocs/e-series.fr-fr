@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC switch, zoning, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'La configuration de \(zoning\) les commutateurs Fibre Channel \(FC\) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l"aide de l"interface de gestion.' 
 ---
-= Configuration des commutateurs FC
+= Configuration des commutateurs FC dans E-Series - Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

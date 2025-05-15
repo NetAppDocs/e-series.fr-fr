@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install Storage Manager Windows, install CLI Windows, install command line interface, install Host Context Agent, install HCA, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Installez Storage Manager pour CLI et HCA dans la méthode Windows Express. 
 ---
-= Installer SANtricity Storage Manager pour SMcli (logiciel SANtricity version 11.53 ou antérieure).
+= Installez SANtricity Storage Manager pour SMcli (version 11.53 ou antérieure) - Windows
 :allow-uri-read: 
 :experimental: 
 :icons: font

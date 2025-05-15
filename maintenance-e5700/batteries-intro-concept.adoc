@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
 summary: Consultez les exigences et les considérations relatives au remplacement de la batterie E5700. 
 ---
-= Conditions requises pour le remplacement de la batterie E5700
+= Conditions requises pour remplacer la batterie - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

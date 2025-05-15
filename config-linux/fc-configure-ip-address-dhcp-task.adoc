@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, 
 summary: 'Utilisez le protocole de configuration dynamique de l"hôte \(DHCP\) pour fournir des adresses IP.' 
 ---
-= Configurez les adresses IP à l'aide de DHCP
+= Configuration des adresses IP à l'aide du protocole DHCP dans E-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

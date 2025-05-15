@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-directory-services-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Importez une configuration de services d"annuaire d"une matrice de stockage vers d"autres matrices de stockage.' 
 ---
-= Importer les paramètres des services d'annuaire
+= Importez les paramètres des services d'annuaire dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

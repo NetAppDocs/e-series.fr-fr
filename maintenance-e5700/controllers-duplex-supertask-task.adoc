@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
 summary: Remplacez un boîtier de contrôleur dans une configuration duplex. 
 ---
-= Remplacez le contrôleur en configuration recto verso
+= Remplacez le contrôleur en configuration duplex - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

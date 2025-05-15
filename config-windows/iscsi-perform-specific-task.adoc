@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iSCSI, switches, IP network configuration, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en réseau côté baie et côté hôte. Vérifiez ensuite les connexions réseau IP. 
 ---
-= Réalisez des tâches spécifiques à iSCSI
+= Effectuez des tâches spécifiques à iSCSI dans E-Series - Windows
 :allow-uri-read: 
 :experimental: 
 :icons: font

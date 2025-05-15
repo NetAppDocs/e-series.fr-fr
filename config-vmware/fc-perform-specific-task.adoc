@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez les identifiants des ports hôte. 
 ---
-= Réalisez des tâches FC
+= Effectuez des tâches spécifiques à FC dans les systèmes E-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Remplacez les modules DIMM dans le E4000
+= Remplacez les modules DIMM - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

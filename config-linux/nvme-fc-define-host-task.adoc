@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define host Linux, configure host linux, express linux configuration, linux host, 
 summary: 'SANtricity System Manager vous permet de définir les hôtes qui envoient des données à la baie de stockage. La définition d"un hôte est l"une des étapes requises pour permettre à la matrice de stockage de savoir quels hôtes lui sont connectés et d"autoriser l"accès E/S aux volumes.' 
 ---
-= Définir un hôte
+= Création d'un hôte à l'aide de SANtricity System Manager - Linux (NVMe over FC)
 :allow-uri-read: 
 :experimental: 
 :icons: font

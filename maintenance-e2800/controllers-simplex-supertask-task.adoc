@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
 summary: Vous pouvez remplacer une cartouche de contrôleur défectueuse dans une configuration simplex. 
 ---
-= Remplacez le contrôleur par une configuration E2800 simplex
+= Remplacez un contrôleur en configuration recto - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

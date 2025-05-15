@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
 summary: 'Vous pouvez configurer l"interrogation automatique pour toutes les statistiques de disque et de volume sur les systèmes de stockage découverts.' 
 ---
-= Gérer l'interrogation automatique des statistiques Web Services Proxy
+= Gérer l'interrogation automatique des statistiques du proxy des services Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

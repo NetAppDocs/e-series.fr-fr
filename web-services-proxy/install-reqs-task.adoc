@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: 'Conditions requises pour l"installation et la mise à niveau et considérations relatives à Web Services Proxy.' 
 ---
-= Examinez les conditions d'installation et de mise à niveau
+= Consultez les exigences d'installation et de mise à niveau du proxy de services Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

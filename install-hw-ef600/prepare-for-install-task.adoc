@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, create account, register hardware 
 summary: Pour installer un EF300 ou EF600, créez un compte et enregistrez votre matériel. 
 ---
-= Avant l'installation
+= Préparez l'installation : EF300, EF600, EF300C et EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

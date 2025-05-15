@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
 summary: 'Les systèmes E-Series incluent le logiciel SANtricity pour le provisionnement du stockage et d"autres tâches.' 
 ---
-= Présentation du logiciel SANtricity
+= En savoir plus sur les logiciels SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

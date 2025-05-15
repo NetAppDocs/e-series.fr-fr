@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add E2800 controller, adding E2800 controller, simplex to duplex, convert to duplex, E2800, E-Series, eseries 
 summary: 'Ajoutez un second contrôleur à un tiroir de contrôleur qui ne possède qu"un seul boîtier de contrôleur ou ajoutez un second contrôleur à la version simplex.' 
 ---
-= Ajoutez le second boîtier de contrôleur dans le système E2800
+= Ajoutez le second boîtier du contrôleur - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

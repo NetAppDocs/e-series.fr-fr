@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall Web Services Proxy, remove WSP, 
 summary: 'Pour supprimer Web Services Proxy et Unified Manager, vous pouvez utiliser n"importe quel mode (fichier graphique, Console, silencieux ou RPM), quelle que soit la méthode utilisée pour installer le proxy.' 
 ---
-= Désinstallez Web Services Proxy
+= Désinstallez le proxy de services Web SANtricity
 :allow-uri-read: 
 :experimental: 
 :icons: font

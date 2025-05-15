@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C. EF300C, EF600C 
 summary: 'Ajoutez un nouveau tiroir de disque pendant que l"alimentation est toujours appliquée aux autres composants.' 
 ---
-= Ajout à chaud d'un tiroir disque
+= Ajoutez un tiroir disque à chaud - modules IOM12 ou IOM12B - EF300 et EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

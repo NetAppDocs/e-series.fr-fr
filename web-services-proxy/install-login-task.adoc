@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in API, log in Unified Manager 
 summary: 'Accédez à l"API Services Web et Unified Manager et connectez-vous.' 
 ---
-= Connectez-vous aux API et à Unified Manager
+= Connectez-vous à l'API proxy des services Web SANtricity et à Unified Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

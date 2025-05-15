@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-provisioning-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Vous pouvez créer des conteneurs de données, appelés volumes, afin que l"hôte puisse accéder au stockage sur la baie.' 
 ---
-= Présentation du provisionnement
+= En savoir plus sur le provisionnement du stockage dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

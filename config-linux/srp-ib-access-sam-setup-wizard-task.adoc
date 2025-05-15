@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'L"assistant d"installation de SANtricity System Manager vous permet de configurer votre baie de stockage.' 
 ---
-= Accédez à SANtricity System Manager et utilisez l'assistant d'installation
+= Configurez votre stockage à l'aide de SANtricity System Manager - Linux (SRP sur InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: 'Remplacement d"un contrôleur unique dans un tiroir contrôleur EF300 ou EF600' 
 ---
-= Remplacez le contrôleur EF300 ou EF600
+= Remplacer le contrôleur - EF300 et EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

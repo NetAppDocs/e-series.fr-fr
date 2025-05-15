@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-export-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Exportez un certificat pour afficher ses détails complets. 
 ---
-= Exporter les certificats
+= Exporter les certificats dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

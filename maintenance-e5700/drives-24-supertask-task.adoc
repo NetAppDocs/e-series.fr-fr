@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 24-drive, replace E5700 24-drive, failed E5700 24-drive 
 summary: Remplacez un disque dans un tiroir E5700 à 24 disques. 
 ---
-= Remplacement du disque dans le tiroir E5700 (24 disques)
+= Remplacez le disque - E5700 (tiroir de 24 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

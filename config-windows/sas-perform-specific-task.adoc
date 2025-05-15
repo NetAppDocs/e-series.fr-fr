@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sas, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Pour le protocole SAS, vous déterminez les adresses des ports hôtes et définissez les paramètres recommandés. 
 ---
-= Réalisez des tâches SAS-Specific
+= Effectuez des tâches spécifiques à SAS dans E-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

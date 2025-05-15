@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-array-management-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Utilisez la fonctionnalité Add/Discover pour trouver et ajouter les baies de stockage que vous souhaitez gérer dans le réseau de votre entreprise. 
 ---
-= Présentation de la gestion des baies
+= En savoir plus sur la gestion des baies de stockage dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

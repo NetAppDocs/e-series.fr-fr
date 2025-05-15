@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-delete-host-or-host-cluster.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Vous pouvez supprimer un hôte ou un cluster hôte afin que les volumes ne soient plus associés à cet hôte. 
 ---
-= Supprime l'hôte ou le cluster hôte
+= Supprimez un hôte ou un cluster hôte dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

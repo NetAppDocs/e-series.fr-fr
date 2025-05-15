@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, host cabling, direct-attached topology, switch topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C, 
 summary: Vous pouvez connecter un hôte directement à un contrôleur ou utiliser des commutateurs. 
 ---
-= Câblage hôte
+= Câblage pour connecter un hôte à des contrôleurs ou des commutateurs (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

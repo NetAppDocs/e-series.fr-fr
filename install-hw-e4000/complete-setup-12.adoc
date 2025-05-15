@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Découvrez comment câbler les contrôleurs à votre réseau et configurer un système de stockage. 
 ---
-= Configuration complète du système de stockage (E4012)
+= Configuration complète du système de stockage - E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

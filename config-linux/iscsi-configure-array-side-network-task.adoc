@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Configurez la mise en réseau iSCSI côté baie. 
 ---
-= Configuration des réseaux côté baie
+= Configuration de la mise en réseau côté baie dans E-Series - Linux (iSCSI)
 :allow-uri-read: 
 :experimental: 
 :icons: font

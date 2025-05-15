@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iSCSI worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez cette fiche technique pour enregistrer les informations de configuration du stockage iSCSI. 
 ---
-= Enregistrez votre configuration iSCSI
+= Enregistrez votre configuration iSCSI dans E-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

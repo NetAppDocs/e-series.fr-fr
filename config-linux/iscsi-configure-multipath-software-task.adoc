@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath software for Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Configurer le logiciel multivoie, qui fournit un chemin redondant à la baie de stockage en cas de perturbation de l"un des chemins physiques.' 
 ---
-= Configurez le logiciel multivoie
+= Configuration des logiciels multivoies dans E-Series - Linux (iSCSI)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Procédez comme suit pour installer et configurer votre système de stockage E4000. 
 ---
-= Installer et configurer les systèmes E4000
+= Installation et configuration - systèmes de stockage E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

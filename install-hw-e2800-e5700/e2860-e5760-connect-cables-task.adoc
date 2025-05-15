@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous tension.' 
 ---
-= Branchez les câbles des tiroirs
+= Branchez les câbles d'alimentation - E2860, E5760 et DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

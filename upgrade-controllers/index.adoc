@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller, upgrade DIMMs 
 summary: 'Présentation de la mise à niveau d"une baie E-Series en remplaçant les contrôleurs.' 
 ---
-= Présentation des contrôleurs de mise à niveau
+= En savoir plus sur la mise à niveau des contrôleurs E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

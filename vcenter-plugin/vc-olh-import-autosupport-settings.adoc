@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-autosupport-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Importez une configuration AutoSupport d"une baie de stockage vers d"autres baies de stockage.' 
 ---
-= Importer les paramètres AutoSupport
+= Importez les paramètres AutoSupport dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: 'Remplacez un tiroir contrôleur ou un tiroir disque E2800 de 12 ou 24 disques qui comprend deux blocs d"alimentation avec ventilateurs intégrés.' 
 ---
-= Remplacement du bloc d'alimentation E2800 (12 ou 24 disques)
+= Remplacez le bloc d'alimentation - E2800 (12 ou 24 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

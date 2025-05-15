@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
 summary: 'Remplacez une carte d"interface hôte (HIC) EF300 ou EF600 défectueuse.' 
 ---
-= Remplacement de la carte d'interface hôte (HIC) défectueuse dans EF300 ou EF600
+= Remplacez la carte d'interface hôte (HIC) défectueuse - EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

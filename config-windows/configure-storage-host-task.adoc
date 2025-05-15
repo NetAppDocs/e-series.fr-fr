@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: LUNs, configure LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Configurer le stockage sur l"hôte pour la méthode Windows Express.' 
 ---
-= Configurer le stockage sur l'hôte
+= Configurez le stockage sur l'hôte sous E-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

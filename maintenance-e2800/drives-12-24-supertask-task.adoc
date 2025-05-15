@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
 summary: Remplacez un disque dans un système E2800 par un tiroir de 12 ou 24 disques. 
 ---
-= Remplacement du disque dans le système E2800 (tiroir 12 ou 24 disques)
+= Remplacement d'un disque - E2800 (tiroir de 12 ou 24 disques)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

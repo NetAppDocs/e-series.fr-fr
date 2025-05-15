@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: 'Remplacez les blocs d"alimentation en cas de défaillance dans votre contrôleur EF300 ou EF600.' 
 ---
-= Remplacez une alimentation EF300 ou EF600
+= Remplacez le bloc d'alimentation - EF300 et EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

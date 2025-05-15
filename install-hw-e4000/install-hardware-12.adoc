@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Découvrez comment installer un système de stockage E4012, DE212C ou DE224C dans un rack à deux montants ou une armoire système NetApp. 
 ---
-= Installation du matériel (E4012)
+= Installer le matériel - E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

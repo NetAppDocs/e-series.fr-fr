@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Consultez les conditions d"utilisation de la méthode express pour configurer une baie E-Series et un hôte VMware.' 
 ---
-= Hypothèses
+= Estimations (E-Series et VMware)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

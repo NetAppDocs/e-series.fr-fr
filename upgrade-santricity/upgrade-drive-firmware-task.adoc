@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Vous mettez à niveau le micrologiciel de vos lecteurs pour vous assurer que vous disposez de toutes les dernières fonctionnalités et correctifs de bogues. 
 ---
-= Mettre à niveau le micrologiciel du lecteur
+= Mise à niveau du firmware des disques E-Series et EF-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

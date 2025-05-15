@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
 summary: Utilisez cette fiche technique pour enregistrer les informations de configuration du stockage FC. 
 ---
-= Enregistrer votre configuration FC
+= Enregistrez votre configuration FC dans E-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

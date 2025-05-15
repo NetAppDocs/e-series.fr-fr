@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: assign volume Linux, assign namespace Linux, express linux configuration, linux host, 
 summary: 'Vous devez affecter un volume \(namespace\) à un hôte ou un cluster hôte afin de pouvoir utiliser ce dernier pour les opérations d"E/S. Cette affectation permet à un hôte ou un cluster hôte d"accéder à un ou plusieurs namespaces d"une baie de stockage.' 
 ---
-= Affecter un volume
+= Attribution d'un volume à l'aide de SANtricity System Manager - Linux (NVMe over RoCE)
 :allow-uri-read: 
 :experimental: 
 :icons: font

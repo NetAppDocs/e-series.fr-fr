@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Linux Unified Host Utilities, express linux configuration, software configuration, linux host, SMcli, SMdevices 
 summary: 'Installez les utilitaires d"hôtes unifiés Linux lors de l"utilisation de FC.' 
 ---
-= Installer et configurer Linux Unified Host Utilities
+= Installer et configurer les utilitaires d'hôte unifié Linux dans E-Series (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

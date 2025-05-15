@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-workload-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Modifier le nom d"une charge de travail et afficher son type d"application associé.' 
 ---
-= Modifiez les paramètres des charges de travail
+= Modifiez les paramètres de charge de travail dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

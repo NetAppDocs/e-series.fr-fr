@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-host-access.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez découvrir ou définir chaque hôte du réseau. 
 ---
-= Créez un accès hôte
+= Créez un accès hôte dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

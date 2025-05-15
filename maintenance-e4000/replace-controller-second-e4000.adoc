@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Ajouter un deuxième réservoir dans E4000
+= Ajouter un deuxième réservoir - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

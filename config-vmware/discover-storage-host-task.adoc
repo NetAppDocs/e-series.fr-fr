@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Une fois les volumes affectés à l"hôte, vous effectuez une nouvelle analyse afin que l"hôte détecte et configure les volumes pour les chemins d"accès multiples.' 
 ---
-= Découverte du stockage sur l'hôte
+= Découvrez le stockage sur l'hôte dans la gamme E-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

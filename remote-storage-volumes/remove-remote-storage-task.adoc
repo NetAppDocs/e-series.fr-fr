@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove storage object, disconnect remote storage 
 summary: Vous pouvez supprimer tout objet de stockage distant configuré via SANtricity System Manager. 
 ---
-= Supprime un objet de stockage distant
+= Supprimez l'objet de stockage distant pour les volumes de stockage distant SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

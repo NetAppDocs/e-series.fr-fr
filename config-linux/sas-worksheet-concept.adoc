@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SAS worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez cette fiche pour enregistrer des informations de configuration du stockage SAS. 
 ---
-= Enregistrez votre configuration SAS
+= Enregistrez votre configuration SAS dans E-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

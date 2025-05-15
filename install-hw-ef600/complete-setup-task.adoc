@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
 summary: 'Vous connectez les contrôleurs à votre réseau pour terminer l"installation et la configuration du système de stockage.' 
 ---
-= Configuration et installation complètes du système de stockage
+= Installation et configuration complètes du système de stockage : EF300, EF600, EF300C et EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

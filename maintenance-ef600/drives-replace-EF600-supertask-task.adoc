@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF600C replace DIMM, drive failure 
 summary: 'Remplacement d"un disque dans une baie EF600' 
 ---
-= Remplacement du disque dans une baie EF600
+= Remplacez le lecteur - EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

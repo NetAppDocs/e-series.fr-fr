@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Préparez la mise à niveau des contrôleurs en enregistrant la clé de sécurité du disque, en rassemblant les données de support et en mettant le contrôleur hors ligne. 
 ---
-= Préparation à la mise à niveau des contrôleurs
+= Préparez la mise à niveau des contrôleurs E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Une nouvelle LUN n"a pas de partition ni de système de fichiers lorsque l"hôte Linux le détecte pour la première fois. Vous devez formater la LUN avant de pouvoir utiliser cette dernière. Si vous le souhaitez, vous pouvez créer un système de fichiers sur la LUN.' 
 ---
-= Créer des partitions et des systèmes de fichiers
+= Création de partitions et de systèmes de fichiers dans E-Series - Linux (SRP sur InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

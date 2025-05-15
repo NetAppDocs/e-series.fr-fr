@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 host interface card, E5700 HIC, upgrade E5700 HIC, update E5700 HIC, increase host ports 
 summary: Mettez à niveau une HIC dans un système E5700. 
 ---
-= Mettre à niveau la carte d'interface hôte E5700 (HIC)
+= Mettez à niveau la carte d'interface hôte (HIC) - 5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

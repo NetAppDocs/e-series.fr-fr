@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC switches, zoning, express linux configuration, software configuration, linux host, 
 summary: Configurez les commutateurs Fibre Channel de manière à ce que les hôtes puissent se connecter à la baie de stockage et limiter le nombre de chemins. 
 ---
-= Configuration des commutateurs FC
+= Configuration des commutateurs FC dans E-Series - Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

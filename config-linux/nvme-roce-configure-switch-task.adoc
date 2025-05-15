@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code. 
 ---
-= Configurer le commutateur
+= Configuration du switch dans E-Series - Linux (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

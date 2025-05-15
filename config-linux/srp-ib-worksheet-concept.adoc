@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SRP over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez cette feuille de calcul pour enregistrer les informations de configuration du stockage SRP sur Infiniband. 
 ---
-= Enregistrez votre configuration SRP sur IB
+= Enregistrez votre configuration SRP sur InfiniBand dans E-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

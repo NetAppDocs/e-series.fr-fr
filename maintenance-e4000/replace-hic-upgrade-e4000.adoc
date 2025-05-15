@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Mettez à niveau HIC dans E4000
+= Mettez à niveau la carte d'interface hôte (HIC) - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

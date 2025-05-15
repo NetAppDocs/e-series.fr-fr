@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace battery, battery fail, EF300C, EF600C, EF300, EF600 
 summary: 'Remplacez la batterie d"une baie EF300 ou EF600.' 
 ---
-= Remplacez la batterie EF300 ou EF600
+= Remplacez la batterie - EF300 et EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

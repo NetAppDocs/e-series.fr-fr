@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
 summary: 'La première étape de la mise à niveau des contrôleurs est d"enlever les anciens contrôleurs et, éventuellement, la batterie.' 
 ---
-= Supprimer les contrôleurs
+= Retirez les contrôleurs E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

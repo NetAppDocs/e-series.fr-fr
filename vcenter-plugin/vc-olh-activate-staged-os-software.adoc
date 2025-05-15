@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Vous pouvez choisir d"activer le fichier logiciel à un moment plus opportun.' 
 ---
-= Activer le logiciel de se préparé
+= Activez le logiciel de système d'exploitation par étapes dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

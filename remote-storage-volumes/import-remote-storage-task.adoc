@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
 summary: 'L"importation du périphérique de stockage distant s"effectue via l"assistant d"importation de stockage distant sous le Gestionnaire système SANtricity. La fonction d"importation du stockage à distance permet de déplacer les données d"un périphérique de stockage distant vers la baie E-Series locale.' 
 ---
-= Importer le stockage distant
+= Importez le stockage distant pour les volumes de stockage distants SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

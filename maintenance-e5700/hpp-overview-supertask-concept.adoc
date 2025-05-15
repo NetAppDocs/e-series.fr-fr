@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, converting host port protocol, 
 summary: Convertissez le protocole hôte pour un système E5700. 
 ---
-= Conditions requises pour modifier le protocole du port hôte E5700
+= Configuration requise pour modifier le protocole du port hôte - 5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

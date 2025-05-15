@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 canister, E5700 power supply, repair E5700 power supply, replace E5700 power supply, failed E5700 power supply 
 summary: 'Consultez les types et exigences de l"absorbeur E5700.' 
 ---
-= Conditions requises pour le remplacement de l'absorbeur E5700
+= Conditions requises pour remplacer le réservoir - E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

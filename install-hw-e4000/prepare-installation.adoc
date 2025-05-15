@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Avant l'installation
+= Préparer l'installation - E4012 et E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
 summary: 'La pile de pilotes OFED InfiniBand prend en charge l"exécution simultanée de iser et SRP sur les mêmes ports, de sorte qu"aucun matériel supplémentaire n"est requis.' 
 ---
-= Configurer la mise en réseau des hôtes connectés au stockage
+= Configurez les connexions réseau entre votre hôte et le système de stockage E-Series - Linux (iser sur InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

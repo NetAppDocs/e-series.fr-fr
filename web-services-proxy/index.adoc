@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services Proxy, WSP, 
 summary: 'Présentation du proxy de services Web SANtricity®, de l"API de services Web, de L"API REST,' 
 ---
-= Présentation du proxy de services Web SANtricity
+= En savoir plus sur le proxy de services Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

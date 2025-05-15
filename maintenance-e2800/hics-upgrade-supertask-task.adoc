@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrading E2800 HIC, upgrade E2800 HIC, upgrade host interface card, E2800, E-Series, eseries 
 summary: 'Mettre à niveau une carte d"interface hôte (HIC) sur une baie E2800.' 
 ---
-= Mise à niveau de la carte d'interface hôte E2800 (HIC)
+= Mettez à niveau la carte d'interface hôte (HIC) - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

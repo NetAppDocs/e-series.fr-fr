@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Découvrez comment installer un système de stockage E4060 ou DE460C dans un rack à deux montants ou une armoire système NetApp. 
 ---
-= Installation du matériel (E4060)
+= Installer le matériel - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

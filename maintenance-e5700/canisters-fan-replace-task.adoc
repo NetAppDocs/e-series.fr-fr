@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 fan, repair E5700 fan, replace E5700 fan, failed E5700 fan 
 summary: Remplacez un ventilateur E5700. 
 ---
-= Remplacez le boîtier du ventilateur E5700 (60 disques)
+= Remplacement du boîtier du ventilateur - E5700 (60 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

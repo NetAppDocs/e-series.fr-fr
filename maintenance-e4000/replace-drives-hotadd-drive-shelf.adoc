@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Remplacez un disque dans un système E4000 par un tiroir de 12 ou 24 disques. 
 ---
-= Ajout à chaud d'un tiroir disque
+= Ajoutez un tiroir disque à chaud - modules IOM12 ou IOM12B - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

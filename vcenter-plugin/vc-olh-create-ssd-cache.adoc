@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-ssd-cache.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Pour accélérer dynamiquement les performances du système, vous pouvez utiliser la fonctionnalité SSD cache pour mettre en cache les données les plus fréquemment utilisées (données actives) sur des disques SSD à faible latence.' 
 ---
-= Créer un cache SSD
+= Créez un cache SSD dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

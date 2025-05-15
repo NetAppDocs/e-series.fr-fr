@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Pour afficher et gérer les ressources de stockage dans le plug-in de stockage pour vCenter, vous devez découvrir les adresses IP des baies de votre réseau. 
 ---
-= Découvrir les baies de stockage
+= Découvrez les baies de stockage dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

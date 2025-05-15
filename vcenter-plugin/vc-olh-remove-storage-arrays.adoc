@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Supprimez une ou plusieurs baies de stockage si vous ne souhaitez plus la gérer depuis le plug-in de stockage pour vCenter. 
 ---
-= Retirez les matrices de stockage
+= Supprimez les baies de stockage dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

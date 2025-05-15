@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF300C, replace drive, drive failure 
 summary: Remplacez un lecteur dans une matrice EF300. 
 ---
-= Remplacez le lecteur dans une matrice EF300
+= Remplacez le lecteur - EF300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

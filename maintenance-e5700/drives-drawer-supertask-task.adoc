@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive drawer, DE460C drive shelf, replace E5700 drive drawer, failed E5700 drive drawer 
 summary: Remplacez un tiroir de disque dans un système E5700. 
 ---
-= Remplacement du tiroir disque E5700 (60 disques)
+= Remplacez le tiroir des lecteurs - E5700 (60 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade vCenter 
 summary: 'Conditions requises pour l"installation et la mise à niveau et considérations relatives au plug-in vCenter.' 
 ---
-= Examinez les conditions d'installation et de mise à niveau
+= Conditions requises pour l'installation et la mise à niveau du plug-in de stockage SANtricity pour vCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

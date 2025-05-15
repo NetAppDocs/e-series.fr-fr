@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Conditions requises pour le remplacement du contrôleur E4000
+= Conditions requises pour remplacer le contrôleur - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

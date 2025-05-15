@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, SANtricity API, discover storage WSP, 
 summary: 'Pour gérer les systèmes de stockage sur le réseau, vous devez d"abord les découvrir, puis les ajouter à la liste de gestion.' 
 ---
-= Gérer les systèmes de stockage à l'aide du proxy de services Web
+= Gérez les systèmes de stockage à l'aide du proxy de services Web SANtricity
 :allow-uri-read: 
 :experimental: 
 :icons: font

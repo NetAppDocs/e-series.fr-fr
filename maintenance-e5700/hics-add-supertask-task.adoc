@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
 summary: Ajouter une HIC dans un système E5700. 
 ---
-= Ajouter une carte d'interface hôte E5700 (HIC)
+= Ajoutez la carte d'interface hôte (HIC) - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

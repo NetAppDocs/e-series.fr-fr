@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
 summary: 'Vous pouvez modifier les paramètres de connexion de toute importation de stockage à distance configurée via l"option Afficher/Modifier les paramètres de l"écran stockage à distance du Gestionnaire système SANtricity.' 
 ---
-= Modifier les paramètres de connexion du stockage distant
+= Modifier les paramètres de connexion au stockage distant pour les volumes de stockage distants SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

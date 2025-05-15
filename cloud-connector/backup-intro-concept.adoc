@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector backup 
 summary: 'Vous pouvez accéder à l"option backups dans le panneau de navigation gauche de l"application SANtricity Cloud Connector. L"option sauvegardes affiche la page sauvegardes, qui vous permet de créer de nouvelles tâches de sauvegarde basées sur des images ou des fichiers.' 
 ---
-= Sauvegardes
+= Utilisez SANtricity Cloud Connector pour créer et gérer des sauvegardes de volume E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

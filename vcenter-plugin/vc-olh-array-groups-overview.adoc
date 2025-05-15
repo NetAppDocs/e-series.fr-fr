@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-array-groups-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Gérez votre infrastructure physique et virtualisée en regroupant un ensemble de baies de stockage. 
 ---
-= Vue d'ensemble des groupes de matrices
+= En savoir plus sur la gestion des groupes de baies dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

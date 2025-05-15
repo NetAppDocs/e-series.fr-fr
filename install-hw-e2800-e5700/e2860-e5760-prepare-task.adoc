@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2860, E5760, DE460, installation 
 summary: Pour installer les systèmes E2860, E5760 ou DE460, créez un compte et enregistrez le matériel. 
 ---
-= Avant l'installation
+= Préparez l'installation : E2860, E5760 et DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

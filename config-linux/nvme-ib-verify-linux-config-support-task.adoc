@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Pour assurer un fonctionnement fiable, vous créez un plan d"implémentation, puis utilisez la matrice d"interopérabilité (IMT) de NetApp afin de vérifier que l"ensemble de la configuration est pris en charge.' 
 ---
-= Vérifier la prise en charge de Linux et vérifier les restrictions
+= Vérification de la prise en charge de la configuration Linux et des restrictions de révision des systèmes E-Series (NVMe over InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Vérifiez les conditions d"utilisation de la méthode express pour configurer une baie E-Series et un hôte Linux.' 
 ---
-= Hypothèses
+= Estimations (E-Series et Linux)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

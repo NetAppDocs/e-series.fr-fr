@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: adding E2800 HIC, add E2800 HIC, add host interface card, E2800, E-Series, eseries 
 summary: 'Ajoutez une carte d"interface hôte (HIC) à une baie E2800.' 
 ---
-= Ajouter la carte d'interface hôte E2800 (HIC)
+= Ajout d'une carte d'interface hôte - E2800 (HIC)
 :allow-uri-read: 
 :experimental: 
 :icons: font

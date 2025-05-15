@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive power canister, replacing E2800 power canister, E2800, E-Series, eseries 
 summary: 'Remplacez un tiroir de contrôleur de 60 disques ou un tiroir de disque, qui inclut deux blocs d"alimentation pour la redondance de l"alimentation.' 
 ---
-= Remplacez le boîtier d'alimentation E2800 (60 disques)
+= Remplacement du boîtier d'alimentation - E2800 (60 disques)
 :allow-uri-read: 
 :experimental: 
 :icons: font

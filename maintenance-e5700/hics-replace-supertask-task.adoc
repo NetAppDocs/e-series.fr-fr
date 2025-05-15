@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
 summary: Remplacer une HIC dans un système E5700. 
 ---
-= Remplacement de la carte d'interface hôte E5700 (HIC)
+= Remplacez la carte d'interface hôte (HIC) - 5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

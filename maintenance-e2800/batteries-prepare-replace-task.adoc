@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Préparez le remplacement de la batterie de la baie E2800 en suivant les étapes appropriées pour le mode recto verso ou le mode recto verso. 
 ---
-= Préparez-vous au remplacement de la batterie E2800
+= Préparez-vous à remplacer la batterie - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

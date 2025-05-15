@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-storage-configuration-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Importez la configuration de stockage d"une matrice de stockage vers d"autres matrices de stockage.' 
 ---
-= Importer les paramètres de configuration du stockage
+= Importer les paramètres de configuration du stockage dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

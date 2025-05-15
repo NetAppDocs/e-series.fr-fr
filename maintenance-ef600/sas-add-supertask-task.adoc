@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300C, EF600C, EF300, EF600 
 summary: 'Ajoutez une carte d"extension SAS aux contrôleurs EF300 pour permettre l"extension du plateau de disque.' 
 ---
-= Ajoutez une carte d'extension SAS à EF300 et EF600
+= Ajoutez une carte d'extension SAS - EF300 et EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

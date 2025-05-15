@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Vous vérifiez les connexions réseau au protocole Internet \(IP\) en utilisant des tests ping pour vous assurer que l"hôte et la matrice sont en mesure de communiquer.' 
 ---
-= Vérifiez les connexions réseau IP
+= Vérification des connexions réseau IP dans E-Series - Linux (iSCSI)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

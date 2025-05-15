@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-pool.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Modifiez les paramètres d"un pool, y compris son nom, ses paramètres d"alertes de capacité, ses priorités de modification et sa capacité de conservation.' 
 ---
-= Modifiez les paramètres de configuration d'un pool
+= Modifiez les paramètres de configuration d'un pool dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

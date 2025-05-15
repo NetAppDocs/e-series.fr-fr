@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-reset-management-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Restaurez le certificat de gestion à l"état d"origine auto-signé en usine.' 
 ---
-= Réinitialisez les certificats de gestion
+= Réinitialisez les certificats de gestion dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

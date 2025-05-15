@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-upgrade-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Vous pouvez gérer les mises à niveau du logiciel SANtricity et de la NVSRAM pour plusieurs matrices de stockage du même type. 
 ---
-= Présentation de la mise à niveau
+= Découvrez comment gérer les mises à niveau logicielles SANtricity à l'aide du plug-in de stockage pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

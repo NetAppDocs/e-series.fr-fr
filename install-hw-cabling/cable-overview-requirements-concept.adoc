@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cabling requirements, drive shelf cabling, controller cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Le câblage des tiroirs E-Series requiert plusieurs composants. 
 ---
-= De formation
+= Exigences de câblage du système de stockage (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

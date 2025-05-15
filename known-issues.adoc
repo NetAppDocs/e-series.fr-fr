@@ -4,7 +4,7 @@ permalink: known-issues.html
 keywords: known, issues, santricity, os 
 summary: Problèmes connus 
 ---
-= Notes de mise à jour
+= Notes de version d'E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

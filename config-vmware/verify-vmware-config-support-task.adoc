@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Vérifiez que la configuration VMware est prise en charge. 
 ---
-= Vérifiez que la configuration VMware est prise en charge
+= Vérifiez la prise en charge de la configuration VMware dans E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

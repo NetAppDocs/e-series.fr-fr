@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-assign-volumes-to-hosts.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Vous devez affecter un volume à un hôte ou à un cluster hôte afin qu"il puisse être utilisé pour les opérations d"E/S.' 
 ---
-= Attribuez des volumes aux hôtes
+= Attribuez des volumes aux hôtes dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

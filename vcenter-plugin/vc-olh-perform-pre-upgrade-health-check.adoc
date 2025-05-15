@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Une vérification de l"état s"exécute dans le cadre du processus de mise à niveau, mais vous pouvez également effectuer une vérification de l"état séparément avant de commencer.' 
 ---
-= Vérification de l'état de pré-mise à niveau
+= Effectuez une vérification de l'état de santé avant la mise à niveau dans le plug-in de stockage SANtricity pour vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 
