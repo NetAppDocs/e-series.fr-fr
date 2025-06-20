@@ -250,8 +250,6 @@
   <block id="d60c0bc605d3ea38eff56a862b5a189c" category="paragraph">En raison de la complexité de cette procédure, il est recommandé de procéder comme suit :</block>
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Lire toutes les étapes avant de commencer la procédure.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Assurez-vous que l'ajout à chaud d'un tiroir disque est la procédure adéquate.</block>
-  <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.</block>
-  <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block>.</block>
   <block id="160e453c42b3cffabeeb1eac7a869cc4" category="admonition">Pour préserver l'intégrité du système, vous devez suivre la procédure exactement dans l'ordre indiqué.</block>
@@ -3385,7 +3383,6 @@
   <block id="5ca7fa308c8b2a9265310cc199fcffe2" category="paragraph">L'ajout d'une carte d'interface hôte à votre baie de stockage est terminé. Vous pouvez reprendre les opérations normales.</block>
   <block id="2a6f6b0e35b2bf4af51a4b0bfe47141a" category="summary">Remplacez un disque dans un tiroir E5700 à 60 disques.</block>
   <block id="ff4525471962c2f80f88cc7bda612cda" category="paragraph">Vous pouvez remplacer un disque dans un tiroir de 60 disques.</block>
-  <block id="6dc10b003bcb8e0cbbcf076e7dbcdf2f" category="paragraph">Cette tâche s'applique aux tiroirs disques DCM et DC2.</block>
   <block id="f606b288add440526eb541bfdfeaba20" category="inline-link-macro">Conditions requises pour le remplacement des disques E5700</block>
   <block id="73488b3d5887e9bf8af3f3a0f6ce8cb9" category="list-text">Examinez les exigences de gestion des disques dans le <block ref="3e007b28e6694052b5931f3903e6e0a8" category="inline-link-macro-rx"></block>.</block>
   <block id="76b188eaa0ef9d72b9512f3fe3343776" category="paragraph">Préparez-vous au remplacement d'un disque dans un tiroir de 60 disques en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.</block>
@@ -4450,7 +4447,6 @@
   <block id="b0ceb10c6de5139f1407223053cf5348" category="list-text">Sélectionnez menu :support[Centre de support &gt; *Diagnostics].</block>
   <block id="c92ae1b66e0ea48f905922b70c51fcc0" category="summary">Remplacez un disque dans un système E2800 par un tiroir de 60 disques.</block>
   <block id="609be9ba4308b107932857f7cf158595" category="paragraph">Vous pouvez remplacer un disque du système E2800 par un tiroir de 60 disques.</block>
-  <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Cette procédure s'applique aux tiroirs disques DCM et DCM2.</block>
   <block id="18cda2490bb6b702b8c07026d1f0338e" category="summary">Ajoutez un second contrôleur à un tiroir de contrôleur qui ne possède qu'un seul boîtier de contrôleur ou ajoutez un second contrôleur à la version simplex.</block>
   <block id="309bac4b4c6465337b98d1acfc129e90" category="paragraph">Vous pouvez ajouter un second canister dans la baie E2800.</block>
   <block id="f653516f3a0cdf596854f01a9ac1bf4b" category="paragraph">Cette tâche décrit comment ajouter un second bidon de contrôleur à la version simplex d'un tiroir contrôleur E2812, un tiroir contrôleur E2824 ou une baie Flash EF280. Cette procédure est également appelée conversion recto-verso, une procédure en ligne. Vous pouvez accéder aux données de la matrice de stockage pendant cette procédure.</block>
@@ -4848,8 +4844,6 @@
   <block id="643cf53889a851d94f18e68d68887ef7" category="summary">Examinez les exigences et les considérations relatives au remplacement des contrôleurs E2800.</block>
   <block id="441651ab40068dac3a602bac4db9c3cc" category="paragraph">Avant de remplacer ou d'ajouter un contrôleur E2800, vérifiez les exigences et les considérations.</block>
   <block id="2d33b45e8b3a1d29678e5d1898be8872" category="paragraph">Chaque boîtier de contrôleur contient une carte contrôleur, une batterie et une carte d'interface hôte (HIC) en option. Vous pouvez ajouter un second contrôleur à une configuration simplex ou remplacer un contrôleur défectueux.</block>
-  <block id="d8877bd06791feeb2257a189554b10c0" category="paragraph">Ces procédures s'appliquent aux tiroirs disques IOM12 et IOM12B.</block>
-  <block id="9d5445db77f905ba92077d0b48806948" category="admonition">Ces procédures sont pour les remplacements ou les remplacements à chaud des modules d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)</block>
   <block id="e0b4ad5fea96a69e322520c639ff0241" category="section-title">Conditions requises pour l'ajout du second contrôleur</block>
   <block id="b5c3b2977348508969f89a874a523c3c" category="paragraph">Vous pouvez ajouter un second boîtier de contrôleur à la version simplex des tiroirs contrôleurs suivants :</block>
   <block id="3a2fa91ff19a804d73a517b7fdbc6350" category="paragraph">Les figures montrent un exemple de tiroir de contrôleur avant d'ajouter un second contrôleur (une cartouche de contrôleur et un cache de contrôleur) et après l'ajout d'un second contrôleur (deux boîtiers de contrôleur).</block>
@@ -5061,8 +5055,6 @@
   <block id="961886d373243f3f3f779b008441b5d2" category="cell">Prend en charge les versions Mac OS via un pilote ATTO Technology, Inc., des chemins d'accès multiples.</block>
   <block id="d93a7355c7e5ae529cbbd1c7386ef236" category="cell">Windows (ATTO)</block>
   <block id="1cef5a0ae504a39c3c685c81bb227bcc" category="cell">Prend en charge les systèmes d'exploitation Windows via un pilote ATTO Technology, Inc., des chemins d'accès multiples.</block>
-  <block id="fae9863ad38cf7cb4abba55837a6958e" category="cell">FlexArray (ALUA)</block>
-  <block id="80a4b6a6aea0733712df8ece7feeb565" category="cell">Prend en charge un système NetApp FlexArray via ALUA pour les chemins d'accès multiples.</block>
   <block id="448462a9364fed0f780b5871c1332348" category="cell">SERVICE IBM</block>
   <block id="ba5b374a9253be7b2e7ff414763a91ee" category="cell">Prend en charge une configuration contrôleur de volume SAN IBM.</block>
   <block id="fb83a625e5852c1ba47fe358f2d50ffc" category="cell">Valeur par défaut</block>
@@ -5071,7 +5063,6 @@
   <block id="02677c9d7a9295a0b7ff23da80ed17c2" category="cell">Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de basculement multivoie Device Mapper avec un noyau 3.9 ou antérieur.</block>
   <block id="e9745a54dc083bc4c6e7adb0ba4a88bf" category="cell">Fenêtre clustered (obsolète)</block>
   <block id="ee99f98925e229fb230a1fca830d5dd4" category="cell">Si votre type de système d'exploitation hôte est défini sur cette valeur, utilisez à la place le paramètre Windows (cluster ou non-cluster).</block>
-  <block id="8289ad2daf4149715a39ad8d6af619b8" category="summary">Les volumes snapshot avec un volume de base DA ne peuvent pas être affectés à un hôte qui ne prend pas en charge Data assurance (DA).</block>
   <block id="a75d3526ba8cd40a248e9da80d0ba8d2" category="doc">Pourquoi ne pas voir tous mes volumes, hôtes ou clusters hôtes ?</block>
   <block id="f956e41235aa6de0ef7cf1901fa9a994" category="paragraph">Les volumes snapshot avec un volume de base DA ne peuvent pas être affectés à un hôte qui ne prend pas en charge Data assurance (DA). Vous devez désactiver DA sur le volume de base avant qu'un volume d'instantané ne puisse être affecté à un hôte qui n'est pas compatible DA.</block>
   <block id="92fc66f9534d94b4859793638454d6ee" category="paragraph">Prenez en compte les consignes suivantes concernant l'hôte auquel vous attribuez le volume de snapshot :</block>
@@ -5094,7 +5085,6 @@
   <block id="fbf7a1613c847c3c5c726582b8f6417b" category="list-text">Sélectionnez la charge de travail à modifier, puis *Afficher/Modifier les paramètres*.</block>
   <block id="816b8af41e51f246c781f95473f8ad84" category="paragraph">La boîte de dialogue Paramètres des applications et des charges de travail s'affiche.</block>
   <block id="6348cb0590a6ec9e7a250072f04b2e6f" category="list-text">(Facultatif) modifiez le nom fourni par l'utilisateur de la charge de travail.</block>
-  <block id="4618a10c402a86f34f74700b56034c0f" category="summary">Conservez la protection contre les pertes de tiroirs et de tiroirs pour un pool ou un groupe de volumes</block>
   <block id="8a3f4e59944403d76cf4ffb618284325" category="doc">Comment maintenir la protection contre les pertes des tablettes et des tiroirs ?</block>
   <block id="5f18e254e37bfef58483cda02161565b" category="paragraph">Pour maintenir la protection contre les pertes de tiroirs et de tiroirs pour un pool ou un groupe de volumes, utilisez les critères spécifiés dans le tableau suivant.</block>
   <block id="a0db49ba470c1c9ae2128c3470339153" category="cell">Niveau</block>
@@ -5151,10 +5141,8 @@
   <block id="c2ef08d2a4f49ae850391736276d1a5e" category="cell">Erreur de parité</block>
   <block id="2710317bb3cba0edc2a791f8a7c8404f" category="cell">La parité n'est pas ce qu'elle devrait être pour une partie donnée des données. Une erreur de parité est potentiellement grave et peut entraîner une perte permanente de données.</block>
   <block id="5e043064dc164788c2cbfe6a4f36c0f7" category="list-text">Cliquez sur *Done* après avoir vérifié le dernier volume du pool ou du groupe de volumes.</block>
-  <block id="968c500c45a669526a5ae69ef252eb12" category="summary">Si vous souhaitez que deux hôtes ou plus partagent l'accès au même ensemble de volumes, vous devez créer un cluster hôte.</block>
   <block id="36ba1dd2062be041e65d76f318fc9563" category="doc">Pourquoi aurais-je besoin de créer un cluster hôte ?</block>
   <block id="605c94544e16797cd75e903049c8c75f" category="paragraph">Si vous souhaitez que deux hôtes ou plus partagent l'accès au même ensemble de volumes, vous devez créer un cluster hôte. Normalement, chaque hôte est équipé d'un logiciel de mise en cluster installé sur lui afin de coordonner l'accès au volume.</block>
-  <block id="490911223ced9bd35d325330312a99b5" category="summary">La phrase de passe est utilisée pour crypter et décrypter le fichier de clé de sécurité stocké sur le client de gestion local.</block>
   <block id="7e2fd80391cbb19f61be6028669d1143" category="doc">Pourquoi dois-je définir une phrase de passe ?</block>
   <block id="2f42cd01026066a070aa52e53e4d963f" category="paragraph">La phrase de passe est utilisée pour crypter et décrypter le fichier de clé de sécurité stocké sur le client de gestion local. Sans la phrase de passe, la clé de sécurité ne peut pas être décryptée et utilisée pour déverrouiller les données à partir d'un lecteur compatible avec la sécurité si elle est réinstallée dans une autre matrice de stockage.</block>
   <block id="94a7e09a9194062e8dbdbdd47dc2c719" category="summary">Vous pouvez activer la sécurité des disques pour un pool ou un groupe de volumes afin d'empêcher tout accès non autorisé aux données des disques contenus dans le pool ou le groupe de volumes.</block>
@@ -5308,7 +5296,6 @@
   <block id="792a5832f94546dc27bbb987ad5a096b" category="list-text">Sur la page gérer, sélectionnez menu:gérer les groupes[Créer un groupe de matrices de stockage].</block>
   <block id="4563b6510c792a9fb859f4f42ba6ab75" category="list-text">Dans le champ *Nom*, saisissez un nom pour le nouveau groupe.</block>
   <block id="200566636c7d43f3167fbfbd1d5663a8" category="list-text">Sélectionnez les matrices de stockage que vous souhaitez ajouter au nouveau groupe.</block>
-  <block id="4599f147525488978c059ab5443c5a94" category="summary">Les volumes de cette charge de travail ne sont pas associés à une charge de travail spécifique aux applications. En conséquence, cette charge de travail ne peut pas être supprimée.</block>
   <block id="cc41a400b6ddab31b3cc4c347ea5b96a" category="doc">Pourquoi ne puis-je pas supprimer la charge de travail sélectionnée ?</block>
   <block id="3bfd2179043341e09a4fc1cfd720d6ff" category="paragraph">Cette charge de travail se compose d'un groupe de volumes créés à l'aide de l'interface de ligne de commande ou migrés (importé/exporté) à partir d'une autre baie de stockage. Par conséquent, les volumes de cette charge de travail ne sont pas associés à une charge de travail spécifique à une application. La charge de travail ne peut donc pas être supprimée.</block>
   <block id="50d8c1e372b2438fa4b2b1070b611b60" category="summary">Importez une configuration de services d'annuaire d'une matrice de stockage vers d'autres matrices de stockage.</block>
@@ -5616,7 +5603,6 @@
   <block id="592a2d22569029e2e9426d790ce24e3c" category="paragraph">La plupart des systèmes d'exploitation reconnaissent la capacité étendue du volume et se développent automatiquement après le lancement de l'extension du volume. Cependant, certains pourraient ne pas le faire. Si votre système d'exploitation ne reconnaît pas automatiquement la capacité étendue du volume, vous devrez peut-être procéder à une nouvelle analyse ou à un redémarrage du disque.</block>
   <block id="e99388207555e1734196f354ee94b95c" category="paragraph">Après avoir développé la capacité du volume, vous devez augmenter manuellement la taille du système de fichiers pour qu'elle corresponde. La façon dont vous faites cela dépend du système de fichiers que vous utilisez.</block>
   <block id="e65366bea33d160fbbbc4da1552c962c" category="paragraph">Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.</block>
-  <block id="27ff4e5987307be95b847357578a7d2c" category="summary">Une vérification de redondance détermine si les données d'un volume d'un pool ou d'un groupe de volumes sont cohérentes.</block>
   <block id="dbdb64210af00cba98b2ae65e68fc433" category="doc">Qu'est-ce que le contrôle de redondance ?</block>
   <block id="527686381caf5b91f8b2570f0b90f7e1" category="paragraph">Une vérification de redondance détermine si les données d'un volume d'un pool ou d'un groupe de volumes sont cohérentes. Les données redondantes sont utilisées pour reconstruire rapidement les informations sur un disque de remplacement en cas de panne de l'un des disques du pool ou du groupe de volumes.</block>
   <block id="072001db08ae65e793389aff41f4b0bf" category="list-text">Analyse les blocs de données d'un volume RAID 3, d'un volume RAID 5 ou d'un volume RAID 6, puis vérifie les informations de redondance de chaque bloc. (RAID 3 ne peut être affecté qu'à des groupes de volumes à l'aide de l'interface de ligne de commande.)</block>
@@ -5816,7 +5802,6 @@
   <block id="e6cf422b63e47252a708cf2b39250399" category="paragraph">Une fois la vérification préalable à la mise à niveau terminée, l'activation a lieu. Le temps nécessaire à l'activation dépend de la configuration de la matrice de stockage et des composants que vous activez.</block>
   <block id="3a884807d794062b14f2caf8ecefc404" category="list-text">(Facultatif) une fois l'activation terminée, vous pouvez afficher une liste des éléments activés pour une matrice de stockage spécifique en cliquant sur les points de suspension (…). Puis sélectionnez *Enregistrer le journal*.</block>
   <block id="0b6913f48ebfcb9460cf686a9d15ab70" category="paragraph">Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom<block ref="5fea73fca883063ae4087579bd2b9761" prefix=" " category="inline-code"></block>.</block>
-  <block id="e28ca758b5b6384ff2daa36accced63c" category="summary">Lors de la création du volume, vous êtes invité à fournir des informations sur l'utilisation d'une charge de travail.</block>
   <block id="b5a3b95a88ff3f89275ca18c4736d4b8" category="doc">Comment les charges de travail sélectionnées affectent-elles la création du volume ?</block>
   <block id="0c6710fd70e8f6dfb7dc7c5ef665fd39" category="paragraph">Lors de la création du volume, vous êtes invité à fournir des informations sur l'utilisation d'une charge de travail. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins. Vous pouvez également ignorer cette étape dans la séquence de création du volume.</block>
   <block id="ab699fec90fd6cda5e110bb5189e9178" category="paragraph">Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application. Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.</block>
@@ -6635,7 +6620,6 @@
   <block id="05693bc32413083ba1ba81023c2fa739" category="list-text">Le système ne peut pas communiquer avec cette matrice (par exemple, la matrice présente des problèmes de certificat, de mot de passe ou de mise en réseau).</block>
   <block id="59403f2f5c79950cc906758ad34a5cf4" category="summary">Une vérification de l'état s'exécute dans le cadre du processus de mise à niveau, mais vous pouvez également effectuer une vérification de l'état séparément avant de commencer.</block>
   <block id="fdeb12dec74097ee26fefdd914b31074" category="doc">Vérification de l'état de pré-mise à niveau</block>
-  <block id="a755886af9ddc52625c98ff0c2403d42" category="summary">Une clé de sécurité est partagée par les contrôleurs et les disques sécurisés au sein d'une matrice de stockage.</block>
   <block id="2a0d49e5c65d1c328eea1427c45f821e" category="doc">Que dois-je savoir avant de créer une clé de sécurité ?</block>
   <block id="eb8e4643855758b3255653b9508bfb4a" category="paragraph">Une clé de sécurité est partagée par les contrôleurs et les disques sécurisés au sein d'une matrice de stockage. Si un disque sécurisé est retiré de la matrice de stockage, la clé de sécurité protège les données contre tout accès non autorisé.</block>
   <block id="41f869dddf7c6279ec6063ce284c3e8e" category="paragraph">Vous pouvez créer et gérer des clés de sécurité en utilisant l'une des méthodes suivantes :</block>
@@ -6656,7 +6640,6 @@
   <block id="421c1715e9e208d5abf69ca3789e527a" category="list-text">Une fois que vous avez un fichier de certificat client, copiez-le vers l'hôte sur lequel vous accédez à System Manager.</block>
   <block id="99cfb80b044d3779120e956fedde4ad2" category="list-text">Récupérez un fichier de certificat à partir du serveur de gestion des clés, puis copiez-le vers l'hôte sur lequel vous accédez à System Manager. Un certificat de serveur de gestion des clés valide le serveur de gestion des clés. La baie de stockage peut donc avoir confiance en son adresse IP. Vous pouvez utiliser un certificat racine, intermédiaire ou serveur pour le serveur de gestion des clés.</block>
   <block id="eb82f7b115401dce7acd0f75c443e851" category="paragraph">Vous pouvez ensuite créer une clé externe qui implique de définir l'adresse IP du serveur de gestion des clés et le numéro de port utilisé pour les communications KMIP. Au cours de ce processus, vous chargez également des fichiers de certificat. Lorsque vous avez terminé, le système se connecte au serveur de gestion des clés avec les informations d'identification que vous avez saisies. Vous pouvez ensuite créer des pools ou des groupes de volumes sécurisés, ou activer la sécurité sur des groupes de volumes et des pools existants.</block>
-  <block id="e995e7f7f68380b2da6f062d6f736236" category="summary">Pour les systèmes EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Kio (également appelé « taille de secteur »). Vous devez définir la valeur correcte lors de la création du volume.</block>
   <block id="fb5754cb7d8aec1ca725e7242d365730" category="doc">De quoi ai-je besoin pour connaître les exigences en termes de taille de bloc de l'hôte ?</block>
   <block id="e5e425d8ab1cbef0e34a067f0d88d470" category="paragraph">Pour les systèmes EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Kio (également appelé « taille de secteur »). Vous devez définir la valeur correcte lors de la création du volume. Si possible, le système suggère la valeur par défaut appropriée.</block>
   <block id="f4aa667b118a0a334c4fa467de995fc8" category="paragraph">Avant de définir la taille du bloc de volume, lisez les limitations et consignes suivantes.</block>
@@ -6784,7 +6767,6 @@
   <block id="f7a51ce2e025c28b006c32277b55921c" category="paragraph">Des informations sur le type de disque, la fonctionnalité de sécurité, l'assurance de données (DA), la protection contre la perte de tiroir et la protection contre la perte de tiroir s'affichent.</block>
   <block id="d1e6c9ce55c2b78347e578b91cf6f589" category="paragraph">Pour les baies de stockage EF600 et EF300, les paramètres sont également affichés pour le provisionnement des ressources et la taille des blocs de volume.</block>
   <block id="e17905dd31e746ef069a3367c5d92d78" category="list-text">Cliquez sur *Accept*.</block>
-  <block id="c7f22d49f002f26198a719f2496c2e98" category="summary">La fonction Importer les paramètres est une opération par lots qui charge les configurations d'une matrice de stockage à plusieurs matrices de stockage. Les paramètres importés lors de cette opération dépendent de la configuration de la baie de stockage source dans System Manager.</block>
   <block id="6aa467b445a7d222ea7a821c8df54a08" category="doc">Quels paramètres sont importés ?</block>
   <block id="5a336d7c8bb4d9fb626af7c0fffe68af" category="paragraph">La fonction Importer les paramètres est une opération par lots qui charge les configurations d'une matrice de stockage à plusieurs matrices de stockage.</block>
   <block id="5f54df5b09ce6e5e7ccff3fed9aea673" category="paragraph">Les paramètres importés lors de cette opération dépendent de la configuration de la baie de stockage source dans System Manager. Les paramètres suivants peuvent être importés dans plusieurs matrices de stockage :</block>
@@ -7558,7 +7540,6 @@
   <block id="69388a3aa77fde6c6db723db24c07886" category="paragraph">Pour les systèmes Linux compatibles avec le système de gestion des packages RPM, vous pouvez installer Web Services Proxy à l'aide d'un fichier RPM facultatif.</block>
   <block id="44fdd30cd930ac3164eb732ccfc71839" category="list-text">Téléchargez le fichier RPM sur le serveur où vous souhaitez installer le proxy et Unified Manager.</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">Saisissez la commande suivante :</block>
-  <block id="832e1d3c786f0b6f9f452d072f2d4b27" category="paragraph"><block ref="354464ae661582f620680bd9feceacaa" prefix="" category="inline-code"></block></block>
   <block id="e90cc19871614d9efbaffbaffd7e2d47" category="admonition">Dans la commande ci-dessus,<block ref="699ac6f9ea1aed3b414789e971975c3a" prefix=" " category="inline-code"></block> représente le numéro de version.</block>
   <block id="5d146c3fd3b69782d69f66b386b88a4c" category="doc">Termes et concepts</block>
   <block id="b1c65dceeb2f735c1923f69091e04ee4" category="paragraph">Les termes suivants s'appliquent au proxy de services Web.</block>
@@ -7969,7 +7950,6 @@
   <block id="ce3948f2b44ee14a18d362f994260727" category="sidebar">Configurer les hôtes</block>
   <block id="f0ba1c2df528f80a7b9482044ac9d46b" category="sidebar">Configuration des pools et des groupes de volumes</block>
   <block id="37f5864db129acc269bc46cb006e8605" category="sidebar">Retirez le plug-in</block>
-  <block id="483a5da192f46e3cfe8391d3ef234fc4" category="sidebar">FAQ</block>
   <block id="979ea2ad56e327e601f7f385d923a6f7" category="sidebar">Solutions ancienne génération</block>
   <block id="fa3d170e011f9d178479859be77bf32e" category="sidebar">Connecteur cloud</block>
   <block id="acd35904a6ced15ec9eaaacc8f6dbe00" category="sidebar">Configurez Cloud Connector pour la première fois</block>
@@ -8059,7 +8039,6 @@
   <block id="7bb583eaeb72cab404957a32bf32e9fb" category="paragraph-title">Exemple A : tiroir contrôleur E5700 avec trois tiroirs disques DE212C/x4 dans une configuration SAS standard.</block>
   <block id="ab945691a98936597c2ea25ebe10559a" category="paragraph-title">Exemple B : un tiroir contrôleur E5700 avec un tiroir disque DE212C/x4 dans une configuration SAS standard.</block>
   <block id="45d7b912755be5cce50a63e39e38af8a" category="section-title">Étape 1 : vérifier la référence du nouveau contrôleur</block>
-  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.</block>
   <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Ajoutez à chaud un tiroir de disque</block>
   <block id="83af49c7a44a4352fd5c07a021524fea" category="paragraph">Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste complète des dernières exigences.</block>
   <block id="889869e1d3bab19951bb91f386d721de" category="list-text">Pour RHEL 8 et RHEL 9, installez les scripts réseau :</block>
@@ -8481,9 +8460,7 @@
   <block id="5835021a0e70e0a13bc60ddff4162aca" category="paragraph"><block ref="5835021a0e70e0a13bc60ddff4162aca" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17360156c8ceaa57309077e605e88697" category="image-alt">Workflow du processus d'installation des systèmes E2800 et E5700</block>
   <block id="9388df48e85777aba8981c9e79739824" category="inline-image-macro">E4012 topologie directe, largeur=1000 px</block>
-  <block id="9dcbe6d474a3385e1258eeebe1d96cfa" category="paragraph"><block ref="9dcbe6d474a3385e1258eeebe1d96cfa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5115f367ddc4b23f2a5a9dce410d220" category="inline-image-macro">Topologie de structure E4012, largeur=1000 px</block>
-  <block id="fe5422a7f743c4750aa826cb030729eb" category="paragraph"><block ref="fe5422a7f743c4750aa826cb030729eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f998d3759a46f941c16045d05799b20" category="inline-image-macro">Port de gestion du contrôleur E4000</block>
   <block id="419c5b2edef00ba85d62682d5ff0138c" category="paragraph"><block ref="419c5b2edef00ba85d62682d5ff0138c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f530fae0a98563bf22e6ee7a23163588" category="list-text">Suivez les instructions du navigateur pour continuer et lancer SANtricity System Manager. Si vous ne parvenez pas à établir de connexion, vérifiez que vous ne recevez pas la configuration réseau d'un serveur DHCP.</block>
@@ -8491,9 +8468,7 @@
   <block id="05f07938d9743df4b9673ac6e16d5eaf" category="list-text">Connectez-vous à l'aide du mot de passe que vous avez défini précédemment. L'assistant configurer les paramètres réseau s'affiche.</block>
   <block id="61c8d556c74bbd20f07d7c1565d11a11" category="list-text">Dans la configuration réseau la plus simple, connectez votre contrôleur à un navigateur Web et utilisez SANtricity System Manager pour gérer une seule baie de stockage de la gamme E4000. Pour accéder à System Manager, utilisez les mêmes adresses IP que celles que vous avez utilisées pour configurer vos ports de gestion.</block>
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 topologie directe, largeur=1000 px</block>
-  <block id="98e6536dfa926f6bd4a1900657c27282" category="paragraph"><block ref="98e6536dfa926f6bd4a1900657c27282" category="inline-image-macro-rx" type="image"></block></block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">Topologie de structure E4060, largeur=1000 px</block>
-  <block id="72c6889744a45c86c32b640c76b2138a" category="paragraph"><block ref="72c6889744a45c86c32b640c76b2138a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2bd875f2f303555807a3b13a6b64bb" category="paragraph"><block ref="ab2bd875f2f303555807a3b13a6b64bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff2e827a53ef25671ffc7469bb5208a2" category="list-title">Exemple A : un tiroir contrôleur E4000 doté de trois tiroirs disques DE212C/DE224C dans une configuration SAS standard.</block>
   <block id="ecf826f3b05c4b630ca5e118d6536932" category="list-title">Exemple B : un tiroir contrôleur E4000 avec un tiroir disque DE212C/DE224C dans une configuration SAS standard.</block>
@@ -9711,4 +9686,22 @@
   <block id="ed389a9acb72de33be78325f147d7d8c" category="doc">En savoir plus sur les services Web SANtricity et Unified Manager</block>
   <block id="f14a1a04aab620524ee87bd0fd002ab1" category="doc">En savoir plus sur la terminologie relative au proxy de services Web SANtricity</block>
   <block id="abf831fd1f3fab9981530f2ea36177b2" category="doc">Gérer l'interrogation automatique des statistiques du proxy des services Web SANtricity</block>
+  <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.</block>
+  <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">Les modules IOM12C ne sont pris en charge que sur SANtricity OS 11.90R3 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.</block>
+  <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12C par un autre module IOM12C. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12C.)</block>
+  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">Les modules IOM12C sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.</block>
+  <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="142dc71d06d08da442f6fe84d80e526d" category="paragraph"><block ref="142dc71d06d08da442f6fe84d80e526d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dea137ce87e98617e1e7f9c6f97eeeff" category="admonition">Ces procédures sont pour les remplacements ou les remplacements à chaud des modules d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12C par un autre module IOM12C. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12C.)</block>
+  <block id="88db80c02306ca8e9bac2283b0d2f6bf" category="paragraph">Cette procédure s'applique aux étagères de lecteurs DCM, DCM2 et DCM3.</block>
+  <block id="b2d2940e83701ff478975b36d255b487" category="paragraph">Cette tâche s'applique aux étagères de lecteurs DCM, DCM2 et DCM3.</block>
+  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Cette FAQ peut vous aider si vous cherchez juste une réponse rapide à une question.</block>
+  <block id="a318c851f3d3c0a7eeb1313f1422c3b3" category="doc">FAQ sur le plugin de stockage SANtricity pour vCenter</block>
+  <block id="33f3664698fdab78efe7579f9849af32" category="paragraph"><block ref="b6ee0733cf8f7004d998d8fc49cc2022" prefix="" category="inline-code"></block></block>
+  <block id="a10a0fef1a8b50d16443976fedae1e16" category="section-title">Nouvelles fonctionnalités de la version 11.90R3</block>
+  <block id="c78544d43a065eb825edb9e16bf0e9ad" category="paragraph">Prise en charge du système d'exploitation SANtricity pour IOM12C et DCM3</block>
+  <block id="94d90ce4793f949687897ec062d97b9c" category="paragraph">La prise en charge des plateaux SAS-3 IOM12C et DCM3 est désormais disponible pour les versions 11.90R3 et ultérieures du micrologiciel du contrôleur. Les plateaux IOM12C et DCM3 remplacent les plateaux IOM12B et DCM2.</block>
+  <block id="3a2a69a35a4560167d4c0478029a3f70" category="sidebar">FAQ sur le plugin de stockage pour vCenter</block>
 </blocks>

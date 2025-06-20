@@ -18,7 +18,7 @@ Découvrez comment connecter les câbles d'alimentation et mettre les tiroirs di
 * Prenez les précautions anti-statiques.
 
 
-Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
 
 .Étapes
 . Branchez les câbles des tiroirs.

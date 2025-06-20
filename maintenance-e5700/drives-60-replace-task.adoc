@@ -17,7 +17,7 @@ Vous pouvez remplacer un disque dans un tiroir de 60 disques.
 .Description de la tâche
 La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disques de la baie de stockage et peut vous informer d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, le voyant d'avertissement orange s'allume. Vous pouvez remplacer à chaud un disque défectueux alors que la matrice de stockage reçoit des opérations d'E/S.
 
-Cette tâche s'applique aux tiroirs disques DCM et DC2.
+Cette tâche s'applique aux étagères de lecteurs DCM, DCM2 et DCM3.
 
 .Avant de commencer
 * Examinez les exigences de gestion des disques dans le link:drives-overview-supertask-concept.html["Conditions requises pour le remplacement des disques E5700"].

@@ -45,7 +45,7 @@ Une topologie de commutateur utilise des commutateurs pour connecter les hôtes 
 La figure suivante montre un exemple de connexion. Pour les commutateurs offrant une fonctionnalité de provisionnement, il est conseillé d'isoler chaque paire cible et initiateur.
 
 .Deux hôtes et deux commutateurs
-image::../media/topology_host_fabric_generic.png[Câblage entre deux hôtes et deux switchs]
+image::../media/topology_host_fabric_generic_ieops-2152.svg[Câblage entre deux hôtes et deux switchs]
 
 *(1)* _Connectez directement chaque carte hôte au commutateur._
 

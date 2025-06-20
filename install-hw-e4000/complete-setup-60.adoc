@@ -28,7 +28,7 @@ NOTE: Les ports hôtes situés en bas à gauche (e1a, e1b, e1c et e1d) et en hau
 --
 L'exemple suivant montre le câblage aux hôtes de données via une topologie de connexion directe.
 
-image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 topologie directe, largeur=1000 px"]
+image:../media/drw_labeled_e4060_direct_topology_ieops-2158.svg["E4060 topologie directe, largeur=1000 px"]
 
 . Connectez chaque port HBA hôte aux ports hôtes des contrôleurs (e1a, e1b, e1c et e1d ou e0a et e0b).
 
@@ -41,7 +41,7 @@ NOTE: Pour obtenir des exemples de schémas de câblage supplémentaires, report
 --
 L'exemple suivant montre le câblage vers les hôtes de données via une topologie de structure.
 
-image:../media/drw_e4060_fabric_topology_ieops-2049.svg["Topologie de structure E4060, largeur=1000 px"]
+image:../media/drw_e4060_fabric_topology_ieops-2159.svg["Topologie de structure E4060, largeur=1000 px"]
 
 . Connectez chaque adaptateur hôte directement au commutateur.
 . Connectez chaque switch directement aux ports hôtes des contrôleurs (e1a, e1b, e1c et e1d ou e0a et e0b).

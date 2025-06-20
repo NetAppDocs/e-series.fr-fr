@@ -1,0 +1,703 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/faq-storage-plugin-vcenter.html 
+keywords:  
+summary: Cette FAQ peut vous aider si vous cherchez juste une réponse rapide à une question. 
+---
+= FAQ sur le plugin de stockage SANtricity pour vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette FAQ peut vous aider si vous cherchez juste une réponse rapide à une question.
+
+
+
+== Quels paramètres sont importés ?
+
+La fonction Importer les paramètres est une opération par lots qui charge les configurations d'une matrice de stockage à plusieurs matrices de stockage.
+
+Les paramètres importés lors de cette opération dépendent de la configuration de la baie de stockage source dans System Manager. Les paramètres suivants peuvent être importés dans plusieurs matrices de stockage :
+
+* *Alertes par e-mail* -- les paramètres incluent une adresse de serveur de messagerie et les adresses e-mail des destinataires de l'alerte.
+* *Syslog Alerts* -- les paramètres incluent une adresse de serveur syslog et un port UDP.
+* *Alertes SNMP* -- les paramètres incluent un nom de communauté et une adresse IP pour le serveur SNMP.
+* *AutoSupport* -- les paramètres incluent les fonctionnalités séparées (AutoSupport de base, AutoSupport OnDemand et diagnostic à distance), la fenêtre de maintenance, la méthode de livraison, et les plannings d'intervention.
+* *Services d'annuaire* -- la configuration inclut le nom de domaine et l'URL d'un serveur LDAP (Lightweight Directory Access Protocol), ainsi que les mappages entre les groupes d'utilisateurs du serveur LDAP et les rôles prédéfinis de la baie de stockage.
+* *Configuration du stockage* -- les configurations comprennent les volumes (uniquement les volumes non-référentiels et épais), les groupes de volumes, les pools et les affectations de disques de secours.
+* *Paramètres système* -- les configurations incluent les paramètres de lecture des supports pour un volume, la mémoire cache SSD pour les contrôleurs et l'équilibrage automatique de la charge (n'inclut pas les rapports de connectivité hôte).
+
+
+
+
+== Pourquoi ne pas voir toutes mes baies de stockage ?
+
+Lors de l'opération Importer les paramètres, il se peut que certaines de vos matrices de stockage ne soient pas disponibles dans la boîte de dialogue de sélection de la cible.
+
+Les baies de stockage peuvent ne pas s'afficher pour les raisons suivantes :
+
+* La version du micrologiciel est inférieure à 8.50.
+* La matrice de stockage est hors ligne.
+* Le système ne peut pas communiquer avec cette matrice (par exemple, la matrice présente des problèmes de certificat, de mot de passe ou de mise en réseau).
+
+
+
+
+== Pourquoi ces volumes ne sont-ils pas associés à une charge de travail ?
+
+Les volumes ne sont pas associés à une charge de travail s'ils ont été créés à l'aide de l'interface de ligne de commande ou s'ils ont été migrés (importés/exportés) à partir d'une autre baie de stockage.
+
+
+
+== Comment les charges de travail sélectionnées affectent-elles la création du volume ?
+
+Lors de la création du volume, vous êtes invité à fournir des informations sur l'utilisation d'une charge de travail. Le système utilise ces informations pour créer une configuration de volume optimale, qui peut être modifiée selon les besoins. Vous pouvez également ignorer cette étape dans la séquence de création du volume.
+
+Un workload est un objet de stockage qui prend en charge une application. Vous pouvez définir une ou plusieurs charges de travail ou instances par application. Pour certaines applications, le système configure la charge de travail de manière à contenir des volumes dont les caractéristiques de volume sous-jacent sont similaires. Ces caractéristiques de volume sont optimisées en fonction du type d'application pris en charge par les workloads. Par exemple, si vous créez une charge de travail prenant en charge une application Microsoft SQL Server, puis que vous créez des volumes pour cette charge de travail, les caractéristiques du volume sous-jacent sont optimisées pour prendre en charge Microsoft SQL Server.
+
+* *Spécifique à l'application* -- lorsque vous créez des volumes à l'aide d'une charge de travail spécifique à l'application, le système peut recommander une configuration de volume optimisée pour minimiser les conflits entre les E/S de la charge de travail de l'application et tout autre trafic à partir de votre instance d'application. Les caractéristiques de volume comme le type d'E/S, la taille de segment, la propriété des contrôleurs et le cache de lecture et d'écriture sont automatiquement recommandées et optimisées pour les charges de travail créées pour les types d'applications suivants.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Applications de vidéosurveillance
+** VMware ESXi (pour les volumes à utiliser avec le système de fichiers des ordinateurs virtuels)
++
+Vous pouvez vérifier la configuration de volume recommandée et modifier, ajouter ou supprimer les volumes et les caractéristiques recommandés par le système à l'aide de la boîte de dialogue Ajouter/Modifier des volumes.
+
+
+
+* *Autres (ou applications sans support de création de volume spécifique)* -- D'autres charges de travail utilisent une configuration de volume que vous devez spécifier manuellement lorsque vous souhaitez créer un workload non associé à une application spécifique ou si aucune optimisation n'est intégrée à l'application que vous prévoyez d'utiliser sur la baie de stockage. Vous devez spécifier manuellement la configuration du volume à l'aide de la boîte de dialogue Ajouter/Modifier des volumes.
+
+
+
+
+== Pourquoi ne pas voir tous mes volumes, hôtes ou clusters hôtes ?
+
+Les volumes snapshot avec un volume de base DA ne peuvent pas être affectés à un hôte qui ne prend pas en charge Data assurance (DA). Vous devez désactiver DA sur le volume de base avant qu'un volume d'instantané ne puisse être affecté à un hôte qui n'est pas compatible DA.
+
+Prenez en compte les consignes suivantes concernant l'hôte auquel vous attribuez le volume de snapshot :
+
+* Un hôte n'est pas compatible DA s'il est connecté à la matrice de stockage via une interface d'E/S qui n'est pas compatible DA.
+* Un cluster hôte n'est pas compatible DA s'il possède au moins un membre hôte qui n'est pas compatible DA.
+
+
+
+NOTE: Vous ne pouvez pas désactiver DA sur un volume associé aux snapshots (groupes de cohérence, groupes Snapshot, images Snapshot et volumes Snapshot), copies de volume, et miroirs. Tous les objets de snapshot et de capacité réservés associés doivent être supprimés pour que l'agent de DA puisse être désactivé sur le volume de base.
+
+
+
+== Pourquoi ne puis-je pas supprimer la charge de travail sélectionnée ?
+
+Cette charge de travail se compose d'un groupe de volumes créés à l'aide de l'interface de ligne de commande ou migrés (importé/exporté) à partir d'une autre baie de stockage. Par conséquent, les volumes de cette charge de travail ne sont pas associés à une charge de travail spécifique à une application. La charge de travail ne peut donc pas être supprimée.
+
+
+
+== En quoi les charges de travail spécifiques aux applications contribuent-elles à la gestion de ma baie de stockage ?
+
+Les caractéristiques de volume de votre charge de travail spécifique à l'application déterminent la façon dont la charge de travail interagit avec les composants de votre baie de stockage et vous aident à déterminer les performances de votre environnement dans une configuration donnée.
+
+Une application peut être utilisée comme un logiciel tel que SQL Server ou Exchange. Vous définissez une ou plusieurs charges de travail pour prendre en charge chaque application. Pour certaines applications, le système recommande automatiquement une configuration de volume qui optimise le stockage. Des caractéristiques telles que le type d'E/S, la taille du segment, la propriété du contrôleur et le cache de lecture et d'écriture sont incluses dans la configuration du volume.
+
+
+
+== Que dois-je faire pour reconnaître la capacité étendue ?
+
+Si vous augmentez la capacité d'un volume, il est possible que l'hôte ne reconnaisse pas immédiatement l'augmentation de la capacité du volume.
+
+La plupart des systèmes d'exploitation reconnaissent la capacité étendue du volume et se développent automatiquement après le lancement de l'extension du volume. Cependant, certains pourraient ne pas le faire. Si votre système d'exploitation ne reconnaît pas automatiquement la capacité étendue du volume, vous devrez peut-être procéder à une nouvelle analyse ou à un redémarrage du disque.
+
+Après avoir développé la capacité du volume, vous devez augmenter manuellement la taille du système de fichiers pour qu'elle corresponde. La façon dont vous faites cela dépend du système de fichiers que vous utilisez.
+
+Pour plus de détails, reportez-vous à la documentation du système d'exploitation hôte.
+
+
+
+== Quand dois-je utiliser la sélection attribuer l'hôte ultérieurement ?
+
+Pour accélérer le processus de création de volumes, vous pouvez ignorer l'étape d'affectation des hôtes afin que les nouveaux volumes soient initialisés hors ligne.
+
+Les volumes qui viennent d'être créés doivent être initialisés. Le système peut les initialiser à l'aide de l'un des deux modes suivants : un processus d'initialisation en arrière-plan IAF (format disponible immédiat) ou un processus hors ligne.
+
+Lorsque vous mappez un volume à un hôte, tous les volumes en cours d'initialisation de ce groupe passent à l'initialisation en arrière-plan. Ce processus d'initialisation en arrière-plan permet d'effectuer des E/S simultanées des hôtes, ce qui peut parfois prendre du temps.
+
+Lorsqu'aucun volume d'un groupe de volumes n'est mappé, l'initialisation hors ligne est effectuée. Le processus hors ligne est bien plus rapide qu'en arrière-plan.
+
+
+
+== De quoi ai-je besoin pour connaître les exigences en termes de taille de bloc de l'hôte ?
+
+Pour les systèmes EF300 et EF600, un volume peut être défini pour prendre en charge une taille de bloc de 512 octets ou de 4 Kio (également appelé « taille de secteur »). Vous devez définir la valeur correcte lors de la création du volume. Si possible, le système suggère la valeur par défaut appropriée.
+
+Avant de définir la taille du bloc de volume, lisez les limitations et consignes suivantes.
+
+* Certains systèmes d'exploitation et machines virtuelles (notamment VMware) nécessitent actuellement une taille de bloc de 512 octets et ne prennent pas en charge 4Kio. Veillez donc à connaître les exigences de l'hôte avant de créer un volume. En règle générale, vous pouvez obtenir les meilleures performances en définissant un volume pour présenter une taille de bloc de 4 Ko ; cependant, assurez-vous que votre hôte autorise les blocs de 4 Ko (ou 4 Ko).
+* Le type de disques que vous sélectionnez pour votre pool ou groupe de volumes détermine également la taille de blocs de volumes pris en charge, comme suit :
++
+** Si vous créez un groupe de volumes à l'aide de disques qui écrivent dans des blocs de 512 octets, vous ne pouvez créer que des volumes avec des blocs de 512 octets.
+** Si vous créez un groupe de volumes à l'aide de disques qui écrivent des blocs de 4 Ko, vous pouvez créer des volumes avec des blocs de 512 octets ou de 4 Ko.
+
+
+* Si la baie dispose d'une carte d'interface hôte iSCSI, tous les volumes sont limités à des blocs de 512 octets (quelle que soit la taille de bloc du groupe de volumes). Ceci est dû à une implémentation matérielle spécifique.
+* Vous ne pouvez pas modifier une taille de bloc une fois qu'elle est définie. Si vous avez besoin de modifier la taille d'un bloc, vous devez supprimer le volume, puis le recréer à nouveau.
+
+
+
+
+== Pourquoi aurais-je besoin de créer un cluster hôte ?
+
+Si vous souhaitez que deux hôtes ou plus partagent l'accès au même ensemble de volumes, vous devez créer un cluster hôte. Normalement, chaque hôte est équipé d'un logiciel de mise en cluster installé sur lui afin de coordonner l'accès au volume.
+
+
+
+== Comment savoir quel type de système d'exploitation hôte est correct ?
+
+Le champ Type de système d'exploitation hôte contient le système d'exploitation de l'hôte. Vous pouvez sélectionner le type d'hôte recommandé dans la liste déroulante.
+
+Les types d'hôte qui apparaissent dans la liste déroulante dépendent du modèle de la matrice de stockage et de la version du micrologiciel. Les versions les plus récentes affichent d'abord les options les plus courantes, qui sont les plus susceptibles d'être appropriées. L'apparence sur cette liste n'implique pas que l'option est entièrement prise en charge.
+
+
+NOTE: Pour plus d'informations sur la prise en charge des hôtes, reportez-vous au http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+Certains des types d'hôtes suivants peuvent apparaître dans la liste :
+
+|===
+| Type de système d'exploitation hôte | Système d'exploitation et pilote multivoie 
+
+
+| Linux DM-MP (Kernel 3.10 ou version ultérieure) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de basculement multivoie Device Mapper avec un noyau 3.10 ou ultérieur. 
+
+
+| VMware ESXi | Prend en charge les systèmes d'exploitation VMware ESXi exécutant l'architecture NMP (Native Multipathing Plug-in) en utilisant le module SATP_ALUA (Storage Array Policy module) intégré à VMware. 
+
+
+| Windows (en cluster ou non mis en cluster) | Prend en charge les configurations Windows en cluster ou non en cluster qui n'exécutent pas le pilote de chemins d'accès multiples ATTO. 
+
+
+| Cluster ATTO (tous les systèmes d'exploitation) | Prise en charge de toutes les configurations de cluster via le pilote ATTO Technology, Inc., multivoie. 
+
+
+| Linux (Veritas DMP) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de chemins d'accès multiples DMP Veritas. 
+
+
+| Linux (ATTO) | Prend en charge les systèmes d'exploitation Linux via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| Mac OS | Prend en charge les versions Mac OS via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| Windows (ATTO) | Prend en charge les systèmes d'exploitation Windows via un pilote ATTO Technology, Inc., des chemins d'accès multiples. 
+
+
+| SERVICE IBM | Prend en charge une configuration contrôleur de volume SAN IBM. 
+
+
+| Valeur par défaut | Réservé au démarrage initial de la matrice de stockage. Si le type de système d'exploitation hôte est défini sur usine par défaut, modifiez-le pour qu'il corresponde au système d'exploitation hôte et au pilote multichemin exécuté sur l'hôte connecté. 
+
+
+| Linux DM-MP (Kernal 3.9 ou version antérieure) | Prend en charge les systèmes d'exploitation Linux à l'aide d'une solution de basculement multivoie Device Mapper avec un noyau 3.9 ou antérieur. 
+
+
+| Fenêtre clustered (obsolète) | Si votre type de système d'exploitation hôte est défini sur cette valeur, utilisez à la place le paramètre Windows (cluster ou non-cluster). 
+|===
+
+
+== Comment faire correspondre les ports hôte à un hôte ?
+
+Si vous créez manuellement un hôte, vous devez d'abord utiliser l'utilitaire HBA (Host bus adapter) approprié disponible sur l'hôte pour déterminer les identificateurs de port hôte associés à chaque HBA installé dans l'hôte.
+
+Lorsque vous disposez de ces informations, sélectionnez les identificateurs de port hôte qui se sont connectés à la matrice de stockage dans la liste fournie dans la boîte de dialogue Créer un hôte.
+
+
+CAUTION: Assurez-vous de sélectionner les identificateurs de port hôte appropriés pour l'hôte que vous créez. Si vous associez des identificateurs de port hôte incorrects, vous risquez de provoquer un accès involontaire d'un autre hôte à ces données.
+
+
+
+== À quoi correspond le cluster par défaut ?
+
+Le cluster par défaut est une entité définie par le système qui permet à tout identificateur de port hôte non associé connecté à la matrice de stockage d'accéder aux volumes affectés au cluster par défaut.
+
+Un identificateur de port hôte non associé est un port hôte qui n'est pas logiquement associé à un hôte donné mais qui est physiquement installé dans un hôte et connecté à la matrice de stockage.
+
+
+NOTE: Si vous souhaitez que les hôtes disposent d'un accès spécifique à certains volumes de la matrice de stockage, vous ne devez pas utiliser le cluster par défaut. À la place, vous devez associer les identificateurs de port hôte à leurs hôtes correspondants. Cette tâche peut être effectuée manuellement pendant l'opération Créer un hôte. Ensuite, vous affectez des volumes à un hôte individuel ou à un cluster hôte.
+
+Vous ne devez utiliser le cluster par défaut que dans des situations spéciales où votre environnement de stockage externe est recommandé pour permettre à tous les hôtes et tous les identifiants de port hôte connectés à la baie de stockage ont accès à tous les volumes (mode tout accès). sans spécifiquement faire connaître les hôtes à la matrice de stockage ou à l'interface utilisateur.
+
+Initialement, vous pouvez affecter des volumes uniquement au cluster par défaut via l'interface de ligne de commande. Cependant, après avoir affecté au moins un volume au cluster par défaut, cette entité (appelée cluster par défaut) s'affiche dans l'interface utilisateur dans laquelle vous pouvez alors gérer cette entité.
+
+
+
+== Qu'est-ce que le contrôle de redondance ?
+
+Une vérification de redondance détermine si les données d'un volume d'un pool ou d'un groupe de volumes sont cohérentes. Les données redondantes sont utilisées pour reconstruire rapidement les informations sur un disque de remplacement en cas de panne de l'un des disques du pool ou du groupe de volumes.
+
+Cette vérification n'est possible que sur un pool ou un groupe de volumes à la fois. Un contrôle de redondance des volumes effectue les actions suivantes :
+
+* Analyse les blocs de données d'un volume RAID 3, d'un volume RAID 5 ou d'un volume RAID 6, puis vérifie les informations de redondance de chaque bloc. (RAID 3 ne peut être affecté qu'à des groupes de volumes à l'aide de l'interface de ligne de commande.)
+* Compare les blocs de données des lecteurs RAID 1 en miroir.
+* Renvoie les erreurs de redondance si les données sont jugées incohérentes par le micrologiciel du contrôleur.
+
+
+
+NOTE: L'exécution immédiate d'une vérification de redondance sur le même pool ou groupe de volumes peut entraîner une erreur. Pour éviter ce problème, attendez une à deux minutes avant d'exécuter une autre vérification de redondance sur le même pool ou groupe de volumes.
+
+
+
+== Qu'est-ce que la capacité de préservation ?
+
+La capacité de conservation correspond à la capacité (nombre de disques) réservée dans un pool afin de prendre en charge les défaillances potentielles de disque.
+
+Lorsqu'un pool est créé, le système réserve automatiquement une quantité par défaut de capacité de conservation en fonction du nombre de disques du pool.
+
+Les pools utilisent une capacité de conservation lors de la reconstruction, tandis que les groupes de volumes utilisent des disques de secours pour la même utilisation. La méthode de préservation de la capacité est une amélioration par rapport aux disques de secours, car elle permet d'accélérer la reconstruction. La capacité de conservation est répartie sur plusieurs disques du pool au lieu d'un disque dans le cas d'un disque de secours. Vous n'êtes donc pas limité par la vitesse ou la disponibilité d'un disque.
+
+
+
+== Quel est le niveau RAID le mieux adapté à mon application ?
+
+Pour optimiser les performances d'un groupe de volumes, vous devez sélectionner le niveau RAID approprié.
+
+Vous pouvez déterminer le niveau RAID approprié en connaissant les pourcentages de lecture et d'écriture des applications qui accèdent au groupe de volumes. Utilisez la page performances pour obtenir ces pourcentages.
+
+
+
+=== Niveaux RAID et performances applicatives
+
+Le RAID repose sur une série de configurations appelées niveaux pour déterminer comment les données utilisateur et de redondance sont écrites et extraites des lecteurs. Chaque niveau RAID offre des fonctions de performance différentes. Les applications présentant un pourcentage de lecture élevé peuvent être utilisées avec des volumes RAID 5 ou RAID 6 en raison des performances de lecture exceptionnelles des configurations RAID 5 et RAID 6.
+
+Les applications dont le pourcentage de lecture est faible (intensives en écriture) ne fonctionnent pas aussi bien sur les volumes RAID 5 ou RAID 6. La dégradation des performances résulte de la façon dont un contrôleur écrit les données et les données de redondance sur les disques d'un groupe de volumes RAID 5 ou RAID 6.
+
+Sélectionnez un niveau RAID en fonction des informations suivantes.
+
+
+
+==== RAID 0
+
+*Description:*
+
+* Mode de répartition non redondant.
+* RAID 0 répartit les données dans tous les disques du groupe de volumes.
+
+
+*Fonctionnalités de protection des données:*
+
+* RAID 0 n'est pas recommandé pour les besoins en haute disponibilité. Le RAID 0 est meilleur pour les données non stratégiques.
+* Si un seul disque tombe en panne dans le groupe de volumes, tous les volumes associés sont défaillants et toutes les données sont perdues.
+
+
+*Nombre de disques requis :*
+
+* Un minimum d'un lecteur est requis pour le niveau RAID 0.
+* Les groupes de volumes RAID 0 peuvent avoir plus de 30 disques.
+* Vous pouvez créer un groupe de volumes qui inclut tous les disques de la matrice de stockage.
+
+
+
+
+==== RAID 1 ou RAID 10
+
+*Description:*
+
+* Mode répartition/miroir.
+
+
+*Fonctionnement:*
+
+* RAID 1 utilise la mise en miroir des disques pour écrire des données sur deux disques dupliqués simultanément.
+* RAID 10 répartit les données sur un ensemble de paires de disques en miroir à l'aide de bandes de disques.
+
+
+*Fonctionnalités de protection des données:*
+
+* RAID 1 et RAID 10 offrent des performances élevées et une disponibilité des données optimale.
+* RAID 1 et RAID 10 utilisent la mise en miroir des lecteurs pour effectuer une copie exacte d'un lecteur vers un autre.
+* Si l'un des lecteurs d'une paire de disques tombe en panne, la matrice de stockage peut basculer instantanément vers l'autre disque sans perte de données ni de service.
+* Une seule panne de disque entraîne l'dégradation des volumes associés. Le lecteur miroir permet d'accéder aux données.
+* Une défaillance de paire de disques dans un groupe de volumes entraîne la défaillance de tous les volumes associés, ce qui risque d'entraîner la perte de données.
+
+
+*Nombre de disques requis :*
+
+* Un minimum de deux lecteurs est requis pour RAID 1 : un lecteur pour les données utilisateur et un lecteur pour les données en miroir.
+* Si vous sélectionnez quatre lecteurs ou plus, RAID 10 est automatiquement configuré sur le groupe de volumes : deux lecteurs pour les données utilisateur et deux lecteurs pour les données en miroir.
+* Vous devez avoir un nombre pair de lecteurs dans le groupe de volumes. Si vous ne disposez pas d'un nombre pair de disques et que vous disposez de disques non affectés restants, accédez à *pools et groupes de volumes* pour ajouter des disques supplémentaires au groupe de volumes, puis réessayez l'opération.
+* Les groupes de volumes RAID 1 et RAID 10 peuvent avoir plus de 30 disques. Il est possible de créer un groupe de volumes qui inclut tous les disques de la matrice de stockage.
+
+
+
+
+==== RAID 5
+
+*Description:*
+
+* Mode d'E/S élevé.
+
+
+*Fonctionnement:*
+
+* Les données utilisateur et les informations redondantes (parité) sont réparties entre les disques.
+* La capacité équivalente d'un lecteur est utilisée pour des informations redondantes.
+
+
+*Fonctionnalités de protection des données*
+
+* Si un seul disque tombe en panne au sein d'un groupe de volumes RAID 5, tous les volumes associés sont dégradés. Les informations redondantes permettent de toujours accéder aux données.
+* Si deux disques ou plus tombent en panne dans un groupe de volumes RAID 5, tous les volumes associés sont défaillants et toutes les données sont perdues.
+
+
+*Nombre de disques requis :*
+
+* Vous devez avoir au moins trois lecteurs dans le groupe de volumes.
+* En règle générale, vous êtes limité à 30 disques au maximum dans le groupe de volumes.
+
+
+
+
+==== RAID 6
+
+*Description:*
+
+* Mode d'E/S élevé.
+
+
+*Fonctionnement:*
+
+* Les données utilisateur et les informations redondantes (double parité) sont réparties sur les lecteurs.
+* La capacité équivalente de deux disques est utilisée pour des informations redondantes.
+
+
+*Fonctionnalités de protection des données:*
+
+* Si un ou deux disques tombent en panne dans un groupe de volumes RAID 6, tous les volumes associés sont dégradés, mais les informations redondantes permettent de toujours accéder aux données.
+* Si un groupe de volumes RAID 6 contient trois disques ou plus, tous les volumes associés sont défaillants et toutes les données sont perdues.
+
+
+*Nombre de disques requis :*
+
+* Vous devez avoir au moins cinq disques dans le groupe de volumes.
+* En règle générale, vous êtes limité à 30 disques au maximum dans le groupe de volumes.
+
+
+
+NOTE: Vous ne pouvez pas modifier le niveau RAID d'un pool. L'interface utilisateur configure automatiquement les pools en tant que RAID 6.
+
+
+
+=== Niveaux RAID et protection des données
+
+RAID 1, RAID 5 et RAID 6 écrivent les données de redondance sur le support du lecteur pour la tolérance aux pannes. Les données de redondance peuvent être une copie des données (mises en miroir) ou un code de correction d'erreur dérivé des données. En cas de panne d'un disque, vous pouvez utiliser les données redondantes pour reconstruire rapidement les informations sur un disque de remplacement.
+
+Vous configurez un seul niveau RAID sur un seul groupe de volumes. Toutes les données de redondance de ce groupe de volumes sont stockées dans le groupe de volumes. La capacité du groupe de volumes est la capacité d'agrégat des disques membres moins la capacité réservée aux données de redondance. La capacité nécessaire à la redondance dépend du niveau RAID utilisé.
+
+
+
+== Pourquoi certains lecteurs ne s'affichent-ils pas ?
+
+Dans la boîte de dialogue Add Capacity, tous les disques ne sont pas disponibles pour ajouter de la capacité à un pool ou à un groupe de volumes existant.
+
+Les disques ne sont pas éligibles pour les raisons suivantes :
+
+* Un lecteur doit être non affecté et ne pas être sécurisé. Les disques faisant déjà partie d'un autre pool, d'un autre groupe de volumes ou configurés en tant que disque de secours ne sont pas éligibles. Si un lecteur n'est pas affecté mais est sécurisé, vous devez l'effacer manuellement pour qu'il devienne éligible.
+* Un lecteur qui n'est pas à l'état optimal n'est pas admissible.
+* Si la capacité d'un disque est trop faible, il n'est pas admissible.
+* Le type de support de lecteur doit correspondre à un pool ou à un groupe de volumes. Vous ne pouvez pas combiner les éléments suivants :
++
+** Disques durs avec disques SSD
+** NVMe avec disques SAS
+** Des disques avec des tailles de bloc de volumes de 512 octets et de 4 Ko
+
+
+* Si un pool ou un groupe de volumes contient tous les disques sécurisés, les disques non sécurisés ne sont pas répertoriés.
+* Si un pool ou un groupe de volumes contient tous les disques FIPS (Federal information Processing Standards), les disques non FIPS ne sont pas répertoriés.
+* Si un pool ou un groupe de volumes contient tous les disques compatibles avec Data assurance (DA) et qu'il existe au moins un volume activé par DA dans le pool ou le groupe de volumes, un lecteur qui n'est pas compatible avec DA n'est pas éligible. Il ne peut donc pas être ajouté à ce pool ou groupe de volumes. Toutefois, s'il n'y a pas de volume DA activé dans le pool ou le groupe de volumes, un lecteur qui n'est pas compatible DA peut être ajouté à ce pool ou ce groupe de volumes. Si vous décidez de combiner ces disques, n'oubliez pas que vous ne pouvez pas créer de volumes compatibles DA.
+
+
+
+NOTE: Vous pouvez augmenter la capacité de votre baie de stockage en ajoutant de nouveaux disques ou en supprimant des pools ou des groupes de volumes.
+
+
+
+== Pourquoi ne puis-je pas augmenter ma capacité de préservation ?
+
+Si vous avez créé des volumes sur toute la capacité utilisable disponible, il se peut que vous ne puissiez pas augmenter la capacité de préservation.
+
+La capacité de conservation correspond à la capacité (nombre de disques) réservée dans un pool afin de prendre en charge les défaillances potentielles de disque. Lorsqu'un pool est créé, le système réserve automatiquement une quantité par défaut de capacité de conservation en fonction du nombre de disques du pool. Si vous avez créé des volumes sur toute la capacité utilisable disponible, vous ne pouvez pas augmenter la capacité de préservation sans ajouter de la capacité au pool en ajoutant des disques ou en supprimant des volumes.
+
+Vous pouvez modifier la capacité de conservation des pools et des groupes de volumes. Sélectionnez le pool que vous souhaitez modifier. Cliquez sur *Afficher/Modifier les paramètres*, puis sélectionnez l'onglet *Paramètres*.
+
+
+NOTE: La capacité de conservation est spécifiée comme un nombre de disques, même si la capacité de conservation réelle est répartie sur tous les disques du pool.
+
+
+
+== Qu'est-ce que Data assurance ?
+
+Data assurance (DA) implémente la norme T10PI, qui améliore l'intégrité des données en vérifiant et en corrigeant les erreurs pouvant se produire lors du transfert des données sur le chemin d'E/S.
+
+L'utilisation classique de la fonctionnalité Data assurance permet de vérifier la partie du chemin d'E/S entre les contrôleurs et les disques. Les fonctionnalités DE DA sont présentées au niveau du pool et du groupe de volumes.
+
+Lorsque cette fonctionnalité est activée, la matrice de stockage ajoute des codes de vérification des erreurs (également appelés vérifications cycliques de redondance ou CRCS) à chaque bloc de données du volume. Après le déplacement d'un bloc de données, la matrice de stockage utilise ces codes CRC pour déterminer si des erreurs se sont produites au cours de la transmission. Les données potentiellement corrompues ne sont ni écrites sur le disque ni renvoyées à l'hôte. Si vous souhaitez utiliser la fonctionnalité DA, sélectionnez un pool ou un groupe de volumes qui est compatible DA lorsque vous créez un nouveau volume (recherchez *Oui* en regard de *DA* dans la table des candidats de groupe de volumes et de pools).
+
+Assurez-vous d'affecter ces volumes DA à un hôte à l'aide d'une interface d'E/S capable de gérer DA. Les interfaces d'E/S compatibles avec DA incluent Fibre Channel, SAS, iSCSI over TCP/IP, NVMe/FC, NVMe/IB, NVMe/RoCE et iser over InfiniBand (extensions iSCSI pour RDMA/IB). DA n'est pas pris en charge par SRP sur InfiniBand.
+
+
+
+== Qu'est-ce que la sécurité FDE/FIPS ?
+
+La sécurité FDE/FIPS fait référence à des disques sécurisés qui cryptent les données pendant les écritures et les déchiffrez pendant les lectures à l'aide d'une clé de cryptage unique.
+
+Ces disques sécurisés empêchent tout accès non autorisé aux données d'un disque physiquement retiré de la baie de stockage. Les disques sécurisés peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard). Les disques FIPS ont fait l'objet d'un test de certification.
+
+
+NOTE: Pour les volumes nécessitant une prise en charge de FIPS, utilisez uniquement des disques FIPS. La combinaison de disques FIPS et FDE dans un groupe ou un pool de volumes entraîne le traitement de tous les disques comme disques FDE. Par ailleurs, un disque FDE ne peut pas être ajouté à un groupe ou un pool de volumes FIPS ni être utilisé comme unité de rechange.
+
+
+
+== Qu'est-ce que la fonction de sécurité (Drive Security) ?
+
+La sécurité du lecteur est une fonction qui empêche tout accès non autorisé aux données sur les disques sécurisés lorsqu'ils sont retirés de la matrice de stockage.
+
+Ces disques peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard).
+
+
+
+== Comment afficher et interpréter toutes les statistiques SSD cache ?
+
+Vous pouvez afficher les statistiques nominales et les statistiques détaillées de SSD cache.
+
+Les statistiques nominales sont un sous-ensemble des statistiques détaillées. Les statistiques détaillées ne peuvent être affichées que lorsque vous exportez toutes les statistiques SSD dans un fichier .csv. Pendant que vous examinez et interprétez les statistiques, gardez à l'esprit que certaines interprétations sont dérivées en examinant une combinaison de statistiques.
+
+
+
+=== Statistiques nominales
+
+Pour afficher les statistiques de cache SSD, accédez à la page *gérer*. Menu sélection:Provisioning [Configure pools & Volume Groups]. Sélectionnez le cache SSD pour lequel vous souhaitez afficher les statistiques, puis sélectionnez menu:More[Afficher les statistiques]. Les statistiques nominales sont affichées dans la boîte de dialogue Afficher les statistiques du cache SSD.
+
+
+NOTE: Cette fonctionnalité n'est pas disponible sur les systèmes de stockage EF600 ou EF300.
+
+La liste inclut des statistiques nominales, qui sont un sous-ensemble des statistiques détaillées.
+
+
+
+=== Statistiques détaillées
+
+Les statistiques détaillées comprennent les statistiques nominales, ainsi que des statistiques supplémentaires. Ces statistiques supplémentaires sont enregistrées avec les statistiques nominales, mais, contrairement aux statistiques nominales, elles ne s'affichent pas dans la boîte de dialogue Afficher les statistiques de cache des disques SSD. Vous ne pouvez consulter les statistiques détaillées qu'après avoir exporté les statistiques vers un fichier .csv.
+
+Les statistiques détaillées sont répertoriées après les statistiques nominales.
+
+
+
+== Qu'est-ce que la protection contre les pertes de tablette et la protection contre les pertes de tiroir ?
+
+La protection contre les pertes de tiroirs et les pertes de tiroirs sont des attributs des pools et des groupes de volumes qui vous permettent d'assurer l'accès aux données en cas de défaillance d'un seul tiroir ou d'un tiroir.
+
+
+
+=== Protection contre les pertes de tablette
+
+Un tiroir est le boîtier qui contient les disques ou les disques et le contrôleur. La protection contre les pertes de tiroirs garantit l'accessibilité aux données stockées sur les volumes d'un pool ou d'un groupe de volumes en cas de perte totale de communication avec un seul tiroir de disque. Par exemple, la perte totale de communication peut entraîner une perte d'alimentation au tiroir disque ou une panne des deux modules d'E/S (IOM).
+
+
+NOTE: La protection contre les pertes de tiroirs n'est pas garantie si un disque est déjà en panne dans le pool ou le groupe de volumes. Dans ce cas, si l'accès à un tiroir disque est perdu et qu'un autre disque du pool ou du groupe de volumes entraîne la perte des données.
+
+Les critères de protection contre les pertes de rayonnage dépendent de la méthode de protection, comme décrit dans le tableau suivant.
+
+|===
+| Niveau | Critères pour la protection contre les pertes de rayonnage | Nombre minimal de tiroirs requis 
+
+
+| Piscine | Le pool doit inclure les disques provenant d'au moins cinq tiroirs et il doit inclure un nombre égal de disques dans chaque tiroir. La protection contre les pertes de rayonnage n'est pas applicable aux étagères de grande capacité ; si votre système contient des étagères de grande capacité, consultez la section protection contre les pertes de tiroirs. | 5 
+
+
+| RAID 6 | Le groupe de volumes ne contient pas plus de deux disques dans un tiroir unique. | 3 
+
+
+| RAID 3 ou RAID 5 | Chaque disque du groupe de volumes est situé dans un tiroir distinct. | 3 
+
+
+| RAID 1 | Chaque disque d'une paire RAID 1 doit être placé dans un tiroir distinct. | 2 
+
+
+| RAID 0 | Impossible d'obtenir la protection contre les pertes de tablette. | Sans objet 
+|===
+
+
+=== Protection contre les pertes de tiroirs
+
+Un tiroir est un des compartiments d'un shelf que vous tirez pour accéder aux disques. Seuls les tiroirs haute capacité sont dotés de tiroirs. La protection contre les pertes de tiroirs garantit l'accessibilité aux données sur les volumes d'un pool ou d'un groupe de volumes en cas de perte totale de communication avec un tiroir unique. Une perte totale de communication peut être une perte d'alimentation du tiroir ou une défaillance d'un composant interne dans le tiroir.
+
+
+CAUTION: La protection contre les pertes de tiroirs n'est pas garantie si un lecteur a déjà échoué dans le pool ou le groupe de volumes. Dans ce cas, la perte de l'accès à un tiroir (et par conséquent un autre lecteur du pool ou du groupe de volumes) entraîne la perte de données.
+
+Les critères de protection contre les pertes de tiroirs dépendent de la méthode de protection, comme décrit dans le tableau suivant :
+
+|===
+| Niveau | Critères pour la protection contre les pertes de tiroirs | Nombre minimum de tiroirs requis 
+
+
+| Piscine | Les candidats aux pools doivent inclure des disques de tous les tiroirs et chaque tiroir doit comporter un nombre égal de disques. Le pool doit inclure des disques provenant d'au moins cinq tiroirs et il doit y avoir un nombre égal de disques dans chaque tiroir. Une étagère de 60 disques peut assurer la protection contre les pertes de tiroirs lorsque le pool contient 15, 20, 25, 30, 35, 40, 45, 50, 55 ou 60 disques. Des incréments de 5 peuvent être ajoutés au pool après sa création initiale. | 5 
+
+
+| RAID 6 | Le groupe de volumes ne contient pas plus de deux disques dans un tiroir unique. | 3 
+
+
+| RAID 3 ou 5 | Chaque lecteur du groupe de volumes se trouve dans un tiroir distinct | 3 
+
+
+| RAID 1 | Chaque lecteur d'une paire symétrique doit être placé dans un tiroir séparé. | 2 
+
+
+| RAID 0 | Impossible d'obtenir la protection contre la perte de tiroir. | Sans objet 
+|===
+
+
+== Comment maintenir la protection contre les pertes des tablettes et des tiroirs ?
+
+Pour maintenir la protection contre les pertes de tiroirs et de tiroirs pour un pool ou un groupe de volumes, utilisez les critères spécifiés dans le tableau suivant.
+
+|===
+| Niveau | Critères pour la protection contre les pertes des étagères/tiroirs | Nombre minimum de tiroirs/étagères requis 
+
+
+| Piscine | Pour les tiroirs, le pool ne doit pas contenir plus de deux disques dans un seul tiroir. Pour les tiroirs, le pool doit inclure un nombre égal de disques de chaque tiroir. | 6 pour les étagères 5 pour les tiroirs 
+
+
+| RAID 6 | Le groupe de volumes ne contient pas plus de deux disques dans un tiroir ou un tiroir unique. | 3 
+
+
+| RAID 3 ou RAID 5 | Chaque disque du groupe de volumes est situé dans un tiroir ou un tiroir séparé. | 3 
+
+
+| RAID 1 | Chaque disque d'une paire en miroir doit être placé dans un tiroir ou un tiroir séparé. | 2 
+
+
+| RAID 0 | Impossible d'obtenir une protection contre les pertes de tablette/tiroir. | Sans objet 
+|===
+
+NOTE: La protection contre les pertes de tiroirs/tiroirs n'est pas maintenue si un disque a déjà échoué dans le pool ou le groupe de volumes. Dans ce cas, si l'accès à un tiroir disque ou à un tiroir disque est perdu et par conséquent à un autre disque du pool ou du groupe de volumes, les données sont perdues.
+
+
+
+== Qu'est-ce que la capacité d'optimisation pour les pools ?
+
+Les disques SSD auront une durée de vie plus longue et de meilleures performances d'écriture maximales lorsqu'une partie de leur capacité est non allouée.
+
+Pour les disques associés à un pool, la capacité non allouée comprend la capacité de préservation d'un pool, la capacité disponible (non utilisée par les volumes) et une partie de la capacité utilisable définie comme capacité d'optimisation supplémentaire. La capacité d'optimisation supplémentaire assure un niveau minimal de capacité d'optimisation en réduisant la capacité utilisable et, en tant que tel, n'est pas disponible pour la création du volume.
+
+Lors de la création d'un pool, la capacité d'optimisation recommandée permet d'équilibrer les performances, l'usure des disques et la capacité disponible. Le curseur capacité d'optimisation supplémentaire situé dans la boîte de dialogue Paramètres de pool permet d'ajuster la capacité d'optimisation du pool. Le réglage du curseur permet d'obtenir de meilleures performances et une meilleure durée de vie des disques aux dépens de la capacité disponible, ou encore d'augmenter la capacité disponible aux dépens des performances et de l'usure des disques.
+
+
+NOTE: Le curseur capacité d'optimisation supplémentaire n'est disponible que pour les systèmes de stockage EF600 et EF300.
+
+
+
+== Quelle est la capacité d'optimisation des groupes de volumes ?
+
+Les disques SSD auront une durée de vie plus longue et de meilleures performances d'écriture maximales lorsqu'une partie de leur capacité est non allouée.
+
+Pour les disques associés à un groupe de volumes, la capacité non allouée comprend la capacité libre d'un groupe de volumes (capacité non utilisée par les volumes), et une partie de la capacité utilisable définie comme capacité d'optimisation. La capacité d'optimisation supplémentaire assure un niveau minimal de capacité d'optimisation en réduisant la capacité utilisable et, en tant que tel, n'est pas disponible pour la création du volume.
+
+Lors de la création d'un groupe de volumes, une capacité d'optimisation recommandée permet d'équilibrer les performances, l'usure des disques et la capacité disponible. Le curseur capacité d'optimisation supplémentaire dans la boîte de dialogue Paramètres du groupe de volumes permet d'ajuster la capacité d'optimisation d'un groupe de volumes. Le réglage du curseur permet d'obtenir de meilleures performances et une meilleure durée de vie des disques aux dépens de la capacité disponible, ou encore d'augmenter la capacité disponible aux dépens des performances et de l'usure des disques.
+
+
+NOTE: Le curseur supplémentaire sur la capacité d'optimisation est disponible uniquement pour les systèmes de stockage EF600 et EF300.
+
+
+
+== Qu'est-ce qui prend en charge le provisionnement de ressources ?
+
+La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+Un volume provisionné en ressources est un volume non volumineux dans un groupe ou un pool de volumes SSD : la capacité de disque est allouée (affectée au volume) lors de la création du volume, mais la désallocation des blocs de disques est effectuée (non mappée). À titre de comparaison, dans un volume épais traditionnel, tous les blocs de disque sont mappés ou alloués lors d'une opération d'initialisation du volume en arrière-plan afin d'initialiser les champs d'informations de protection Data assurance et de rendre la parité des données et RAID cohérente dans chaque bande RAID. Lorsqu'un volume de ressource est provisionné, il n'y a pas d'initialisation en arrière-plan limitée dans le temps. À la place, chaque bande RAID est initialisée lors de la première écriture sur un bloc de volume dans la bande.
+
+Les volumes provisionnés par ressource sont pris en charge uniquement sur les groupes et pools de volumes SSD, où tous les disques du groupe ou du pool prennent en charge la fonction de restauration d'erreur DULBE (Logical Block Error Enable) de NVMe désallocation ou non écrite. Lors de la création d'un volume provisionné de ressources, tous les blocs de disques attribués au volume sont désalloué (non mappés). De plus, les hôtes peuvent désallouer les blocs logiques du volume à l'aide de la commande NVMe Dataset Management. La gestion de la conservation des blocs peut améliorer la durée de vie du disque SSD et accroître des performances d'écriture maximales. L'amélioration varie selon le modèle de disque et la capacité.
+
+
+
+== Que dois-je savoir sur la fonctionnalité de volumes provisionnés par les ressources ?
+
+La fonctionnalité de provisionnement des ressources est disponible dans les baies de stockage EF300 et EF600, ce qui permet de mettre immédiatement les volumes en service sans processus d'initialisation en arrière-plan.
+
+
+NOTE: La fonctionnalité de provisionnement des ressources n'est pas disponible pour le moment. Dans certains cas, les composants peuvent être signalés comme étant capables de provisionner les ressources, mais la possibilité de créer des volumes provisionnés par les ressources a été désactivée jusqu'à ce qu'ils puissent être réactivés dans le cadre d'une mise à jour ultérieure.
+
+
+
+=== Volumes provisionnés par les ressources
+
+Un volume provisionné en ressources est un volume non volumineux dans un groupe ou un pool de volumes SSD : la capacité de disque est allouée (affectée au volume) lors de la création du volume, mais la désallocation des blocs de disques est effectuée (non mappée). À titre de comparaison, dans un volume épais traditionnel, tous les blocs de disque sont mappés ou alloués lors d'une opération d'initialisation du volume en arrière-plan afin d'initialiser les champs d'informations de protection Data assurance et de rendre la parité des données et RAID cohérente dans chaque bande RAID. Lorsqu'un volume de ressource est provisionné, il n'y a pas d'initialisation en arrière-plan limitée dans le temps. À la place, chaque bande RAID est initialisée lors de la première écriture sur un bloc de volume dans la bande.
+
+Les volumes provisionnés par ressource sont pris en charge uniquement sur les groupes et pools de volumes SSD, où tous les disques du groupe ou du pool prennent en charge la fonction de restauration d'erreur DULBE (Logical Block Error Enable) de NVMe désallocation ou non écrite. Lors de la création d'un volume provisionné de ressources, tous les blocs de disques attribués au volume sont désalloué (non mappés). De plus, les hôtes peuvent désallouer les blocs logiques du volume à l'aide de la commande NVMe Dataset Management. La gestion de la conservation des blocs peut améliorer la durée de vie du disque SSD et accroître des performances d'écriture maximales. L'amélioration varie selon le modèle de disque et la capacité.
+
+
+
+=== Activation et désactivation de la fonction
+
+Le provisionnement des ressources est activé par défaut sur les systèmes où les disques prennent en charge DULBE. Vous pouvez désactiver ce paramètre par défaut à partir de pools et groupes de volumes. La désactivation du provisionnement des ressources est une action permanente pour les volumes existants et ne peut pas être inversée (c'est-à-dire, vous ne pouvez pas réactiver le provisionnement des ressources pour ces groupes de volumes et ces pools).
+
+Cependant, si vous souhaitez réactiver le provisionnement de ressources pour tout nouveau volume créé, vous pouvez le faire à partir du menu:Paramètres[système]. Notez que lorsque vous réactivez le provisionnement de ressources, seuls les nouveaux groupes de volumes et pools sont affectés. Tous les groupes et pools de volumes existants restent inchangés. Si vous le souhaitez, vous pouvez également désactiver à nouveau le provisionnement des ressources à partir du menu:Paramètres[système].
+
+
+
+== Quelle est la différence entre une clé de sécurité interne et une gestion externe des clés de sécurité ?
+
+Lorsque vous implémentez la fonction sécurité du lecteur, vous pouvez utiliser une clé de sécurité interne ou une clé de sécurité externe pour verrouiller les données lorsqu'un disque sécurisé est retiré de la matrice de stockage.
+
+Une clé de sécurité est une chaîne de caractères partagée entre les disques et les contrôleurs sécurisés d'une matrice de stockage. Les clés internes sont conservées sur la mémoire persistante du contrôleur. Les clés externes sont conservées sur un serveur distinct de gestion des clés à l'aide d'un protocole KMIP (Key Management Interoperability Protocol).
+
+
+
+== Que dois-je savoir avant de créer une clé de sécurité ?
+
+Une clé de sécurité est partagée par les contrôleurs et les disques sécurisés au sein d'une matrice de stockage. Si un disque sécurisé est retiré de la matrice de stockage, la clé de sécurité protège les données contre tout accès non autorisé.
+
+Vous pouvez créer et gérer des clés de sécurité en utilisant l'une des méthodes suivantes :
+
+* Gestion des clés interne sur la mémoire persistante du contrôleur.
+* Gestion externe des clés sur un serveur de gestion externe des clés
+
+
+
+
+== Gestion interne des clés
+
+Les clés internes sont conservées et « masquées » dans un emplacement non accessible sur la mémoire persistante du contrôleur. Avant de créer une clé de sécurité interne, vous devez procéder comme suit :
+
+. Installez des disques sécurisés dans la baie de stockage. Ces disques peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard).
+. Assurez-vous que la fonction sécurité du lecteur est activée. Si nécessaire, contactez votre fournisseur de stockage pour obtenir des instructions sur l'activation de la fonction de sécurité des lecteurs.
+
+
+Vous pouvez ensuite créer une clé de sécurité interne, qui implique la définition d'un identifiant et d'une phrase de passe. L'identifiant est une chaîne associée à la clé de sécurité, qui est stockée sur le contrôleur et sur tous les disques associés à la clé. La phrase de passe est utilisée pour crypter la clé de sécurité à des fins de sauvegarde. Lorsque vous avez terminé, la clé de sécurité est stockée sur le contrôleur dans un emplacement non accessible. Vous pouvez ensuite créer des pools ou des groupes de volumes sécurisés, ou activer la sécurité sur des groupes de volumes et des pools existants.
+
+
+
+=== Gestion externe des clés
+
+Les clés externes sont conservées sur un serveur distinct de gestion des clés à l'aide d'un protocole KMIP (Key Management Interoperability Protocol). Avant de créer une clé de sécurité externe, vous devez effectuer les opérations suivantes :
+
+. Installez des disques sécurisés dans la baie de stockage. Ces disques peuvent être des disques FDE (Full Disk Encryption) ou FIPS (Federal information Processing Standard).
+. Assurez-vous que la fonction sécurité du lecteur est activée. Si nécessaire, contactez votre fournisseur de stockage pour obtenir des instructions sur l'activation de la fonction de sécurité des lecteurs
+. Obtenir un fichier de certificat client signé. Un certificat client valide les contrôleurs de la baie de stockage. Le serveur de gestion des clés peut donc faire confiance à leurs requêtes KMIP.
++
+.. Tout d'abord, vous remplissez et téléchargez une requête client de signature de certificat (CSR). Accédez au menu:Paramètres[certificats > gestion des clés > CSR complète].
+.. Vous demandez ensuite un certificat client signé à une autorité de certification approuvée par le serveur de gestion des clés. (Vous pouvez également créer et télécharger un certificat client à partir du serveur de gestion des clés à l'aide du fichier CSR téléchargé.)
+.. Une fois que vous avez un fichier de certificat client, copiez-le vers l'hôte sur lequel vous accédez à System Manager.
+
+
+. Récupérez un fichier de certificat à partir du serveur de gestion des clés, puis copiez-le vers l'hôte sur lequel vous accédez à System Manager. Un certificat de serveur de gestion des clés valide le serveur de gestion des clés. La baie de stockage peut donc avoir confiance en son adresse IP. Vous pouvez utiliser un certificat racine, intermédiaire ou serveur pour le serveur de gestion des clés.
+
+
+Vous pouvez ensuite créer une clé externe qui implique de définir l'adresse IP du serveur de gestion des clés et le numéro de port utilisé pour les communications KMIP. Au cours de ce processus, vous chargez également des fichiers de certificat. Lorsque vous avez terminé, le système se connecte au serveur de gestion des clés avec les informations d'identification que vous avez saisies. Vous pouvez ensuite créer des pools ou des groupes de volumes sécurisés, ou activer la sécurité sur des groupes de volumes et des pools existants.
+
+
+
+== Pourquoi dois-je définir une phrase de passe ?
+
+La phrase de passe est utilisée pour crypter et décrypter le fichier de clé de sécurité stocké sur le client de gestion local. Sans la phrase de passe, la clé de sécurité ne peut pas être décryptée et utilisée pour déverrouiller les données à partir d'un lecteur compatible avec la sécurité si elle est réinstallée dans une autre matrice de stockage.

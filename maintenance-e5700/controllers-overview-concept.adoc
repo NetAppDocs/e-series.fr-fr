@@ -48,14 +48,14 @@ image::../media/e5700_attention_led_callout.png[LED d'avertissement du contrôle
 
 NOTE: La figure montre un exemple de cartouche de contrôleur ; les ports hôtes du boîtier de contrôleur peuvent être différents.
 
-* Cette procédure s'applique aux tiroirs disques IOM12 et IOM12B.
+* Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
 
 
 
-NOTE: Les modules IOM12B sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12B.
+NOTE: Les modules IOM12C ne sont pris en charge que sur SANtricity OS 11.90R3 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.
 
 
-NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12B par un autre module IOM12B. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12B.)
+NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12C par un autre module IOM12C. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12C.)
 
 
 
