@@ -23,10 +23,14 @@ Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
 .Étapes
 . Branchez les câbles des tiroirs.
 +
-Branchez les câbles du système en fonction de votre configuration. Si vous avez besoin de plus d'options de câblage que les exemples présentés dans cette section, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage"].
+Branchez les câbles du système en fonction de votre configuration.
 
 +
-Pour les exemples présentés dans cette section, vous avez besoin des câbles suivants :
+
+NOTE: Si vous avez besoin de plus d'options de câblage que les exemples fournis ci-dessous, consultez link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Câblage"^] .
+
++
+Vous avez besoin des câbles suivants :
 
 +
 |===
@@ -39,17 +43,20 @@ image:../media/sas_cable.png["Câble SAS"]
 
 |===
 +
-.Exemple A : un tiroir contrôleur E4060 avec deux tiroirs disques DE460C dans une configuration SAS standard.
-.. Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
-.. Reliez le module d'E/S A du premier tiroir de disque au module d'E/S A du second tiroir de disque.
-.. Sur les câbles du premier tiroir de disque, le module d'E/S B du second tiroir.
-.. Reliez le contrôleur B au module d'E/S B du second tiroir de disque.
-
-
+.. *Exemple A : une étagère de contrôleur E4060 avec deux étagères de disques DE460C dans une configuration SAS standard*
 +
-.Exemple B : un tiroir contrôleur E4060 avec un tiroir disque DE460C dans une configuration SAS standard.
-.. Reliez le contrôleur A au module A.
-.. Le câble du contrôleur B vers l'IOM B.
+... Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
+... Reliez le module d'E/S A du premier tiroir de disque au module d'E/S A du second tiroir de disque.
+... Sur les câbles du premier tiroir de disque, le module d'E/S B du second tiroir.
+... Reliez le contrôleur B au module d'E/S B du second tiroir de disque.
+
+
+.. *Exemple B : une étagère de contrôleur E4060 avec une étagère de disque DE460C dans une configuration SAS standard*
++
+... Reliez le contrôleur A au module A.
+... Le câble du contrôleur B vers l'IOM B.
+
+
 
 
 . Met les tiroirs disques sous tension.

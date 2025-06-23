@@ -218,7 +218,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 ** Lorsque vous mettez à niveau la NVSRAM du contrôleur, tous les paramètres personnalisés que vous avez appliqués à la NVSRAM existante sont perdus pendant le processus d'activation. Vous devez à nouveau appliquer les paramètres personnalisés à la NVSRAM une fois le processus d'activation terminé.
 
 
-. Définissez le paramètre de la matrice de stockage sur duplex à l'aide des commandes CLI. Pour utiliser l'interface de ligne de commande, vous pouvez ouvrir une invite de commande si vous avez téléchargé le package CLI ou ouvrir la fenêtre Enterprise Management (EMW) si Storage Manager est installé.
+. Définissez le paramètre de la matrice de stockage sur duplex à l'aide des commandes CLI. Pour utiliser l'interface CLI, ouvrez une invite de commande si vous avez téléchargé le package CLI ou vous pouvez ouvrir la fenêtre de gestion d'entreprise (EMW) si Storage Manager est installé.
 +
 ** À partir d'une invite de commande :
 +

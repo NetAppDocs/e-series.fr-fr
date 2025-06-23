@@ -125,8 +125,6 @@ sidebar:
           url: "/config-linux/fc-verify-linux-config-support-task.html"
         - title: Configurez les adresses IP à l'aide de DHCP
           url: "/config-linux/fc-configure-ip-address-dhcp-task.html"
-        - title: Installer et configurer les utilitaires hôtes
-          url: "/config-linux/fc-install-configure-host-utilities-task.html"
         - title: Installez SANtricity Storage Manager
           url: "/config-linux/fc-install-smcli-11-53-task.html"
         - title: Accédez à SANtricity System Manager
@@ -151,8 +149,6 @@ sidebar:
           url: "/config-linux/sas-verify-linux-config-support-task.html"
         - title: Configurez les adresses IP à l'aide de DHCP
           url: "/config-linux/sas-configure-ip-address-dhcp-task.html"
-        - title: Installer et configurer les utilitaires hôtes
-          url: "/config-linux/sas-install-configure-host-utilities-task.html"
         - title: Installez SANtricity Storage Manager
           url: "/config-linux/sas-install-smcli-11-53-task.html"
         - title: Accédez à SANtricity System Manager
@@ -175,8 +171,6 @@ sidebar:
           url: "/config-linux/iscsi-verify-linux-config-support-task.html"
         - title: Configurez les adresses IP à l'aide de DHCP
           url: "/config-linux/iscsi-configure-ip-address-dhcp-task.html"
-        - title: Installer et configurer les utilitaires hôtes
-          url: "/config-linux/iscsi-install-configure-host-utilities-task.html"
         - title: Installez SANtricity Storage Manager
           url: "/config-linux/iscsi-install-smcli-11-53-task.html"
         - title: Accédez à SANtricity System Manager
@@ -212,8 +206,6 @@ sidebar:
           url: "/config-linux/iser-ib-determine-host-port-guids-task.html"
         - title: Configurez le gestionnaire de sous-réseau
           url: "/config-linux/iser-ib-configure-subnet-manager-task.html"
-        - title: Installer et configurer les utilitaires hôtes
-          url: "/config-linux/iser-ib-install-configure-host-utilities-task.html"
         - title: Installez SANtricity Storage Manager
           url: "/config-linux/iser-ib-install-smcli-11-53-task.html"
         - title: Accédez à SANtricity System Manager
@@ -242,8 +234,6 @@ sidebar:
           url: "/config-linux/srp-ib-determine-host-port-guids-task.html"
         - title: Configurez le gestionnaire de sous-réseau
           url: "/config-linux/srp-ib-configure-subnet-manager-task.html"
-        - title: Installer et configurer les utilitaires hôtes
-          url: "/config-linux/srp-ib-install-configure-host-utilities-task.html"
         - title: Installez SANtricity Storage Manager
           url: "/config-linux/srp-ib-install-smcli-11-53-task.html"
         - title: Accédez à SANtricity System Manager
@@ -417,8 +407,6 @@ sidebar:
         url: "/config-windows/configure-ip-address-dhcp-task.html"
       - title: Configurez le logiciel multivoie
         url: "/config-windows/configure-multipath-software-task.html"
-      - title: Installer et configurer Unified Host Utilities
-        url: "/config-windows/install-configure-host-utilities-task.html"
       - title: Installez SANtricity Storage Manager
         url: "/config-windows/install-storage-manager-for-smcli-task.html"
       - title: Accédez à SANtricity System Manager

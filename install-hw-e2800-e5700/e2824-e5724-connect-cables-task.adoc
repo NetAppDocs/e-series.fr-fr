@@ -29,10 +29,14 @@ NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud 
 .Étapes
 . Branchez les câbles des tiroirs.
 +
-Branchez les câbles du système en fonction de votre configuration. Si vous avez besoin de plus d'options de câblage que les exemples présentés, reportez-vous à la section link:../install-hw-cabling/index.html["Câblage"].
+Branchez les câbles du système en fonction de votre configuration.
 
 +
-Pour les exemples présentés, vous avez besoin des câbles suivants :
+
+NOTE: Si vous avez besoin de plus d'options de câblage que les exemples fournis ci-dessous, consultez link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Câblage"^] .
+
++
+Vous avez besoin des câbles suivants :
 
 +
 |===
@@ -45,25 +49,22 @@ image:../media/sas_cable.png["Câble SAS"]
 
 |===
 +
-.Exemple A : tiroir contrôleur E5700 avec trois tiroirs disques DE212C/x4 dans une configuration SAS standard.
-image:../media/example_a_28_57.png["Contrôleur E5700 en configuration SAS"]
-
+.. *Exemple A : Étagère de contrôleur avec trois étagères de disques DE212C/DE224 dans une configuration SAS standard*
 +
-.. Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
-.. Reliez le module d'E/S A du premier tiroir de disque au module d'E/S A du second tiroir de disque.
-.. Reliez le module d'E/S A du second tiroir de disque au module d'E/S A du troisième tiroir de disque.
-.. Reliez le contrôleur B au module d'E/S B du tiroir de troisième disque.
-.. Reliez le module d'E/S par seconde au module d'E/S B du tiroir de troisième disque.
-.. Sur les câbles du premier tiroir de disque, le module d'E/S B du second tiroir.
+... Reliez le contrôleur A au module d'E/S A du premier tiroir de disque.
+... Reliez le module d'E/S A du premier tiroir de disque au module d'E/S A du second tiroir de disque.
+... Reliez le module d'E/S A du second tiroir de disque au module d'E/S A du troisième tiroir de disque.
+... Reliez le contrôleur B au module d'E/S B du tiroir de troisième disque.
+... Reliez le module d'E/S par seconde au module d'E/S B du tiroir de troisième disque.
+... Sur les câbles du premier tiroir de disque, le module d'E/S B du second tiroir.
 
 
+.. *Exemple B : Étagère de contrôleur avec une étagère de disque DE212C/DE224 dans une configuration SAS standard*
 +
-.Exemple B : un tiroir contrôleur E5700 avec un tiroir disque DE212C/x4 dans une configuration SAS standard.
-image:../media/example_b_57_28.png["Contrôleur E5700 en configuration SAS"]
+... Reliez le contrôleur A au module A.
+... Le câble du contrôleur B vers l'IOM B.
 
-+
-.. Reliez le contrôleur A au module A.
-.. Le câble du contrôleur B vers l'IOM B.
+
 
 
 . Met les tiroirs disques sous tension.
