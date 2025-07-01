@@ -63,8 +63,7 @@ dracut --force --add multipath
 Par exemple, pour GRUB c'est `/boot/grub/menu.lst` et pour le grub2 c'est `/boot/grub2/menu.cfg`.
 
 . Utilisez le https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Créer l'hôte manuellement"] procédure de l'aide en ligne pour vérifier si les hôtes sont définis. Vérifiez que chaque paramètre de type d'hôte est basé sur les informations du noyau recueillies dans <<step4,étape 4>>.
-
-
++
 
 NOTE: L'équilibrage automatique de la charge est désactivé pour tous les volumes mappés vers les hôtes exécutant le noyau 3.9 ou version antérieure.
 
