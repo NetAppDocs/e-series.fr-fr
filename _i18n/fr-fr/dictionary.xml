@@ -2824,7 +2824,6 @@
   <block id="a8bea572b3060a8038be6b71b17745d4" category="admonition">Lorsqu'une HIC compatible 200 Gb est connectée à un câble QSFP56, la négociation automatique n'est disponible que lorsque vous vous connectez aux switchs et/ou aux adaptateurs Mellanox.</block>
   <block id="e337bedeaba2dae19359a1cd73b2475a" category="admonition">Le débit du port NVMe over RoCE configuré doit correspondre à la vitesse du SFP sur le port sélectionné. Tous les ports doivent être définis sur la même vitesse.</block>
   <block id="3596937c0cf910176242bc6491f8129d" category="paragraph">Activez IPv4 et/ou IPv6</block>
-  <block id="a28f1dea7eb219b33f56e3eb3cac6f30" category="paragraph">Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 4200.</block>
   <block id="596f20504f6521dc4d0ce2868f49fcf0" category="paragraph">Obtention automatique de la configuration auprès du serveur DHCP</block>
   <block id="7c67dad4c6c6549470b0aa55dab9fe7a" category="paragraph">Sélectionnez cette option, puis entrez une adresse statique dans les champs. Pour IPv4, incluez le masque de sous-réseau réseau et la passerelle. Pour IPv6, incluez les adresses IP routables et l'adresse IP du routeur.</block>
   <block id="6ed119e878f85e07fde7041bd5d855d2" category="admonition">S'il n'y a qu'une seule adresse IP routable, définissez l'adresse restante sur 0:0:0:0:0:0:0:0:0.</block>
@@ -9668,4 +9667,5 @@
   <block id="749e3259655b14ad4cd1d92b27ae554b" category="list-text">*Exemple A : une étagère de contrôleur E4060 avec deux étagères de disques DE460C dans une configuration SAS standard*</block>
   <block id="cab141641940a0cb3eca1b1695f92d4b" category="list-text">*Exemple B : une étagère de contrôleur E4060 avec une étagère de disque DE460C dans une configuration SAS standard*</block>
   <block id="47e9a132733409a780b8b25a91969da6" category="list-text">Définissez le paramètre de la matrice de stockage sur duplex à l'aide des commandes CLI. Pour utiliser l'interface CLI, ouvrez une invite de commande si vous avez téléchargé le package CLI ou vous pouvez ouvrir la fenêtre de gestion d'entreprise (EMW) si Storage Manager est installé.</block>
+  <block id="2db2ecd53dfa16abedb03a761e1763e8" category="paragraph">Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 9000.</block>
 </blocks>

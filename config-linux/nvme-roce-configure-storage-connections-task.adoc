@@ -79,7 +79,7 @@ Sélectionnez une ou les deux options pour activer la prise en charge des résea
  a| 
 Taille MTU (disponible en cliquant sur *Afficher plus de paramètres de port*).
  a| 
-Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 4200.
+Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 9000.
 
 |===
 +
