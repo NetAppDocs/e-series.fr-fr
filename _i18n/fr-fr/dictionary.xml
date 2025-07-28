@@ -9433,7 +9433,6 @@
   <block id="c2d05de1ae701bdce72c2faac49ce98c" category="doc">Installation et configuration complètes du système de stockage : EF300, EF600, EF300C et EF600C</block>
   <block id="650137d2f2842f6b60e056b9c55a250f" category="doc">Installation et configuration : EF300, EF600, EF300C et EF600C</block>
   <block id="85c56bf21f1f6bc6a3b828568c9beb6b" category="doc">Installez le matériel - EF300, EF600, EF300C et EF600C</block>
-  <block id="6169a90642f45b855b0d1918df24f1db" category="doc">En savoir plus sur l'installation du système de stockage - EF300, EF600, EF300C et EF600C</block>
   <block id="8b8cb36a048e7bee1a4b2b80d86a5118" category="doc">Mettez les tiroirs contrôleurs sous tension : EF300, EF600, EF300C et EF600C</block>
   <block id="56ce28c073fbbac13d9108d1544bd58e" category="doc">Préparez l'installation : EF300, EF600, EF300C et EF600C</block>
   <block id="87d6ab4989c0d8d9248aa48458ea993a" category="doc">Notes de version d'E-Series</block>
@@ -9668,4 +9667,5 @@
   <block id="cab141641940a0cb3eca1b1695f92d4b" category="list-text">*Exemple B : une étagère de contrôleur E4060 avec une étagère de disque DE460C dans une configuration SAS standard*</block>
   <block id="47e9a132733409a780b8b25a91969da6" category="list-text">Définissez le paramètre de la matrice de stockage sur duplex à l'aide des commandes CLI. Pour utiliser l'interface CLI, ouvrez une invite de commande si vous avez téléchargé le package CLI ou vous pouvez ouvrir la fenêtre de gestion d'entreprise (EMW) si Storage Manager est installé.</block>
   <block id="2db2ecd53dfa16abedb03a761e1763e8" category="paragraph">Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 9000.</block>
+  <block id="6d169c67d74922fc178491e0bef73793" category="doc">En savoir plus sur l'installation du système de stockage - EF300, EF600, EF300C et EF600C</block>
 </blocks>
