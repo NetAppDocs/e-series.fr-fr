@@ -13,7 +13,7 @@ summary: 'Configurez les E/S dirigées vers la cible du périphérique en foncti
 [role="lead"]
 Vous pouvez configurer les E/S dirigées vers la cible de périphérique en fonction du système d'exploitation (et de la méthode de chemins d'accès multiples de l'extension) que vous utilisez.
 
-Pour RHEL 7 et SLES 12, les E/S sont dirigées vers des cibles de périphériques virtuels par l'hôte Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles.
+Pour SLES 12, les E/S sont dirigées vers les cibles de périphériques virtuels par l’hôte Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles.
 
 
 

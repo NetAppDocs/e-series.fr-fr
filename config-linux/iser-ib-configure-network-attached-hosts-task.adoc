@@ -24,7 +24,7 @@ Assurez-vous de disposer des éléments suivants :
 .Étapes
 . Activer et démarrer les services iSCSI sur le ou les hôtes :
 +
-*Red Hat Enterprise Linux 7, 8 et 9 (RHEL 7, RHEL 8 et RHEL 9)*
+*Red Hat Enterprise Linux 8 et 9 (RHEL 8 et RHEL 9)*
 
 +
 [listing]

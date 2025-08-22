@@ -56,7 +56,7 @@ NOTE: En plus du port de réseau public, les initiateurs iSCSI doivent utiliser 
 .. Déterminez les noms des ports iSCSI à l'aide du `ifconfig -a` commande.
 .. Définissez l'adresse IP des ports d'initiateur iSCSI. Les ports d'initiateur doivent être présents sur le même sous-réseau que les ports cibles iSCSI.
 +
-*Red Hat Enterprise Linux 7 et 8 (RHEL 7 et RHEL 8)*
+*Red Hat Enterprise Linux 8 (RHEL 8)*
 
 +
 Créez le fichier exemple `/etc/sysconfig/network-scripts/ifcfg-<NIC port>` avec les contenus suivants.

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Vous pouvez créer une partition sur le périphérique multichemin, éventuellement créer un système de fichiers sur l"espace de noms, et monter la partition.' 
 ---
-= Création de systèmes de fichiers dans E-Series - Linux RHEL 7 et SLES 12 (NVMe over FC)
+= Créer des systèmes de fichiers dans les E-Series - SLES 12 (NVMe sur FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Pour RHEL 7 et SLES 12, vous créez un système de fichiers sur le périphérique dm souhaité et montez le système de fichiers.
+Pour SLES 12, vous créez un système de fichiers sur le périphérique DM souhaité et montez le système de fichiers.
 
 .Étapes
 . Exécutez le `multipath -ll` pour obtenir une liste de `/dev/mapper/dm` périphériques.

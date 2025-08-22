@@ -14,7 +14,7 @@ summary: 'La configuration d"un initiateur NVMe dans un environnement InfiniBand
 La configuration d'un initiateur NVMe dans un environnement InfiniBand inclut l'installation et la configuration des packages infiniband, nvme-cli et rdma, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.
 
 .Avant de commencer
-Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste complète des dernières exigences.
+Vous devez utiliser le dernier système d’exploitation compatible RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Consultez le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour une liste complète des dernières exigences.
 
 .Étapes
 . Installer les packages rdma, nvme-cli et infiniband :
@@ -30,7 +30,7 @@ Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, 
 # zypper install nvme-cli
 ----
 +
-*RHEL 7, RHEL 8 OU RHEL 9*
+*RHEL 8 ou RHEL 9*
 
 +
 [listing]
@@ -56,12 +56,6 @@ Vous devez exécuter le tout dernier système d'exploitation compatible RHEL 7, 
 [listing]
 ----
 # yum install NetworkManager-initscripts-updown
-----
-. Pour RHEL 7, activez `ipoib`. Modifiez le fichier /etc/rdma/rdma.conf et modifiez l'entrée à charger `ipoib`:
-+
-[listing]
-----
-IPOIB_LOAD=yes
 ----
 . Procurez-vous le NQN hôte, qui sera utilisé pour configurer l'hôte sur une matrice.
 +
@@ -147,7 +141,7 @@ REMOTE_IPADDR=
 STARTMODE='auto'
 ----
 +
-*RHEL 7 ou RHEL 8*
+*RHEL 8*
 
 +
 Créez le fichier /etc/sysconfig/network-scripts/ifcfg-ib0 avec le contenu suivant.
