@@ -13,7 +13,6 @@
   <block id="0d31bf4155130c7e1b044f877c983556" category="cell">Décrit la fonctionnalité Snapshot de SANtricity, y compris les instructions de navigation dans l'interface graphique de SANtricity System Manager.</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
   <block id="20b51996662da655011d140b6ce13e08" category="inline-link">*TR-4652 : pools de disques dynamiques SANtricity*</block>
-  <block id="94b9edbcfa8896e9837abb98f7178d0b" category="cell"><block ref="94b9edbcfa8896e9837abb98f7178d0b" category="inline-link-rx"></block></block>
   <block id="c84200fc0d3d1c17f835b93cac2a4073" category="inline-link">*TR-4737 : équilibrage automatique de la charge SANtricity*</block>
   <block id="9e438ddc696936eea7043d42a5d772c2" category="cell"><block ref="9e438ddc696936eea7043d42a5d772c2" category="inline-link-rx"></block></block>
   <block id="b855ed13871c8956bc535c1dcafa14d2" category="inline-link">*TR-4736 : API de services Web SANtricity*</block>
@@ -392,9 +391,7 @@
   <block id="ea2848b98724bc7c864ab419f1efd076" category="cell">Aide les administrateurs du stockage et des bases de données à déployer avec succès Oracle sur le stockage NetApp EF-Series.</block>
   <block id="8a7d992e887a76abe4703518ec317a4c" category="section-title">Sauvegarde et restauration</block>
   <block id="569680cec832ec2d53d80483c8dbc439" category="inline-link">*TR-4320 : meilleures pratiques avec CommVault Data Platform V11*</block>
-  <block id="484210f783b83f032755dfc404923829" category="cell"><block ref="484210f783b83f032755dfc404923829" category="inline-link-rx"></block></block>
   <block id="0cd4f7215cb7ec8c6f73c51d9dc39a48" category="inline-link">*TR-4471 : meilleures pratiques avec Veeam Backup and Replication*</block>
-  <block id="08fcfb094209aa6fd6eccf8aa5b05de1" category="cell"><block ref="08fcfb094209aa6fd6eccf8aa5b05de1" category="inline-link-rx"></block></block>
   <block id="5941ff1b3a4ffc80a4b2f0ae157b8b6d" category="inline-link">*TR-4704 : déploiement de Veritas NetBackup avec le stockage NetApp E-Series*</block>
   <block id="d5da5f4acb6ce9cd96c756f74b96e9a0" category="cell"><block ref="d5da5f4acb6ce9cd96c756f74b96e9a0" category="inline-link-rx"></block></block>
   <block id="12d1a4b387bfcab1922f0a411bb84852" category="cell">Décrit l'architecture de référence et les bonnes pratiques relatives à l'utilisation du stockage NetApp E-Series dans un environnement CommVault Data Platform V11.</block>
@@ -9605,7 +9602,6 @@
   <block id="309255274290ac8d1dd6b54d267ce8cf" category="doc">Connectez-vous à l'API proxy des services Web SANtricity et à Unified Manager</block>
   <block id="f43368fba89f2c1294d458d0d3b87979" category="doc">Consultez les exigences d'installation et de mise à niveau du proxy de services Web SANtricity</block>
   <block id="689b1eb54a456e34eae7715d09f7480a" category="doc">Désinstallez le proxy de services Web SANtricity</block>
-  <block id="7c3ba7ad8402a38e099e9ca7b44c927c" category="doc">Installez ou mettez à niveau le fichier proxy des services Web SANtricity</block>
   <block id="31800de1cb68e15c0426a578c7dd75fd" category="doc">Découvrez les bases de l'API proxy des services Web SANtricity</block>
   <block id="be80139591e8588662d79bbef45ee848" category="doc">Compatibilité et restrictions des services Web SANtricity</block>
   <block id="ed389a9acb72de33be78325f147d7d8c" category="doc">En savoir plus sur les services Web SANtricity et Unified Manager</block>
@@ -9663,4 +9659,9 @@
   <block id="01d7072c63a7f17dd56f882aa05c191e" category="paragraph">*SLES 12.x ou version ultérieure*</block>
   <block id="eb9f15fa21e7ecb26458bd00f198d235" category="paragraph">*SLES 12 ou supérieur*</block>
   <block id="fd5ba176689e7b1be93aaa098be59948" category="sidebar">Créer des systèmes de fichiers (SLES 12)</block>
+  <block id="4090c38c724effbcef59a93b035aed46" category="cell"><block ref="4090c38c724effbcef59a93b035aed46" category="inline-link-rx"></block></block>
+  <block id="43cf2b25070c6d7d19cb9548ac18c968" category="cell"><block ref="43cf2b25070c6d7d19cb9548ac18c968" category="inline-link-rx"></block></block>
+  <block id="fc81ed45554cc52f6bb42f4d7c774e51" category="cell"><block ref="fc81ed45554cc52f6bb42f4d7c774e51" category="inline-link-rx"></block></block>
+  <block id="23574e6efb4951cab243d0bca21f6801" category="doc">Installez ou mettez à niveau le fichier SANtricity Web Services Proxy et SANtricity Unified Manager.</block>
+  <block id="2ba81316cd80bb512d2d7c99312de69e" category="section-title">Nouvelles fonctionnalités de la version 11.90R4</block>
 </blocks>

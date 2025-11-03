@@ -33,7 +33,7 @@ Cliquez sur les liens ci-dessous pour accéder aux rapports techniques sur le ma
 |  |  |  
 
 
-| https://www.netapp.com/ko/media/12421-tr4652.pdf["*TR-4652 : pools de disques dynamiques SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737 : équilibrage automatique de la charge SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736 : API de services Web SANtricity*"^] 
+| https://www.netapp.com/media/12421-tr-4652-santricity-os-ddp.pdf["*TR-4652 : pools de disques dynamiques SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737 : équilibrage automatique de la charge SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736 : API de services Web SANtricity*"^] 
 
 
 | Décrit comment les administrateurs de stockage peuvent regrouper des ensembles de disques similaires dans une topologie de pool dans laquelle tous les disques du pool participent au flux de travail E/S. | Décrit un aperçu du comportement de la fonctionnalité ALB, de ses paramètres de configuration clés et de ses améliorations en termes d'interopérabilité hôte. | Décrit un aperçu des services Web SANtricity, une API utilisée pour configurer et gérer les systèmes de stockage E-Series. 
