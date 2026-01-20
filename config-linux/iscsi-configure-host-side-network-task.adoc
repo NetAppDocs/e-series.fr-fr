@@ -94,7 +94,7 @@ IPV6_FAILURE_FATAL=no
 IPV6_ADDR_GEN_MODE=eui64
 ----
 +
-*Red Hat Enterprise Linux 9 (RHEL 9)*
+*Red Hat Enterprise Linux 9 et 10 (RHEL 9 et RHEL 10) et SUSE Linux Enterprise Server 16 (SLES 16)*
 
 +
 Utilisez le `nmtui` outil permettant d'activer et de modifier une connexion. L'outil génère un `<NIC port>.nmconnection` fichier dans `/etc/NetworkManager/system-connections/`.

@@ -14,12 +14,12 @@ summary: 'La configuration d"un initiateur NVMe dans un environnement InfiniBand
 La configuration d'un initiateur NVMe dans un environnement InfiniBand inclut l'installation et la configuration des packages infiniband, nvme-cli et rdma, la configuration des adresses IP des initiateurs et la configuration de la couche NVMe-of sur l'hôte.
 
 .Avant de commencer
-Vous devez utiliser le dernier système d’exploitation compatible RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Consultez le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour une liste complète des dernières exigences.
+Vous devez utiliser la dernière version compatible du système d'exploitation RHEL 8, RHEL 9, RHEL 10, SLES 12, SLES 15 ou SLES 16 Service Pack. Voir le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste complète des dernières exigences.
 
 .Étapes
 . Installer les packages rdma, nvme-cli et infiniband :
 +
-*SLES 12 ou SLES 15*
+*SLES 12, SLES 15 ou SLES 16*
 
 +
 [listing]
@@ -30,7 +30,7 @@ Vous devez utiliser le dernier système d’exploitation compatible RHEL 8, RHEL
 # zypper install nvme-cli
 ----
 +
-*RHEL 8 ou RHEL 9*
+*RHEL 8, RHEL 9 ou RHEL 10*
 
 +
 [listing]
@@ -182,7 +182,7 @@ NAME=ib1
 ONBOOT=yes
 ----
 +
-*RHEL 9*
+*RHEL 9, RHEL 10 ou SLES 16*
 
 +
 Utilisez le `nmtui` outil permettant d'activer et de modifier une connexion. Voici un exemple de fichier `/etc/NetworkManager/system-connections/ib0.nmconnection` l'outil génère :

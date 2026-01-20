@@ -81,9 +81,6 @@ systemctl start rdma
 
 . Activez le démon SRP.
 +
-*SLES 12 ou supérieur*
-
-+
 ** Pour activer le démarrage du démon SRP au démarrage :
 +
 [listing]

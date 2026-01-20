@@ -24,7 +24,7 @@ Vous devez installer les modules requis sur votre système.
 NOTE: Reportez-vous à la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] Pour s'assurer que les mises à jour requises sont installées, car les chemins d'accès multiples peuvent ne pas fonctionner correctement avec les versions GA de SLES ou de RHEL.
 
 .Description de la tâche
-SLES 12 utilise Device Mapper Multipath (DMMP) pour les chemins d’accès multiples pour NVMe over RoCE. RHEL 8, RHEL 9 et SLES 15 utilisent un basculement NVMe natif intégré. Selon le système d’exploitation que vous exécutez, une configuration supplémentaire des chemins d’accès multiples est nécessaire pour le faire fonctionner correctement.
+SLES 12 utilise Device Mapper Multipath (DMMP) pour le multipathing pour NVMe sur RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 utilisent un basculement NVMe natif intégré. Selon le système d'exploitation que vous utilisez, une configuration supplémentaire du multipath est nécessaire pour assurer son bon fonctionnement.
 
 
 
@@ -106,4 +106,4 @@ Les chemins d'accès multiples NVMe natifs sont désactivés par défaut dans RH
 
 
 
-NOTE: Pour RHEL 9 et SLES 15, les chemins d'accès multiples NVMe natifs sont activés par défaut et aucune configuration supplémentaire n'est requise.
+NOTE: Pour SLES 15, SLES 16, RHEL 9 et RHEL 10, le multipathing NVMe natif est activé par défaut et aucune configuration supplémentaire n'est requise.

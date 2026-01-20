@@ -2654,7 +2654,6 @@
   <block id="7895a100cce2fb9f671116c88a243a18" category="paragraph">Comme indiqué dans l'exemple ci-dessous, l'adresse IP pour<block ref="85ceed69d796aef1f91bdf57c7d0162a" prefix=" " category="inline-code"></block> est<block ref="d1de27b99f5d5ff4a86f8922286a7ff9" prefix=" " category="inline-code"></block>.</block>
   <block id="0693aaa7965eda2507b31a871e54b133" category="paragraph">Comme indiqué dans l'exemple ci-dessous, l'adresse IP pour<block ref="b731e651ca1284d02e93ae485c064736" prefix=" " category="inline-code"></block> est<block ref="4827c74c5fea1b557adf2098f7b099d9" prefix=" " category="inline-code"></block>.</block>
   <block id="a50e35ff2f76c0ac349de732916c537b" category="summary">Pour RHEL 8 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.</block>
-  <block id="709e243fec7f9a41a7ff766bf8716ce5" category="paragraph">Pour RHEL 8, RHEL 9, SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.</block>
   <block id="8c986ed4d501b7f34013f1474891eb88" category="list-text">Exécutez le<block ref="3d80983fc82ff72fd51e5d1f7e90c56d" prefix=" " category="inline-code"></block> commande permettant d'obtenir une liste des périphériques nvme.</block>
   <block id="c2254fad4178ca4085391a6ac3fc163a" category="paragraph">Le résultat de cette commande peut être utilisé pour trouver les périphériques associés à l'<block ref="324b592ebf16794a0c88511b40085a76" prefix=" " category="inline-code"></block> emplacement. Dans l'exemple ci-dessous, il s'agit de<block ref="5873769649ae49105d6cefc7971b78c1" prefix=" " category="inline-code"></block>.</block>
   <block id="3c13ae5aa52bded0c438a34b3cfaf588" category="list-text">Créez un système de fichiers sur la partition du périphérique nvme souhaité à l'aide de l'emplacement<block ref="68221a414d1be30f2d7ab0b100538ad1" prefix=" " category="inline-code"></block>.</block>
@@ -2785,7 +2784,6 @@
   <block id="070373c9b8bfb5900abe9ee69cfae4e4" category="list-text">Vérifiez que les chemins d'accès multiples NVMe natifs sont activés après le démarrage de l'hôte.</block>
   <block id="c694b074c8a7887bcd4ebbfc99adf268" category="list-text">Si le résultat de la commande est<block ref="8d9c307cb7f3c4a32822a51922d1ceaa" prefix=" " category="inline-code"></block>, Les chemins d'accès multiples NVMe natifs sont toujours désactivés.</block>
   <block id="6a4d0dbc61fd816c20d68cb9db43dd53" category="list-text">Si le résultat de la commande est<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>, Les chemins d'accès multiples NVMe natifs sont activés et les périphériques NVMe que vous découvrez utiliseront.</block>
-  <block id="0d1a0f91594280f9d49e074cc400230c" category="admonition">Pour RHEL 9 et SLES 15, les chemins d'accès multiples NVMe natifs sont activés par défaut et aucune configuration supplémentaire n'est requise.</block>
   <block id="be5555e7e670df8f8d0c725b9043fb16" category="summary">Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.</block>
   <block id="1016395fecd4787707233fc026c56bb5" category="paragraph">Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.</block>
   <block id="b850731c1bffd8d6372e832c36232f3e" category="admonition">*RISQUE DE PERTE DE DONNÉES.* vous devez activer le contrôle de flux pour une utilisation avec le contrôle Global Pause sur le switch afin d'éliminer le risque de perte de données dans un environnement NVMe over RoCE.</block>
@@ -2833,7 +2831,6 @@
   <block id="de03e018f8bc6e06a0b11a6a211dd67e" category="list-text">Refaites<block ref="50929bac7304e38629221d43c18db25e" prefix=" " category="inline-code"></block> avec nouveau<block ref="96423e10b02c1107d4abf4af0c21d097" prefix=" " category="inline-code"></block> paramètre.</block>
   <block id="518df87a5011ff1168a7c6c9a264b38f" category="list-text">Redémarrez le serveur pour l'intégrer avec les chemins d'accès multiples NVMe natifs activés.</block>
   <block id="288bd49c48bf59f751a074cbaac99cf0" category="list-text">Vérifiez que les chemins d'accès multiples NVMe natifs ont été activés après le démarrage de l'hôte.</block>
-  <block id="d061a1419e660c90553f0a82e4f669dc" category="admonition">Pour SLES 15 et RHEL 9, les chemins d'accès multiples NVMe natifs sont activés par défaut et aucune configuration supplémentaire n'est requise.</block>
   <block id="facbcb2fa38d6402945c5fd2c6fcf386" category="list-text">Exécutez le<block ref="3d80983fc82ff72fd51e5d1f7e90c56d" prefix=" " category="inline-code"></block> pour obtenir une liste de<block ref="b2050622ed0fa148dc4a4194ae73002d" prefix=" " category="inline-code"></block> périphériques.</block>
   <block id="4c45d0d12df786bfe97882594b02cae1" category="paragraph">Le résultat de cette commande affiche deux périphériques,<block ref="9366705d699e7a3544a25b9d2bcdf233" prefix=" " category="inline-code"></block> et<block ref="b1a3a6de590e2426a9a7b86299aafe5b" prefix=" " category="inline-code"></block>:</block>
   <block id="07c24368c59a3d6a71b9305c416c7d08" category="list-text">Créez un système de fichiers sur la partition pour chaque<block ref="ac6d43e0f5f22a39f0c0605cad1b8858" prefix=" " category="inline-code"></block> périphérique.</block>
@@ -3000,7 +2997,6 @@
   <block id="b8428f61ce61bd64b7ac15710b5f5150" category="list-text">Exécutez la commande diff pour comparer les fichiers copiés aux originaux.</block>
   <block id="dcd56d80ecc0d78aefb3259c4aa4270b" category="summary">Pour SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.</block>
   <block id="b3e41b03ef621f7814aead1762d37e57" category="doc">Création de systèmes de fichiers (RHEL 8, RHEL 9 et SLES 15)</block>
-  <block id="278d29980d384d87e03c8f99681b0980" category="paragraph">Pour RHEL 8, RHEL 9 et SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.</block>
   <block id="8e11cf4b8ef8251a1517afd1c236dd0f" category="paragraph">Le résultat de cette commande peut être utilisé pour rechercher les périphériques associés<block ref="324b592ebf16794a0c88511b40085a76" prefix=" " category="inline-code"></block> emplacement. Dans l'exemple ci-dessous, il s'agit de<block ref="5873769649ae49105d6cefc7971b78c1" prefix=" " category="inline-code"></block>.</block>
   <block id="742a8771ffc60a44709348dec9c101db" category="admonition">La commande indiquée ci-dessus ne persiste pas après le redémarrage. Le<block ref="59c77c04d2cfe077f4d9c101d11c11ed" prefix=" " category="inline-code"></block> L'exécution de la commande doit s'effectuer après chaque redémarrage pour rétablir les connexions NVMe.</block>
   <block id="6724b622f910a0db3c03e792b0240c06" category="admonition">Le délai de perte de contrôleur recommandé en secondes est de 60 minutes (3600 secondes). Remplacer le réglage par défaut de 600 secondes avec 3600 secondes à l'aide de l'<block ref="7b5c50977caf63926d443c9eae36a207" prefix=" " category="inline-code"></block> option de ligne de commande, comme indiqué dans l'exemple suivant.</block>
@@ -8002,7 +7998,6 @@
   <block id="d0c7f819a9c352ec47123255b7bea069" category="list-text">Configurez le réseau pour les ports iSCSI. Voici des exemples d'instructions pour RHEL et SLES :</block>
   <block id="9dabae4a06d30c9c7f51e5f507819763" category="paragraph">Créez le fichier exemple<block ref="0d7d3fc433b1b9e503de96fc98959275" prefix=" " category="inline-code"></block> avec les contenus suivants.</block>
   <block id="d495950a6cee8eefb9fec72eb4759f52" category="paragraph">Ajouts facultatifs concernant IPv6 :</block>
-  <block id="8a242e9b511ac07bc46f6d5758b40101" category="paragraph">*Red Hat Enterprise Linux 9 (RHEL 9)*</block>
   <block id="42b36daf2d76a2e6ced2edcf1ac0780c" category="paragraph">Utilisez le<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> outil permettant d'activer et de modifier une connexion. L'outil génère un<block ref="b9b1a8ef49e07c55d90e41f053c5f240" prefix=" " category="inline-code"></block> fichier dans<block ref="1580a184ac85703ca1cfde026b32109e" prefix=" " category="inline-code"></block>.</block>
   <block id="a708543f0c471392232ef363aa304233" category="paragraph">Créez le fichier exemple<block ref="07c8ad3b1f5865fe6e3186f131aad980" prefix=" " category="inline-code"></block> avec les contenus suivants.</block>
   <block id="2b9d337912530454459670ef2f6000d4" category="paragraph">Ajout facultatif concernant IPv6 :</block>
@@ -9270,7 +9265,6 @@
   <block id="fb17130ec244634a0532f36a8cfa9912" category="doc">Accès aux volumes NVMe pour les cibles de périphériques virtuels dans E-Series - Linux (NVMe over FC)</block>
   <block id="43c850105df5604a2122f91584d74c9a" category="doc">Configuration des commutateurs FC dans E-Series - Linux (NVMe over FC)</block>
   <block id="f6034c055b35ceacc4497df2f77dfac2" category="doc">Configuration des adresses IP à l'aide du protocole DHCP dans E-Series - Linux (NVMe over FC)</block>
-  <block id="1e7e57c41f6250cf0dd2323e0ebba14a" category="doc">Création de systèmes de fichiers dans E-Series : Linux RHEL 8, RHEL 9 et SLES 15 (NVMe over FC)</block>
   <block id="dcb4a5fa07cd4ed36bb0fb3ad18e00b0" category="doc">Création d'un hôte à l'aide de SANtricity System Manager - Linux (NVMe over FC)</block>
   <block id="d592eb2cd6c39918cf5b03b226488789" category="doc">Affichage des volumes visibles pour l'hôte dans E-Series - Linux (NVMe over FC)</block>
   <block id="b57faba400e703a11e8f1e99bf4f0f59" category="doc">Installer SANtricity Storage Manager pour SMcli (version 11.53 ou antérieure) - Linux (NVMe over FC)</block>
@@ -9285,7 +9279,6 @@
   <block id="639cd8f6ff7a3c560f2d878f2b7127b1" category="doc">Configuration des adresses IP à l'aide du protocole DHCP dans E-Series - Linux (NVMe over InfiniBand)</block>
   <block id="117959d1244ec1b0e9e0c3aeaace2244" category="doc">Configurez les connexions NVMe over InfiniBand de la baie de stockage E-Series - Linux</block>
   <block id="afd02878fb071c80a878b8f7ab1dc1e3" category="doc">Configuration du gestionnaire de sous-réseau dans E-Series - Linux (NVMe over InfiniBand)</block>
-  <block id="2512b2a473d4ffd3d685aefe3f5ce29f" category="doc">Création de systèmes de fichiers dans E-Series : Linux RHEL 8, RHEL 9 et SLES 15 (NVMe over InfiniBand)</block>
   <block id="90a60ec18000092aa65e65fc3e62e2dc" category="doc">Création d'un hôte à l'aide de SANtricity System Manager - Linux (NVMe over InfiniBand)</block>
   <block id="51aada41b528b8fcd1f725914e663229" category="doc">Identification des ID uniques globaux de port hôte dans les systèmes E-Series - Linux (NVMe over InfiniBand)</block>
   <block id="64492487b2dd2794b9708dd549ad379b" category="doc">Détection et connexion au stockage depuis l'hôte dans E-Series - Linux (NVMe over InfiniBand)</block>
@@ -9303,7 +9296,6 @@
   <block id="f4406895abc0e7fb7bba147a1b4018fc" category="doc">Configuration des adresses IP à l'aide du protocole DHCP dans E-Series - Linux (NVMe over RoCE)</block>
   <block id="2e7f926937a19390a696edcd1611efd8" category="doc">Configurez les connexions NVMe over RoCE de la baie de stockage dans E-Series - Linux</block>
   <block id="133ee7ce9eb1e935758f63664a8fc118" category="doc">Configuration du switch dans E-Series - Linux (NVMe over RoCE)</block>
-  <block id="3a0391db7b3c5ce929688d1fd3808797" category="doc">Créez des systèmes de fichiers dans E-Series - Linux RHEL 8, RHEL 9 et SLES 15 (NVMe over RoCE)</block>
   <block id="1d775b87419a4b4faa9188d96fc9f1ef" category="doc">Création d'un hôte à l'aide de SANtricity System Manager - Linux (NVMe over RoCE)</block>
   <block id="c06ab1417d3d38a6274ca96f4817729b" category="doc">Détection et connexion au stockage depuis l'hôte dans E-Series - Linux (NVMe over RoCE)</block>
   <block id="d13fba07fdac58d9571d88a7346d4afc" category="doc">Affichage des volumes visibles pour l'hôte dans E-Series - Linux (NVMe over RoCE)</block>
@@ -9640,7 +9632,6 @@
   <block id="2db2ecd53dfa16abedb03a761e1763e8" category="paragraph">Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU). La taille de MTU par défaut est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 9000.</block>
   <block id="6d169c67d74922fc178491e0bef73793" category="doc">En savoir plus sur l'installation du système de stockage - EF300, EF600, EF300C et EF600C</block>
   <block id="77c49ca57dc8cc81b5609b5c3b6b0120" category="paragraph">*Red Hat Enterprise Linux 8 (RHEL 8)*</block>
-  <block id="c2b5f394c3fe5ec74e8f006f7a1c41f2" category="paragraph">*Red Hat Enterprise Linux 8 et 9 (RHEL 8 et RHEL 9)*</block>
   <block id="f6915e22a07b317f6f9f3f4164551c8d" category="paragraph">Pour SLES 12, les E/S sont dirigées vers les cibles de périphériques virtuels par l’hôte Linux. DM-MP gère les chemins physiques sous-jacents à ces cibles virtuelles.</block>
   <block id="f9a6f2ee656556e80e38f8a39629d913" category="doc">Créer des systèmes de fichiers dans les E-Series - SLES 12 (NVMe sur FC)</block>
   <block id="e6e90f0138a14d2c6523ea13f186d5ef" category="paragraph">Pour SLES 12, vous créez un système de fichiers sur le périphérique DM souhaité et montez le système de fichiers.</block>
@@ -9651,17 +9642,26 @@
   <block id="6ef765942b756be59a09bba2c1bea181" category="summary">Pour SLES 12, vous créez un système de fichiers sur l’espace de noms et montez le système de fichiers.</block>
   <block id="5f72169c48d94cfdf13fa8e7156de8ee" category="doc">Créer des systèmes de fichiers dans les E-Series - Linux SLES 12 (NVMe over InfiniBand)</block>
   <block id="f3b72a76b6437fffe54c5f6a0e82669c" category="section-title">Activer les chemins d’accès multiples DMMP (Device Mapper) SLES 12</block>
-  <block id="6b6ebf19e3cedd310169b72fa687b40a" category="paragraph">Vous devez utiliser le dernier système d’exploitation compatible RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 ou 15 Service Pack. Consultez le<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour une liste complète des dernières exigences.</block>
-  <block id="8cccdb1fea835b32fb7acd0ac498244d" category="paragraph">*RHEL 8 ou RHEL 9*</block>
   <block id="d3f59362d91c4f4d01ccdd309b5bb9fb" category="doc">Créer des systèmes de fichiers dans les E-Series - Linux SLES 12 (NVMe over RoCE)</block>
-  <block id="e0b6fa7380c04b056266419d253d2d07" category="paragraph">SLES 12 utilise Device Mapper Multipath (DMMP) pour les chemins d’accès multiples pour NVMe over RoCE. RHEL 8, RHEL 9 et SLES 15 utilisent un basculement NVMe natif intégré. Selon le système d’exploitation que vous exécutez, une configuration supplémentaire des chemins d’accès multiples est nécessaire pour le faire fonctionner correctement.</block>
-  <block id="31966977d62560abced8790961dab861" category="paragraph">*RHEL 8 et RHEL 9*</block>
   <block id="01d7072c63a7f17dd56f882aa05c191e" category="paragraph">*SLES 12.x ou version ultérieure*</block>
-  <block id="eb9f15fa21e7ecb26458bd00f198d235" category="paragraph">*SLES 12 ou supérieur*</block>
   <block id="fd5ba176689e7b1be93aaa098be59948" category="sidebar">Créer des systèmes de fichiers (SLES 12)</block>
   <block id="4090c38c724effbcef59a93b035aed46" category="cell"><block ref="4090c38c724effbcef59a93b035aed46" category="inline-link-rx"></block></block>
   <block id="43cf2b25070c6d7d19cb9548ac18c968" category="cell"><block ref="43cf2b25070c6d7d19cb9548ac18c968" category="inline-link-rx"></block></block>
   <block id="fc81ed45554cc52f6bb42f4d7c774e51" category="cell"><block ref="fc81ed45554cc52f6bb42f4d7c774e51" category="inline-link-rx"></block></block>
   <block id="23574e6efb4951cab243d0bca21f6801" category="doc">Installez ou mettez à niveau le fichier SANtricity Web Services Proxy et SANtricity Unified Manager.</block>
   <block id="2ba81316cd80bb512d2d7c99312de69e" category="section-title">Nouvelles fonctionnalités de la version 11.90R4</block>
+  <block id="542104cd4a244a7cbb5d99f20366e760" category="paragraph">*Red Hat Enterprise Linux 9 et 10 (RHEL 9 et RHEL 10) et SUSE Linux Enterprise Server 16 (SLES 16)*</block>
+  <block id="0a4aa2ff40d0cf90093b7465550f2a08" category="paragraph">*Red Hat Enterprise Linux 8, 9 et 10 (RHEL 8, RHEL 9 et RHEL 10)*</block>
+  <block id="60a3593eb1cbf82bd1db6d8518190595" category="paragraph">*SUSE Linux Enterprise Server 12, 15 et 16 (SLES 12, SLES 15 et SLES 16)*</block>
+  <block id="0e7753717e818bfa409c8e41fdfb5f27" category="admonition">Cela ne fonctionnera plus sur RHEL 10. Il fonctionne sur RHEL 9 et versions antérieures, ainsi que sur SLES 16 et versions antérieures.</block>
+  <block id="885059743474b89fca8c2d38e2b71705" category="doc">Création de systèmes de fichiers dans la série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 (NVMe sur FC)</block>
+  <block id="35b935d753273a200a6f5f6542889327" category="paragraph">Pour RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16, vous créez un système de fichiers sur le périphérique nvme natif et vous montez le système de fichiers.</block>
+  <block id="6c77b485a16c059dab8257c7b606be3e" category="admonition">Pour SLES 15, SLES 16, RHEL 9 et RHEL 10, le multipathing NVMe natif est activé par défaut et aucune configuration supplémentaire n'est requise.</block>
+  <block id="ac85a2a833e40762042d9152f479d518" category="doc">Création de systèmes de fichiers dans la série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 (NVMe sur InfiniBand)</block>
+  <block id="1c90b820593a79fe35c50b5587f176bb" category="paragraph">Vous devez utiliser la dernière version compatible du système d'exploitation RHEL 8, RHEL 9, RHEL 10, SLES 12, SLES 15 ou SLES 16 Service Pack. Voir le<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> pour obtenir la liste complète des dernières exigences.</block>
+  <block id="5feeb9bdb446ab922f394a940c9ef4b8" category="paragraph">*SLES 12, SLES 15 ou SLES 16*</block>
+  <block id="79b601d0ad8f64996a3f2d1444b5b84d" category="paragraph">*RHEL 8, RHEL 9 ou RHEL 10*</block>
+  <block id="90f919900318df07a49ea42c3e35a350" category="paragraph">*RHEL 9, RHEL 10 ou SLES 16*</block>
+  <block id="9034687d4359fa9bd74cc1439c435374" category="doc">Création de systèmes de fichiers dans la série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 (NVMe sur RoCE)</block>
+  <block id="39ec44e7fd4c2966d363390d0affe00e" category="paragraph">SLES 12 utilise Device Mapper Multipath (DMMP) pour le multipathing pour NVMe sur RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 utilisent un basculement NVMe natif intégré. Selon le système d'exploitation que vous utilisez, une configuration supplémentaire du multipath est nécessaire pour assurer son bon fonctionnement.</block>
 </blocks>
