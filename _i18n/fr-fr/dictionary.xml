@@ -9664,4 +9664,7 @@
   <block id="90f919900318df07a49ea42c3e35a350" category="paragraph">*RHEL 9, RHEL 10 ou SLES 16*</block>
   <block id="9034687d4359fa9bd74cc1439c435374" category="doc">Création de systèmes de fichiers dans la série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 (NVMe sur RoCE)</block>
   <block id="39ec44e7fd4c2966d363390d0affe00e" category="paragraph">SLES 12 utilise Device Mapper Multipath (DMMP) pour le multipathing pour NVMe sur RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 utilisent un basculement NVMe natif intégré. Selon le système d'exploitation que vous utilisez, une configuration supplémentaire du multipath est nécessaire pour assurer son bon fonctionnement.</block>
+  <block id="980295b6698b8b2aea7adc1d9dafed8c" category="section-title">Nouvelles fonctionnalités dans la version 11.90R5</block>
+  <block id="94bf3a177cda972f0b25d90290f4610c" category="paragraph">Cette version corrige uniquement des bogues et n’intègre aucune nouvelle fonctionnalité. Pour plus d’informations sur les modifications apportées dans cette version, veuillez consulter le fichier README de E-Series SANtricity OS 11.90R5.</block>
+  <block id="b2676fbb812b8574fa9249e68163593f" category="paragraph">Cette version ne contient que des modifications mineures et aucune nouvelle fonctionnalité. Pour plus d'informations sur les modifications de cette version, veuillez consulter le fichier README de SANtricity OS 11.90R4 E-Series.</block>
 </blocks>
