@@ -17,6 +17,15 @@ Après avoir préparé la mise à niveau, vous pouvez retirer les contrôleurs e
 
 == Étape 1 : retirer le contrôleur
 
+[role="tabbed-block"]
+====
+.Modèles de contrôleurs EF280 et EF50
+--
+Pour plus d'informations sur le retrait des contrôleurs des systèmes de stockage EF280 et EF50, voir link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 et EF80 - Étape 1 : Retirez le contrôleur"^].
+
+--
+.Autres modèles de contrôleurs E-Series
+--
 Retirez le boîtier du contrôleur pour pouvoir le mettre à niveau avec un nouveau. Vous devez débrancher tous les câbles et retirer les émetteurs-récepteurs SFP. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
 
 .Avant de commencer
@@ -63,10 +72,11 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Déposer le b
 
 . Placez l'ancien boîtier du contrôleur sur une surface plane et sans électricité statique près du plateau d'entraînement du contrôleur avec les leviers de dégagement vers le haut. Positionner le boîtier du contrôleur de manière à pouvoir accéder au capot supérieur.
 . (Conditionnel) si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur.
+. Si vous avez l'intention d'utiliser la batterie de l'ancien contrôleur du nouveau contrôleur, passez à la section suivante ; sinon, passez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].
 
 
-Si vous avez l'intention d'utiliser la batterie de l'ancien contrôleur du nouveau contrôleur, passez à la section suivante ; sinon, passez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].
-
+--
+====
 
 
 == Étape 2 : déposer la batterie

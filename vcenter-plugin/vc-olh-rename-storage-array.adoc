@@ -18,6 +18,6 @@ Vous pouvez modifier le nom de la matrice de stockage affichée sur la page gér
 
 .Étapes
 . Dans la page *Manage*, cochez la case située à gauche du nom de la matrice de stockage.
-. Sélectionnez les points de suspension à l'extrême droite de la ligne, puis sélectionnez *Renommer la matrice de stockage* dans le menu contextuel.
+. Sélectionnez les points de suspension à l'extrême droite de la ligne, puis sélectionnez *Renommer storage array* dans le menu contextuel.
 . Saisissez le nouveau nom et cliquez sur *Enregistrer*.
 

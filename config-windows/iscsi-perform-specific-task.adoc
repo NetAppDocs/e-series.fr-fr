@@ -23,7 +23,7 @@ La configuration des commutateurs est conforme aux recommandations du fournisseu
 .Avant de commencer
 Assurez-vous de disposer des éléments suivants :
 
-* Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau à l'aide de VLAN ou de deux réseaux distincts.
+* Deux réseaux distincts pour une haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI sur des segments de réseau séparés des autres types de trafic en utilisant des VLAN ou deux réseaux distincts.
 * Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
 * Le cas échéant, les trames jumbo activées.
@@ -72,7 +72,7 @@ Vous utilisez l'interface graphique de SANtricity System Manager pour configurer
 
 
 .Description de la tâche
-Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres > configurer les ports iSCSI].
+Cette tâche explique comment accéder à la configuration du port iSCSI depuis la page Matériel. Vous pouvez également accéder à la configuration depuis menu : Paramètres [Système > Configurer les ports iSCSI].
 
 .Étapes
 . Depuis votre navigateur, saisissez l'URL suivante : `+https://<DomainNameOrIPAddress>+`
@@ -90,11 +90,7 @@ Lorsque vous ouvrez System Manager et qu'aucun pool, groupe de volumes, charges 
 +
 Vous utiliserez l'assistant ultérieurement pour effectuer d'autres tâches de configuration.
 
-. Sélectionnez *matériel*.
-. Si le graphique montre les lecteurs, cliquez sur *Afficher le verso du tiroir*.
-+
-Le graphique change pour afficher les contrôleurs au lieu des disques.
-
+. Dans le panneau de gauche, sélectionnez menu:Hardware[Controllers and components].
 . Cliquez sur le contrôleur avec les ports iSCSI que vous souhaitez configurer.
 +
 Le menu contextuel du contrôleur s'affiche.

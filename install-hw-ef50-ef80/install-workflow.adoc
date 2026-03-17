@@ -1,0 +1,34 @@
+---
+permalink: install-hw-ef50-ef80/install-workflow.html 
+sidebar: sidebar 
+keywords:  
+summary: Pour installer et configurer votre système de stockage EF50 ou EF80, vous devez préparer votre site, installer et câbler les composants matériels, mettre le système de stockage sous tension et terminer la configuration et la mise en place du système de stockage. 
+---
+= Installation et configuration - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour installer et configurer votre système de stockage EF50 ou EF80, vous devez préparer votre site, installer et câbler les composants matériels, mettre le système de stockage sous tension et terminer la configuration et la mise en place du système de stockage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"]link:install-prepare.html["Avant l'installation"]
+[role="quick-margin-para"]
+Pour préparer l'installation, aménagez le site, prenez connaissance des précautions de levage pour votre système de stockage, déballez les cartons et comparez leur contenu au bon de livraison, et enregistrez le système de stockage pour accéder aux avantages du support.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]link:install-hardware.html["Installez le matériel"]
+[role="quick-margin-para"]
+Pour installer le matériel, installez le matériel de montage en rack dans l'armoire ou le rack, puis installez et fixez votre système de stockage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]link:install-cable.html["Câblez le matériel"]
+[role="quick-margin-para"]
+Pour câbler le matériel, reliez les contrôleurs entre eux pour activer la mise en miroir inter-contrôleurs, ce qui garantit une redondance complète du système et est utilisé pour la mise en miroir du cache et l'expédition des E/S, puis connectez les contrôleurs à votre réseau hôte.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"]link:install-power-hardware.html["Mettez sous tension le système de stockage"]
+[role="quick-margin-para"]
+Pour mettre votre système de stockage sous tension, branchez un câble d'alimentation à chaque bloc d'alimentation du contrôleur, puis connectez-les à des sources d'alimentation sur des circuits différents
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"]link:install-complete-setup.html["Finalisez la configuration du système de stockage"]
+[role="quick-margin-para"]
+Pour terminer la configuration de votre système de stockage, câblez et configurez les ports de gestion sur les contrôleurs, configurez et gérez votre système de stockage, puis vérifiez que le protocole du module d'I/O hôte est correct.

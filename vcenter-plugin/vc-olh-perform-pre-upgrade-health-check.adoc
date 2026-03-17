@@ -29,7 +29,7 @@ La boîte de dialogue Vérification préalable à la mise à niveau s'ouvre et r
 +
 La progression s'affiche dans la boîte de dialogue pendant la vérification de l'état.
 
-. Lorsque le contrôle d'intégrité est terminé, vous pouvez cliquer sur les points de suspension (...) à droite de chaque ligne pour afficher plus d'informations et effectuer d'autres tâches.
+. Une fois la vérification de l'état terminée, vous pouvez cliquer sur les points de suspension (...) à droite de chaque ligne pour afficher plus d'informations et effectuer d'autres tâches.
 
 
 

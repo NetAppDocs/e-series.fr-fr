@@ -169,10 +169,16 @@ Retirez la batterie du boîtier du contrôleur défectueux afin de pouvoir l'ins
 . Repérez la languette « PRESS » située sur le côté du contrôleur.
 . Déverrouillez la batterie en appuyant sur la languette et en appuyant sur le boîtier de la batterie.
 +
-image::../media/batt_3.png[« Appuyez sur la languette pour déverrouiller la batterie]
+image::../media/batt_3.png[Appuyez sur la touche Tab pour déverrouiller la batterie]
 
-. Presser doucement le boîtier du connecteur le câblage de la batterie. Tirez vers le haut, en débranchant la batterie de la carte.image:../media/batt_2.png["Déposer le connecteur du câblage de la batterie"]
-. Retirez la batterie du contrôleur et placez-la sur une surface plane et antistatique.image:../media/batt_4.png["Soulever la batterie hors du contrôleur"]
+. Presser doucement le boîtier du connecteur le câblage de la batterie. Tirez la batterie vers le haut, en la débranchant de la carte.
++
+image:../media/batt_2.png["Déposer le connecteur du câblage de la batterie"]
+
+. Soulevez la batterie hors du contrôleur et placez-la sur une surface plane et sans électricité statique.
++
+image:../media/batt_4.png["Soulever la batterie hors du contrôleur"]
+
 
 
 

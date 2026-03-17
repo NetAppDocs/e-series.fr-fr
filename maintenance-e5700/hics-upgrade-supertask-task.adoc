@@ -108,6 +108,9 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED de cache a
 *(1)* _cache LED active_
 
 . Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
++
+Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+
 . Met le tiroir contrôleur hors tension.
 +
 .. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.

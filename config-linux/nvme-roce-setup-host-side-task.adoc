@@ -55,6 +55,10 @@ Vous devez utiliser la dernière version compatible du système d'exploitation R
 ----
 # yum install NetworkManager-initscripts-updown
 ----
++
+
+NOTE: Les scripts réseau ne sont pas disponibles pour RHEL 10.
+
 . Procurez-vous le NQN hôte, qui sera utilisé pour configurer l'hôte sur une matrice.
 +
 [listing]

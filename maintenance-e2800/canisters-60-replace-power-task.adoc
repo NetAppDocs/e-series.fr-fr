@@ -56,7 +56,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 . Dans le Gestionnaire système SANtricity, déterminez quelle cartouche d'alimentation est défectueuse.
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware[Controllers and components] dans le panneau de gauche.
 .. Regardez l'icône d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"]située à droite des listes déroulantes *Shelf* pour déterminer quel shelf est le boîtier d'alimentation défectueux.
 +
 Si un composant est défectueux, cette icône est rouge.

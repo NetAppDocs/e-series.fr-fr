@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: 'Connectez les alimentations de chaque composant à des circuits d"alimentation séparés.' 
 ---
-= Câblage de l'alimentation de votre système de stockage (E-Series)
+= Câblage électrique de votre système de stockage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,9 +24,9 @@ La source d'alimentation de votre système de stockage doit être capable de ré
 .Étape
 . Connectez un câble d'alimentation à chacune des unités d'alimentation de votre système de stockage.
 . Connectez les deux câbles d'alimentation de chaque shelf à différentes unités de distribution de l'alimentation dans l'armoire ou le rack.
-. Mettre les deux interrupteurs d'alimentation sous tension.
+. Mettez sous tension les deux alimentations.
 +
 
-NOTE: Les systèmes de stockage EF300 et EF600 ne disposent pas de switchs d'alimentation. Ils se mettent sous tension dès que les câbles sont connectés.
+NOTE: Selon votre système de stockage, les alimentations disposent d'interrupteurs ou il n'y a pas d'interrupteurs et vous devez connecter les câbles d'alimentation pour les mettre sous tension.
 
 

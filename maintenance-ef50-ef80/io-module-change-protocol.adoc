@@ -1,0 +1,210 @@
+---
+permalink: maintenance-ef50-ef80/io-module-change-protocol.html 
+sidebar: sidebar 
+keywords: host protocol change, EF50, EF80 
+summary: 'Vous pouvez changer le protocole sur les modules d"E/S hôte de votre système de stockage EF50 ou EF80 lorsque vous avez besoin d"un protocole différent sur vos modules d"E/S existants, dans le cadre d"une mise à niveau de module d"E/S, ou lorsque le protocole par défaut sur les nouveaux contrôleurs faisant partie d"une nouvelle installation de système de stockage ou d"une mise à niveau de contrôleur n"est pas le protocole que vous souhaitez.' 
+---
+= Modifier le protocole du module d'E/S hôte - EF50 et EF80
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez changer le protocole sur les modules d'E/S hôte de votre système de stockage EF50 ou EF80 lorsque vous avez besoin d'un protocole différent sur vos modules d'E/S existants, dans le cadre d'une mise à niveau de module d'E/S, ou lorsque le protocole par défaut sur les nouveaux contrôleurs faisant partie d'une nouvelle installation de système de stockage ou d'une mise à niveau de contrôleur n'est pas le protocole que vous souhaitez.
+
+.Avant de commencer
+Si vous modifiez le protocole d'hôte dans le cadre d'une procédure matérielle (mise à niveau d'un module d'E/S, installation d'un nouveau système ou mise à niveau d'un contrôleur), vous devez avoir effectué la procédure matérielle applicable.
+
+
+NOTE: Le nouveau matériel doit déjà être installé car le protocole par défaut et la liste des protocoles disponibles (que vous consultez dans cette procédure) sont basés sur les modules d'I/O hôte actuellement installés.
+
+[cols="1,2"]
+|===
+| Si vous modifiez le protocole hôte... | Ensuite... 
+
+
+ a| 
+Sur vos modules d'E/S hôte existants (aucun nouveau matériel n'a besoin d'être installé)
+ a| 
+Poursuivez cette procédure.
+
+
+
+ a| 
+Dans le cadre d'une mise à niveau du module d'E/S
+ a| 
+Mettez à niveau les modules d'E/S de l'hôte avant de poursuivre cette procédure.
+
+Utilisez la link:../maintenance-ef50-ef80/io-module-upgrade.html["Mise à niveau des modules d'E/S pour un EF50 ou un EF80"] procédure.
+
+
+
+ a| 
+Dans le cadre de l'installation d'un nouveau système de stockage
+ a| 
+Terminez l'installation et la configuration du système avant de poursuivre cette procédure.
+
+Utilisez la link:../install-hw-ef50-ef80/install-workflow.html["Installation et configuration pour un EF50 ou un EF80"] procédure.
+
+
+
+ a| 
+Dans le cadre d'une mise à niveau du contrôleur
+ a| 
+Terminez la mise à niveau du contrôleur avant de poursuivre cette procédure.
+
+Commencez par la procédure link:../upgrade-controllers/index.html["En savoir plus sur la mise à niveau des contrôleurs E-Series"].
+
+|===
+.Description de la tâche
+* Modifiez le protocole sur les modules d'E/S de l'hôte en préparant, en arrêtant les opérations d'E/S de l'hôte, en changeant le protocole, puis en configurant l'hôte pour utiliser le nouveau protocole.
+* Le protocole est modifié sur tous les modules d'E/S hôtes de votre système de stockage.
+* Lorsque vous modifiez le protocole sur les modules d'E/S de l'hôte, vous interrompez temporairement l'accès de l'hôte à tous les volumes et rendez le système de stockage indisponible pendant le redémarrage, qui prend quelques minutes.
+
+
+
+
+== Étape 1 : Préparez-vous au changement de protocole
+
+Préparez-vous à modifier le protocole sur les modules d'E/S de l'hôte en vérifiant le protocole actuellement utilisé, en déterminant si vous devez changer le protocole, et, si oui, en planifiant une fenêtre de maintenance pour une interruption.
+
+.Étapes
+. Si vous ne connaissez pas le protocole sur les modules d'E/S hôtes de votre système de stockage, vérifiez-le à l'aide de SANtricity System Manager.
++
+.. Sélectionnez *Settings* > *System*.
+.. Dans la section *Paramètres supplémentaires*, sélectionnez *Modifier le protocole d'E/S de l'hôte* pour ouvrir cette page.
+.. Consultez le protocole par défaut affiché dans le champ *Host I/O Protocol*.
++
+
+NOTE: Si vous souhaitez voir la liste des protocoles disponibles pour vos modules d'E/S hôte, sélectionnez le menu déroulant dans le champ *Protocole d'E/S hôte*. La liste des protocoles est basée sur les modules d'E/S hôtes actuellement installés.
+
+
+
+. L'étape suivante dépend du fait que le protocole par défaut soit celui que vous souhaitez ou non :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Le protocole par défaut est le protocole que vous souhaitez
+ a| 
+Aucune action n'est requise. Vous pouvez quitter cette procédure.
+
+
+
+ a| 
+Le protocole par défaut n'est pas le protocole que vous souhaitez
+ a| 
+Poursuivez cette procédure pour changer le protocole.
+
+|===
+. Planifiez une fenêtre de maintenance avec interruption pour cette procédure.
+
+
+
+
+== Étape 2 : Arrêtez les opérations d’E/S de l’hôte
+
+Vous devez interrompre toutes les opérations d'E/S de l'hôte, puis supprimer tous les hôtes définis du système de stockage avant de modifier le protocole.
+
+
+NOTE: Vous ne pouvez pas accéder aux données du système de stockage tant que vous n'avez pas terminé avec succès la modification du protocole.
+
+.Étapes
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre le système de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les étapes suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux LUNs sur le système de stockage.
++
+
+NOTE: La procédure exacte pour arrêter les opérations d'E/S de l'hôte dépend du système d'exploitation et de la configuration, ce qui dépasse le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S de l'hôte dans votre environnement, envisagez d'éteindre l'hôte ou contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^].
+
++
+
+CAUTION: *Perte de données possible* -- si vous continuez cette procédure pendant les opérations d'E/S, vous risquez de perdre des données.
+
+
+
+. Sur chaque contrôleur, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de continuer cette procédure.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active (vert). Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+. Confirmez que les opérations sur les contrôleurs sont terminées, à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Storage* > *Operations in progress* pour afficher l'écran Overview.
+.. Attendez que toutes les opérations soient terminées et que l'écran Overview affiche *No operations currently in progress* avant de passer à l'étape suivante.
+
+
+. Supprimez tous les hôtes définis du système de stockage.
++
+Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-host-or-host-cluster.html["Supprimer un hôte ou un cluster d'hôtes dans SANtricity System Manager"^] procédure.
+
+
+
+
+
+== Étape 3 : Modifier le protocole
+
+À l'aide de SANtricity System Manager, modifiez le protocole sur les modules d'E/S de l'hôte, attendez que les contrôleurs terminent leur cycle de redémarrage, confirmez que leur statut est Optimal, puis recréez les définitions de l'hôte.
+
+.Étapes
+. Sélectionnez *Settings* > *System*.
+. Dans la section *Paramètres supplémentaires*, sélectionnez *Modifier le protocole d'E/S de l'hôte* pour ouvrir cette page.
+. Dans le champ *Host I/O Protocol*, sélectionnez le menu déroulant et choisissez le protocole que vous souhaitez utiliser.
++
+La liste des protocoles est basée sur les modules d'E/S hôtes actuellement installés.
+
+. Saisissez *CHANGE* dans le champ prévu à cet effet pour confirmer votre modification.
+. Sélectionnez le bouton *Change*.
+. Attendez que les contrôleurs aient terminé leur cycle de redémarrage.
++
+Cela peut prendre environ cinq minutes.
+
+. Lorsque les contrôleurs sont de nouveau en ligne, confirmez que leur état est Optimal à l'aide de SANtricity System Manager.
+. Recréez les définitions d'hôte.
++
+Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Créer un hôte manuellement dans SANtricity System Manager"^] procédure.
+
+
+
+
+
+== Étape 4 : Configurer l’hôte pour utiliser le nouveau protocole
+
+Après avoir modifié le protocole hôte, vous devez configurer l'hôte pour qu'il utilise le nouveau protocole.
+
+Pour obtenir des instructions étape par étape, consultez le guide correspondant à votre système de stockage :
+
+* link:../config-linux/index.html["Configuration Linux Express"]
+* link:../config-vmware/index.html["Configuration VMware Express"]
+* link:../config-windows/index.html["Configuration Windows Express"]
++
+Certains paramètres peuvent varier. Vérifier le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour des instructions spécifiques et des paramètres supplémentaires recommandés pour votre solution.
+
+

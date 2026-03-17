@@ -69,7 +69,7 @@ NOTE: Si des événements critiques non résolus se sont produits au cours des d
 
 . Si des modules d'E/S sont connectés au matériel, procédez comme suit. Sinon, passez à l' <<step2_install_drive_shelf,Étape 2 : installez le tiroir disque et mettez-le sous tension.>>
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Sélectionnez l'icône *modules d'E/S (IOM)*.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[Icône IOM (ESMS)]
@@ -192,7 +192,7 @@ image::../media/hot_ef_0.png[Exemple de câblage de tiroir disque]
 +
 image::../media/hot_ef_1.png[Exemple de câblage de tiroir disque]
 
-. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
+. Dans SANtricity System Manager, cliquez sur menu:Hardware[Contrôleurs et composants].
 +
 
 NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir contrôleur n'est disponible.
@@ -238,7 +238,7 @@ Vous connectez le tiroir disque au contrôleur A, confirmez l'état du module d'
 +
 image::../media/hot_e4000_cabling_1.png[Câblage du tiroir disque]
 
-. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
+. Dans SANtricity System Manager, cliquez sur menu:Hardware[Contrôleurs et composants].
 +
 
 NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir contrôleur n'est disponible.
@@ -282,7 +282,7 @@ Pour terminer l'ajout à chaud, vérifiez s'il n'y a pas d'erreur et vérifiez q
 .Étapes
 . Dans le Gestionnaire système SANtricity, cliquez sur *Accueil*.
 . Si le lien intitulé *Recover from problemes* apparaît au centre de la page, cliquez sur le lien et résolvez les problèmes indiqués dans le Recovery Guru.
-. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*, puis faites défiler la liste vers le bas si nécessaire pour afficher le nouveau tiroir disque ajouté.
+. Dans SANtricity System Manager, cliquez sur menu:Hardware[Controllers and components], puis faites défiler vers le bas, si nécessaire, pour voir le tiroir de disque nouvellement ajouté.
 . Pour les disques qui ont été installés dans un autre système de stockage, ajoutez un disque à la fois au tiroir qui vient d'être installé. Attendez que chaque lecteur soit reconnu avant d'insérer le disque suivant.
 +
 Lorsqu'un lecteur est reconnu par le système de stockage, la représentation de l'emplacement du lecteur dans la page *Hardware* s'affiche sous la forme d'un rectangle bleu.

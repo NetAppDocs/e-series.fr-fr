@@ -83,7 +83,7 @@ CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pen
 +
 La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
 
-. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Depuis la page d'accueil de SANtricity System Manager, sélectionnez menu:Storage[Operations in Progress]. Attendez la fin de toutes les opérations avant de passer à l'étape suivante.
 . Met le tiroir contrôleur hors tension.
 +
 .. Etiqueter puis débrancher les deux câbles d'alimentation du tiroir contrôleur.

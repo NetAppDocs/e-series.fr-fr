@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity, 11.9, 11.8 
+keywords: whats new, new features, SANtricity, 12.0, 11.9, 11.8, EF80, EF50, E4000, EF300, EF600, E2800, EF280, E5700, EF570, 
 summary: Nouvelles fonctionnalités de SANtricity OS. 
 ---
 = Nouveautés de SANtricity OS
@@ -12,8 +12,56 @@ summary: Nouvelles fonctionnalités de SANtricity OS.
 
 
 [role="lead"]
-Le tableau suivant décrit les nouvelles fonctionnalités des dernières versions de SANtricity OS pour la gestion intégrée des contrôleurs E4000, EF300/EF300C, EF600/EF600C, E2800/EF280 et E5700/EF570.
+Le tableau suivant décrit les nouvelles fonctionnalités des dernières versions de SANtricity OS pour la gestion embarquée des contrôleurs EF80, EF50, E4000, EF300, EF600, E2800/EF280 et E5700/EF570.
 
+
+
+== Nouvelles fonctionnalités dans la version 12.0
+
+
+NOTE: La version 12.0 de SANtricity OS est uniquement compatible avec les nouveaux systèmes de stockage 100 % Flash EF80 et EF50.
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Nouveaux modèles de systèmes de stockage – systèmes de stockage 100 % Flash EF80 et EF50
+ a| 
+Cette version introduit les systèmes de stockage 100 % Flash EF80 et EF50, entièrement NVMe. Les EF80 et EF50 prennent en charge 24 disques SSD NVMe et une seule carte d'interface d'hôte (HIC) par contrôleur. Les interfaces d'hôte NVMe over Fabrics prises en charge incluent NVMe over RoCE, NVMe over IB pour EF80, et NVMe over FC pour EF50. Les interfaces SCSI prises en charge incluent Fibre Channel.
+
+Les SSD NVMe haute capacité de 30 To ou 60 To sont également pris en charge avec les EF80 et EF30. Les EF80 et EF30 sont compatibles uniquement pour une utilisation avec les Dynamic Disk Pool, sans prise en charge du RAID classique.
+
+
+
+ a| 
+Nouvelle interface utilisateur pour SANtricity System Manager
+ a| 
+Pour les nouveaux contrôleurs EF80 et EF50, l'interface utilisateur de SANtricity System Manager a été repensée pour offrir une apparence et une expérience plus modernes. La nouvelle interface comprend une navigation par panneau latéral et une ergonomie améliorée pour simplifier les tâches de gestion.
+
+
+
+ a| 
+Les noms alternatifs de sujet (SAN) pour le certificat de serveur n'autorisent désormais que les lettres, les chiffres et les tirets
+ a| 
+Lors de la création ou de la modification d'un certificat serveur dans SANtricity System Manager ou Unified Manager, le champ Subject Alternative Names (SANs) n'accepte désormais que les lettres, les chiffres et les tirets. Cette modification renforce la sécurité et garantit la compatibilité avec les normes du secteur pour les certificats SSL/TLS.
+
+
+
+ a| 
+La taille des segments des Dynamic Disk Pools est désormais fixée par défaut à 32K pour les systèmes SSD et NVMe-based.
+ a| 
+Pour les Dynamic Disk Pools sur les systèmes SSD et NVMe, la taille de segment par défaut a été modifiée à 32K. Auparavant, la taille de segment par défaut des Dynamic Disk Pools était fixée à 128K pour ces systèmes. Ce changement optimise les performances pour les charges de travail impliquant un mélange d'opérations d'E/S petites et grandes.
+
+
+
+ a| 
+L'éditeur de scripts est désormais disponible dans SANtricity System Manager
+ a| 
+Un nouvel éditeur de scripts est désormais disponible dans SANtricity System Manager. L'éditeur de scripts vous permet de créer ou de modifier un fichier de script, d'enregistrer un fichier de script sur le disque local de la station de gestion du stockage ou de charger un fichier de script depuis le disque. L'éditeur de scripts offre des fonctionnalités de vérification de la syntaxe et d'exécution de commandes pour la gestion de votre système de stockage. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/e-series-santricity/sm-support/use-script-editor.html["Utilisation de l'éditeur de script"^].
+
+|===
 
 
 == Nouvelles fonctionnalités dans la version 11.90R5
@@ -157,14 +205,14 @@ La taille de la clé de certificat de gestion pour le certificat auto-signé des
  a| 
 `-identifyDevices` paramètre
  a| 
-Une nouvelle `-identifyDevices` Le paramètre est maintenant disponible dans le SMcli. Ce nouveau paramètre vous permet de rechercher tous les périphériques de bloc natifs SCSI associés à vos matrices de stockage. Pour plus d'informations, voir le lien : Paramètres de ligne de commande https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices[Downloadable SMcli^].
+Un nouveau  `-identifyDevices` paramètre est désormais disponible dans le SMcli. Ce nouveau paramètre permet de rechercher tous les périphériques de stockage par blocs SCSI natifs associés à vos Storage Arrays. Pour plus d'informations, consultez link:https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices["Paramètres de ligne de commandes SMcli téléchargeables"^].
 
 
 
  a| 
 Statistiques du noyau Ethernet
  a| 
-Une nouvelle option Ethernet Kernel Statistics est désormais disponible dans la page View iSCSI Statistics Packages de System Manager. Cette nouvelle option vous permet d'afficher les statistiques des pilotes de noyau de plate-forme du périphérique iSCSI. Pour plus d'informations, consultez le lien : progiciels de statistiques iSCSI https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html[View^].
+Une nouvelle option « Statistiques du noyau Ethernet » est désormais disponible sur la page « Afficher les packages de statistiques iSCSI » du System Manager. Cette nouvelle option permet de consulter les statistiques des pilotes du noyau de la plateforme pour le périphérique iSCSI. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html["Afficher les packages de statistiques iSCSI"^].
 
 
 

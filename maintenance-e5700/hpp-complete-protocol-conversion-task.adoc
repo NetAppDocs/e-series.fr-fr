@@ -33,6 +33,7 @@ Cette tâche ne s'applique pas si vous convertissez une nouvelle baie de stockag
 Vous devez configurer les switchs utilisés pour transporter le trafic iSCSI selon les recommandations du fournisseur pour l'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
 . Dans SANtricity System Manager, sélectionnez menu:Hardware [Configure iSCSI ports].
+. Cliquez sur le contrôleur souhaité et sélectionnez *Configure iSCSI ports*.
 . Sélectionnez les paramètres du port.
 +
 Vous pouvez configurer votre réseau iSCSI de plusieurs façons. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
@@ -49,9 +50,6 @@ NOTE: Si vous avez besoin d'instructions pour ajouter des hôtes ou des clusters
 La boîte de dialogue Host Settings s'affiche.
 
 .. Cliquez sur l'onglet *ports hôte*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Boîte de dialogue des paramètres de l'hôte]
-
 .. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
 +
 La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.
@@ -95,9 +93,6 @@ Zoning les commutateurs permettent aux hôtes de se connecter au stockage et de 
 La boîte de dialogue Host Settings s'affiche.
 
 .. Cliquez sur l'onglet *ports hôte*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Boîte de dialogue des paramètres de l'hôte]
-
 .. Cliquez sur *Ajouter* et utilisez la boîte de dialogue *Ajouter un port hôte* pour associer un nouvel identifiant de port hôte à l'hôte.
 +
 La longueur de l'identificateur de port hôte nom est déterminée par la technologie de l'interface hôte. Les noms d'identificateur de port hôte FC doivent comporter 16 caractères. Les noms d'identificateur de port hôte iSCSI ont un maximum de 223 caractères. Le port doit être unique. Un numéro de port qui a déjà été configuré n'est pas autorisé.

@@ -1,0 +1,48 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prerequisite, replace the controller module 
+summary: 'Avant de remplacer le contrôleur de votre système de stockage EF50 ou EF80, assurez-vous de respecter les conditions requises pour un remplacement réussi. Cela inclut la vérification que vous avez un contrôleur en panne, la vérification de l"état de votre système de stockage, l"acquisition des outils nécessaires à la procédure, ainsi que la disponibilité d"un poste de gestion et d"un navigateur pour accéder à SANtricity System Manager.' 
+---
+= Exigences pour le remplacement d'un contrôleur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de remplacer le contrôleur de votre système de stockage EF50 ou EF80, assurez-vous de respecter les conditions requises pour une intervention réussie. Cela inclut la vérification que vous avez un contrôleur en panne, la vérification de l'état de votre système de stockage, l'acquisition des éléments nécessaires à la procédure, ainsi que la disponibilité d'un poste de gestion et d'un navigateur pour accéder à SANtricity System Manager.
+
+* Vérifiez que vous avez un contrôleur défaillant. Vous pouvez le déterminer de deux manières :
++
+** Le Recovery Guru dans SANtricity System Manager vous a indiqué de remplacer le contrôleur.
+** Le voyant « Attention » orange du contrôleur est allumé, indiquant que le contrôleur présente une défaillance.
+
+
+
+
+* Vérifiez que les conditions suivantes de votre système de stockage sont remplies afin de pouvoir remplacer le contrôleur défectueux pendant que votre système de stockage est sous tension et effectue des opérations d'E/S hôte :
++
+** Le deuxième contrôleur du châssis a le statut Optimal.
+** Le champ *OK pour retirer* dans la zone Détails du Recovery Guru dans SANtricity System Manager affiche *Oui*, indiquant qu'il est possible de retirer le contrôleur défectueux en toute sécurité.
+
+
+* Assurez-vous de disposer des éléments suivants :
++
+** Un contrôleur de remplacement avec le même numéro de pièce que le contrôleur que vous remplacez.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une surface de travail plate et sans électricité statique.
+** Étiquettes pour identifier chaque câble que vous allez déconnecter du contrôleur.
+** Un poste de gestion doté d'un navigateur pouvant accéder à SANtricity System Manager pour le contrôleur.
++
+Vous pouvez ouvrir l'interface de SANtricity System Manager en pointant le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.
+
++
+Vous pouvez également utiliser la ligne de commandes (CLI) pour effectuer certaines des procédures. Téléchargez le package CLI (fichier zip) à l'aide de SANtricity System Manager : *Paramètres* > *Système* > *Modules complémentaires* et sélectionnez *Command Line Interface*. Vous pouvez ensuite exécuter des commandes CLI depuis une invite de commandes du système d'exploitation, telle que l'invite C: sous DOS.
+
+
+
+
+
+.Et la suite ?
+Après avoir satisfait aux exigences relatives au remplacement du contrôleur, link:controller-replace-prepare.html["se préparer au remplacement du contrôleur"].

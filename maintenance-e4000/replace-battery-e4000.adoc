@@ -142,7 +142,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 ** Depuis SANtricity System Manager :
 +
 ... Sélectionnez *matériel*.
-... Si le graphique montre les lecteurs, sélectionnez *contrôleur & composants* pour afficher les contrôleurs.
+... Si le graphique affiche les lecteurs, sélectionnez *Controller & Components* pour afficher les contrôleurs
 ... Sélectionnez le contrôleur que vous souhaitez placer hors ligne.
 ... Dans le menu contextuel, sélectionnez *placer hors ligne* et confirmez que vous souhaitez effectuer l'opération.
 +
@@ -341,8 +341,8 @@ NOTE: Si vous ne pouvez pas résoudre le problème, contactez le support techniq
 
 . Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
 +
-.. Sélectionnez *stockage › volumes*. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez *plus › Modifier la propriété* pour afficher les propriétaires de volumes.
-.. Si les volumes appartiennent tous au propriétaire privilégié, passez à l'étape 5.
+.. Sélectionnez *Stockage › Volumes*. Depuis la page *Tous les volumes*, vérifiez que les volumes sont attribués à leurs propriétaires préférés. Sélectionnez *Plus › Modifier la propriété* pour afficher les propriétaires des volumes
+.. Si tous les volumes appartiennent au propriétaire privilégié, continuez à l’étape 4.
 .. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Aller à *plus › redistribuer les volumes*.
 .. Si seuls certains des volumes sont renvoyés à leur propriétaire préféré après la distribution automatique ou manuelle, vous devez vérifier la fonctionnalité Recovery Guru pour détecter les problèmes de connectivité hôte.
 .. Si aucun Recovery Guru n'est présent ou si, après avoir suivi les étapes de Recovery Guru, les volumes ne sont toujours pas renvoyés à leurs propriétaires préférés, contactez le support technique.

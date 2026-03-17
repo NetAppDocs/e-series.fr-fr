@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Identifiez le ventilateur que vous devez remplacer en consultant les messages d'erreur de la console.
+. Retirez le ventilateur défectueux :
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Remplacement du ventilateur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+| Tenez les deux côtés du ventilateur aux points de contact bleus. 
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+| Tirez le ventilateur vers le haut et sortez-le de son support. 
+|===
+. Déballez le ventilateur de remplacement et placez-le sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour du ventilateur défectueux.
+
+. Insérez le ventilateur de remplacement en l'alignant dans les guides, puis appuyez jusqu'à ce que le connecteur du ventilateur soit complètement inséré dans la prise.
+

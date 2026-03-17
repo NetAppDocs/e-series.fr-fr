@@ -103,7 +103,7 @@ Conservez tous les matériaux d'emballage pour les réutiliser lors du retour du
 
 . Appuyez sur la languette orange pour libérer la poignée du boîtier du ventilateur.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[Languette de déverrouillage du boîtier du ventilateur]
 
 +
 *(1)* _taquet que vous appuyez pour relâcher la poignée du boîtier du ventilateur_

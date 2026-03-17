@@ -1,0 +1,41 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Assurez-vous de disposer des éléments suivants :
++
+** Le module d'E/S de remplacement.
++
+Assurez-vous de remplacer le module d'E/S défectueux par le même type de module d'E/S. Vous ne pouvez pas installer un module d'E/S d'un type différent.
+
++
+Vous devez avoir le même type et le même nombre de modules d'E/S dans chaque contrôleur de votre système de stockage.
+
++
+
+CAUTION: *Possibilité de perte d'accès aux données* -- La présence de modules d'E/S incompatibles ou mal appariés entraîne le verrouillage des contrôleurs lors de la mise sous tension.
+
+** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
+** Une surface de travail plane et antistatique.
+** Étiquettes permettant d'identifier chaque câble connecté au module d'E/S défectueux.
+** Un poste de gestion doté d'un navigateur permettant d'accéder à SANtricity System Manager pour le contrôleur défaillant.
++
+Pour ouvrir l'interface du Gestionnaire système, saisissez dans votre navigateur le nom de domaine ou l'adresse IP du contrôleur défaillant.
+
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager :
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur défaillant.
+
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+

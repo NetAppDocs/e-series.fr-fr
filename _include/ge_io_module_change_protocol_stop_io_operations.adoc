@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Assurez-vous qu'aucune opération d'E/S n'est en cours entre le système de stockage et tous les hôtes connectés. Par exemple, vous pouvez effectuer les étapes suivantes :
++
+** Arrêtez tous les processus qui impliquent les LUN mappées du stockage vers les hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappées du stockage aux hôtes.
+** Démontez tous les systèmes de fichiers associés aux LUNs sur le système de stockage.
++
+
+NOTE: La procédure exacte pour arrêter les opérations d'E/S de l'hôte dépend du système d'exploitation et de la configuration, ce qui dépasse le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S de l'hôte dans votre environnement, envisagez d'éteindre l'hôte ou contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^].
+
++
+
+CAUTION: *Perte de données possible* -- si vous continuez cette procédure pendant les opérations d'E/S, vous risquez de perdre des données.
+
+
+
+. Sur chaque contrôleur, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de continuer cette procédure.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active (vert). Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+. Confirmez que les opérations sur les contrôleurs sont terminées, à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Storage* > *Operations in progress* pour afficher l'écran Overview.
+.. Attendez que toutes les opérations soient terminées et que l'écran Overview affiche *No operations currently in progress* avant de passer à l'étape suivante.
+
+
+. Supprimez tous les hôtes définis du système de stockage.
++
+Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-host-or-host-cluster.html["Supprimer un hôte ou un cluster d'hôtes dans SANtricity System Manager"^] procédure.
+
+

@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+* Vérifiez que vous avez un contrôleur défaillant. Vous pouvez le déterminer de deux manières :
++
+** Le Recovery Guru dans SANtricity System Manager vous a indiqué de remplacer le contrôleur.
+** Le voyant « Attention » orange du contrôleur est allumé, indiquant que le contrôleur présente une défaillance.
+
+
+
+
+* Vérifiez que les conditions suivantes de votre système de stockage sont remplies afin de pouvoir remplacer le contrôleur défectueux pendant que votre système de stockage est sous tension et effectue des opérations d'E/S hôte :
++
+** Le deuxième contrôleur du châssis a le statut Optimal.
+** Le champ *OK pour retirer* dans la zone Détails du Recovery Guru dans SANtricity System Manager affiche *Oui*, indiquant qu'il est possible de retirer le contrôleur défectueux en toute sécurité.
+
+
+* Assurez-vous de disposer des éléments suivants :
++
+** Un contrôleur de remplacement avec le même numéro de pièce que le contrôleur que vous remplacez.
+** Un bracelet antistatique ou d'autres précautions antistatiques.
+** Une surface de travail plate et sans électricité statique.
+** Étiquettes pour identifier chaque câble que vous allez déconnecter du contrôleur.
+** Un poste de gestion doté d'un navigateur pouvant accéder à SANtricity System Manager pour le contrôleur.
++
+Vous pouvez ouvrir l'interface de SANtricity System Manager en pointant le navigateur vers le nom de domaine ou l'adresse IP du contrôleur.
+
++
+Vous pouvez également utiliser la ligne de commandes (CLI) pour effectuer certaines des procédures. Téléchargez le package CLI (fichier zip) à l'aide de SANtricity System Manager : *Paramètres* > *Système* > *Modules complémentaires* et sélectionnez *Command Line Interface*. Vous pouvez ensuite exécuter des commandes CLI depuis une invite de commandes du système d'exploitation, telle que l'invite C: sous DOS.
+
+
+
+

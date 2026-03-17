@@ -31,7 +31,7 @@ Vous devez avoir initialisé la LUN et la formater avec un système de fichiers.
 ----
 . Pour vérifier que les chemins d'accès multiples fonctionnent, modifiez la propriété du volume.
 +
-.. Dans l'interface utilisateur graphique de SANtricity System Manager, accédez à *Storage* > *volumes*, puis sélectionnez *plus* > *changer la propriété*.
+.. Dans le SANtricity System Manager, accédez à *Stockage* > *Volumes*, puis sélectionnez l’icône *ellipsis* > *Changer la propriété du volume*.
 .. Dans la boîte de dialogue Modifier la propriété du volume, utilisez la liste déroulante *propriétaire préféré* pour sélectionner l'autre contrôleur pour l'un des volumes de la liste, puis confirmez l'opération.
 .. Vérifiez que vous pouvez toujours accéder aux fichiers de la LUN.
 +

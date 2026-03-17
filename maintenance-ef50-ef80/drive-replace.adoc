@@ -1,0 +1,219 @@
+---
+permalink: maintenance-ef50-ef80/drive-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the drives 
+summary: 'Remplacez un disque dans votre système de stockage EF50 ou EF80 lorsqu"un disque tombe en panne ou nécessite une mise à niveau.' 
+---
+= Remplacer un disque - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remplacez un disque défaillant pendant que votre système de stockage EF50 ou EF80 reçoit des E/S afin de garantir l'accès aux données et les performances du système.
+
+.Description de la tâche
+* Remplacez un disque en le préparant, en le remplaçant, en terminant le remplacement, puis en renvoyant la pièce défectueuse à NetApp.
+* Le module Recovery Guru de SANtricity System Manager surveille les disques du système de stockage et peut vous avertir d'une panne disque imminente ou d'une panne disque réelle. Lorsqu'un disque est en panne, sa LED d'attention (ambre) s'allume.
+
+
+
+
+== Étape 1 : Préparez-vous à remplacer le disque
+
+Préparez-vous au remplacement du disque en vous assurant que le disque a subi une panne, en confirmant que vous disposez d'un disque de remplacement pris en charge, en vous assurant d'avoir accès à SANtricity System Manager, en prenant des précautions contre les décharges électrostatiques et en localisant physiquement le disque en panne.
+
+.Étapes
+. Si le gourou de la restauration de SANtricity System Manager vous a averti d'une _panne de disque imminente_, mais que le disque n'est pas encore défaillant, suivez les instructions de la fonctionnalité Recovery Guru qui indique la panne du disque.
+. Assurez-vous de disposer d'un disque de remplacement adapté à la configuration de votre système de stockage.
++
+Si nécessaire, vous pouvez utiliser SANtricity System Manager pour confirmer :
+
++
+.. Sélectionnez *Hardware* > *Drives*.
+.. Sélectionnez le disque en panne sur le graphique pour afficher son menu contextuel, puis sélectionnez *Afficher les paramètres*.
+.. Vérifiez que la capacité du disque de remplacement est égale ou supérieure à celle du disque que vous remplacez et qu'il possède les fonctionnalités attendues.
++
+Par exemple, si vous remplacez un disque compatible Secure, assurez-vous que le disque de remplacement soit également compatible Secure.
+
+
+
+. Assurez-vous de disposer d'un poste de gestion équipé d'un navigateur pouvant accéder à SANtricity System Manager pour l'un ou l'autre des contrôleurs.
++
+Pour ouvrir l'interface System Manager, pointez le navigateur vers l'un des nom de domaine ou adresses IP du contrôleur.
+
+. Prévenez les décharges électrostatiques (ESD) lors de la manipulation et de l'installation d'un disque :
++
+** Assurez-vous d'avoir un bracelet antistatique (ESD).
++
+Portez toujours un bracelet antistatique relié à la terre par une surface non peinte du châssis de votre système de stockage. Si vous n'avez pas de bracelet antistatique, touchez une surface non peinte du châssis de votre système de stockage avant de manipuler le disque.
+
+** Conservez le lecteur dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+** Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux. N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
+** Assurez-vous d'avoir une surface de travail plane et antistatique.
+** Conservez le sachet ESD et tous les matériaux d'emballage pour renvoyer le disque en panne ou utilisez un emballage approuvé lors de l'expédition d'un disque.
+** Éviter les champs magnétiques. Tenir les disques à l'écart des dispositifs magnétiques.
++
+Les champs magnétiques peuvent détruire toutes les données du lecteur et causer des dommages irréparables au circuit d'entraînement.
+
+
+
+. Évitez tout dommage physique lors de la manipulation et de l'installation d'un disque :
++
+
+CAUTION: Les disques durs sont fragiles ; une mauvaise manipulation est l'une des principales causes de panne disque.
+
++
+** Utilisez toujours deux mains lors du retrait, de l'installation ou du transport d'un lecteur.
+** N’insérez jamais un disque dans un panneau de disque de force. Exercez toujours une pression douce mais ferme pour engager complètement le loquet du disque.
+** Placez les entraînements sur des surfaces amorties et ne placez jamais de disques sur l'un de l'autre.
+** Ne pas heurter les entraînements contre d'autres surfaces.
+
+
+. Vous pouvez activer les voyants de localisation (bleus) du système de stockage (à l'avant du système de stockage et sur les deux contrôleurs) pour faciliter le repérage physique du système de stockage concerné. À l'aide de SANtricity System Manager, sélectionnez *Hardware* > *Controllers and components*, sélectionnez l'onglet *Controller shelf*, puis dans le menu contextuel, sélectionnez *Turn on locator light*.
+. Si nécessaire, vous pouvez localiser physiquement le disque défaillant dans votre système de stockage en faisant clignoter son voyant d'attention (ambre). À l'aide de SANtricity System Manager, sélectionnez *Hardware* > *Drives*, sélectionnez le disque défaillant sur le graphique pour afficher son menu contextuel, puis sélectionnez *Turn on locator light*.
++
+
+NOTE: Vous devez retirer le panneau situé à l'avant du système de stockage pour voir les voyants LED du disque.
+
+
+
+
+
+== Étape 2 : Remplacez le disque
+
+Remplacez le disque défectueux par un neuf.
+
+
+NOTE: Vous devez installer le disque de remplacement dès que possible après avoir retiré le disque défectueux.
+
+.Étapes
+. Si ce n'est pas déjà fait, retirez le panneau de la face avant du système de stockage.
+. Retirez le disque défaillant :
++
+
+NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 secondes, puis réinstallez-le. Pour la procédure de restauration, reportez-vous au logiciel de gestion du stockage.
+
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Retirer le disque NVMe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Appuyez sur le bouton de déverrouillage noir situé sur la face du disque pour ouvrir la poignée de came.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Tournez la poignée de came vers le bas pour désengager le disque du plan médian.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+.. Faites glisser partiellement le disque hors du logement du disque à l'aide de la poignée à came.
+.. Attendez 60 secondes pour que le disque s'arrête de tourner.
+.. À l'aide de deux mains, retirez complètement le disque du logement du disque.
+
+
+|===
+. Placez le disque sur une surface antistatique rembourrée, à l'abri des champs magnétiques.
+. Attendez 60 secondes pour que le logiciel système reconnaisse que le disque a été retiré.
+. Déballez le disque de remplacement et placez-le sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour du disque défectueux.
+
+. Insérez le disque de remplacement :
++
+.. Ouvrir la poignée de came.
+.. À l'aide des deux mains, insérez le disque de remplacement dans la baie de disque ouverte, en poussant fermement jusqu'à ce que le disque s'arrête.
+.. Fermez la poignée de came de sorte que le disque soit complètement inséré dans le plan médian et que la poignée de came s'enclenche.
++
+Veillez à fermer lentement la poignée de la came afin qu'elle s'aligne correctement avec la face du disque.
+
++
+La LED verte du disque s’allume lorsque le disque est correctement inséré.
+
+
+
+
+
+
+
+== Étape 3 : Terminer le remplacement du disque
+
+Confirmez que le disque de remplacement fonctionne correctement et assurez-vous que la reconstruction du disque a commencé.
+
+.Étapes
+. Confirmez que le disque de remplacement fonctionne correctement en vérifiant le comportement de la LED et, si ce n'est pas le cas, prenez les mesures correctives appropriées.
++
+
+NOTE: Lors de la première insertion d'un disque, son voyant d'avertissement peut être allumé. Toutefois, le voyant devrait s'éteindre au bout d'une minute si le disque de remplacement fonctionne correctement.
+
++
+[cols="1,2"]
+|===
+| Si le comportement du voyant LED du disque de remplacement est le suivant... | Ensuite... 
+
+
+ a| 
+Le voyant d'alimentation est allumé ou clignote, et le voyant d'attention est éteint
+ a| 
+Le disque de remplacement fonctionne correctement.
+
+Passez à l'étape suivante.
+
+
+
+ a| 
+Le voyant d'alimentation est éteint
+ a| 
+Le disque dur n'est peut-être pas installé correctement.
+
+.. Retirez le disque, attendez 60 secondes, puis réinstallez-le.
+.. Si le gourou de la restauration de SANtricity System Manager affiche toujours un problème, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
+
+
+
+
+ a| 
+Le voyant d'attention est allumé
+ a| 
+Le nouveau disque pourrait être défectueux.
+
+.. Remplacez le nouveau disque par un autre disque neuf.
+.. Si le gourou de la restauration de SANtricity System Manager affiche toujours un problème, sélectionnez *revérifier* pour vous assurer que le problème a été résolu.
+
+
+|===
+. Si l'assistant de récupération dans SANtricity System Manager indique que la reconstruction du disque n'a pas démarré automatiquement, démarrez la reconstruction manuellement, lorsque cela vous est demandé par NetApp Support ou l'assistant de récupération, et suivez les étapes suivantes :
++
+
+NOTE: Selon votre configuration, le contrôleur peut reconstruire automatiquement les données sur le nouveau disque. Si le système de stockage utilise des disques de secours à chaud, le contrôleur peut devoir effectuer une reconstruction complète sur le disque de secours avant de pouvoir copier les données sur le disque de remplacement. Ce processus de reconstruction augmente le temps nécessaire pour terminer cette procédure.
+
++
+.. Sélectionnez *Hardware* > *Drive*.
+.. Sélectionnez le disque de remplacement sur le graphique pour afficher son menu contextuel, puis sélectionnez *Reconstruct*.
+.. Confirmez que vous souhaitez effectuer cette opération.
++
+Une fois la reconstruction du disque terminée, le groupe de volumes est à l'état optimal.
+
+
+
+. Réinstallez le panneau.
+
+
+
+
+== Étape 4 : Retournez la pièce défectueuse à NetApp
+
+Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.

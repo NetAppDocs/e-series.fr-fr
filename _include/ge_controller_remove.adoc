@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, puis retirez le contrôleur défectueux du châssis.
+
+.Étapes
+. Sur le contrôleur défectueux, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de retirer le contrôleur défectueux.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active. Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+
+
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Étiquetez chaque câble qui est attaché au contrôleur défectueux.
+. Débranchez le cordon d'alimentation de l'alimentation du contrôleur défectueux.
++
+
+NOTE: L'alimentation (PSU) ne possède pas d'interrupteur.
+
+. Débranchez tous les câbles du contrôleur défectueux.
+. Retirez le contrôleur défectueux :
++
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (du côté gauche du contrôleur) lors du retrait d'un contrôleur :
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Opération de poignée de contrôleur pour retirer un contrôleur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Aux deux extrémités du contrôleur, poussez les languettes de verrouillage verticales vers l'extérieur pour libérer les poignées et les ramener à leur position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+** Tirez les poignées vers vous pour désengager le contrôleur du plan médian.
++
+Lorsque vous tirez, les poignées se déploient depuis le contrôleur et ensuite vous sentez une certaine résistance, continuez à tirer.
+
+** Faites glisser le contrôleur hors du châssis tout en soutenant le bas du contrôleur, puis placez-le sur une surface de travail plane et exempte d'électricité statique.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Si nécessaire, redressez les poignées (à côté des languettes) pour les dégager.
+
+|===
+. Ouvrez le couvercle du contrôleur en tournant la vis moletée dans le sens antihoraire pour la desserrer, puis ouvrez le couvercle.
+

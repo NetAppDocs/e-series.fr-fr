@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Remettez en ligne le contrôleur défectueux.
+
+.Étapes
+. Mettez le contrôleur en ligne à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Hardware* > *Controllers and components* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous souhaitez mettre en ligne pour afficher son menu contextuel.
+.. Sélectionnez *Place online*, puis confirmez que vous souhaitez effectuer l'opération.
++
+Le système met le contrôleur en ligne.
+
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Lorsque le contrôleur est de nouveau en ligne :
++
+.. Confirmez que son statut est Optimal.
+.. Confirmez que le voyant d'attention sur le contrôleur est éteint.
++
+Si l'état n'est pas Optimal ou si l'un des voyants d'alerte est allumé, vérifiez que tous les câbles sont correctement branchés et que le contrôleur est correctement installé. Si nécessaire, retirez puis réinstallez le contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^] avant de continuer cette procédure. Si nécessaire, collectez les données de support pour votre système de stockage à l'aide de SANtricity System Manager.
+
+
+
+

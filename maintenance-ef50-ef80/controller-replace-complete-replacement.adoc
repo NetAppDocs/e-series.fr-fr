@@ -1,0 +1,73 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-complete-replacement.html 
+sidebar: sidebar 
+keywords: ef50, ef80, how to complete the controller replacement process 
+summary: Pour terminer le remplacement du contrôleur de votre système de stockage EF50 ou EF80, assurez-vous que le micrologiciel du système de stockage est à jour, vérifiez que les volumes sont restitués à leurs propriétaires, collectez les données de support du système et renvoyez la pièce défectueuse à NetApp. 
+---
+= Terminez le remplacement du contrôleur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour terminer le remplacement du contrôleur de votre système de stockage EF50 ou EF80, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que les volumes sont réattribués à leurs contrôleurs respectifs, collectez les données de support système et renvoyez la pièce défectueuse à NetApp.
+
+
+
+== Étape 1 : Assurez-vous d’utiliser la dernière version de SANtricity OS, vérifiez la propriété du volume et collectez les données de support
+
+À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs propriétaires et collectez les données de support afin de pouvoir reprendre les opérations.
+
+.Étapes
+. Assurez-vous que la dernière version de SANtricity OS est installée sur le système de stockage :
++
+.. Sélectionnez *Support* > *Upgrade Center*
+.. Au besoin, installez la dernière version.
+
+
+. Vérifiez que tous les volumes sont retournés à leurs contrôleurs propriétaires :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Recovery Guru est présent et indique que les volumes ne sont pas sur leur chemin préféré (pas retournés à leurs contrôleurs propriétaires)
+ a| 
+.. Redistribuez les volumes à leurs contrôleurs propriétaires, en sélectionnant *Stockage* > *Volumes* > *Plus* et dans le menu déroulant, sélectionnez *Redistribuer les volumes*.
+.. Vérifiez que tous les volumes sont redistribués à leurs contrôleurs propriétaires en vérifiant si Recovery Guru est présent et indique toujours que les volumes ne sont pas sur leur chemin préféré.
+
+
+
+NOTE: Si les volumes ne sont toujours pas restitués à leurs contrôleurs propriétaires, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"].
+
+
+
+ a| 
+Recovery Guru est absent (il semble que tous les volumes aient été renvoyés à leurs contrôleurs propriétaires)
+ a| 
+Vérifiez que tous les volumes sont bien rendus à leurs contrôleurs propriétaires en sélectionnant *Storage* > *Volumes* > *More* et, dans le menu déroulant, sélectionnez *Change volume ownership* pour afficher les propriétaires des volumes.
+
+|===
+. Collectez les données de support pour votre système de stockage :
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+
+
+== Étape 2 : Retournez la pièce défectueuse à NetApp
+
+Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.
+
+.Et la suite ?
+Le remplacement de votre contrôleur est terminé. Vous pouvez reprendre les opérations normales.

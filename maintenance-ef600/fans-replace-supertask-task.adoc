@@ -163,7 +163,7 @@ Placez le contrôleur en ligne, collectez les données de support et reprenez le
 
 . Mettez le contrôleur en ligne.
 +
-.. Dans System Manager, accédez à la page hardware.
+.. Dans System Manager, accédez à la page *matériel*.
 .. Sélectionnez *Afficher le verso du contrôleur*.
 .. Sélectionner le contrôleur avec le ventilateur remplacé.
 .. Sélectionnez *placer en ligne* dans la liste déroulante.

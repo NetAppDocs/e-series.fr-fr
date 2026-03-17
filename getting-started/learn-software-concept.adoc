@@ -94,7 +94,7 @@ Affichez les données de diagnostic, gérez les mises à niveau et configurez Au
 
 == SANtricity Unified Manager
 
-Unified Manager est un logiciel en ligne utilisé pour gérer l'ensemble de votre domaine. La vue centrale présente l'état de toutes les baies E-Series et EF-Series les plus récentes, telles que les baies E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C et EF600C. Vous pouvez également effectuer des opérations par lots sur des matrices de stockage sélectionnées.
+Unified Manager est un logiciel web permettant de gérer l'ensemble de votre domaine. Depuis une vue centrale, vous pouvez consulter l'état de toutes les baies E-Series et EF-Series récentes, telles que les EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C et EF600C. Vous pouvez également effectuer des opérations par lots sur les baies de stockage sélectionnées.
 
 Unified Manager est installé sur un serveur de gestion avec le proxy de services Web. Pour accéder à Unified Manager, ouvrez un navigateur et entrez l'URL pointant vers le serveur sur lequel le proxy de services Web est installé.
 
@@ -170,4 +170,4 @@ Web Services comprend une documentation API qui vous permet d'interagir directem
 
 == Interface de ligne de commandes
 
-L'interface de ligne de commande est une application logicielle qui permet de configurer et de surveiller les matrices de stockage. À l'aide de la CLI, vous pouvez exécuter des commandes à partir d'une invite du système d'exploitation, telle que l'invite DOS C:, un chemin du système d'exploitation Linux ou un chemin du système d'exploitation Solaris.
+L'interface en ligne de commandes (CLI) est une application logicielle qui permet de configurer et de surveiller les baies de stockage. À l'aide de la CLI, vous pouvez exécuter des commandes à partir d'une invite de commandes du système d'exploitation, telle que l' `DOS C:`invite de commandes, un chemin du système d'exploitation Linux ou un chemin du système d'exploitation Solaris.

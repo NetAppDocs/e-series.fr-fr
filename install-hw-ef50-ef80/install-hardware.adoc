@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Après avoir préparé l"installation de votre système de stockage EF50 ou EF80, installez le matériel de montage en rack dans une armoire ou un rack de télécommunications, puis installez et fixez votre système de stockage.' 
+---
+= Installez le matériel - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après avoir préparé l'installation de votre système de stockage EF50 ou EF80, installez le matériel de montage en rack dans une armoire ou un rack de télécommunications, puis installez et fixez votre système de stockage.
+
+Si votre système de stockage est livré dans une armoire, vous pouvez ignorer cette procédure et passer à link:install-cable.html["Câblez le matériel"].
+
+.Avant de commencer
+* Préparez une zone de travail plate et sans électricité statique.
+* Procurez-vous un bracelet antistatique et prenez les précautions anti-statiques.
+* Assurez-vous que les instructions d'installation sont fournies avec le matériel de montage en rack. Sinon, consultez link:../rackmount-hardware.html["Matériel de montage en rack"^].
+* Soyez attentif aux précautions de levage liées au poids de votre système de stockage. Voir link:install-prepare.html#step-2-understand-the-lifting-precautions["Comprendre les précautions de levage"^].
+* Comprenez que le flux d'air à travers le système de stockage entre par l'avant, où les disques sont installés, et s'évacue par l'arrière, où se trouvent les ports.
+
+
+.Étapes
+. Installez le matériel de montage en rack de votre système de stockage en utilisant les instructions incluses avec le matériel de montage en rack.
++
+
+CAUTION: Installez les éléments de fixation en rack dans l'espace disponible le plus bas de l'armoire ou du rack afin d'éviter que le système de stockage ne bascule lors de son installation.
+
+. Installez et sécurisez votre système de stockage dans l'armoire ou le rack télécom :
++
+.. Positionnez le système de stockage sur les rails, puis, en le soutenant par le bas, faites-le glisser en place.
+.. Fixez le système de stockage à l'armoire ou au rack telco à l'aide des vis de montage fournies.
+
+
+. Fixez le panneau à l'avant du système de stockage.
++
+.. Positionnez le panneau devant le storage system de manière à ce que les trous à chaque extrémité soient alignés avec les fixations du storage system.
+.. Enclenchez le panneau.
+
+
+
+
+.Et la suite ?
+Après avoir installé le matériel de votre système de stockage, link:install-cable.html["câbler le matériel"].

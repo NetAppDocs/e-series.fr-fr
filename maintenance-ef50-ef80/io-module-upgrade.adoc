@@ -1,0 +1,294 @@
+---
+permalink: maintenance-ef50-ef80/io-module-upgrade.html 
+sidebar: sidebar 
+keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
+summary: 'Vous pouvez mettre à niveau les modules d"E/S de votre système de stockage EF50 ou EF80 afin d"augmenter le nombre de ports d"hôte pour une connectivité réseau améliorée et d"accroître la capacité de votre système à gérer le trafic de données.' 
+---
+= Mettre à niveau les modules d'E/S - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage EF50 ou EF80 afin d'augmenter le nombre de ports d'hôte pour une connectivité réseau améliorée et d'accroître la capacité de votre système à gérer le trafic de données.
+
+.Description de la tâche
+* Dans cette procédure, le terme _module d'E/S_ est utilisé à la place de cartes d'interface d'hôte (HIC).
+* Vous pouvez mettre à niveau les modules d'E/S en remplaçant les modules d'E/S existants ou en ajoutant des modules d'E/S aux emplacements d'E/S inutilisés.
++
+Les emplacements d'E/S inutilisés doivent être munis de modules obturateurs afin de prévenir d'éventuels problèmes thermiques et d'assurer la conformité EMC.
+
+* Mettez à niveau les modules d'E/S en préparant, en mettant hors tension les deux contrôleurs, en mettant à niveau les modules d'E/S dans les deux contrôleurs, en mettant sous tension les deux contrôleurs, en vérifiant que la mise à niveau a réussi et, si nécessaire, en vérifiant et en modifiant le protocole du module d'interface d'hôte.
++
+Il n'est pas nécessaire de retirer les contrôleurs du châssis, car les modules d'E/S sont accessibles avec les contrôleurs en place.
+
+* Vous devez mettre les deux contrôleurs hors tension avant de débrancher les câbles de tout module d'E/S.
+* Vous pouvez activer les voyants de localisation (bleus) du système de stockage (à l'avant du système de stockage et sur les deux contrôleurs) pour faciliter le repérage physique du système de stockage concerné. À l'aide de SANtricity System Manager, sélectionnez *Hardware* > *Controllers and components*, sélectionnez l'onglet *Controller shelf*, puis dans le menu contextuel, sélectionnez *Turn on locator light*.
+
+
+
+
+== Étape 1 : Préparez-vous à mettre à niveau les modules d'E/S
+
+Préparez la mise à niveau des modules d'E/S en planifiant une fenêtre de maintenance avec interruption, en rassemblant les outils et équipements nécessaires et en sauvegardant la base de données de configuration du système de stockage.
+
+.Étapes
+. Planifiez une fenêtre de maintenance avec interruption pour cette procédure. Vous ne pouvez pas accéder aux données sur le système de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration de module d'E/S lorsqu'ils sont sous tension, l'alimentation doit être coupée lorsque vous mettez à niveau les modules d'E/S.
+. Assurez-vous de disposer des éléments suivants :
++
+** Les nouveaux modules d'E/S vers lesquels vous effectuez la mise à niveau.
++
+Assurez-vous que les modules d'E/S vers lesquels vous effectuez la mise à niveau sont pris en charge par votre système de stockage, que vous disposez du même type et du même nombre de modules d'E/S pour chaque contrôleur, et que vous comprenez la priorité des emplacements (le nouveau module d'E/S doit être installé dans le même emplacement sur chaque contrôleur).
+
++
+
+CAUTION: *Possibilité de perte d'accès aux données* -- La présence de modules d'E/S incompatibles ou mal appariés entraîne le verrouillage des contrôleurs lors de la mise sous tension.
+
++
+Si nécessaire, vous pouvez vérifier les modules d'E/S pris en charge et la priorité des emplacements pour votre système de stockage à https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+** Câbles pour connecter les nouveaux modules d'E/S à votre réseau.
+** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
+** Une surface de travail plane et antistatique.
+** Une station de gestion avec un navigateur pouvant accéder à SANtricity System Manager pour les contrôleurs.
++
+Pour ouvrir l'interface du Gestionnaire système, saisissez dans votre navigateur le nom de domaine ou l'adresse IP du contrôleur cible.
+
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager :
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur défaillant.
+
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+
+
+== Étape 2 : Éteignez les deux contrôleurs
+
+Mettez hors tension les deux contrôleurs du système de stockage afin de pouvoir mettre à niveau en toute sécurité les modules d'E/S des deux contrôleurs.
+
+.Étapes
+. Depuis la page d'accueil de SANtricity System Manager, assurez-vous que le système de stockage présente un état Optimal.
++
+
+NOTE: Si le statut n'est pas optimal, utilisez le Recovery Guru ou contactez  https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^] pour résoudre le problème.
+
+. Assurez-vous qu'aucune opération d'E/S n'a lieu entre le système de stockage et tous les hôtes connectés.
++
+Par exemple, vous pouvez effectuer les étapes suivantes :
+
++
+** Arrêtez tous les processus qui impliquent les LUNs mappés du système de stockage aux hôtes.
+** Assurez-vous qu'aucune application n'écrit de données sur les LUN mappés du système de stockage vers les hôtes.
+** Démontez tous les systèmes de fichiers associés aux volumes sur le système de stockage.
++
+
+NOTE: La procédure exacte pour arrêter les opérations d'E/S de l'hôte dépend du système d'exploitation et de la configuration, ce qui dépasse le cadre de ces instructions. Si vous ne savez pas comment arrêter les opérations d'E/S de l'hôte dans votre environnement, envisagez d'éteindre l'hôte ou contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^].
+
++
+
+CAUTION: *Perte de données possible* -- si vous poursuivez cette procédure pendant les opérations d'E/S, l'application hôte risque de perdre l'accès aux données car le stockage n'est pas accessible.
+
+
+
+. Sur chaque contrôleur, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de retirer le contrôleur défectueux.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active (vert). Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+. Vérifiez que les opérations sur les contrôleurs sont terminées dans SANtricity System Manager :
++
+.. Sélectionnez *Storage* > *Operations in progress* pour afficher l'écran Overview.
+.. Attendez que toutes les opérations soient terminées et que l'écran Overview affiche *No operations currently in progress* avant de passer à l'étape suivante.
+
+
+. Éteignez les deux contrôleurs :
++
+.. Étiquetez puis débranchez le câble d'alimentation des deux contrôleurs.
+.. Attendez que toutes les LED des deux contrôleurs s'éteignent.
+
+
+
+
+
+
+== Étape 3 : Mise à niveau des modules d’E/S
+
+Débranchez les câbles des modules d'E/S que vous souhaitez mettre à niveau (sauf si vous disposez de modules d'E/S de masquage), remplacez les modules d'E/S ou les modules d'E/S de masquage par les nouveaux modules d'E/S, puis câblez les nouveaux modules d'E/S.
+
+.Description de la tâche
+Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Sur l'un des contrôleurs, débranchez le câblage du module d'E/S que vous retirez, sauf s'il s'agit d'un module de masquage d'E/S.
++
+Vous pouvez étiqueter les câbles pour savoir d'où ils proviennent. Cependant, selon le type de module d'E/S vers lequel vous effectuez la mise à niveau, il se peut que vous ne recâbliez pas sur les mêmes ports ou que vous ne puissiez pas réutiliser les mêmes câbles.
+
+. Retirez le module d'E/S ou le module de masquage d'E/S de l'emplacement cible.
++
+L'illustration suivante montre le retrait d'un module de masquage d'E/S.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Retirez un module de masquage d'E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout numéro 1"]
+ a| 
+Sur le module d'E/S ou le module de masquage d'E/S, tournez la vis moletée dans le sens antihoraire pour la desserrer.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout numéro 2"]
+ a| 
+Retirez le module d'E/S ou le module de masquage d'E/S du contrôleur à l'aide de la languette située à gauche et de la vis moletée.
+
+|===
+. Déballez le nouveau module d'E/S et placez-le sur une surface plane et antistatique à proximité du système de stockage.
+. Installez le nouveau module d'E/S :
++
+.. Alignez le module d'E/S avec les bords de l'ouverture de l'emplacement du contrôleur.
+.. Enfoncez délicatement le module d'E/S à fond dans le logement, en veillant à bien insérer le module dans le connecteur.
++
+Vous pouvez utiliser la languette située à gauche et la vis moletée pour insérer le module d'E/S.
+
+.. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
+
+
+. Connectez le module d'E/S au réseau hôte.
++
+Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu relatif à l'installation et à la configuration du système pour le câblage du réseau hôte.
+
+. Répétez ces étapes pour mettre à niveau un module d'E/S dans l'autre contrôleur.
+
+
+
+
+== Étape 4 : Mettez les deux contrôleurs sous tension
+
+Mettez les deux contrôleurs sous tension.
+
+.Étapes
+. Branchez le câble d'alimentation sur les deux contrôleurs.
++
+Les contrôleurs commencent à démarrer.
+
+. Vérifiez les voyants des contrôleurs pour vous assurer que la communication entre les contrôleurs est rétablie :
++
+** Le voyant d'attention reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Lorsque les contrôleurs sont de nouveau en ligne :
++
+.. Confirmez que leur statut est optimal.
+.. Confirmez que le voyant d'attention de chaque contrôleur est éteint.
++
+Si l'état n'est pas Optimal ou si l'un des voyants Attention est allumé, confirmez que tous les câbles sont correctement connectés.
+
++
+
+NOTE: Si vous ne parvenez pas à résoudre le problème, contactez https://www.netapp.com/company/contact-us/support/["Support NetApp"^]. Au besoin, collectez les données de support de votre système de stockage à l'aide de SANtricity System Manager.
+
+
+
+
+
+
+
+== Étape 5 : Terminez la mise à niveau du module d’E/S
+
+À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs respectifs, collectez les données de support afin de pouvoir reprendre les opérations et, si nécessaire, vérifiez et modifiez le protocole du module d'interface d'hôte.
+
+.Étapes
+. Assurez-vous que la dernière version de SANtricity OS est installée :
++
+.. Sélectionnez *Support* > *Upgrade Center*.
+.. Au besoin, installez la dernière version.
+
+
+. Vérifiez que tous les volumes sont renvoyés à leurs contrôleurs propriétaires :
++
+.. Sélectionnez *Storage* > *Volumes*.
+.. Sur la page *Tous les volumes*, vérifiez que les volumes sont distribués à leurs contrôleurs propriétaires.
+.. Sélectionnez *More* > *Change volume ownership* pour afficher les propriétaires des volumes.
+
+
+. L'étape suivante dépend du fait que les volumes soient renvoyés ou non à leurs contrôleurs propriétaires :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Les volumes appartiennent tous à leurs contrôleurs propriétaires
+ a| 
+Passez à l'étape suivante.
+
+
+
+ a| 
+Aucun des volumes n'est renvoyé à son contrôleur propriétaire
+ a| 
+Sélectionnez *Stockage* > *Volumes* > *Plus* et dans le menu déroulant, sélectionnez *Redistribuer les volumes* pour renvoyer les volumes à leurs contrôleurs propriétaires.
+
+
+
+ a| 
+Seuls certains volumes sont retournés à leurs contrôleurs propriétaires après auto-distribution ou distribution manuelle
+ a| 
+Consultez le Recovery Guru pour les problèmes de connectivité hôte.
+
+S'il n'y a pas de Recovery Guru présent ou si, après avoir suivi les étapes du Recovery Guru, les volumes ne sont toujours pas restitués à leurs contrôleurs propriétaires, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
+|===
+. Collectez les données de support pour votre système de stockage :
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Si vous devez vérifier et modifier le protocole du module d'E/S hôte, utilisez la procédure xref:io-module-change-protocol.html[Modifier le protocole du module d'E/S hôte pour un EF50 ou un EF80].
+

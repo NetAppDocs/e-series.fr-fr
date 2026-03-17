@@ -66,6 +66,25 @@ Avant de procéder à la mise à niveau vers les contrôleurs E4000, annulez le 
 
 
 
+* *Câblage miroir EF50 et EF80*
++
+Les systèmes EF80 et EF50 utilisent des connexions externes haut débit 200GbE/100GbE pour permettre la communication inter-contrôleur entre les deux contrôleurs. Chaque contrôleur est équipé d'une carte d'interface dédiée installée dans l'emplacement 4. Cette carte offre deux ports et inclut deux câbles 200GbE de 0,5 m avec le système.
+
++
+Utilisez ces câbles pour connecter les ports du contrôleur comme suit :
+
++
+** Port e4a du contrôleur A vers le port e4a du contrôleur B
+** Port e4b sur le contrôleur A vers le port e4b sur le contrôleur B
++
+
+NOTE: Il est essentiel de connecter les câbles exactement comme décrit. Pour plus d'informations, voir https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Câblez les connexions de mise en miroir entre contrôleurs - EF50 et EF80"].
+
+
+
++
+N’utilisez aucun autre port hôte (Slot 1, Slot 2 ou Slot 3) pour la communication entre contrôleurs, car cela n’est pas pris en charge. Un câblage inter-contrôleurs correct est essentiel au bon fonctionnement des baies EF50 et EF80.
+
 
 
 
@@ -76,6 +95,60 @@ Examinez les chemins de mise à niveau pris en charge pour chaque modèle de bai
 
 [role="tabbed-block"]
 ====
+.Compatibilité de mise à niveau des contrôleurs EF50 et EF80
+--
+[cols="h,d,d,d"]
+|===
+| Chemin de mise à niveau | Batterie | Prise en charge des fonctionnalités | Tiroirs SAS-3 
+
+
+| De EF300 à EF50 ou EF80  a| 
+Commandez une nouvelle batterie.
+ a| 
+* EF50 et EF80 prennent uniquement en charge les configurations duplex
+* Les EF50 et EF80 prennent en charge les cartes d'interface d'hôte Fibre Channel 64Gb
+* L'EF80 prend en charge les cartes d'interface d'hôte NVMe double 200 GbE sur RoCE et NVMe sur Infiniband
+* EF50 et EF80 prennent en charge jusqu'à 24 disques NVMe par contrôleur
+* EF50 et EF80 prennent en charge les configurations de disques NVMe TLC et QLC
+* EF50 et EF80 ne prennent pas en charge les ports hôtes de la carte mère
+* EF50 et EF80 ne prennent pas en charge la mise en miroir synchrone ou asynchrone
+* EF50 et EF80 ne prennent pas en charge les Remote Storage Volumes
+* EF50 et EF80 ne prennent pas en charge les volumes à provisionnement fin
+* EF50 prend en charge jusqu'à 2 cartes d'interface d'hôte, et EF80 prend en charge jusqu'à 3 cartes d'interface d'hôte.
+
+
+
+NOTE: Lors de la mise à niveau d'EF300 vers EF50 ou EF80, vous pouvez configurer le protocole d'hôte via l'interface utilisateur de SANtricity System Manager. Pour plus d'informations, consultez  https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/io-module-change-protocol.html["Modifier le protocole du module d'E/S hôte - EF50 et EF80"].
+ a| 
+* EF50 et EF80 ne prennent pas en charge l'extension SAS.
+
+
+
+
+| De EF600 à EF80  a| 
+Commandez une nouvelle batterie.
+ a| 
+* L'EF80 ne prend en charge que les configurations duplex
+* EF80 prend en charge les cartes d'interface d'hôte Fibre Channel 64Gb
+* L'EF80 prend en charge les cartes d'interface d'hôte NVMe double 200 GbE sur RoCE et NVMe sur Infiniband
+* EF80 prend en charge jusqu'à 24 disques NVMe par contrôleur
+* EF50 et EF80 prennent en charge les configurations de disques NVMe TLC et QLC
+* EF80 ne prend pas en charge les ports hôtes de la carte mère
+* EF80 ne prend pas en charge la mise en miroir synchrone ou asynchrone
+* EF80 ne prend pas en charge les Remote Storage Volumes
+* EF80 ne prend pas en charge les volumes à provisionnement fin
+* EF80 prend en charge jusqu'à 3 cartes d'interface d'hôte.
++
+
+NOTE: Lors de la mise à niveau d'EF600 vers EF80, vous pouvez configurer le protocole d'hôte via l'interface utilisateur de SANtricity System Manager. Pour plus d'informations, consultez  https://docs.netapp.com/us-en/e-series//maintenance-ef50-ef80/io-module-change-protocol.html["Modifier le protocole du module d'E/S hôte - EF50 et EF80"].
+
+
+ a| 
+* EF80 ne prend pas en charge l'extension SAS.
+
+
+|===
+--
 .Compatibilité de mise à niveau du contrôleur E4000
 --
 [cols="h,d,d,d"]
@@ -191,7 +264,7 @@ Des étapes supplémentaires sont nécessaires lors de la mise à niveau d'une b
  a| 
 Les snapshots hérités ne sont pas pris en charge sur la baie E2700.
  a| 
-Les contrôleurs 5400, E5500 et E5600 ne doivent pas être placés dans des tiroirs SAS-3.
+Les contrôleurs E5400, E5500 et E5600 ne doivent pas être placés dans des tiroirs SAS-3.
 
 
 

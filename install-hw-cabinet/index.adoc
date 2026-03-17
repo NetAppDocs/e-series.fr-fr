@@ -4,14 +4,16 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
 summary: 'Présentation de l"installation des tiroirs disques dans une armoire E-Series 3040 40U' 
 ---
-= Installation des tiroirs dans l'armoire 3040 40U (E-Series)
+= Installez les plateaux dans l'armoire 3040 40U - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez installer les tiroirs disques contrôleur et les tiroirs disques d'extension suivants dans une armoire E-Series 3040 40U :
+Vous pouvez installer les plateaux de contrôleur-disque suivants et les plateaux de disque d'extension dans l'armoire E-Series 3040 40U.
+
+Si vos plateaux de contrôleur-disque ou de plateaux de disque d'extension ne sont pas répertoriés ci-dessous, consultez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour vérifier si vos plateaux de contrôleur-disque ou de plateaux de disque d'extension sont pris en charge.
 
 * Tiroirs disques de contrôleur E2612, E2624 et E2660
 * Tiroirs disques de contrôleur E2712, E2724 et E2760

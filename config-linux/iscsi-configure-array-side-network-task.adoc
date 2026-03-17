@@ -22,7 +22,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 .Description de la tâche
-Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel de System Manager. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres > configurer les ports iSCSI].
+Cette procédure explique comment accéder à la configuration des ports iSCSI depuis la page Matériel du System Manager. Vous pouvez également accéder à la configuration depuis menu:System[Paramètres > Système > Configurer les ports iSCSI].
 
 .Étapes
 . Depuis votre navigateur, saisissez l'URL suivante : `+https://<DomainNameOrIPAddress>+`
@@ -40,11 +40,7 @@ L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volum
 +
 Vous utiliserez l'assistant ultérieurement pour effectuer d'autres tâches de configuration.
 
-. Sélectionnez *matériel*.
-. Si le graphique montre les lecteurs, cliquez sur *Afficher le verso du tiroir*.
-+
-Le graphique change pour afficher les contrôleurs au lieu des disques.
-
+. Dans le panneau de gauche, sélectionnez menu:Hardware[Controllers and components].
 . Cliquez sur le contrôleur avec les ports iSCSI que vous souhaitez configurer.
 +
 Le menu contextuel du contrôleur s'affiche.

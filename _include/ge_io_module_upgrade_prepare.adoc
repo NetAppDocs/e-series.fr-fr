@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Planifiez une fenêtre de maintenance avec interruption pour cette procédure. Vous ne pouvez pas accéder aux données sur le système de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration de module d'E/S lorsqu'ils sont sous tension, l'alimentation doit être coupée lorsque vous mettez à niveau les modules d'E/S.
+. Assurez-vous de disposer des éléments suivants :
++
+** Les nouveaux modules d'E/S vers lesquels vous effectuez la mise à niveau.
++
+Assurez-vous que les modules d'E/S vers lesquels vous effectuez la mise à niveau sont pris en charge par votre système de stockage, que vous disposez du même type et du même nombre de modules d'E/S pour chaque contrôleur, et que vous comprenez la priorité des emplacements (le nouveau module d'E/S doit être installé dans le même emplacement sur chaque contrôleur).
+
++
+
+CAUTION: *Possibilité de perte d'accès aux données* -- La présence de modules d'E/S incompatibles ou mal appariés entraîne le verrouillage des contrôleurs lors de la mise sous tension.
+
++
+Si nécessaire, vous pouvez vérifier les modules d'E/S pris en charge et la priorité des emplacements pour votre système de stockage à https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+** Câbles pour connecter les nouveaux modules d'E/S à votre réseau.
+** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
+** Une surface de travail plane et antistatique.
+** Une station de gestion avec un navigateur pouvant accéder à SANtricity System Manager pour les contrôleurs.
++
+Pour ouvrir l'interface du Gestionnaire système, saisissez dans votre navigateur le nom de domaine ou l'adresse IP du contrôleur cible.
+
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager :
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur défaillant.
+
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+

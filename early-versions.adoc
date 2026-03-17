@@ -25,12 +25,19 @@ Consultez les liens ci-dessous pour accéder à la documentation relative aux ve
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Ajout du second contrôleur aux systèmes E2600 et E2700"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["Modifiez ou ajoutez des protocoles hôtes"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Conversion d'une alimentation CA à une alimentation CC"^]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2589397["Guide de mise à niveau des contrôleurs - modèles de contrôleurs existants"^]
 
 
 
 
 == Documentation logicielle des versions antérieures
+
+
+
+=== SANtricity Release 11.9
+
+* https://docs.netapp.com/us-en/e-series-santricity-119/index.html["Aide de System Manager"^]
+* https://docs.netapp.com/us-en/e-series-santricity-119/index.html["Aide de Unified Manager"^]
+
 
 
 

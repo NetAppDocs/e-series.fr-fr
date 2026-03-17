@@ -14,6 +14,9 @@ summary: Vous pouvez connecter un hôte directement à un contrôleur ou utilise
 Vous pouvez connecter un hôte directement à un contrôleur (topologie à connexion directe) ou utiliser des commutateurs (topologie de commutateur) pour connecter un hôte à un contrôleur.
 
 
+NOTE: Les informations suivantes ne s'appliquent pas à tous les systèmes de stockage. Pour le câblage d'interface d'hôte spécifique à votre système de stockage, consultez link:../getting-started/getup-run-concept.html["Démarrage rapide de la gamme E-Series"^] et cliquez sur le lien correspondant à votre système de stockage.
+
+
 
 == Câblage pour topologie à connexion directe
 

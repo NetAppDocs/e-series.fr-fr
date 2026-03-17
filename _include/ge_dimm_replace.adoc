@@ -1,0 +1,69 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Localisez la barrette DIMM défectueuse.
++
+
+NOTE: Consultez soit le  https://hwu.netapp.com["Netapp Hardware Universe"] ou la carte FRU figurant sur le couvercle du contrôleur pour connaître l'emplacement exact des barrettes DIMM.
+
+. Retirez la barrette DIMM défectueuse :
++
+image::../media/drw_g_dimm_ieops-1873.svg[Remplacement de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Numérotation et positions des emplacements DIMM.
+
+
+NOTE: Selon le modèle de votre système de stockage, vous aurez deux ou quatre DIMM.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+** Notez l'orientation de la barrette DIMM dans le socket afin de pouvoir insérer la barrette de remplacement en utilisant la même orientation.
+** Éjectez la barrette DIMM défectueuse en écartant lentement les deux languettes d'éjection situées aux deux extrémités de l'emplacement DIMM.
+
+
+
+IMPORTANT: Tenez soigneusement la barrette DIMM par les coins ou les bords pour éviter d'exercer une pression sur les composants du circuit imprimé de la DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Soulevez la barrette DIMM et retirez-la de l'emplacement.
+
+Les languettes d'éjection restent en position ouverte.
+
+|===
+. Déballez la barrette DIMM de remplacement et placez-la sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour de la barrette DIMM défectueuse.
+
+. Installez la barrette DIMM de remplacement :
++
+.. Assurez-vous que les languettes d'éjection des barrettes DIMM sur le connecteur sont en position ouverte.
+.. Tenez la barrette DIMM par les coins et insérez-la bien droite dans le slot.
++
+L'encoche située au bas de la barrette DIMM, entre les broches, doit s'aligner avec la languette dans l'emplacement.
+
++
+Une fois correctement insérée, la DIMM s'insère facilement mais reste bien en place dans son emplacement. Réinsérez la DIMM si vous sentez qu'elle n'est pas correctement insérée. Ne forcez jamais une DIMM dans un emplacement.
+
+.. Vérifiez visuellement que la barrette DIMM est bien alignée et complètement insérée dans le slot.
+.. Appuyez avec précaution, mais fermement, sur le bord supérieur de la DIMM jusqu'à ce que les languettes d'éjection s'enclenchent sur les encoches situées aux deux extrémités de la DIMM.
+
+
+

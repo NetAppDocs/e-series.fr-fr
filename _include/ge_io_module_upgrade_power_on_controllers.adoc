@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Branchez le câble d'alimentation sur les deux contrôleurs.
++
+Les contrôleurs commencent à démarrer.
+
+. Vérifiez les voyants des contrôleurs pour vous assurer que la communication entre les contrôleurs est rétablie :
++
+** Le voyant d'attention reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Lorsque les contrôleurs sont de nouveau en ligne :
++
+.. Confirmez que leur statut est optimal.
+.. Confirmez que le voyant d'attention de chaque contrôleur est éteint.
++
+Si l'état n'est pas Optimal ou si l'un des voyants Attention est allumé, confirmez que tous les câbles sont correctement connectés.
+
++
+
+NOTE: Si vous ne parvenez pas à résoudre le problème, contactez https://www.netapp.com/company/contact-us/support/["Support NetApp"^]. Au besoin, collectez les données de support de votre système de stockage à l'aide de SANtricity System Manager.
+
+
+
+

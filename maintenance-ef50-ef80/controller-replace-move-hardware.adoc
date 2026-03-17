@@ -1,0 +1,420 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: ef50, ef80, move the controller module hardware 
+summary: Remplacez le contrôleur défectueux de votre système de stockage EF50 ou EF80 en retirant le contrôleur, en déplaçant les composants vers le contrôleur de remplacement et en installant le contrôleur de remplacement. 
+---
+= Remplacez le contrôleur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remplacez le contrôleur défectueux de votre système de stockage EF50 ou EF80 en vérifiant que toutes les données de la mémoire cache ont été écrites sur les disques, en débranchant tous les câbles du contrôleur défectueux, en retirant le contrôleur défectueux, en déplaçant les composants vers le contrôleur de remplacement et en installant le contrôleur de remplacement.
+
+.Description de la tâche
+* Installez le contrôleur de remplacement dans les 60 minutes suivant le retrait du contrôleur défectueux pour maintenir un refroidissement adéquat du système de stockage.
++
+
+CAUTION: Pour éviter toute surchauffe, ne laissez pas le compartiment du contrôleur vide pendant plus de 60 minutes.
+
+* Vous devez placer le contrôleur défectueux hors ligne avant de débrancher l’un de ses câbles.
+* Vous pouvez activer les voyants de localisation (bleus) du système de stockage (à l'avant du système de stockage et sur les deux contrôleurs) pour faciliter le repérage physique du système de stockage concerné. À l'aide de SANtricity System Manager, sélectionnez *Hardware* > *Controllers and components*, sélectionnez l'onglet *Controller shelf*, puis dans le menu contextuel, sélectionnez *Turn on locator light*.
+
+
+
+
+== Étape 1 : Retirez le contrôleur
+
+Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, puis retirez le contrôleur défectueux du châssis.
+
+.Étapes
+. Sur le contrôleur défectueux, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de retirer le contrôleur défectueux.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active. Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+
+
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Étiquetez chaque câble qui est attaché au contrôleur défectueux.
+. Débranchez le cordon d'alimentation de l'alimentation du contrôleur défectueux.
++
+
+NOTE: L'alimentation (PSU) ne possède pas d'interrupteur.
+
+. Débranchez tous les câbles du contrôleur défectueux.
+. Retirez le contrôleur défectueux :
++
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (du côté gauche du contrôleur) lors du retrait d'un contrôleur :
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Opération de poignée de contrôleur pour retirer un contrôleur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Aux deux extrémités du contrôleur, poussez les languettes de verrouillage verticales vers l'extérieur pour libérer les poignées et les ramener à leur position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+** Tirez les poignées vers vous pour désengager le contrôleur du plan médian.
++
+Lorsque vous tirez, les poignées se déploient depuis le contrôleur et ensuite vous sentez une certaine résistance, continuez à tirer.
+
+** Faites glisser le contrôleur hors du châssis tout en soutenant le bas du contrôleur, puis placez-le sur une surface de travail plane et exempte d'électricité statique.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Si nécessaire, redressez les poignées (à côté des languettes) pour les dégager.
+
+|===
+. Ouvrez le couvercle du contrôleur en tournant la vis moletée dans le sens antihoraire pour la desserrer, puis ouvrez le couvercle.
+
+
+
+
+== Étape 2 : Déplacer l’alimentation électrique
+
+Déplacez le bloc d'alimentation (PSU) vers le contrôleur de remplacement.
+
+.Étapes
+. Retirez le bloc d'alimentation du contrôleur défectueux :
++
+Assurez-vous que la poignée du contrôleur gauche est en position verticale pour vous permettre d'accéder au PSU.
+
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Remplacer le bloc d'alimentation secteur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Faites pivoter la poignée du PSU vers le haut, jusqu'à sa position horizontale, puis saisissez-la.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Avec votre pouce, appuyez sur la languette de verrouillage orange pour libérer le PSU du contrôleur.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Retirez le bloc d'alimentation du contrôleur tout en soutenant son poids avec votre autre main.
+
+
+CAUTION: Le bloc d'alimentation est court. Utilisez toujours vos deux mains pour le soutenir lorsque vous le retirez du contrôleur afin qu'il ne se détache pas soudainement du contrôleur et ne vous blesse.
+
+|===
+. Insérez le bloc d'alimentation dans le contrôleur de remplacement :
++
+.. À l'aide des deux mains, soutenez et alignez les bords du PSU avec l'ouverture du contrôleur.
+.. Glissez délicatement le bloc d'alimentation dans le contrôleur jusqu'à ce que la languette de verrouillage orange s'enclenche.
++
+Le bloc d'alimentation (PSU) doit être correctement enclenché dans le connecteur interne et le mécanisme de verrouillage. Répétez cette étape si vous sentez que le PSU n'est pas correctement installé.
+
++
+
+NOTE: Pour éviter d'endommager le connecteur interne, n'exercez pas une force excessive lors de l'insertion du PSU dans le contrôleur.
+
+.. Abaissez la poignée afin qu'elle ne gêne pas le fonctionnement normal.
+
+
+
+
+
+
+== Étape 3 : Déplacez les ventilateurs
+
+Déplacez les ventilateurs vers le contrôleur de remplacement.
+
+.Étapes
+. Retirez l'un des ventilateurs du contrôleur défectueux :
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Remplacement du ventilateur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+| Tenez les deux côtés du ventilateur aux points de contact bleus. 
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+| Tirez le ventilateur vers le haut et sortez-le de son support. 
+|===
+. Insérez le ventilateur dans le contrôleur de remplacement en l'alignant dans les guides, puis appuyez jusqu'à ce que le connecteur du ventilateur soit complètement inséré dans la prise.
+. Répétez ces étapes pour les ventilateurs restants.
+
+
+
+
+== Étape 4 : Déplacer la batterie NV
+
+Déplacez la batterie NV vers le contrôleur de remplacement.
+
+.Étapes
+. Retirez la batterie NV du contrôleur défectueux :
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Remplacez la batterie NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Soulevez la batterie NV et sortez-la de son compartiment.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Retirez le faisceau de câbles de son support.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+.. Appuyez sur la languette du connecteur et maintenez-la enfoncée.
+.. Tirez le connecteur vers le haut et retirez-le de la prise.
++
+En tirant vers le haut, faites doucement basculer le connecteur d'une extrémité à l'autre (dans le sens de la longueur) pour le déloger.
+
+
+
+|===
+. Installez la batterie NV dans le contrôleur de remplacement :
++
+.. Branchez le connecteur électrique dans sa prise.
+.. Faites passer les câbles le long du bloc d'alimentation, dans son support, puis à travers le canal situé devant le compartiment de la batterie NV.
+.. Placez la batterie NV dans le compartiment.
++
+La batterie NV doit être parfaitement alignée dans son compartiment.
+
+
+
+
+
+
+
+== Étape 5 : Déplacez les barrettes DIMM du système
+
+Déplacez les barrettes DIMM vers le contrôleur de remplacement.
+
+Si vous avez des DIMM vierges, vous n'avez pas besoin de les déplacer, le contrôleur de remplacement devrait être livré avec eux installés.
+
+.Étapes
+. Retirez l'une des barrettes DIMM du contrôleur défectueux :
++
+image::../media/drw_g_dimm_ieops-1873.svg[Remplacement de DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Numérotation et positions des emplacements DIMM.
+
+
+NOTE: Selon le modèle de votre système de stockage, vous aurez deux ou quatre DIMM.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 1]
+ a| 
+** Notez l'orientation de la DIMM dans son emplacement afin de pouvoir insérer la DIMM dans le contrôleur de remplacement dans la bonne orientation.
+** Éjectez la DIMM en écartant lentement les deux languettes d'éjection situées aux deux extrémités de l'emplacement DIMM.
+
+
+
+IMPORTANT: Tenez soigneusement la barrette DIMM par les coins ou les bords pour éviter d'exercer une pression sur les composants du circuit imprimé de la DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Soulevez la barrette DIMM et retirez-la de l'emplacement.
+
+Les languettes d'éjection restent en position ouverte.
+
+|===
+. Installez la barrette DIMM dans le contrôleur de remplacement :
++
+.. Assurez-vous que les languettes d'éjection des barrettes DIMM sur le connecteur sont en position ouverte.
+.. Tenez la barrette DIMM par les coins et insérez-la bien droite dans le slot.
++
+L'encoche située au bas de la barrette DIMM, entre les broches, doit s'aligner avec la languette dans l'emplacement.
+
++
+Une fois correctement insérée, la DIMM s'insère facilement mais reste bien en place dans son emplacement. Sinon, réinsérez la DIMM.
+
+.. Vérifiez visuellement que la barrette DIMM est bien alignée et complètement insérée dans le slot.
+.. Appuyez avec précaution, mais fermement, sur le bord supérieur de la DIMM jusqu'à ce que les languettes d'éjection s'enclenchent sur les encoches situées aux deux extrémités de la DIMM.
+
+
+. Répétez ces étapes pour les DIMM restantes.
+
+
+
+
+== Étape 6 : Déplacez les modules d’E/S
+
+Déplacez les modules d'E/S et tous les modules de masquage d'E/S vers le contrôleur de remplacement.
+
+.Étapes
+. Retirez l'un des modules d'E/S du contrôleur défectueux :
++
+Veillez à bien noter dans quel emplacement se trouvait le module d'E/S.
+
++
+Si vous retirez le module d'E/S de l'emplacement 4, assurez-vous que la poignée du contrôleur côté droit est en position verticale pour vous permettre d'accéder au module d'E/S.
+
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Retirez le module d'E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Tournez la vis moletée du module d'E/S dans le sens antihoraire pour la desserrer.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Retirez le module d'E/S du contrôleur en utilisant la languette d'étiquette du port à gauche et la vis moletée à droite.
+
+|===
+. Installez le module d'E/S dans le contrôleur de remplacement :
++
+.. Alignez le module d'E/S avec les bords de l'emplacement.
+.. Enfoncez délicatement le module d'E/S à fond dans le logement, en veillant à bien insérer le module dans le connecteur.
++
+Vous pouvez utiliser la languette de gauche et la vis moletée de droite pour insérer le module d'E/S.
+
+.. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
+
+
+. Répétez ces étapes pour déplacer les modules d'E/S restants et tous les modules de masquage d'E/S vers le contrôleur de remplacement.
+
+
+
+
+== Étape 7 : Installez le contrôleur
+
+Installez le contrôleur de remplacement dans le châssis, rebranchez son cordon d'alimentation et tous ses câbles.
+
+.Description de la tâche
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (à partir du côté gauche d'un contrôleur) lors de la réinstallation du contrôleur et peut être utilisée comme référence pour les étapes de réinstallation du contrôleur.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[opération de poignée de contrôleur pour installer un contrôleur]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Si vous avez redressé les poignées du contrôleur (à côté des languettes) pour les dégager pendant l'entretien, abaissez-les en position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Poussez les poignées pour réinsérer le contrôleur dans le châssis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Relevez les poignées en position verticale et verrouillez-les en place avec les languettes de verrouillage.
+
+|===
+.Étapes
+. Fermez le couvercle du contrôleur et tournez la vis moletée dans le sens horaire jusqu'à ce qu'elle soit serrée.
+. Insérez le contrôleur dans le châssis :
++
+.. Alignez l'arrière du contrôleur avec l'ouverture du châssis, puis appuyez doucement mais fermement sur les poignées jusqu'à ce que le contrôleur atteigne le plan médian et soit complètement en place.
++
+
+NOTE: N’exercez pas une force excessive lors de l’insertion du contrôleur dans le châssis ; cela pourrait endommager les connecteurs.
+
+.. Faites pivoter les poignées de la manette vers le haut et verrouillez-les en place avec les languettes.
+
+
+. Rebranchez le cordon d'alimentation à l'alimentation et fixez le cordon d'alimentation avec le dispositif de retenue du cordon d'alimentation.
++
+Une fois l'alimentation rétablie, la LED d'état devrait être verte.
+
+. Rebranchez tous les câbles au contrôleur.
++
+
+NOTE: Il est impératif de reconnecter les câbles avant de mettre le contrôleur en ligne. Cette opération est particulièrement importante pour les connexions des câbles de duplication, car elles garantissent la redondance complète du système et sont utilisées pour la duplication du cache et l’expédition des E/S.
+
+
+
+.Et la suite ?
+Après avoir remplacé le contrôleur défectueux, link:controller-replace-online-controller.html["mettre en ligne le contrôleur de remplacement"].

@@ -107,7 +107,10 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[Voyant cache act
 +
 *(1)* _cache LED active_
 
-. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*. Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
++
+Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
+
 . Met le tiroir contrôleur hors tension.
 +
 .. Eteindre les deux interrupteurs de l'alimentation en panne du tiroir contrôleur.

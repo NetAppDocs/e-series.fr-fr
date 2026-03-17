@@ -1,0 +1,24 @@
+---
+permalink: maintenance-ef50-ef80/io-module-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
+summary: 'Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour la mise à niveau ou le remplacement des modules d"E/S afin d"améliorer la connectivité réseau et les performances.' 
+---
+= Aperçu de la maintenance des modules d'E/S - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour le remplacement ou la mise à niveau des modules d'E/S afin d'améliorer la connectivité réseau et les performances.
+
+* link:io-module-replace.html["Remplacer un module d'E/S"]
++
+Lorsqu'un module d'E/S de votre système de stockage tombe en panne, vous pouvez le remplacer par un module d'E/S du même type afin de rétablir le fonctionnement optimal du système de stockage.
+
+* link:io-module-upgrade.html["Mettre à niveau un module d'E/S"]
++
+Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage pour augmenter le nombre de ports hôtes pour une connectivité réseau améliorée et étendre la capacité de votre système à gérer le trafic de données.
+
+

@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Débranchez le cordon d'alimentation du PSU en ouvrant le dispositif de retenue du cordon, puis débranchez le cordon d'alimentation du PSU.
++
+
+NOTE: Le bloc d'alimentation ne possède pas d'interrupteur.
+
+. Retirez le bloc d'alimentation :
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Remplacer le bloc d'alimentation secteur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Faites pivoter la poignée du PSU vers le haut, jusqu'à sa position horizontale, puis saisissez-la.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Avec votre pouce, appuyez sur la languette de verrouillage orange pour libérer le PSU du contrôleur.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Retirez le bloc d'alimentation du contrôleur tout en soutenant son poids avec votre autre main.
+
+
+CAUTION: Le bloc d'alimentation est court. Utilisez toujours vos deux mains pour le soutenir lorsque vous le retirez du contrôleur afin qu'il ne se détache pas soudainement du contrôleur et ne vous blesse.
+
+|===
+. Déballez le bloc d'alimentation de remplacement et placez-le sur une surface plane à proximité du système de stockage.
++
+Conservez tous les matériaux d'emballage pour pouvoir les utiliser lors du retour de l'alimentation défectueuse.
+
+. Installez le bloc d'alimentation de remplacement :
++
+.. À l'aide des deux mains, soutenez et alignez les bords du PSU avec l'ouverture du contrôleur.
+.. Enfoncez délicatement le bloc d'alimentation dans le contrôleur jusqu'à ce que la languette de verrouillage orange s'enclenche.
++
+Un bloc d'alimentation ne s'enclenchera correctement avec le connecteur interne et ne se verrouillera en place que d'une seule façon.
+
++
+
+NOTE: Pour éviter d'endommager le connecteur interne, n'exercez pas une force excessive lors de l'insertion du PSU dans le contrôleur.
+
+.. Abaissez la poignée afin qu'elle ne gêne pas le fonctionnement normal.
+
+
+. Rebranchez le cordon d'alimentation au PSU et fixez le cordon d'alimentation avec le dispositif de retenue du cordon d'alimentation.
++
+Une fois l'alimentation rétablie au PSU, la LED d'état devrait être verte.
+
+. Confirmez que l'état du bloc d'alimentation est optimal et que les voyants d'Attention du système de stockage sont éteints.
++
+Si l'état n'est pas optimal ou si l'un des voyants d'alerte est allumé, vérifiez que le câble d'alimentation est correctement branché et que le PSU est correctement installé. Si nécessaire, retirez puis réinstallez le PSU.
+
++
+
+NOTE: Si vous ne parvenez pas à résoudre le problème, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
+. Dans SANtricity System Manager, cliquez sur *Support > Upgrade Center* pour vous assurer que la dernière version de SANtricity OS est installée.
++
+Au besoin, installez la dernière version.
+
+. Retournez la pièce défectueuse à NetApp, tel que décrit dans les instructions RMA (retour de matériel) fournies avec le kit.
++
+Contactez l'assistance technique au  https://mysupport.netapp.com/site/global/dashboard["Support NetApp"], 888-463-8277 (North America), 00-800-44-638277 (Europe), ou +800-800-80-800 (Asia/Pacific) si vous avez besoin du numéro RMA ou d'une aide supplémentaire concernant la procédure de remplacement.//2025-11-17 ontap-systems-internal/issues/1391
+
+

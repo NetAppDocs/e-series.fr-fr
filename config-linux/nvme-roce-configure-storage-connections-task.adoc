@@ -28,7 +28,7 @@ Vous pouvez accéder à la configuration NVMe over RoCE à partir de la page *Ha
 NOTE: Les paramètres et les fonctions NVMe over RoCE n'apparaissent que si le contrôleur de votre baie de stockage inclut un port NVMe over RoCE.
 
 .Étapes
-. Dans l'interface System Manager, sélectionnez *Hardware*.
+. Dans le panneau de gauche de l'interface du System Manager, sélectionnez *Hardware*.
 . Cliquez sur le contrôleur associé au port NVMe over RoCE que vous souhaitez configurer.
 +
 Le menu contextuel du contrôleur s'affiche.

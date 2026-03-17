@@ -1,0 +1,54 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-offline-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, offline the impaired controller 
+summary: Mettez le contrôleur défectueux hors ligne dans votre système de stockage EF50 ou EF80 pour éviter la perte de données et garantir la stabilité du système lors du remplacement du contrôleur. 
+---
+= Déconnectez le contrôleur défectueux - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mettez le contrôleur défectueux hors ligne dans votre système de stockage EF50 ou EF80 pour éviter la perte de données et garantir la stabilité du système lors du remplacement du contrôleur.
+
+.Avant
+* Vous devez avoir rempli les link:controller-replace-requirements.html["exigences"] pour cette procédure.
+* Vous devez avoir terminé le link:controller-replace-prepare.html["préparation"] pour cette procédure.
+
+
+.Description de la tâche
+Lorsque vous mettez un contrôleur hors ligne, vous devez attendre au moins une minute avant de le remettre en ligne. Ce délai permet au système de stockage de mettre à jour l'état du contrôleur et de garantir que toutes les données mises en cache sont écrites sur les disques.
+
+.Étapes
+. Si le contrôleur défectueux n'est pas déjà hors ligne, mettez-le hors ligne à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Hardware* > *Controllers and components* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous souhaitez mettre hors ligne pour afficher son menu de contenu.
+.. Sélectionnez *Placer hors ligne*, puis confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager en utilisant le contrôleur que vous tentez de mettre hors ligne, un message « SANtricity System Manager indisponible » s'affiche. Sélectionnez *Connect to an alternate network connection* pour accéder automatiquement à SANtricity System Manager en utilisant l'autre contrôleur.
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+. Confirmez qu'il est sans danger de retirer le composant défectueux, à l'aide de Recovery Guru :
++
+.. Sélectionnez *Recheck*.
+.. Confirmez que le champ *OK to remove* dans la zone Détails affiche *Yes*.
++
+
+CAUTION: Si le champ *OK to remove* n’affiche pas *Yes*, ne procédez pas à la suppression du composant défectueux. Au lieu de cela, dépannez le problème à l’aide de Recovery Guru.
+
+
+
+
+
+.Et la suite ?
+Après avoir mis hors ligne la manette défectueuse, link:controller-replace-move-hardware.html["remplacer le contrôleur défectueux"].

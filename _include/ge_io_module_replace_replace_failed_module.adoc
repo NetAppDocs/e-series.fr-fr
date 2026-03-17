@@ -1,0 +1,48 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Débranchez les câbles du module d'E/S défectueux.
++
+Veillez à étiqueter les câbles afin de savoir d'où ils viennent.
+
+. Retirez le module d'E/S défectueux du contrôleur :
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Retirez le module d'E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Tournez la vis moletée du module d'E/S dans le sens antihoraire pour la desserrer.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Retirez le module d'E/S du contrôleur en utilisant la languette d'étiquette du port située à gauche et la vis moletée.
+
+|===
+. Déballez le module d'E/S de remplacement et placez-le sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour du module d'E/S défectueux.
+
+. Installez le module d'E/S de remplacement dans l'emplacement cible :
++
+.. Alignez le module d'E/S avec les bords de l'emplacement.
+.. Enfoncez délicatement le module d'E/S à fond dans le logement, en veillant à bien insérer le module dans le connecteur.
++
+Vous pouvez utiliser la languette située à gauche et la vis moletée pour insérer le module d'E/S.
+
+.. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
+
+
+. Câblez le module d'E/S.
+

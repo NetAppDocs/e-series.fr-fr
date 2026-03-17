@@ -1,0 +1,38 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the controller workflow 
+summary: Vous pouvez remplacer un contrôleur défectueux dans votre système de stockage EF50 ou EF80 en respectant les exigences du système de stockage, en préparant le système, en mettant hors ligne le contrôleur défectueux, en remplaçant le contrôleur, en mettant le nouveau contrôleur en ligne et en terminant le processus de remplacement. 
+---
+= Workflow de remplacement du contrôleur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer un contrôleur défectueux dans votre système de stockage EF50 ou EF80 en respectant les exigences du système de stockage, en préparant le système, en mettant hors ligne le contrôleur défectueux, en remplaçant le contrôleur, en mettant le nouveau contrôleur en ligne et en terminant le processus de remplacement.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"]link:controller-replace-requirements.html["Examiner les exigences de remplacement du contrôleur"]
+[role="quick-margin-para"]
+Vérifiez que votre système de stockage a un contrôleur en panne, vérifiez l'état de votre système de stockage, procurez-vous les outils nécessaires à la procédure et disposez d'une station de gestion et d'un navigateur pour accéder à SANtricity System Manager.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"]link:controller-replace-prepare.html["Préparez-vous au remplacement du contrôleur"]
+[role="quick-margin-para"]
+Déballez le contrôleur de remplacement, notez son adresse MAC, vérifiez que son numéro de pièce est correct et sauvegardez la base de données de configuration du système de stockage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]link:controller-replace-offline-controller.html["Mettre hors ligne le contrôleur défectueux"]
+[role="quick-margin-para"]
+Mettez hors ligne le contrôleur défectueux afin d'éviter la perte de données et de garantir la stabilité du système lors de son remplacement.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"]link:controller-replace-move-hardware.html["Remplacez le contrôleur défectueux"]
+[role="quick-margin-para"]
+Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, retirez le contrôleur, transférez les composants vers le contrôleur de remplacement, installez le contrôleur de remplacement et reconnectez tous les câbles.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"]link:controller-replace-online-controller.html["Remplacez le contrôleur en ligne"]
+[role="quick-margin-para"]
+Confirmez l'adresse IP du contrôleur de remplacement, mettez le contrôleur en ligne et confirmez que l'état du système de stockage est Optimal.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Six"]link:controller-replace-complete-replacement.html["Terminez le remplacement du contrôleur"]
+[role="quick-margin-para"]
+Assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que les volumes sont restitués à leurs contrôleurs propriétaires, collectez les données de support système et renvoyez la pièce défaillante à NetApp.

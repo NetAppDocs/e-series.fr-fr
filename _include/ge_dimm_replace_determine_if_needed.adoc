@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Depuis SANtricity System Manager, accédez au profil du contrôleur de stockage pour le contrôleur défectueux :
++
+.. Accédez à *Support* > *Support Center*.
+.. Sur la page Support Resources, sélectionnez *Storage Array Profile*.
+.. Faites défiler vers le bas ou utilisez le champ Rechercher pour localiser les informations *module de cache de données*.
+
+
+. Si l'une des conditions suivantes s'affiche pour une DIMM, notez l'emplacement de la DIMM et poursuivez cette procédure pour remplacer la DIMM.
++
+Si aucune de ces conditions n'est réunie, vous n'avez pas besoin de remplacer une DIMM. Quittez cette procédure.
+
++
+** Une barrette DIMM défectueuse
+** Un module DIMM signale que le *Data Cache Module* n'est pas optimal
+** Une barrette DIMM avec une capacité de *Data Cache Module* incompatible
+
+
+

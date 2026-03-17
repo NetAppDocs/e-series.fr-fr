@@ -1,0 +1,364 @@
+---
+permalink: maintenance-ef50-ef80/fan-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
+summary: Remplacez un module de ventilateur dans votre système de stockage EF50 ou EF80 lorsqu’un ventilateur tombe en panne ou ne fonctionne pas efficacement, car cela peut affecter le refroidissement du système et les performances globales. 
+---
+= Remplacer un module de ventilateur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remplacez un module de ventilateur dans votre système de stockage EF50 ou EF80 lorsqu’un ventilateur tombe en panne ou ne fonctionne pas efficacement, car cela peut affecter le refroidissement du système et les performances globales.
+
+.Description de la tâche
+* Remplacez un ventilateur en préparant, en mettant hors ligne le contrôleur défectueux, en retirant le contrôleur, en remplaçant le ventilateur, en réinstallant le contrôleur, en le mettant en ligne, en terminant le remplacement et en retournant la pièce défectueuse à NetApp.
+* Vous devez placer le contrôleur défectueux hors ligne avant de débrancher l’un de ses câbles.
+* Chaque contrôleur comprend cinq ventilateurs. En cas de panne d'un ventilateur, il est impératif de le remplacer au plus vite afin de garantir un refroidissement adéquat du contrôleur.
+* Vous pouvez activer les voyants de localisation (bleus) du système de stockage (à l'avant du système de stockage et sur les deux contrôleurs) pour faciliter le repérage physique du système de stockage concerné. À l'aide de SANtricity System Manager, sélectionnez *Hardware* > *Controllers and components*, sélectionnez l'onglet *Controller shelf*, puis dans le menu contextuel, sélectionnez *Turn on locator light*.
+
+
+
+
+== Étape 1 : Préparez-vous à remplacer un ventilateur
+
+Préparez-vous à remplacer un ventilateur en vérifiant qu'il est possible de le remplacer, en rassemblant les outils et l'équipement nécessaires et en sauvegardant la base de données de configuration du système de stockage.
+
+.Étapes
+. Vérifiez si Recovery Guru indique qu'il n'est pas correct de retirer le ventilateur défectueux. Si c'est le cas, contactez  https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+. Assurez-vous de disposer des éléments suivants :
++
+** Un ventilateur de remplacement.
+** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
+** Une surface de travail plane et antistatique.
+** Étiquettes permettant d'identifier chaque câble connecté au contrôleur défectueux.
+** Un poste de gestion doté d'un navigateur permettant d'accéder à SANtricity System Manager pour le contrôleur défaillant.
++
+Pour ouvrir l'interface du Gestionnaire système, saisissez dans votre navigateur le nom de domaine ou l'adresse IP du contrôleur défaillant.
+
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager :
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur défaillant.
+
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+
+
+== Étape 2 : Placez le contrôleur hors ligne
+
+Placez le contrôleur défectueux hors ligne afin de pouvoir effectuer le reste de cette procédure en toute sécurité.
+
+.Description de la tâche
+Lorsque vous mettez un contrôleur hors ligne, vous devez attendre au moins une minute avant de le remettre en ligne. Ce délai permet au système de stockage de mettre à jour l'état du contrôleur et de garantir que toutes les données mises en cache sont écrites sur les disques.
+
+.Étapes
+. Si le contrôleur défectueux n'est pas déjà hors ligne, mettez-le hors ligne à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Hardware* > *Controllers and components* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous souhaitez mettre hors ligne pour afficher son menu de contenu.
+.. Sélectionnez *Placer hors ligne*, puis confirmez que vous souhaitez effectuer l'opération.
++
+
+NOTE: Si vous accédez à SANtricity System Manager en utilisant le contrôleur que vous tentez de mettre hors ligne, un message « SANtricity System Manager indisponible » s'affiche. Sélectionnez *Connect to an alternate network connection* pour accéder automatiquement à SANtricity System Manager en utilisant l'autre contrôleur.
+
+
+
+. Attendez que SANtricity System Manager mette à jour l'état du contrôleur sur hors ligne.
++
+
+CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis à jour.
+
+. Confirmez qu'il est sans danger de retirer le composant défectueux, à l'aide de Recovery Guru :
++
+.. Sélectionnez *Recheck*.
+.. Confirmez que le champ *OK to remove* dans la zone Détails affiche *Yes*.
++
+
+CAUTION: Si le champ *OK to remove* n’affiche pas *Yes*, ne procédez pas à la suppression du composant défectueux. Au lieu de cela, dépannez le problème à l’aide de Recovery Guru.
+
+
+
+
+
+
+
+== Étape 3 : Retirez le contrôleur
+
+Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, puis retirez le contrôleur défectueux du châssis.
+
+.Étapes
+. Sur le contrôleur défectueux, assurez-vous que la LED NV Caching Active (green) est éteinte.
++
+Lorsque la LED NV Caching Active (verte) est éteinte, toutes les données en mémoire cache ont été écrites sur les disques et il est sûr de retirer le contrôleur défectueux.
+
++
+
+NOTE: Si le voyant NV Caching Active (vert) est allumé, les données mises en cache sont en cours d'écriture sur les disques. Vous devez attendre la fin du processus et l'extinction du voyant NV Caching Active. Cependant, si le voyant reste allumé plus de cinq minutes, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
++
+La LED NV Caching Active (verte) est située à côté de l’icône NV sur le contrôleur.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Emplacement de la LED d'état NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Icône NV et voyant NV Caching Active sur le contrôleur
+
+|===
+
+
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Étiquetez chaque câble qui est attaché au contrôleur défectueux.
+. Débranchez le cordon d'alimentation de l'alimentation du contrôleur défectueux.
++
+
+NOTE: L'alimentation (PSU) ne possède pas d'interrupteur.
+
+. Débranchez tous les câbles du contrôleur défectueux.
+. Retirez le contrôleur défectueux :
++
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (du côté gauche du contrôleur) lors du retrait d'un contrôleur :
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Opération de poignée de contrôleur pour retirer un contrôleur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Aux deux extrémités du contrôleur, poussez les languettes de verrouillage verticales vers l'extérieur pour libérer les poignées et les ramener à leur position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+** Tirez les poignées vers vous pour désengager le contrôleur du plan médian.
++
+Lorsque vous tirez, les poignées se déploient depuis le contrôleur et ensuite vous sentez une certaine résistance, continuez à tirer.
+
+** Faites glisser le contrôleur hors du châssis tout en soutenant le bas du contrôleur, puis placez-le sur une surface de travail plane et exempte d'électricité statique.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Si nécessaire, redressez les poignées (à côté des languettes) pour les dégager.
+
+|===
+. Ouvrez le couvercle du contrôleur en tournant la vis moletée dans le sens antihoraire pour la desserrer, puis ouvrez le couvercle.
+
+
+
+
+== Étape 4 : Remplacer un ventilateur
+
+Repérez le ventilateur défectueux à l'intérieur du contrôleur endommagé et remplacez-le.
+
+.Étapes
+. Identifiez le ventilateur que vous devez remplacer en consultant les messages d'erreur de la console.
+. Retirez le ventilateur défectueux :
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Remplacement du ventilateur]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+| Tenez les deux côtés du ventilateur aux points de contact bleus. 
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+| Tirez le ventilateur vers le haut et sortez-le de son support. 
+|===
+. Déballez le ventilateur de remplacement et placez-le sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour du ventilateur défectueux.
+
+. Insérez le ventilateur de remplacement en l'alignant dans les guides, puis appuyez jusqu'à ce que le connecteur du ventilateur soit complètement inséré dans la prise.
+
+
+
+
+== Étape 5 : Réinstallez le contrôleur
+
+Réinstallez le contrôleur dans le châssis, rebranchez son cordon d'alimentation et tous ses câbles.
+
+.Description de la tâche
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (à partir du côté gauche d'un contrôleur) lors de la réinstallation du contrôleur et peut être utilisée comme référence pour les étapes de réinstallation du contrôleur.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[opération de poignée de contrôleur pour installer un contrôleur]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Si vous avez redressé les poignées du contrôleur (à côté des languettes) pour les dégager pendant l'entretien, abaissez-les en position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Poussez les poignées pour réinsérer le contrôleur dans le châssis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Relevez les poignées en position verticale et verrouillez-les en place avec les languettes de verrouillage.
+
+|===
+.Étapes
+. Fermez le couvercle du contrôleur et tournez la vis moletée dans le sens horaire jusqu'à ce qu'elle soit serrée.
+. Insérez le contrôleur dans le châssis :
++
+.. Alignez l'arrière du contrôleur avec l'ouverture du châssis, puis appuyez doucement mais fermement sur les poignées jusqu'à ce que le contrôleur atteigne le plan médian et soit complètement en place.
++
+
+NOTE: N’exercez pas une force excessive lors de l’insertion du contrôleur dans le châssis ; cela pourrait endommager les connecteurs.
+
+.. Faites pivoter les poignées de la manette vers le haut et verrouillez-les en place avec les languettes.
+
+
+. Rebranchez le cordon d'alimentation à l'alimentation et fixez le cordon d'alimentation avec le dispositif de retenue du cordon d'alimentation.
++
+Une fois l'alimentation rétablie, la LED d'état devrait être verte.
+
+. Rebranchez tous les câbles au contrôleur.
++
+
+NOTE: Il est impératif de reconnecter les câbles avant de mettre le contrôleur en ligne. Cette opération est particulièrement importante pour les connexions des câbles de duplication, car elles garantissent la redondance complète du système et sont utilisées pour la duplication du cache et l’expédition des E/S.
+
+
+
+
+
+== Étape 6 : Placez le contrôleur en ligne
+
+Remettez en ligne le contrôleur défectueux.
+
+.Étapes
+. Mettez le contrôleur en ligne à l'aide de SANtricity System Manager :
++
+.. Sélectionnez *Hardware* > *Controllers and components* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous souhaitez mettre en ligne pour afficher son menu contextuel.
+.. Sélectionnez *Place online*, puis confirmez que vous souhaitez effectuer l'opération.
++
+Le système met le contrôleur en ligne.
+
+
+
+. Pendant le démarrage du contrôleur, vérifiez les LED du contrôleur.
++
+Lorsque la communication avec l'autre contrôleur est rétablie :
+
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Lorsque le contrôleur est de nouveau en ligne :
++
+.. Confirmez que son statut est Optimal.
+.. Confirmez que le voyant d'attention sur le contrôleur est éteint.
++
+Si l'état n'est pas Optimal ou si l'un des voyants d'alerte est allumé, vérifiez que tous les câbles sont correctement branchés et que le contrôleur est correctement installé. Si nécessaire, retirez puis réinstallez le contrôleur.
+
++
+
+NOTE: Si vous ne pouvez pas résoudre le problème, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"^] avant de continuer cette procédure. Si nécessaire, collectez les données de support pour votre système de stockage à l'aide de SANtricity System Manager.
+
+
+
+
+
+
+
+== Étape 7 : Terminez le remplacement du ventilateur
+
+À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs propriétaires et collectez les données de support afin de pouvoir reprendre les opérations.
+
+.Étapes
+. Assurez-vous que la dernière version de SANtricity OS est installée sur le système de stockage :
++
+.. Sélectionnez *Support* > *Upgrade Center*
+.. Au besoin, installez la dernière version.
+
+
+. Vérifiez que tous les volumes sont retournés à leurs contrôleurs propriétaires :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Recovery Guru est présent et indique que les volumes ne sont pas sur leur chemin préféré (pas retournés à leurs contrôleurs propriétaires)
+ a| 
+.. Redistribuez les volumes à leurs contrôleurs propriétaires, en sélectionnant *Stockage* > *Volumes* > *Plus* et dans le menu déroulant, sélectionnez *Redistribuer les volumes*.
+.. Vérifiez que tous les volumes sont redistribués à leurs contrôleurs propriétaires en vérifiant si Recovery Guru est présent et indique toujours que les volumes ne sont pas sur leur chemin préféré.
+
+
+
+NOTE: Si les volumes ne sont toujours pas restitués à leurs contrôleurs propriétaires, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"].
+
+
+
+ a| 
+Recovery Guru est absent (il semble que tous les volumes aient été renvoyés à leurs contrôleurs propriétaires)
+ a| 
+Vérifiez que tous les volumes sont bien rendus à leurs contrôleurs propriétaires en sélectionnant *Storage* > *Volumes* > *More* et, dans le menu déroulant, sélectionnez *Change volume ownership* pour afficher les propriétaires des volumes.
+
+|===
+. Collectez les données de support pour votre système de stockage :
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+
+
+
+
+== Étape 8 : Retournez la pièce défectueuse à NetApp
+
+Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.

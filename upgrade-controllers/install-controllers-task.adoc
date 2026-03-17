@@ -58,6 +58,15 @@ Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dan
 
 == Étape 2 : installer un nouveau boîtier de contrôleur
 
+[role="tabbed-block"]
+====
+.Modèles de contrôleurs EF280 et EF50
+--
+Pour plus d'informations sur l'installation des nouveaux contrôleurs EF80 et EF50, consultez link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-7-install-the-controller["EF50 et EF80 - Étape 7 : Installez le contrôleur"^].
+
+--
+.Autres modèles de contrôleurs E-Series
+--
 Installer le nouveau boîtier de contrôleur dans le shelf de contrôleur.
 
 .Étapes
@@ -72,5 +81,7 @@ Si la configuration du câblage du lecteur est identique à celle de vos anciens
 
 
 
+--
+====
 .Et la suite ?
 Si la fonction sécurité du lecteur est activée, passez à link:upgrade-unlock-drives-task.html["Déverrouiller les lecteurs"]l' . Sinon, passez à link:complete-upgrade-controllers-task.html["Mise à niveau complète du contrôleur"].

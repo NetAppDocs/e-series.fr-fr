@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Description de la tâche
+Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Sur l'un des contrôleurs, débranchez le câblage du module d'E/S que vous retirez, sauf s'il s'agit d'un module de masquage d'E/S.
++
+Vous pouvez étiqueter les câbles pour savoir d'où ils proviennent. Cependant, selon le type de module d'E/S vers lequel vous effectuez la mise à niveau, il se peut que vous ne recâbliez pas sur les mêmes ports ou que vous ne puissiez pas réutiliser les mêmes câbles.
+
+. Retirez le module d'E/S ou le module de masquage d'E/S de l'emplacement cible.
++
+L'illustration suivante montre le retrait d'un module de masquage d'E/S.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Retirez un module de masquage d'E/S]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout numéro 1"]
+ a| 
+Sur le module d'E/S ou le module de masquage d'E/S, tournez la vis moletée dans le sens antihoraire pour la desserrer.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout numéro 2"]
+ a| 
+Retirez le module d'E/S ou le module de masquage d'E/S du contrôleur à l'aide de la languette située à gauche et de la vis moletée.
+
+|===
+. Déballez le nouveau module d'E/S et placez-le sur une surface plane et antistatique à proximité du système de stockage.
+. Installez le nouveau module d'E/S :
++
+.. Alignez le module d'E/S avec les bords de l'ouverture de l'emplacement du contrôleur.
+.. Enfoncez délicatement le module d'E/S à fond dans le logement, en veillant à bien insérer le module dans le connecteur.
++
+Vous pouvez utiliser la languette située à gauche et la vis moletée pour insérer le module d'E/S.
+
+.. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
+
+
+. Connectez le module d'E/S au réseau hôte.
++
+Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu relatif à l'installation et à la configuration du système pour le câblage du réseau hôte.
+
+. Répétez ces étapes pour mettre à niveau un module d'E/S dans l'autre contrôleur.
+

@@ -41,7 +41,7 @@ Tous les volumes non attribués s'affichent, mais les fonctions des hôtes avec 
 
 
 .Étapes
-. Sélectionnez menu:Storage[hosts].
+. Dans le panneau de gauche de l'interface SANtricity System Manager, sélectionnez menu:Storage[Hosts].
 . Sélectionnez l'hôte ou le cluster hôte auquel vous souhaitez affecter des volumes, puis cliquez sur *attribuer des volumes*.
 +
 Une boîte de dialogue s'affiche et répertorie tous les volumes pouvant être affectés. Vous pouvez trier n'importe quelle colonne ou saisir quelque chose dans la case *Filter* pour faciliter la recherche de volumes particuliers.

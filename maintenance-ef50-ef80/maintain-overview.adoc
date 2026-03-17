@@ -1,0 +1,75 @@
+---
+permalink: maintenance-ef50-ef80/maintain-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
+summary: 'Assurez la maintenance du matériel de votre système de stockage EF50 ou EF80 pour garantir sa fiabilité à long terme et des performances optimales. Effectuez des opérations de maintenance régulières, comme le remplacement des composants défectueux, afin de prévenir l"interruption et la perte de données.' 
+---
+= Aperçu des procédures de maintenance - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Assurez la maintenance du matériel de votre système de stockage EF50 ou EF80 pour garantir sa fiabilité à long terme et des performances optimales. Effectuez des opérations de maintenance régulières, comme le remplacement des composants défectueux, afin de prévenir l'interruption et la perte de données.
+
+Les procédures de maintenance supposent que votre système de stockage EF50 ou EF80 a déjà été déployé dans l'environnement SANtricity.
+
+
+
+== Composants du système
+
+Pour votre système de stockage EF50 ou EF80, vous pouvez effectuer des procédures de maintenance sur les composants suivants.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:controller-replace-workflow.html["Contrôleur"]
+ a| 
+Un contrôleur se compose d'une carte, d'un firmware et d'un logiciel. Il gère les disques et exécute le logiciel du système d'exploitation SANtricity.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Un module de mémoire double en ligne (DIMM) est un type de mémoire informatique. Ils sont installés pour ajouter de la mémoire système à une carte mère de contrôleur.
+
+
+
+ a| 
+link:drive-replace.html["Lecteur"]
+ a| 
+Un disque est un périphérique qui assure le stockage physique nécessaire aux données.
+
+
+
+ a| 
+link:fan-replace.html["Ventilateur"]
+ a| 
+Un ventilateur refroidit le contrôleur et les lecteurs.
+
+
+
+ a| 
+link:io-module-overview.html["module d'E/S"]
+ a| 
+Le module d'E/S (module d'entrée/sortie) est un composant matériel qui sert d'intermédiaire entre le contrôleur et divers dispositifs ou systèmes qui doivent échanger des données avec le contrôleur.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["batterie NV"]
+ a| 
+La batterie de la mémoire non volatile (NVMEM) est responsable de l'alimentation des composants NVMEM pendant que les données en transit sont transférées vers la mémoire flash après une coupure de courant.
+
+
+
+ a| 
+link:power-supply-replace.html["Alimentation électrique"]
+ a| 
+Une alimentation électrique fournit une source d'alimentation redondante dans un contrôleur.
+
+|===

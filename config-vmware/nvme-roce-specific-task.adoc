@@ -1,0 +1,328 @@
+---
+permalink: config-vmware/nvme-roce-perform-specific-task.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E4000, EF50, EF80 E-Series, eseries 
+summary: Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez les identifiants des ports hôte. 
+---
+= Effectuer des tâches spécifiques NVMe over RoCE dans E-Series - VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole NVMe sur RoCE, vous configurez les commutateurs et déterminez les identifiants des ports hôtes.
+
+
+
+== Étape 1 : Enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+
+
+
+=== Configuration recommandée
+
+Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
+
+image::../media/network_generic_worksheet.gif[Identifiants de port NVMe sur RoCE]
+
+
+
+=== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions des ports hôtes | Initiateur logiciel NQN 
+
+
+ a| 
+1
+ a| 
+Hôte (initiateur) 1
+ a| 
+
+
+
+ a| 
+1
+ a| 
+Hôte (initiateur) 2
+ a| 
+
+|===
+
+
+=== Identifiants cibles
+
+|===
+| N° de légende | Connexions de port de baie | NQN cible 
+
+
+ a| 
+2
+ a| 
+Contrôleur de baie (cible) port 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Contrôleur de baie (cible) port 2
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Contrôleur de baie (cible) port 3
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Contrôleur de stockage (cible) port 4
+ a| 
+
+|===
+
+
+=== Hôte de mappage
+
+|===
+
+
+ a| 
+Nom d'hôte de mappage
+ a| 
+
+
+
+ a| 
+Type de système d'exploitation hôte
+ a| 
+
+|===
+
+
+=== Configuration recommandée
+
+Cela peut varier selon la baie. EF300, EF600 et EF50 auront 2 ports initiateurs avec jusqu'à 4 ports cibles avec 1 ou plusieurs VLAN. EF80 aura 2 ports initiateurs avec jusqu'à 6 ports cibles avec 1 ou plusieurs VLAN.
+
+
+
+== Étape 2 : Configurer les commutateurs NVMe/RoCE
+
+Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
+
+.À propos de ceci
+Cette tâche décrit les étapes générales de configuration des commutateurs pour NVMe sur RoCE. Pour des instructions spécifiques, consultez la documentation de votre fournisseur de commutateurs.
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants :
+
+* Deux réseaux distincts pour une haute disponibilité. Veillez à isoler votre trafic NVMe over RoCE sur des segments de réseau séparés.
+
+
+.Étapes
+Consultez la documentation du fournisseur de votre commutateur.
+
+
+
+== Étape 3 : Configurer le réseau - NVMe/RoCE, VMware
+
+Vous pouvez configurer votre réseau NVMe sur RoCE de différentes manières, en fonction de vos exigences de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la plus adaptée à votre environnement.
+
+.Description de la tâche
+Cette tâche décrit les étapes générales de configuration du réseau pour NVMe sur RoCE. Pour des instructions spécifiques, consultez la documentation de votre fournisseur de commutateur.
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants :
+
+* Commutateur configuré pour Lossless Ethernet pour NVMe over RDMA.
+
+
+.Description de la tâche
+Lors de la planification de votre réseau NVMe sur RoCE, n'oubliez pas que le guide VMware Configuration Maximums indique que le nombre maximal de ports initiateurs RDMA NVMe pris en charge par serveur est de 2. Vous devez tenir compte de cette exigence pour éviter de configurer trop de chemins.
+
+Pour garantir une bonne configuration de chemins multiples, utilisez plusieurs segments de réseau pour le réseau NVMe sur RoCE. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de baie sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Dans la mesure du possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.
+
+.Étapes
+Consultez la documentation du fournisseur de votre commutateur.
+
+
+
+== Étape 4 : Configurer le réseau côté baie - NVMe/RoCE, VMware
+
+Vous utilisez l'interface SANtricity System Manager pour configurer le réseau NVMe sur RoCE côté baie.
+
+.Description de la tâche
+Cette tâche décrit comment accéder à la configuration des ports NVMe sur RoCE depuis la page *Contrôleurs et composants* dans le SANtricity System Manager. Vous pouvez également accéder à la configuration depuis la page *Configurer les ports NVMe sur RoCE* dans le SANtricity System Manager.
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants :
+
+* L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
+* Le mot de passe de l'interface graphique de System Manager, ou le contrôle d'accès basé sur les rôles (RBAC) ou LDAP et un service d'annuaire sont configurés pour l'accès de sécurité approprié à la baie de stockage. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur link:https://docs.netapp.com/us-en/e-series-santricity/um-certificates/overview-access-management-um.html["Gestion des accès"^].
+
+
+.Étapes
+. Dans votre navigateur, saisissez l’URL suivante : https://<DomainNameOrIPAddress>[]
++
+`IPAddress` est l'adresse de l'un des contrôleurs de la baie de stockage.
+
++
+Lors de la première ouverture du Gestionnaire système SANtricity sur une matrice qui n'a pas été configurée, l'invite définir le mot de passe administrateur s'affiche. La gestion de l'accès basée sur les rôles configure quatre rôles locaux : administrateur, support, sécurité et contrôle. Ces trois derniers rôles ont des mots de passe aléatoires qui ne peuvent être devinés. Après avoir défini un mot de passe pour le rôle admin, vous pouvez modifier tous les mots de passe à l'aide des informations d'identification admin. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur les quatre rôles d'utilisateur locaux.
+
+. Entrez le mot de passe du Gestionnaire système pour le rôle admin dans les champs définir le mot de passe administrateur et confirmer le mot de passe, puis cliquez sur *définir le mot de passe*.
++
+L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volumes, de charges de travail ou de notifications configurés.
+
+. Fermez l'assistant de configuration.
++
+Vous utiliserez l'assistant ultérieurement pour effectuer d'autres tâches de configuration.
+
+. Sélectionnez *Hardware* > *Controllers and components*.
+. Cliquez sur le contrôleur comportant les ports NVMe over RoCE que vous souhaitez configurer.
++
+Le menu contextuel du contrôleur s'affiche.
+
+. Sélectionnez *configurer les ports NVMe over RoCE*.
++
+La boîte de dialogue Configurer NVMe sur les ports RoCE s'ouvre.
+
+. Dans la liste déroulante, sélectionnez le port à configurer, puis cliquez sur *Suivant*.
+. Sélectionnez les paramètres du port de configuration, puis cliquez sur *Suivant*.
++
+Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres de port* à droite de la boîte de dialogue.
+
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Vitesse du port ethernet configurée
+ a| 
+Sélectionnez la vitesse souhaitée. Les options qui apparaissent dans la liste déroulante dépendent de la vitesse maximale que votre réseau peut prendre en charge (par exemple, 200 Gb/s).
+
+
+
+ a| 
+Activez IPv4 / Activer IPv6
+ a| 
+Sélectionnez une ou les deux options pour activer la prise en charge des réseaux IPv4 et IPv6.
+
+
+
+ a| 
+Taille MTU (Disponible en cliquant sur Show more port settings.)
+ a| 
+Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU).
+
+La taille par défaut de l'unité de transmission maximale (MTU) est de 4200 octets par trame. Vous devez saisir une valeur comprise entre 1500 et 9000.
+
+|===
++
+Si vous avez sélectionné *Activer IPv4*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv4 après avoir cliqué sur *Suivant*. Si vous avez sélectionné *Activer IPv6*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv6 après avoir cliqué sur *Suivant*. Si vous avez sélectionné les deux options, la boîte de dialogue des paramètres IPv4 s'ouvre en premier, puis après avoir cliqué sur *Suivant*, la boîte de dialogue des paramètres IPv6 s'ouvre.
+
++
+Configurez les paramètres IPv4 et/ou IPv6, automatiquement ou manuellement. Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres* à droite de la boîte de dialogue.
+
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Obtention automatique de la configuration
+ a| 
+Sélectionnez cette option pour obtenir la configuration automatiquement.
+
+
+
+ a| 
+Spécifiez manuellement la configuration statique
+ a| 
+Sélectionnez cette option, puis entrez une adresse statique dans les champs. Pour IPv4, incluez le masque de sous-réseau réseau et la passerelle. Pour IPv6, incluez l'adresse IP routable et l'adresse IP du routeur.
+
+|===
+. Cliquez sur *Terminer*.
+. Fermez System Manager.
+
+
+
+
+== Étape 5 : Configurer le réseau côté hôte—NVMe sur RoCE, VMware
+
+La configuration du réseau NVMe over RoCE côté hôte permet à l'initiateur de l'adaptateur de stockage VMware NVMe over RDMA d'établir une session avec la baie.
+
+.Description de la tâche
+Cette configuration permet un réseau sans perte utilisant le point de code de services différenciés (DSCP) basé sur le contrôle de flux prioritaire (PFC).
+
+.Étapes
+. Identifiez les adaptateurs réseau RDMA et notez la liaison montante vmnic appariée.
++
+Pour plus d'informations, voir link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/view-rdma-network-adapters.html["Afficher les adaptateurs réseau RDMA"^].
+
+. Configurez la liaison de port VMkernel pour l'adaptateur RDMA à l'aide d'un vSphere standard switch.
++
+Pour plus d'informations, voir link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/configure-vmkernel-binding-for-the-rdma-adapter.html["Configurer la liaison VMkernel pour l'adaptateur RDMA"^].
+
+. Ajoutez l'adaptateur logiciel NVMe over RDMA.
++
+Pour plus d'informations, voir link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Ajouter des adaptateurs logiciels NVMe over RDMA ou NVMe over TCP"^].
+
+. Ajouter des contrôleurs NVMe pour NVMe over RDMA.
++
+Pour plus d'informations, voir link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-controller-for-nvme-over-fabrics.html["Ajouter des contrôleurs pour NVMe over Fabrics"^].
+
+. Configurer Ethernet sans perte pour NVMe over RDMA.
++
+Vous configurez un réseau sans perte à l'aide du Differentiated Services Code Point (DSCP) basé sur le Priority Flow Control (PFC).
+
++
+Pour utiliser cette option, consultez ce qui suit :
+
++
+** link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/about-vmware-nvme-storage/requirements-for-vmware-nvme-storage.html#GUID-B764140D-BCF3-4C99-8169-E5B058757518-en["Configuration d'un réseau Ethernet sans perte pour NVMe over RDMA"^].
+
+
+
+
+
+
+== Étape 6 : Vérifier les connexions réseau IP - NVMe sur RoCE, VMware
+
+Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
+
+.Étapes
+. Sur l'hôte, la commande suivante :
++
+[listing]
+----
+vmkping <NVMe over RoCE_target_IP_address\>
+----
++
+Dans cet exemple, l'adresse IP cible NVMe over RoCE est 192.6.21.231.
+
++
+[listing]
+----
+vmkping -d 192.6.21.231
+PING 192.6.21.231 (192.6.21.231): 56 data bytes
+64 bytes from 192.6.21.231: icmp_seq=0 ttl=64 time=0.902 ms
+64 bytes from 192.6.21.231: icmp_seq=1 ttl=64 time=0.406 ms
+64 bytes from 192.6.21.231: icmp_seq=2 ttl=64 time=0.855 ms
+--- 192.6.21.231 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.406/0.721/0.902 ms
+----
+. Émettez une  `vmkping` commande depuis l'adresse de l'initiateur de chaque hôte (l'adresse IP du port Ethernet de l'hôte utilisé pour NVMe over RoCE) vers chaque port NVMe over RoCE du contrôleur. Effectuez cette action depuis chaque serveur hôte de la configuration, en modifiant les adresses IP si nécessaire.
++
+
+NOTE: Si la commande échoue avec le message `sendto() failed (Message too long)`, vérifiez la taille MTU des interfaces Ethernet sur le serveur hôte, le contrôleur de stockage et les ports du commutateur.
+
+. Retournez à la procédure de configuration NVMe over RoCE pour terminer la découverte de la cible.
+

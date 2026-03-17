@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Résolvez tout autre problème du système de stockage.
++
+À l'aide de SANtricity System Manager, consultez les détails dans le Recovery Guru pour voir s'il existe d'autres problèmes.
+
+. Assurez-vous qu'aucun volume n'est en cours d'utilisation ou que vous avez installé un pilote multivoie sur tous les hôtes qui utilisent ces volumes.
+. Assurez-vous de disposer des éléments suivants :
++
+** Une barrette DIMM de remplacement de la taille correcte pour la configuration de votre système de stockage.
+** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
+** Une surface de travail plane et antistatique.
+** Étiquettes permettant d'identifier chaque câble connecté au contrôleur défectueux.
+** Un poste de gestion doté d'un navigateur permettant d'accéder à SANtricity System Manager pour le contrôleur défaillant.
++
+Pour ouvrir l'interface du Gestionnaire système, saisissez dans votre navigateur le nom de domaine ou l'adresse IP du contrôleur défaillant.
+
+
+
+. Prévenez les décharges électrostatiques (ESD) lors de la manipulation et de l'installation d'une barrette DIMM :
++
+** Conservez le module DIMM dans le sac ESD jusqu'à ce que vous soyez prêt à l'installer.
+** Ouvrez le sac ESD à la main ou coupez le dessus avec une paire de ciseaux. N'insérez pas d'outil métallique ou de couteau dans le sac ESD.
+** Conservez le sachet ESD et tous les matériaux d'emballage pour renvoyer la DIMM défectueuse ou utilisez un emballage approuvé lors de l'expédition d'une DIMM.
+** Portez toujours un bracelet ESD relié à la terre par une surface non peinte du châssis de votre système de stockage.
+** Éviter les champs magnétiques. Conservez les DIMM à l'écart des périphériques magnétiques.
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager :
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur défaillant.
+
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+

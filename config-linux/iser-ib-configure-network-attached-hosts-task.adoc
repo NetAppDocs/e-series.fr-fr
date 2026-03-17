@@ -163,7 +163,7 @@ iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
 ----
 iscsiadm -m session
 ----
-.. Vérifiez l'état de la session iscsi à partir de la baie de disques. Dans SANtricity System Manager, accédez à *Baie de stockage* > *iser* > *Afficher/Terminer sessions*.
+.. Vérifiez l'état de la session iscsi sur la baie. Dans SANtricity System Manager, accédez à *Paramètres* > *Système* > *Afficher/Terminer les sessions iSCSI*.
 
 
 

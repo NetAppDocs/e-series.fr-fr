@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Connectez votre système de stockage à un réseau Ethernet pour la gestion hors bande. 
 ---
-= Câblage Ethernet pour une station de gestion (E-Series)
+= Câblage Ethernet pour une station de gestion - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,13 @@ summary: Connectez votre système de stockage à un réseau Ethernet pour la ges
 [role="lead"]
 Vous pouvez connecter votre système de stockage à un réseau Ethernet pour la gestion hors bande des baies de stockage. Vous devez utiliser des câbles Ethernet pour toutes les connexions de gestion de la baie de stockage.
 
+[NOTE]
+====
+Certains systèmes de stockage ne disposent que d'un seul port de gestion Ethernet hors bande sur chaque contrôleur.
 
-NOTE: Les modèles EF300, EF600 et E4000 ne disposent que d'un seul port de gestion ethernet hors bande.
+Pour obtenir les instructions de câblage spécifiques à votre système de stockage, consultez link:../getting-started/getup-run-concept.html["Démarrage rapide de la gamme E-Series"^] et cliquez sur le lien correspondant à votre système de stockage.
 
+====
 
 
 == Topologie directe

@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Description de la tâche
+L'illustration suivante montre le fonctionnement des poignées du contrôleur (à partir du côté gauche d'un contrôleur) lors de la réinstallation du contrôleur et peut être utilisée comme référence pour les étapes de réinstallation du contrôleur.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[opération de poignée de contrôleur pour installer un contrôleur]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Si vous avez redressé les poignées du contrôleur (à côté des languettes) pour les dégager pendant l'entretien, abaissez-les en position horizontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Poussez les poignées pour réinsérer le contrôleur dans le châssis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+Relevez les poignées en position verticale et verrouillez-les en place avec les languettes de verrouillage.
+
+|===
+.Étapes
+. Fermez le couvercle du contrôleur et tournez la vis moletée dans le sens horaire jusqu'à ce qu'elle soit serrée.
+. Insérez le contrôleur dans le châssis :
++
+.. Alignez l'arrière du contrôleur avec l'ouverture du châssis, puis appuyez doucement mais fermement sur les poignées jusqu'à ce que le contrôleur atteigne le plan médian et soit complètement en place.
++
+
+NOTE: N’exercez pas une force excessive lors de l’insertion du contrôleur dans le châssis ; cela pourrait endommager les connecteurs.
+
+.. Faites pivoter les poignées de la manette vers le haut et verrouillez-les en place avec les languettes.
+
+
+. Rebranchez le cordon d'alimentation à l'alimentation et fixez le cordon d'alimentation avec le dispositif de retenue du cordon d'alimentation.
++
+Une fois l'alimentation rétablie, la LED d'état devrait être verte.
+
+. Rebranchez tous les câbles au contrôleur.
++
+
+NOTE: Il est impératif de reconnecter les câbles avant de mettre le contrôleur en ligne. Cette opération est particulièrement importante pour les connexions des câbles de duplication, car elles garantissent la redondance complète du système et sont utilisées pour la duplication du cache et l’expédition des E/S.
+
+

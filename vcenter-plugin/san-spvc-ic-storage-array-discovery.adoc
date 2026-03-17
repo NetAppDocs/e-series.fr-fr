@@ -65,7 +65,7 @@ Si vous souhaitez importer des certificats signés par une autorité de certific
 
 Vous devez résoudre tous les problèmes liés au certificat avant de poursuivre le processus de détection.
 
-. Si la boîte de dialogue résoudre les certificats auto-signés s'ouvre, consultez les informations affichées pour les certificats non approuvés. Pour plus d'informations, vous pouvez également cliquer sur les points de suspension à l'extrémité de la table et sélectionner *View* dans le menu contextuel.
+. Si la boîte de dialogue « Résoudre les certificats auto-signés » s’ouvre, consultez les informations affichées pour les certificats non approuvés. Pour plus d’informations, vous pouvez également cliquer sur les points de suspension à l’extrémité du tableau et sélectionner *Afficher* dans le menu contextuel.
 . Effectuez l'une des opérations suivantes :
 +
 ** Si vous faites confiance aux connexions aux matrices de stockage découvertes, cliquez sur *Suivant*, puis sur *Oui* pour confirmer et passer à la boîte de dialogue suivante de l'assistant. Les certificats auto-signés sont marqués comme approuvés et les matrices de stockage seront ajoutées au plug-in.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Connectez un hôte directement à un contrôleur ou utilisez des commutateurs. 
 ---
-= Câblage du système de stockage (E-Series)
+= Câblage de votre système de stockage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,9 @@ Les informations de câblage sont destinées à un installateur de matériel ou 
 == Modèle matériel applicable
 
 Les informations de câblage s'appliquent aux modèles matériels suivants.
+
+
+NOTE: Si votre baie de contrôleurs (système de stockage) n'est pas listée ci-dessous, consultez link:../getting-started/getup-run-concept.html["Démarrage rapide de la gamme E-Series"^] et cliquez sur le lien correspondant à votre système de stockage spécifique pour accéder aux informations de câblage.
 
 |===
 | * Étagère contrôleur* | *Étagère de disques* 
@@ -51,7 +54,7 @@ DE460C
 
 == Informations supplémentaires sur le câblage
 
-Si vous procédez à un câblage pour la configuration suivante, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant."^]
+Si vous effectuez un câblage pour l'une des configurations suivantes, consultez https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant."^]
 
 |===
 | * Étagère contrôleur* | *Étagère de disques* 

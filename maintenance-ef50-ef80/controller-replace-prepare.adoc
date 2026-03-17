@@ -1,0 +1,84 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-prepare.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prepare the impaired controller 
+summary: Préparez-vous à remplacer le contrôleur défectueux de votre système de stockage EF50 ou EF80 en déballant le contrôleur de remplacement, en vérifiant que son numéro de pièce est correct et en sauvegardant la base de données de configuration. 
+---
+= Préparez le remplacement du contrôleur - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Préparez-vous à remplacer le contrôleur défectueux de votre système de stockage EF50 ou EF80 en déballant le contrôleur de remplacement, en notant son adresse MAC, en confirmant que son numéro de pièce est correct et en sauvegardant la base de données de configuration du système de stockage.
+
+.Étapes
+. Déballez le contrôleur de remplacement et posez-le sur une surface plane et exempte d'électricité statique.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour du contrôleur défectueux.
+
+. Notez l'adresse MAC qui figure sur le côté du contrôleur de remplacement.
++
+Vous utiliserez l'adresse MAC ultérieurement dans la procédure de remplacement du contrôleur.
+
+. Confirmez que la référence figurant sur le contrôleur de remplacement est identique à la référence de remplacement du contrôleur dans SANtricity System Manager :
++
+
+CAUTION: *Risque de perte d'accès aux données* : Si les deux références ne sont pas identiques, n'essayez pas cette procédure. La présence de contrôleurs incompatibles entraîne le blocage du contrôleur de remplacement lors de sa mise en service.
+
++
+.. Notez la référence de la pièce sur le côté du contrôleur de remplacement.
+.. Repérez la référence de la pièce de rechange pour le contrôleur défectueux affiché dans la zone de détails du Recovery Guru.
++
+Si vous devez trouver ce numéro manuellement, suivez ces étapes :
+
++
+... Sélectionnez *Hardware* > *Controllers and components*.
+... Sélectionnez le graphique du contrôleur défectueux (Controller A ou Controller B) pour afficher le menu contextuel.
+... Sélectionnez *Paramètres d'affichage*.
+... Dans l'onglet *base*, notez le *Numéro de pièce de remplacement* pour le contrôleur.
+
+
+.. Comparez les deux références pour confirmer qu'elles sont identiques.
+.. L'étape suivante dépend du fait que les références des pièces soient identiques ou non :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Les deux références sont identiques
+ a| 
+Passez à l'étape suivante.
+
+
+
+ a| 
+Les deux références sont différentes
+ a| 
+Vous ne pouvez pas continuer cette procédure.
+
+Contactez  https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] pour obtenir de l'aide.
+
+|===
+
+
+. Sauvegardez la base de données de configuration du système de stockage à l'aide de SANtricity System Manager.
++
+En cas de problème lors du retrait d'un contrôleur, vous pouvez utiliser le fichier de sauvegarde pour restaurer votre configuration. Le système enregistre l'état actuel de la base de données de configuration RAID, qui inclut toutes les données des groupes de volumes et des pools de disques du contrôleur.
+
++
+.. Sélectionnez *support › Centre de support › Diagnostics*.
+.. Sélectionnez *collecter les données de configuration*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur sous le nom *configurationData-<arrayName>-<DateTime>.7z*.
+
+
+
+
+
+.Et la suite ?
+Après avoir préparé le remplacement du contrôleur, link:controller-replace-offline-controller.html["mettre hors ligne le contrôleur défectueux"].

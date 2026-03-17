@@ -1,0 +1,44 @@
+---
+section: maintenance-ef50-ef80
+title: EF50 et EF80
+entries:
+- title: Aperçu de la maintenance
+  url: "/maintenance-ef50-ef80/maintain-overview.html"
+- title: Contrôleur
+  pdf-filename: Contrôleur EF50 et EF80
+  entries:
+  - title: Workflow de remplacement du contrôleur
+    url: "/maintenance-ef50-ef80/controller-replace-workflow.html"
+  - title: Examen des conditions requises
+    url: "/maintenance-ef50-ef80/controller-replace-requirements.html"
+  - title: Préparer le système
+    url: "/maintenance-ef50-ef80/controller-replace-prepare.html"
+  - title: Contrôleur hors ligne
+    url: "/maintenance-ef50-ef80/controller-replace-offline-controller.html"
+  - title: Remplacer le contrôleur
+    url: "/maintenance-ef50-ef80/controller-replace-move-hardware.html"
+  - title: Contrôleur en ligne
+    url: "/maintenance-ef50-ef80/controller-replace-online-controller.html"
+  - title: Remplacement complet du contrôleur
+    url: "/maintenance-ef50-ef80/controller-replace-complete-replacement.html"
+- title: DIMM
+  url: "/maintenance-ef50-ef80/dimm-replace.html"
+- title: Lecteur
+  url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Ventilateur
+  url: "/maintenance-ef50-ef80/fan-replace.html"
+- title: module d'E/S
+  pdf-filename: Module d'E/S EF50 et EF80
+  entries:
+  - title: Vue d'ensemble du module d'E/S
+    url: "/maintenance-ef50-ef80/io-module-overview.html"
+  - title: Remplacer le module d'E/S
+    url: "/maintenance-ef50-ef80/io-module-replace.html"
+  - title: Mettre à niveau le module d'E/S
+    url: "/maintenance-ef50-ef80/io-module-upgrade.html"
+- title: Protocole d'interface d'hôte du module d'E/S
+  url: "/maintenance-ef50-ef80/io-module-change-protocol.html"
+- title: batterie NV
+  url: "/maintenance-ef50-ef80/nvdimm-battery-replace.html"
+- title: Alimentation électrique
+  url: "/maintenance-ef50-ef80/power-supply-replace.html"

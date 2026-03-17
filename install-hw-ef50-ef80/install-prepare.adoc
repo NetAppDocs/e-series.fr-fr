@@ -1,0 +1,129 @@
+---
+permalink: install-hw-ef50-ef80/install-prepare.html 
+sidebar: sidebar 
+keywords:  
+summary: Préparez-vous à installer votre système de stockage EF50 ou EF80 en préparant le site, en comprenant les précautions de levage pour votre système de stockage, en déballant les boîtes et en comparant le contenu au bon de livraison, et en enregistrant le système de stockage pour accéder aux avantages du support. 
+---
+= Préparez-vous à installer - EF50 et EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Préparez-vous à installer votre système de stockage EF50 ou EF80 en préparant le site, en comprenant les précautions de levage pour votre système de stockage, en déballant les boîtes et en comparant le contenu au bon de livraison, et en enregistrant le système de stockage pour accéder aux avantages du support.
+
+
+
+== Étape 1: Préparer le site
+
+Assurez-vous que l'emplacement et l'armoire ou le rayonnage que vous prévoyez d'utiliser répondent aux spécifications de votre système de stockage.
+
+.Étapes
+. Utilisez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour confirmer que votre site répond aux exigences environnementales et électriques de votre système de stockage.
+. Assurez-vous de disposer d'un espace suffisant dans vos armoires ou racks pour votre système de stockage et tout commutateur.
++
+Au besoin, consultez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour connaître les dimensions exactes de votre système de stockage.
+
++
+** 2U pour un système de stockage
+** 1U pour la plupart des commutateurs
+
+
+. Installez tous les commutateurs réseau requis.
+. Assurez-vous de disposer d'un navigateur compatible avec le logiciel de gestion :
++
+** Google Chrome (version 89 et ultérieure)
+** Microsoft Edge (version 90 et ultérieure)
+** Mozilla Firefox (version 80 et ultérieure)
+** Safari (version 14 et ultérieure)
+
+
+. Munissez-vous du matériel et des outils suivants nécessaires à l'installation :
++
+** Bracelet antistatique (ESD)
+** Tournevis cruciforme Philips n° 2
+** Lampe de poche
+
+
+
+
+
+
+== Étape 2 : Comprendre les précautions à prendre lors du levage
+
+Avant de déballer les cartons, et plus tard lors de l'installation de votre système de stockage, vous devez connaître le poids de votre système de stockage afin de prendre les précautions nécessaires lors de son levage et de son déplacement.
+
+Un système de stockage EF50 ou EF80 peut peser jusqu'à 61,5 lb (27,9 kg). Pour soulever le système de stockage, utilisez deux personnes ou un élévateur hydraulique.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[Icône d'avertissement de poids AFF A20 A30 A50 et C30 et C60]
+
+
+
+== Étape 3 : Déballez les cartons
+
+Après avoir vérifié que le site et l'armoire ou le rack que vous prévoyez d'utiliser répondent aux spécifications de votre système de stockage, et que vous comprenez les précautions de levage, déballez toutes les boîtes et comparez le contenu aux articles figurant sur le bordereau d'expédition.
+
+.Étapes
+. Ouvrez soigneusement toutes les boîtes et disposez le contenu de manière organisée.
+. Comparez le contenu que vous avez déballé avec le bon de livraison.
++
+Vous pouvez obtenir votre bordereau d'expédition en scannant le code QR sur le côté de la boîte d'expédition.
+
++
+
+NOTE: S'il y a des écarts, notez-les pour une action ultérieure.
+
++
+Les éléments suivants sont quelques-uns des contenus que vous pourriez voir dans les boîtes.
+
++
+Si nécessaire, consultez  https://hwu.netapp.com/["NetApp Hardware Universe"^] pour les autres câbles pris en charge et identifiez leur utilisation.
+
++
+[cols="9,9,5"]
+|===
+
+
+| *Matériel* | *Câbles* |  
+
+
+ a| 
+** Système de stockage avec disques
+** Commutateurs
+** Matériel de montage en rack avec instructions
+** panneau
+
+ a| 
+** câbles Ethernet de mise en miroir inter-contrôleur
+** Câbles Ethernet de gestion (câbles RJ-45)
+** câbles réseau
+** Câbles d'alimentation
+
+|  
+|===
+
+
+
+
+== Étape 4 : Enregistrez votre système de stockage
+
+Après avoir vérifié que votre site répond aux spécifications de votre système de stockage et que vous avez confirmé que vous disposez de toutes les pièces commandées, vous devez enregistrer votre système de stockage.
+
+. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
++
+La procédure d'enregistrement nécessite le numéro de série (SN) de chaque contrôleur. Vous trouverez le numéro de série aux emplacements suivants :
+
++
+** Sur chaque contrôleur
+** Sur le bordereau d'expédition
+** Dans votre courriel de confirmation
++
+image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[exemple d'étiquette de numéro de série]
+
+
+
+
+
+.Et la suite ?
+Après avoir préparé l'installation de votre système de stockage, link:install-hardware.html["installer le matériel"].

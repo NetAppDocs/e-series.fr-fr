@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
+. Repérez la pile NV.
+. Retirez la batterie NV :
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Remplacez la batterie NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Soulevez la batterie NV et sortez-la de son compartiment.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+Retirez le faisceau de câbles de son support.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numéro 3]
+ a| 
+.. Appuyez sur la languette du connecteur et maintenez-la enfoncée.
+.. Tirez le connecteur vers le haut et retirez-le de la prise.
++
+En tirant vers le haut, faites doucement basculer le connecteur d'une extrémité à l'autre (dans le sens de la longueur) pour le déloger.
+
+
+
+|===
+. Déballez la batterie NV de remplacement et placez-la sur une surface plane et antistatique à proximité du système de stockage.
++
+Conservez les matériaux d'emballage pour les utiliser lors du retour de la batterie NV défectueuse.
+
+. Installez la batterie NV de remplacement :
++
+.. Branchez le connecteur électrique dans sa prise.
+.. Faites passer les câbles le long du bloc d'alimentation, dans son support, puis à travers le canal situé devant le compartiment de la batterie NV.
+.. Placez la batterie NV dans son compartiment.
++
+La batterie NV doit être parfaitement alignée dans son compartiment.
+
+
+
+

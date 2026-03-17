@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Après avoir remplacé un module d'E/S, vous devez redémarrer le contrôleur.
+
+.Étapes
+. Redémarrez le contrôleur depuis l'invite LOADER :
++
+`bye`
+
++
+
+NOTE: Le redémarrage du contrôleur défectueux réinitialise également les modules d'E/S et les autres composants.
+
+. Remettez le contrôleur défectueux en état de fonctionnement normal en restituant son stockage :
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Rétablir le retour automatique depuis la console du contrôleur fonctionnel :
++
+`storage failover modify -node local -auto-giveback true`
+
+. Si AutoSupport est activé, rétablissez la création automatique des dossiers :
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

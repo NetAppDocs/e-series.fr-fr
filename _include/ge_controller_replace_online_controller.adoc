@@ -1,0 +1,62 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. L'étape suivante dépend de si le contrôleur défectueux utilisait DHCP pour l'adresse IP :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Le contrôleur défectueux n'utilisait pas DHCP pour l'adresse IP
+ a| 
+Le contrôleur de remplacement adopte l'adresse IP du contrôleur défectueux que vous avez retiré.
+
+Passez à l'étape suivante.
+
+
+
+ a| 
+Le contrôleur défectueux utilisait DHCP pour l'adresse IP
+ a| 
+Demandez à votre administrateur réseau d'associer le DNS/réseau et l'adresse IP du contrôleur défectueux à l'adresse MAC du contrôleur de remplacement.
+
+|===
+. Mettez le contrôleur en ligne à l'aide de SANtricity System Manager.
++
+.. Sélectionnez *Hardware* > *Controllers and components* pour afficher les contrôleurs.
+.. Sélectionnez le contrôleur que vous avez remplacé pour afficher son menu de contenu.
+.. Sélectionnez *Place online*.
+
+
+. Au démarrage du contrôleur, vérifiez les voyants du contrôleur pour vous assurer que la communication avec l'autre contrôleur est rétablie :
++
+** Le voyant d'avertissement orange reste allumé.
+** Les voyants Host Link peuvent être allumés, clignotants ou éteints, selon l'interface hôte.
+
+
+. Lorsque le contrôleur est de nouveau en ligne, vérifiez si une incompatibilité NVSRAM est signalée dans Recovery Guru.
++
+Si une incompatibilité NVSRAM est signalée, mettez à niveau la NVSRAM à l'aide de la commande SMcli suivante. Le paramètre  `-k` est nécessaire si la baie n'est pas sécurisée en https.
+
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+
+NOTE: Si la commande SMcli ne peut pas être exécutée, contactez https://www.netapp.com/company/contact-us/support/["Support NetApp"^] ou connectez-vous à la https://mysupport.netapp.com["Site de support NetApp"^] pour créer un ticket.
+
+. Confirmez que l'état du système de stockage est optimal et que les voyants d'attention du contrôleur sont éteints.
++
+Si l'état n'est pas Optimal ou si l'un des voyants d'alerte est allumé, vérifiez que tous les câbles sont correctement branchés et que le contrôleur est correctement installé. Si nécessaire, retirez puis réinstallez le contrôleur.
+
++
+
+NOTE: Si vous ne parvenez pas à résoudre le problème, contactez https://www.netapp.com/company/contact-us/support/["Support NetApp"^].
+
+

@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+.Étapes
+. Assurez-vous que la dernière version de SANtricity OS est installée :
++
+.. Sélectionnez *Support* > *Upgrade Center*.
+.. Au besoin, installez la dernière version.
+
+
+. Vérifiez que tous les volumes sont renvoyés à leurs contrôleurs propriétaires :
++
+.. Sélectionnez *Storage* > *Volumes*.
+.. Sur la page *Tous les volumes*, vérifiez que les volumes sont distribués à leurs contrôleurs propriétaires.
+.. Sélectionnez *More* > *Change volume ownership* pour afficher les propriétaires des volumes.
+
+
+. L'étape suivante dépend du fait que les volumes soient renvoyés ou non à leurs contrôleurs propriétaires :
++
+[cols="1,2"]
+|===
+| Si... | Ensuite... 
+
+
+ a| 
+Les volumes appartiennent tous à leurs contrôleurs propriétaires
+ a| 
+Passez à l'étape suivante.
+
+
+
+ a| 
+Aucun des volumes n'est renvoyé à son contrôleur propriétaire
+ a| 
+Sélectionnez *Stockage* > *Volumes* > *Plus* et dans le menu déroulant, sélectionnez *Redistribuer les volumes* pour renvoyer les volumes à leurs contrôleurs propriétaires.
+
+
+
+ a| 
+Seuls certains volumes sont retournés à leurs contrôleurs propriétaires après auto-distribution ou distribution manuelle
+ a| 
+Consultez le Recovery Guru pour les problèmes de connectivité hôte.
+
+S'il n'y a pas de Recovery Guru présent ou si, après avoir suivi les étapes du Recovery Guru, les volumes ne sont toujours pas restitués à leurs contrôleurs propriétaires, contactez https://mysupport.netapp.com/site/global/dashboard["Support NetApp"] avant de poursuivre cette procédure.
+
+|===
+. Collectez les données de support pour votre système de stockage :
++
+.. Sélectionnez *support* > *support Center* > *Diagnostics*.
+.. Sélectionnez *collecter les données de support*.
+.. Sélectionnez *Collect*.
++
+Le fichier est enregistré dans le dossier Téléchargements de votre navigateur portant le nom *support-data.7z*.
+
+
+
+. Si vous devez vérifier et modifier le protocole du module d'E/S hôte, utilisez la procédure xref:io-module-change-protocol.html[Modifier le protocole du module d'E/S hôte pour un EF50 ou un EF80].
+
