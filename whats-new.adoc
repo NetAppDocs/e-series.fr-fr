@@ -16,10 +16,10 @@ Le tableau suivant décrit les nouvelles fonctionnalités des dernières version
 
 
 
-== Nouvelles fonctionnalités dans la version 12.0
+== Nouvelles fonctionnalités dans la version 12.00
 
 
-NOTE: La version 12.0 de SANtricity OS est uniquement compatible avec les nouveaux systèmes de stockage 100 % Flash EF80 et EF50.
+NOTE: La version 12.00 de SANtricity OS est uniquement compatible avec les nouveaux systèmes de stockage 100 % Flash EF80 et EF50.
 
 [cols="35h,~"]
 |===
