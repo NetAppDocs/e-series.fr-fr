@@ -29,9 +29,9 @@ NOTE: La version 12.0 de SANtricity OS est uniquement compatible avec les nouvea
  a| 
 Nouveaux modèles de systèmes de stockage – systèmes de stockage 100 % Flash EF80 et EF50
  a| 
-Cette version introduit les systèmes de stockage 100 % Flash EF80 et EF50, entièrement NVMe. Les EF80 et EF50 prennent en charge 24 disques SSD NVMe et une seule carte d'interface d'hôte (HIC) par contrôleur. Les interfaces d'hôte NVMe over Fabrics prises en charge incluent NVMe over RoCE, NVMe over IB pour EF80, et NVMe over FC pour EF50. Les interfaces SCSI prises en charge incluent Fibre Channel.
+Cette version introduit les systèmes de stockage EF80 et EF50 entièrement flash NVMe. Les EF80 et EF50 prennent en charge 24 disques SSD NVMe et une carte de duplication inter-contrôleur par contrôleur. Les interfaces d'hôte NVMe over Fabrics prises en charge incluent NVMe over RoCE, NVMe over IB, NVMe over FC pour EF80, et NVMe over FC pour EF50. L'interface SCSI prise en charge est Fibre Channel pour les deux systèmes. L'EF50 prend en charge jusqu'à deux cartes d'interface d'hôte par contrôleur, tandis que l'EF80 prend en charge jusqu'à trois cartes d'interface d'hôte par contrôleur.
 
-Les SSD NVMe haute capacité de 30 To ou 60 To sont également pris en charge avec les EF80 et EF30. Les EF80 et EF30 sont compatibles uniquement pour une utilisation avec les Dynamic Disk Pool, sans prise en charge du RAID classique.
+Les disques SSD NVMe haute capacité de 30 To ou 60 To sont également pris en charge avec les EF80 et EF50. Les EF80 et EF50 ne peuvent utiliser le pool de disques dynamique que lorsque la baie est équipée de disques de 30 To ou 60 To.
 
 
 
