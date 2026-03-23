@@ -43,7 +43,7 @@ image:../media/install_rails_inst-hw-e2800-e5700.png["Poser les rails"]
 . Installer le shelf.
 +
 
-CAUTION: Une étagère vide pèse 114.91 kg (253.33 lb). Un dispositif de levage mécanisé ou quatre personnes utilisant des poignées de levage sont nécessaires pour déplacer en toute sécurité une tablette vide.
+CAUTION: Une étagère vide pèse environ 134 lb (61 kg). Un monte-charge ou quatre personnes utilisant des poignées de levage sont nécessaires pour déplacer une étagère vide en toute sécurité.
 
 +
 .. Si vous soulevez la tablette à la main, fixez les quatre poignées de levage. Poussez sur chaque poignée jusqu'à ce qu'elle s'enclenche.
