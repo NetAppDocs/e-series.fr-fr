@@ -19,9 +19,9 @@ Après avoir préparé la mise à niveau, vous pouvez retirer les contrôleurs e
 
 [role="tabbed-block"]
 ====
-.Modèles de contrôleurs EF280 et EF50
+.Modèles de contrôleurs EF80 et EF50
 --
-Pour plus d'informations sur le retrait des contrôleurs des systèmes de stockage EF280 et EF50, voir link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 et EF80 - Étape 1 : Retirez le contrôleur"^].
+Pour plus d'informations sur le retrait des contrôleurs des systèmes de stockage EF80 et EF50, voir link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 et EF80 - Étape 1 : Retirez le contrôleur"^].
 
 --
 .Autres modèles de contrôleurs E-Series

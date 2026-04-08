@@ -10640,7 +10640,6 @@
   <block id="0265b5dbf554054dde3a98afc886c622" category="admonition">Lors de la mise à niveau d'EF600 vers EF80, vous pouvez configurer le protocole d'hôte via l'interface utilisateur de SANtricity System Manager. Pour plus d'informations, consultez <block ref="b4bee00978fbe62a1f735b787be3116c" category="inline-link-rx"></block>.</block>
   <block id="353b820726dde980fadda7f3d579a641" category="list-text">EF80 ne prend pas en charge l'extension SAS.</block>
   <block id="dafff188f3a06d1fdaa68a607c17f832" category="inline-link-macro">EF50 et EF80 - Étape 1 : Retirez le contrôleur</block>
-  <block id="a5e57f188bcd8ee5650622c76daaf7ef" category="paragraph">Pour plus d'informations sur le retrait des contrôleurs des systèmes de stockage EF280 et EF50, voir <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
   <block id="d789ee5d8d5244777090beeda7a82875" category="list-text">Une fois la vérification de l'état terminée, vous pouvez cliquer sur les points de suspension (...) à droite de chaque ligne pour afficher plus d'informations et effectuer d'autres tâches.</block>
   <block id="ac5947d69f7ee9f8d3f2e9ee0483a85b" category="list-text">Si la boîte de dialogue « Résoudre les certificats auto-signés » s’ouvre, consultez les informations affichées pour les certificats non approuvés. Pour plus d’informations, vous pouvez également cliquer sur les points de suspension à l’extrémité du tableau et sélectionner *Afficher* dans le menu contextuel.</block>
   <block id="f95817b2bc0b41d0e6a92b658b3204e4" category="list-text">Sélectionnez un certificat sur la page, puis cliquez sur les points de suspension à la fin de la ligne.</block>
@@ -10690,4 +10689,6 @@
   <block id="631e6d7ea44751bbf0471574f75f550e" category="admonition">La version 12.00 de SANtricity OS est uniquement compatible avec les nouveaux systèmes de stockage 100 % Flash EF80 et EF50.</block>
   <block id="dcf1521fe2188852a3d1ae5493b83c24" category="sidebar">SANtricity System Manager 12.00</block>
   <block id="24fe914c4c521099e3e5332138db4935" category="admonition">Une étagère vide pèse environ 134 lb (61 kg). Un monte-charge ou quatre personnes utilisant des poignées de levage sont nécessaires pour déplacer une étagère vide en toute sécurité.</block>
+  <block id="9e70d8ecbcfbe7711ec544e1649bcd7e" category="open-title">Modèles de contrôleurs EF80 et EF50</block>
+  <block id="982b4a8532b7c0f3dfe46d6bac4642d5" category="paragraph">Pour plus d'informations sur le retrait des contrôleurs des systèmes de stockage EF80 et EF50, voir <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
 </blocks>
