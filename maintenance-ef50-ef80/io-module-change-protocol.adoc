@@ -189,7 +189,7 @@ Cela peut prendre environ cinq minutes.
 . Lorsque les contrôleurs sont de nouveau en ligne, confirmez que leur état est Optimal à l'aide de SANtricity System Manager.
 . Recréez les définitions d'hôte.
 +
-Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Créer un hôte manuellement dans SANtricity System Manager"^] procédure.
+Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Créer un hôte manuellement dans SANtricity System Manager"^] procédure.
 
 
 
