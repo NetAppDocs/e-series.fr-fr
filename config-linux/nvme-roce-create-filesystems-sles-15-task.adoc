@@ -2,41 +2,21 @@
 permalink: config-linux/nvme-roce-create-filesystems-sles-15-task.html 
 sidebar: sidebar 
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: Pour SLES 15, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers. 
+summary: Pour RHEL 9, RHEL 10, SLES 15 et SLES 16, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers. 
 ---
-= Création de systèmes de fichiers dans la série E - Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16 (NVMe sur RoCE)
+= Créer des systèmes de fichiers dans E-Series - Linux (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Pour RHEL 8, RHEL 9, RHEL 10, SLES 15 et SLES 16, vous créez un système de fichiers sur le périphérique nvme natif et vous montez le système de fichiers.
+Pour RHEL 9, RHEL 10, SLES 15 et SLES 16, vous créez un système de fichiers sur le périphérique nvme natif et montez le système de fichiers.
+
+.Avant de commencer
+Assurez-vous d'avoir terminé la link:nvme-roce-access-physical-targets-concept.html["accès aux volumes NVMe d'une cible E-Series depuis l'hôte"] tâche afin de garantir que les périphériques NVMe sont correctement configurés et accessibles.
 
 .Étapes
-. Exécutez le `multipath -ll` commande permettant d'obtenir une liste des périphériques nvme.
-+
-[listing]
-----
-# multipath -ll
-----
-+
-Le résultat de cette commande peut être utilisé pour rechercher les périphériques associés `/dev/disk/by-id/nvme-eui.[uuid#]` emplacement. Dans l'exemple ci-dessous, il s'agit de `/dev/disc/by-id/nvme-eui.000082dd5c05d39300a0980000a52225`.
-
-+
-[listing]
-----
-eui.000082dd5c05d39300a0980000a52225 [nvme]:nvme0n6 NVMe,NetApp E-Series,08520000
-size=4194304 features='n/a' hwhandler='ANA' wp=rw
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:0:1 nvme0c0n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=50 status=optimized
-| `- 0:1:1 nvme0c1n1 0:0 n/a optimized     live
-|-+- policy='n/a' prio=10 status=non-optimized
-| `- 0:2:1 nvme0c2n1 0:0 n/a non-optimized live
-`-+- policy='n/a' prio=10 status=non-optimized
-  `- 0:3:1 nvme0c3n1 0:0 n/a non-optimized live
-----
 . Créez un système de fichiers sur la partition du périphérique nvme souhaité à l'aide de l'emplacement `/dev/disk/by-id/nvme-eui.[id#]`.
 +
 La méthode de création d'un système de fichiers varie en fonction du système de fichiers choisi. Cet exemple illustre la création d'un `ext4` système de fichiers.
@@ -69,3 +49,6 @@ Writing superblocks and filesystem accounting information: done
 # mount /dev/disk/by-id/nvme-eui.000082dd5c05d39300a0980000a52225 /mnt/ext4
 ----
 
+
+.Et la suite ?
+Après avoir créé les systèmes de fichiers, link:nvme-roce-worksheet-for-concept.html["Enregistrez les informations de configuration de votre NVMr sur RoCE"].

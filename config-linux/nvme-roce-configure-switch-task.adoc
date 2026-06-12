@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code. 
 ---
-= Configuration du switch dans E-Series - Linux (NVMe over RoCE)
+= Configurer les commutateurs dans la série E - Linux (NVMe sur RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,9 +14,31 @@ summary: Vous configurez les switchs en fonction des recommandations du fourniss
 Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
 
-CAUTION: *RISQUE DE PERTE DE DONNÉES.* vous devez activer le contrôle de flux pour une utilisation avec le contrôle Global Pause sur le switch afin d'éliminer le risque de perte de données dans un environnement NVMe over RoCE.
+CAUTION: *RISQUE DE PERTE DE DONNÉES.* Vous devez exécuter NVMe/RoCE dans un environnement sans perte. Activez le contrôle de flux de bout en bout à l'aide du contrôle de flux basé sur les trames de pause globales ou du contrôle de flux prioritaire (PFC) sur votre réseau afin d'éliminer tout risque de perte de données.
+
+
+
+== Trames de pause globales
+
+Les trames de pause globales constituent la forme la plus élémentaire de contrôle de flux et la plus simple à mettre en œuvre. Lorsqu'un port réseau est saturé, des trames de pause sont générées interrompant tout le trafic sur ce port jusqu'à ce que le trafic précédent ait été suffisamment traité pour que le port réseau puisse suivre sans perdre le trafic entrant.
 
 .Étapes
-. Activez le contrôle de flux de trames pause Ethernet *de bout en bout* comme meilleure pratique de configuration.
+. Activez le contrôle de flux basé sur Global Pause Frame *de bout en bout* en utilisant la documentation fournie par le fournisseur de votre commutateur.
+. Assurez-vous que le contrôle de flux basé sur la trame de pause globale (Global Pause Frame) est activé sur tous les ports de commutateur connectés à vos hôtes, baies et liaisons inter-commutateurs dans cet environnement.
+
+
+
+
+== Contrôle de flux prioritaire
+
+Le contrôle de flux prioritaire (PFC) est une forme plus complexe de contrôle de flux qui attribue différents niveaux de priorité à différents types de trafic. Lorsqu'un trafic trop important est reçu sur une priorité donnée, celle-ci est suspendue tandis que le trafic correspondant à d'autres niveaux de priorité est autorisé à se poursuivre, ce qui permet d'éviter qu'un trafic important de certains types ne ralentisse d'autres formes de trafic.
+
+À l'heure actuelle, vous devez utiliser soit une baie EF600 E-Series avec des HIC Ethernet 200 Gb/s (PN 111-04583) exécutant la version 11.80.1, soit une baie EF80 E-Series fonctionnant avec toute HIC NVMe/RoCE prise en charge. Les paramètres PFC sont codés en dur sur la baie et nécessitent que le trafic NVMe/RoCE soit marqué comme Priorité 3 avec une valeur DSCP de `106`.
+
+.Étapes
+. Consultez la documentation de votre fournisseur de commutateurs pour plus d'informations sur la configuration de votre réseau à l'aide des valeurs PFC.
 . Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
 
+
+.Et la suite ?
+Après avoir configuré les commutateurs, link:nvme-roce-setup-host-side-task.html["Configurez l'initiateur NVMe via RoCE sur l'hôte"].

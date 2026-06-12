@@ -45,10 +45,9 @@ Saisissez un nom pour le nouvel hôte.
  a| 
 Type de système d'exploitation hôte
  a| 
-Sélectionnez l'une des options suivantes dans la liste déroulante :
+Sélectionnez l'option suivante dans la liste déroulante :
 
 ** * Linux* pour SANtricity 11.60 et versions ultérieures
-** *Linux DM-MP (Kernel 3.10 ou version ultérieure)* pour la version pré-SANtricity 11.60
 
 
 
@@ -89,3 +88,6 @@ Vous devez ajouter un identificateur de port hôte à la fois pour l'associer à
 Une fois l'hôte créé, SANtricity System Manager crée un nom par défaut pour chaque port hôte configuré pour l'hôte.
 
 L'alias par défaut est ``<Hostname_Port Number>``. Par exemple, l'alias par défaut du premier port créé pour `host IPT is IPT_1`.
+
+.Et la suite ?
+Après avoir créé l'hôte, link:nvme-roce-assign-volume-task.html["Attribuer un volume via SANtricity System Manager"].

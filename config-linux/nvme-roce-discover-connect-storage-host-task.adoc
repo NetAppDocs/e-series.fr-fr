@@ -14,6 +14,12 @@ summary: 'Avant de définir chaque hôte dans SANtricity System Manager, vous de
 Avant de définir chaque hôte dans SANtricity System Manager, vous devez détecter les ports de contrôleur cible depuis l'hôte, puis établir les connexions NVMe.
 
 .Étapes
+. Vérifiez que vous pouvez effectuer un ping depuis l'hôte vers chaque port HIC de la baie en utilisant votre débit MTU attendu à l'aide de la commande suivante :
++
+[listing]
+----
+ping -M do -s <size> <IP of array HIC port>
+----
 . Découvrez les sous-systèmes disponibles sur la cible NVMe-of pour tous les chemins à l'aide de la commande suivante :
 +
 [listing]
@@ -59,11 +65,11 @@ rdma_qptype: connected
 rdma_cms:    rdma-cm
 rdma_pkey: 0x0000
 ----
-. Répétez l'étape 1 pour toutes les autres connexions.
+. Répétez l'étape 2 pour toutes les autres connexions.
 . Connectez-vous au sous-système découvert sur le premier chemin à l'aide de la commande : `nvme connect -t rdma -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
 +
 
-NOTE: La commande indiquée ci-dessus ne persiste pas après le redémarrage. Le `NVMe connect` L'exécution de la commande doit s'effectuer après chaque redémarrage pour rétablir les connexions NVMe.
+NOTE: La commande ci-dessus n'est pas conservée après un redémarrage. La  `nvme connect` commande devra être exécutée après chaque redémarrage pour rétablir les connexions NVMe.
 
 +
 
@@ -75,7 +81,7 @@ NOTE: Si vous spécifiez un numéro de port à l'aide de cette commande, la conn
 
 +
 
-NOTE: Le paramètre de profondeur de file d'attente recommandé est 1024. Remplacer le paramètre par défaut 128 par 1024 à l'aide de ``-Q 1024``option de ligne de commande, comme indiqué dans l'exemple suivant.
+NOTE: La profondeur de file d'attente recommandée est de 1024. Remplacez la valeur par défaut de 128 par 1024 en utilisant l'option de ligne de commandes `-Q 1024`, comme indiqué dans l'exemple suivant.
 
 +
 
@@ -84,8 +90,27 @@ NOTE: Le délai de perte de contrôleur recommandé en secondes est de 60 minute
 +
 [listing]
 ----
-# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
-# nvme connect -t rdma -a 192.168.2.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
+# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-
+08.com.netapp:EF80.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
 ----
-. Répétez l'étape 3 pour connecter le sous-système découvert sur le second chemin.
+. Répétez l'étape 4 pour connecter le sous-système découvert sur le deuxième chemin.
+. **Facultatif** - Configurez votre hôte pour qu'il découvre et se connecte automatiquement aux cibles à chaque démarrage.
++
+.. Ajoutez les paramètres de découverte des étapes 2 et 3 à  `/etc/nvme/discovery.conf` l'aide de la procédure et du format suivants :
++
+[listing]
+----
+# echo "--transport=rdma --traddr= target_ip_address --trsvcid=4420" | sudo tee -a /etc/nvme/discovery.conf
+----
+.. Activez le service nvmf-autoconnect après avoir rempli le  `/etc/nvme/discovery.conf` fichier à l'aide de la commande suivante :
++
+[listing]
+----
+sudo systemctl enable nvmf-autoconnect.service
+----
 
+
+
+
+.Et la suite ?
+Une fois les connexions établies, link:nvme-roce-define-host-task.html["définir l'hôte"].

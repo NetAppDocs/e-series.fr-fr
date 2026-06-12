@@ -46,7 +46,7 @@ Avant d'utiliser NVMe over RoCE, consultez le https://mysupport.netapp.com/matri
 === Restrictions des commutateurs
 
 
-CAUTION: *RISQUE DE PERTE DE DONNÉES.* vous devez activer le contrôle de flux pour une utilisation avec le contrôle Global Pause sur le switch afin d'éliminer le risque de perte de données dans un environnement NVMe over RoCE.
+CAUTION: *RISQUE DE PERTE DE DONNÉES.* Vous devez exécuter NVMe sur RoCE dans un environnement sans perte. Activez le contrôle de flux de bout en bout à l'aide des trames de pause globales ou du contrôle de flux prioritaire (PFC) sur votre réseau afin d'éliminer le risque de perte de données. Le PFC exige que NVMe sur RoCE soit étiqueté comme trafic de priorité 3 avec une valeur DSCP de `106`.
 
 
 
@@ -55,3 +55,6 @@ CAUTION: *RISQUE DE PERTE DE DONNÉES.* vous devez activer le contrôle de flux 
 * La mise en miroir asynchrone et synchrone n'est pas prise en charge.
 * Le provisionnement fin (la création de volumes fins) n'est pas pris en charge.
 
+
+.Et la suite ?
+Après avoir vérifié la prise en charge de la configuration Linux et examiné les restrictions, link:nvme-roce-configure-ip-address-dhcp-task.html["Configurer les adresses IP via DHCP"].

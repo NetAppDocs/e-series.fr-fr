@@ -56,3 +56,6 @@ Après avoir attribué un ou plusieurs volumes à un hôte ou à un cluster hôt
 * Le volume affecté reçoit le prochain NSID disponible. L'hôte utilise le NSID pour accéder au volume.
 * Le nom de volume fourni par l'utilisateur apparaît dans les listes de volumes associées à l'hôte.
 
+
+.Et la suite ?
+Après avoir attribué un volume, link:nvme-roce-display-volumes-visible-host-task.html["afficher les volumes visibles à l'hôte"].

@@ -89,3 +89,6 @@ L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volum
 Pour plus d'informations, consultez l'aide en ligne de SANtricity System Manager.
 
 
+
+.Et la suite ?
+Après avoir configuré le stockage dans SANtricity System Manager, link:nvme-roce-configure-switch-task.html["configurer les commutateurs"].

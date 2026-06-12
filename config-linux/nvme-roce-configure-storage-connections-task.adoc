@@ -125,3 +125,6 @@ NOTE: Cette option n'est disponible que dans un environnement iSCSI. Elle n'est 
 |===
 . Cliquez sur *Terminer*.
 
+
+.Et la suite ?
+Après avoir configuré les paramètres du port NVMe sur RoCE, link:nvme-roce-discover-connect-storage-host-task.html["découvrir et connecter le stockage sur l'hôte"].

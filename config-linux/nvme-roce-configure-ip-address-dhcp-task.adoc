@@ -51,3 +51,6 @@ Si la matrice de stockage ne parvient pas à obtenir les adresses IP attribuées
 Votre administrateur réseau a besoin des adresses MAC pour déterminer l'adresse IP de chaque contrôleur. Vous aurez besoin des adresses IP pour vous connecter à votre système de stockage via votre navigateur.
 
 
+
+.Et la suite ?
+Après avoir configuré les adresses IP à l'aide du DHCP, link:nvme-roce-access-sam-setup-wizard-task.html["Configurez votre stockage à l'aide de SANtricity System Manager"].
