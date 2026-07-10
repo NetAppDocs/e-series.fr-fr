@@ -25,6 +25,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Étape 1 : préparer le remplacement du contrôleur
 
 Préparez-vous à remplacer un boîtier de contrôleur en enregistrant la clé de sécurité du lecteur, en sauvegardant la configuration et en recueillant les données de support. Vous pouvez ensuite arrêter les opérations d'E/S de l'hôte, mettre le contrôleur hors ligne ou le mettre hors tension.
@@ -208,6 +209,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 ====
 
 
+[[step-2-remove-failed-controller]]
 == Étape 2 : retirer le contrôleur défectueux
 
 Remplacez le réservoir défectueux par un neuf.
@@ -236,6 +238,7 @@ La LED verte cache actif située à l'arrière du contrôleur est allumée lorsq
 
 
 
+[[step-3-remove-the-battery]]
 == Étape 3 : retirez la batterie
 
 Retirez la batterie du contrôleur défectueux et installez-la dans le contrôleur de remplacement.
@@ -278,6 +281,7 @@ NOTE: Ne branchez pas encore la batterie. Vous le branchez une fois que les autr
 
 
 
+[[step-4-remove-the-hic]]
 == Étape 4 : retirez la HIC
 
 Retirez le cadre HIC et la carte PCIe HIC du module de contrôleur défectueux.
@@ -297,6 +301,7 @@ NOTE: Vous pouvez desserrer les vis moletées avec vos doigts ou un tournevis.
 
 
 
+[[step-5-move-the-dimms]]
 == Étape 5 : déplacez les modules DIMM
 
 Retirez les modules DIMM du boîtier du contrôleur défectueux et installez-les dans le boîtier du contrôleur de remplacement.
@@ -353,6 +358,7 @@ NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien align�
 
 
 
+[[step-6-install-the-hic]]
 == Étape 6 : installer le HIC
 
 Installer le HIC dans le boîtier de contrôleur de remplacement.
@@ -365,6 +371,7 @@ Installer le HIC dans le boîtier de contrôleur de remplacement.
 
 
 
+[[step-7-install-the-battery]]
 == Étape 7 : installez la batterie
 
 Installer la batterie dans le boîtier de contrôleur de remplacement.
@@ -381,6 +388,7 @@ Assurez-vous que la fiche se verrouille dans la prise batterie de la carte mère
 
 
 
+[[step-8-complete-controller-replacement]]
 == Étape 8 : remplacement complet du contrôleur
 
 Rétablissez la connexion au tiroir contrôleur, collectez les données du support et reprenez les opérations.

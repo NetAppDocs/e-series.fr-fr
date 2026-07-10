@@ -16,6 +16,7 @@ Dans un premier temps, vous devez vérifier que votre configuration Linux est pr
 
 
 
+[[verify-the-linux-configuration-is-supported]]
 == Vérifiez que la configuration Linux est prise en charge
 
 Pour assurer un fonctionnement fiable, vous créez un plan d'implémentation, puis utilisez la matrice d'interopérabilité (IMT) de NetApp afin de vérifier que l'ensemble de la configuration est pris en charge.
@@ -37,12 +38,14 @@ Les informations détaillées concernant la configuration choisie sont accessibl
 
 
 
+[[verify-nvme-over-roce-restrictions]]
 == Vérification des restrictions NVMe over RoCE
 
 Avant d'utiliser NVMe over RoCE, consultez le https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour vérifier les dernières restrictions en matière de contrôleur, d'hôte et de reprise.
 
 
 
+[[switch-restrictions]]
 === Restrictions des commutateurs
 
 
@@ -50,6 +53,7 @@ CAUTION: *RISQUE DE PERTE DE DONNÉES.* Vous devez exécuter NVMe sur RoCE dans 
 
 
 
+[[storage-and-disaster-recovery-restrictions]]
 === Restrictions en matière de stockage et de reprise après incident
 
 * La mise en miroir asynchrone et synchrone n'est pas prise en charge.

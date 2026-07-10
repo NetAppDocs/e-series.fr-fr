@@ -15,12 +15,14 @@ Vous pouvez mettre à niveau votre baie de stockage en remplaçant vos contrôle
 
 
 
+[[controller-components]]
 == Composants du contrôleur
 
 Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il contrôle les entraînements et met également en œuvre les fonctions du logiciel de gestion.
 
 
 
+[[when-to-use-this-procedure]]
 == Quand utiliser cette procédure
 
 Cette procédure permet généralement de mettre à niveau tous les contrôleurs vers un autre modèle ou plateforme. Cette procédure implique de remplacer tous les contrôleurs d'un plateau lecteur de contrôleur

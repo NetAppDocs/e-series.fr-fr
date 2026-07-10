@@ -23,6 +23,7 @@ Pour afficher et gérer les ressources de stockage, vous devez utiliser l'interf
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Étape 1 : saisissez les adresses réseau pour la découverte
 
 .Étapes
@@ -61,6 +62,7 @@ Si vous souhaitez importer des certificats signés par une autorité de certific
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Étape 2 : résolution de certificats non approuvés lors de la découverte
 
 Vous devez résoudre tous les problèmes liés au certificat avant de poursuivre le processus de détection.
@@ -77,6 +79,7 @@ Vous devez résoudre tous les problèmes liés au certificat avant de poursuivre
 
 
 
+[[step-3-provide-passwords]]
 == Étape 3 : fournir des mots de passe
 
 Pour la dernière étape de la découverte, vous devez saisir les mots de passe des matrices de stockage que vous souhaitez ajouter à votre domaine de gestion.

@@ -18,6 +18,7 @@ Chaque boîtier de contrôleur contient une carte contrôleur, une batterie et u
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
@@ -59,6 +60,7 @@ NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud 
 
 
 
+[[requirements-for-replacing-a-failed-controller]]
 == Conditions requises pour le remplacement d'un contrôleur défectueux
 
 Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
@@ -84,6 +86,7 @@ Vous pouvez également effectuer certaines opérations à l'aide de l'interface 
 
 
 
+[[duplex-configuration-requirements]]
 == Configuration du mode recto verso requise
 
 Dans le cas d'un tiroir contrôleur avec deux contrôleurs (configuration duplex), vous pouvez remplacer un absorbeur de contrôleurs alors que votre baie de stockage est sous tension et exécuter des opérations d'E/S hôte, tant que les conditions suivantes sont vraies :

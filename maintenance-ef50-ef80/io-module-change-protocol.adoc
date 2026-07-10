@@ -66,6 +66,7 @@ Commencez par la procédure link:../upgrade-controllers/index.html["En savoir pl
 
 
 
+[[step-1-prepare-for-the-protocol-change]]
 == Étape 1 : Préparez-vous au changement de protocole
 
 Préparez-vous à modifier le protocole sur les modules d'E/S de l'hôte en vérifiant le protocole actuellement utilisé, en déterminant si vous devez changer le protocole, et, si oui, en planifiant une fenêtre de maintenance pour une interruption.
@@ -107,6 +108,7 @@ Poursuivez cette procédure pour changer le protocole.
 
 
 
+[[step-2-stop-host-io-operations]]
 == Étape 2 : Arrêtez les opérations d’E/S de l’hôte
 
 Vous devez interrompre toutes les opérations d'E/S de l'hôte, puis supprimer tous les hôtes définis du système de stockage avant de modifier le protocole.
@@ -169,6 +171,7 @@ Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santr
 
 
 
+[[step-3-change-the-protocol]]
 == Étape 3 : Modifier le protocole
 
 À l'aide de SANtricity System Manager, modifiez le protocole sur les modules d'E/S de l'hôte, attendez que les contrôleurs terminent leur cycle de redémarrage, confirmez que leur statut est Optimal, puis recréez les définitions de l'hôte.
@@ -195,6 +198,7 @@ Pour les instructions, consultez la https://docs.netapp.com/us-en/e-series-santr
 
 
 
+[[step-4-configure-the-host-to-use-the-new-protocol]]
 == Étape 4 : Configurer l’hôte pour utiliser le nouveau protocole
 
 Après avoir modifié le protocole hôte, vous devez configurer l'hôte pour qu'il utilise le nouveau protocole.

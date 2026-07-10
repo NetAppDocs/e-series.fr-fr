@@ -15,6 +15,7 @@ Après avoir préparé la mise à niveau, vous pouvez retirer les contrôleurs e
 
 
 
+[[step-1-remove-controller]]
 == Étape 1 : retirer le contrôleur
 
 [role="tabbed-block"]
@@ -79,6 +80,7 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Déposer le b
 ====
 
 
+[[step-2-remove-battery]]
 == Étape 2 : déposer la batterie
 
 Retirez la batterie uniquement si vous prévoyez d'utiliser la batterie de l'ancien boîtier du contrôleur dans le nouveau boîtier du contrôleur.

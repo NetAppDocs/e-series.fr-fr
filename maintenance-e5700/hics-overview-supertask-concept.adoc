@@ -15,6 +15,7 @@ Avant d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 Vous pouvez ajouter, mettre à niveau ou remplacer une HIC dans le tiroir contrôleur E5724 et le tiroir contrôleur E5760.
@@ -30,6 +31,7 @@ Voici une présentation des étapes à suivre pour remplacer une HIC dans des co
 
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Conditions requises pour l'ajout, la mise à niveau ou le remplacement d'une HIC
 
 Si vous prévoyez d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte (HIC), gardez les conditions suivantes à l'esprit.

@@ -15,6 +15,7 @@ L'installation implique le téléchargement du fichier, puis l'installation du p
 
 
 
+[[download-web-services-proxy-files]]
 == Téléchargez les fichiers proxy de services Web
 
 Vous pouvez télécharger le fichier d'installation et le fichier readme depuis la page de téléchargement des logiciels du site de support NetApp.
@@ -30,6 +31,7 @@ Le package de téléchargement inclut le proxy de services Web et l'interface Un
 
 
 
+[[install-on-windows-or-linux-server]]
 == Installez sous Windows ou Linux Server
 
 Vous pouvez installer Web Services Proxy et Unified Manager à l'aide de l'un des trois modes (graphique, Console ou silencieux) ou en utilisant un fichier RPM (Linux uniquement).
@@ -41,6 +43,7 @@ Vous pouvez installer Web Services Proxy et Unified Manager à l'aide de l'un de
 
 
 
+[[graphical-mode-install]]
 === Installation du mode graphique
 
 Vous pouvez exécuter l'installation en mode graphique pour Windows ou Linux. En mode graphique, les invites s'affichent dans une interface de type Windows.
@@ -80,6 +83,7 @@ La boîte de dialogue installation terminée s'affiche.
 
 
 
+[[console-mode-install]]
 === Installation du mode console
 
 Vous pouvez exécuter l'installation en mode Console pour Windows ou Linux. En mode Console, les invites s'affichent dans la fenêtre du terminal.
@@ -109,6 +113,7 @@ NOTE: Lors d'une mise à niveau, vous n'êtes pas invité à entrer les paramèt
 
 
 
+[[silent-mode-install]]
 === Installation du mode silencieux
 
 Vous pouvez exécuter l'installation en mode silencieux pour Windows ou Linux. En mode silencieux, aucun message ou script de retour n'apparaît dans la fenêtre du terminal.
@@ -126,6 +131,7 @@ La procédure d'installation peut prendre plusieurs minutes. Une fois l'installa
 
 
 
+[[rpm-command-install-linux-only]]
 === Installation de la commande RPM (Linux uniquement)
 
 Pour les systèmes Linux compatibles avec le système de gestion des packages RPM, vous pouvez installer Web Services Proxy à l'aide d'un fichier RPM facultatif.

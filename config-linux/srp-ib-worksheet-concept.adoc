@@ -17,6 +17,7 @@ image::../media/port_identifiers_ib_srp.gif[Identificateurs de port SRB sur IB]
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 
@@ -70,12 +71,14 @@ Port hôte 2 vers commutateur IB 2 (chemin « B »)
 |===
 
 
+[[recommended-configuration]]
 == Configuration recommandée
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles.
 
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 

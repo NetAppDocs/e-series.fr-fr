@@ -33,6 +33,7 @@ Chaque boîtier de contrôleur comprend une batterie qui préserve les données 
 
 
 
+[[step-1-place-controller-offline]]
 == Étape 1 : mettez le contrôleur hors ligne
 
 Sauvegardez les données et mettez le contrôleur affecté hors ligne.
@@ -79,6 +80,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Remplacez la batterie défectueuse par une batterie neuve.
@@ -109,6 +111,7 @@ image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poi
 
 
 
+[[step-3-remove-failed-battery]]
 == Étape 3 : retirez la batterie défectueuse
 
 Retirez la batterie défectueuse du contrôleur.
@@ -141,6 +144,7 @@ CAUTION: Pour se conformer aux réglementations IATA, n'expédiez jamais une bat
 
 
 
+[[step-4-install-new-battery]]
 == Étape 4 : installez une nouvelle batterie
 
 Après avoir retiré la batterie défectueuse du boîtier du contrôleur, suivez cette étape pour installer la nouvelle batterie.
@@ -163,6 +167,7 @@ La batterie s'enclenche.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Étape 5 : réinstallez le boîtier du contrôleur
 
 Réinstallez le contrôleur dans le tiroir du contrôleur.
@@ -181,6 +186,7 @@ image::../media/remove_controller_7.png[Installez le contrôleur dans le shelf]
 
 
 
+[[step-6-complete-battery-replacement]]
 == Étape 6 : remplacement complet de la batterie
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

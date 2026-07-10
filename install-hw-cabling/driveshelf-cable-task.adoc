@@ -25,6 +25,7 @@ Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE46
 
 
 
+[[cabling-e2800-and-e5700]]
 == Câblage des systèmes E2800 et E5700
 
 Les informations suivantes s'appliquent au câblage des systèmes E2800, E2800B, EF280, E5700, EF5700B, Ou tiroir contrôleur EF570 vers un tiroir disque DE212C, DE224C ou DE460.
@@ -52,6 +53,7 @@ image::../media/60_cabling.png[Un tiroir contrôleur et des tiroirs de 60 disque
 ====
 
 
+[[cabling-ef300-and-ef600]]
 == Câblage EF300 et EF600
 
 Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur EF300, EF600, EF300C ou EF600C vers un tiroir disque DE212C, DE224C ou DE460.
@@ -82,6 +84,7 @@ image::../media/ef_to_de460c.png[Un tiroir contrôleur et des tiroirs de 60 disq
 ====
 
 
+[[cabling-e4000]]
 == Câblage E4000
 
 Les informations suivantes s'appliquent au câblage d'un tiroir contrôleur E4000 à un tiroir disque DE212C, DE224C ou DE460.

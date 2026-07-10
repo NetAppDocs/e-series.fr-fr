@@ -21,6 +21,7 @@ Les systèmes EF300 et EF300C prennent en charge l'extension SAS avec des tiroir
 
 
 
+[[replace-drive-in-an-ef300-24-drive-shelf]]
 == Remplacement du disque par un tiroir EF300 (24 disques)
 
 Suivez cette procédure pour remplacer un disque dans un tiroir de 24 disques.
@@ -42,6 +43,7 @@ La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disq
 
 
 
+[[step-1-prepare-to-replace-drive-24-drive]]
 === Étape 1 : préparation du remplacement de l'entraînement (24 disques)
 
 Préparation au remplacement d'un disque en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
@@ -71,6 +73,7 @@ NOTE: Si vous remplacez un disque dans un tiroir équipé d'un panneau, vous dev
 
 
 
+[[step-2-remove-failed-drive-24-drive]]
 === Étape 2 : retrait du disque défectueux (24 disques)
 
 Retirez un disque défectueux pour le remplacer par un nouveau disque.
@@ -101,6 +104,7 @@ NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 se
 
 
 
+[[step-3-install-new-drive-24-drive]]
 === Étape 3 : installation d'un nouvel entraînement (24 disques)
 
 Vous installez un nouveau lecteur pour remplacer le lecteur défectueux. Installez le disque de remplacement dès que possible après avoir retiré le disque défectueux. Dans le cas contraire, il existe un risque de surchauffe de l'équipement.
@@ -120,6 +124,7 @@ NOTE: Selon votre configuration, le contrôleur peut reconstruire automatiquemen
 
 
 
+[[step-4-complete-drive-replacement-24-drive]]
 === Étape 4 : remplacement complet des disques (24 disques)
 
 Vérifiez que le nouveau lecteur fonctionne correctement.
@@ -160,6 +165,7 @@ Le remplacement de votre disque est terminé. Vous pouvez reprendre les opérati
 
 
 
+[[replace-drive-in-an-ef300-60-drive-shelf]]
 == Remplacement du disque par un tiroir EF300 (60 disques)
 
 Suivez cette procédure pour remplacer un disque dans un tiroir de 60 disques.
@@ -180,6 +186,7 @@ La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disq
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 === Étape 1 : préparation du remplacement de l'entraînement (60 disques)
 
 Préparation au remplacement d'un disque en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
@@ -237,6 +244,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[LED d'av
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 === Étape 2 : retrait du disque défectueux (60 disques)
 
 Retirez un disque défectueux pour le remplacer par un nouveau disque.
@@ -274,6 +282,7 @@ NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 se
 
 
 
+[[step-3-install-new-drive-60-drive]]
 === Étape 3 : installation d'un nouvel entraînement (60 disques)
 
 Installez un nouveau lecteur pour remplacer le lecteur défectueux.
@@ -303,6 +312,7 @@ Selon votre configuration, le contrôleur peut reconstruire automatiquement les 
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 === Étape 4 : remplacement complet des disques (60 disques)
 
 Vérifiez que le nouveau lecteur fonctionne correctement.

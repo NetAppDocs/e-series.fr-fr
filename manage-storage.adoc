@@ -15,18 +15,21 @@ Utilisez les liens ci-dessous pour accéder à une documentation décrivant la c
 
 
 
+[[online-help-for-system-manager]]
 == Aide en ligne de System Manager
 
 Accédez au https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Aide en ligne de SANtricity System Manager"^], où vous pouvez trouver des informations sur la planification, la configuration, la gestion et le dépannage de votre matrice de stockage.
 
 
 
+[[online-help-for-unified-manager]]
 == Aide en ligne d'Unified Manager
 
 Accédez au https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Aide en ligne de SANtricity Unified Manager"^], où vous pouvez apprendre à exécuter des commandes de gestion du stockage sur plusieurs matrices de stockage réseau.
 
 
 
+[[command-reference]]
 == Référence de commande
 
 Accédez au https://docs.netapp.com/us-en/e-series-cli/index.html["Référence de commande"^], Où vous pouvez apprendre à configurer et à surveiller vos matrices de stockage à l'aide des commandes de l'interface de ligne de commande (CLI).

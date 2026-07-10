@@ -15,6 +15,7 @@ Dans l'API des services Web, les communications HTTP impliquent un cycle de rép
 
 
 
+[[url-elements-in-requests]]
 == Éléments URL dans les demandes
 
 Quel que soit le langage de programmation ou l'outil utilisé, chaque appel à l'API des services Web a une structure similaire, avec une URL, un verbe HTTP et un en-tête accepter.
@@ -72,6 +73,7 @@ Le chemin d'accès à l'API se compose de trois parties :
 |===
 
 
+[[supported-http-verbs]]
 == Verbes HTTP pris en charge
 
 Les verbes HTTP pris en charge comprennent OBTENIR, PUBLIER et SUPPRIMER :
@@ -86,12 +88,14 @@ NOTE: Actuellement, l'API des services Web ne prend pas en charge LES CORRECTIFS
 
 
 
+[[accept-headers]]
 == Accepter les en-têtes
 
 Lors du renvoi d'un corps de demande, Web Services renvoie les données au format JSON (sauf indication contraire). Certains clients ne font pas défaut à demander « texte/html » ou quelque chose de similaire. Dans ce cas, l'API répond par un code HTTP 406, indiquant qu'elle ne peut pas fournir de données dans ce format. Il est recommandé de définir l'en-tête Accept comme « application/json » dans tous les cas où vous vous attendez à ce que JSON soit le type de réponse. Dans d'autres cas où un corps de réponse n'est pas retourné (PAR exemple, SUPPRIMER), à condition que l'en-tête accepter ne cause aucun effet involontaire.
 
 
 
+[[responses]]
 == Réponses
 
 Lorsqu'une demande est adressée à l'API, une réponse renvoie deux informations essentielles :

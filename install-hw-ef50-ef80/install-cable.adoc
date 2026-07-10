@@ -26,6 +26,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direction de la lang
 
 
 
+[[step-1-cable-the-inter-controller-mirroring-connections]]
 == Étape 1 : Câbler les connexions de duplication entre contrôleurs
 
 Reliez les contrôleurs entre eux pour activer la mise en miroir inter-contrôleurs. Les connexions de mise en miroir inter-contrôleurs garantissent une redondance complète du système et sont utilisées pour la mise en miroir du cache et l'expédition des E/S. Le câblage est identique pour les systèmes de stockage EF50 et EF80.
@@ -53,6 +54,7 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Câblage de con
 
 
 
+[[step-2-cable-the-host-connections]]
 == Étape 2 : Câbler les connexions d'hôte
 
 Câblez les connexions d'hôte de votre système de stockage en fonction de la topologie de votre réseau : connexion directe ou connexion via une structure.

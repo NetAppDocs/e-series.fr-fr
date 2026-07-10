@@ -15,6 +15,7 @@ Web Services inclut une documentation API qui vous permet d'interagir directemen
 
 
 
+[[log-in-to-web-services-api]]
 == Connectez-vous à l'API des services Web
 
 Après avoir installé le proxy de services Web, vous pouvez accéder à la documentation interactive de l'API dans un navigateur.
@@ -99,6 +100,7 @@ La documentation interactive utilise JavaScript pour faire la demande directemen
 
 
 
+[[log-in-to-unified-manager]]
 == Connectez-vous à Unified Manager
 
 Après avoir installé Web Services Proxy, vous pouvez accéder à Unified Manager pour gérer plusieurs systèmes de stockage dans une interface Web.

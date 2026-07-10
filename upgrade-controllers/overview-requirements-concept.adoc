@@ -18,6 +18,7 @@ NOTE: Pour plus d'informations sur les configurations prises en charge par chaqu
 
 
 
+[[hardware-and-firmware-requirements]]
 == Configuration matérielle et firmware requise
 
 * * Mises à niveau des contrôleurs recto et recto verso*
@@ -89,6 +90,7 @@ N’utilisez aucun autre port hôte (Slot 1, Slot 2 ou Slot 3) pour la communica
 
 
 
+[[upgrade-compatibility]]
 == Compatibilité des mises à niveau
 
 Examinez les chemins de mise à niveau pris en charge pour chaque modèle de baie de stockage.
@@ -300,6 +302,7 @@ Les contrôleurs EF540, EF550 et EF560 ne doivent pas être placés dans des tir
 ====
 
 
+[[sas-enclosures]]
 == Armoires SAS
 
 Le système E5700 prend en charge les boîtiers SAS-2 DE5600 et DE6600 par le biais d'une mise à niveau de la tête. Lorsqu'un contrôleur E5700 est installé dans des armoires SAS-2, la prise en charge des ports hôte de base est désactivée.
@@ -335,6 +338,7 @@ Remarques :
 
 
 
+[[sas-2-to-sas-3-investment-protection]]
 == Protection des investissements SAS-2 vers SAS-3
 
 Vous pouvez reconfigurer votre système SAS-2 pour qu'il soit utilisé derrière un nouveau tiroir de contrôleur SAS-3 (E57XX/EF570/E28XX).

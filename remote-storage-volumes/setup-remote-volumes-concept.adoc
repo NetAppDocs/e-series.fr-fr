@@ -15,6 +15,7 @@ Le système de stockage E-Series doit être configuré de manière à communique
 
 
 
+[[configure-remote-storage-device-and-e-series-array]]
 == Configuration d'un périphérique de stockage distant et d'une baie E-Series
 
 Avant de passer à SANtricity System Manager pour configurer la fonction volumes de stockage distants, procédez comme suit :
@@ -38,6 +39,7 @@ NOTE: Recommandé : sauvegardez le volume source distant avant de lancer le proc
 
 
 
+[[cable-the-storage-arrays]]
 == Branchez les câbles des matrices de stockage
 
 Dans le cadre du processus de configuration, les baies de stockage et l'hôte d'E/S doivent être câblés à l'interface compatible iSCSI.
@@ -48,6 +50,7 @@ image:../media/remote_target_volumes_iscsi_use_case_1.png["Câblage de stockage 
 
 
 
+[[configure-the-iscsi-ports]]
 == Configurez les ports iSCSI
 
 Vous devez configurer les ports iSCSI pour assurer la communication entre la cible (baie de stockage E-Series locale) et la source (baie de stockage à distance).

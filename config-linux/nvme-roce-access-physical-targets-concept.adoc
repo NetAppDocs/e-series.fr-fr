@@ -17,6 +17,7 @@ Pour RHEL 9, RHEL 10, SLES 15 et SLES 16, une solution de multipathing NVMe nati
 
 
 
+[[nvme-devices-are-io-targets]]
 == Les périphériques NVMe sont des cibles d'E/S
 
 . Saisissez la commande suivante pour localiser les volumes mappés sur cet hôte à partir d'une baie E-Series.

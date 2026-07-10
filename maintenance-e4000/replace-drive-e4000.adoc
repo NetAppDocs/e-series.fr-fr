@@ -15,6 +15,7 @@ Avant de remplacer un lecteur E4000, vérifiez les exigences et les considérati
 
 
 
+[[shelf-types]]
 == Types de tiroirs
 
 Vous pouvez remplacer un disque par un tiroir contrôleur ou un tiroir disque de 12, 24 ou 60 disques.
@@ -24,6 +25,7 @@ NOTE: Les tiroirs standard de 24 disques nécessitent des disques échelonnant. 
 
 
 
+[[drive-handling]]
 == Gestion des disques
 
 Les lecteurs de votre matrice de stockage sont fragiles. Une manipulation incorrecte des disques est l'une des principales causes de défaillance des disques.

@@ -15,6 +15,7 @@ Découvrez comment câbler les contrôleurs à votre réseau et configurer un sy
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Étape 1 : câblage des hôtes de données
 
 Branchez les câbles du système en fonction de la topologie de votre réseau.
@@ -51,6 +52,7 @@ image:../media/drw_e4060_fabric_topology_ieops-2159.svg["Topologie de structure 
 ====
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Étape 2 : connexion et configuration de la connexion de gestion
 
 Vous pouvez configurer les ports de gestion du contrôleur à l'aide d'un serveur DHCP ou d'une adresse IP statique.
@@ -123,6 +125,7 @@ NOTE: Si vous perdez la connexion au contrôleur B, vous pouvez utiliser votre c
 ====
 
 
+[[step-3-configure-and-manage-your-storage-system]]
 == Étape 3 : configurer et gérer votre système de stockage
 
 Une fois votre matériel installé, utilisez le logiciel SANtricity pour configurer et gérer votre système de stockage.

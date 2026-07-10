@@ -20,6 +20,7 @@ La procédure de remplacement de la batterie dépend de la configuration recto-v
 
 
 
+[[place-controller-online-duplex]]
 == Mise en ligne du contrôleur (duplex)
 
 Mettez le contrôleur en ligne pour vérifier que la matrice de stockage fonctionne correctement. Vous pouvez ensuite recueillir des données d'assistance et reprendre les opérations.
@@ -98,6 +99,7 @@ Le remplacement de la batterie est terminé. Vous pouvez reprendre les opératio
 
 
 
+[[power-up-controller-simplex]]
 == Mise sous tension du contrôleur (simplex)
 
 Mettez le tiroir contrôleur sous tension afin de vérifier qu'il fonctionne correctement. Vous pouvez ensuite recueillir des données d'assistance et reprendre les opérations.

@@ -15,6 +15,7 @@ Avant de convertir le protocole hôte pour une baie E2800, consultez les conditi
 
 
 
+[[host-ports-you-can-change]]
 == Ports hôtes que vous pouvez modifier
 
 
@@ -99,6 +100,7 @@ Les ports hôtes de la carte mère et les ports HIC peuvent utiliser le même pr
 
 
 
+[[requirements-for-changing-the-host-protocol]]
 == Conditions requises pour la modification du protocole hôte
 
 * Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure.
@@ -111,6 +113,7 @@ Les ports hôtes de la carte mère et les ports HIC peuvent utiliser le même pr
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Considérations relatives à la modification du protocole hôte
 
 Les considérations relatives à la modification du protocole hôte dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
@@ -122,6 +125,7 @@ NOTE: Les considérations suivantes ne s'appliquent que si vous convertissez une
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Transition de FC à iSCSI
 
 * Si votre configuration contient des hôtes d'amorçage SAN connectés aux ports de la carte de base FC, vérifiez le https://mysupport.netapp.com/NOW/products/interoperability["Matrice d'interopérabilité NetApp"^] Pour vérifier que la configuration est prise en charge sur iSCSI. Si ce n'est pas le cas, vous ne pouvez pas convertir le protocole hôte en iSCSI.
@@ -151,6 +155,7 @@ CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone av
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Transition de iSCSI à FC
 
 * La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole. Si vous utilisez actuellement la mise en miroir asynchrone avec les ports de la carte de base, vous devez désactiver la mise en miroir asynchrone avant de changer le protocole.
@@ -159,6 +164,7 @@ CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone av
 
 
 
+[[converting-from-fc-to-fciscsi]]
 === Transition de FC à FC/iSCSI
 
 Considérations sur la mise en miroir :
@@ -244,6 +250,7 @@ Aucune action n'est nécessaire avant d'appliquer le Feature Pack car aucun volu
 
 
 
+[[converting-from-iscsi-to-fciscsi]]
 === Transition d'iSCSI à FC/iSCSI
 
 * Si vous envisagez de convertir un port utilisé pour la mise en miroir, vous devez déplacer les relations de mise en miroir vers un port qui restera iSCSI après la conversion.
@@ -258,6 +265,7 @@ Avant d'appliquer le pack de fonctions, vérifiez que tous les groupes de cohér
 
 
 
+[[converting-from-fciscsi-to-fc]]
 === Transition de FC/iSCSI à FC
 
 * Lors de la conversion de tous les ports hôtes en FC, n'oubliez pas que la mise en miroir asynchrone via FC doit se produire sur le port FC le plus numéroté.
@@ -322,6 +330,7 @@ Supprimez les relations de mise en miroir avant et redéfinissez la mise en miro
 
 
 
+[[converting-from-fciscsi-to-iscsi]]
 === Transition de FC/iSCSI à iSCSI
 
 * La mise en miroir synchrone n'est pas prise en charge pour iSCSI.
@@ -337,6 +346,7 @@ CAUTION: *Perte de données possible* -- si vous ne supprimez pas les relations 
 
 
 
+[[same-host-protocol-and-mirroring-operations]]
 === Mêmes opérations de mise en miroir et de protocole hôte
 
 Les opérations de mise en miroir ne sont pas affectées si les ports hôtes utilisés pour la mise en miroir conservent le même protocole après avoir appliqué le pack de fonctionnalités. Même avant d'appliquer le pack de fonctions, vous devez confirmer que tous les groupes de cohérence des miroirs sont synchronisés.

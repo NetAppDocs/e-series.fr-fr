@@ -30,6 +30,7 @@ En cas de panne de l'alimentation, vous devez le remplacer dès que possible afi
 
 
 
+[[step-1-remove-failed-power-supply]]
 == Étape 1 : retirer l'alimentation défectueuse
 
 Retirez un bloc d'alimentation défectueux pour le remplacer par un nouveau.
@@ -62,6 +63,7 @@ image::../media/psup_3.png[Retirez le bloc d'alimentation en le faisant glisser]
 
 
 
+[[step-2-install-new-power-supply-and-complete-the-replacement]]
 == Étape 2 : installez une nouvelle alimentation et terminez le remplacement
 
 Après avoir retiré le bloc d'alimentation défectueux, installez un nouveau bloc d'alimentation.

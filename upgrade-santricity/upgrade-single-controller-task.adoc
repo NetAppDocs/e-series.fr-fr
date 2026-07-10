@@ -39,6 +39,7 @@ Voici quelques raisons d'activer ultérieurement :
 
 
 
+[[step-1-download-software-files-from-support-site]]
 == Étape 1 : téléchargement de fichiers logiciels à partir du site d'assistance
 
 Cette étape vous permet de vous rendre sur le site de support NetApp pour enregistrer les nouveaux fichiers logiciels DLP (téléchargeable) sur votre système hôte de gestion.
@@ -63,6 +64,7 @@ NOTE: Un firmware avec signature numérique est requis dans la version 8.42 et s
 
 
 
+[[step-2-transfer-software-files-to-the-controllers]]
 == Étape 2 : transférer les fichiers logiciels vers les contrôleurs
 
 Au cours de cette étape, vous transférez les fichiers logiciels vers votre contrôleur afin que vous puissiez commencer le processus de mise à niveau. Les composants sont copiés du client de gestion vers les contrôleurs et placés dans une zone de stockage temporaire dans la mémoire Flash.
@@ -109,6 +111,7 @@ Si vous avez déjà activé vos fichiers logiciels, allez à <<Étape 4 : mise �
 
 
 
+[[step-3-activate-software-files]]
 == Étape 3 : activation des fichiers logiciels
 
 Suivez cette étape uniquement si le logiciel ou le micrologiciel a été transféré mais pas activé. Pour vérifier cet état, recherchez une notification dans la zone Notifications de la page d'accueil de System Manager ou de la page Centre de mise à niveau.
@@ -126,6 +129,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-4-complete-software-and-firmware-upgrade]]
 == Étape 4 : mise à niveau complète du logiciel et du firmware
 
 Effectuez la mise à niveau du logiciel et du micrologiciel en vérifiant les versions dans la boîte de dialogue Inventaire du logiciel et du micrologiciel.

@@ -17,6 +17,7 @@ Les procédures décrites dans cette section supposent que le système EF300 ou 
 
 
 
+[[system-components]]
 == Composants du système
 
 Pour les systèmes de stockage EF300, EF600, EF300C et EF600C, vous pouvez effectuer les procédures de maintenance sur les composants suivants.

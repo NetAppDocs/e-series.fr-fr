@@ -38,6 +38,7 @@ Vous pouvez remplacer un bloc d'alimentation alors que la baie de stockage est s
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Étape 1 : préparez-vous à remplacer l'alimentation électrique
 
 Préparez-vous à remplacer un bloc d'alimentation dans un tiroir contrôleur ou un tiroir disque de 24 disques.
@@ -93,6 +94,7 @@ Si le voyant d'avertissement image:../media/drw_sas_fault_icon_maint-e5700.gif["
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Étape 2 : retirer l'alimentation défectueuse
 
 Retirez un bloc d'alimentation défectueux pour le remplacer par un nouveau.
@@ -125,6 +127,7 @@ Lorsque vous retirez le bloc d'alimentation, un volet se met en place pour bloqu
 
 
 
+[[step-3-install-new-power-supply]]
 == Étape 3 : installez une nouvelle alimentation
 
 Installez une nouvelle alimentation électrique pour remplacer la source d'alimentation défectueuse.
@@ -151,6 +154,7 @@ CAUTION: N'utilisez pas de force excessive lorsque vous faites glisser le bloc d
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Étape 4 : remplacement complet de l'alimentation électrique
 
 Vérifiez que la nouvelle alimentation fonctionne correctement, rassemblez les données de support et reprenez le fonctionnement normal.

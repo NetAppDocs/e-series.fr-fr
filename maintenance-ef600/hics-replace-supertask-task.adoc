@@ -38,6 +38,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 
 
 
+[[step-1-place-the-controller-offline]]
 == Étape 1 : mettre le contrôleur hors ligne
 
 Mettez le contrôleur affecté hors ligne pour pouvoir remplacer les circuits intégrés en toute sécurité.
@@ -83,6 +84,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur afin de pouvoir remplacer la carte d'interface hôte défectueuse.
@@ -116,6 +118,7 @@ image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poi
 
 
 
+[[step-3-remove-the-hic]]
 == Étape 3 : retirez la HIC
 
 Supprimez la carte HIC d'origine pour la remplacer par une carte mise à niveau.
@@ -164,6 +167,7 @@ NOTE: L'image ci-dessus est un exemple ; l'apparence de votre HIC peut varier.
 
 
 
+[[step-4-replace-the-hic]]
 == Étape 4 : remplacer la HIC
 
 Après avoir retiré l'ancienne HIC, installez une nouvelle HIC.
@@ -198,6 +202,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Étape 5 : réinstallez le boîtier du contrôleur
 
 Après avoir remplacé l'HIC, réinstallez le boîtier du contrôleur dans le shelf.
@@ -220,6 +225,7 @@ Si vous utilisez plusieurs protocoles hôtes, assurez-vous d'installer les SFP d
 
 
 
+[[step-6-complete-hic-replacement]]
 == Étape 6 : remplacement HIC complet
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

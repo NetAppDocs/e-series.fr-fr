@@ -29,6 +29,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-verify-the-new-controllers-part-number]]
 == Étape 1 : vérifier la référence du nouveau contrôleur
 
 Vérifier que le nouveau contrôleur possède la même référence que le contrôleur actuellement installé.
@@ -67,6 +68,7 @@ Le fichier est enregistré dans le dossier *Téléchargements* de votre navigate
 
 
 
+[[step-2-install-host-interface-card]]
 == Étape 2 : installez la carte d'interface hôte
 
 Si le contrôleur actuellement installé inclut une carte d'interface hôte (HIC), vous devez installer le même modèle de HIC dans le second boîtier du contrôleur.
@@ -90,6 +92,7 @@ CAUTION: Veillez à ne pas trop serrer les vis, car cela pourrait endommager la 
 
 
 
+[[step-3-collect-support-data]]
 == Étape 3 : collecte des données de support
 
 Collectez les données de support avant et après le remplacement d'un composant pour vous assurer que vous pouvez envoyer un ensemble complet de journaux au support technique si le remplacement ne résout pas le problème.
@@ -128,6 +131,7 @@ CAUTION: *Perte possible de données* — si vous continuez cette procédure pen
 
 
 
+[[step-4-change-configuration-to-duplex]]
 == Étape 4 : changez la configuration en mode recto verso
 
 Avant d'ajouter un second contrôleur au tiroir du contrôleur, vous devez modifier la configuration en mode duplex en installant un nouveau fichier NVSRAM et en utilisant l'interface de ligne de commande pour définir la matrice de stockage en mode duplex. La version duplex du fichier NVSRAM est incluse dans le fichier de téléchargement du logiciel SANtricity OS (micrologiciel du contrôleur).
@@ -224,6 +228,7 @@ Après le redémarrage du contrôleur, un message d'erreur "contrôleur alternat
 
 
 
+[[step-5-remove-the-controller-blank]]
 == Étape 5 : retirez le cache du contrôleur
 
 Retirez le cache du contrôleur avant d'installer le second contrôleur. Un espace vide contrôleur est installé dans les tiroirs contrôleurs qui ne disposent que d'un seul contrôleur.
@@ -238,6 +243,7 @@ Lorsque vous retirez le cache du contrôleur, un rabat se met en place pour bloq
 
 
 
+[[step-6-install-the-second-controller-canister]]
 == Étape 6 : installez le deuxième boîtier de contrôleur
 
 Installez un second boîtier de contrôleur pour modifier une configuration recto-verso.
@@ -256,6 +262,7 @@ NOTE: Ne forcez pas trop lorsque vous faites glisser le module de contrôleur da
 
 
 
+[[step-7-complete-adding-a-second-controller]]
 == Étape 7 : Ajout d'un second contrôleur complet
 
 Terminez le processus d'ajout d'un second contrôleur en vérifiant qu'il fonctionne correctement, réinstallez le fichier NVSRAM duplex, distribuez les volumes entre les contrôleurs et collectez les données de support.

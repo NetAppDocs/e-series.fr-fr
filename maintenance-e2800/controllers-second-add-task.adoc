@@ -31,6 +31,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-verify-the-new-controllers-part-number]]
 == Étape 1 : vérifier la référence du nouveau contrôleur
 
 Vérifier que le nouveau contrôleur possède la même référence que le contrôleur actuellement installé.
@@ -65,6 +66,7 @@ CAUTION: *Perte possible d'accès aux données* -- si les deux numéros de pièc
 
 
 
+[[step-2-install-host-interface-card]]
 == Étape 2 : installez la carte d'interface hôte
 
 Si le contrôleur actuellement installé inclut une HIC, vous devez installer le même modèle de carte d'interface hôte (HIC) dans le second boîtier de contrôleur.
@@ -110,6 +112,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Installez le c
 
 
 
+[[step-3-collect-support-data]]
 == Étape 3 : collecte des données de support
 
 Collectez les données de support avant et après le remplacement d'un composant pour vous assurer que vous pouvez envoyer un ensemble complet de journaux au support technique si le remplacement ne résout pas le problème.
@@ -148,6 +151,7 @@ CAUTION: *Perte de données possible* -- si vous continuez cette procédure pend
 
 
 
+[[step-4-change-configuration-to-duplex]]
 == Étape 4 : changez la configuration en mode recto verso
 
 Avant d'ajouter un second contrôleur au tiroir du contrôleur, vous devez modifier la configuration en mode duplex en installant un nouveau fichier NVSRAM et en utilisant l'interface de ligne de commande pour définir la matrice de stockage en mode duplex. La version duplex du fichier NVSRAM est incluse dans le fichier de téléchargement du logiciel SANtricity OS (micrologiciel du contrôleur).
@@ -264,6 +268,7 @@ Après le redémarrage du contrôleur, un message d'erreur « contrôleur de rem
 
 
 
+[[step-5-remove-the-controller-blank]]
 == Étape 5 : retirez le cache du contrôleur
 
 Retirez le cache du contrôleur avant d'installer le second contrôleur. Un espace vide contrôleur est installé dans les tiroirs contrôleurs qui ne disposent que d'un seul contrôleur.
@@ -278,6 +283,7 @@ Lorsque vous retirez le cache du contrôleur, un rabat se met en place pour bloq
 
 
 
+[[step-6-install-second-controller-canister]]
 == Étape 6 : installer le second boîtier du contrôleur
 
 Installez un second boîtier de contrôleur pour modifier une configuration recto-verso.
@@ -300,6 +306,7 @@ image::../media/28_dwg_e2824_add_controller_canister.gif[Poser le deuxième boî
 
 
 
+[[step-7-complete-adding-a-second-controller]]
 == Étape 7 : Ajout d'un second contrôleur complet
 
 Terminez le processus d'ajout d'un second contrôleur en vérifiant qu'il fonctionne correctement, réinstallez le fichier NVSRAM duplex, distribuez les volumes entre les contrôleurs et collectez les données de support.

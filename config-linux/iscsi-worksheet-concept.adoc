@@ -15,6 +15,7 @@ Vous pouvez générer et imprimer un fichier PDF de cette page, puis utiliser la
 
 
 
+[[recommended-configuration]]
 == Configuration recommandée
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
@@ -23,6 +24,7 @@ image::../media/50001_01_conf-lin.gif[Configuration réseau iSCSI]
 
 
 
+[[target-iqn]]
 == IQN cible
 
 |===
@@ -38,6 +40,7 @@ Port cible
 |===
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 |===

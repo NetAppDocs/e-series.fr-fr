@@ -18,6 +18,7 @@ Une batterie est fournie avec un contrôleur et conserve les données mises en c
 
 
 
+[[recovery-guru-alerts]]
 == Alertes Recovery Guru
 
 Si le gourou de la restauration de SANtricity System Manager indique un des États suivants, vous devez remplacer la batterie affectée :
@@ -30,6 +31,7 @@ Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité R
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 Pour protéger vos données, vous devez remplacer une batterie défectueuse dès que possible.
@@ -45,6 +47,7 @@ Voici une présentation des étapes à suivre pour remplacer une batterie dans d
 
 
 
+[[requirements]]
 == De formation
 
 Si vous envisagez de remplacer une batterie, vous devez disposer des éléments suivants :

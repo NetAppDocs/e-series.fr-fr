@@ -15,6 +15,7 @@ Préparez-vous à installer votre système de stockage EF50 ou EF80 en préparan
 
 
 
+[[step-1-prepare-the-site]]
 == Étape 1: Préparer le site
 
 Assurez-vous que l'emplacement et l'armoire ou le rayonnage que vous prévoyez d'utiliser répondent aux spécifications de votre système de stockage.
@@ -50,6 +51,7 @@ Au besoin, consultez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour c
 
 
 
+[[step-2-understand-the-lifting-precautions]]
 == Étape 2 : Comprendre les précautions à prendre lors du levage
 
 Avant de déballer les cartons, et plus tard lors de l'installation de votre système de stockage, vous devez connaître le poids de votre système de stockage afin de prendre les précautions nécessaires lors de son levage et de son déplacement.
@@ -60,6 +62,7 @@ image::../media/drw_g_lifting_weight_ieops-1831.svg[Icône d'avertissement de po
 
 
 
+[[step-3-unpack-the-boxes]]
 == Étape 3 : Déballez les cartons
 
 Après avoir vérifié que le site et l'armoire ou le rack que vous prévoyez d'utiliser répondent aux spécifications de votre système de stockage, et que vous comprenez les précautions de levage, déballez toutes les boîtes et comparez le contenu aux articles figurant sur le bordereau d'expédition.
@@ -106,6 +109,7 @@ Si nécessaire, consultez  https://hwu.netapp.com/["NetApp Hardware Universe"^] 
 
 
 
+[[step-4-register-your-storage-system]]
 == Étape 4 : Enregistrez votre système de stockage
 
 Après avoir vérifié que votre site répond aux spécifications de votre système de stockage et que vous avez confirmé que vous disposez de toutes les pièces commandées, vous devez enregistrer votre système de stockage.

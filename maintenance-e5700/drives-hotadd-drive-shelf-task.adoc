@@ -38,6 +38,7 @@ NOTE: Pour préserver l'intégrité du système, vous devez suivre la procédure
 
 
 
+[[step-1-prepare-to-add-the-drive-shelf]]
 == Étape 1 : préparez-vous à ajouter le tiroir disque
 
 Pour préparer l'ajout à chaud d'un tiroir disque, vérifiez la présence d'événements critiques et le statut des IOM.
@@ -92,6 +93,8 @@ La boîte de dialogue Paramètres des composants de la tablette s'affiche avec l
 
 
 
+[[step-2-install-the-drive-shelf-and-apply-power]]
+[[step2_install_drive_shelf]]
 == Étape 2 : installer le tiroir disque et mettre sous tension
 
 Vous installez un nouveau tiroir disque ou un tiroir disque installé précédemment, mettez sous tension et vérifiez si les LED nécessitent une intervention.
@@ -111,6 +114,7 @@ NOTE: Consultez les instructions d'installation de votre modèle pour connaître
 
 
 
+[[step-3-cable-your-system]]
 == Étape 3 : branchez le système sur le câble
 
 Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
@@ -275,6 +279,7 @@ NOTE: L'état optimal indique que la perte d'erreur de redondance associée au n
 ====
 
 
+[[step-4-complete-hot-add]]
 == Étape 4 : ajout à chaud complet
 
 Pour terminer l'ajout à chaud, vérifiez s'il n'y a pas d'erreur et vérifiez que le tiroir disque ajouté utilise le dernier firmware.

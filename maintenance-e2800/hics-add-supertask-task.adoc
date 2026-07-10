@@ -38,6 +38,7 @@ Pour plus d'informations sur le matériel compatible, reportez-vous au https://m
 
 
 
+[[step-1-prepare-to-add-hic]]
 == Étape 1 : préparez-vous à ajouter HIC
 
 Préparez-vous à ajouter la HIC en sauvegardant la base de données de configuration de la baie de stockage, en collectant les données de prise en charge et en arrêtant les opérations d'E/S de l'hôte. Ensuite, vous pouvez mettre le tiroir contrôleur hors tension.
@@ -118,6 +119,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache act
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur pour ajouter la nouvelle carte d'interface hôte.
@@ -178,6 +180,7 @@ Si vous retirez le canister d'un tiroir contrôleur E2812, d'un tiroir de contr�
 
 
 
+[[step-3-install-the-hic]]
 == Étape 3 : installer le HIC
 
 Installez le HIC pour augmenter le nombre de ports hôtes dans votre baie de stockage.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Installez le c
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Étape 4 : réinstallez le boîtier du contrôleur
 
 Réinstaller le boîtier du contrôleur dans le shelf contrôleur après avoir installé la nouvelle HIC.
@@ -271,6 +275,7 @@ NOTE: Ne connectez pas les câbles de données aux nouveaux ports HIC pour le mo
 
 
 
+[[step-5-complete-hic-addition]]
 == Étape 5 : ajout complet de HIC
 
 Vérifier les LED du contrôleur et l'affichage à sept segments, puis vérifier que l'état du contrôleur est optimal.

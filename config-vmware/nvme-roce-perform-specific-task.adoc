@@ -15,12 +15,14 @@ Pour le protocole NVMe sur RoCE, vous configurez les commutateurs et déterminez
 
 
 
+[[step-1-record-your-configuration]]
 == Étape 1 : Enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
 
 
 
+[[recommended-configuration]]
 === Configuration recommandée
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
@@ -29,6 +31,7 @@ image::../media/network_generic_worksheet.gif[Identifiants de port NVMe sur RoCE
 
 
 
+[[host-identifiers]]
 === Identifiants d'hôte
 
 |===
@@ -52,6 +55,7 @@ Hôte (initiateur) 2
 |===
 
 
+[[target-identifiers]]
 === Identifiants cibles
 
 |===
@@ -91,6 +95,7 @@ Contrôleur de stockage (cible) port 4
 |===
 
 
+[[mapping-host]]
 === Hôte de mappage
 
 |===
@@ -109,12 +114,14 @@ Type de système d'exploitation hôte
 |===
 
 
+[[recommended-configuration]]
 === Configuration recommandée
 
 Cela peut varier selon la baie. EF300, EF600 et EF50 auront 2 ports initiateurs avec jusqu'à 4 ports cibles avec 1 ou plusieurs VLAN. EF80 aura 2 ports initiateurs avec jusqu'à 6 ports cibles avec 1 ou plusieurs VLAN.
 
 
 
+[[step-2-configure-the-nvmeroce-switches]]
 == Étape 2 : Configurer les commutateurs NVMe/RoCE
 
 Vous configurez les switchs en fonction des recommandations du fournisseur pour la technologie NVMe over RoCE. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
@@ -132,6 +139,7 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 
 
+[[step-3-configure-networking-nvmeroce-vmware]]
 == Étape 3 : Configurer le réseau - NVMe/RoCE, VMware
 
 Vous pouvez configurer votre réseau NVMe sur RoCE de différentes manières, en fonction de vos exigences de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la plus adaptée à votre environnement.
@@ -154,6 +162,7 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 
 
+[[step-4-configure-array-side-networking-nvmeroce-vmware]]
 == Étape 4 : Configurer le réseau côté baie - NVMe/RoCE, VMware
 
 Vous utilisez l'interface SANtricity System Manager pour configurer le réseau NVMe sur RoCE côté baie.
@@ -254,6 +263,7 @@ Sélectionnez cette option, puis entrez une adresse statique dans les champs. Po
 
 
 
+[[step-5-configure-host-side-networkingnvme-over-roce-vmware]]
 == Étape 5 : Configurer le réseau côté hôte—NVMe sur RoCE, VMware
 
 La configuration du réseau NVMe over RoCE côté hôte permet à l'initiateur de l'adaptateur de stockage VMware NVMe over RDMA d'établir une session avec la baie.
@@ -293,6 +303,7 @@ Pour utiliser cette option, consultez ce qui suit :
 
 
 
+[[step-6-verify-ip-network-connections-nvme-over-roce-vmware]]
 == Étape 6 : Vérifier les connexions réseau IP - NVMe sur RoCE, VMware
 
 Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.

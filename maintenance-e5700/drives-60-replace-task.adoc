@@ -32,6 +32,7 @@ Cette tâche s'applique aux étagères de lecteurs DCM, DCM2 et DCM3.
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 == Étape 1 : préparation du remplacement de l'entraînement (60 disques)
 
 Préparez-vous au remplacement d'un disque dans un tiroir de 60 disques en vérifiant la fonctionnalité Recovery Guru dans SANtricity System Manager et en effectuant les étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
@@ -89,6 +90,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[Voyant d
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 == Étape 2 : retrait du disque défectueux (60 disques)
 
 Retirez un disque défectueux pour le remplacer par un nouveau disque.
@@ -126,6 +128,7 @@ NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 se
 
 
 
+[[step-3-install-new-drive-60-drive]]
 == Étape 3 : installation d'un nouvel entraînement (60 disques)
 
 Installez un nouveau lecteur pour remplacer le lecteur défectueux.
@@ -155,6 +158,7 @@ Selon votre configuration, le contrôleur peut reconstruire automatiquement les 
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 == Étape 4 : remplacement complet des disques (60 disques)
 
 Vérifiez que le nouveau lecteur fonctionne correctement.

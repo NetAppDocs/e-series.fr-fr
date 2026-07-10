@@ -15,12 +15,14 @@ Vous pouvez gérer l'accès des utilisateurs à l'API Web Services et à Unified
 
 
 
+[[overview-of-access-management]]
 == Présentation de la gestion des accès
 
 La gestion des accès comprend les connexions basées sur des rôles, le chiffrement par mot de passe, l'authentification de base et l'intégration LDAP.
 
 
 
+[[role-based-access]]
 === Accès basé sur des rôles
 
 Le contrôle d'accès basé sur des rôles (RBAC) associe des utilisateurs prédéfinis à des rôles. Chaque rôle accorde des autorisations à un niveau de fonctionnalité spécifique.
@@ -118,6 +120,7 @@ L'utilisateur ro (lecture seule) inclut uniquement le rôle Storage.Monitor. Ce 
 |===
 
 
+[[password-encryption]]
 === Chiffrement par mot de passe
 
 Pour chaque mot de passe, vous pouvez appliquer un processus de chiffrement supplémentaire à l'aide de l'encodage de mot de passe SHA256 existant. Ce processus de chiffrement supplémentaire applique un ensemble aléatoire d'octets à chaque mot de passe (Salt) pour chaque chiffrement SHA256. Le chiffrement saled SHA256 est appliqué à tous les mots de passe nouvellement créés.
@@ -127,12 +130,14 @@ NOTE: Avant la version 3.0 de Web Services Proxy, les mots de passe étaient chi
 
 
 
+[[basic-authentication]]
 === Authentification de base
 
 Par défaut, l'authentification de base est activée, ce qui signifie que le serveur renvoie un défi d'authentification de base. Ce paramètre peut être modifié dans le fichier wsconfig.xml.
 
 
 
+[[ldap]]
 === LDAP
 
 Le protocole LDAP (Lightweight Directory Access Protocol), un protocole d'application permettant d'accéder aux services d'informations d'annuaire distribués et de les gérer, est activé pour le proxy de services Web. L'intégration LDAP permet l'authentification des utilisateurs et le mappage des rôles aux groupes.
@@ -141,12 +146,14 @@ Pour plus d'informations sur la configuration de la fonctionnalité LDAP, report
 
 
 
+[[configure-user-access]]
 == Configurez l'accès utilisateur
 
 Vous pouvez gérer l'accès des utilisateurs en appliquant un cryptage supplémentaire aux mots de passe, en définissant une authentification de base et en définissant un accès basé sur les rôles.
 
 
 
+[[apply-additional-encryption-to-passwords]]
 === Appliquer un chiffrement supplémentaire aux mots de passe
 
 Pour un niveau de sécurité maximal, vous pouvez appliquer un chiffrement supplémentaire aux mots de passe à l'aide du codage de mot de passe SHA256 existant.
@@ -170,6 +177,7 @@ NOTE: Vous pouvez également Salt et hacher les mots de passe des utilisateurs l
 
 
 
+[[configure-basic-authentication]]
 === Configurer l'authentification de base
 
 Par défaut, l'authentification de base est activée, ce qui signifie que le serveur renvoie un défi d'authentification de base. Si vous le souhaitez, vous pouvez modifier ce paramètre dans le fichier wsconfig.xml.
@@ -190,6 +198,7 @@ Par exemple : `<env key="enable-basic-auth">true</env>`
 
 
 
+[[configure-role-based-access]]
 === Configurer l'accès basé sur les rôles
 
 Pour limiter l'accès des utilisateurs à des fonctions spécifiques, vous pouvez modifier les rôles spécifiés pour chaque compte utilisateur.

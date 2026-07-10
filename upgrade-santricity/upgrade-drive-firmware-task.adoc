@@ -16,6 +16,7 @@ Suivez cette procédure pour mettre à niveau le micrologiciel de vos lecteurs, 
 
 
 
+[[step-1-download-drive-firmware-files]]
 == Étape 1 : téléchargez les fichiers du micrologiciel du lecteur
 
 Cette étape vous permet de télécharger les fichiers du firmware des disques sur le site de support NetApp vers votre client de gestion.
@@ -30,6 +31,7 @@ Cette étape vous permet de télécharger les fichiers du firmware des disques s
 
 
 
+[[step-2-begin-drive-firmware-upgrade]]
 == Étape 2 : commencez la mise à niveau du micrologiciel du lecteur
 
 Dans cette étape, vous mettez à niveau le micrologiciel des lecteurs.

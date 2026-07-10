@@ -19,6 +19,7 @@ image::../media/port_identifiers_host_and_target_conf-lin.gif[Configuration rés
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 |===
@@ -51,6 +52,7 @@ Port hôte 1 vers zone de commutation FC 1
 |===
 
 
+[[target-identifiers]]
 == Identifiants cibles
 
 |===
@@ -108,6 +110,7 @@ Contrôleur B, port 2 vers le commutateur FC 2
 |===
 
 
+[[mapping-host]]
 == Hôte de mappage
 
 |===

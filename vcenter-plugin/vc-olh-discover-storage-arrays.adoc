@@ -32,6 +32,7 @@ La découverte de la matrice est une procédure à plusieurs étapes :
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Étape 1 : saisissez les adresses réseau pour la découverte
 
 Pour découvrir les baies de stockage, vous devez d'abord saisir une seule adresse IP ou une plage d'adresses IP à rechercher sur le sous-réseau local. La fonction Ajouter/découvrir ouvre un assistant qui vous guide tout au long du processus de découverte.
@@ -65,6 +66,7 @@ Le système effectue une vérification des informations d'identification sur cha
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Étape 2 : résolution de certificats non approuvés lors de la découverte
 
 Si nécessaire, vous devez résoudre tous les problèmes liés au certificat avant de poursuivre le processus de détection.
@@ -83,6 +85,7 @@ Lors de la découverte, si une baie de stockage affiche un état « certificats 
 
 
 
+[[step-3-provide-passwords]]
 == Étape 3 : fournir des mots de passe
 
 Pour la dernière étape de la découverte, vous devez saisir les mots de passe des matrices de stockage que vous souhaitez ajouter à votre domaine de gestion.

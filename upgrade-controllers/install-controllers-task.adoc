@@ -26,6 +26,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-install-battery]]
 == Étape 1 : installer la batterie
 
 Installez la batterie que vous avez retirée du boîtier du contrôleur d'origine ou une batterie neuve que vous avez commandée.
@@ -56,6 +57,7 @@ Lorsque le loquet s'enclenche, le bas des crochets de verrouillage se trouve dan
 
 
 
+[[step-2-install-new-controller-canister]]
 == Étape 2 : installer un nouveau boîtier de contrôleur
 
 [role="tabbed-block"]

@@ -18,6 +18,7 @@ Pour provisionner du stockage dans le plug-in de stockage pour vCenter, vous cr�
 
 
 
+[[provisioning]]
 == Provisionnement
 
 Le matériel physique est provisionné en composants logiques, de sorte que les données puissent être organisées et facilement récupérées. Deux types de regroupements sont pris en charge :
@@ -39,6 +40,7 @@ Vous pouvez avoir des pools ou des groupes de volumes sur le même système de s
 
 
 
+[[pools]]
 == Pools
 
 Les pools sont conçus pour agréger les disques durs physiques en un espace de stockage important et pour assurer une protection RAID améliorée. Un pool crée de nombreux jeux RAID virtuels à partir du nombre total de disques affectés au pool, et il répartit les données uniformément entre tous les disques participants. En cas de perte ou d'ajout d'un disque, le système rééquilibre dynamiquement les données sur tous les disques actifs.
@@ -47,12 +49,14 @@ Les pools fonctionnent comme un autre niveau RAID, virtualisant l'architecture R
 
 
 
+[[drive-matching]]
 === Correspondance des disques
 
 Vous pouvez choisir entre des disques HDD ou SSD pour une utilisation en pools. Cependant, comme pour les groupes de volumes, tous les disques du pool doivent utiliser la même technologie. Les contrôleurs sélectionnent automatiquement les lecteurs à inclure. Vous devez donc vous assurer que vous disposez d'un nombre suffisant de lecteurs pour la technologie que vous choisissez.
 
 
 
+[[managing-failed-drives]]
 === Gestion des disques défectueux
 
 Les pools ont une capacité minimale de 11 disques ; cependant, la capacité d'un disque est réservée à la capacité libre en cas de panne. Cette capacité libre est appelée « capacité de préservation ».
@@ -63,6 +67,7 @@ Une fois le pool créé, vous pouvez modifier la valeur de la capacité de conse
 
 
 
+[[volume-groups]]
 == Groupes de volumes
 
 Les groupes de volumes définissent la manière dont la capacité est allouée dans le système de stockage aux volumes. Les disques sont organisés en groupes RAID, et les volumes résident sur les disques d'un groupe RAID. Par conséquent, les paramètres de configuration des groupes de volumes identifient les disques faisant partie du groupe et le niveau RAID utilisé.
@@ -71,6 +76,7 @@ Lorsque vous créez un groupe de volumes, les contrôleurs sélectionnent automa
 
 
 
+[[drive-matching]]
 === Correspondance des disques
 
 Vous devez correspondre aux disques du groupe de volumes pour la taille et les performances. Si le groupe de volumes contient des disques de plus petite taille et de plus grande taille, tous les disques sont reconnus comme étant la plus petite taille de capacité. S'il y a des lecteurs plus lents et plus rapides dans le groupe de volumes, tous les lecteurs sont reconnus à la vitesse la plus lente. Ces facteurs affectent les performances et la capacité globale du système de stockage.
@@ -79,6 +85,7 @@ Vous ne pouvez pas combiner plusieurs technologies de disques (disques HDD et SS
 
 
 
+[[managing-failed-drives]]
 === Gestion des disques défectueux
 
 Les groupes de volumes utilisent des disques de secours en attente en cas de panne d'un disque dans les volumes RAID 1/10, RAID 3, RAID 5 ou RAID 6 contenus dans un groupe de volumes. Un disque de secours ne contient aucune donnée et ajoute un niveau supplémentaire de redondance à votre matrice de stockage.
@@ -87,10 +94,12 @@ Si un lecteur tombe en panne dans la matrice de stockage, le disque de secours e
 
 
 
+[[decide-whether-to-use-pools-or-volume-groups]]
 == Décider d'utiliser des pools ou des groupes de volumes
 
 
 
+[[choose-a-pool]]
 === Choisissez un pool
 
 * Si vous avez besoin de reconstructions de disque plus rapides et d'une administration simplifiée du stockage, et/ou si vous disposez d'une charge de travail hautement aléatoire.
@@ -99,6 +108,7 @@ Si un lecteur tombe en panne dans la matrice de stockage, le disque de secours e
 
 
 
+[[choose-a-volume-group]]
 === Choisissez un groupe de volumes
 
 * Si vous avez besoin d'une bande passante système maximale, la possibilité de régler les paramètres de stockage et une charge de travail hautement séquentielle.
@@ -111,6 +121,7 @@ NOTE: Étant donné que les pools peuvent coexister avec des groupes de volumes,
 
 
 
+[[automatic-versus-manual-pool-creation]]
 == Création automatique ou manuelle de pool
 
 Selon votre configuration de stockage, vous pouvez autoriser le système à créer des pools automatiquement ou vous pouvez les créer manuellement vous-même. Un pool est un ensemble de disques regroupés de manière logique.
@@ -119,6 +130,7 @@ Avant de créer et de gérer des pools, consultez les sections suivantes pour sa
 
 
 
+[[automatic-creation]]
 === Création automatique
 
 Lorsque le système détecte une capacité non allouée dans la baie de stockage, il lance la création automatique de pools lorsque le système détecte une capacité non attribuée dans une baie de stockage. Elle vous invite automatiquement à créer un ou plusieurs pools, ou à ajouter la capacité non affectée à un pool existant, ou les deux.
@@ -135,6 +147,7 @@ La création automatique de pools se produit lorsque l'une de ces conditions est
 
 
 
+[[manual-creation]]
 === Création manuelle
 
 Vous pouvez créer un pool manuellement lorsque la création automatique ne peut pas déterminer la meilleure configuration. Cette situation peut se produire pour l'une des raisons suivantes :

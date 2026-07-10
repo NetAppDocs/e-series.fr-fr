@@ -15,6 +15,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche s
 
 
 
+[[direct-connect-topology]]
 == Topologie Direct Connect
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au sous-système. Dans la version SANtricity OS 11.50, nous prenons en charge une connexion unique entre chaque hôte et un contrôleur de sous-système, comme illustré ci-dessous. Dans cette configuration, un port HCA (adaptateur de canal hôte) de chaque hôte doit se trouver sur le même sous-réseau que le port de contrôleur E-Series auquel il est connecté, mais sur un sous-réseau différent de celui de l'autre port HCA.
@@ -31,6 +32,7 @@ Un exemple de configuration qui satisfait aux exigences se compose de quatre sou
 
 
 
+[[switch-connect-topology]]
 == Topologie de connexion du commutateur
 
 Dans une topologie en structure, un ou plusieurs commutateurs sont utilisés. Reportez-vous à la section https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste des commutateurs pris en charge.
@@ -39,6 +41,7 @@ image::../media/nvmeof_switch_connect.gif[Exemple de connexion de switch NVMe ov
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 Localisez et documentez le NQN initiateur à partir de chaque hôte.
@@ -75,6 +78,7 @@ Hôte (initiateur) 2
 |===
 
 
+[[target-nqn]]
 == NQN cible
 
 Documentez le NQN cible de la matrice de stockage.
@@ -90,6 +94,7 @@ Contrôleur de baie (cible)
 |===
 
 
+[[target-nqns]]
 == NQN cible
 
 Documentez les NQN à utiliser par les ports de la matrice.
@@ -123,6 +128,7 @@ Contrôleur B, port 2
 |===
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 

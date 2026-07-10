@@ -36,6 +36,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Étape 1 : préparation du remplacement du contrôleur (duplex)
 
 Préparez-vous à remplacer un boîtier de contrôleur en vérifiant que le boîtier de contrôleur de remplacement possède le numéro de pièce FRU correct, en sauvegardant la configuration et en recueillant les données de support. Si le contrôleur est toujours en ligne, vous devez le mettre hors ligne.
@@ -143,6 +144,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 
 
 
+[[step-2-remove-controller-canister-duplex]]
 == Étape 2 : retrait du boîtier du contrôleur (duplex)
 
 Retirer un boîtier de contrôleur pour remplacer le boîtier défectueux par un boîtier neuf.
@@ -199,6 +201,7 @@ Si vous retirez le boîtier du contrôleur d'un shelf contrôleur E5724, un raba
 
 
 
+[[step-3-remove-battery-duplex]]
 == Étape 3 : retrait de la batterie (duplex)
 
 Retirez la batterie pour pouvoir installer le nouveau contrôleur.
@@ -234,6 +237,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Déposer la batterie
 
 
 
+[[step-4-remove-host-interface-card-duplex]]
 == Étape 4 : retrait de la carte d'interface hôte (duplex)
 
 Si le boîtier du contrôleur comporte une carte d'interface hôte (HIC), retirez la carte HIC du boîtier du contrôleur d'origine pour pouvoir la réutiliser dans le nouveau boîtier du contrôleur.
@@ -267,6 +271,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Retirer HIC de la c
 
 
 
+[[step-5-install-battery-duplex]]
 == Étape 5 : installation de la batterie (duplex)
 
 Installer la batterie dans le boîtier de contrôleur de remplacement. Vous pouvez installer la batterie que vous avez retirée du boîtier du contrôleur d'origine ou installer une nouvelle batterie que vous avez commandée.
@@ -312,6 +317,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Bride métall
 
 
 
+[[step-6-install-host-interface-card-duplex]]
 == Étape 6 : installation de la carte d'interface hôte (duplex)
 
 Si vous avez retiré une HIC du boîtier de contrôleur d'origine, vous devez installer cette HIC dans le nouveau boîtier de contrôleur.
@@ -348,6 +354,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Réinstallez l
 
 
 
+[[step-7-install-new-controller-canister-duplex]]
 == Étape 7 : installation d'un nouveau boîtier de contrôleur (duplex)
 
 Après avoir installé la batterie et la carte d'interface hôte (HIC), si l'une d'elles était installée au départ, vous pouvez installer le nouveau boîtier de contrôleur dans le shelf contrôleur.
@@ -388,6 +395,7 @@ NOTE: Si le contrôleur d'origine n'a pas utilisé DHCP pour l'adresse IP, le no
 
 
 
+[[step-8-complete-controller-replacement-duplex]]
 == Étape 8 : remplacement complet du contrôleur (duplex)
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

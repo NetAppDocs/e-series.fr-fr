@@ -15,6 +15,7 @@ Après avoir mis sous tension votre système de stockage EF50 ou EF80, vous term
 
 
 
+[[step-1-cable-and-configure-the-management-ports]]
 == Étape 1: Câbler et configurer les ports de gestion
 
 Câblez le port de gestion de chaque contrôleur, puis configurez les ports à l'aide d'un serveur DHCP ou d'une adresse IP statique.
@@ -106,6 +107,7 @@ NOTE: Si vous perdez la connexion au contrôleur B, vous pouvez utiliser votre c
 ====
 
 
+[[step-2-configure-your-storage-system]]
 == Étape 2 : Configurez votre système de stockage
 
 Utilisez SANtricity System Manager pour configurer et gérer votre système de stockage.
@@ -125,6 +127,7 @@ Vous pouvez consulter l'aide en ligne incluse avec SANtricity System Manager.
 
 
 
+[[step-3-verify-the-host-io-module-protocol-is-correct]]
 == Étape 3 : Vérifiez que le protocole du module d’E/S hôte est correct
 
 Votre système de stockage est livré avec un protocole par défaut sur les modules d'E/S hôtes. Si le protocole par défaut n'est pas celui que vous souhaitez, vous pouvez le changer.

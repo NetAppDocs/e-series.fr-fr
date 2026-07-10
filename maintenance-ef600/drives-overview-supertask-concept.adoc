@@ -18,6 +18,7 @@ CAUTION: Notez que les disques de votre matrice de stockage sont fragiles ; une 
 
 
 
+[[drive-replacement-requirements]]
 == Exigences de remplacement des disques
 
 Suivez ces règles pour éviter d'endommager les lecteurs de votre matrice de stockage :
@@ -48,6 +49,7 @@ Les champs magnétiques peuvent détruire toutes les données du lecteur et caus
 
 
 
+[[drive-staggering-in-24-drive-controller-shelf]]
 == Échelonnement des disques dans le tiroir contrôleur de 24 disques
 
 Les tiroirs standard de 24 disques nécessitent des disques échelonnant. La figure suivante montre le numéro des disques dans chaque shelf (le cadre avant du shelf a été retiré).

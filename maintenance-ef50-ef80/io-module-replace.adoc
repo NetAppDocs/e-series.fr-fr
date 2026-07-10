@@ -27,6 +27,7 @@ Les voyants de défaut sont situés sur les contrôleurs : les voyants de défa
 
 
 
+[[step-1-prepare-to-replace-an-io-module]]
 == Étape 1 : Préparez-vous à remplacer un module d'E/S
 
 Préparez-vous à remplacer un module d'E/S en rassemblant les outils et équipements nécessaires et en sauvegardant la base de données de configuration du système de stockage.
@@ -71,6 +72,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-2-place-the-controller-offline]]
 == Étape 2 : Placez le contrôleur hors ligne
 
 Placez le contrôleur défectueux hors ligne afin de pouvoir effectuer le reste de cette procédure en toute sécurité.
@@ -109,6 +111,7 @@ CAUTION: Si le champ *OK to remove* n’affiche pas *Yes*, ne procédez pas à l
 
 
 
+[[step-3-replace-the-io-module]]
 == Étape 3 : Remplacez le module d’E/S
 
 Débranchez le câblage du module d'E/S défectueux, remplacez-le par le module d'E/S de remplacement, puis câblez le module d'E/S de remplacement.
@@ -160,6 +163,7 @@ Vous pouvez utiliser la languette située à gauche et la vis moletée pour ins�
 
 
 
+[[step-4-place-the-controller-online]]
 == Étape 4 : Placez le contrôleur en ligne
 
 Remettez en ligne le contrôleur défectueux.
@@ -201,6 +205,7 @@ NOTE: Si vous ne pouvez pas résoudre le problème, contactez https://mysupport.
 
 
 
+[[step-5-complete-the-io-module-replacement]]
 == Étape 5 : Terminez le remplacement du module d’E/S
 
 À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs propriétaires et collectez les données de support afin de pouvoir reprendre les opérations.
@@ -251,6 +256,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Étape 6 : Retournez la pièce défectueuse à NetApp
 
 Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.

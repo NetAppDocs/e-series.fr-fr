@@ -18,6 +18,7 @@ La fonction Importer les paramètres est une opération par lots qui vous permet
 
 
 
+[[settings-available-for-import]]
 == Paramètres disponibles pour l'importation
 
 Les configurations suivantes peuvent être importées d'une matrice à une autre :
@@ -43,6 +44,7 @@ Les configurations suivantes peuvent être importées d'une matrice à une autre
 
 
 
+[[configuration-workflow]]
 == Flux de travail de configuration
 
 Pour importer des paramètres, suivez ce flux de travail :
@@ -55,12 +57,14 @@ Pour importer des paramètres, suivez ce flux de travail :
 
 
 
+[[requirements-for-replicating-storage-configurations]]
 == Conditions requises pour la réplication des configurations de stockage
 
 Avant d'importer une configuration de stockage d'une matrice de stockage à une autre, passez en revue les exigences et les directives.
 
 
 
+[[shelves]]
 === Tiroirs
 
 * Les tiroirs où les contrôleurs résident doivent être identiques sur les baies source et cible.
@@ -70,6 +74,7 @@ Avant d'importer une configuration de stockage d'une matrice de stockage à une 
 
 
 
+[[controllers]]
 === Contrôleurs
 
 * Le type de contrôleur peut être différent entre les baies source et cible, mais le type de boîtier RBOD doit être identique.
@@ -80,6 +85,7 @@ Avant d'importer une configuration de stockage d'une matrice de stockage à une 
 
 
 
+[[status]]
 === État
 
 * Les baies cibles doivent être en état optimal.
@@ -88,6 +94,7 @@ Avant d'importer une configuration de stockage d'une matrice de stockage à une 
 
 
 
+[[storage]]
 === Stockage
 
 * La capacité du lecteur peut varier entre les matrices source et cible, tant que la capacité du volume sur la cible est supérieure à la source. (Il se peut qu'une baie cible dispose de lecteurs plus récents et de plus grande capacité qui ne soient pas entièrement configurés en volumes par l'opération de réplication.)

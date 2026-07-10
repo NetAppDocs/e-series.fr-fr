@@ -17,6 +17,7 @@ Les procédures décrites dans cette section supposent que le système E5700 a d
 
 
 
+[[system-components]]
 == Composants du système
 
 Pour le système de stockage E5700, vous pouvez effectuer les procédures de maintenance des composants suivants.

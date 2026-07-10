@@ -18,6 +18,7 @@ Chaque boîtier de contrôleur comprend une batterie qui préserve les données 
 
 
 
+[[recovery-guru-alerts]]
 == Alertes Recovery Guru
 
 Si le gourou de la restauration de SANtricity System Manager indique un des États suivants, vous devez remplacer la batterie affectée :
@@ -30,6 +31,7 @@ Dans SANtricity System Manager, vérifiez les détails dans la fonctionnalité R
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 Pour protéger vos données, vous devez remplacer une batterie défectueuse dès que possible.
@@ -46,6 +48,7 @@ Voici un aperçu des étapes à suivre pour remplacer une batterie dans un contr
 
 
 
+[[duplex-or-simplex-configuration]]
 == Configuration recto ou recto verso
 
 Les étapes de remplacement d'une batterie dépendent de l'existence d'un ou de deux contrôleurs, comme suit :
@@ -80,6 +83,7 @@ Un contrôleur (simplex)
 |===
 
 
+[[requirements-for-replacing-a-battery]]
 == Conditions requises pour le remplacement d'une batterie
 
 Si vous envisagez de remplacer une batterie défectueuse, vous devez disposer des éléments suivants :

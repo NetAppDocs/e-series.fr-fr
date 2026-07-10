@@ -18,6 +18,7 @@ Dans le plug-in de stockage pour vCenter, vous pouvez créer des conteneurs de d
 
 
 
+[[volume-types-and-characteristics]]
 == Types et caractéristiques des volumes
 
 Les volumes sont des conteneurs de données qui gèrent et organisent l'espace de stockage sur votre baie de stockage.
@@ -43,12 +44,14 @@ Lors de la création du volume, la capacité allouée à chaque volume est attri
 
 
 
+[[capacity-for-volumes]]
 == Capacité pour les volumes
 
 Les lecteurs de votre matrice de stockage fournissent la capacité de stockage physique de vos données. Avant de commencer à stocker des données, vous devez configurer la capacité allouée dans des composants logiques appelés pools ou groupes de volumes. Ces objets de stockage vous permettent de configurer, de stocker, de maintenir et de préserver les données de votre matrice de stockage.
 
 
 
+[[capacity-to-create-and-expand-volumes]]
 === Capacité à créer et étendre des volumes
 
 Vous pouvez créer des volumes à partir de la capacité non affectée ou de la capacité disponible dans un pool ou un groupe de volumes.
@@ -62,6 +65,7 @@ NOTE: L'interface du plug-in ne fournit pas d'option pour créer des volumes fin
 
 
 
+[[reported-capacity-for-volumes]]
 === Capacité signalée pour les volumes
 
 La capacité indiquée du volume correspond à la quantité de capacité de stockage physique allouée. L'intégralité de la capacité de stockage physique doit être présente. L'espace physiquement alloué est égal à l'espace signalé à l'hôte.
@@ -70,6 +74,7 @@ Vous définissez normalement la capacité indiquée du volume comme étant la ca
 
 
 
+[[capacity-limits]]
 === Limites de capacité
 
 La capacité minimale d'un volume est de 1 Mio, et la capacité maximale est déterminée par le nombre et la capacité des disques du pool ou du groupe de volumes.
@@ -83,6 +88,7 @@ Lorsque vous augmentez la capacité indiquée pour un volume, gardez les consign
 
 
 
+[[application-specific-workloads]]
 == Charges de travail spécifiques aux applications
 
 Lors de la création d'un volume, vous sélectionnez une charge de travail pour personnaliser la configuration de la matrice de stockage d'une application spécifique.
@@ -93,6 +99,7 @@ Lors de la création du volume, le système vous invite à répondre à des ques
 
 
 
+[[types-of-workloads]]
 === Types de charges de travail
 
 Vous pouvez créer deux types de charges de travail : spécifique à l'application et autres.
@@ -113,6 +120,7 @@ Vous pouvez revoir la configuration de volume recommandée et modifier, ajouter 
 
 
 
+[[application-and-workload-views]]
 === Vues d'applications et de workloads
 
 Pour afficher les applications et les charges de travail, lancez System Manager. Dans cette interface, vous pouvez afficher les informations associées à une charge de travail spécifique aux applications de deux manières différentes :

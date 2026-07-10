@@ -25,6 +25,7 @@ CAUTION: Pour éviter toute surchauffe, ne laissez pas le compartiment du contr�
 
 
 
+[[step-1-remove-the-controller]]
 == Étape 1 : Retirez le contrôleur
 
 Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, puis retirez le contrôleur défectueux du châssis.
@@ -107,6 +108,7 @@ Si nécessaire, redressez les poignées (à côté des languettes) pour les dég
 
 
 
+[[step-2-move-the-power-supply]]
 == Étape 2 : Déplacer l’alimentation électrique
 
 Déplacez le bloc d'alimentation (PSU) vers le contrôleur de remplacement.
@@ -165,6 +167,7 @@ NOTE: Pour éviter d'endommager le connecteur interne, n'exercez pas une force e
 
 
 
+[[step-3-move-the-fans]]
 == Étape 3 : Déplacez les ventilateurs
 
 Déplacez les ventilateurs vers le contrôleur de remplacement.
@@ -194,6 +197,7 @@ image::../media/icon_round_2.png[Callout numéro 2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Étape 4 : Déplacer la batterie NV
 
 Déplacez la batterie NV vers le contrôleur de remplacement.
@@ -247,6 +251,7 @@ La batterie NV doit être parfaitement alignée dans son compartiment.
 
 
 
+[[step-5-move-system-dimms]]
 == Étape 5 : Déplacez les barrettes DIMM du système
 
 Déplacez les barrettes DIMM vers le contrôleur de remplacement.
@@ -312,6 +317,7 @@ Une fois correctement insérée, la DIMM s'insère facilement mais reste bien en
 
 
 
+[[step-6-move-the-io-modules]]
 == Étape 6 : Déplacez les modules d’E/S
 
 Déplacez les modules d'E/S et tous les modules de masquage d'E/S vers le contrôleur de remplacement.
@@ -360,6 +366,7 @@ Vous pouvez utiliser la languette de gauche et la vis moletée de droite pour in
 
 
 
+[[step-7-install-the-controller]]
 == Étape 7 : Installez le contrôleur
 
 Installez le contrôleur de remplacement dans le châssis, rebranchez son cordon d'alimentation et tous ses câbles.

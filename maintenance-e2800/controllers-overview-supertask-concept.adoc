@@ -25,6 +25,7 @@ NOTE: Ces procédures sont pour les remplacements ou les remplacements à chaud 
 
 
 
+[[requirements-for-adding-second-controller]]
 == Conditions requises pour l'ajout du second contrôleur
 
 Vous pouvez ajouter un second boîtier de contrôleur à la version simplex des tiroirs contrôleurs suivants :
@@ -67,6 +68,7 @@ Vous pouvez également effectuer certaines opérations à l'aide de l'interface 
 
 
 
+[[requirements-for-replacing-controller]]
 == Conditions requises pour remplacer le contrôleur
 
 Lors du remplacement d'un boîtier de contrôleur défectueux, retirer la batterie et la HIC, s'ils sont installés, du boîtier de contrôleur d'origine et les installer dans le boîtier de contrôleur de remplacement.
@@ -115,6 +117,7 @@ Vous pouvez également effectuer certaines opérations à l'aide de l'interface 
 
 
 
+[[duplex-configuration-requirements]]
 === Configuration du mode recto verso requise
 
 Si le tiroir contrôleur est doté de deux contrôleurs (configuration duplex), vous pouvez remplacer un absorbeur de contrôleurs alors que votre baie de stockage est sous tension et effectuer des opérations d'E/S sur l'hôte, tant que les conditions suivantes sont vraies :
@@ -125,6 +128,7 @@ Si le tiroir contrôleur est doté de deux contrôleurs (configuration duplex), 
 
 
 
+[[simplex-configuration-requirements]]
 === Configuration requise pour la configuration recto
 
 Si vous ne disposez que d'un seul boîtier de contrôleur (configuration simplex), les données de la matrice de stockage ne seront pas accessibles tant que vous n'aurez pas remplacé le boîtier de contrôleur. Vous devez arrêter les opérations d'E/S de l'hôte et mettre la baie de stockage hors tension.

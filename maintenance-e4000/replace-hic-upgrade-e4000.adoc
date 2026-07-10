@@ -38,6 +38,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Étape 1 : mettez le tiroir contrôleur hors ligne
 
 Mettez le tiroir contrôleur hors ligne afin de pouvoir mettre à niveau les HIC en toute sécurité.
@@ -98,6 +99,8 @@ La LED verte cache actif située à l'arrière de chaque contrôleur est allumé
 
 
 
+[[step-2-remove-controller-canister]]
+[[step2_remove_controller_canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur du système, puis retirez le couvercle du boîtier du contrôleur.
@@ -119,6 +122,8 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Ouvrir le c
 
 
 
+[[step-3-upgrade-the-hic]]
+[[step3_upgrade_hic]]
 == Étape 3 : mettre à niveau la HIC
 
 Déposer et remplacer le HIC.
@@ -146,6 +151,8 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Retirer le HIC du mod
 
 
 
+[[step-4-reinstall-controller-canister]]
+[[step4_reinstall_controller]]
 == Étape 4 : réinstallez le boîtier du contrôleur
 
 Réinstallez le boîtier du contrôleur dans le châssis.
@@ -166,6 +173,7 @@ NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oublie
 
 
 
+[[step-5-complete-the-hic-upgrade]]
 == Étape 5 : effectuez la mise à niveau HIC
 
 Placez les deux contrôleurs en ligne, collectez les données de support et reprenez les opérations.

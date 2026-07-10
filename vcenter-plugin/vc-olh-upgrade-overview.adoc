@@ -18,6 +18,7 @@ Le plug-in de stockage pour vCenter vous permet de gérer les mises à niveau du
 
 
 
+[[upgrade-workflow]]
 == Mise à niveau du workflow
 
 Les étapes suivantes fournissent un flux de travail général pour les mises à niveau logicielles :
@@ -39,24 +40,28 @@ NOTE: Vous pouvez également indiquer que le logiciel est activé ultérieuremen
 
 
 
+[[upgrade-considerations]]
 == Mise à niveau
 
 Avant de mettre à niveau plusieurs baies de stockage, passez en revue les principaux éléments à prendre en compte dans le cadre de votre planification.
 
 
 
+[[current-versions]]
 === Versions actuelles
 
 Vous pouvez afficher les versions actuelles du logiciel SANtricity OS à partir de la page gérer du plug-in de stockage pour vCenter pour chaque baie de stockage détectée. La version est indiquée dans la colonne logiciel SANtricity OS. Les informations relatives au micrologiciel du contrôleur et à la NVSRAM sont disponibles dans une boîte de dialogue contextuelle lorsque vous cliquez sur la version du système d'exploitation dans chaque ligne.
 
 
 
+[[other-components-requiring-upgrade]]
 === Les autres composants doivent être mis à niveau
 
 Dans le cadre du processus de mise à niveau, vous devrez peut-être également mettre à niveau le pilote multivoie/basculement de l'hôte ou le pilote HBA afin que l'hôte puisse interagir correctement avec les contrôleurs. Pour plus d'informations sur la compatibilité, reportez-vous à la section link:https://imt.netapp.com/matrix/["Matrice d'interopérabilité"^].
 
 
 
+[[dual-controllers]]
 === Doubles contrôleurs
 
 Si une baie de stockage contient deux contrôleurs et qu'un pilote multivoie est installé, la baie de stockage peut continuer à traiter les E/S pendant la mise à niveau. Pendant la mise à niveau, la procédure suivante se produit :

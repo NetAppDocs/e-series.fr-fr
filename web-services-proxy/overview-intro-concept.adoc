@@ -15,6 +15,7 @@ Avant d'installer et de configurer le proxy de services Web, lisez la présentat
 
 
 
+[[web-services]]
 == Services Web
 
 Web Services est une API (application Programming interface) qui vous permet de configurer, de gérer et de surveiller les systèmes de stockage NetApp E-Series et EF-Series. En émettant des requêtes API, vous pouvez compléter des workflows, tels que la configuration, le provisionnement et la surveillance des performances des systèmes de stockage E-Series.
@@ -74,6 +75,7 @@ Gère uniquement le contrôleur sur lequel il est intégré.
 |===
 
 
+[[unified-manager]]
 == Unified Manager
 
 Le pack d'installation proxy comprend une interface web Unified Manager qui permet d'accéder à la configuration des systèmes de stockage E-Series et EF-Series plus récents, notamment les systèmes E2800, E5700, EF300 et EF600.

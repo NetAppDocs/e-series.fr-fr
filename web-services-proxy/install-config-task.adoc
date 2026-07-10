@@ -16,6 +16,7 @@ Vous pouvez modifier les paramètres Web Services Proxy pour répondre aux exige
 
 
 
+[[stop-or-restart-the-webserver]]
 == Arrêtez ou redémarrez le serveur Web
 
 Le service Webserver est démarré lors de l'installation et s'exécute en arrière-plan. Au cours de certaines tâches de configuration, vous devrez peut-être arrêter ou redémarrer le service Webserver.
@@ -37,6 +38,7 @@ La méthode la plus courante pour interagir avec le service est d'utiliser `syst
 
 
 
+[[resolve-port-conflicts]]
 == Résoudre les conflits de ports
 
 Si Web Services Proxy s'exécute alors qu'une autre application est disponible à l'adresse ou au port défini, vous pouvez résoudre le conflit de port dans le fichier wsconfig.xml.
@@ -107,6 +109,7 @@ Non
 
 
 
+[[configure-load-balancing-andor-high-availability]]
 == Configurez l'équilibrage de charge et/ou la haute disponibilité
 
 Pour utiliser le proxy de services Web dans une configuration haute disponibilité (HA), vous pouvez configurer l'équilibrage de charge. Dans une configuration haute disponibilité, un nœud unique reçoit toutes les demandes, tandis que les autres sont en attente, ou les demandes sont équilibrées sur l'ensemble des nœuds.
@@ -134,6 +137,7 @@ Par exemple : `DEBUG_START_OPTIONS="-Dload-balance.enabled=true"`
 
 
 
+[[disable-symbol-https]]
 == Désactivez le symbole HTTPS
 
 Vous pouvez désactiver les commandes de symbole (paramètre par défaut) et envoyer des commandes via un appel de procédure distante (RPC). Ce paramètre peut être modifié dans le fichier wsconfig.xml.
@@ -162,6 +166,7 @@ Par exemple :
 
 
 
+[[configure-cross-origin-resource-sharing]]
 == Configurer le partage de ressources d'origine croisée
 
 Vous pouvez configurer le partage de ressources entre les origines (CORS), qui est un mécanisme qui utilise des en-têtes HTTP supplémentaires pour fournir une application Web exécutée à une origine pour avoir la permission d'accéder aux ressources sélectionnées à partir d'un serveur à une autre origine.

@@ -4,6 +4,7 @@
 
 
 
+[[step-1-prepare-to-replace-the-drive]]
 == Étape 1 : Préparez-vous à remplacer le disque
 
 Préparez-vous au remplacement du disque en vous assurant que le disque a subi une panne, en confirmant que vous disposez d'un disque de remplacement pris en charge, en vous assurant d'avoir accès à SANtricity System Manager, en prenant des précautions contre les décharges électrostatiques et en localisant physiquement le disque en panne.
@@ -65,6 +66,7 @@ NOTE: Vous devez retirer le panneau situé à l'avant du système de stockage po
 
 
 
+[[step-2-replace-the-drive]]
 == Étape 2 : Remplacez le disque
 
 Remplacez le disque défectueux par un neuf.
@@ -133,6 +135,7 @@ La LED verte du disque s’allume lorsque le disque est correctement inséré.
 
 
 
+[[step-3-complete-the-drive-replacement]]
 == Étape 3 : Terminer le remplacement du disque
 
 Confirmez que le disque de remplacement fonctionne correctement et assurez-vous que la reconstruction du disque a commencé.
@@ -198,6 +201,7 @@ Une fois la reconstruction du disque terminée, le groupe de volumes est à l'é
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Étape 4 : Retournez la pièce défectueuse à NetApp
 
 Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.

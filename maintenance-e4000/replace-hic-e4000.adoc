@@ -36,6 +36,7 @@ CAUTION: *Perte possible d'accès aux données* -- n'installez jamais d'HIC dans
 
 
 
+[[step-1-prepare-to-replace-hic]]
 == Étape 1 : préparez-vous à remplacer le HIC
 
 Mettez le tiroir contrôleur (recto) hors tension ou mettez le contrôleur affecté hors ligne (recto verso) afin de pouvoir remplacer les circuits intégrés en toute sécurité.
@@ -206,6 +207,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 ====
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur du système, puis retirez le couvercle du boîtier du contrôleur.
@@ -227,6 +229,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Ouvrir le c
 
 
 
+[[step-3-replace-the-hic]]
 == Étape 3 : remplacer la HIC
 
 Remplacer le HIC.
@@ -261,6 +264,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Étape 4 : réinstallez le boîtier du contrôleur
 
 Réinstallez le boîtier du contrôleur dans le châssis.
@@ -280,6 +284,7 @@ NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oublie
 
 
 
+[[step-5-complete-hic-replacement]]
 == Étape 5 : remplacement HIC complet
 
 Mettez le contrôleur sous tension (simplex) ou mettez-le en ligne (duplex), collectez les données de support et reprenez les opérations.

@@ -33,6 +33,7 @@ CAUTION: Si vous mettez à niveau le système d'exploitation SANtricity sur une 
 
 
 
+[[step-1-perform-pre-upgrade-health-check]]
 == Étape 1 : effectuer une vérification préalable de l'état de santé de la mise à niveau
 
 Une vérification de l'état s'exécute dans le cadre du processus de mise à niveau, mais vous pouvez également effectuer une vérification de l'état séparément avant de commencer. Le contrôle de l'état des composants de la baie de stockage vérifie que la mise à niveau peut se poursuivre.
@@ -58,6 +59,7 @@ NOTE: Si l'une des baies ne fonctionne pas, vous pouvez ignorer cette matrice et
 
 
 
+[[step-2-download-software-files-from-support-site]]
 == Étape 2 : téléchargement de fichiers logiciels à partir du site d'assistance
 
 Cette étape vous permet de vous rendre sur le site de support NetApp pour enregistrer les nouveaux fichiers logiciels DLP (téléchargeable) sur votre système hôte de gestion.
@@ -85,6 +87,7 @@ NOTE: Un firmware avec signature numérique est requis dans la version 8.42 et s
 
 
 
+[[step-3-transfer-software-files-to-the-controllers]]
 == Étape 3 : transfert de fichiers logiciels vers les contrôleurs
 
 Vous chargez le fichier logiciel du système d'exploitation SANtricity et le fichier NVSRAM dans le référentiel de façon à ce qu'il soit accessible au Centre de mise à niveau d'Unified Manager.
@@ -163,6 +166,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-4-activate-staged-software-files-optional]]
 == Étape 4 : activation des fichiers logiciels par étapes (facultatif)
 
 Vous pouvez choisir d'activer le fichier logiciel immédiatement ou attendre jusqu'à ce qu'il soit plus pratique. Cette procédure suppose que vous avez choisi d'activer le fichier logiciel ultérieurement.

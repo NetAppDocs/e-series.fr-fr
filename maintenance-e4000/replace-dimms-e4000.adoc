@@ -28,6 +28,7 @@ Vous pouvez remplacer un module DIMM dans le E4000 si une mémoire ne correspond
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Étape 1 : déterminez si vous devez remplacer un module DIMM
 
 Vérifiez la taille du cache de votre contrôleur avant de remplacer les MODULES DIMM.
@@ -45,6 +46,7 @@ Vérifiez la taille du cache de votre contrôleur avant de remplacer les MODULES
 
 
 
+[[step-2-prepare-to-replace-a-dimm]]
 == Étape 2 : préparez le remplacement d'un module DIMM
 
 Préparez-vous à remplacer un module DIMM en enregistrant la clé de sécurité du lecteur, en sauvegardant la configuration et en collectant les données de support. Vous pouvez ensuite arrêter les opérations d'E/S de l'hôte, mettre le contrôleur hors ligne ou le mettre hors tension.
@@ -164,6 +166,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 ====
 
 
+[[step-3-remove-controller-canister]]
 == Étape 3 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur du système, puis retirez le couvercle du boîtier du contrôleur.
@@ -186,6 +189,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Ouvrir le c
 
 
 
+[[step-4-replace-the-dimms]]
 == Étape 4 : remplacez les modules DIMM
 
 Repérez le module DIMM à l'intérieur du contrôleur, retirez-le et remplacez-le.
@@ -237,6 +241,7 @@ NOTE: Inspectez visuellement le module DIMM pour vérifier qu'il est bien align�
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Étape 5 : réinstallez le boîtier du contrôleur
 
 Réinstallez le boîtier du contrôleur dans le châssis.
@@ -256,6 +261,7 @@ NOTE: Si vous avez retiré les convertisseurs de support (QSFP ou SFP), n'oublie
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Étape 6 : remplacement complet des modules DIMM
 
 [role="tabbed-block"]

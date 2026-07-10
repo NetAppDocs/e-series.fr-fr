@@ -31,7 +31,7 @@ NOTE: Des interfaces et systèmes d'exploitation supplémentaires peuvent être 
 
 
  a| 
-Ce site _NOT_ contient des informations sur les versions _antérieures à_ du logiciel version 11.50 ou 8.50. Pour les versions antérieures, accédez au https://www.netapp.com/us/documentation/eseries-santricity.aspx["Ressources de documents E-Series et SANtricity"^] page.
+Ce site ne contient _pas_ d'informations concernant les versions _antérieures_ à la version logicielle 11.50 ou à la version micrologicielle 8.50. Pour les versions antérieures, accédez à la page  https://docs.netapp.com/us-en/e-series-santricity/early-versions.html#software-documentation-for-earlier-releases["Documentation E-Series et SANtricity pour les versions antérieures"^].
 
 Pour plus d'informations sur vos exigences de préparation du site, rendez-vous sur https://hwu.netapp.com/["NetApp Hardware Universe"^].
 

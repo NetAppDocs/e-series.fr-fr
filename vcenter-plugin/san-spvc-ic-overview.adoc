@@ -18,6 +18,7 @@ Le plug-in de stockage SANtricity pour vCenter assure une gestion intégrée des
 
 
 
+[[available-tasks]]
 == Tâches disponibles
 
 Vous pouvez utiliser le plug-in pour effectuer les tâches suivantes :
@@ -41,12 +42,14 @@ image:../media/vcenter_communication2.png["Environnement de communication vCente
 
 
 
+[[interface-overview]]
 == Présentation de l'interface
 
 Lorsque vous vous connectez au plug-in, la page principale s'ouvre sur *Manage - All*. À partir de cette page, vous pouvez afficher et gérer toutes les matrices de stockage détectées sur votre réseau.
 
 
 
+[[navigation-sidebar]]
 === Barre latérale de navigation
 
 La barre latérale de navigation affiche les éléments suivants :
@@ -64,6 +67,7 @@ NOTE: Certaines opérations ne sont pas disponibles lorsqu'une matrice de stocka
 
 
 
+[[supported-browsers]]
 === Navigateurs pris en charge
 
 Le plug-in de stockage pour vCenter est accessible à partir de plusieurs types de navigateurs. Les navigateurs et versions suivants sont pris en charge.
@@ -75,12 +79,14 @@ Le plug-in de stockage pour vCenter est accessible à partir de plusieurs types 
 
 
 
+[[user-roles-and-permissions]]
 === Rôles et autorisations utilisateur
 
 Pour accéder aux tâches du plug-in de stockage pour vCenter, l'utilisateur doit disposer d'autorisations de lecture/écriture. Par défaut, tous les ID utilisateur VMware vCenter définis ne disposent d'aucune autorisation pour effectuer des tâches dans le plug-in.
 
 
 
+[[configuration-overview]]
 == Présentation de la configuration
 
 La configuration implique les étapes suivantes :
@@ -94,6 +100,7 @@ La configuration implique les étapes suivantes :
 
 
 
+[[find-more-information]]
 == Trouvez plus d'informations
 
 Pour plus d'informations sur la gestion des datastores dans vSphere client, reportez-vous à la section https://docs.vmware.com/en/VMware-vSphere/index.html["Documentation VMware vSphere"^].

@@ -16,6 +16,7 @@ Suivez cette procédure pour modifier le protocole du port hôte dans une baie E
 
 
 
+[[step-1-obtain-the-feature-pack-key]]
 == Étape 1 : obtenir la clé du pack de fonctions
 
 Pour obtenir la clé du pack de fonctionnalités, vous avez besoin du numéro de série du tiroir du contrôleur, d'un code d'activation de la fonction et de l'identifiant d'activation de la fonctionnalité de la matrice de stockage.
@@ -616,6 +617,7 @@ NOTE: Le site Web d'activation de la fonction Premium comprend un lien vers « i
 
 
 
+[[step-2-stop-host-io]]
 == Étape 2 : arrêter les E/S de l'hôte
 
 Arrêtez toutes les opérations d'E/S de l'hôte avant de convertir le protocole des ports hôtes.
@@ -648,6 +650,7 @@ La LED verte cache actif située à l'arrière de chaque contrôleur est allumé
 
 
 
+[[step-3-change-the-feature-pack]]
 == Étape 3 : modifiez le pack de fonctions
 
 Modifiez le pack de fonctionnalités pour convertir le protocole hôte de vos ports hôtes.

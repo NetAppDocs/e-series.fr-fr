@@ -51,6 +51,7 @@ NOTE: Pour plus d'informations sur le remplacement d'un tiroir d'extension E-Ser
 
 
 
+[[step-1-prepare-to-replace-drive-drawer]]
 == Étape 1 : préparation du remplacement du tiroir disque
 
 Déterminez si vous pouvez effectuer la procédure de remplacement pendant que le tiroir disque est en ligne ou si vous devez arrêter l'activité d'E/S hôte et mettre hors tension tous les tiroirs sous tension.
@@ -151,6 +152,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED de cache act
 
 
 
+[[step-2-remove-cable-chains]]
 == Étape 2 : déposer les chaînes de câble
 
 Retirez les deux chaînes de câble pour retirer et remplacer un tiroir disque défectueux.
@@ -292,6 +294,7 @@ Le voyant peut rester allumé pendant une minute après avoir réinstallé le ve
 
 
 
+[[step-3-remove-failed-drive-drawer]]
 == Étape 3 : retirez le tiroir de disque défectueux
 
 Retirez un tiroir de disque défectueux pour le remplacer par un nouveau.
@@ -346,6 +349,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Relâch
 
 
 
+[[step-4-install-new-drive-drawer]]
 == Étape 4 : installez un nouveau tiroir d'entraînement
 
 Installez un nouveau tiroir de disque pour remplacer le tiroir défectueux.
@@ -385,6 +389,7 @@ CAUTION: *Risque de détérioration de l'équipement* -- cessez de pousser le ti
 
 
 
+[[step-5-attach-cable-chains]]
 == Étape 5 : fixer les chaînes de câble
 
 Fixez les chaînes de câble pour pouvoir réinstaller les disques en toute sécurité dans le tiroir d'entraînement.
@@ -469,6 +474,7 @@ Le voyant peut rester allumé pendant une minute après avoir réinstallé le ve
 
 
 
+[[step-6-complete-drive-drawer-replacement]]
 == Étape 6 : remplacement complet du tiroir de disque
 
 Réinsérez les disques et remplacez le cadre avant dans l'ordre correct.

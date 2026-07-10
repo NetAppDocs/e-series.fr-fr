@@ -16,6 +16,7 @@ L'option Paramètres permet de modifier les configurations actuelles de l'applic
 
 
 
+[[modify-s3-account-settings]]
 == Modifiez les paramètres de compte S3
 
 Vous pouvez modifier les paramètres S3 de l'application SANtricity Cloud Connector dans la fenêtre Paramètres des comptes S3.
@@ -46,6 +47,7 @@ Les paramètres des comptes S3 modifiés sont appliqués.
 
 
 
+[[manage-storage-arrays]]
 == Gérez les baies de stockage
 
 Vous pouvez ajouter ou supprimer des matrices de stockage du proxy de services Web enregistré sur l'hôte SANtricity Cloud Connector à la page gérer les matrices de stockage.
@@ -88,6 +90,7 @@ La matrice de stockage sélectionnée est supprimée de l'hôte SANtricity Cloud
 
 
 
+[[modify-web-services-proxy-settings]]
 == Modifier les paramètres du proxy de services Web
 
 Vous pouvez modifier les paramètres proxy de services Web existants pour l'application SANtricity Cloud Connector dans la fenêtre Paramètres proxy de services Web.
@@ -113,6 +116,7 @@ L'écran Paramètres du proxy de services Web s'affiche.
 
 
 
+[[change-santricity-cloud-connector-password]]
 == Modifiez le mot de passe de SANtricity Cloud Connector
 
 Vous pouvez modifier le mot de passe de l'application SANtricity Cloud Connector dans l'écran Modifier le mot de passe.

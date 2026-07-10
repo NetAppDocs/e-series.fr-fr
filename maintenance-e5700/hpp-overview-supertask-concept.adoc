@@ -15,6 +15,7 @@ Avant de convertir le protocole de port hôte dans le système E5700, vérifiez 
 
 
 
+[[host-ports-you-can-change]]
 == Ports hôtes que vous pouvez modifier
 
 
@@ -26,6 +27,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Ports h
 
 
 
+[[requirements]]
 == De formation
 
 * Vous devez planifier une fenêtre de maintenance des temps d'arrêt pour cette procédure.
@@ -38,6 +40,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Ports h
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Considérations relatives à la modification du protocole hôte
 
 Les considérations relatives à la modification du protocole hôte dépendent des protocoles de début et de fin des ports hôtes de la carte mère et des ports HIC.
@@ -49,6 +52,7 @@ NOTE: Les considérations suivantes ne s'appliquent que si vous convertissez une
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Transition de FC à iSCSI
 
 * La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole.
@@ -75,6 +79,7 @@ CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone av
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Transition de iSCSI à FC
 
 * La mise en miroir asynchrone requiert à la fois la baie de stockage locale et la baie de stockage distante pour utiliser le même protocole. Si vous utilisez actuellement la mise en miroir asynchrone avec les ports de la carte de base, vous devez désactiver la mise en miroir asynchrone avant de changer le protocole.
@@ -83,6 +88,7 @@ CAUTION: Si vous ne désactivez pas les relations de mise en miroir synchrone av
 
 
 
+[[converting-ib-iser-tofrom-ib-srp]]
 === Conversion d'IB-iser en/à partir d'IB-SRP
 
 * Vous n'avez pas besoin d'apporter de modifications à votre matériel lorsque vous passez de ou à iser en SRP.
@@ -102,6 +108,7 @@ NOTE: Une fois qu'il a été désactivé, DA ne peut pas être réactivé sur le
 
 
 
+[[mirroring-operations-need-same-host-protocol]]
 === Les opérations de mise en miroir requièrent le même protocole hôte
 
 Les opérations de mise en miroir ne sont pas affectées si les ports hôtes utilisés pour la mise en miroir conservent le même protocole après avoir appliqué le pack de fonctionnalités. Même avant d'appliquer le pack de fonctions, vous devez confirmer que tous les groupes de cohérence des miroirs sont synchronisés. Après avoir appliqué le pack de fonctionnalités, vous devez tester la communication entre la matrice de stockage locale et la matrice de stockage distante. Si vous avez des questions sur la procédure à suivre, consultez l'aide en ligne de SANtricity System Manager.

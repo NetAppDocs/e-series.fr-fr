@@ -16,12 +16,14 @@ Pour garantir la réussite de la mise à niveau, consultez les considérations s
 
 
 
+[[controller-upgrades-single-or-multiple]]
 == Mises à niveau du contrôleur (uniques ou multiples)
 
 Étudiez ces considérations clés avant de mettre à niveau les contrôleurs.
 
 
 
+[[current-versions]]
 === Versions actuelles
 
 Vous pouvez afficher les versions actuelles de votre logiciel et micrologiciel, comme suit :
@@ -32,6 +34,7 @@ Vous pouvez afficher les versions actuelles de votre logiciel et micrologiciel, 
 
 
 
+[[components-included-in-the-upgrade]]
 === Composants inclus dans la mise à niveau
 
 Les composants suivants sont inclus dans le processus de mise à niveau de SANtricity OS :
@@ -44,6 +47,7 @@ Les composants suivants sont inclus dans le processus de mise à niveau de SANtr
 
 
 
+[[components-to-upgrade-separately]]
 === Composants à mettre à niveau séparément
 
 Les composants suivants doivent être mis à niveau séparément :
@@ -58,6 +62,7 @@ Les composants suivants doivent être mis à niveau séparément :
 
 
 
+[[dual-controllers-and-io-processing]]
 === Doubles contrôleurs et traitement des E/S.
 
 Si une baie de stockage contient deux contrôleurs et qu'un pilote multivoie est installé, la baie de stockage peut continuer à traiter les E/S pendant la mise à niveau. Pendant la mise à niveau, la procédure suivante se produit :
@@ -72,6 +77,7 @@ Une fois la mise à niveau terminée, vous devrez peut-être redistribuer manuel
 
 
 
+[[health-check]]
 === Vérification de l'état
 
 Un contrôle de l'état de santé est exécuté dans le cadre du processus de mise à niveau. Ce contrôle de l'état de santé évalue tous les composants de la baie de stockage pour vérifier que la mise à niveau peut se poursuivre. Les conditions suivantes peuvent empêcher la mise à niveau :
@@ -91,6 +97,7 @@ Vous pouvez également exécuter le contrôle d'état de pré-mise à niveau sé
 
 
 
+[[immediate-or-staged-upgrade]]
 === Mise à niveau immédiate ou échelonnée
 
 Vous pouvez activer la mise à niveau immédiatement ou la préparer ultérieurement. Vous pouvez choisir de l'activer ultérieurement pour les raisons suivantes :
@@ -101,18 +108,21 @@ Vous pouvez activer la mise à niveau immédiatement ou la préparer ultérieure
 
 
 
+[[drive-firmware-upgrade]]
 == Mise à niveau du firmware des disques
 
 Passez en revue ces considérations clés avant de mettre à niveau le micrologiciel de votre lecteur.
 
 
 
+[[drive-compatibility]]
 === Compatibilité des lecteurs
 
 Chaque fichier de micrologiciel de lecteur contient des informations sur le type de lecteur sur lequel le micrologiciel s'exécute. Vous ne pouvez télécharger le fichier de micrologiciel spécifié que sur un lecteur compatible. System Manager vérifie automatiquement la compatibilité lors du processus de mise à niveau.
 
 
 
+[[drive-upgrade-methods]]
 === Méthodes de mise à niveau
 
 Il existe deux types de méthodes de mise à niveau du micrologiciel des lecteurs : en ligne et hors ligne.

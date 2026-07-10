@@ -15,6 +15,7 @@ Préparez-vous à déplacer l'armoire de son emplacement dans votre zone de réc
 
 
 
+[[step-1-estimate-cabinet-weight]]
 == Étape 1 : estimer le poids de l'armoire
 
 L'armoire peut transporter de façon fiable et sûre jusqu'à 909.1 kg (2000 lb) de capacité. Vous devez connaître le poids approximatif de l'armoire pour pouvoir la déplacer en toute sécurité.
@@ -259,6 +260,7 @@ CAUTION: *Dommages possibles aux composants du plateau* -- ne placez pas de plat
 
 
 
+[[step-2-acclimate-cabinet]]
 == Étape 2 : armoire acclimato
 
 Assurez-vous que l'armoire et les plateaux sont bien installés dans l'environnement intérieur avant de retirer les matériaux d'emballage.
@@ -274,6 +276,7 @@ CAUTION: *Dommages possibles aux composants du plateau* -- si la température ex
 
 
 
+[[step-3-remove-packing-materials]]
 == Étape 3 : retirez les matériaux d'emballage
 
 Ne retirez les matériaux d'emballage qu'après avoir atteint la température intérieure de l'armoire.
@@ -285,6 +288,7 @@ Ne retirez les matériaux d'emballage qu'après avoir atteint la température in
 
 
 
+[[step-4-check-shipping-contents]]
 == Étape 4 : vérifier le contenu de l'expédition
 
 Vérifiez le contenu de l'expédition pour vous assurer que tout l'équipement est arrivé sur le site.
@@ -297,6 +301,7 @@ Vérifiez le contenu de l'expédition pour vous assurer que tout l'équipement e
 
 
 
+[[step-5-remove-heavy-components-from-cabinet]]
 == Étape 5 : retirer les composants lourds de l'armoire
 
 Déposer certains composants plus lourds situés dans la partie supérieure de l'armoire pour assurer une stabilité maximale.

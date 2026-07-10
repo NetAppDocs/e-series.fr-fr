@@ -15,6 +15,7 @@ Pour le protocole SAS, vous déterminez les adresses de port hôte et définisse
 
 
 
+[[step-1-determine-sas-host-identifiers-windows]]
 == Étape 1 : détermination des identificateurs d'hôte SAS--Windows
 
 Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.
@@ -36,6 +37,7 @@ Pour définir des recommandations, reportez-vous à la colonne Notes de l' http:
 
 
 
+[[step-2-record-your-configuration]]
 == Étape 2 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
@@ -44,6 +46,7 @@ image::../media/sas_topology_diagram_conf-win.gif[Schéma : topologie SAS]
 
 
 
+[[host-identifiers]]
 === Identifiants d'hôte
 
 |===
@@ -92,12 +95,14 @@ Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
 |===
 
 
+[[target-identifiers]]
 === Identifiants cibles
 
 Les configurations recommandées se composent de deux ports cibles.
 
 
 
+[[mapping-host-name]]
 === Nom d'hôte de mappage
 
 |===

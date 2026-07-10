@@ -21,6 +21,7 @@ Suivre la procédure appropriée pour :
 
 
 
+[[internal-key-management]]
 == Gestion interne des clés
 
 Procédez comme suit pour la gestion interne des clés lorsque tous les disques sont verrouillés.
@@ -51,6 +52,7 @@ Les contrôleurs continueront le processus de synchronisation par code automatiq
 
 
 
+[[external-key-management]]
 == Gestion externe des clés
 
 Procédez comme suit pour gérer les clés externes lorsque tous les disques sont verrouillés.

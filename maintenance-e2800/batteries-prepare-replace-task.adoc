@@ -25,6 +25,7 @@ Les étapes à suivre pour préparer le remplacement de la batterie dépendent d
 
 
 
+[[place-controller-offline-duplex]]
 == Mettez le contrôleur hors ligne (duplex)
 
 Si vous disposez d'une configuration recto verso, vous devez mettre le contrôleur affecté hors ligne pour pouvoir retirer en toute sécurité la batterie défectueuse. Le contrôleur que vous ne mettez pas hors ligne doit être en ligne (dans l'état optimal).
@@ -101,6 +102,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 
 
 
+[[power-down-the-controller-shelf-simplex]]
 == Mettez le tiroir contrôleur hors tension (simplex)
 
 Si vous disposez d'une configuration simplex, mettez le tiroir contrôleur hors tension, afin que vous puissiez retirer la batterie défectueuse en toute sécurité.

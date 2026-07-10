@@ -15,6 +15,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche t
 
 
 
+[[direct-connect-topology]]
 == Topologie Direct Connect
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au contrôleur.
@@ -33,6 +34,7 @@ image::../media/nvme_fc_direct_topology.png[Exemple de topologie de connexion di
 
 
 
+[[switch-connect-topology]]
 == Topologie de connexion du commutateur
 
 Dans une topologie en structure, un ou plusieurs commutateurs sont utilisés. Voir la https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour obtenir la liste des commutateurs pris en charge.
@@ -41,6 +43,7 @@ image::../media/nvme_fc_fabric_topology.png[Exemple de topologie de connexion de
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 Localisez et documentez le NQN initiateur à partir de chaque hôte.
@@ -62,6 +65,7 @@ Hôte (initiateur) 2
 |===
 
 
+[[target-nqn]]
 == NQN cible
 
 Documentez le NQN cible de la matrice de stockage.
@@ -77,6 +81,7 @@ Contrôleur de baie (cible)
 |===
 
 
+[[target-nqns]]
 == NQN cible
 
 Documentez les NQN à utiliser par les ports de la matrice.
@@ -110,6 +115,7 @@ Contrôleur B, port 2
 |===
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 

@@ -35,6 +35,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Étape 1 : préparation du remplacement du contrôleur (duplex)
 
 Préparez-vous à remplacer le contrôleur en vérifiant que le boîtier de contrôleur de remplacement possède la référence FRU correcte, en sauvegardant la configuration et en recueillant les données de support. Si le contrôleur est toujours en ligne, vous devez le mettre hors ligne.
@@ -138,12 +139,14 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 
 
 
+[[step-2-remove-failed-controller-duplex]]
 == Étape 2 : retrait du contrôleur défectueux (duplex)
 
 Remplacez le réservoir défectueux par un neuf.
 
 
 
+[[step-2a-remove-controller-canister-duplex]]
 === Étape 2a : retrait du boîtier du contrôleur (duplex)
 
 Retirez le boîtier du contrôleur défectueux pour pouvoir le remplacer par un nouveau.
@@ -200,6 +203,7 @@ Si vous retirez le canister d'un tiroir contrôleur E2812, un tiroir de contrôl
 
 
 
+[[step-2b-remove-battery-duplex]]
 === Étape 2b : retrait de la batterie (duplex)
 
 Retirez la batterie pour pouvoir installer le nouveau contrôleur.
@@ -235,6 +239,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retirer la batterie 
 
 
 
+[[step-2c-remove-host-interface-card-duplex]]
 === Étape 2c : retrait de la carte d'interface hôte (duplex)
 
 Si le boîtier de contrôleur comporte une carte d'interface hôte (HIC), vous devez retirer la carte HIC du boîtier de contrôleur d'origine pour pouvoir la réutiliser dans le nouveau boîtier de contrôleur.
@@ -268,12 +273,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retirez le HIC de l
 
 
 
+[[step-3-install-new-controller-duplex]]
 == Étape 3 : installation du nouveau contrôleur (duplex)
 
 Installez un nouveau boîtier de contrôleur pour remplacer le boîtier défectueux. Effectuez cette tâche uniquement si votre matrice de stockage dispose de deux contrôleurs (configuration duplex).
 
 
 
+[[step-3a-install-battery-duplex]]
 === Étape 3a : installation de la batterie (duplex)
 
 Vous devez installer la batterie dans le boîtier de contrôleur de remplacement. Vous pouvez installer la batterie que vous avez retirée du boîtier du contrôleur d'origine ou installer une nouvelle batterie que vous avez commandée.
@@ -319,6 +326,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Bride métall
 
 
 
+[[step-3b-install-host-interface-card-duplex]]
 === Étape 3b : installation de la carte d'interface hôte (duplex)
 
 Si vous avez retiré une HIC du boîtier de contrôleur d'origine, vous devez installer cette HIC dans le nouveau boîtier de contrôleur.
@@ -355,6 +363,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Réinstallez l
 
 
 
+[[step-3c-install-new-controller-canister-duplex]]
 === Étape 3c : installation d'un nouveau boîtier de contrôleur (duplex)
 
 Après avoir installé la batterie et la carte d'interface hôte (HIC), si l'une d'elles était installée au départ, vous pouvez installer le nouveau boîtier de contrôleur dans le shelf contrôleur.
@@ -395,6 +404,7 @@ NOTE: Si le contrôleur d'origine n'a pas utilisé DHCP pour l'adresse IP, le no
 
 
 
+[[step-4-complete-controller-replacement-duplex]]
 == Étape 4 : remplacement complet du contrôleur (duplex)
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

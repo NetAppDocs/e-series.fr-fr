@@ -125,18 +125,21 @@ NOTE: Si une armoire 3040 est entièrement équipée avec des tiroirs DE6600, el
 
 
 
+[[power-requirements-and-heat-dissipation]]
 == Exigences d'alimentation et dissipation thermique
 
 L'armoire comprend les spécifications suivantes pour l'alimentation et la dissipation thermique.
 
 
 
+[[power-rating]]
 === Puissance nominale
 
 L'armoire 3040 40U a une capacité nominale comprise entre 200 VCA et 240 VCA à 50 Hz et 60 Hz, et fonctionne à ±10 % de cette plage.
 
 
 
+[[power-distribution-units-pdus]]
 === Unités de distribution d'alimentation (PDU)
 
 L'armoire comprend deux unités de distribution d'alimentation CA identiques (PDU), chacune fournissant jusqu'à 72A d'alimentation utilisable. Les PDU sont montées verticalement à l'arrière de l'armoire et chaque PDU comprend six blocs d'alimentation 12 A. Chaque banc d'alimentation contient quatre prises d'alimentation CEI 60320-C19 et un disjoncteur de 15 A. Chaque PDU dispose d'un total de 24 sorties et 6 disjoncteurs.
@@ -152,6 +155,7 @@ Les boîtiers d'entrée d'alimentation sont étiquetés C1, C2 et C3 à l'endroi
 
 
 
+[[power-calculations-and-heat-calculations-for-the-cabinet]]
 === Calculs de puissance et de chaleur pour l'armoire
 
 |===
@@ -379,12 +383,14 @@ Tiroir disque DE6600
 |===
 
 
+[[maximum-number-of-trays]]
 == Nombre maximum de bacs
 
 Le nombre maximum de bacs que vous pouvez installer dans une armoire 3040 40U dépend de la hauteur de chaque bac des unités de rack (U).
 
 
 
+[[tray-heights-in-rack-units-u]]
 === Hauteurs des plateaux en unités de rack (U)
 
 Chaque unité de rack est de 4.45 cm (1.75 pouces). Par exemple, vous pouvez installer jusqu'à dix tiroirs 4U, vingt tiroirs 2U ou une combinaison de tiroirs 2U et 4U, pour un maximum de 40U.

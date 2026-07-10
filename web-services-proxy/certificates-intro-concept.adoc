@@ -15,6 +15,7 @@ Pour des raisons de sécurité dans Web Services Proxy, vous pouvez spécifier u
 
 
 
+[[enable-ssl]]
 == Activez SSL
 
 Le proxy de services Web utilise SSL (Secure Sockets Layer) pour la sécurité, qui est activé pendant l'installation. Vous pouvez modifier la désignation du port SSL dans le fichier wsconfig.xml.
@@ -43,6 +44,7 @@ Lorsque le serveur démarre avec SSL configuré, le serveur recherche les fichie
 
 
 
+[[bypass-certificate-validation]]
 == Validation de certificat de dérivation
 
 Pour prendre en charge les connexions sécurisées, le proxy de services Web valide les certificats des systèmes de stockage par rapport à ses propres certificats de confiance. Si nécessaire, vous pouvez spécifier que le proxy contourne cette validation avant de se connecter aux systèmes de stockage.
@@ -69,6 +71,7 @@ Pour prendre en charge les connexions sécurisées, le proxy de services Web val
 
 
 
+[[generate-and-import-a-host-management-certificate]]
 == Générer et importer un certificat de gestion d'hôte
 
 Les certificats identifient les propriétaires de sites Web pour des connexions sécurisées entre les clients et les serveurs. Pour générer et importer des certificats d'autorité de certification (CA) pour le système hôte sur lequel le proxy de services Web est installé, vous pouvez utiliser des noeuds finaux API.
@@ -132,6 +135,7 @@ En utilisant une session de navigation privée ou incognito, vous pouvez ouvrir 
 
 
 
+[[login-lockout-feature]]
 == Fonction de verrouillage de connexion
 
 Configurable via l'API REST uniquement, vous pouvez limiter le nombre de tentatives de connexion pour les services Web intégrés et proxy. En fonction de vos paramètres, la fonction de verrouillage est activée lorsque le nombre de tentatives de connexion pour les services Web est dépassé.

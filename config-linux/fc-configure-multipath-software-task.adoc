@@ -38,6 +38,7 @@ Vous utilisez l'outil DM-MP (device mapper multipath) pour les installations Lin
 ----
 . Enregistrez votre version du noyau en exécutant le `uname -r` commande.
 +
+[[step4]]
 [listing]
 ----
 # uname -r

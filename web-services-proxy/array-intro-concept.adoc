@@ -16,12 +16,14 @@ Pour gérer les systèmes de stockage sur le réseau, vous devez d'abord les dé
 
 
 
+[[discover-storage-systems]]
 == Découvrir les systèmes de stockage
 
 Vous pouvez configurer la détection automatique ou découvrir manuellement les systèmes de stockage.
 
 
 
+[[automatically-discover-storage-systems]]
 === Détecter automatiquement les systèmes de stockage
 
 Vous pouvez spécifier que les systèmes de stockage sont automatiquement détectés sur le réseau en modifiant les paramètres du fichier wsconfig.xml. Par défaut, la détection automatique IPv6 est désactivée et IPv4 est activé.
@@ -56,6 +58,7 @@ NOTE: Lorsque les chemins sont configurés, mais pas configurés pour que le ser
 
 
 
+[[discover-and-add-storage-systems-using-api-endpoints]]
 === Découvrez et ajoutez des systèmes de stockage à l'aide de terminaux API
 
 Vous pouvez utiliser des terminaux API pour détecter et ajouter des systèmes de stockage à la liste gérée. Cette procédure crée une connexion de gestion entre le système de stockage et l'API.
@@ -248,6 +251,7 @@ Aucun paramètre n'est requis.
 
 
 
+[[scale-up-the-number-of-managed-storage-systems]]
 == Évolutivité verticale du nombre de systèmes de stockage gérés
 
 Par défaut, l'API peut gérer jusqu'à 100 systèmes de stockage. Si vous devez gérer davantage de mémoire, vous devez augmenter les exigences de mémoire du serveur.

@@ -15,6 +15,7 @@ Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche t
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 
@@ -63,6 +64,7 @@ s/o
 |===
 
 
+[[recommended-configuration]]
 == Configuration recommandée
 
 Dans une topologie de connexion directe, un ou plusieurs hôtes sont directement connectés au sous-système. Dans la version SANtricity OS 11.50, nous prenons en charge une connexion unique entre chaque hôte et un contrôleur de sous-système, comme illustré ci-dessous. Dans cette configuration, un port HCA (adaptateur de canal hôte) de chaque hôte doit se trouver sur le même sous-réseau que le port de contrôleur E-Series auquel il est connecté, mais sur un sous-réseau différent de celui de l'autre port HCA.
@@ -71,6 +73,7 @@ image::../media/nvmeof_direct_connect.gif[Exemple de connexion directe NVMe over
 
 
 
+[[target-nqn]]
 == NQN cible
 
 Documentez le NQN cible de la matrice de stockage. Vous utiliserez ces informations dans xref:nvme-ib-configure-storage-connections-task.adoc[Configuration des connexions NVMe over InfiniBand de la baie de stockage].
@@ -90,6 +93,7 @@ Contrôleur de baie (cible)
 |===
 
 
+[[network-configuration]]
 == Configuration du réseau
 
 Documenter la configuration réseau qui sera utilisée pour les hôtes et le stockage sur la structure InfiniBand. Ces instructions supposent que deux sous-réseaux seront utilisés pour une redondance complète.
@@ -98,6 +102,7 @@ Votre administrateur réseau peut fournir les informations suivantes. Ces inform
 
 
 
+[[subnet-a]]
 === Sous-réseau A
 
 Définissez le sous-réseau à utiliser.
@@ -157,6 +162,7 @@ Hôte 1, port 1
 |===
 
 
+[[subnet-b]]
 === Le sous-réseau B
 
 Définissez le sous-réseau à utiliser.
@@ -216,6 +222,7 @@ Hôte 1, port 2
 |===
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 

@@ -20,6 +20,7 @@ NOTE: L'outil SANtricity Cloud Connector est obsolète et n'est plus disponible 
 
 
 
+[[considerations]]
 == Considérations
 
 Lorsque vous utilisez ces procédures, sachez que :
@@ -30,6 +31,7 @@ Lorsque vous utilisez ces procédures, sachez que :
 
 
 
+[[types-of-backups]]
 == Types de sauvegardes
 
 SANtricity Cloud Connector propose deux types de sauvegardes : des sauvegardes basées sur des images et des fichiers.

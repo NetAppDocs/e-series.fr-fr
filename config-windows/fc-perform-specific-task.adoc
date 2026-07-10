@@ -15,6 +15,7 @@ Pour le protocole Fibre Channel, vous configurez les commutateurs et déterminez
 
 
 
+[[step-1-configure-the-fc-switches-windows]]
 == Étape 1 : configurer les commutateurs FC--Windows
 
 La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
@@ -38,6 +39,7 @@ Vous devez effectuer une zone par WWPN, et non par port physique. Chaque port in
 
 
 
+[[step-2-determine-host-wwpns-and-make-recommended-settings-fc-windows]]
 == Étape 2 : détermination des WWPN des hôtes et configuration des paramètres recommandés--FC, Windows
 
 Vous installez un utilitaire HBA FC, ce qui vous permet d'afficher le nom international du port (WWPN) de chaque port hôte. En outre, vous pouvez utiliser l'utilitaire HBA pour modifier les paramètres recommandés dans la colonne Notes de l' http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour la configuration prise en charge.
@@ -64,6 +66,7 @@ Les paramètres appropriés pour votre configuration sont répertoriés dans la 
 
 
 
+[[step-3-record-your-configuration]]
 == Étape 3 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage FC. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
@@ -74,6 +77,7 @@ image::../media/port_identifiers_host_and_target_conf-win.gif[Identificateurs de
 
 
 
+[[host-identifiers]]
 === Identifiants d'hôte
 
 |===
@@ -106,6 +110,7 @@ Port hôte 1 vers zone de commutation FC 1
 |===
 
 
+[[target-identifiers]]
 === Identifiants cibles
 
 |===
@@ -163,6 +168,7 @@ Contrôleur B, port 2 vers le commutateur FC 2
 |===
 
 
+[[mapping-host-name]]
 === Nom d'hôte de mappage
 
 |===

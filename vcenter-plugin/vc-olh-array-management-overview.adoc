@@ -18,18 +18,21 @@ Utilisez la fonctionnalité Add/Discover pour trouver et ajouter les baies de st
 
 
 
+[[considerations-for-discovering-arrays]]
 == Considérations relatives à la détection des baies
 
 Pour que le plug-in affiche et gère les ressources de stockage, vous devez découvrir les baies de stockage que vous souhaitez gérer sur le réseau de votre entreprise. Vous pouvez détecter puis ajouter une ou plusieurs baies.
 
 
 
+[[multiple-storage-arrays]]
 === Baies de stockage multiples
 
 Si vous choisissez de détecter plusieurs matrices, vous entrez une plage d'adresses IP réseau, puis le système tente de connecter individuellement chaque adresse IP de cette plage. Toute matrice de stockage atteinte s'affiche dans le plug-in et vous pouvez ensuite les ajouter à votre domaine de gestion.
 
 
 
+[[single-storage-array]]
 === Baie de stockage unique
 
 Si vous choisissez de détecter une seule baie, vous entrez l'adresse IP unique d'un des contrôleurs de la matrice de stockage, puis ajoutez-la à votre domaine de gestion.
@@ -39,12 +42,14 @@ NOTE: Le plug-in détecte et affiche uniquement l'adresse IP ou l'adresse IP uni
 
 
 
+[[user-credentials]]
 === Informations d'identification de l'utilisateur
 
 Vous devez fournir le mot de passe administrateur pour chaque matrice de stockage que vous souhaitez ajouter.
 
 
 
+[[certificates]]
 === Certificats
 
 Dans le cadre du processus de détection, le système vérifie que les matrices de stockage découvertes utilisent des certificats par une source fiable. Le système utilise deux types d'authentification par certificat pour toutes les connexions qu'il établit avec le navigateur :
@@ -55,6 +60,7 @@ Dans le cadre du processus de détection, le système vérifie que les matrices 
 
 
 
+[[storage-array-status]]
 == État de la matrice de stockage
 
 Lorsque vous ouvrez le plug-in de stockage pour vCenter, la communication avec chaque baie de stockage est établie et l'état de chaque baie de stockage est affiché.
@@ -87,6 +93,7 @@ Lorsque vous ouvrez le plug-in de stockage pour vCenter, la communication avec c
 |===
 
 
+[[plugin-interface-compared-to-system-manager]]
 == Interface du plug-in par rapport à System Manager
 
 Vous pouvez utiliser le plug-in de stockage pour vCenter pour les tâches d'exploitation de base sur votre baie de stockage. Cependant, il peut arriver que vous deviez lancer System Manager pour effectuer des tâches qui ne sont pas disponibles dans le plug-in.

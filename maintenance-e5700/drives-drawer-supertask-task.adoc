@@ -49,6 +49,7 @@ CAUTION: *Perte possible d'accès aux données* -- si un volume est déjà dans 
 
 
 
+[[step-1-prepare-to-replace-drive-drawer-60-drive]]
 == Étape 1 : préparation du remplacement du tiroir disque (60 disques)
 
 Préparez-vous à remplacer un tiroir disque en vous déterminant si vous pouvez effectuer la procédure de remplacement pendant que le tiroir disque est en ligne ou si vous devez arrêter l'activité des E/S de l'hôte et mettre hors tension l'un des tiroirs sous tension. Si vous remplacez un tiroir d'une étagère par une protection contre les pertes de tiroir, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte et de mettre hors tension les étagères.
@@ -150,6 +151,7 @@ Vous pouvez effectuer la procédure de remplacement pendant que le tiroir disque
 
 
 
+[[step-2-remove-cable-chains]]
 == Étape 2 : déposer les chaînes de câble
 
 Retirez les deux chaînes de câble pour retirer et remplacer un tiroir disque défectueux. Les chaînes de câbles gauche et droite permettent aux tiroirs de glisser vers l'intérieur et l'extérieur.
@@ -289,6 +291,7 @@ Le voyant peut rester allumé pendant une minute après avoir réinstallé le ve
 
 
 
+[[step-3-remove-failed-drive-drawer-60-drive]]
 == Étape 3 : retrait du tiroir disque défectueux (60 disques)
 
 Retirez un tiroir de disque défectueux pour le remplacer par un nouveau.
@@ -343,6 +346,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[Relâch
 
 
 
+[[step-4-install-new-drive-drawer-60-drive]]
 == Étape 4 : installation d'un nouveau tiroir de disque (60 disques)
 
 Installez un nouveau tiroir de disque pour remplacer le tiroir défectueux.
@@ -383,6 +387,7 @@ CAUTION: *Risque de détérioration de l'équipement* -- cessez de pousser le ti
 
 
 
+[[step-5-attach-cable-chains]]
 == Étape 5 : fixer les chaînes de câble
 
 Fixez les chaînes de câble pour pouvoir réinstaller les disques en toute sécurité dans le tiroir d'entraînement.
@@ -466,6 +471,7 @@ Le voyant peut rester allumé pendant une minute après avoir réinstallé le ve
 
 
 
+[[step-6-complete-drive-drawer-replacement-60-drive]]
 == Étape 6 : remplacement complet des tiroirs disques (60 disques)
 
 Procédez au remplacement du tiroir du lecteur en réinsérant les lecteurs et en remplaçant le cadre avant dans le bon ordre.

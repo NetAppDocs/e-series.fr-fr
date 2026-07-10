@@ -29,6 +29,7 @@ Il n'est pas nécessaire de retirer les contrôleurs du châssis, car les module
 
 
 
+[[step-1-prepare-to-upgrade-io-modules]]
 == Étape 1 : Préparez-vous à mettre à niveau les modules d'E/S
 
 Préparez la mise à niveau des modules d'E/S en planifiant une fenêtre de maintenance avec interruption, en rassemblant les outils et équipements nécessaires et en sauvegardant la base de données de configuration du système de stockage.
@@ -74,6 +75,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-2-power-off-both-controllers]]
 == Étape 2 : Éteignez les deux contrôleurs
 
 Mettez hors tension les deux contrôleurs du système de stockage afin de pouvoir mettre à niveau en toute sécurité les modules d'E/S des deux contrôleurs.
@@ -143,6 +145,7 @@ Icône NV et voyant NV Caching Active sur le contrôleur
 
 
 
+[[step-3-upgrade-the-io-modules]]
 == Étape 3 : Mise à niveau des modules d’E/S
 
 Débranchez les câbles des modules d'E/S que vous souhaitez mettre à niveau (sauf si vous disposez de modules d'E/S de masquage), remplacez les modules d'E/S ou les modules d'E/S de masquage par les nouveaux modules d'E/S, puis câblez les nouveaux modules d'E/S.
@@ -201,6 +204,7 @@ Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html[
 
 
 
+[[step-4-power-on-both-controllers]]
 == Étape 4 : Mettez les deux contrôleurs sous tension
 
 Mettez les deux contrôleurs sous tension.
@@ -233,6 +237,7 @@ NOTE: Si vous ne parvenez pas à résoudre le problème, contactez https://www.n
 
 
 
+[[step-5-complete-the-io-module-upgrade]]
 == Étape 5 : Terminez la mise à niveau du module d’E/S
 
 À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs respectifs, collectez les données de support afin de pouvoir reprendre les opérations et, si nécessaire, vérifiez et modifiez le protocole du module d'interface d'hôte.

@@ -15,10 +15,12 @@ Avant de configurer la fonction volumes de stockage distants, vérifiez les exig
 
 
 
+[[hardware-requirements]]
 == Configuration matérielle requise
 
 
 
+[[supported-protocols]]
 === Protocoles pris en charge
 
 Pour la version initiale de la fonction volumes de stockage distants, la prise en charge est uniquement disponible pour les protocoles iSCSI et IPv4.
@@ -27,6 +29,7 @@ Reportez-vous à la http://mysupport.netapp.com/matrix["Matrice d'interopérabil
 
 
 
+[[storage-system-requirements]]
 === Configuration requise pour le système de stockage
 
 La baie de stockage E-Series doit inclure les éléments suivants :
@@ -41,12 +44,14 @@ Le système distant peut être un système de stockage E-Series ou un système d
 
 
 
+[[volume-requirements]]
 == Besoins en termes de volume
 
 Les volumes utilisés pour les importations doivent satisfaire aux exigences en matière de taille, de statut et d'autres critères.
 
 
 
+[[remote-storage-volume]]
 === Volume de stockage distant
 
 Le volume source d'une importation est appelé « volume de stockage distant ». Ce volume doit répondre aux critères suivants :
@@ -73,6 +78,7 @@ Chaque volume de stockage distant est associé à un seul objet de stockage dist
 
 
 
+[[target-volume-candidates]]
 === Candidats au volume cible
 
 Le volume cible correspond au volume de destination sur le système E-Series local.
@@ -93,6 +99,7 @@ System Manager vérifie automatiquement ces exigences dans le cadre de l'assista
 
 
 
+[[restrictions]]
 == Restrictions
 
 La fonction de stockage à distance comporte les restrictions suivantes :
@@ -111,6 +118,7 @@ La fonction de stockage à distance comporte les restrictions suivantes :
 
 
 
+[[preparation-for-production-imports]]
 == Préparation pour les importations de production
 
 Il est conseillé d'effectuer un test ou une importation « à sec » avant l'importation de la production afin de vérifier que le stockage et la configuration de la fabrique sont corrects.

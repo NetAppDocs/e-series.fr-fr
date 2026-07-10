@@ -20,6 +20,7 @@ NOTE: Tous les horodatages pour les tâches de sauvegarde et de restauration ré
 
 
 
+[[create-a-new-image-based-backup]]
 == Créer une nouvelle sauvegarde basée sur l'image
 
 Vous pouvez créer de nouvelles sauvegardes basées sur des images via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
@@ -73,6 +74,7 @@ La sauvegarde du volume E-Series sélectionné est initiée et l'état de la tâ
 
 
 
+[[create-a-new-folderfile-based-backup]]
 == Créer une nouvelle sauvegarde basée sur un dossier/fichier
 
 Vous pouvez créer de nouvelles sauvegardes basées sur des dossiers ou des fichiers via la fonction Créer sur la page sauvegardes de l'application SANtricity Cloud Connector.
@@ -136,6 +138,7 @@ La sauvegarde du volume E-Series sélectionné est lancée et l'état de la tâc
 
 
 
+[[run-full-and-incremental-backups]]
 == Exécution de sauvegardes complètes et incrémentielles
 
 Vous pouvez effectuer des sauvegardes complètes et incrémentielles via la fonction Exécuter de la page sauvegardes. Les sauvegardes incrémentielles sont uniquement disponibles pour les sauvegardes basées sur des fichiers.
@@ -170,6 +173,7 @@ La demande de sauvegarde est initiée.
 
 
 
+[[delete-a-backup-job]]
 == Supprimer une tâche de sauvegarde
 
 La fonction Supprimer supprime les données sauvegardées à l'emplacement cible spécifié pour la sauvegarde sélectionnée et le jeu de sauvegarde.

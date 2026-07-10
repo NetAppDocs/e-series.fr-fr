@@ -16,6 +16,7 @@ Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en r�
 
 
 
+[[step-1-configure-the-switches-iscsi-vmware]]
 == Étape 1 : configurer les commutateurs--iSCSI, VMware
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
@@ -37,6 +38,7 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 
 
+[[step-2-configure-networking-iscsi-vmware]]
 == Étape 2 : configurer le réseau--iSCSI VMware
 
 Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
@@ -72,6 +74,7 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 
 
+[[step-3-configure-array-side-networking-iscsi-vmware]]
 == Étape 3 : configurer les réseaux côté baie--iSCSI, VMware
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
@@ -87,7 +90,7 @@ Assurez-vous de disposer des éléments suivants :
 Cette tâche décrit comment accéder à la configuration du port iSCSI à partir de la page matériel. Vous pouvez également accéder à la configuration à partir du menu : système[Paramètres > configurer les ports iSCSI].
 
 
-NOTE: Pour plus d'informations sur la configuration de la mise en réseau côté baie sur votre configuration VMware, consultez le rapport technique suivant : https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guide de configuration VMware pour l'intégration d'iSCSI SANtricity E-Series avec ESXi 6.x et 7.x"^].
+NOTE: Pour plus d'informations sur la configuration du réseau côté baie de votre configuration VMware, consultez le rapport technique suivant : https://www.netapp.com/pdf.html?item=/media/17017-tr4789.pdf["Guide de configuration VMware pour l'intégration d'iSCSI SANtricity E-Series avec ESXi 6.x et 7.x"^].
 
 .Étapes
 . Depuis votre navigateur, saisissez l'URL suivante : `+https://<DomainNameOrIPAddress>+`
@@ -197,6 +200,7 @@ Sélectionnez cette option, puis entrez une adresse statique dans les champs. Po
 
 
 
+[[step-4-configure-host-side-networking-iscsi]]
 == Étape 4 : configurer les réseaux côté hôte--iSCSI
 
 La configuration de la mise en réseau iSCSI côté hôte permet à l'initiateur iSCSI VMware d'établir une session avec la baie.
@@ -222,6 +226,7 @@ Les fonctionnalités des interfaces varient et le flux de travail exact varie.
 
 
 
+[[step-5-verify-ip-network-connections-iscsi-vmware]]
 == Étape 5 : vérifiez les connexions réseau IP--iSCSI, VMware
 
 Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
@@ -270,12 +275,14 @@ NOTE: Si la commande échoue et renvoie le message `sendto() failed (Message too
 
 
 
+[[step-6-record-your-configuration]]
 == Étape 6 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
 
 
 
+[[recommended-configuration]]
 === Configuration recommandée
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
@@ -284,6 +291,7 @@ image::../media/50001_01_conf-vmw.gif[Identifiant du port iSCSI]
 
 
 
+[[target-iqn]]
 === IQN cible
 
 |===
@@ -299,6 +307,7 @@ Port cible
 |===
 
 
+[[mapping-host-name]]
 === Nom d'hôte de mappage
 
 |===

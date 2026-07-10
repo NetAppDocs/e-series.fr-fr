@@ -19,6 +19,7 @@ Les informations de câblage sont destinées à un installateur de matériel ou 
 
 
 
+[[applicable-hardware-model]]
 == Modèle matériel applicable
 
 Les informations de câblage s'appliquent aux modèles matériels suivants.
@@ -52,6 +53,7 @@ DE460C
 |===
 
 
+[[additional-cabling-information]]
 == Informations supplémentaires sur le câblage
 
 Si vous effectuez un câblage pour l'une des configurations suivantes, consultez https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant."^]
@@ -73,4 +75,4 @@ E2760, E5660
 DE460C
 
 |===
-Pour plus d'informations sur le câblage pour prendre en charge les fonctions de mise en miroir, reportez-vous au https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].
+Pour plus d'informations sur le câblage permettant de prendre en charge les fonctions de mise en miroir, consultez le https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].

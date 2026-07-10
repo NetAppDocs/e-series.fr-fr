@@ -33,6 +33,7 @@ Lorsque vous remplacez une HIC, mettez le contrôleur hors ligne (pour les confi
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Étape 1 : mise hors ligne du contrôleur (duplex)
 
 Si vous disposez d'une configuration duplex, vous devez mettre le contrôleur affecté hors ligne pour pouvoir supprimer en toute sécurité la HIC défaillante.
@@ -105,6 +106,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur pour ajouter la nouvelle HIC.
@@ -165,6 +167,7 @@ Si vous retirez le boîtier du contrôleur d'un shelf contrôleur E5724, un raba
 
 
 
+[[step-3-install-a-hic]]
 == Étape 3 : installer une HIC
 
 Installez une nouvelle HIC pour remplacer la HIC défectueuse.
@@ -219,6 +222,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Installez la f
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Étape 4 : réinstallez le boîtier du contrôleur
 
 Après avoir installé le HIC, réinstallez le boîtier du contrôleur dans le shelf.
@@ -261,6 +265,7 @@ NOTE: Ne connectez pas les câbles de données aux nouveaux ports HIC pour le mo
 
 
 
+[[step-5-place-controller-online-duplex]]
 == Étape 5 : mise en ligne du contrôleur (duplex)
 
 Si vous disposez d'une configuration duplex, connectez le contrôleur pour vérifier que la matrice de stockage fonctionne correctement, collectez les données de support et reprenez les opérations.

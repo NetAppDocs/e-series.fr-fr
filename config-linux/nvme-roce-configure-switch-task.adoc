@@ -18,6 +18,7 @@ CAUTION: *RISQUE DE PERTE DE DONNÉES.* Vous devez exécuter NVMe/RoCE dans un e
 
 
 
+[[global-pause-frames]]
 == Trames de pause globales
 
 Les trames de pause globales constituent la forme la plus élémentaire de contrôle de flux et la plus simple à mettre en œuvre. Lorsqu'un port réseau est saturé, des trames de pause sont générées interrompant tout le trafic sur ce port jusqu'à ce que le trafic précédent ait été suffisamment traité pour que le port réseau puisse suivre sans perdre le trafic entrant.
@@ -29,6 +30,7 @@ Les trames de pause globales constituent la forme la plus élémentaire de contr
 
 
 
+[[priority-flow-control]]
 == Contrôle de flux prioritaire
 
 Le contrôle de flux prioritaire (PFC) est une forme plus complexe de contrôle de flux qui attribue différents niveaux de priorité à différents types de trafic. Lorsqu'un trafic trop important est reçu sur une priorité donnée, celle-ci est suspendue tandis que le trafic correspondant à d'autres niveaux de priorité est autorisé à se poursuivre, ce qui permet d'éviter qu'un trafic important de certains types ne ralentisse d'autres formes de trafic.

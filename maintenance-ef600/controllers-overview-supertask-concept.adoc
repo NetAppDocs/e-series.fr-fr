@@ -17,6 +17,7 @@ Un contrôleur se compose d'une carte, d'un micrologiciel et d'un logiciel. Il c
 
 
 
+[[controller-replacement-requirements]]
 == Exigences de remplacement des contrôleurs
 
 Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
@@ -30,6 +31,7 @@ Avant de remplacer un contrôleur, vous devez disposer des éléments suivants :
 
 
 
+[[replacement-while-powered-on]]
 == Remplacement sous tension
 
 Vous pouvez remplacer un boîtier de contrôleur alors que votre matrice de stockage est sous tension et effectuer des opérations d'E/S hôte, si les conditions suivantes sont vraies :

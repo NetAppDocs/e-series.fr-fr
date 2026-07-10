@@ -22,6 +22,7 @@ Pour obtenir les instructions de câblage spécifiques à votre système de stoc
 ====
 
 
+[[direct-topology]]
 == Topologie directe
 
 Une topologie directe connecte votre contrôleur directement à un réseau Ethernet.
@@ -33,6 +34,7 @@ image::../media/74167.gif[Connexions directes de la gestion du stockage]
 
 
 
+[[fabric-topology]]
 == Topologie de la structure
 
 Une topologie de structure utilise un commutateur pour connecter votre contrôleur à un réseau Ethernet.

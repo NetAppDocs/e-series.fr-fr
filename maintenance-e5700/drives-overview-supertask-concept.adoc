@@ -15,12 +15,14 @@ Avant de remplacer un disque, vérifiez les exigences et les considérations à 
 
 
 
+[[shelf-types]]
 == Types de tiroirs
 
 Vous pouvez remplacer un disque dans un tiroir de 24 disques, dans un tiroir de 60 disques ou dans un tiroir disque.
 
 
 
+[[24-drive-shelves]]
 === tiroirs de 24 disques
 
 Les figures montrent le mode de numérotation des disques dans chaque type de shelf (le cadre avant ou les caches d'extrémité ont été retirés).
@@ -34,6 +36,7 @@ NOTE: Votre baie de stockage E5724 peut inclure un ou plusieurs tiroirs disques 
 
 
 
+[[60-drive-shelves]]
 === tiroirs de 60 disques
 
 Le tiroir contrôleur E5760 et le tiroir disque DE460C sont composés de cinq tiroirs disques contenant chacun 12 emplacements de disque. Le tiroir d'entraînement 1 se trouve en haut et le tiroir d'entraînement 5 en bas.
@@ -49,6 +52,7 @@ NOTE: Votre baie de stockage E5760 peut inclure un ou plusieurs tiroirs disques 
 
 
 
+[[drive-drawer]]
 === Tiroir d'entraînement
 
 Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E5760 et un tiroir disque DE460C. Chacun de ces tiroirs de 60 disques dispose de cinq tiroirs disques.
@@ -61,6 +65,7 @@ image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Tiroi
 
 
 
+[[requirements-for-handling-drives]]
 == Exigences relatives à la gestion des disques
 
 

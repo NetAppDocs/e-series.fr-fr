@@ -18,6 +18,7 @@ Si vous mettez à niveau les contrôleurs dans un bac d'unité de contrôleur re
 
 
 
+[[step-1-power-on-controller]]
 == Étape 1 : mettez le contrôleur sous tension
 
 Vous devez mettre le tiroir contrôleur sous tension afin de vérifier qu'il fonctionne correctement.
@@ -95,6 +96,7 @@ Remplacez le contrôleur par une gestion externe des clés et tous les disques s
 
 
 
+[[step-2-check-status-of-controllers-and-trays]]
 == Étape 2 : vérifier l'état des contrôleurs et des tiroirs
 
 Vous pouvez utiliser les voyants et le logiciel de gestion du stockage pour vérifier l'état de vos contrôleurs et tiroirs.
@@ -119,6 +121,7 @@ Une fois le redémarrage du contrôleur terminé, vous pouvez détecter le nouve
 
 
 
+[[step-3-validate-controller-software-version]]
 == Étape 3 : validation de la version logicielle du contrôleur
 
 Vous devez vous assurer que vos nouveaux contrôleurs fonctionnent correctement avec le système d'exploitation (micrologiciel du contrôleur) et la NVSRAM.

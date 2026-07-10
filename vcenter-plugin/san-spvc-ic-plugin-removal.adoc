@@ -20,6 +20,7 @@ Il s'agit de deux étapes distinctes que vous pouvez effectuer dans n'importe qu
 
 
 
+[[unregister-the-plugin-from-a-vcenter-server-appliance]]
 == Annuler l'enregistrement du plug-in à partir d'une appliance vCenter Server
 
 Pour annuler l'enregistrement du plug-in à partir d'une appliance vCenter Server, sélectionnez l'une des méthodes suivantes :
@@ -30,6 +31,7 @@ Pour annuler l'enregistrement du plug-in à partir d'une appliance vCenter Serve
 
 
 
+[[method-1-execute-the-registration-script]]
 === Méthode 1 : exécutez le script d'enregistrement
 
 . Ouvrez une invite via la ligne de commande et accédez au répertoire suivant :
@@ -57,6 +59,7 @@ Les journaux sont enregistrés dans `%install_dir%/working/logs/vc-registration.
 
 
 
+[[method-2-use-the-vcenter-server-mob-pages]]
 === Méthode 2 : utilisez les pages de mob du serveur vCenter
 
 . Ouvrez un navigateur Web et saisissez l'url suivante :
@@ -78,6 +81,7 @@ NOTE: Cette procédure annule l'enregistrement du plug-in à partir de vCenter S
 
 
 
+[[remove-the-plugin-webserver-from-the-application-host]]
 == Supprimez le serveur Web du plug-in de l'hôte application
 
 Pour supprimer le logiciel du plug-in de l'hôte de l'application, procédez comme suit :

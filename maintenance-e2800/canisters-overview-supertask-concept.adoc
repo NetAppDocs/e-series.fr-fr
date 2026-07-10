@@ -17,6 +17,7 @@ Les types de canister comprennent les blocs d'alimentation, les blocs d'alimenta
 
 
 
+[[power-supply]]
 == Alimentation électrique
 
 
@@ -26,6 +27,7 @@ Chaque tiroir contrôleur ou tiroir disque de 12 ou 24 disques comporte deux blo
 
 
 
+[[shelf-types-for-a-power-supply]]
 === Types de tiroirs pour une alimentation électrique
 
 Vous pouvez remplacer une alimentation dans les tiroirs suivants :
@@ -47,6 +49,7 @@ La procédure de remplacement d'un bloc d'alimentation ne décrit pas comment re
 
 
 
+[[requirements-for-replacing-a-power-supply]]
 === Conditions requises pour remplacer un bloc d'alimentation
 
 Si vous envisagez de remplacer une alimentation électrique, gardez les exigences suivantes à l'esprit.
@@ -67,12 +70,14 @@ NOTE: Si le deuxième bloc d'alimentation (absorbeur de ventilateur d'alimentati
 
 
 
+[[power-canister]]
 == Réservoir d'alimentation
 
 Chaque tiroir de contrôleur de 60 disques ou tiroir de disque comprend deux blocs d'alimentation pour la redondance de l'alimentation.
 
 
 
+[[shelf-types-for-a-power-canister]]
 === Types d'étagère pour une cartouche d'alimentation
 
 Vous pouvez remplacer une cartouche d'alimentation dans les étagères suivantes :
@@ -93,6 +98,7 @@ image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Boîtiers électriques]
 
 
 
+[[requirements-for-replacing-a-power-canister]]
 === Conditions requises pour le remplacement d'une cartouche d'alimentation
 
 Si vous envisagez de remplacer un réservoir d'alimentation, gardez les exigences suivantes à l'esprit.
@@ -118,12 +124,14 @@ NOTE: Si le deuxième bloc d'alimentation de l'étagère ne dispose pas d'un ét
 
 
 
+[[fan-canister]]
 == Boîtier de ventilateur
 
 Chaque tiroir de contrôleur ou tiroir de 60 disques comprend deux boîtiers de ventilateur.
 
 
 
+[[shelf-types-for-a-fan-canister]]
 === Types d'étagère pour une cartouche de ventilateur
 
 Vous pouvez remplacer une cartouche de ventilateur dans les étagères suivantes :
@@ -147,6 +155,7 @@ CAUTION: *Dommages possibles à l'équipement* -- si vous remplacez une cartouch
 
 
 
+[[requirements-for-replacing-a-fan-canister]]
 === Conditions requises pour le remplacement d'une cartouche de ventilateur
 
 Si vous envisagez de remplacer une cartouche de ventilateur, gardez les exigences suivantes à l'esprit.

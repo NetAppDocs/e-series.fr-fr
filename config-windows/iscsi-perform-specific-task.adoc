@@ -16,6 +16,7 @@ Pour le protocole iSCSI, vous devez configurer les commutateurs, configurer la m
 
 
 
+[[step-1-configure-the-switches-iscsi-windows]]
 == Étape 1 : configurer les commutateurs--iSCSI, Windows
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
@@ -37,6 +38,7 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 
 
+[[step-2-configure-networking-iscsi-windows]]
 == Étape 2 : configurer le réseau--iSCSI Windows
 
 Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
@@ -62,6 +64,7 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 
 
+[[step-3-configure-array-side-networking-iscsi-windows]]
 == Étape 3 : configurer les réseaux côté baie--iSCSI, Windows
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
@@ -194,6 +197,7 @@ Sélectionnez cette option pour activer le paramètre qui détermine la priorit�
 
 
 
+[[step-4-configure-host-side-networking-iscsi]]
 == Étape 4 : configurer les réseaux côté hôte--iSCSI
 
 Vous devez configurer la mise en réseau iSCSI côté hôte pour que l'initiateur iSCSI Microsoft puisse établir des sessions avec la baie.
@@ -230,6 +234,7 @@ Ces protocoles incluent, sans s'y limiter, la qualité de service, le partage de
 
 
 
+[[step-5-verify-ip-network-connections-iscsi-windows]]
 == Étape 5 : vérifiez les connexions réseau IP--iSCSI, Windows
 
 Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
@@ -276,12 +281,14 @@ NOTE: Si la commande échoue (par exemple, renvoie la commande `Packet needs to 
 
 
 
+[[step-6-record-your-configuration]]
 == Étape 6 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un fichier PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage iSCSI. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
 
 
 
+[[recommended-configuration]]
 === Configuration recommandée
 
 Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
@@ -290,6 +297,7 @@ image::../media/50001_01_conf-win.gif[Identificateurs de port iSCSI]
 
 
 
+[[target-iqn]]
 === IQN cible
 
 |===
@@ -305,6 +313,7 @@ Port cible
 |===
 
 
+[[mapping-host-name]]
 === Nom d'hôte de mappage
 
 |===

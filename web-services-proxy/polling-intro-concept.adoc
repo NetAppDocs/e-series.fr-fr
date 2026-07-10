@@ -15,6 +15,7 @@ Vous pouvez configurer l'interrogation automatique pour toutes les statistiques 
 
 
 
+[[overview-of-statistics]]
 == Aperçu des statistiques
 
 Ces statistiques fournissent des informations sur les taux de collecte des données et les performances des systèmes de stockage.
@@ -31,12 +32,14 @@ Vous pouvez récupérer des statistiques brutes, que l'interrogation automatique
 
 
 
+[[statistics-functionality]]
 == Fonctionnalité Statistiques
 
 Le proxy de services Web fournit des points de terminaison API qui permettent de récupérer les statistiques brutes et analysées du contrôleur et de l'interface à partir de modèles matériels et de versions logicielles pris en charge.
 
 
 
+[[raw-statistics-apis]]
 === API de statistiques brutes
 
 * `+/storage-systems/{system-id}/controller-statistics+`
@@ -47,6 +50,7 @@ Le proxy de services Web fournit des points de terminaison API qui permettent de
 
 
 
+[[analyzed-statistics-apis]]
 === API de statistiques analysées
 
 * `+/storage-systems/{id}/analysed-controller-statistics/+`
@@ -69,6 +73,7 @@ NOTE: Lorsque le système démarre, aucune collecte de statistiques précédente
 
 
 
+[[configure-polling-intervals]]
 == Configurer les intervalles d'interrogation
 
 Pour configurer les intervalles d'interrogation, modifiez le fichier wsconfig.xml pour spécifier un intervalle d'interrogation en secondes.

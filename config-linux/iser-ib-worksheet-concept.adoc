@@ -15,6 +15,7 @@ Vous pouvez générer et imprimer un fichier PDF de cette page, puis utiliser la
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 
@@ -63,6 +64,7 @@ s/o
 |===
 
 
+[[recommended-configuration]]
 == Configuration recommandée
 
 Les configurations recommandées se composent de deux ports hôtes (initiateurs) et de quatre ports cibles.
@@ -71,6 +73,7 @@ image::../media/port_identifiers_ib_iser.gif[Configuration réseau iser sur IB]
 
 
 
+[[target-iqn]]
 == IQN cible
 
 Documentez l'IQN cible de la matrice de stockage. Vous utiliserez ces informations dans xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurer la mise en réseau des hôtes connectés au stockage].
@@ -90,6 +93,7 @@ Contrôleur de baie (cible)
 |===
 
 
+[[network-configuration]]
 == Configuration du réseau
 
 Documenter la configuration réseau qui sera utilisée pour les hôtes et le stockage sur la structure InfiniBand. Ces instructions supposent que deux sous-réseaux seront utilisés pour une redondance complète.
@@ -98,6 +102,7 @@ Votre administrateur réseau peut fournir les informations suivantes. Ces inform
 
 
 
+[[subnet-a]]
 === Sous-réseau A
 
 Définissez le sous-réseau à utiliser.
@@ -157,6 +162,7 @@ Hôte 1, port 1
 |===
 
 
+[[subnet-b]]
 === Le sous-réseau B
 
 Définissez le sous-réseau à utiliser.
@@ -216,6 +222,7 @@ Hôte 1, port 2
 |===
 
 
+[[mapping-host-name]]
 == Nom d'hôte de mappage
 
 

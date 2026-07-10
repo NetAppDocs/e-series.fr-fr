@@ -30,6 +30,7 @@ La fonctionnalité Recovery Guru de SANtricity System Manager surveille les disq
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Étape 1 : préparer le remplacement de l'entraînement
 
 Préparation au remplacement des disques par la fonctionnalité Recovery Guru dans SANtricity System Manager et réalisation des étapes préalables requises. Vous pouvez ensuite localiser le composant défectueux.
@@ -59,6 +60,7 @@ NOTE: Si vous remplacez un disque dans un tiroir équipé d'un panneau, vous dev
 
 
 
+[[step-2-remove-drive]]
 == Étape 2 : déposer l'entraînement
 
 Retirez un disque défectueux pour le remplacer par un nouveau disque.
@@ -88,6 +90,7 @@ NOTE: Si vous retirez accidentellement un lecteur actif, attendez au moins 60 se
 
 
 
+[[step-3-install-new-drive]]
 == Étape 3 : installer un nouveau lecteur
 
 Installez un nouveau lecteur pour remplacer le lecteur défectueux. Vous devez installer le disque de remplacement dès que possible après avoir retiré le disque défectueux.
@@ -107,6 +110,7 @@ NOTE: Selon votre configuration, le contrôleur peut reconstruire automatiquemen
 
 
 
+[[step-4-complete-drive-replacement]]
 == Étape 4 : remplacement complet du disque
 
 Procédez au remplacement du lecteur pour vérifier que le nouveau disque fonctionne correctement.

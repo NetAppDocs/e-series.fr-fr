@@ -18,6 +18,7 @@ Les étapes dépendent des protocoles de début et de fin des ports hôtes de la
 
 
 
+[[complete-fc-to-iscsi-conversion]]
 == Conversion FC-iSCSI complète
 
 Si vous avez converti tous les ports hôtes de FC à iSCSI, vous devez configurer la mise en réseau iSCSI.
@@ -62,6 +63,7 @@ L'option *Delete* ne supprime pas physiquement le port hôte. Cette option suppr
 
 
 
+[[complete-iscsi-to-fc-conversion]]
 == Conversion iSCSI en FC complète
 
 Si vous avez converti tous les ports hôtes de iSCSI à FC, vous devez configurer la mise en réseau FC.
@@ -97,6 +99,7 @@ L'option *Delete* ne supprime pas physiquement le port hôte. Cette option suppr
 
 
 
+[[complete-fc-to-fciscsi-conversion]]
 == Conversion FC vers FC/iSCSI complète
 
 Si vous aviez auparavant tous les ports hôte FC et que vous les avez convertis en ports iSCSI, vous devrez peut-être modifier votre configuration existante pour prendre en charge iSCSI.
@@ -105,6 +108,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 
 
 
+[[option-1-move-fc-hosts-and-add-new-iscsi-hosts]]
 === Option 1 : déplacement des hôtes FC et ajout de nouveaux hôtes iSCSI
 
 . Déplacez tous les hôtes FC des nouveaux ports iSCSI vers les ports qui restent FC.
@@ -115,6 +119,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 
 
 
+[[option-2-convert-fc-hosts-to-iscsi]]
 === Option 2 : conversion des hôtes FC en iSCSI
 
 . Arrêtez les hôtes FC connectés aux ports convertis.
@@ -134,6 +139,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 
 
 
+[[complete-iscsi-to-fciscsi-conversion]]
 == Conversion iSCSI vers FC/iSCSI complète
 
 Si vous aviez auparavant tous les ports hôtes iSCSI et que vous les avez convertis en FC, vous devrez peut-être modifier votre configuration existante pour prendre en charge FC.
@@ -142,6 +148,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[option-1-move-iscsi-hosts-and-add-new-fc-hosts]]
 === Option 1 : déplacement des hôtes iSCSI et ajout de nouveaux hôtes FC
 
 . Déplacez tous les hôtes iSCSI des nouveaux ports FC vers les ports qui restent iSCSI.
@@ -152,6 +159,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[option-2-convert-iscsi-hosts-to-fc]]
 === Option 2 : conversion d'hôtes iSCSI en FC
 
 . Arrêtez les hôtes iSCSI connectés aux ports convertis.
@@ -171,6 +179,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[complete-fciscsi-to-fc-conversion]]
 == Conversion FC/iSCSI en FC complète
 
 Si vous aviez déjà une combinaison de ports hôtes FC et de ports d'hôte iSCSI et que vous avez converti tous les ports en FC, vous pourriez devoir modifier votre configuration existante pour utiliser les nouveaux ports FC.
@@ -179,6 +188,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[option-1-remove-iscsi-hosts-and-add-fc-hosts]]
 === Option 1 : supprimez les hôtes iSCSI et ajoutez des hôtes FC
 
 . Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP iSCSI et remplacez-les par des SFP FC ou SFP à double protocole.
@@ -189,6 +199,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[option-2-convert-iscsi-hosts-to-fc]]
 === Option 2 : conversion d'hôtes iSCSI en FC
 
 . Arrêtez les hôtes iSCSI connectés aux ports que vous avez convertis.
@@ -208,6 +219,7 @@ Vous pouvez utiliser l'une ou l'autre des options suivantes pour utiliser les no
 
 
 
+[[complete-fciscsi-to-iscsi-conversion]]
 == Conversion FC/iSCSI vers iSCSI complète
 
 Si vous aviez déjà une combinaison de ports hôtes FC et de ports d'hôte iSCSI et que vous avez converti tous les ports en iSCSI, vous devrez peut-être modifier votre configuration existante pour utiliser les nouveaux ports iSCSI.
@@ -216,6 +228,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 
 
 
+[[option-1-remove-fc-hosts-and-add-iscsi-hosts]]
 === Option 1 : supprimez les hôtes FC et ajoutez des hôtes iSCSI
 
 . Si vous n'utilisez pas encore de SFP à double protocole, supprimez les SFP FC et remplacez-les par des SFP iSCSI ou SFP à double protocole.
@@ -225,6 +238,7 @@ Vous pouvez utiliser l'une des options suivantes pour utiliser les nouveaux port
 
 
 
+[[option-2-convert-fc-hosts-to-iscsi]]
 === Option 2 : conversion des hôtes FC en iSCSI
 
 . Arrêtez les hôtes FC connectés aux ports que vous avez convertis.

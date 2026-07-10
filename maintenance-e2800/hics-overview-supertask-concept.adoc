@@ -16,6 +16,7 @@ Avant d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 Les étapes à suivre pour remplacer une HIC dépendent de la présence d'un ou de deux contrôleurs, comme suit :
@@ -50,6 +51,7 @@ Deux contrôleurs (E2860, E2812 ou E2824 duplex)
 |===
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Conditions requises pour l'ajout, la mise à niveau ou le remplacement d'une HIC
 
 Si vous prévoyez d'ajouter, de mettre à niveau ou de remplacer une carte d'interface hôte (HIC), gardez les conditions suivantes à l'esprit.

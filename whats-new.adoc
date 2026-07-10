@@ -16,12 +16,14 @@ Le tableau suivant décrit les nouvelles fonctionnalités des dernières version
 
 
 
+[[new-features-in-version-12-0r1]]
 == Nouvelles fonctionnalités dans la version 12.0R1
 
 Cette version ne contient que des modifications mineures et aucune nouvelle fonctionnalité. Pour plus d'informations sur les modifications de cette version, veuillez consulter le fichier README de SANtricity OS 12.0R1 E-Series.
 
 
 
+[[new-features-in-version-12-0]]
 == Nouvelles fonctionnalités dans la version 12.0
 
 
@@ -70,18 +72,21 @@ Un nouvel éditeur de scripts est désormais disponible dans SANtricity System M
 |===
 
 
+[[new-features-in-version-11-90r5]]
 == Nouvelles fonctionnalités dans la version 11.90R5
 
 Cette version corrige uniquement des bogues et n’intègre aucune nouvelle fonctionnalité. Pour plus d’informations sur les modifications apportées dans cette version, veuillez consulter le fichier README de E-Series SANtricity OS 11.90R5.
 
 
 
+[[new-features-in-version-11-90r4]]
 == Nouvelles fonctionnalités de la version 11.90R4
 
 Cette version ne contient que des modifications mineures et aucune nouvelle fonctionnalité. Pour plus d'informations sur les modifications de cette version, veuillez consulter le fichier README de SANtricity OS 11.90R4 E-Series.
 
 
 
+[[new-features-in-version-11-90r3]]
 == Nouvelles fonctionnalités de la version 11.90R3
 
 [cols="35h,~"]
@@ -97,12 +102,14 @@ La prise en charge des plateaux SAS-3 IOM12C et DCM3 est désormais disponible p
 |===
 
 
+[[new-features-in-version-11-90r2]]
 == Nouvelles fonctionnalités de la version 11.90R2
 
 Cette version contient uniquement des modifications mineures et aucune nouvelle fonction. Pour plus d'informations sur les modifications apportées à cette version, reportez-vous au https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Notes de version d'E-Series 11.90"^].
 
 
 
+[[new-features-in-version-11-90r1]]
 == Nouvelles fonctionnalités de la version 11.90R1
 
 [cols="35h,~"]
@@ -125,6 +132,7 @@ Le contrôleur E4000 prend désormais en charge les cartes d'interface hôte SAS
 |===
 
 
+[[new-features-in-version-11-90]]
 == Nouvelles fonctionnalités de la version 11.90
 
 [cols="35h,~"]
@@ -168,24 +176,28 @@ Configurable via l'API REST uniquement, un nouveau paramètre de verrouillage de
 |===
 
 
+[[new-features-in-version-11-80-1r4]]
 == Nouvelles fonctionnalités de la version 11.80.1R4
 
 Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
 
 
 
+[[new-features-in-version-11-80-1r3]]
 == Nouvelles fonctionnalités de la version 11.80.1R3
 
 Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
 
 
 
+[[new-features-in-version-11-80-1r2]]
 == Nouvelles fonctionnalités de la version 11.80.1R2
 
 Cette version contient uniquement des modifications mineures et aucune nouvelle fonctionnalité ou restriction. Pour plus d'informations sur les modifications apportées à cette version, veuillez vous reporter au fichier README.
 
 
 
+[[new-features-in-version-11-80-1r1]]
 == Nouvelles fonctionnalités de la version 11.80.1R1
 
 [cols="35h,~"]
@@ -201,6 +213,7 @@ La taille de la clé de certificat de gestion pour le certificat auto-signé des
 |===
 
 
+[[new-features-in-version-11-80-1]]
 == Nouvelles fonctionnalités de la version 11.80.1
 
 [cols="35h,~"]
@@ -244,6 +257,7 @@ Le proxy de services Web a été mis à jour vers la version 6.1 pour assurer la
 |===
 
 
+[[new-features-in-version-11-80]]
 == Nouvelles fonctionnalités de la version 11.80
 
 [cols="35h,~"]

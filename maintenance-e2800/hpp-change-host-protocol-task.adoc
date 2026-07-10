@@ -18,6 +18,7 @@ Vous pouvez modifier le protocole utilisé par les ports hôtes intégrés au co
 
 
 
+[[step-1-determine-whether-you-have-dual-protocol-sfps]]
 == Étape 1 : déterminez si vous disposez de SFP à double protocole
 
 Utilisez SANtricity System Manager pour déterminer le type d'émetteurs-récepteurs SFP dont vous disposez. Comme ces SFP peuvent être utilisés avec les protocoles FC et iSCSI, ils sont appelés « SFP _double protocole_ » ou « SFP_unifié ».
@@ -83,6 +84,7 @@ NOTE: Les SFP FC 8 Gbit/s NE sont PAS pris en charge par les contrôleurs E28xx 
 
 
 
+[[step-2-obtain-the-feature-pack]]
 == Étape 2 : obtenir le pack de fonctions
 
 Pour obtenir le pack de fonctionnalités, vous avez besoin du numéro de série du tiroir du contrôleur, d'un code d'activation de fonction et de l'identifiant d'activation de fonctionnalité de la matrice de stockage.
@@ -492,6 +494,7 @@ NOTE: Le site Web d'activation de la fonction Premium comprend un lien vers « i
 
 
 
+[[step-3-stop-host-io]]
 == Étape 3 : arrêter les E/S de l'hôte
 
 Vous devez arrêter toutes les opérations d'E/S de l'hôte avant de convertir le protocole des ports hôtes. Vous ne pouvez accéder aux données de la baie de stockage qu'une fois la conversion terminée.
@@ -534,6 +537,7 @@ Voyant de cache actif
 
 
 
+[[step-4-change-the-feature-pack]]
 == Étape 4 : modifiez le pack de fonctions
 
 Modifiez le Feature Pack pour convertir le protocole hôte des ports hôte de la carte mère, des ports IB HIC ou des deux types de ports.

@@ -34,6 +34,7 @@ Lorsque vous remplacez une HIC, vous mettez le contrôleur hors ligne, retirez l
 
 
 
+[[step-1-place-controller-offline]]
 == Étape 1 : mettez le contrôleur hors ligne
 
 Les étapes de mise hors ligne d'un contrôleur dépendent du fait que vous disposez d'un contrôleur (simplex) ou de deux contrôleurs (duplex). Reportez-vous aux instructions appropriées pour :
@@ -44,6 +45,7 @@ Les étapes de mise hors ligne d'un contrôleur dépendent du fait que vous disp
 
 
 
+[[duplex-place-controller-offline]]
 === Duplex : mettez le contrôleur hors ligne
 
 Si vous disposez d'une configuration recto verso, procédez comme suit pour mettre le contrôleur hors ligne afin de pouvoir supprimer en toute sécurité la HIC défectueuse.
@@ -118,6 +120,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 
 
 
+[[simplex-power-down-the-controller-shelf]]
 === Simplex : mettez le tiroir contrôleur hors tension
 
 Si vous disposez d'une configuration simplex, mettez le tiroir contrôleur hors tension, afin de pouvoir retirer en toute sécurité la HIC défectueuse.
@@ -188,6 +191,7 @@ La LED verte cache actif située à l'arrière du contrôleur est allumée lorsq
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur pour ajouter la nouvelle carte d'interface hôte (HIC).
@@ -248,6 +252,7 @@ Si vous retirez le canister d'un tiroir contrôleur E2812, d'un tiroir de contr�
 
 
 
+[[step-3-install-a-hic]]
 == Étape 3 : installer une HIC
 
 Installer une HIC pour remplacer la HIC par une nouvelle HIC.
@@ -302,6 +307,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Réinstallez l
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Étape 4 : réinstallez le boîtier du contrôleur
 
 Après avoir installé le HIC, réinstallez le boîtier du contrôleur dans le shelf.
@@ -344,12 +350,14 @@ NOTE: Ne connectez pas les câbles de données aux nouveaux ports HIC pour le mo
 
 
 
+[[step-5-place-controller-online]]
 == Étape 5 : mettez le contrôleur en ligne
 
 Les étapes de mise en ligne d'un contrôleur dépendent du fait que vous disposez d'un contrôleur (simplex) ou de deux contrôleurs (duplex).
 
 
 
+[[duplex-place-controller-online]]
 === Duplex : mettez le contrôleur en ligne
 
 Dans le cas d'une configuration recto verso, connectez le contrôleur, collectez les données de support et reprenez les opérations.
@@ -439,6 +447,7 @@ Contactez l'assistance technique à l'adresse http://mysupport.netapp.com["Suppo
 
 
 
+[[simplex-power-up-the-controller-shelf]]
 === Simplex : mettez le tiroir contrôleur sous tension
 
 Pour une configuration simplex, mettez le tiroir contrôleur hors tension, collectez les données de support et reprenez les opérations.

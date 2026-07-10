@@ -38,6 +38,7 @@ Pour plus d'informations sur le matériel compatible, reportez-vous au https://m
 
 
 
+[[step-1-prepare-to-upgrade-host-interface-cards]]
 == Étape 1 : préparer la mise à niveau des cartes d'interface hôte
 
 Préparez-vous à la mise à niveau des cartes d'interface hôte (HIC) en sauvegardant la base de données de configuration de la baie de stockage, en collectant les données de prise en charge et en arrêtant les opérations d'E/S des hôtes. Ensuite, vous pouvez mettre le tiroir contrôleur hors tension.
@@ -121,6 +122,7 @@ Attendez que toutes les opérations soient terminées avant de poursuivre l'éta
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Vous retirez le boîtier du contrôleur pour pouvoir mettre à niveau la nouvelle carte d'interface hôte (HIC). Lorsque vous retirez un boîtier de contrôleur, vous devez débrancher tous les câbles. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
@@ -185,6 +187,7 @@ Si vous retirez le canister d'un tiroir contrôleur E2812, d'un tiroir de contr�
 
 
 
+[[step-3-remove-a-host-interface-card]]
 == Étape 3 : retirez une carte d'interface hôte
 
 Retirez la carte d'interface hôte (HIC) d'origine pour la remplacer par une carte mise à niveau.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retirer le HIC du c
 
 
 
+[[step-4-install-host-interface-card]]
 == Étape 4 : installez la carte d'interface hôte
 
 Installez la nouvelle carte d'interface hôte (HIC) pour augmenter le nombre de ports hôtes dans votre baie de stockage.
@@ -272,6 +276,7 @@ N'utilisez pas de tournevis, sinon vous risquez de trop serrer les vis.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Étape 5 : réinstallez le boîtier du contrôleur
 
 Réinstallez le boîtier du contrôleur dans le tiroir du contrôleur après avoir installé la nouvelle carte d'interface hôte (HIC).
@@ -315,6 +320,7 @@ NOTE: Ne connectez pas les câbles de données aux nouveaux ports HIC pour le mo
 
 
 
+[[step-6-complete-host-interface-card-upgrade]]
 == Étape 6 : mise à niveau complète de la carte d'interface hôte
 
 Terminez le processus de mise à niveau d'une carte d'interface hôte en vérifiant les LED du contrôleur et l'affichage à sept segments et en vérifiant que l'état du contrôleur est optimal.

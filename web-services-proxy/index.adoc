@@ -15,6 +15,7 @@ SANtricity Web Services Proxy est un serveur API RESTful installé séparément 
 
 
 
+[[installation-overview]]
 == Présentation de l'installation
 
 L'installation et la configuration du proxy de services Web implique les étapes suivantes :
@@ -27,6 +28,7 @@ L'installation et la configuration du proxy de services Web implique les étapes
 
 
 
+[[find-more-information]]
 == Trouvez plus d'informations
 
 * Unified Manager -- l'installation proxy inclut SANtricity Unified Manager, une interface web qui permet d'accéder à une configuration plus récente des systèmes de stockage E-Series et EF-Series. Pour plus d'informations, consultez l'aide en ligne de Unified Manager, disponible depuis son interface utilisateur ou depuis https://docs.netapp.com/us-en/e-series-santricity/index.html["Documentation sur le logiciel SANtricity"^].

@@ -17,6 +17,7 @@ Pour les systèmes de stockage plus récents, vous pouvez vérifier le matériel
 
 
 
+[[adjustable-support-rails]]
 == Rails de support réglables
 
 L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Installation des rails de support réglables"^] pour installer un plateau de contrôleur ou un plateau de lecteur livré séparément (non déjà installé dans l'armoire). Cette procédure est applicable aux bacs 2U (9 cm ou 3.5 pouces) suivants :
@@ -28,18 +29,21 @@ L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Install
 
 
 
+[[two-post-rack-2u]]
 == Rack à deux montants -- 2U
 
 L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installation d'un équipement 2U dans un rack à deux montants"^].
 
 
 
+[[four-post-rack-or-cabinet-2u]]
 == Rack ou armoire à quatre montants -- 2U
 
 L'accès https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installation d'un boîtier 2U de 12 disques dans un rack ou une armoire à quatre montants"^].
 
 
 
+[[four-post-rack-superrail]]
 == Rack à quatre montants -- SuperRail
 
 Accéder https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installer SuperRail dans un rack à quatre montants"^].

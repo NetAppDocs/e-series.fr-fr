@@ -17,6 +17,7 @@ Pour SLES 12, les E/S sont dirigées vers les cibles de périphériques virtuels
 
 
 
+[[virtual-devices-are-io-targets]]
 == Les périphériques virtuels correspondent à des cibles d'E/S.
 
 Assurez-vous que vous exécutez des E/S uniquement sur les périphériques virtuels créés par DM-MP et non sur les chemins des périphériques physiques. Si vous exécutez des E/S sur les chemins physiques, DM-MP ne peut pas gérer un événement de basculement et les E/S échouent.
@@ -30,6 +31,7 @@ Vous pouvez accéder à ces périphériques de bloc via le `dm` le périphériqu
 ----
 
 
+[[example-output]]
 == Exemple de sortie
 
 L'exemple de sortie suivant de l' `nvme list` La commande affiche le nom du nœud hôte et sa corrélation avec l'ID de l'espace de noms.

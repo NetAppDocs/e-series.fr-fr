@@ -33,6 +33,7 @@ Pour remplacer un module DIMM, vous devez vérifier la taille du cache de votre 
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Étape 1 : déterminez si vous devez remplacer un module DIMM
 
 Vérifiez la taille du cache de votre contrôleur avant de remplacer les MODULES DIMM.
@@ -50,6 +51,7 @@ Vérifiez la taille du cache de votre contrôleur avant de remplacer les MODULES
 
 
 
+[[step-2-place-controller-offline]]
 == Étape 2 : mettez le contrôleur hors ligne
 
 Mettez le contrôleur hors ligne pour pouvoir retirer et remplacer les modules DIMM en toute sécurité.
@@ -96,6 +98,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 
 
 
+[[step-3-remove-controller-canister]]
 == Étape 3 : déposer le boîtier du contrôleur
 
 Retirez le boîtier de contrôleur défectueux pour remplacer les modules DIMM par de nouveaux.
@@ -126,6 +129,7 @@ image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poi
 
 
 
+[[step-4-remove-dimms]]
 == Étape 4 : retirez les modules DIMM
 
 S'il y a une discordance de mémoire, remplacez les modules DIMM de votre contrôleur.
@@ -160,6 +164,7 @@ Le nombre et le positionnement des modules DIMM du système dépendent du modèl
 
 
 
+[[step-5-install-new-dimms]]
 == Étape 5 : installez de nouveaux modules DIMM
 
 Installez un module DIMM neuf pour remplacer l'ancien.
@@ -189,6 +194,7 @@ image::../media/dimm_5.png[Insérez LES MODULES DIMM dans le logement et fixez-l
 
 
 
+[[step-6-reinstall-controller-canister]]
 == Étape 6 : réinstallez le boîtier du contrôleur
 
 Après avoir installé les nouveaux modules DIMM, réinstallez le boîtier du contrôleur dans le tiroir du contrôleur.
@@ -208,6 +214,7 @@ image::../media/remove_controller_7.png[Installez le module DIMM dans le slot du
 
 
 
+[[step-7-complete-dimms-replacement]]
 == Étape 7 : remplacement complet des modules DIMM
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

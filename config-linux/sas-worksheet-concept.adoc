@@ -17,6 +17,7 @@ image::../media/sas_topology_diagram_conf-lin.gif[Schéma : topologie SAS]
 
 
 
+[[host-identifiers]]
 == Identifiants d'hôte
 
 |===
@@ -65,12 +66,14 @@ Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
 |===
 
 
+[[target-identifiers]]
 == Identifiants cibles
 
 Les configurations recommandées se composent de deux ports cibles.
 
 
 
+[[mapping-host]]
 == Hôte de mappage
 
 |===

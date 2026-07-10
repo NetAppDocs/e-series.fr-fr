@@ -21,6 +21,7 @@ Remplacez une barrette DIMM dans votre système de stockage EF50 ou EF80 lorsqu'
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Étape 1 : déterminez si vous devez remplacer un module DIMM
 
 Remplacez une barrette DIMM lorsqu'elle tombe en panne, signale qu'elle n'est pas dans un état optimal ou présente une capacité incompatible.
@@ -47,6 +48,7 @@ Si aucune de ces conditions n'est réunie, vous n'avez pas besoin de remplacer u
 
 
 
+[[step-2-prepare-to-replace-a-dimm]]
 == Étape 2 : préparez le remplacement d'un module DIMM
 
 Préparez-vous à remplacer une barrette DIMM en vous assurant qu'il n'y a pas d'autres problèmes de système de stockage à résoudre, que les volumes sont dans le bon état, en rassemblant les outils et équipements nécessaires, en prenant des précautions pour éviter les décharges électrostatiques et en sauvegardant la base de données de configuration du système de stockage.
@@ -95,6 +97,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-3-place-the-controller-offline]]
 == Étape 3 : Placez le contrôleur hors ligne
 
 Placez le contrôleur défectueux hors ligne afin de pouvoir effectuer le reste de cette procédure en toute sécurité.
@@ -133,6 +136,7 @@ CAUTION: Si le champ *OK to remove* n’affiche pas *Yes*, ne procédez pas à l
 
 
 
+[[step-4-remove-the-controller]]
 == Étape 4 : Retirez le contrôleur
 
 Vérifiez que toutes les données présentes dans la mémoire cache ont bien été écrites sur les disques, débranchez tous les câbles du contrôleur défectueux, puis retirez le contrôleur défectueux du châssis.
@@ -215,6 +219,7 @@ Si nécessaire, redressez les poignées (à côté des languettes) pour les dég
 
 
 
+[[step-5-replace-a-dimm]]
 == Étape 5 : Remplacer une DIMM
 
 Repérez la barrette DIMM défectueuse à l'intérieur du contrôleur défectueux et remplacez-la.
@@ -287,6 +292,7 @@ Une fois correctement insérée, la DIMM s'insère facilement mais reste bien en
 
 
 
+[[step-6-reinstall-the-controller]]
 == Étape 6 : Réinstallez le contrôleur
 
 Réinstallez le contrôleur dans le châssis, rebranchez son cordon d'alimentation et tous ses câbles.
@@ -345,6 +351,7 @@ NOTE: Il est impératif de reconnecter les câbles avant de mettre le contrôleu
 
 
 
+[[step-7-place-the-controller-online]]
 == Étape 7 : Placez le contrôleur en ligne
 
 Remettez en ligne le contrôleur défectueux.
@@ -386,6 +393,7 @@ NOTE: Si vous ne pouvez pas résoudre le problème, contactez https://mysupport.
 
 
 
+[[step-8-complete-the-dimm-replacement]]
 == Étape 8 : Terminer le remplacement de la DIMM
 
 À l'aide de SANtricity System Manager, assurez-vous que la dernière version de SANtricity OS est installée, vérifiez que tous les volumes sont restitués à leurs contrôleurs propriétaires et collectez les données de support afin de pouvoir reprendre les opérations.
@@ -436,6 +444,7 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 
 
+[[step-9-return-the-failed-part-to-netapp]]
 == Étape 9 : Retournez la pièce défectueuse à NetApp
 
 Retournez la pièce défectueuse à NetApp, comme indiqué dans les instructions RMA fournies avec le kit. Consultez la  https://mysupport.netapp.com/site/info/rma["Retour et remplacement de pièces"] page pour plus d'informations.

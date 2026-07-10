@@ -28,6 +28,7 @@ Prenez connaissance des remarques suivantes :
 
 
 
+[[install-device-mapper-multipath-dm-mp]]
 == Installer Device Mapper Multipath (DM-MP)
 
 Tout hôte exécutant SANtricity Cloud Connector doit également exécuter Linux Device Mapper Multipath (DM-MP) et avoir installé le package multipath-Tools.
@@ -36,12 +37,14 @@ Le processus de détection d'SANtricity Cloud Connector repose sur le package d'
 
 
 
+[[install-cloud-connector]]
 == Installez Cloud Connector
 
 Vous pouvez installer SANtricity Cloud Connector sur les systèmes d'exploitation Linux en mode graphique ou en mode console.
 
 
 
+[[graphical-mode]]
 === Mode graphique
 
 Vous pouvez utiliser le mode graphique pour installer SANtricity Cloud Connector sur un système d'exploitation Linux.
@@ -112,6 +115,7 @@ Le message installation terminée s'affiche.
 
 
 
+[[console-mode]]
 === Mode console
 
 Vous pouvez utiliser le mode console pour installer SANtricity Cloud Connector sur un système d'exploitation Linux.
@@ -191,6 +195,7 @@ Le message installation terminée s'affiche.
 
 
 
+[[add-server-certificate-and-ca-certificate-into-a-keystore]]
 == Ajoutez le certificat de serveur et le certificat d'autorité de certification dans un magasin de clés
 
 Pour utiliser une connexion https sécurisée du navigateur vers l'hôte SANtricity Cloud Connector, vous pouvez accepter le certificat auto-signé de l'hôte SANtricity Cloud Connector ou ajouter un certificat et une chaîne de confiance reconnus à la fois par le navigateur et l'application SANtricity Cloud Connector.
@@ -235,6 +240,7 @@ keytool -import -trustcacerts -alias cloudconnect -file certnew.cer -keystore ke
 
 
 
+[[add-storagegrid-certificate-into-a-keystore]]
 == Ajoutez le certificat StorageGRID dans un magasin de clés
 
 Si vous configurez StorageGRID en tant que type cible pour l'application SANtricity Cloud Connector, vous devez d'abord ajouter un certificat StorageGRID au magasin de clés SANtricity Cloud Connector.

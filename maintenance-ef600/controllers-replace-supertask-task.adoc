@@ -53,6 +53,7 @@ NOTE: Le voyant d'avertissement orange du contrôleur s'éteint dès que les con
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Étape 1 : préparer le remplacement du contrôleur
 
 Préparez-vous à remplacer un boîtier de contrôleur défectueux en vérifiant que le boîtier de contrôleur de remplacement possède le numéro de pièce FRU correct, en sauvegardant la configuration et en recueillant les données de support.
@@ -119,6 +120,7 @@ CAUTION: Ne pas commencer d'autres opérations tant que le statut n'a pas été 
 
 
 
+[[step-2-remove-failed-controller]]
 == Étape 2 : retirer le contrôleur défectueux
 
 Retirer un boîtier de contrôleur pour remplacer le boîtier défectueux par un boîtier neuf.
@@ -127,6 +129,7 @@ Il s'agit d'une procédure en plusieurs étapes qui vous oblige à retirer les c
 
 
 
+[[step-2a-remove-controller-canister]]
 === Étape 2a : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur défectueux pour pouvoir le remplacer par un nouveau.
@@ -160,6 +163,7 @@ image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poi
 
 
 
+[[step-2b-remove-battery]]
 === Étape 2b : retirez la batterie
 
 Retirez la batterie du boîtier du contrôleur défectueux afin de pouvoir l'installer dans le nouveau boîtier du contrôleur.
@@ -183,6 +187,7 @@ image:../media/batt_4.png["Soulever la batterie hors du contrôleur"]
 
 
 
+[[step-2c-remove-the-hic]]
 === Étape 2c : retirez la HIC
 
 Si le boîtier du contrôleur comporte une HIC, vous devez retirer la HIC du boîtier du contrôleur d'origine. Sinon, vous pouvez ignorer cette étape.
@@ -218,6 +223,7 @@ image::../media/hic_4.png[Retirez le HIC de la carte contrôleur]
 
 
 
+[[step-2d-remove-power-supply]]
 === Étape 2d : retirer l'alimentation
 
 Retirez le bloc d'alimentation afin de pouvoir l'installer dans le nouveau contrôleur.
@@ -246,6 +252,7 @@ CAUTION: Lors de la dépose d'une alimentation électrique, toujours utiliser de
 
 
 
+[[step-2e-remove-dimms]]
 === Étape 2e : retirez les modules DIMM
 
 Retirez les modules DIMM pour pouvoir les installer dans le nouveau contrôleur.
@@ -272,6 +279,7 @@ image::../media/dimim_3.png[Retirez le module DIMM]
 
 
 
+[[step-2f-remove-fans]]
 === Étape 2f : retirer les ventilateurs
 
 Retirez les ventilateurs pour pouvoir les installer dans le nouveau contrôleur.
@@ -286,6 +294,7 @@ image::../media/fan_2.png[Déposer le ventilateur]
 
 
 
+[[step-3-install-new-controller]]
 == Étape 3 : installer un nouveau contrôleur
 
 Installez un nouveau boîtier de contrôleur pour remplacer le boîtier défectueux.
@@ -294,6 +303,7 @@ Il s'agit d'une procédure en plusieurs étapes qui vous oblige à installer les
 
 
 
+[[step-3a-install-battery]]
 === Étape 3a : installer la batterie
 
 Installer la batterie dans le boîtier de contrôleur de remplacement.
@@ -317,6 +327,7 @@ La batterie s'enclenche.
 
 
 
+[[step-3b-install-the-hic]]
 === Étape 3b : installez le HIC
 
 Si vous avez retiré une HIC du boîtier de contrôleur d'origine, vous devez installer cette HIC dans le nouveau boîtier de contrôleur. Sinon, vous pouvez ignorer cette étape.
@@ -355,6 +366,7 @@ NOTE: L'image ci-dessus est un exemple ; l'apparence de votre HIC peut varier.
 
 
 
+[[step-3c-install-power-supply]]
 === Étape 3c : installez l'alimentation
 
 Installer l'alimentation dans le boîtier de contrôleur de remplacement.
@@ -375,6 +387,7 @@ image::../media/psup_4.png[Installez l'alimentation dans le contrôleur]
 
 
 
+[[step-3d-install-dimms]]
 === Étape 3d : installez les modules DIMM
 
 Installez les modules DIMM dans le nouveau boîtier de contrôleur.
@@ -407,6 +420,7 @@ image::../media/dimm_5.png[Appuyez sur les loquets du logement DIMM pour le fixe
 
 
 
+[[step-3e-install-fans]]
 === Étape 3e : installez les ventilateurs
 
 Installer les ventilateurs dans le boîtier de contrôleur de remplacement.
@@ -424,6 +438,7 @@ image::../media/fan_3_a.png[Poser le ventilateur dans le contrôleur]
 
 
 
+[[step-3f-install-new-controller-canister]]
 === Étape 3f : installer un nouveau boîtier de contrôleur
 
 En dernier lieu, installez le nouveau boîtier de contrôleur dans le shelf de contrôleur.
@@ -451,6 +466,7 @@ NOTE: Si le contrôleur d'origine n'a pas utilisé DHCP pour l'adresse IP, le no
 
 
 
+[[step-4-complete-controller-replacement]]
 == Étape 4 : remplacement complet du contrôleur
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

@@ -15,6 +15,7 @@ Pour le protocole NVMe over Fibre Channel, vous pouvez configurer les switchs et
 
 
 
+[[step-1-configure-the-nvmefc-switches]]
 == Étape 1 : configurer les switchs NVMe/FC
 
 La configuration (segmentation) des commutateurs NVMe over Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
@@ -41,6 +42,7 @@ Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble d
 
 
 
+[[step-2-determine-the-host-ports-wwpns-nvmefc-vmware]]
 == Étape 2 : identification des WWPN des ports hôtes--NVMe/FC VMware
 
 Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.
@@ -66,6 +68,7 @@ Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
 
 
 
+[[step-3-enable-hba-drivers]]
 == Étape 3 : activation des pilotes HBA
 
 La prise en charge de NVMe doit être activée au sein des pilotes Broadcom/Emulex et Marvell/Qlogic HBA.
@@ -92,6 +95,7 @@ esxcfg-module -s "ql2xnvmesupport=1" qlnativefc
 
 
 
+[[step-4-record-your-configuration]]
 == Étape 4 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer des informations de configuration du stockage NVMe sur Fibre Channel. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
@@ -102,6 +106,7 @@ image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identifiants de po
 
 
 
+[[host-identifiers]]
 === Identifiants d'hôte
 
 |===
@@ -134,6 +139,7 @@ Port hôte 1 vers zone de commutation FC 1
 |===
 
 
+[[target-identifiers]]
 === Identifiants cibles
 
 |===
@@ -191,6 +197,7 @@ Contrôleur B, port 2 vers le commutateur FC 2
 |===
 
 
+[[mapping-host]]
 === Hôte de mappage
 
 |===

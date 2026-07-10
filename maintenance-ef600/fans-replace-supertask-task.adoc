@@ -29,6 +29,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-place-controller-offline]]
 == Étape 1 : mettez le contrôleur hors ligne
 
 Placez le boîtier du contrôleur hors ligne pour pouvoir remplacer le ventilateur défectueux en toute sécurité.
@@ -75,6 +76,7 @@ NOTE: Ne pas commencer d'autres opérations tant que le statut n'a pas été mis
 
 
 
+[[step-2-remove-controller-canister]]
 == Étape 2 : déposer le boîtier du contrôleur
 
 Retirez le boîtier du contrôleur afin de pouvoir remplacer le ventilateur défectueux par un nouveau.
@@ -105,6 +107,7 @@ image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poi
 
 
 
+[[step-3-remove-failed-fan]]
 == Étape 3 : retrait du ventilateur défectueux
 
 Vous retirez un ventilateur défectueux afin de pouvoir le remplacer par un nouveau ventilateur.
@@ -123,6 +126,7 @@ image::../media/fan_2.png[Déposer le ventilateur]
 
 
 
+[[step-4-install-new-fan]]
 == Étape 4 : installer un nouveau ventilateur
 
 Installez un nouveau ventilateur pour remplacer le ventilateur défectueux.
@@ -139,6 +143,7 @@ image::../media/fan_3_a.png[Poser le ventilateur dans le contrôleur]
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Étape 5 : réinstallez le boîtier du contrôleur
 
 Après avoir installé le nouveau ventilateur, réinstallez le boîtier du contrôleur dans le shelf.
@@ -157,6 +162,7 @@ image::../media/remove_controller_7.png[Installez le contrôleur dans le tiroir]
 
 
 
+[[step-6-complete-fan-replacement]]
 == Étape 6 : remplacement complet du ventilateur
 
 Placez le contrôleur en ligne, collectez les données de support et reprenez les opérations.

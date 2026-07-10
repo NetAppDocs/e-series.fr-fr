@@ -33,6 +33,7 @@ Assurez-vous de disposer des éléments suivants :
 
 
 
+[[step-1-prepare-to-replace-controller-simplex]]
 == Étape 1 : préparation du remplacement du contrôleur (simplex)
 
 Préparez-vous à remplacer un boîtier de contrôleur en enregistrant la clé de sécurité du lecteur, en sauvegardant la configuration et en recueillant les données de support. Vous pouvez ensuite arrêter les opérations d'E/S hôte et mettre le tiroir contrôleur hors tension.
@@ -120,12 +121,14 @@ Les données de la matrice de stockage ne seront accessibles qu'après avoir rem
 
 
 
+[[step-2-remove-failed-controller-simplex]]
 == Étape 2 : retrait du contrôleur défectueux (simplex)
 
 Remplacez le réservoir défectueux par un neuf.
 
 
 
+[[step-2a-remove-controller-canister-simplex]]
 === Étape 2a : retrait du boîtier du contrôleur (simplex)
 
 Déposer un boîtier de contrôleur.
@@ -180,6 +183,7 @@ Lorsque vous retirez le boîtier du contrôleur, un rabat se met en place pour b
 
 
 
+[[step-2b-remove-battery-simplex]]
 === Étape 2b : retrait de la batterie (simplex)
 
 Après avoir retiré le boîtier du contrôleur du shelf, retirez la batterie.
@@ -215,6 +219,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Retirer la batterie 
 
 
 
+[[step-2c-remove-host-interface-card-simplex]]
 === Étape 2c : retrait de la carte d'interface hôte (simplex)
 
 Si le boîtier du contrôleur comporte une carte d'interface hôte (HIC), retirez la carte HIC du boîtier du contrôleur d'origine pour pouvoir la réutiliser dans le nouveau boîtier du contrôleur.
@@ -248,12 +253,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Retirez le HIC de l
 
 
 
+[[step-3-install-new-controller-simplex]]
 == Étape 3 : installation d'un nouveau contrôleur (simplex)
 
 Installez un nouveau boîtier de contrôleur pour remplacer le boîtier défectueux.
 
 
 
+[[step-3a-install-battery-simplex]]
 === Étape 3a : installation de la batterie (simplex)
 
 Installer la batterie dans le boîtier de contrôleur de remplacement. Vous pouvez installer la batterie que vous avez retirée du boîtier du contrôleur d'origine ou installer une nouvelle batterie que vous avez commandée.
@@ -302,6 +309,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Bride métall
 
 
 
+[[step-3b-install-host-interface-card-simplex]]
 === Étape 3b : installation de la carte d'interface hôte (simplex)
 
 Si vous avez retiré une carte d'interface hôte (HIC) du boîtier de contrôleur d'origine, installez cette HIC dans le nouveau boîtier de contrôleur.
@@ -338,6 +346,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Réinstallez l
 
 
 
+[[step-3c-install-new-controller-canister-simplex]]
 === Étape 3c : installation d'un nouveau boîtier de contrôleur (simplex)
 
 Après avoir installé la batterie et le HIC, vous pouvez installer le nouveau boîtier de contrôleur dans le shelf.
@@ -405,6 +414,7 @@ Vous devez définir manuellement l'adresse IP du nouveau contrôleur. (Vous pouv
 
 
 
+[[step-4-complete-controller-replacement-simplex]]
 == Étape 4 : remplacement complet du contrôleur (simplex)
 
 Mettez le tiroir contrôleur sous tension, collectez les données de support et reprenez les opérations.

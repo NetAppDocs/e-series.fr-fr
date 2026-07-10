@@ -15,6 +15,7 @@ La méthode Linux express pour installer votre baie de stockage et accéder à S
 
 
 
+[[procedure-overview]]
 == Présentation de la procédure
 
 La méthode Linux express comprend les étapes suivantes.
@@ -37,6 +38,7 @@ La méthode Linux express comprend les étapes suivantes.
 
 
 
+[[find-more-information]]
 == Trouvez plus d'informations
 
 * Aide en ligne - explique comment utiliser SANtricity System Manager pour terminer les tâches de configuration et de gestion du stockage. Il est disponible dans le produit.

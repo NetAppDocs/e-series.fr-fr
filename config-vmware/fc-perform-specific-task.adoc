@@ -18,6 +18,7 @@ NOTE: Pour les modèles EF300 et EF600, vous devez définir une taille de bloc d
 
 
 
+[[step-1-configure-the-fc-switches-vmware]]
 == Étape 1 : configurer les commutateurs FC--VMware
 
 La configuration (segmentation) des commutateurs Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
@@ -44,6 +45,7 @@ Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble d
 
 
 
+[[step-2-determine-the-host-port-wwpns-fc]]
 == Étape 2 : détermination des WWPN--FC du port hôte
 
 Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.
@@ -69,6 +71,7 @@ Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
 
 
 
+[[step-3-record-your-configuration]]
 == Étape 3 : enregistrez votre configuration
 
 Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche technique suivante pour enregistrer les informations de configuration du stockage FC. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
@@ -79,6 +82,7 @@ image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificateurs de
 
 
 
+[[host-identifiers]]
 === Identifiants d'hôte
 
 |===
@@ -111,6 +115,7 @@ Port hôte 1 vers zone de commutation FC 1
 |===
 
 
+[[target-identifiers]]
 === Identifiants cibles
 
 |===
@@ -168,6 +173,7 @@ Contrôleur B, port 2 vers le commutateur FC 2
 |===
 
 
+[[mapping-host]]
 === Hôte de mappage
 
 |===

@@ -18,6 +18,7 @@ Pour gérer le stockage avec le plug-in de stockage pour vCenter, vous devez dé
 
 
 
+[[manual-host-creation]]
 == Création manuelle d'hôtes
 
 La création d'un hôte est l'une des étapes requises pour permettre à la baie de stockage de savoir quels hôtes lui sont connectés et d'autoriser l'accès E/S aux volumes. Un hôte peut être créé manuellement.
@@ -27,6 +28,7 @@ La création d'un hôte est l'une des étapes requises pour permettre à la baie
 
 
 
+[[how-volumes-are-assigned]]
 == Comment sont affectés les volumes
 
 Pour qu'un hôte puisse envoyer des E/S à un volume, vous devez lui affecter le volume. Vous pouvez sélectionner un hôte ou un cluster hôte lors de la création d'un volume ou attribuer ultérieurement un volume à un hôte ou à un cluster hôte. Un cluster hôte est un groupe d'hôtes. Vous créez un cluster hôte pour vous permettre d'attribuer facilement les mêmes volumes à plusieurs hôtes.

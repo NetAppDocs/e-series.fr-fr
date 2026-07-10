@@ -19,6 +19,7 @@ Vous pouvez configurer les autorisations d'accès pour le plug-in de stockage po
 
 
 
+[[review-required-vsphere-privileges]]
 == Vérifiez les privilèges vSphere requis
 
 Pour accéder au plug-in au sein du client vSphere, vous devez être affecté à un rôle disposant des privilèges vSphere appropriés. Les utilisateurs disposant du privilège « configurer le datastore » vSphere ont accès en lecture/écriture au plug-in, tandis que les utilisateurs disposant du privilège « Parcourir datastore » disposent d'un accès en lecture seule. Si un utilisateur n'a aucun de ces privilèges, le plug-in affiche un message "privilèges insuffisants".
@@ -34,6 +35,7 @@ Pour accéder au plug-in au sein du client vSphere, vous devez être affecté à
 |===
 
 
+[[configure-storage-administrator-roles]]
 == Configurer les rôles de l'administrateur de stockage
 
 Pour fournir des privilèges de lecture/écriture aux utilisateurs de plug-in, vous pouvez créer, cloner ou modifier un rôle. Pour plus d'informations sur la configuration des rôles dans le client vSphere, reportez-vous à la rubrique suivante de VMware Doc Center :
@@ -43,6 +45,7 @@ Pour fournir des privilèges de lecture/écriture aux utilisateurs de plug-in, v
 
 
 
+[[access-role-actions]]
 === Actions de rôle d'accès
 
 . Dans la page d'accueil du client vSphere, sélectionnez *Administrator* dans la zone de contrôle d'accès.
@@ -63,6 +66,7 @@ L'assistant approprié apparaît, en fonction de la sélection ci-dessus.
 
 
 
+[[create-a-new-role]]
 === Créer un nouveau rôle
 
 . Dans la liste privilèges, sélectionnez les autorisations d'accès à attribuer à ce rôle.
@@ -76,6 +80,7 @@ Pour autoriser l'accès en lecture seule au plug-in, sélectionnez menu:datastor
 
 
 
+[[clone-a-role]]
 === Cloner un rôle
 
 . Nommez le rôle et fournissez une description.
@@ -92,6 +97,7 @@ Pour autoriser l'accès en lecture seule au plug-in, sélectionnez menu:datastor
 
 
 
+[[edit-an-existing-role]]
 === Modifier un rôle existant
 
 . Dans la liste privilèges, sélectionnez les autorisations d'accès à attribuer à ce rôle.
@@ -105,6 +111,7 @@ Pour autoriser l'accès en lecture seule au plug-in, sélectionnez menu:datastor
 
 
 
+[[set-permissions-for-vcenter-server-appliance]]
 == Définissez les autorisations pour vCenter Server Appliance
 
 Après avoir défini les privilèges pour un rôle, vous devez ajouter une autorisation à vCenter Server Appliance. Cette autorisation permet à un utilisateur ou un groupe donné d'accéder au plug-in.
