@@ -10718,8 +10718,6 @@
   <block id="56dd88f73dc9e3fe0f4f088112d50bf6" category="admonition">*RISQUE DE PERTE DE DONNÉES.* Vous devez exécuter NVMe sur RoCE dans un environnement sans perte. Activez le contrôle de flux de bout en bout à l'aide des trames de pause globales ou du contrôle de flux prioritaire (PFC) sur votre réseau afin d'éliminer le risque de perte de données. Le PFC exige que NVMe sur RoCE soit étiqueté comme trafic de priorité 3 avec une valeur DSCP de<block ref="f0935e4cd5920aa6c7c996a5ee53a70f" prefix=" " category="inline-code"></block>.</block>
   <block id="cfc9a52b36b4bac1175d85feda4737d6" category="inline-link-macro">Configurer les adresses IP via DHCP</block>
   <block id="ab76f1b6a91823d84cc28d97a438ee49" category="paragraph">Après avoir vérifié la prise en charge de la configuration Linux et examiné les restrictions, <block ref="26e7ddc4a99218cc55e1c183bc759716" category="inline-link-macro-rx"></block>.</block>
-  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="inline-link-macro">NVMe</block>
-  <block id="1791f8465d11d224647d11ee0eab3955" category="list-text"><block ref="1791f8465d11d224647d11ee0eab3955" category="inline-link-macro-rx"></block></block>
   <block id="68df22b283edf6918b272ee1e4eef450" category="paragraph">Lors du remplacement d'un HIC défaillant, vous devez mettre hors ligne un contrôleur pour placer le système dans un état non redondant, remplacer le HIC, puis remettre le contrôleur en ligne.</block>
   <block id="7f3980e2c518e011140305dfa2c7cc40" category="list-text">Planifiez une fenêtre de maintenance avec interruption pour cette procédure. Vous ne pouvez pas accéder aux données de la baie de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration HIC lorsqu'ils sont sous tension, vous devez mettre un contrôleur hors ligne pour placer le système dans un état non redondant lors de l'installation des HIC.</block>
   <block id="79a7b3d475a1ce35fef4a7398f3e40b8" category="list-text">Pour les contrôleurs EF300, la carte d'extension SAS doit être installée dans le port 1 pour permettre l'extension du plateau de disques.</block>
@@ -10745,4 +10743,5 @@
   <block id="22839016e944bb39ae944b854e55b7ef" category="cell"><block ref="22839016e944bb39ae944b854e55b7ef" category="inline-link-rx"></block></block>
   <block id="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="cell"><block ref="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="inline-link-rx"></block></block>
   <block id="1ed965aef797c8ec8dad05a7ba9680f3" category="cell"><block ref="1ed965aef797c8ec8dad05a7ba9680f3" category="inline-link-rx"></block></block>
+  <block id="030083a432b10805a22ebd213eb3faf3" category="list-text"><block ref="030083a432b10805a22ebd213eb3faf3" category="inline-link-macro-rx"></block></block>
 </blocks>

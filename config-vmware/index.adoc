@@ -26,7 +26,7 @@ La méthode express comprend les étapes suivantes, également décrites dans le
 ** link:fc-perform-specific-task.html["Fibre Channel"]
 ** link:iscsi-perform-specific-task.html["ISCSI"]
 ** link:sas-perform-specific-task.html["SAS"]
-** link:nvme-perform-specific-task.html["NVMe"]
+** link:nvme-roce-perform-specific-task.html["NVMe over RoCE"]
 
 
 . Création de volumes logiques sur la baie de stockage.
