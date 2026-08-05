@@ -72,6 +72,29 @@ Un nouvel éditeur de scripts est désormais disponible dans SANtricity System M
 |===
 
 
+[[new-features-in-version-11-90r6]]
+== Nouvelles fonctionnalités dans la version 11.90R6
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Prise en charge des versions mises à jour du firmware IOM/DCM
+ a| 
+Les nouvelles versions du firmware IOM/DCM sont désormais prises en charge pour les modèles IOM/DCM suivants :
+
+* IOM12A - v0412
+* IOM12B - v0212
+* IOM12C - v0112
+* IOM12G - v0212
+* DCM3 - v01.12.09.02
+
+
+|===
+
+
 [[new-features-in-version-11-90r5]]
 == Nouvelles fonctionnalités dans la version 11.90R5
 
