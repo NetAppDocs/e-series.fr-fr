@@ -2,9 +2,9 @@
 permalink: maintenance-e4000/drive-drawer-60.html 
 sidebar: sidebar 
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
-summary: 'Remplacement d"un tiroir disque dans un tiroir contrôleur E2860 ou un tiroir disque DE460C' 
+summary: Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E4060 ou un tiroir disque DE460C. 
 ---
-= Remplacez le tiroir du lecteur - E4000 (tiroir de 60 disques)
+= Remplacez le tiroir de lecteur dans un shelf E4000 à 60 lecteurs
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,7 +15,7 @@ summary: 'Remplacement d"un tiroir disque dans un tiroir contrôleur E2860 ou un
 Vous pouvez remplacer un tiroir disque dans un tiroir contrôleur E4060 ou un tiroir disque DE460C.
 
 .Description de la tâche
-La procédure à suivre pour remplacer un tiroir disque défectueux dans un tiroir contrôleur E4060 ou un tiroir disque DE460C dépend de la protection des volumes dans ce tiroir. Si tous les volumes du tiroir de disque se trouvent dans des pools de disques ou des groupes de volumes dotés de la protection contre la perte de tiroir, vous pouvez effectuer cette procédure en ligne. Dans le cas contraire, vous devez arrêter toutes les activités d'E/S des hôtes et mettre le shelf hors tension avant de remplacer le tiroir disque.
+Les étapes de remplacement d'un tiroir de disque défectueux dans une baie de contrôleur E4060 ou une baie de disques DE460C dépendent de la protection des volumes du tiroir par la fonction Drawer Loss Protection. Si tous les volumes du tiroir de disque se trouvent dans des pools de disques ou des groupes de volumes bénéficiant de la Drawer Loss Protection, vous pouvez effectuer cette procédure en ligne. Sinon, vous devez effectuer cette procédure hors ligne en arrêtant toute activité d'E/S de l'hôte et en mettant hors tension l'ensemble du système de stockage (baie de contrôleur et toutes les baies d'extension) avant de remplacer un tiroir de disque.
 
 .Avant de commencer
 * Assurez-vous que le tiroir disque respecte toutes les conditions suivantes :
@@ -46,14 +46,14 @@ CAUTION: *Perte possible d'accès aux données* -- si un volume est déjà dans 
 
 
 
-NOTE: Pour plus d'informations sur le remplacement d'un tiroir d'extension E-Series DE460c, reportez-vous au https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de connaissances NetApp"^].
+NOTE: Si vous avez besoin d'informations sur la façon de remplacer un tiroir d'extension E-Series DE460C, veuillez vous référer à https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Base de connaissances NetApp"^].
 
 
 
 [[step-1-prepare-to-replace-drive-drawer]]
 == Étape 1 : préparation du remplacement du tiroir disque
 
-Déterminez si vous pouvez effectuer la procédure de remplacement pendant que le tiroir disque est en ligne ou si vous devez arrêter l'activité d'E/S hôte et mettre hors tension tous les tiroirs sous tension.
+Déterminez si vous pouvez effectuer la procédure de remplacement pendant que le shelf de disques est en ligne ou si vous devez interrompre l'activité d'E/S de l'hôte et mettre hors tension l'un des shelves sous tension (effectuez la procédure hors ligne).
 
 Si vous remplacez un tiroir d'une étagère par une protection contre les pertes de tiroir, il n'est pas nécessaire d'arrêter l'activité d'E/S de l'hôte et de mettre hors tension les étagères.
 
@@ -64,11 +64,11 @@ Si vous remplacez un tiroir d'une étagère par une protection contre les pertes
 ** Si le système est sous tension, passez à l'étape suivante.
 
 
-. Accéder à l'interface de ligne de commandes, puis saisir la commande suivante :
+. Accédez à l'interface de ligne de commandes (CLI), puis saisissez la commande suivante pour mettre le tiroir cible en mode service :
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "array_password" -c "set tray [trayID] drawer [drawerID]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [trayID] drawer [drawerID]
 serviceAllowedIndicator=on;"
 ----
 +
@@ -76,6 +76,7 @@ où ?
 
 +
 ** `<ctlr_IP1>` est l'identifiant du contrôleur.
+**  `array_username` est le nom d'utilisateur de la baie de stockage. Vous devez placer la valeur de  `array_username` entre guillemets doubles ("").
 **  `array_password` est le mot de passe de la matrice de stockage. Vous devez inclure la valeur de `array_password` en guillemets doubles ("").
 ** `[trayID]` est l'identifiant du tiroir disque qui contient le tiroir disque que vous souhaitez remplacer. Les valeurs des ID de tiroir disque sont 0 à 99. Vous devez inclure la valeur de `trayID` entre crochets.
 ** `[drawerID]` est l'identifiant du tiroir de lecteur que vous souhaitez remplacer. Les valeurs d'ID du tiroir sont 1 (tiroir supérieur) à 5 (tiroir inférieur). Vous devez inclure la valeur de `drawerID` entre crochets.
@@ -87,7 +88,7 @@ Cette commande permet de supprimer le tiroir le plus haut du tiroir 10 :
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Déterminez si vous devez arrêter l'activité E/S de l'hôte, comme suit :
@@ -120,7 +121,7 @@ CAUTION: *Perte de données possible* -- si vous continuez cette procédure pend
 +
 La LED verte cache actif située à l'arrière de chaque contrôleur est allumée lorsque les données en cache ont besoin d'être écrites sur les disques. Vous devez attendre que ce voyant s'éteigne.
 
-. Sur la page d'accueil de SANtricity System Manager, sélectionnez *Afficher les opérations en cours*.
+. Dans le panneau de gauche de SANtricity System Manager, sélectionnez menu:Storage[Operations in Progress].
 . Attendez que toutes les opérations soient terminées avant de poursuivre l'étape suivante.
 . Mettez les tiroirs hors tension à l'aide de l'une des procédures suivantes :
 +
@@ -160,7 +161,7 @@ Les extrémités métalliques des chaînes de câbles coulissent dans les rails 
 
 
 
-CAUTION: *Dommages matériels possibles* -- si le plateau d'entraînement est sous tension, la chaîne de câbles est alimentée jusqu'à ce que les deux extrémités soient débranchés. Pour éviter de court-circuiter l'équipement, ne laissez pas le connecteur de la chaîne de câbles débranché toucher le châssis en métal si l'autre extrémité de la chaîne de câbles est toujours branchée.
+CAUTION: *Risque de dommages matériels* – Si le tiroir de disques est sous tension, la chaînette de câbles reste alimentée jusqu'à ce que ses deux extrémités soient débranchées. Pour éviter tout court-circuit de l'équipement, ne laissez pas le connecteur débranché de la chaînette de câbles toucher le châssis métallique si l'autre extrémité de la chaînette de câbles est encore branchée.
 
 .Étapes
 . Assurez-vous que le tiroir disque et le tiroir contrôleur ne disposent plus d'activités d'E/S et qu'il est hors tension ou que vous avez émis le `Set Drawer Attention Indicator` Commande CLI.
@@ -176,8 +177,8 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 +
 *(1)* _poignée du canister du ventilateur_
 
-.. A l'aide de la poignée, tirez le boîtier du ventilateur hors du plateau d'entraînement et mettez-le de côté.
-.. Si le bac est sous tension, assurez-vous que le ventilateur gauche atteint sa vitesse maximale.
+.. À l'aide de la poignée, retirez le boîtier du ventilateur du tiroir de disques et mettez-le de côté.
+.. Si le shelf est sous tension, assurez-vous que le ventilateur gauche accède à sa vitesse maximale.
 +
 
 CAUTION: *Dommages possibles à l'équipement en raison d'une surchauffe* -- si le plateau est sous tension, ne retirez pas les deux ventilateurs en même temps. Dans le cas contraire, l'équipement risque de surchauffer.
@@ -271,7 +272,7 @@ CAUTION: *Dommages possibles à l'équipement en raison d'une surchauffe* -- si 
 .. Pour débrancher la chaîne de câbles, tirez vers vous d'environ 2.5 cm (1 po). Laissez le connecteur de la chaîne de câbles dans le rail de guidage vertical.
 +
 
-CAUTION: *Dommages matériels possibles* -- si le plateau d'entraînement est sous tension, la chaîne de câbles est alimentée jusqu'à ce que les deux extrémités soient débranchés. Pour éviter de court-circuiter l'équipement, ne laissez pas le connecteur de la chaîne de câbles débranché toucher le châssis en métal si l'autre extrémité de la chaîne de câbles est toujours branchée.
+CAUTION: *Risque de dommages matériels* – Si le tiroir de disques est sous tension, la chaînette de câbles reste alimentée jusqu'à ce que ses deux extrémités soient débranchées. Pour éviter tout court-circuit de l'équipement, ne laissez pas le connecteur débranché de la chaînette de câbles toucher le châssis métallique si l'autre extrémité de la chaînette de câbles est encore branchée.
 
 
 
@@ -393,7 +394,7 @@ Lors de la fixation d'une chaîne de câbles, inverser l'ordre utilisé lors du 
 .Étapes
 . Assurez-vous que :
 +
-** Un nouveau tiroir disque est installé.
+** Un nouveau tiroir de lecteur est installé.
 ** Vous avez deux chaînes de câble de rechange, marquées COMME GAUCHE et DROITE (sur le connecteur horizontal à côté du tiroir d'entraînement).
 
 
@@ -470,7 +471,7 @@ Le voyant peut rester allumé pendant une minute après avoir réinstallé le ve
 [[step-6-complete-drive-drawer-replacement]]
 == Étape 6 : remplacement complet du tiroir de disque
 
-Réinsérez les disques et remplacez le cadre avant dans l'ordre correct.
+Réinsérez les disques dans le bon ordre, réinstallez le tiroir du disque dans l'étagère du disque, remettez en place le panneau avant, rétablissez l'alimentation (si nécessaire), puis reconstruisez manuellement les disques (si nécessaire).
 
 
 CAUTION: *Perte possible d'accès aux données* -- vous devez installer chaque lecteur à son emplacement d'origine dans le tiroir de disque.
@@ -533,6 +534,10 @@ CAUTION: *Risque de dysfonctionnement de l'équipement* -- Assurez-vous de ferme
 
 
 
+
+. Si vous avez effectué la procédure de remplacement du tiroir de disque en ligne et si des disques du tiroir de remplacement sont défectueux, vous devez les reconstruire manuellement.
++
+À l'aide de SANtricity System Manager, complétez la link:https://docs.netapp.com/us-en/e-series-santricity/sm-hardware/reconstruct-drive-manually.html["Reconstruire un lecteur manuellement"^]procédure.
 
 
 

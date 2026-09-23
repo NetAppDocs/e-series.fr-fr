@@ -3,7 +3,9 @@
 
 
 .Description de la tâche
-Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+* Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+* L'illustration montre le retrait d'un module d'E/S de l'emplacement 2. Selon le type de module d'E/S vers lequel vous effectuez la mise à niveau, l'emplacement peut être différent.
+
 
 .Étapes
 . Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
@@ -47,9 +49,11 @@ Vous pouvez utiliser la languette située à gauche et la vis moletée pour ins�
 .. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
 
 
-. Connectez le module d'E/S au réseau hôte.
+. Câblez le module d'E/S au réseau hôte ou au tiroir d'extension SAS.
 +
-Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu relatif à l'installation et à la configuration du système pour le câblage du réseau hôte.
+** Pour le câblage du réseau hôte, vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu d'installation et de configuration du système relative au câblage du réseau hôte.
+** Pour le câblage des tiroirs d'extension SAS, vous pouvez utiliser la link:../install-hw-cabling/hotadd-drive-shelf-task.html["Ajoutez à chaud une étagère de disques dans un système de stockage E-Series"^] procédure.
+
 
 . Répétez ces étapes pour mettre à niveau un module d'E/S dans l'autre contrôleur.
 

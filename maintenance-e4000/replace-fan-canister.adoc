@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Passez en revue les types de canister E4000 et les exigences. 
 ---
-= Remplacer le boîtier du ventilateur - E4000 (60 disques)
+= Remplacez un boîtier de ventilateur dans un tiroir E4000 à 60 disques
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,13 +54,12 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 . Dans le Gestionnaire système SANtricity, déterminez quelle cartouche de ventilateur est défectueuse.
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Regardez l'icône de ventilateur à image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icône de ventilateur"]droite des listes déroulantes *Shelf* pour déterminer quelle étagère est dotée du boîtier de ventilateur défectueux.
 +
 Si un composant est défectueux, cette icône est rouge.
 
-.. Lorsque vous trouvez le tiroir avec une icône rouge, sélectionnez *contrôleur & composants*.
-.. Sélectionnez le boîtier du ventilateur ou l'icône rouge du ventilateur.
+.. Lorsque vous trouvez l'étagère avec une icône rouge, sélectionnez soit le boîtier du ventilateur, soit l'icône rouge du ventilateur.
 .. Dans l'onglet *fans*, observez les États des boîtiers de ventilateur pour déterminer quel absorbeur de ventilateur doit être remplacé.
 +
 Un composant ayant l'état *FAILED* doit être remplacé.

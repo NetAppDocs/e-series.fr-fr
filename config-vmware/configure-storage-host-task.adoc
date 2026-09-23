@@ -1,21 +1,28 @@
 ---
 permalink: config-vmware/configure-storage-host-task.html 
 sidebar: sidebar 
-keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Vous pouvez utiliser le stockage affecté à un hôte ESXi en tant que datastore Virtual machine File System \(VMFS\) ou en tant que mappage de périphériques bruts \(RDM\). Les RDM ne sont pas pris en charge par le protocole NVMe over Fibre Channel.' 
+keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
+summary: 'Vous pouvez utiliser le stockage alloué à un hôte ESXi comme banque de données Virtual Machine File System (VMFS) ou comme mappage de périphérique brut (RDM). Les RDM ne sont pas pris en charge sur les protocoles NVMe over fabric (NVMe over FC, NVMe over RoCE, NVMe over TCP).' 
 ---
-= Configurez le stockage sur l'hôte dans E-Series - VMware
+= Configurer le stockage sur l'hôte dans E-Series pour VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez utiliser le stockage affecté à un hôte ESXi en tant que datastore VMFS (Virtual machine File System) ou RDM (Raw Device Mapping). Les RDM ne sont pas pris en charge par le protocole NVMe over Fibre Channel.
+Vous pouvez utiliser le stockage alloué à un hôte ESXi comme banque de données Virtual Machine File System (VMFS) ou comme mappage de périphérique brut (RDM). Les RDM ne sont pas pris en charge sur les protocoles NVMe over fabric (NVMe over FC, NVMe over RoCE, NVMe over TCP).
 
-Toutes les versions 6._x_ et 7 _x_ d'ESXi prennent en charge les versions 5 et 6 de VMFS.
+Toutes les versions actuelles d'ESXi prennent en charge les versions 5 et 6 de VMFS.
+
+
+NOTE: L'utilisation d'étendues VMFS sur VMware est déconseillée. Plutôt que d'ajouter un volume supplémentaire en tant qu'étendue à une banque de données VMFS existante pour augmenter la capacité, il est recommandé d'effectuer une opération DVE (https://kb.netapp.com/on-prem/E-Series/Management-Apps-KBs/How_to_expand_Volumes["Comment augmenter les volumes - NetApp Knowledge Base"^] sur le volume sous-jacent existant et d'étendre la banque de données VMFS.
+
+
+NOTE: Il est recommandé d'utiliser des RDM virtuels ou des disques virtuels plutôt que des RDM physiques sur les machines virtuelles Linux.
 
 .Étapes
 . Assurez-vous que les volumes mappés vers l'hôte ESXi ont été détectés correctement.
-. Pour obtenir des instructions sur la création de datastores VMFS ou l'utilisation de volumes en tant que RDM avec le client vSphere ou le client Web vSphere, reportez-vous au https://docs.vmware.com/index.html["Site de documentation VMware"^] .
+. Pour obtenir des instructions sur la création de banques de données VMFS, consultez https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-concepts-and-operations/create-a-vsphere-vmfs-datastore.html["Créer un datastore VMFS vSphere"^].
+. Pour obtenir des instructions sur la création de RDM, consultez https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/raw-device-mapping-in-vsphere.html["Raw Device Mapping dans vSphere"^].
 

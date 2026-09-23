@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Préparez-vous à installer votre système de stockage EF50 ou EF80 en préparant le site, en comprenant les précautions de levage pour votre système de stockage, en déballant les boîtes et en comparant le contenu au bon de livraison, et en enregistrant le système de stockage pour accéder aux avantages du support. 
 ---
-= Préparez-vous à installer - EF50 et EF80
+= Préparez-vous à installer un système de stockage EF50 ou EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,10 +21,10 @@ Préparez-vous à installer votre système de stockage EF50 ou EF80 en préparan
 Assurez-vous que l'emplacement et l'armoire ou le rayonnage que vous prévoyez d'utiliser répondent aux spécifications de votre système de stockage.
 
 .Étapes
-. Utilisez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour confirmer que votre site répond aux exigences environnementales et électriques de votre système de stockage.
+. Utilisez link:https://hwu.netapp.com["NetApp Hardware Universe"^] pour confirmer que votre site répond aux exigences environnementales et électriques de votre système de stockage.
 . Assurez-vous de disposer d'un espace suffisant dans vos armoires ou racks pour votre système de stockage et tout commutateur.
 +
-Au besoin, consultez  https://hwu.netapp.com["NetApp Hardware Universe"^] pour connaître les dimensions exactes de votre système de stockage.
+Au besoin, consultez link:https://hwu.netapp.com["NetApp Hardware Universe"^] pour connaître les dimensions exactes de votre système de stockage.
 
 +
 ** 2U pour un système de stockage
@@ -81,7 +81,7 @@ NOTE: S'il y a des écarts, notez-les pour une action ultérieure.
 Les éléments suivants sont quelques-uns des contenus que vous pourriez voir dans les boîtes.
 
 +
-Si nécessaire, consultez  https://hwu.netapp.com/["NetApp Hardware Universe"^] pour les autres câbles pris en charge et identifiez leur utilisation.
+Si nécessaire, consultez link:https://hwu.netapp.com["NetApp Hardware Universe"^] pour les autres câbles pris en charge et identifiez leur utilisation.
 
 +
 [cols="9,9,5"]
@@ -114,9 +114,12 @@ Si nécessaire, consultez  https://hwu.netapp.com/["NetApp Hardware Universe"^] 
 
 Après avoir vérifié que votre site répond aux spécifications de votre système de stockage et que vous avez confirmé que vous disposez de toutes les pièces commandées, vous devez enregistrer votre système de stockage.
 
-. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
+
+NOTE: Vous pouvez enregistrer votre système de stockage maintenant ou plus tard. Plus tard, au démarrage du système, vous serez invité à enregistrer votre système.
+
+. Notez le numéro de série (SN) de chaque contrôleur.
 +
-La procédure d'enregistrement nécessite le numéro de série (SN) de chaque contrôleur. Vous trouverez le numéro de série aux emplacements suivants :
+Vous trouverez le numéro de série aux emplacements suivants :
 
 +
 ** Sur chaque contrôleur
@@ -127,6 +130,8 @@ image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[exemple d'étiquette de nu
 
 
 
+. Créez un compte sur  http://mysupport.netapp.com/["Support NetApp"^] si vous n'en avez pas déjà un.
+. Enregistrez votre système en suivant les instructions de l’article de la base de connaissances NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Comment enregistrer un nouveau système"^].
 
 
 .Et la suite ?

@@ -16,6 +16,67 @@ Le tableau suivant décrit les nouvelles fonctionnalités des dernières version
 
 
 
+[[new-features-in-version-12-10]]
+== Nouvelles fonctionnalités dans la version 12.10
+
+[cols="35h,~"]
+|===
+| Nouvelle fonction | Description 
+
+
+ a| 
+Prise en charge de l'extension SAS pour les systèmes de stockage EF50 et EF80
+ a| 
+Les systèmes de stockage EF50 et EF80 prennent désormais en charge l'extension SAS, offrant ainsi une capacité et une flexibilité de stockage accrues. Grâce à l'extension SAS, vous pouvez connecter du stockage supplémentaire en ajoutant des baies de stockage aux systèmes EF50 et EF80, ce qui vous permet d'adapter votre environnement de stockage à vos besoins. Cette fonctionnalité est particulièrement avantageuse pour les organisations qui exigent des solutions de stockage haute capacité et souhaitent optimiser leur investissement dans les plateformes EF50 et EF80.
+
+
+
+ a| 
+Prise en charge de NVMe over TCP pour les systèmes de stockage E-Series
+ a| 
+Les systèmes de stockage E-Series prennent désormais en charge NVMe over TCP, offrant une option supplémentaire d'interface d'hôte pour un accès au stockage haute performance. NVMe over TCP permet une communication efficace et à faible latence entre le système de stockage et les hôtes connectés, en tirant parti des avantages du protocole NVMe sur les réseaux TCP/IP standard. Cette prise en charge améliore la polyvalence des systèmes E-Series, permettant aux organisations de les déployer dans des environnements où NVMe over TCP est privilégié ou requis.
+
+
+
+ a| 
+Améliorations de l'interface utilisateur pour SANtricity System Manager
+ a| 
+L'interface utilisateur de SANtricity System Manager a bénéficié d'améliorations supplémentaires visant à optimiser la navigation, l'ergonomie et l'expérience utilisateur globale. Ces améliorations comprennent une nouvelle disposition et une meilleure organisation des tâches de gestion, ainsi que des flux de travail plus intuitifs pour les opérations courantes de gestion du stockage.
+
+
+
+ a| 
+Prise en charge étendue de la plateforme E-Series pour la nouvelle interface utilisateur de SANtricity System Manager
+ a| 
+La nouvelle interface utilisateur de SANtricity System Manager, introduite dans la version 12.00 de SANtricity pour les systèmes de stockage EF80 et EF50, a été étendue pour prendre en charge des plateformes de stockage E-Series supplémentaires. Cela signifie que les utilisateurs qui gèrent une gamme plus large de systèmes de stockage E-Series peuvent désormais bénéficier de l’interface modernisée et des fonctionnalités d’utilisation améliorées. La prise en charge étendue inclut la compatibilité avec certains modèles de systèmes de stockage E-Series, permettant aux utilisateurs de profiter d’une navigation améliorée et de tâches de gestion rationalisées sur une plus grande partie de leur infrastructure de stockage.
+
+
+
+ a| 
+Prise en charge des disques à performances et capacité mixtes pour les systèmes EF80 et EF50
+ a| 
+Les systèmes de stockage EF80 et EF50 prennent désormais en charge les disques SSD NVMe Performance et Capacity au sein d'une même baie de stockage, sous réserve d'un nombre minimal de disques (6 pour Performance, 12 pour Capacity). Les disques Performance et Capacity doivent rester dans des pools et des groupes de volumes distincts.
+
+
+
+ a| 
+Augmentation de la limite de caractères pour les noms de volumes standard et thin
+ a| 
+La limite de caractères pour les noms de volumes standard et thin a été augmentée de 30 à 60 caractères.
+
+
+NOTE: La rétrogradation vers le logiciel SANtricity OS version 11.90 ou antérieure n'est pas prise en charge si des volumes standard ou fins existent avec des noms de plus de 30 caractères. Si vous prévoyez de rétrograder vers le logiciel SANtricity OS version 11.90 ou antérieure, modifiez les noms de tous les volumes standard ou fins dont le nom dépasse 30 caractères avant la rétrogradation.
+
+
+
+ a| 
+La limite minimale de délai d'inactivité pour l'interface utilisateur de SANtricity System Manager est désormais de 10 minutes
+ a| 
+La limite de délai d'inactivité pour l'interface utilisateur de SANtricity System Manager a été mise à jour avec un minimum de 10 minutes. Auparavant, la limite minimale de délai d'inactivité était de 15 minutes. Ce changement permet d'améliorer la sécurité en garantissant que l'interface utilisateur se déconnecte automatiquement après 10 minutes d'inactivité.
+
+|===
+
+
 [[new-features-in-version-12-0r1]]
 == Nouvelles fonctionnalités dans la version 12.0R1
 

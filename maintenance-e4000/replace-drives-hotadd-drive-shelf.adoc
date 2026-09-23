@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Remplacez un disque dans un système E4000 par un tiroir de 12 ou 24 disques. 
 ---
-= Ajoutez un tiroir disque à chaud - modules IOM12 ou IOM12B - E4000
+= Ajoutez à chaud un châssis de disque E4000 avec modules IOM12 ou IOM12B
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -65,7 +65,7 @@ NOTE: Si des événements critiques non résolus se sont produits au cours des d
 
 . Si des modules d'E/S sont connectés au matériel, procédez comme suit. Sinon, passez à l' <<step2_install_drive_shelf,Étape 2 : installez le tiroir disque et mettez-le sous tension.>>
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Sélectionnez l'icône *modules d'E/S (IOM)*.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[Icône IOM]
@@ -122,7 +122,7 @@ La figure suivante montre un exemple de connexion entre un tiroir disque supplé
 +
 image::../media/hot_e4000_cabling_1.png[Câblez le tiroir de lecteur]
 
-. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*.
+. Dans SANtricity System Manager, sélectionnez le menu : Hardware [Controllers and components].
 +
 
 NOTE: À ce stade de la procédure, un seul chemin d'accès actif vers le tiroir contrôleur n'est disponible.
@@ -168,7 +168,7 @@ Pour terminer l'ajout à chaud, vérifiez s'il n'y a pas d'erreur et vérifiez q
 .Étapes
 . Dans le Gestionnaire système SANtricity, cliquez sur *Accueil*.
 . Si le lien intitulé *Recover from problemes* apparaît au centre de la page, cliquez sur le lien et résolvez les problèmes indiqués dans le Recovery Guru.
-. Dans le Gestionnaire système SANtricity, cliquez sur *matériel*, puis faites défiler la liste vers le bas si nécessaire pour afficher le nouveau tiroir disque ajouté.
+. Dans SANtricity System Manager, sélectionnez le menu : Matériel [Contrôleurs et composants], puis faites défiler vers le bas, si nécessaire, pour afficher le nouveau tiroir de disque ajouté.
 . Pour les disques qui ont été installés dans un autre système de stockage, ajoutez un disque à la fois au tiroir qui vient d'être installé. Attendez que chaque lecteur soit reconnu avant d'insérer le disque suivant.
 +
 Lorsqu'un lecteur est reconnu par le système de stockage, la représentation de l'emplacement du lecteur dans la page *Hardware* s'affiche sous la forme d'un rectangle bleu.

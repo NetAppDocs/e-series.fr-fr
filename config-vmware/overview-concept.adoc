@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/overview-concept.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: 'Consultez les conditions d"utilisation de la méthode express pour configurer une baie E-Series et un hôte VMware.' 
 ---
-= Estimations (E-Series et VMware)
+= Hypothèses de configuration VMware Express pour le système de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -64,12 +64,13 @@ Provisionnement du stockage
  a| 
 * Vous n'utiliserez pas les volumes partagés.
 * Vous allez créer des pools plutôt que des groupes de volumes.
+* Pour garantir la compatibilité avec VMware, les volumes doivent être configurés pour utiliser l'émulation 512 octets (512e) lors de l'utilisation de disques de 4096 octets. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur la configuration d'un volume pour utiliser l'émulation 512 octets (512e).
 
 
 
 
  a| 
-Protocole : FC
+Protocole : Fibre Channel (FCP)
  a| 
 * Vous avez établi toutes les connexions FC côté hôte et activé le zoning des commutateurs.
 * Vous utilisez des commutateurs et des HBA FC pris en charge par NetApp.
@@ -102,6 +103,26 @@ Protocole : SAS
  a| 
 * Vous utilisez des HBA SAS pris en charge par NetApp.
 * Vous utilisez des versions de pilote et de micrologiciel SAS HBA répertoriées dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe sur RoCE (RDMA sur Ethernet convergé)
+ a| 
+* Vous utilisez des commutateurs Ethernet capables de gérer le trafic RDMA
+* Vous avez configuré les commutateurs Ethernet pour une mise en réseau sans perte en utilisant le contrôle de flux prioritaire (PFC) basé sur Differentiated Services Code Point (DSCP)
+* Vous utilisez les versions du pilote et du firmware RDMA indiquées dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
+
+
+
+
+ a| 
+Protocole : NVMe sur TCP
+ a| 
+* Vous utilisez des commutateurs Ethernet capables de gérer le trafic TCP
+* Vous avez configuré les commutateurs Ethernet conformément à la recommandation du fournisseur pour TCP.
+* Vous utilisez les versions du pilote réseau et du microprogramme indiquées dans le http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^].
 
 
 |===

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
 summary: 'Remplacez une carte d"interface hôte (HIC) EF300 ou EF600 défectueuse.' 
 ---
-= Remplacez la carte d'interface hôte (HIC) défectueuse - EF300 ou EF600
+= Remplacez un HIC défectueux dans un système de stockage EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -16,6 +16,9 @@ Suivez cette procédure pour remplacer une carte d'interface hôte (HIC) défect
 
 .Description de la tâche
 Lors du remplacement d'un HIC défaillant, vous devez mettre hors ligne un contrôleur pour placer le système dans un état non redondant, remplacer le HIC, puis remettre le contrôleur en ligne.
+
+
+NOTE: Il n'est pas nécessaire de mettre hors tension la baie de stockage EF300 et EF600 lors du remplacement d'une HIC du même type de protocole (par exemple, le remplacement d'une HIC Fibre Channel par une autre HIC Fibre Channel).
 
 .Avant de commencer
 * Révision link:hics-overview-supertask-concept.html["Conditions requises pour les mises à niveau des HIC EF300 ou EF600"].
@@ -262,7 +265,7 @@ Au besoin, installez la dernière version.
 
 . Vérifiez que tous les volumes ont été renvoyés au propriétaire préféré.
 +
-.. Sélectionnez menu:Storage[volumes]. Dans la page *tous les volumes*, vérifiez que les volumes sont distribués à leurs propriétaires préférés. Sélectionnez menu:More[change Ownership] pour afficher les propriétaires de volumes.
+.. Sélectionnez le menu : Stockage [Volumes]. Sur la page *Tous les volumes*, vérifiez que les volumes sont bien attribués à leurs propriétaires respectifs. Sélectionnez l’icône *ellipse* > *Changer de propriétaire* pour afficher les propriétaires des volumes.
 .. Si les volumes appartiennent tous au propriétaire préféré, passez à l'étape 6.
 .. Si aucun volume n'est renvoyé, vous devez le renvoyer manuellement. Accédez au menu:plus[redistribuez les volumes].
 .. Si seulement certains volumes sont renvoyés à leurs propriétaires préférés après la distribution automatique ou manuelle, vous devez vérifier le Recovery Guru pour les problèmes de connectivité hôte.

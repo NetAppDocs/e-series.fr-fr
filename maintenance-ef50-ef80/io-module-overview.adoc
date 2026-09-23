@@ -2,16 +2,16 @@
 permalink: maintenance-ef50-ef80/io-module-overview.html 
 sidebar: sidebar 
 keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
-summary: 'Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour la mise à niveau ou le remplacement des modules d"E/S afin d"améliorer la connectivité réseau et les performances.' 
+summary: 'Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour le remplacement ou la mise à niveau des modules d"E/S afin d"améliorer la connectivité réseau et les performances, et d"augmenter la capacité de stockage.' 
 ---
-= Aperçu de la maintenance des modules d'E/S - EF50 et EF80
+= Découvrez la maintenance des modules d'E/S pour les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour le remplacement ou la mise à niveau des modules d'E/S afin d'améliorer la connectivité réseau et les performances.
+Les systèmes de stockage EF50 et EF80 offrent une flexibilité pour le remplacement ou la mise à niveau des modules d'E/S afin d'améliorer la connectivité réseau et les performances, et d'augmenter la capacité de stockage.
 
 * link:io-module-replace.html["Remplacer un module d'E/S"]
 +
@@ -19,6 +19,10 @@ Lorsqu'un module d'E/S de votre système de stockage tombe en panne, vous pouvez
 
 * link:io-module-upgrade.html["Mettre à niveau un module d'E/S"]
 +
-Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage pour augmenter le nombre de ports hôtes pour une connectivité réseau améliorée et étendre la capacité de votre système à gérer le trafic de données.
+Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage pour augmenter le nombre de ports d'hôte afin d'améliorer la connectivité réseau, d'étendre la capacité de votre système à gérer le trafic de données et de connecter des baies d'extension SAS.
+
++
+
+NOTE: Les modules d'E/S d'extension SAS sont pris en charge sur les systèmes de stockage exécutant SANtricity 12.10 ou une version ultérieure.
 
 

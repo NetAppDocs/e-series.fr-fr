@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Avant de remplacer un lecteur E4000, vérifiez les exigences et les considérations. 
 ---
-= Conditions requises pour remplacer le lecteur - E4000
+= Exigences de remplacement du disque E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

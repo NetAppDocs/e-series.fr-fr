@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
 summary: 'Après avoir installé le matériel de votre système de stockage EF50 ou EF80, câblez les connexions de mise en miroir entre contrôleurs et les connexions réseau d"interface d"hôte. (Vous câblerez les ports de gestion ultérieurement, dans la section Configuration complète du système de stockage.)' 
 ---
-= Câbler le matériel - EF50 et EF80
+= Câblez le matériel pour les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Après avoir installé le matériel de votre système de stockage EF50 ou EF80, câblez les connexions de mise en miroir entre contrôleurs et les connexions réseau d'interface d'hôte. (Vous câblerez les ports de gestion ultérieurement, dans la section Configuration complète du système de stockage.)
+Après avoir installé le matériel de votre système de stockage EF50 ou EF80, câblez la mise en miroir entre contrôleurs, les connexions réseau hôte et les baies SAS, le cas échéant. (Vous câblerez les ports de gestion plus tard, dans la section « Configuration complète du système de stockage ».)
 
 .Description de la tâche
 * Le terme _module d'E/S_ est utilisé pour désigner les cartes d'interface d'hôte (HIC) dans cette procédure.
@@ -60,7 +60,10 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Câblage de con
 Câblez les connexions d'hôte de votre système de stockage en fonction de la topologie de votre réseau : connexion directe ou connexion via une structure.
 
 .Description de la tâche
-* Selon le modèle de votre système de stockage, le type de modules d'E/S d'hôte installés dans le système de stockage peut être Ethernet ou Fibre Channel (FC). Les exemples de câblage dans cette procédure montrent les deux types de modules d'E/S d'hôte pris en charge par les modèles de systèmes de stockage.
+* Selon le modèle de votre système de stockage et la version de SANtricity qu'il exécute, différents types de modules d'E/S hôte sont pris en charge. Les exemples de câblage de cette procédure illustrent les modules d'E/S hôte Ethernet et Fibre Channel (FC).
++
+Pour consulter tous les modules d'E/S hôte pris en charge et les priorités d'emplacement pour votre modèle de système de stockage, voir link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+
 * Les exemples de câblage ne montrent pas les cartes HBA FC 64Gb à 4 ports dans l'hôte 1 et l'hôte 2 ; cependant, si vous les avez installées, vous câblez chaque autre port de la même manière que celle indiquée pour les cartes HBA à 2 ports.
 
 
@@ -330,5 +333,93 @@ image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["Topologie EF80 co
 =====
 --
 ====
+
+
+[[step-3-cable-the-sas-shelf-connections]]
+== Étape 3 : Câblez les connexions du shelf SAS
+
+Les procédures suivantes montrent comment câbler les contrôleurs à une étagère DE460C ou à une pile de trois étagères DE460C.
+
+.Description de la tâche
+* Les exemples de câblage concernent les baies DE460C ; toutefois, le même câblage s’applique à toutes les baies SAS prises en charge. Voir link:https://hwu.netapp.com["NetApp Hardware Universe"^] pour les baies SAS prises en charge.
+* Pour connaître le nombre maximal d'étagères prises en charge par votre système de stockage et toutes vos options de câblage, telles que le câblage optique, consultez link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Les procédures de câblage indiquent des contrôleurs avec un module d'E/S SAS dans l'emplacement 3. Il s'agit de la seule configuration de module d'E/S SAS prise en charge pour SANtricity 12.10.
+* Les schémas de câblage montrent le câblage du contrôleur A en bleu et celui du contrôleur B en rouge.
+* Vous câblez toujours les contrôleurs et un ou plusieurs tiroirs de manière à ce qu'il y ait deux connexions de câble pour le chemin côté A (IOMA) et le chemin côté B (IOMB), comme indiqué dans les illustrations de câblage.
+* Vous utilisez les câbles de stockage fournis avec votre système de stockage, qui peuvent être du type suivant :
++
+*câble mini-SAS HD*
+
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[câble mini-SAS HD]
+
+
+
+[role="tabbed-block"]
+====
+.Option 1 : Une étagère DE460C
+--
+Câblez chaque contrôleur à chaque module IOM12 sur le shelf DE460C de sorte que les contrôleurs aient un chemin côté A (IOMA) et un chemin côté B (IOMB) vers le shelf.
+
+.Étapes
+. Câblez le port 3a du contrôleur A au port IOMA 1 de l'étagère.
+. Câblez le port 3b du contrôleur A au port 2 IOMA de l’étagère.
+. Câblez le port 3c du contrôleur A au port 3 IOMB de l’étagère.
+. Câblez le port 3d du contrôleur A au port 4 IOMB de l’étagère.
+. Câble du contrôleur B port 3a vers le port IOMA 3 de l'étagère.
+. Câble contrôleur B port 3b vers port 4 de l'IOMA de l'étagère.
+. Câble contrôleur B port 3c vers port 1 de l'IOMB de l'étagère.
+. Câble contrôleur B port 3d vers port 2 de l'IOMB de l'étagère.
+
+
+Une fois le câblage du tiroir terminé, le câblage doit ressembler à ce qui suit :
+
+image:../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg["Câblez les ports du contrôleur à un châssis DE460C"]
+
+--
+.Option 2 : Trois étagères DE460C
+--
+Connectez les trois étagères ensemble (connexions étagère à étagère), puis connectez chaque contrôleur à chaque extrémité de la pile d'étagères (étagère 1 et étagère 3), de sorte que les contrôleurs disposent d'un chemin côté A (IOMA) et d'un chemin côté B (IOMB) vers la pile d'étagères.
+
+. Câblez les connexions entre les étagères pour le chemin IOMA :
++
+.. Câble étagère 1 port IOMA 1 vers étagère 2 port IOMA 4.
+.. Câble étagère 1 port IOMA 2 vers étagère 2 port IOMA 3.
+.. Câblez le port IOMA 1 de l'étagère 2 au port IOMA 4 de l'étagère 3.
+.. Câble étagère 2 port IOMA 2 vers étagère 3 port IOMA 3.
+
+
+. Câblez les connexions entre les étagères pour le chemin IOMB :
++
+.. Câble étagère 1 port IOMB 1 vers étagère 2 port IOMB 3.
+.. Câble étagère 1 port IOMB 2 vers étagère 2 port IOMB 4.
+.. Câblez le port IOMB 1 de l'étagère 2 au port IOMB 3 de l'étagère 3.
+.. Câble étagère 2 port IOMB 2 vers étagère 3 port IOMB 4.
+
+
+. Câble du contrôleur A vers l'étagère 3 (chemin IOMA) et 1 (chemin IOMB) :
++
+.. Câble contrôleur A port 3a vers étagère 3 port IOMA 1
+.. Câblez le port 3b du contrôleur A au port 2 IOMA de l'étagère 3.
+.. Câblez le port 3c du contrôleur A au port 3 IOMB de l'étagère 1.
+.. Câblez le port 3d du contrôleur A au port 4 IOMB de l'étagère 1.
+
+
+. Câble du contrôleur B vers l'étagère 1 (chemin IOMA) et 3 (chemin IOMB) :
++
+.. Câble contrôleur B port 3a vers étagère 1 port IOMA 3.
+.. Câble contrôleur B port 3b vers étagère 1 port IOMA 4.
+.. Câble contrôleur B port 3c vers étagère 3 port IOMB 1.
+.. Câble contrôleur B port 3d vers étagère 3 port IOMB 2.
+
+
+
+
+Une fois que vous avez terminé de câbler les étagères, le câblage doit ressembler à ce qui suit :
+
+image:../media/drw_ef50-ef80_3_de460c_cabling_ieops-2992.svg["câblez les contrôleurs aux étagères 1 et 3 du DE460C"]
+
+--
+====
 .Et la suite ?
-Après avoir câblé les connexions de mise en miroir inter-contrôleurs et hôtes pour votre système de stockage, link:install-power-hardware.html["Mettez votre système de stockage sous tension"].
+Après avoir câblé votre système de stockage, link:install-power-hardware.html["Mettez votre système de stockage sous tension"].

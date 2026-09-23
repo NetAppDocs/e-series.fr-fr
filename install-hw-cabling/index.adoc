@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Connectez un hôte directement à un contrôleur ou utilisez des commutateurs. 
 ---
-= Câblage de votre système de stockage - E-Series
+= Découvrez le câblage des systèmes de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -75,4 +75,4 @@ E2760, E5660
 DE460C
 
 |===
-Pour plus d'informations sur le câblage permettant de prendre en charge les fonctions de mise en miroir, consultez le https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].
+Pour plus d'informations sur le câblage permettant de prendre en charge les fonctions de mise en miroir, consultez le https://www.netapp.com/pdf.html?item=/media/19405-tr-4839.pdf["Guide de déploiement et description des fonctionnalités de mise en miroir synchrone et asynchrone"^].

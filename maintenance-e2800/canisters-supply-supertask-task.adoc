@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: 'Remplacez un tiroir contrôleur ou un tiroir disque E2800 de 12 ou 24 disques qui comprend deux blocs d"alimentation avec ventilateurs intégrés.' 
 ---
-= Remplacez le bloc d'alimentation - E2800 (12 ou 24 disques)
+= Remplacez le bloc d'alimentation sur un châssis E2800 à 12 ou 24 disques
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -62,7 +62,7 @@ Vous pouvez trouver ces informations dans la zone Détails du gourou de la resta
 
 +
 .. Sélectionnez *matériel*.
-.. Examinez les icônes d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"] et de ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["'Icône de ventilateur'"]situées à droite des listes déroulantes *Shelf* pour déterminer quel shelf est celui qui présente le bloc d'alimentation défectueux.
+.. Consultez les icônes d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"] et de ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icône de ventilateur"] à droite des listes déroulantes *Étagère* pour déterminer quelle étagère présente une alimentation défectueuse.
 +
 Si un composant est défectueux, l'une de ces icônes ou les deux sont rouges.
 

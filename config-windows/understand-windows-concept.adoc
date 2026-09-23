@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez le workflow de configuration de Windows Express. 
 ---
-= Workflow Windows dans E-Series
+= Flux de travail de configuration Windows pour le système de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

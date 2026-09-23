@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Passez en revue les types de canister E4000 et les exigences. 
 ---
-= Remplacez le bloc d'alimentation - E4000
+= Remplacer une alimentation dans un système de stockage E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,13 +52,12 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 Vous pouvez trouver ces informations dans la zone Détails du gourou de la restauration ou vérifier les informations affichées pour la tiroir.
 
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Examinez les icônes d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"] et de ventilateur image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icône de ventilateur"]situées à droite des listes déroulantes *Shelf* pour déterminer quel shelf est celui qui présente le bloc d'alimentation défectueux.
 +
 Si un composant est défectueux, l'une de ces icônes ou les deux sont rouges.
 
-.. Lorsque vous trouvez le tiroir avec une icône rouge, sélectionnez *contrôleur & composants*.
-.. Sélectionnez l'une des alimentations.
+.. Lorsque vous trouvez l'étagère avec une icône rouge, sélectionnez l'une des alimentations électriques.
 .. Dans les onglets *blocs d'alimentation* et *ventilateurs*, observez l'état des blocs d'alimentation, des blocs d'alimentation et des ventilateurs pour déterminer quelle alimentation doit être remplacée.
 +
 Un composant ayant l'état *FAILED* doit être remplacé.

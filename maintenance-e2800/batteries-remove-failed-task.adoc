@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Après avoir retiré le boîtier du contrôleur du shelf, vous pouvez retirer la batterie. 
 ---
-= Retirez la batterie défectueuse - E2800
+= Retirez une batterie défectueuse d'un groupe E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

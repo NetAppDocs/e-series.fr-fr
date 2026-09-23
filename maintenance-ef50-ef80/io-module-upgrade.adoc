@@ -2,16 +2,16 @@
 permalink: maintenance-ef50-ef80/io-module-upgrade.html 
 sidebar: sidebar 
 keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
-summary: 'Vous pouvez mettre à niveau les modules d"E/S de votre système de stockage EF50 ou EF80 afin d"augmenter le nombre de ports d"hôte pour une connectivité réseau améliorée et d"accroître la capacité de votre système à gérer le trafic de données.' 
+summary: 'Vous pouvez mettre à niveau les modules d"E/S de votre système de stockage EF50 ou EF80 pour augmenter le nombre de ports d"hôte afin d"améliorer la connectivité réseau, étendre la capacité de votre système à gérer le trafic de données et connecter des baies d"extension SAS.' 
 ---
-= Mettre à niveau les modules d'E/S - EF50 et EF80
+= Mettez à niveau les modules d'E/S dans un système de stockage EF50 ou EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage EF50 ou EF80 afin d'augmenter le nombre de ports d'hôte pour une connectivité réseau améliorée et d'accroître la capacité de votre système à gérer le trafic de données.
+Vous pouvez mettre à niveau les modules d'E/S de votre système de stockage EF50 ou EF80 pour augmenter le nombre de ports d'hôte afin d'améliorer la connectivité réseau, étendre la capacité de votre système à gérer le trafic de données et connecter des baies d'extension SAS.
 
 .Description de la tâche
 * Dans cette procédure, le terme _module d'E/S_ est utilisé à la place de cartes d'interface d'hôte (HIC).
@@ -32,24 +32,25 @@ Il n'est pas nécessaire de retirer les contrôleurs du châssis, car les module
 [[step-1-prepare-to-upgrade-io-modules]]
 == Étape 1 : Préparez-vous à mettre à niveau les modules d'E/S
 
-Préparez la mise à niveau des modules d'E/S en planifiant une fenêtre de maintenance avec interruption, en rassemblant les outils et équipements nécessaires et en sauvegardant la base de données de configuration du système de stockage.
+Préparez la mise à niveau des modules d'E/S en planifiant une fenêtre de maintenance pour l'interruption, en mettant à jour le firmware, en rassemblant les outils et équipements nécessaires et en sauvegardant la base de données de configuration du système de stockage.
 
 .Étapes
 . Planifiez une fenêtre de maintenance avec interruption pour cette procédure. Vous ne pouvez pas accéder aux données sur le système de stockage tant que vous n'avez pas terminé cette procédure avec succès. Comme les deux contrôleurs doivent avoir la même configuration de module d'E/S lorsqu'ils sont sous tension, l'alimentation doit être coupée lorsque vous mettez à niveau les modules d'E/S.
+. Mettez à jour le micrologiciel vers la dernière version. Pour mettre à jour le micrologiciel, suivez les instructions dans link:../upgrade-santricity/index.html["Mise à niveau de SANtricity OS"^]
 . Assurez-vous de disposer des éléments suivants :
 +
 ** Les nouveaux modules d'E/S vers lesquels vous effectuez la mise à niveau.
 +
-Assurez-vous que les modules d'E/S vers lesquels vous effectuez la mise à niveau sont pris en charge par votre système de stockage, que vous disposez du même type et du même nombre de modules d'E/S pour chaque contrôleur, et que vous comprenez la priorité des emplacements (le nouveau module d'E/S doit être installé dans le même emplacement sur chaque contrôleur).
+Assurez-vous que les modules d'E/S vers lesquels vous effectuez la mise à niveau sont compatibles avec votre système de stockage et votre version de SANtricity, que vous disposez du même type et du même nombre de modules d'E/S pour chaque contrôleur, et que vous comprenez la priorité des emplacements (le nouveau module d'E/S doit être installé dans le même emplacement sur chaque contrôleur).
+
++
+Vous pouvez confirmer les modules d'E/S pris en charge et la priorité des emplacements pour votre système de stockage à  https://hwu.netapp.com["NetApp Hardware Universe"^].
 
 +
 
 CAUTION: *Possibilité de perte d'accès aux données* -- La présence de modules d'E/S incompatibles ou mal appariés entraîne le verrouillage des contrôleurs lors de la mise sous tension.
 
-+
-Si nécessaire, vous pouvez vérifier les modules d'E/S pris en charge et la priorité des emplacements pour votre système de stockage à https://hwu.netapp.com["NetApp Hardware Universe"^].
-
-** Câbles pour connecter les nouveaux modules d'E/S à votre réseau.
+** Câbles pour connecter les nouveaux modules d'E/S à votre réseau ou à vos tiroirs d'extension SAS.
 ** Un bracelet ESD ou vous avez pris d'autres précautions antistatiques.
 ** Une surface de travail plane et antistatique.
 ** Une station de gestion avec un navigateur pouvant accéder à SANtricity System Manager pour les contrôleurs.
@@ -151,7 +152,9 @@ Icône NV et voyant NV Caching Active sur le contrôleur
 Débranchez les câbles des modules d'E/S que vous souhaitez mettre à niveau (sauf si vous disposez de modules d'E/S de masquage), remplacez les modules d'E/S ou les modules d'E/S de masquage par les nouveaux modules d'E/S, puis câblez les nouveaux modules d'E/S.
 
 .Description de la tâche
-Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+* Vous commencez avec un contrôleur, puis vous répétez les étapes pour l'autre contrôleur.
+* L'illustration montre le retrait d'un module d'E/S de l'emplacement 2. Selon le type de module d'E/S vers lequel vous effectuez la mise à niveau, l'emplacement peut être différent.
+
 
 .Étapes
 . Si vous n'êtes pas déjà mis à la terre, mettez-vous à la terre correctement.
@@ -195,9 +198,11 @@ Vous pouvez utiliser la languette située à gauche et la vis moletée pour ins�
 .. Tournez la vis moletée dans le sens des aiguilles d'une montre pour serrer.
 
 
-. Connectez le module d'E/S au réseau hôte.
+. Câblez le module d'E/S au réseau hôte ou au tiroir d'extension SAS.
 +
-Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu relatif à l'installation et à la configuration du système pour le câblage du réseau hôte.
+** Pour le câblage du réseau hôte, vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel"^] du contenu d'installation et de configuration du système relative au câblage du réseau hôte.
+** Pour le câblage des tiroirs d'extension SAS, vous pouvez utiliser la link:../install-hw-cabling/hotadd-drive-shelf-task.html["Ajoutez à chaud une étagère de disques dans un système de stockage E-Series"^] procédure.
+
 
 . Répétez ces étapes pour mettre à niveau un module d'E/S dans l'autre contrôleur.
 
@@ -207,7 +212,7 @@ Vous pouvez utiliser la section link:../install-hw-ef50-ef80/install-cable.html[
 [[step-4-power-on-both-controllers]]
 == Étape 4 : Mettez les deux contrôleurs sous tension
 
-Mettez les deux contrôleurs sous tension.
+Mettez les deux contrôleurs sous tension, vérifiez que la communication entre les contrôleurs est rétablie, puis confirmez que les contrôleurs fonctionnent correctement.
 
 .Étapes
 . Branchez le câble d'alimentation sur les deux contrôleurs.
@@ -297,3 +302,6 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 . Si vous devez vérifier et modifier le protocole du module d'E/S hôte, utilisez la procédure xref:io-module-change-protocol.html[Modifier le protocole du module d'E/S hôte pour un EF50 ou un EF80].
 
+
+.Et ensuite
+La mise à niveau des modules d'E/S de votre système de stockage est terminée. Vous pouvez reprendre vos opérations normales.

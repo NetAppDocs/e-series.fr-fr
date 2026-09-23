@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez le fichier multipath.conf, qui est le fichier de configuration du démon multipathd. 
 ---
-= Configuration du fichier multipath.conf dans E-Series - Linux (iSCSI)
+= Le fichier multipath.conf pour les hôtes Linux E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: 'Remplacez un tiroir de contrôleur de 60 disques ou un tiroir de disque, qui inclut deux blocs d"alimentation pour la redondance de l"alimentation.' 
 ---
-= Remplacez le boîtier d'alimentation - E4000 (60 disques)
+= Remplacez un bloc d'alimentation dans un châssis E4000 à 60 disques
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -56,13 +56,12 @@ Le fichier est enregistré dans le dossier Téléchargements de votre navigateur
 
 . Dans le Gestionnaire système SANtricity, déterminez quelle cartouche d'alimentation est défectueuse.
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Regardez l'icône d'alimentation image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icône d'alimentation"]située à droite des listes déroulantes *Shelf* pour déterminer quel shelf est le boîtier d'alimentation défectueux.
 +
 Si un composant est défectueux, cette icône est rouge.
 
-.. Lorsque vous trouvez le tiroir avec une icône rouge, sélectionnez *contrôleur & composants*.
-.. Sélectionnez le boîtier électrique ou l'icône d'alimentation rouge.
+.. Lorsque vous trouvez l'étagère avec une icône rouge, sélectionnez soit la cartouche d'alimentation, soit l'icône d'alimentation rouge.
 .. Dans l'onglet *blocs d'alimentation*, examinez les États des blocs d'alimentation pour déterminer quel réservoir d'alimentation doit être remplacé.
 +
 Un composant ayant l'état *FAILED* doit être remplacé.

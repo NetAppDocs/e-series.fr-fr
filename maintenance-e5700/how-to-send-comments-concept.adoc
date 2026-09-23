@@ -2,9 +2,9 @@
 permalink: maintenance-e5700/how-to-send-comments-concept.html 
 sidebar: sidebar 
 keywords: improve, quality, documentation, feedback, automatic, notification, production-level, ga, fcs, document 
-summary: 'Vous pouvez nous aider à améliorer la qualité de notre documentation en nous envoyant vos commentaires. Vous pouvez recevoir une notification automatique lorsque la documentation au niveau de production \(GA/FCS\) est publiée au départ ou que des modifications importantes sont apportées aux documents existants de niveau de production.' 
+summary: 'Vous pouvez nous aider à améliorer la qualité de notre documentation en nous envoyant vos commentaires. Vous pouvez recevoir une notification automatique lorsque la documentation au niveau de production (GA/FCS) est publiée au départ ou lorsque des modifications importantes sont apportées aux documents existants de niveau de production.' 
 ---
-= Comment envoyer des commentaires sur la documentation et recevoir des notifications de mise à jour
+= Envoyez des commentaires sur la documentation et recevez des notifications de mise à jour
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

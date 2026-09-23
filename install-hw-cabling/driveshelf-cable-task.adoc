@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Connectez chaque contrôleur du tiroir contrôleur à un module d"E/S (IOM) d"un tiroir disque.' 
 ---
-= Câblage du tiroir contrôleur au tiroir disque (E-Series)
+= Câbler un châssis de contrôleur E-Series à un châssis de disque
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,15 +13,15 @@ summary: 'Connectez chaque contrôleur du tiroir contrôleur à un module d"E/S 
 [role="lead"]
 Vous devez connecter chaque contrôleur du tiroir contrôleur à un module d'E/S (IOM) d'un tiroir disque.
 
-Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
-
+.Description de la tâche
+* Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
++
 
 NOTE: Les modules IOM12C sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.
 
+* Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
+* Si vous câblez un système de stockage EF50 ou EF80 à des baies d'extension SAS dans le cadre d'une nouvelle installation de système, consultez link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel pour les systèmes de stockage EF50 et EF80"] procédure.
 
-NOTE: Cette procédure concerne les remplacements ou les remplacements à chaud de module d'E/S de tiroir similaires. Cela signifie que vous ne pouvez remplacer qu'un module IOM12 par un autre module IOM12 ou remplacer un module IOM12C par un autre module IOM12C. (Votre tiroir peut être équipé de deux modules IOM12 ou de deux modules IOM12C.)
-
-Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
 
 
 

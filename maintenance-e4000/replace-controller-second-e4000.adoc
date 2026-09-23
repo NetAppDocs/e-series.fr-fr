@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Ajouter un deuxième réservoir - E4000
+= Ajoutez un deuxième boîtier de contrôleur à une matrice E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,7 +39,7 @@ Vérifier que le nouveau contrôleur possède la même référence que le contr�
 . Repérez les étiquettes d'adresse MAC et de référence des FRU à l'arrière du boîtier du contrôleur.
 . Dans le Gestionnaire système SANtricity, localisez la référence de remplacement du boîtier du contrôleur installé.
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware [Controllers and components].
 .. Localisez le tiroir contrôleur, marqué par l'icône du contrôleur.
 .. Cliquez sur l'icône du contrôleur image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF de l'icône du contrôleur"].
 .. Sélectionnez le contrôleur et cliquez sur *Suivant*.
@@ -324,7 +324,7 @@ Le transfert du contrôle commence.
 . Après le redémarrage des contrôleurs, distribuer en option les volumes entre le contrôleur A et le nouveau contrôleur B.
 +
 .. Sélectionnez *stockage › volumes*.
-.. Dans l'onglet tous les volumes, sélectionnez *plus › Modifier la propriété*.
+.. Dans l'onglet Tous les volumes, sélectionnez *icône ellipse › Changer la propriété*.
 .. Tapez la commande suivante dans la zone de texte : `change ownership`
 +
 Le bouton Modifier la propriété est activé.

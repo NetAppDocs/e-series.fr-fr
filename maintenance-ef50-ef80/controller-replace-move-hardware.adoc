@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, move the controller module hardware 
 summary: Remplacez le contrôleur défectueux de votre système de stockage EF50 ou EF80 en retirant le contrôleur, en déplaçant les composants vers le contrôleur de remplacement et en installant le contrôleur de remplacement. 
 ---
-= Remplacez le contrôleur - EF50 et EF80
+= Remplacez le contrôleur sur les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

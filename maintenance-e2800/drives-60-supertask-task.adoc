@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive drawer, replacing E2800 drive drawer, E2800 replace drive drawer, replacing E2800 drive drawer, E2800, E-Series, eseries 
 summary: 'Remplacement d"un tiroir disque dans un tiroir contrôleur E2860 ou un tiroir disque DE460C' 
 ---
-= Remplacement d'un tiroir disque - E2800 (tiroir de 60 disques)
+= Remplacez un tiroir de lecteur dans un châssis E2800 à 60 lecteurs
 :allow-uri-read: 
 :experimental: 
 :icons: font

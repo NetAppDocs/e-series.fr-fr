@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/sas-perform-specific-task.html 
 sidebar: sidebar 
-keywords: sas, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: sas, express vmware configuration, software configuration, vmware host, E2800, E5700, E4000, E-Series, eseries 
 summary: Pour le protocole SAS, vous déterminez les adresses de port hôte et définissez les paramètres recommandés. 
 ---
-= Effectuez des tâches spécifiques à SAS dans les systèmes E-Series - VMware
+= Configurer les ports hôtes SAS et les paramètres pour VMware dans E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,32 +15,12 @@ Pour le protocole SAS, vous déterminez les adresses de port hôte et définisse
 
 
 
-[[step-1-determine-sas-host-identifiers-vmware]]
-== Étape 1 : détermination des identifiants d'hôtes SAS--VMware
+[[step-1-record-your-configuration]]
+== Étape 1 : Enregistrez votre configuration
 
-Recherchez les adresses SAS à l'aide de l'utilitaire HBA, puis utilisez le BIOS HBA pour définir les paramètres de configuration appropriés.
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la feuille de calcul suivante pour consigner les informations de configuration de stockage spécifiques à votre protocole. Vous aurez besoin de ces informations lors de l'exécution des tâches de provisionnement.
 
-.Description de la tâche
-Consultez les instructions relatives aux utilitaires HBA :
-
-* La plupart des fournisseurs HBA proposent un utilitaire HBA.
-
-
-.Étapes
-. Téléchargez l'utilitaire HBA à partir du site Web du fournisseur de votre carte HBA.
-. Installez l'utilitaire.
-. Utilisez le BIOS HBA pour sélectionner les paramètres appropriés à votre configuration.
-+
-Pour connaître les paramètres appropriés, reportez-vous à la colonne Notes du http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^] pour recommandations.
-
-
-
-
-
-[[step-2-record-your-configuration]]
-== Étape 2 : enregistrez votre configuration
-
-Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
+L'illustration montre un hôte connecté directement à un système de stockage E-Series avec des connexions redondantes (en supposant un adaptateur hôte SAS HBA à 4 ports). La première connexion redondante est indiquée par les lignes rouges ; la seconde connexion redondante est indiquée par les lignes bleues. Le nombre de ports dépend du nombre de ports hôtes. Vous pouvez n'avoir que 2 ports hôtes. Dans ce cas, il est recommandé d'utiliser au moins la première connexion redondante.
 
 image::../media/sas_topology_diagram_conf-vmw.gif[Schéma : topologie SAS]
 
@@ -73,7 +53,7 @@ Port 1 de l'hôte (initiateur) connecté au contrôleur A, port 1
  a| 
 3
  a| 
-Port 1 de l'hôte (initiateur) connecté au contrôleur B, port 1
+Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
  a| 
 
 
@@ -81,7 +61,7 @@ Port 1 de l'hôte (initiateur) connecté au contrôleur B, port 1
  a| 
 4
  a| 
-Port 2 de l'hôte (initiateur) connecté au contrôleur A, port 1
+Port 3 de l’hôte (initiateur) connecté au contrôleur A, port 1
  a| 
 
 
@@ -89,33 +69,54 @@ Port 2 de l'hôte (initiateur) connecté au contrôleur A, port 1
  a| 
 5
  a| 
-Port 2 de l'hôte (initiateur) connecté au contrôleur B, port 1
+Port 4 de l’hôte (initiateur) connecté au contrôleur B, port 1
  a| 
 
 |===
 
 
-[[target-identifiers]]
-=== Identifiants cibles
+[[host-mapping-information]]
+=== Informations de cartographie des hôtes
 
-Les configurations recommandées se composent de deux ports cibles.
+[cols="35h,~"]
+|===
+| Nom d'hôte de mappage |  
 
 
-
-[[mapping-host-name]]
-=== Nom d'hôte de mappage
-
+| Type de système d'exploitation hôte |  
 |===
 
 
- a| 
-Nom d'hôte de mappage
- a| 
+[[step-2-determine-sas-host-identifiers]]
+== Étape 2 : Déterminer les identifiants d’hôte SAS
+
+Trouvez les adresses SAS à l'aide d'esxcli ou de l'utilitaire HBA.
+
+.Description de la tâche
+Consultez les instructions relatives aux utilitaires HBA :
+
+* La plupart des fournisseurs HBA proposent un utilitaire HBA.
 
 
+.Étapes
+. Connectez-vous à l'hôte ESXi à l'aide de SSH ou du shell ESXi. Pour activer le shell ESXi, voir https://knowledge.broadcom.com/external/article/311213/using-esxi-shell-in-esxi.html["Utilisation de l'ESXi Shell dans ESXi"^].
+. Exécutez la commande suivante :
++
+[listing]
+----
+esxcli storage core adapter list
+----
+. Enregistrez l'identifiant de l'adresse SAS de l'initiateur (UID au format - sas.<SAS_Address>). Le résultat sera similaire à cet exemple :
++
+[listing]
+----
+HBA Name  Driver       Link State  UID                   Capabilities         Description
+--------  ----------   ----------  --------------------  -------------------  -----------
+vmhba1    lsi_msgpt35  link-n/a    sas.5b083fe0ca0e7000                       (0000:03:00.0) Avago (LSI Logic) SAS3008 12Gbps SAS HBA external
+----
 
- a| 
-Type de système d'exploitation hôte
- a| 
 
-|===
+Dans l'exemple ci-dessus, l'UID n'affiche que l'adresse SAS de base. Pour les autres ports, les 14 premiers caractères restent constants, et seuls les deux derniers caractères varient pour représenter différents ports. Généralement, le dernier chiffre augmente simplement de 1 pour chaque port. Disposer de l'adresse SAS de base suffit généralement à identifier l'adaptateur hôte lors du mappage de l'hôte, car le système de stockage E-Series détectera et listera automatiquement les adresses SAS des autres ports pour la sélection. L'utilitaire HBA du fournisseur peut aider à obtenir l'adresse SAS de chaque port.
+
+
+NOTE: Une autre option de commande est `esxcli storage san sas list`. Celle-ci affichera plus de détails et l’adresse SAS de base au format hexadécimal, séparée par des deux-points.

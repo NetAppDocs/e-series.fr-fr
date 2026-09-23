@@ -1,0 +1,243 @@
+---
+permalink: config-vmware/nvme-fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: NVMe over FC, express vmware configuration, software configuration, vmware host, E5700, EF300, EF600, EF50, EF80, E-Series, eseries 
+summary: Pour le protocole NVMe over Fibre Channel, vous pouvez configurer les switchs et déterminer les identifiants des ports hôte. 
+---
+= Configurez NVMe sur des commutateurs FC pour VMware dans le système de stockage E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole NVMe over Fibre Channel, vous pouvez configurer les switchs et déterminer les identifiants des ports hôte.
+
+
+NOTE: Pour garantir la compatibilité avec VMware, les volumes doivent être configurés pour utiliser l'émulation 512 octets (512e) lors de l'utilisation de disques de 4096 octets. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur la configuration d'un volume pour utiliser l'émulation 512 octets (512e).
+
+
+NOTE: Lors de la planification de votre configuration NVMe sur FC, n'oubliez pas que la  https://configmax.broadcom.com/guest["Guide des limites de configuration VMware"^] indique que le nombre maximal de ports initiateurs NVMe FC pris en charge par serveur est de 2. Vous devez tenir compte de cette exigence afin d'éviter de configurer un trop grand nombre de chemins.
+
+
+
+[[step-1-record-your-configuration]]
+== Étape 1 : Enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la feuille de calcul suivante pour consigner les informations de configuration du stockage NVMe sur Fibre Channel. Vous aurez besoin de ces informations lors de l'exécution des tâches de provisionnement.
+
+L'illustration montre un hôte connecté à un système de stockage E-Series dans deux zones. Une zone est indiquée par les lignes rouges ; l'autre zone est indiquée par les lignes bleues. Chaque zone contient un port initiateur et la moitié de tous les ports cibles. Le nombre de ports du contrôleur varie en fonction du modèle de contrôleur et du nombre de cartes d'interface d'hôte (HIC). Vous pouvez disposer de plus de ports (jusqu'à 12 par contrôleur). Imprimez des fichiers PDF supplémentaires si nécessaire.
+
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identifiants de port NVMe sur Fibre Channel]
+
+
+
+[[host-identifiers]]
+=== Identifiants d'hôte
+
+|===
+| N° de légende | Connexions de port hôte (initiateur) | WWPN 
+
+
+ a| 
+1
+ a| 
+Hôte
+ a| 
+_non applicable_
+
+
+
+ a| 
+2
+ a| 
+Port hôte 0 vers zone de commutation FC 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Port hôte 1 vers zone de commutation FC 1
+ a| 
+
+|===
+
+
+[[target-identifiers]]
+=== Identifiants cibles
+
+|===
+| N° de légende | Connexions de port (cible) du contrôleur de matrice | WWPN 
+
+
+ a| 
+3
+ a| 
+Commutateur
+ a| 
+_non applicable_
+
+
+
+ a| 
+6
+ a| 
+Contrôleur de baie (cible)
+ a| 
+_non applicable_
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Contrôleur A, port 2 vers commutateur FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur A, port 3 vers commutateur FC 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Contrôleur A, port 4 vers commutateur FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 1 vers le commutateur FC 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Contrôleur B, port 2 vers commutateur FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Contrôleur B, port 3 vers commutateur FC 2
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Contrôleur B, port 4 vers commutateur FC 2
+ a| 
+
+|===
+
+
+[[host-mapping-information]]
+=== Informations de cartographie des hôtes
+
+[cols="35h,~"]
+|===
+| Nom d'hôte de mappage |  
+
+
+| Type de système d'exploitation hôte |  
+
+
+| NQN hôte |  
+
+
+| NQN cible |  
+|===
+
+
+[[step-2-determine-the-host-ports-wwpns]]
+== Étape 2 : Déterminez les WWPN des ports hôtes
+
+Pour configurer la segmentation FC, vous devez déterminer le nom WWPN (World port name) de chaque port initiateur.
+
+.Étapes
+. Connectez-vous à l'hôte ESXi à l'aide de SSH ou du shell ESXi. Pour activer le shell ESXi, voir https://knowledge.broadcom.com/external/article/311213/using-esxi-shell-in-esxi.html["Utilisation de l'ESXi Shell dans ESXi"^].
+. Exécutez la commande suivante :
++
+[listing]
+----
+esxcli storage core adapter list
+----
+. Enregistrez les identifiants WWPN de l'initiateur (UID au format fc.WWNN:WWPN). Le résultat sera similaire à cet exemple :
++
+[listing]
+----
+HBA Name  Driver    Link State  UID                                   Capabilities         Description
+--------  --------  ----------  ------------------------------------  -------------------  -----------
+vmhba4    lpfc      link-up     fc.200070b7e4395530:100070b7e4395530  Second Level Lun ID  (0000:5e:00.0) Emulex Corporation Emulex LPe35000/LPe36000 Fibre Channel Adapter
+vmhba5    lpfc      link-up     fc.200070b7e4395531:100070b7e4395531  Second Level Lun ID  (0000:5e:00.1) Emulex Corporation Emulex LPe35000/LPe36000 Fibre Channel Adapter
+vmhba64   lpfc      link-up     fc.200070b7e4395530:100070b7e4395530                       (0000:5e:00.0) Emulex Corporation Emulex LPe35000/LPe36000 Fibre Channel Adapter
+vmhba65   lpfc      link-up     fc.200070b7e4395531:100070b7e4395531                       (0000:5e:00.1) Emulex Corporation Emulex LPe35000/LPe36000 Fibre Channel Adapter
+
+----
+
+
+Dans l'exemple ci-dessus, l'UID de vmhba4 et vmhba64 ainsi que de vmhba5 et vmhba65 est identique. Ce comportement est attendu pour les adaptateurs FC prenant en charge à la fois FCP et NVMe over FC. Notez chaque WWPN unique.
+
+
+NOTE: Une autre option de commande est `esxcli storage san fc list`. Celle-ci affichera plus de détails et le WWPN au format hexadécimal, séparés par des deux-points.
+
+. Exécutez la commande suivante et notez le NQN de l'hôte (cela sera nécessaire ultérieurement lors de la configuration des mappages d'hôtes) :
++
+[listing]
+----
+esxcli nvme info get
+----
+
+
+
+
+[[step-3-configure-the-nvmefc-switches]]
+== Étape 3 : Configurer les commutateurs NVMe/FC
+
+La configuration (segmentation) des commutateurs NVMe over Fibre Channel (FC) permet aux hôtes de se connecter à la baie de stockage et de limiter le nombre de chemins. Vous pouvez segmenter les commutateurs à l'aide de l'interface de gestion.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Identifiants d'administrateur pour les commutateurs.
+* WWPN de chaque port initiateur hôte et de chaque port cible de contrôleur connecté au commutateur. (Utilisez votre utilitaire HBA pour la découverte.)
+
+
+
+NOTE: L'utilitaire HBA d'un fournisseur peut être utilisé pour mettre à niveau et obtenir des informations spécifiques sur le HBA. Reportez-vous à la section support du site Web du fournisseur pour obtenir des instructions sur l'utilisation de l'utilitaire HBA.
+
+.Description de la tâche
+Chaque port initiateur doit se trouver dans une zone distincte avec l'ensemble des ports cibles correspondants. Pour plus de détails sur la segmentation de vos commutateurs, reportez-vous à la documentation du fournisseur du commutateur.
+
+.Étapes
+. Connectez-vous au programme d'administration des commutateurs FC, puis sélectionnez l'option de configuration du zoning.
+. Créer une nouvelle zone qui inclut le premier port initiateur hôte et qui inclut également tous les ports cibles qui se connectent au même commutateur FC que l'initiateur.
+. Créer des zones supplémentaires pour chaque port d'initiateur hôte FC dans le commutateur.
+. Enregistrer les zones, puis activer la nouvelle configuration de zoning.
+
+
+Veuillez consulter la documentation du fournisseur du commutateur pour obtenir des instructions détaillées sur la configuration des zones.

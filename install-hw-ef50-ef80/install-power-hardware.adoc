@@ -4,19 +4,138 @@ sidebar: sidebar
 keywords: ef50, ef80, connect power cables 
 summary: Après avoir câblé les connexions de mise en miroir et de réseau hôte du contrôleur pour votre système de stockage EF50 ou EF80, vous mettez les contrôleurs sous tension. 
 ---
-= Mettez sous tension le matériel - EF50 et EF80
+= Mettez sous tension le matériel des systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Après avoir câblé les connexions de mise en miroir inter-contrôleurs et hôtes pour votre système de stockage EF50 ou EF80, vous mettez les contrôleurs sous tension.
+Après avoir câblé votre système de stockage EF50 ou EF80, vous mettez sous tension les étagères et attribuez des identifiants d'étagère (le cas échéant), puis vous mettez sous tension les contrôleurs.
 
 .Avant de commencer
 Prenez les précautions anti-statiques.
 
+
+
+[[step-1-power-on-the-shelves-and-assign-shelf-ids]]
+== Étape 1 : Mettez les étagères sous tension et attribuez-leur des ID d'étagère
+
+Mettez les tiroirs sous tension, puis attribuez un identifiant unique à chaque tiroir.
+
+.Description de la tâche
+* L'attribution d'un identifiant unique à chaque tiroir garantit que le tiroir est distinct au sein de votre système de stockage.
++
+Un identifiant de tiroir valide est compris entre 01 et 99.
+
++
+Les étagères internes (stockage), qui sont intégrées aux contrôleurs, se voient attribuer un ID d'étagère fixe de 00.
+
+* Vous devez redémarrer le tiroir (éteindre l'interrupteur d'alimentation de chaque alimentation du tiroir SAS, attendre au moins 10 secondes, puis remettre l'alimentation en marche) pour que l'identifiant du tiroir soit pris en compte.
+
+
 .Étapes
+. Mettez l’étagère sous tension en connectant d’abord les cordons d’alimentation à l’étagère, en les fixant en place avec le dispositif de retenue des cordons d’alimentation, en connectant les cordons d’alimentation à des sources d’alimentation sur différents circuits, puis en allumant l’interrupteur d’alimentation sur chacune des alimentations (à l’arrière de l’étagère).
++
+L'étagère s'allume et démarre automatiquement lorsqu'elle est mise sous tension.
+
+. Retirez le capuchon latéral gauche pour accéder au bouton d'identification orange de l'étagère sur la façade.
++
+image::../media/drw_shelf_id_sas_ieops-2187.svg[Modifier l'ID du tiroir SAS]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numéro 1]
+ a| 
+Embout d'étagère
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numéro 2]
+ a| 
+panneau du tiroir
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Appel numéro 3]
+ a| 
+Bouton d'identification de l'étagère
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Appel numéro 4]
+ a| 
+Numéro d'identification de l'étagère
+
+|===
+. Modifiez le premier chiffre de l'identifiant du tiroir :
++
+.. Maintenez le bouton d'identification de l'étagère enfoncé jusqu'à ce que le premier chiffre sur l'écran numérique clignote, puis relâchez le bouton.
++
+Le clignotement du numéro peut prendre jusqu'à 15 secondes. Cela active le mode de programmation de l'ID du tiroir.
+
++
+
+NOTE: Si l'ID met plus de 15 secondes à clignoter, appuyez de nouveau sur le bouton d'identification du tiroir et maintenez-le enfoncé en vous assurant de l'enfoncer complètement.
+
+.. Appuyez sur le bouton d'identification de l'étagère et relâchez-le pour faire avancer le numéro jusqu'à atteindre le chiffre souhaité, de 0 à 9.
++
+La durée de chaque pression et relâchement peut être aussi courte qu'une seconde.
+
++
+Le premier chiffre continue de clignoter.
+
+
+
+. Modifiez le deuxième chiffre de l'identifiant de l'étagère :
++
+.. Maintenez le bouton enfoncé jusqu'à ce que le deuxième chiffre sur l'affichage numérique clignote.
++
+Le chiffre peut mettre jusqu'à trois secondes à clignoter.
+
++
+Le premier chiffre affiché sur l'écran numérique cesse de clignoter.
+
+.. Appuyez sur le bouton d'identification de l'étagère et relâchez-le pour faire avancer le numéro jusqu'à atteindre le chiffre souhaité, de 0 à 9.
++
+Le deuxième chiffre continue de clignoter.
+
+
+
+. Verrouillez le numéro souhaité et quittez le mode de programmation en maintenant enfoncé le bouton d'identification de l'étagère jusqu'à ce que le deuxième numéro cesse de clignoter.
++
+Il peut s'écouler jusqu'à trois secondes avant que le chiffre cesse de clignoter.
+
++
+Les deux chiffres sur l'affichage numérique commencent à clignoter et la LED orange s'allume après environ cinq secondes, vous signalant que l'identifiant de tiroir en attente n'a pas encore été pris en compte.
+
+. Redémarrez le tiroir d'extension pendant au moins 10 secondes pour que l'ID du tiroir d'extension soit pris en compte.
++
+.. Éteignez l'interrupteur d'alimentation de chaque bloc d'alimentation.
+.. Attendez 10 secondes.
+.. Mettez en marche l'interrupteur d'alimentation de chaque bloc d'alimentation pour terminer le cycle d'alimentation.
++
+Lorsque l'alimentation est mise sous tension, la LED bicolore doit s'allumer en vert.
+
+
+
+. Remettez le capuchon gauche en place.
+
+
+
+
+[[step-2-power-on-the-controllers]]
+== Étape 2 : Mettez les contrôleurs sous tension
+
+Une fois que vous avez mis sous tension vos étagères et leur avez attribué des identifiants uniques, mettez les contrôleurs sous tension.
+
 . Branchez un câble d'alimentation à chaque bloc d'alimentation du contrôleur, puis connectez-les à des sources d'alimentation sur des circuits différents.
 +
 

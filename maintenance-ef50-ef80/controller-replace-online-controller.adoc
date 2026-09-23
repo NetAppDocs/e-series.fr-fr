@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, how to online the controller 
 summary: 'Après avoir installé le contrôleur de remplacement pour votre système de stockage EF50 ou EF80, confirmez l"adresse IP du contrôleur de remplacement, mettez le contrôleur en ligne et confirmez que l"état du système de stockage est Optimal.' 
 ---
-= Remplacement en ligne du contrôleur - EF50 et EF80
+= Remplacez en ligne le contrôleur sur les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

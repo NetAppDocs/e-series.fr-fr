@@ -1,22 +1,55 @@
 ---
 permalink: config-vmware/configure-multipath-software-concept.html 
 sidebar: sidebar 
-keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Configurer le logiciel m pour fournir un chemin redondant à la baie de stockage en cas de perturbation de l"un des chemins physiques.' 
+keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E4000, EF50, EF80, E-Series, eseries 
+summary: 'Configurer le logiciel multivoie afin qu"il puisse fournir un chemin redondant à la baie de stockage en cas de perturbation de l"un des chemins physiques.' 
 ---
-= Configurez le logiciel multivoie dans E-Series - VMware
+= Fonctionnement du multipathing pour les hôtes VMware dans le système de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Pour fournir un chemin redondant à la baie de stockage, vous pouvez configurer le logiciel multivoie.
+Pour fournir un chemin redondant vers la baie de stockage, configurez un logiciel multipath.
 
-Le logiciel multivoie fournit un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques. Le logiciel multivoie présente le système d'exploitation avec un seul périphérique virtuel qui représente les chemins physiques actifs vers le stockage. Le logiciel multichemin gère également le processus de basculement qui met à jour le périphérique virtuel. Pour VMware, NVMe/FC utilise le plug-in haute performance (HPP).
+Le logiciel multivoie fournit un chemin redondant à la baie de stockage en cas de perturbation de l'un des chemins physiques. Le logiciel multivoie présente le système d'exploitation avec un seul périphérique virtuel qui représente les chemins physiques actifs vers le stockage. Le logiciel multichemin gère également le processus de basculement qui met à jour le périphérique virtuel.
 
-Applicable uniquement aux protocoles FC, iSCSI et SAS, VMware propose des plug-ins, appelés « plug-ins de type baie de stockage » (SATP), pour gérer les implémentations de basculement des baies de stockage de certains fournisseurs.
 
-Le SATP que vous devez utiliser est *VMW_SATP_ALUA*.
 
-Pour plus d'informations, voir https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-DB5BC795-E4D9-4350-9C5D-12BB3C0E6D99.html["SATA VMware"^].
+[[multipathing-policies]]
+== Politiques de cheminement multiple
+
+Vous trouverez ci-dessous le détail des stratégies de multipathing. Pour les protocoles FCP, iSCSI et SAS, le comportement par défaut est Native Multipathing Plug-Ins (NMP). Pour NVMe over Fabrics (NVMe over FC, NVMe over RoCE et NVMe over TCP), le comportement par défaut est High Performance Plug-In (HPP).
+
+
+
+[[native-multipathing-plug-ins-nmp]]
+=== Plug-ins de multipathing natifs (NMP)
+
+Applicable uniquement aux protocoles FCP, iSCSI et SAS, https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-multipathing-module.html["VMware propose des modules d'extension de chemin multiple natifs (NMP)"^] connus sous le nom de modules d’extension de type baie de stockage (SATP), pour gérer les implémentations de basculement des baies de stockage de fournisseurs spécifiques.
+
+Le SATP que vous devez utiliser est *VMW_SATP_ALUA* (il s'agit du choix par défaut pour NetApp E-Series). Pour plus d'informations, voir  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-satps.html["SATA VMware"^].
+
+
+
+==== Modules d'extension de sélection de chemin et stratégies (PSP)
+
+Ces modules d'extension sont des sous-modules du VMware NMP. Le NMP attribue une PSP par défaut à chaque périphérique logique en fonction du type de périphérique. Vous pouvez remplacer la PSP par défaut. Pour plus d'informations, voir  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/viewing-and-managing-storage-paths-on-esxi-hosts/change-the-path-selection-policy.html["Modifier la politique de sélection de chemin"^]. NMP attribue la stratégie de sélection de chemin par défaut VMW_PSP_RR (Round Robin) aux périphériques NetApp. Il s'agit du PSP recommandé.
+
+Pour plus d'informations, voir  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-psps.html["Plug-ins de sélection de chemin et stratégies VMware"^].
+
+
+
+[[high-performance-plug-in-hpp]]
+=== Plug-in haute performance (HPP)
+
+Le HPP remplace le NMP pour les périphériques haut débit, tels que NVMe. Le HPP est le plug-in par défaut qui revendique les cibles NVMe-oF. ESX prend en charge le NVMe de bout en bout sans émulation et l'émulation SCSI vers NVMe. Le HPP prend en charge uniquement les cibles actives/actives et ALUA implicites.
+
+
+
+==== Schémas de sélection de chemin (PSS)
+
+Pour prendre en charge le multipathing, le HPP utilise les schémas de sélection de chemin (PSS) lors de la sélection des chemins physiques pour les requêtes d'E/S. Le schéma par défaut pour les périphériques gérés par HPP est LB-RR (Load Balance - Round Robin). Il s'agit du PSS recommandé.
+
+Pour plus d'informations sur HPP ou PSS, voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-hpp.html["Plug-in haute performance VMware et schémas de sélection de chemin"^].

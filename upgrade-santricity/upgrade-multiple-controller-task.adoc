@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Utilisez SANtricity Unified Manager pour mettre à niveau le logiciel SANtricity OS sur plusieurs baies de stockage de même type. 
 ---
-= Mise à niveau des logiciels et des firmwares pour plusieurs contrôleurs
+= Mettez à niveau le logiciel et le micrologiciel pour plusieurs contrôleurs E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

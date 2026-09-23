@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, create account, register hardware 
 summary: Pour installer un EF300 ou EF600, créez un compte et enregistrez votre matériel. 
 ---
-= Préparez l'installation : EF300, EF600, EF300C et EF600C
+= Préparez-vous à installer votre système de stockage EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,16 @@ Si vous procédez au câblage de votre EF300 pour l'extension SAS, consultez les
 
 
 .Étapes
-. Créez un compte et enregistrez votre matériel sur http://mysupport.netapp.com/["Support NetApp"^].
+. Enregistrez votre système :
++
+
+NOTE: Vous pouvez enregistrer votre système maintenant ou plus tard. Plus tard, au démarrage du système, vous serez invité à enregistrer votre système.
+
++
+.. Créez un compte sur  http://mysupport.netapp.com/["Support NetApp"^] si vous n'en avez pas déjà un.
+.. Enregistrez votre système en suivant les instructions de l’article de la base de connaissances NetApp https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Comment enregistrer un nouveau système"^].
+
+
 . Assurez-vous que les éléments suivants se trouvent dans la boîte que vous avez reçue.
 +
 |===
@@ -41,7 +50,7 @@ Matériel de montage en rack
 
 |===
 +
-Le tableau suivant identifie les types de câbles que vous pouvez recevoir. Si vous recevez un câble non répertorié dans le tableau, reportez-vous à la section https://hwu.netapp.com/["Hardware Universe"] pour localiser le câble et identifier son utilisation.
+Le tableau ci-dessous répertorie les types de câbles que vous pourriez recevoir. Si vous recevez un câble qui n'y figure pas, consultez link:https://hwu.netapp.com["NetApp Hardware Universe"^] pour le localiser et identifier son utilisation.
 
 +
 |===

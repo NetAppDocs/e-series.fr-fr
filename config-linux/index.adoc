@@ -29,6 +29,7 @@ La méthode Linux express comprend les étapes suivantes.
 ** SRP sur InfiniBand
 ** NVMe over InfiniBand
 ** NVMe over RoCE
+** NVMe sur TCP
 ** NVMe over Fibre Channel
 
 

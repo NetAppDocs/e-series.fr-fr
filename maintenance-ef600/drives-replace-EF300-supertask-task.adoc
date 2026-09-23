@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF300C, replace drive, drive failure 
 summary: Remplacez un lecteur dans une matrice EF300. 
 ---
-= Remplacez le lecteur - EF300
+= Remplacer un disque dans une baie EF300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ Préparation au remplacement d'un disque en vérifiant la fonctionnalité Recove
 . Si le gourou de la restauration de SANtricity System Manager vous a averti d'une _panne de disque imminente_, mais que le disque n'est pas encore défaillant, suivez les instructions de la fonctionnalité Recovery Guru qui indique la panne du disque.
 . Si nécessaire, utilisez SANtricity System Manager pour confirmer que vous disposez d'un disque de remplacement approprié.
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware[Drives].
 .. Sélectionnez le disque défectueux sur le graphique du tiroir.
 .. Cliquez sur le lecteur pour afficher son menu contextuel, puis sélectionnez *Paramètres d'affichage*.
 .. Vérifiez que la capacité du disque de remplacement est égale ou supérieure à celle du disque que vous remplacez et qu'il possède les fonctionnalités attendues.
@@ -147,7 +147,7 @@ Lorsque vous insérez un disque pour la première fois, sa LED d'avertissement p
 NOTE: Effectuez cette opération uniquement lorsque vous y êtes invité par le support technique ou le gourou de la restauration
 
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware[Drives].
 .. Cliquez sur le lecteur que vous avez remplacé.
 .. Dans le menu contextuel du lecteur, sélectionnez *reconstruire*.
 .. Confirmez que vous souhaitez effectuer cette opération.
@@ -332,7 +332,7 @@ Vérifiez que le nouveau lecteur fonctionne correctement.
 NOTE: Effectuez cette opération uniquement lorsque vous y êtes invité par le support technique ou le gourou de la restauration
 
 +
-.. Sélectionnez *matériel*.
+.. Sélectionnez le menu : Hardware[Drives].
 .. Cliquez sur le lecteur que vous avez remplacé.
 .. Dans le menu contextuel du lecteur, sélectionnez *reconstruire*.
 .. Confirmez que vous souhaitez effectuer cette opération.

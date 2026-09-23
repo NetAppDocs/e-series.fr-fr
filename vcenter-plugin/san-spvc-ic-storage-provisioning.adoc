@@ -214,6 +214,7 @@ La page configurer les hôtes s'ouvre.
 +
 La boîte de dialogue Créer un hôte s'affiche.
 
+. Cliquez sur *+Ajouter un port hôte* pour accéder au champ Ports hôtes et ajouter les identifiants de port hôte pour l'hôte. Vous pouvez ajouter un ou plusieurs identifiants de port hôte à associer à l'hôte.
 . Sélectionnez les paramètres de l'hôte, le cas échéant.
 +
 [cols="25h,~"]

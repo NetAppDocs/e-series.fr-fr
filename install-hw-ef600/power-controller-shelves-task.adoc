@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, power on, power cables 
 summary: 'Branchez les câbles d"alimentation et mettez les tiroirs disques sous tension.' 
 ---
-= Mettez les tiroirs contrôleurs sous tension : EF300, EF600, EF300C et EF600C
+= Mettez sous tension les tiroirs contrôleurs de votre système de stockage EF300 ou EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

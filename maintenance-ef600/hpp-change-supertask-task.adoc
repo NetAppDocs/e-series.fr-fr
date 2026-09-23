@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Modifiez le protocole du port hôte pour une matrice EF300 ou EF600. 
 ---
-= Modifiez le protocole hôte : EF300 et EF600
+= Modifier le protocole hôte sur un système de stockage EF300 ou EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -35,7 +35,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Localisez l'ID du sous-modèle *Feature Pack*.
 +
 .. Dans le Gestionnaire système SANtricity, sélectionnez *support*.
-.. Sélectionnez la vignette *Support Resources*.
+.. Sélectionnez l'onglet *Support Resources*.
 .. Dans l'onglet Ressources de support, localisez et sélectionnez le lien *profil de matrice de stockage*.
 .. Saisissez *ID du sous-modèle du pack de fonctionnalités* dans la zone de texte, puis cliquez sur *Rechercher*.
 .. Localisez l'ID du sous-modèle du pack de fonctionnalités pour la configuration de départ.
@@ -669,8 +669,7 @@ La migration du Feature Pack commence. Les deux contrôleurs redémarrent automa
 
 . Vérifiez que les ports hôtes disposent du protocole attendu.
 +
-.. Dans le Gestionnaire système SANtricity, sélectionnez *matériel*.
-.. Cliquez sur *Afficher le verso de la tablette*.
+.. Dans SANtricity System Manager, sélectionnez le menu : Hardware [Controllers and components].
 .. Sélectionnez le graphique pour le contrôleur A ou le contrôleur B.
 .. Sélectionnez *Afficher les paramètres* dans le menu contextuel.
 .. Sélectionnez l'onglet *Host interfaces*.

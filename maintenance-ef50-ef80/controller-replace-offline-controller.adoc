@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, offline the impaired controller 
 summary: Mettez le contrôleur défectueux hors ligne dans votre système de stockage EF50 ou EF80 pour éviter la perte de données et garantir la stabilité du système lors du remplacement du contrôleur. 
 ---
-= Déconnectez le contrôleur défectueux - EF50 et EF80
+= Mettez hors ligne le contrôleur défectueux sur les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

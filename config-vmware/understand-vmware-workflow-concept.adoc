@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/understand-vmware-workflow-concept.html 
 sidebar: sidebar 
-keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
-summary: Utilisez le workflow de configuration WVMware express. 
+keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand, vmware, VMware 
+summary: Utilisez le flux de travail de configuration express de VMware. 
 ---
-= Workflow VMware dans une baie E-Series
+= Flux de travail de configuration express VMware pour le système de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,4 +13,4 @@ summary: Utilisez le workflow de configuration WVMware express.
 [role="lead"]
 Ce workflow vous guide dans la « méthode expresse » permettant de configurer votre baie de stockage et SANtricity System Manager pour mettre le stockage à la disposition d'un hôte VMware.
 
-image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Flux de travail VMware Express guide »]
+image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Workflow du guide VMware Express]

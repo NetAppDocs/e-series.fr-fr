@@ -2,9 +2,9 @@
 permalink: config-linux/fc-assign-volume-nvme-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, assign volume, assign namespace, 
-summary: 'Vous devez affecter un volume \(namespace\) à un hôte ou un cluster hôte afin de pouvoir utiliser ce dernier pour les opérations d"E/S. Cette affectation permet à un hôte ou un cluster hôte d"accéder à un ou plusieurs namespaces d"une baie de stockage.' 
+summary: 'Vous devez affecter un volume (namespace) à un hôte ou à un cluster hôte afin de pouvoir utiliser les opérations d"E/S. Cette affectation permet à un hôte ou un cluster hôte d"accéder à un ou plusieurs namespaces d"une baie de stockage.' 
 ---
-= Affectation d'un volume à l'aide de SANtricity System Manager - Linux (FC sur NVMe)
+= Attribuez un volume E-Series à l'aide de SANtricity System Manager pour Linux FC sur NVMe
 :allow-uri-read: 
 :experimental: 
 :icons: font

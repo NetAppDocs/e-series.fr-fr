@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, how to complete the controller replacement process 
 summary: Pour terminer le remplacement du contrôleur de votre système de stockage EF50 ou EF80, assurez-vous que le micrologiciel du système de stockage est à jour, vérifiez que les volumes sont restitués à leurs propriétaires, collectez les données de support du système et renvoyez la pièce défectueuse à NetApp. 
 ---
-= Terminez le remplacement du contrôleur - EF50 et EF80
+= Effectuez le remplacement du contrôleur sur les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

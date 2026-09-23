@@ -22,12 +22,12 @@ Vous trouverez ci-dessous quelques exemples de modèles de baies E-Series dispon
 * E4000 Series - hybride d'entrée de gamme
 * Gamme EF600 - stockage 100 % NVMe, 100 % Flash de milieu de gamme
 * Gamme EF300 - 100 % NVMe, 100 % Flash d'entrée de gamme
-* Gamme EF300C - 100 % NVMe, 100 % Flash d'entrée de gamme
-* Gamme EF600C - stockage 100 % NVMe, 100 % Flash de milieu de gamme
-* E2800 Series - hybride d'entrée de gamme
-* Gamme EF280 – baies 100 % Flash d'entrée de gamme
-* E5700 Series - milieu de gamme hybride
-* Gamme EF570 : stockage 100 % Flash de milieu de gamme
+* Série EF300C -- tout flash, NVMe haute densité d'entrée de gamme
+* Série EF600C -- milieu de gamme tout flash, NVMe haute densité
+* Série E2800 (Fin de disponibilité) – hybride d'entrée de gamme
+* Série EF280 (Fin de disponibilité) – 100 % flash d'entrée de gamme
+* Série E5700 (Fin de disponibilité) – hybride de milieu de gamme
+* Série EF570 (Fin de disponibilité) -- milieu de gamme tout flash
 
 
 
@@ -57,6 +57,10 @@ Disques::
 ** 15,3 To
 ** 30 To
 ** 60 To
++
+
+NOTE: Pour les disques de 30 To et 60 To, l'EF50 ne prend en charge que l'utilisation de pools de disques dynamiques, sans prise en charge RAID héritée.
+
 
 
 * Prend en charge jusqu'à 24 disques SSD NVMe dans le compartiment du contrôleur.
@@ -65,6 +69,13 @@ Disques::
 +
 
 NOTE: Il est essentiel de connecter correctement les câbles de duplication lors de la configuration de votre système EF50. Pour plus d'informations, voir  https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Câblez les connexions de mise en miroir entre contrôleurs - EF50 et EF80"].
+
+* Prise en charge d'une carte d'extension SAS en option, permettant la connexion des tiroirs d'extension SAS.
+* Un pool de disques unique est créé automatiquement s'il y a suffisamment de disques non attribués lors du démarrage du système.
+* À partir de SANtricity OS 12.10, le EF50 prend en charge la combinaison de disques de 3,8 To, 7,6 To et 15,3 To avec des disques de 30 To et 60 To. Ces disques dans une baie mixte seront automatiquement placés dans un seul pool de disques sans prise en charge RAID.
++
+
+NOTE: Les pools de disques créés automatiquement peuvent être supprimés via SANtricity System Manager ou SANtricity CLI. Pour plus d’informations, consultez  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Supprimer un pool de disques - SANtricity CLI Guide"^] et  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Supprimer un pool ou un groupe de volumes - Guide de l'administrateur système SANtricity"^].
 
 
 
@@ -76,6 +87,7 @@ Disponible avec les interfaces suivantes :
 
 * 64 Go NVMe / Fibre Channel
 * 64 Gb Fibre Channel
+* ISCSI 25 Gb
 
 
 --
@@ -104,6 +116,10 @@ Disques::
 ** 15,3 To
 ** 30 To
 ** 60 To
++
+
+NOTE: Pour les disques de 30 To et 60 To, l'EF80 ne prend en charge que l'utilisation de pools de disques dynamiques, sans prise en charge RAID héritée.
+
 
 
 * Prend en charge jusqu'à 24 disques SSD NVMe dans le compartiment du contrôleur.
@@ -113,6 +129,12 @@ Disques::
 
 NOTE: Il est crucial de connecter correctement les câbles de duplication lors de la configuration de votre système EF80. Pour plus d'informations, voir https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Câblez les connexions de mise en miroir entre contrôleurs - EF50 et EF80"].
 
+* Prise en charge d'une carte d'extension SAS en option, permettant la connexion des tiroirs d'extension SAS.
++
+Si la carte d'extension SAS est installée, le nombre maximal de cartes d'interface d'hôte pour la connectivité hôte est limité à deux par contrôleur.
+
+* Un pool de disques unique est créé automatiquement s'il y a suffisamment de disques non attribués lors du démarrage du système.
+* À partir de SANtricity OS 12.10, le EF80 prend en charge la combinaison de disques de 3,8 To, 7,6 To et 15,3 To avec des disques de 30 To et 60 To. Ces disques dans une baie mixte seront automatiquement placés dans un seul pool de disques sans prise en charge RAID. + REMARQUE : Les pools de disques créés automatiquement peuvent être supprimés via SANtricity System Manager ou SANtricity CLI. Pour plus d’informations, consultez  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Supprimer un pool de disques - SANtricity CLI Guide"^] et  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Supprimer un pool ou un groupe de volumes - Guide de l'administrateur système SANtricity"^].
 
 
 --
@@ -121,6 +143,7 @@ Interfaces::
 --
 Disponible avec les interfaces suivantes :
 
+* 200Gb NVMe / TCP
 * NVMe/RoCE 200 Gb
 * 64 Go NVMe / Fibre Channel
 * NVMe/IB 200 Gb
@@ -162,6 +185,7 @@ Interfaces::
 --
 Disponible avec les interfaces suivantes :
 
+* ISCSI 25 Gb
 * SAS 12 Gb
 * 1Gb ou 10Gb Base-T iSCSI
 * ISCSI 1 Go, 10 Gb ou 25 Gb
@@ -250,7 +274,11 @@ Disques::
 ** Pas de prise en charge des configurations de tiroirs d'extension.
 
 
-* Un pool de disques unique est créé automatiquement s'il n'y a pas suffisamment de lecteurs non attribués pendant le démarrage du système.
+* Un pool de disques unique est créé automatiquement s'il y a suffisamment de disques non attribués lors du démarrage du système.
++
+
+NOTE: Les pools de disques créés automatiquement peuvent être supprimés via SANtricity System Manager ou SANtricity CLI. Pour plus d’informations, consultez  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Supprimer un pool de disques - SANtricity CLI Guide"^] et  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Supprimer un pool ou un groupe de volumes - Guide de l'administrateur système SANtricity"^].
+
 
 
 --
@@ -342,6 +370,10 @@ Disques::
 
 * Prise en charge d'une carte d'interface hôte par contrôleur.
 * Un pool de disques unique est créé automatiquement s'il n'y a pas suffisamment de lecteurs non attribués pendant le démarrage du système.
++
+
+NOTE: Les pools de disques créés automatiquement peuvent être supprimés via SANtricity System Manager ou SANtricity CLI. Pour plus d’informations, consultez  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Supprimer un pool de disques - SANtricity CLI Guide"^] et  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Supprimer un pool ou un groupe de volumes - Guide de l'administrateur système SANtricity"^].
+
 
 
 --
@@ -363,7 +395,7 @@ Disponible avec les interfaces suivantes :
 
 
 --
-.Modèles E2800
+.Modèles E2800 (EOA)
 --
 Tailles de rack::
 +
@@ -405,7 +437,7 @@ Disponible avec les interfaces suivantes :
 
 
 --
-.Modèles EF280
+.Modèles EF280 (EOA)
 --
 Tailles de rack::
 +
@@ -435,7 +467,7 @@ Disponible avec les interfaces suivantes :
 
 
 --
-.Modèles E5700
+.Modèles E5700 (EOA)
 --
 Tailles de rack::
 +
@@ -481,7 +513,7 @@ Disponible avec les interfaces suivantes :
 
 
 --
-.Modèles EF570
+.Modèles EF570 (EOA)
 --
 Tailles de rack::
 +

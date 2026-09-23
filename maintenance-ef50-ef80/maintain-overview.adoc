@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
 summary: 'Assurez la maintenance du matériel de votre système de stockage EF50 ou EF80 pour garantir sa fiabilité à long terme et des performances optimales. Effectuez des opérations de maintenance régulières, comme le remplacement des composants défectueux, afin de prévenir l"interruption et la perte de données.' 
 ---
-= Aperçu des procédures de maintenance - EF50 et EF80
+= Découvrez les procédures de maintenance des systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,6 +44,13 @@ Un module de mémoire double en ligne (DIMM) est un type de mémoire informatiqu
 link:drive-replace.html["Lecteur"]
  a| 
 Un disque est un périphérique qui assure le stockage physique nécessaire aux données.
+
+
+
+ a| 
+link:drive-drawer-de460c-replace.html["Tiroir d'entraînement"]
+ a| 
+Un tiroir de disque est l'un des cinq composants d'une étagère de disques DE460C pouvant contenir jusqu'à 12 disques.
 
 
 

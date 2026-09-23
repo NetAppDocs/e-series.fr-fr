@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive, replace E5700 drive, failed E5700 drive 
 summary: Consultez les exigences de la baie E5700. 
 ---
-= Conditions requises pour remplacer le lecteur - E5700
+= Exigences pour le remplacement d'un disque dans un E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

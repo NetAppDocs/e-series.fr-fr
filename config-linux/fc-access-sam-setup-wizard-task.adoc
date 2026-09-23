@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, 
 summary: 'L"assistant d"installation de SANtricity System Manager vous permet de configurer votre baie de stockage.' 
 ---
-= Configurez votre stockage à l'aide de SANtricity System Manager - Linux (FC)
+= Configurer le stockage à l'aide de SANtricity System Manager sur les hôtes FC Linux E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

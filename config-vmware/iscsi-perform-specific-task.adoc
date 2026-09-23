@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/iscsi-perform-specific-task.html 
 sidebar: sidebar 
-keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en réseau côté baie et côté hôte. Vérifiez ensuite les connexions réseau IP. 
 ---
-= Effectuez des tâches spécifiques à iSCSI dans les systèmes E-Series - VMware
+= Configurer les commutateurs iSCSI et le réseau pour VMware dans le système de stockage E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,9 +15,41 @@ summary: Pour le protocole iSCSI, vous devez configurer les commutateurs et la m
 Pour le protocole iSCSI, vous devez configurer les commutateurs et la mise en réseau côté baie et côté hôte. Vérifiez ensuite les connexions réseau IP.
 
 
+NOTE: Pour garantir la compatibilité avec VMware, les volumes doivent être configurés pour utiliser l'émulation 512 octets (512e) lors de l'utilisation de disques de 4096 octets. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur la configuration d'un volume pour utiliser l'émulation 512 octets (512e).
 
-[[step-1-configure-the-switches-iscsi-vmware]]
-== Étape 1 : configurer les commutateurs--iSCSI, VMware
+
+
+[[step-1-record-your-configuration]]
+== Étape 1 : Enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la feuille de calcul suivante pour consigner les informations de configuration de stockage spécifiques à votre protocole. Vous aurez besoin de ces informations lors de l'exécution des tâches de provisionnement.
+
+L'illustration montre un hôte connecté à un système de stockage E-Series, séparé par des VLAN et/ou des sous-réseaux distincts. Un VLAN/sous-réseau est indiqué par la ligne bleue ; l'autre VLAN/sous-réseau est indiqué par la ligne rouge. Chaque VLAN/sous-réseau comprend au moins un port initiateur et la moitié des ports cibles. Le nombre de ports hôtes et/ou de ports de contrôleur varie selon le nombre d'interfaces réseau et le modèle de contrôleur. Vous pouvez disposer de plus de ports (jusqu'à 6 par contrôleur).
+
+image::../media/50001_01_conf-vmw.gif[Identifiant du port iSCSI]
+
+
+
+[[host-mapping-information]]
+=== Informations de cartographie des hôtes
+
+[cols="35h,~"]
+|===
+| Nom d'hôte de mappage |  
+
+
+| Type de système d'exploitation hôte |  
+
+
+| IQN de l'hôte |  
+
+
+| IQN cible |  
+|===
+
+
+[[step-2-configure-the-switches]]
+== Étape 2 : Configurer les commutateurs
 
 La configuration des commutateurs est conforme aux recommandations du fournisseur en matière d'iSCSI. Ces recommandations peuvent inclure à la fois des directives de configuration et des mises à jour de code.
 
@@ -25,9 +57,9 @@ La configuration des commutateurs est conforme aux recommandations du fournisseu
 Assurez-vous de disposer des éléments suivants :
 
 * Deux réseaux distincts pour la haute disponibilité. Assurez-vous d'isoler votre trafic iSCSI pour séparer les segments du réseau.
-* Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
+* Contrôle de flux matériel d'envoi et de réception activé *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
-* Le cas échéant, les trames jumbo activées.
+* Si nécessaire, activez les trames jumbo (recommandé).
 
 
 
@@ -38,31 +70,29 @@ Consultez la documentation du fournisseur de votre commutateur.
 
 
 
-[[step-2-configure-networking-iscsi-vmware]]
-== Étape 2 : configurer le réseau--iSCSI VMware
+[[step-3-configure-networking]]
+== Étape 3 : Configurer le réseau
 
 Vous pouvez configurer votre réseau iSCSI de différentes manières, selon vos besoins en termes de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la mieux adaptée à votre environnement.
 
 .Avant de commencer
 Assurez-vous de disposer des éléments suivants :
 
-* Activation du contrôle de flux matériel d'envoi et de réception *de bout en bout*.
+* Contrôle de flux matériel d'envoi et de réception activé *de bout en bout*.
 * Contrôle de flux prioritaire désactivé.
-* Le cas échéant, les trames jumbo activées.
+* Si nécessaire, activez les trames jumbo (recommandé).
 +
-Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performances, veillez à configurer la baie, les commutateurs et les hôtes pour utiliser des trames jumbo. Consultez la documentation de votre système d'exploitation et de vos commutateurs pour obtenir des informations sur l'activation des trames Jumbo sur les hôtes et sur les commutateurs. Pour activer les trames Jumbo sur la baie, suivez les étapes de l'étape 3.
+Si vous utilisez des trames jumbo au sein du SAN IP pour des raisons de performance, assurez-vous de configurer la baie, les commutateurs et les hôtes pour utiliser des trames jumbo. Consultez la documentation de votre système d'exploitation et de vos commutateurs pour savoir comment activer les trames jumbo sur les hôtes et sur les commutateurs. Pour activer les trames jumbo sur la baie, effectuez les étapes de l'étape 4.
 
 
 
 .Description de la tâche
-Lors de la planification de votre réseau iSCSI, n'oubliez pas https://configmax.broadcom.com/home["Valeurs maximales de configuration VMware"^] que le guide indique que le nombre maximal de chemins de stockage iSCSI pris en charge est de 8. Vous devez tenir compte de cette exigence afin d'éviter la configuration de chemins trop nombreux.
+Lors de la planification de votre réseau iSCSI, n'oubliez pas que la  https://configmax.broadcom.com/guest["Guide des limites de configuration VMware"^] stipule que le nombre maximal de chemins iSCSI pris en charge vers un LUN est de 32 et que le nombre maximal de cartes réseau pouvant être associées ou liées à un port avec la pile iSCSI logicielle par serveur est de 8. Vous devez tenir compte de cette exigence afin d'éviter de configurer un trop grand nombre de chemins.
 
 Par défaut, l'initiateur logiciel VMware iSCSI crée une seule session par cible iSCSI lorsque vous n'utilisez pas la liaison de port iSCSI.
 
 
-NOTE: La liaison du port iSCSI VMware est une fonctionnalité qui force tous les ports VMKernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Il doit être utilisé avec les baies présentant une adresse réseau unique pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison du port iSCSI. Pour plus d'informations, reportez-vous à https://support.broadcom.com/["Base de connaissances VMware"] l'article de la pour en savoir plus sur les considérations relatives à l'utilisation de la liaison logicielle des ports iSCSI dans ESX/ESXi. Si l'hôte ESXi est relié au stockage d'un autre fournisseur, NetApp vous recommande d'utiliser des ports vmkernel iSCSI distincts pour éviter tout conflit avec la liaison des ports.
-
-Pour bénéficier des meilleures pratiques, vous ne devez PAS utiliser la liaison de ports sur les baies de stockage E-Series. Voir https://www.netapp.com/media/17017-tr4789.pdf["Tr-4789 : Guide de configuration VMware pour l'intégration iSCSI SANtricity E-Series avec ESXi 6.x et 7.x."^] pour plus d'informations.
+NOTE: La liaison de ports iSCSI VMware est une fonctionnalité qui force tous les ports VMkernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Elle est conçue pour être utilisée avec des baies présentant une seule adresse réseau pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison de ports iSCSI. Pour plus d'informations, consultez https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["meilleures pratiques pour l'utilisation de la liaison de port iSCSI logicielle dans ESX/ESXi"^]. Si l'hôte ESXi est connecté à un système de stockage d'un autre fournisseur, NetApp recommande d'utiliser des ports VMkernel iSCSI distincts afin d'éviter tout conflit avec la liaison de ports.
 
 Pour garantir une bonne configuration de chemins d'accès multiples, utilisez plusieurs segments de réseau pour le réseau iSCSI. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de matrice sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Si possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.
 
@@ -74,8 +104,8 @@ NOTE: Pour la surcharge IP, de nombreux commutateurs réseau doivent être confi
 
 
 
-[[step-3-configure-array-side-networking-iscsi-vmware]]
-== Étape 3 : configurer les réseaux côté baie--iSCSI, VMware
+[[step-4-configure-array-side-networking]]
+== Étape 4 : Configurer le réseau côté baie
 
 Vous utilisez l'interface graphique de SANtricity System Manager pour configurer la mise en réseau iSCSI côté baie.
 
@@ -134,10 +164,10 @@ Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus d
  a| 
 Vitesse du port ethernet configurée
  a| 
-Sélectionnez la vitesse souhaitée. Les options qui s'affichent dans la liste déroulante dépendent de la vitesse maximale prise en charge par votre réseau (par exemple, 10 Gbit/s).
+Sélectionnez la vitesse souhaitée. Les options qui apparaissent dans la liste déroulante dépendent de la vitesse maximale que votre réseau peut prendre en charge (par exemple, 25 Gbit/s).
 
 
-NOTE: Les cartes d'interface hôte iSCSI 25 Gb disponibles en option sur les contrôleurs ne traitent pas de vitesse avec négociation automatique. Vous devez régler la vitesse de chaque port sur 10 Go ou 25 Go. Tous les ports doivent être définis sur la même vitesse.
+NOTE: Les cartes d'interface d'hôte iSCSI disponibles sur les contrôleurs ne négocient pas automatiquement la vitesse. Vous devez définir la vitesse de chaque port sur 1 Gb, 10 Gb ou 25 Gb. Tous les ports doivent être définis sur la même vitesse.
 
 
 
@@ -162,7 +192,7 @@ Taille MTU (disponible en cliquant sur *Afficher plus de paramètres de port*).
  a| 
 Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU).
 
-La taille par défaut de l'unité de transmission maximale (MTU) est de 1500 octets par trame. Vous devez entrer une valeur comprise entre 1500 et 9000.
+La taille par défaut de l'unité de transmission maximale (MTU) est de 1500 octets par trame. Vous devez saisir une valeur comprise entre 1500 et 9000. Pour activer les trames jumbo, définissez cette valeur sur 9000 octets.
 
 
 
@@ -200,34 +230,57 @@ Sélectionnez cette option, puis entrez une adresse statique dans les champs. Po
 
 
 
-[[step-4-configure-host-side-networking-iscsi]]
-== Étape 4 : configurer les réseaux côté hôte--iSCSI
+[[step-5-configure-host-side-networking]]
+== Étape 5 : Configurer le réseau côté hôte
 
 La configuration de la mise en réseau iSCSI côté hôte permet à l'initiateur iSCSI VMware d'établir une session avec la baie.
 
 .Description de la tâche
-Dans cette méthode express pour configurer la mise en réseau iSCSI côté hôte, vous permettez à l'hôte ESXi de transmettre le trafic iSCSI via quatre chemins redondants vers le stockage.
+Cette tâche configure le réseau iSCSI côté hôte et établit des sessions iSCSI avec la baie de stockage.
 
 Une fois cette tâche effectuée, l'hôte est configuré avec un seul vSwitch contenant à la fois des ports VMnics et des deux.
 
-Pour plus d'informations sur la configuration de la mise en réseau iSCSI pour VMware, reportez-vous au https://docs.vmware.com/en/VMware-vSphere/index.html["Documentation VMware vSphere"^] Pour votre version de vSphere.
+Pour plus d'informations sur la configuration du réseau iSCSI pour VMware, consultez https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Configuration des adaptateurs iSCSI et du stockage avec ESXi"^].
+
+
+NOTE: Lors de cette procédure, notez le nom qualifié iSCSI (IQN) de l'adaptateur iSCSI logiciel ajouté. Il sera nécessaire ultérieurement lors de la configuration des mappages d'hôtes.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Commutateur(s) configuré(s) qui sera/seront utilisé(s) pour transporter le trafic de stockage iSCSI.
+* Contrôle de flux matériel *de bout en bout* activé sur le commutateur pour l'envoi et la réception.
+* Le contrôle de flux est désactivé sur le commutateur.
+* Configuration iSCSI côté baie terminée.
+* Au moins deux ports NIC hôte pour le trafic iSCSI.
+
 
 .Étapes
-. Configurez les commutateurs qui seront utilisés pour le trafic de stockage iSCSI.
-. Activer le contrôle de flux matériel d'envoi et de réception *de bout en bout*.
-. Désactiver le contrôle de flux prioritaire.
-. Terminez la configuration iSCSI côté baie.
-. Utilisez deux ports NIC pour le trafic iSCSI.
-. Utilisez le client vSphere ou le client Web vSphere pour effectuer la configuration côté hôte.
+. Utilisez soit le vSphere Client, soit le vSphere Web Client pour effectuer la configuration côté hôte. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Configuration des adaptateurs iSCSI et du stockage avec ESXi"^].
 +
 Les fonctionnalités des interfaces varient et le flux de travail exact varie.
 
+. Configurez le réseau pour iSCSI. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi.html["Configuration du réseau pour iSCSI avec ESX"^].
++
+.. Il est recommandé de ne pas utiliser la liaison de ports. La liaison de ports iSCSI VMware est une fonctionnalité qui force tous les ports VMkernel liés à se connecter à tous les ports cibles accessibles sur les segments réseau configurés. Elle est conçue pour être utilisée avec des baies présentant une seule adresse réseau pour la cible iSCSI. NetApp recommande de ne pas utiliser la liaison de ports iSCSI. Pour plus d'informations, consultez https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["meilleures pratiques pour l'utilisation de la liaison de port iSCSI logicielle dans ESX/ESXi"^]. Si l'hôte ESXi est connecté à un système de stockage d'un autre fournisseur, NetApp recommande d'utiliser des ports VMkernel iSCSI distincts afin d'éviter tout conflit avec la liaison de ports.
+.. NetApp recommande d'utiliser plusieurs mappages d'adaptateurs sur un commutateur standard vSphere, en utilisant des adaptateurs actifs/passifs pour la redondance. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/multiple-network-adapters-in-iscsi-or-iser-configuration.html["Plusieurs adaptateurs réseau en configuration iSCSI"^].
+.. Activez les trames Jumbo avec iSCSI, si nécessaire. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/using-jumbo-frames-with-iscsi-and-iser.html["Utilisation de trames Jumbo avec iSCSI sur ESX"^].
+
+
+. Ajoutez un adaptateur iSCSI logiciel. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi/add-or-remove-the-software-iscsi-adapter.html["Ajouter ou supprimer l'adaptateur iSCSI logiciel"^].
++
+.. Enregistrez l'IQN de l'hôte et ajoutez un alias iSCSI (facultatif). Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/modify-general-properties-for-iscsi-and-iser-adapters-on-esxi-hosts.html["Modifier les propriétés générales pour iSCSI sur les hôtes ESX"^].
+.. Configurez les paramètres CHAP si vous utilisez des secrets CHAP. Voir https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configuring-chap-parameters-for-iscsi-or-iser-storage-adapters-with-esxi.html["Configuration des paramètres CHAP pour les adaptateurs iSCSI sur l'hôte ESX"^].
 
 
 
 
-[[step-5-verify-ip-network-connections-iscsi-vmware]]
-== Étape 5 : vérifiez les connexions réseau IP--iSCSI, VMware
+Une fois l'ajout réussi, les connexions sont visibles dans la vue Adaptateurs de stockage du vSphere Client. En cas d'échec, passez à l'étape 6 pour vérifier la communication avec les ports et corriger les paramètres de connexion.
+
+
+
+[[step-6-verify-ip-network-connections]]
+== Étape 6 : Vérifiez les connexions réseau IP
 
 Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
 
@@ -260,7 +313,7 @@ Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
 Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
 Ping statistics for 192.0.2.8:
   Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
+Approximate round trip times in milliseconds:
   Minimum = 2ms, Maximum = 2ms, Average = 2ms
 ----
 
@@ -270,61 +323,5 @@ Approximate round trip times in milli-seconds:
 
 NOTE: Si la commande échoue et renvoie le message `sendto() failed (Message too long)`, Vérifiez la taille MTU (prise en charge des trames Jumbo) pour les interfaces Ethernet sur le serveur hôte, le contrôleur de stockage et les ports de switch.
 
-. Revenez à la procédure de configuration iSCSI pour terminer la découverte de la cible.
+. Si l'étape 5 de découverte a échoué, retournez à la procédure de configuration réseau côté hôte iSCSI pour terminer la découverte de session.
 
-
-
-
-[[step-6-record-your-configuration]]
-== Étape 6 : enregistrez votre configuration
-
-Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la fiche suivante pour enregistrer les informations de configuration du stockage spécifiques à vos protocoles. Vous avez besoin de ces informations pour effectuer les tâches de provisionnement.
-
-
-
-[[recommended-configuration]]
-=== Configuration recommandée
-
-Les configurations recommandées se composent de deux ports d'initiateur et de quatre ports cibles avec un ou plusieurs VLAN.
-
-image::../media/50001_01_conf-vmw.gif[Identifiant du port iSCSI]
-
-
-
-[[target-iqn]]
-=== IQN cible
-
-|===
-| N° de légende | Connexion du port cible | IQN 
-
-
- a| 
-2
- a| 
-Port cible
- a| 
-
-|===
-
-
-[[mapping-host-name]]
-=== Nom d'hôte de mappage
-
-|===
-| N° de légende | Informations d'hôte | Nom et type 
-
-
- a| 
-1
- a| 
-Nom d'hôte de mappage
- a| 
-
-
-
- a| 
- a| 
-Type de système d'exploitation hôte
- a| 
-
-|===

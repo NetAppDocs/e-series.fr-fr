@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Après avoir préparé l"installation de votre système de stockage EF50 ou EF80, installez le matériel de montage en rack dans une armoire ou un rack de télécommunications, puis installez et fixez votre système de stockage.' 
 ---
-= Installez le matériel - EF50 et EF80
+= Installez le matériel pour les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define Linux host, configure linux host, express linux configuration, linux host, 
 summary: 'SANtricity System Manager vous permet de définir les hôtes qui envoient des données à la baie de stockage. La définition d"un hôte est l"une des étapes requises pour permettre à la matrice de stockage de savoir quels hôtes lui sont connectés et d"autoriser l"accès E/S aux volumes.' 
 ---
-= Création d'un hôte à l'aide de SANtricity System Manager - Linux (NVMe over RoCE)
+= Créer un hôte E-Series pour NVMe over RoCE sous Linux
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -29,6 +29,7 @@ Lorsque vous définissez un hôte, tenez compte des consignes suivantes :
 +
 La boîte de dialogue Créer un hôte s'affiche.
 
+. Cliquez sur *+Ajouter un port hôte* pour accéder au champ Ports hôtes et ajouter les identifiants de port hôte pour l'hôte. Vous pouvez ajouter un ou plusieurs identifiants de port hôte à associer à l'hôte.
 . Sélectionnez les paramètres de l'hôte, le cas échéant.
 +
 |===

@@ -1,10 +1,10 @@
 ---
 permalink: config-vmware/access-sam-setup-wizard-task.html 
 sidebar: sidebar 
-keywords: access System Manager vmware, express vmware configuration,software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: access System Manager vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: 'L"assistant d"installation de SANtricity System Manager vous permet de configurer votre baie de stockage.' 
 ---
-= Configurez votre stockage à l'aide de SANtricity System Manager - VMware
+= Configurez le système de stockage E-Series à l'aide de SANtricity System Manager pour VMware
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -91,6 +91,6 @@ L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volum
 . Si vous n'avez pas encore créé de volume, créez-en un en accédant au menu:Storage[volumes > Créer > Volume].
 +
 
-NOTE: Pour les modèles EF300 et EF600, vous devez définir une taille de bloc de 512 octets pour assurer la compatibilité avec VMware. Pour plus d'informations sur la définition d'un volume sur 512 octets, consultez l'aide en ligne de SANtricity System Manager.
+NOTE: Pour garantir la compatibilité avec VMware, les volumes doivent être configurés pour utiliser l'émulation 512 octets (512e) lors de l'utilisation de disques de 4096 octets. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur la configuration d'un volume pour utiliser l'émulation 512 octets (512e).
 
 

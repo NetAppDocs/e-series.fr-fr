@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez cette fiche pour enregistrer les informations de configuration du stockage NVMe over Infiniband. 
 ---
-= Enregistrez votre configuration NVMe over InfiniBand dans le système E-Series - Linux
+= Feuille de calcul de configuration NVMe over InfiniBand pour le système de stockage E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -172,7 +172,9 @@ Définissez le sous-réseau à utiliser.
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 |===
 Documentez les IQN utilisés par les ports de la matrice et chaque port hôte.

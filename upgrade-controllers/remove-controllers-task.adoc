@@ -27,6 +27,9 @@ Pour plus d'informations sur le retrait des contrôleurs des systèmes de stocka
 --
 .Autres modèles de contrôleurs E-Series
 --
+[discrete]
+=== Modèles de contrôleurs E4000, E2800 et E5700
+
 Retirez le boîtier du contrôleur pour pouvoir le mettre à niveau avec un nouveau. Vous devez débrancher tous les câbles et retirer les émetteurs-récepteurs SFP. Vous pouvez ensuite faire glisser le boîtier du contrôleur hors du tiroir du contrôleur.
 
 .Avant de commencer
@@ -73,6 +76,39 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Déposer le b
 
 . Placez l'ancien boîtier du contrôleur sur une surface plane et sans électricité statique près du plateau d'entraînement du contrôleur avec les leviers de dégagement vers le haut. Positionner le boîtier du contrôleur de manière à pouvoir accéder au capot supérieur.
 . (Conditionnel) si vous mettez à niveau les contrôleurs dans un plateau de lecteur de contrôleur duplex, répétez toutes les étapes pour retirer le second boîtier de contrôleur.
+. Si vous avez l'intention d'utiliser la batterie de l'ancien contrôleur du nouveau contrôleur, passez à la section suivante ; sinon, passez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].
+
+
+[discrete]
+=== Modèles de contrôleurs EF600 et EF300
+
+Retirez le boîtier du contrôleur afin de pouvoir le remplacer par un neuf.
+
+.Étapes
+. Placez un bracelet antistatique ou prenez d'autres précautions antistatiques.
+. Etiqueter chaque câble relié au boîtier du contrôleur.
+. Débrancher tous les câbles du boîtier du contrôleur.
++
+
+CAUTION: Pour éviter de dégrader les performances, ne pas tordre, plier, pincer ou marcher sur les câbles.
+
+. Si le boîtier du contrôleur possède une HIC utilisant des émetteurs-récepteurs SFP+, retirez les SFP.
++
+Comme vous devez retirer le HIC de l'ancien boîtier de contrôleur, vous devez également retirer les SFP des ports HIC. Lorsque vous rebranchez les câbles, vous pouvez déplacer ces SFP vers le nouveau boîtier de contrôleur.
+
+. Appuyez sur les poignées situées de chaque côté du contrôleur et tirez-les vers l'arrière jusqu'à ce qu'elles soient sorties du tiroir.
++
+image::../media/remove_controller_5.png[Appuyez sur les poignées pour retirer le contrôleur]
+
+. A l'aide de deux mains et des poignées, faites glisser le boîtier du contrôleur hors de l'étagère. Lorsque l'avant du contrôleur est libre du boîtier, tirez-le complètement à l'aide de deux mains.
++
+
+CAUTION: Toujours utiliser deux mains pour soutenir le poids d'un boîtier de contrôleur.
+
++
+image::../media/remove_controller_6.png[Utiliser deux mains pour soutenir le poids du contrôleur lors de la dépose]
+
+. Placez le boîtier du contrôleur sur une surface plane et exempte d'électricité statique.
 . Si vous avez l'intention d'utiliser la batterie de l'ancien contrôleur du nouveau contrôleur, passez à la section suivante ; sinon, passez à link:install-controllers-task.html["Installez de nouveaux contrôleurs"].
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF50, EF80 
 summary: 'Vous pouvez changer le protocole sur les modules d"E/S hôte de votre système de stockage EF50 ou EF80 lorsque vous avez besoin d"un protocole différent sur vos modules d"E/S existants, dans le cadre d"une mise à niveau de module d"E/S, ou lorsque le protocole par défaut sur les nouveaux contrôleurs faisant partie d"une nouvelle installation de système de stockage ou d"une mise à niveau de contrôleur n"est pas le protocole que vous souhaitez.' 
 ---
-= Modifier le protocole du module d'E/S hôte - EF50 et EF80
+= Modifier le protocole du module d'E/S hôte dans un système EF50 ou EF80
 :allow-uri-read: 
 :experimental: 
 :icons: font

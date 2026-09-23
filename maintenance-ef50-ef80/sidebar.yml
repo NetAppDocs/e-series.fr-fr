@@ -25,6 +25,8 @@ entries:
   url: "/maintenance-ef50-ef80/dimm-replace.html"
 - title: Lecteur
   url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Tiroir d'entraînement
+  url: "/maintenance-ef50-ef80/drive-drawer-de460c-replace.html"
 - title: Ventilateur
   url: "/maintenance-ef50-ef80/fan-replace.html"
 - title: module d'E/S

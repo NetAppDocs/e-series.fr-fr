@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Utilisez la configuration express pour un hôte Windows avec un système E-Series. 
 ---
-= Configuration Windows Express dans E-Series - Windows
+= Flux de travail de configuration express de Windows dans E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

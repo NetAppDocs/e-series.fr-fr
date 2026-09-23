@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Installation et configuration des baies EF300 et EF600 
 ---
-= Installation et configuration : EF300, EF600, EF300C et EF600C
+= Flux de travail d'installation et de configuration des systèmes de stockage EF300 et EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

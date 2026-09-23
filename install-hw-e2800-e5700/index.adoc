@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation 
 summary: Installez et configurez les baies E2800 ou E5700. 
 ---
-= Installez et configurez les systèmes de stockage E2800 et E5700
+= Flux de travail d'installation et de configuration des systèmes de stockage E2800 et E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Installez et configurez les baies E2800 ou E5700.
 Découvrez comment installer et configurer le système de stockage E2800 ou E5700.
 
 Vous pouvez choisir l'un des formats suivants pour vous guider lors de l'installation et de la configuration de votre nouveau système de stockage.
+
+
+NOTE: Les systèmes de stockage E2800 et E5700 sont des produits en fin de disponibilité (EOA) et ne sont plus disponibles à l'achat, mais bénéficient toujours d'un support. Les informations de cette section sont fournies à titre de référence uniquement.
 
 * *PDF*
 +

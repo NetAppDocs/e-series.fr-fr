@@ -1,7 +1,7 @@
 ---
 permalink: config-vmware/verify-vmware-config-support-task.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Vérifiez que la configuration VMware est prise en charge. 
 ---
 = Vérifiez la prise en charge de la configuration VMware dans E-Series
@@ -30,10 +30,11 @@ La section améliorer les critères de recherche s'affiche. Dans cette section, 
 
  a| 
 ** Vous devrez peut-être installer des pilotes prêts à l'emploi afin de vous assurer que les fonctionnalités et la prise en charge sont correctes. Vous pouvez installer des pilotes HBA à l'aide du shell ESXi ou d'une connexion SSH distante à l'hôte ESXi. Pour accéder à l'hôte à l'aide de l'une de ces méthodes, vous devez activer le shell ESXi et l'accès SSH. Pour plus d'informations sur le shell ESXi, reportez-vous à la base de connaissances VMware concernant l'utilisation du shell ESXi dans ESXi. Pour les commandes d'installation, reportez-vous aux instructions accompagnant les pilotes HBA.
-** Chaque fournisseur HBA dispose de méthodes spécifiques pour mettre à jour le code d'amorçage et le micrologiciel. Certaines de ces méthodes peuvent inclure l'utilisation d'un plug-in vCenter ou l'installation du fournisseur CIM sur l'hôte ESXi. Les plug-ins vCenter peuvent être utilisés pour obtenir des informations sur la carte HBA spécifique du fournisseur. Reportez-vous à la section support du site Web du fournisseur pour obtenir les instructions et les logiciels nécessaires à la mise à jour du code d'amorçage ou du micrologiciel de l'adaptateur HBA. Reportez-vous au _VMware Compatibility Guide_ ou au site Web du fournisseur HBA pour obtenir le code d'amorçage ou le micrologiciel correct.
+** Chaque fournisseur de HBA propose des méthodes spécifiques pour la mise à jour du code de démarrage et du firmware. Certaines de ces méthodes peuvent inclure l'utilisation d'un plugin vCenter ou l'installation du fournisseur CIM sur l'hôte ESXi. Les plugins vCenter peuvent être utilisés pour obtenir des informations sur le HBA spécifique du fournisseur. Consultez la section support du site web du fournisseur pour obtenir les instructions et les logiciels nécessaires à la mise à jour du code de démarrage ou du firmware du HBA. Consultez la  https://compatibilityguide.broadcom.com/search?program=io&persona=live&column=brandName&order=asc["_Guide de compatibilité VMware_"] ou le site web du fournisseur du HBA pour obtenir le code de démarrage ou le firmware approprié.
+** Consultez les alertes et les informations associées à la configuration sélectionnée pour tout système d'exploitation spécifique, système d'exploitation invité, HBA ou autres paramètres ou informations connexes qui pourraient devoir être appliqués à votre configuration.
 
  a| 
-FC
+FCP
  a| 
 Pilote, micrologiciel et code d'amorçage de l'adaptateur de bus hôte (HBA)
 
@@ -50,6 +51,27 @@ Pilote, micrologiciel et code d'amorçage de la carte d'interface réseau (NIC)
 SAS
  a| 
 Pilote, micrologiciel et code d'amorçage de l'adaptateur de bus hôte (HBA)
+
+
+
+ a| 
+NVMe sur FC
+ a| 
+Pilote, micrologiciel et code d'amorçage de l'adaptateur de bus hôte (HBA)
+
+
+
+ a| 
+NVMe over RoCE
+ a| 
+Pilote, microprogramme et code de démarrage Remote Direct Memory Access (RDMA)
+
+
+
+ a| 
+NVMe sur TCP
+ a| 
+Pilote, micrologiciel et code d'amorçage de la carte d'interface réseau (NIC)
 
 |===
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace the controller workflow 
 summary: Vous pouvez remplacer un contrôleur défectueux dans votre système de stockage EF50 ou EF80 en respectant les exigences du système de stockage, en préparant le système, en mettant hors ligne le contrôleur défectueux, en remplaçant le contrôleur, en mettant le nouveau contrôleur en ligne et en terminant le processus de remplacement. 
 ---
-= Workflow de remplacement du contrôleur - EF50 et EF80
+= Procédure de remplacement du contrôleur pour les systèmes de stockage EF50 et EF80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

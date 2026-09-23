@@ -1,0 +1,258 @@
+---
+permalink: config-vmware/nvme-tcp-perform-specific-task.html 
+sidebar: sidebar 
+keywords: NVMe over TCP protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E5700, EF300, EF600, EF50, EF80, E-Series, eseries 
+summary: 'Pour le protocole NVMe sur TCP, vous configurez les commutateurs et déterminez le nom qualifié NVMe (NQN) de l"hôte.' 
+---
+= Configurer les commutateurs NVMe over TCP pour VMware dans le système de stockage E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour le protocole NVMe sur TCP, vous configurez les commutateurs et déterminez le nom qualifié NVMe (NQN) de l'hôte.
+
+
+NOTE: Pour garantir la compatibilité avec VMware, les volumes doivent être configurés pour utiliser l'émulation 512 octets (512e) lors de l'utilisation de disques de 4096 octets. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur la configuration d'un volume pour utiliser l'émulation 512 octets (512e).
+
+
+
+[[step-1-record-your-configuration]]
+== Étape 1 : Enregistrez votre configuration
+
+Vous pouvez générer et imprimer un PDF de cette page, puis utiliser la feuille de calcul suivante pour consigner les informations de configuration de stockage spécifiques à votre protocole. Vous aurez besoin de ces informations lors de l'exécution des tâches de provisionnement.
+
+L'illustration montre un hôte connecté à un système de stockage E-Series, séparé par des VLAN et/ou des sous-réseaux distincts. Un VLAN/sous-réseau est indiqué par la ligne bleue ; l'autre VLAN/sous-réseau est indiqué par la ligne rouge. Chaque VLAN/sous-réseau comprend au moins un port initiateur et la moitié des ports cibles. Le nombre de ports hôtes et/ou de ports de contrôleur varie selon le nombre d'interfaces réseau et le modèle de contrôleur. Vous pouvez disposer de plus de ports (jusqu'à 6 par contrôleur).
+
+image::../media/network_generic_worksheet.gif[Identifiants de port NVMe sur TCP]
+
+
+
+[[host-mapping-information]]
+=== Informations de cartographie des hôtes
+
+[cols="35h,~"]
+|===
+| Nom d'hôte de mappage |  
+
+
+| Type de système d'exploitation hôte |  
+
+
+| NQN hôte |  
+
+
+| NQN cible |  
+|===
+
+
+[[step-2-configure-the-nvmetcp-switches]]
+== Étape 2 : Configurer les commutateurs NVMe/TCP
+
+Vous configurez les commutateurs conformément aux recommandations du fournisseur pour NVMe over TCP. Ces recommandations peuvent inclure des directives de configuration ainsi que des mises à jour de code.
+
+.Description de la tâche
+Cette procédure décrit les étapes générales de configuration des commutateurs pour NVMe sur TCP. Pour des instructions spécifiques, consultez la documentation de votre fournisseur de commutateurs.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Deux réseaux distincts pour une haute disponibilité. Veillez à isoler le trafic NVMe sur TCP sur des segments de réseau séparés.
+
+
+.Étapes
+Consultez la documentation du fournisseur de votre commutateur.
+
+
+
+[[step-3-configure-networking]]
+== Étape 3 : Configurer le réseau
+
+Vous pouvez configurer votre réseau NVMe sur TCP de différentes manières, selon vos besoins de stockage des données. Consultez votre administrateur réseau pour obtenir des conseils sur le choix de la configuration la plus adaptée à votre environnement.
+
+.Description de la tâche
+Cette tâche décrit les étapes générales de configuration du réseau pour NVMe sur TCP. Pour des instructions spécifiques, consultez la documentation de votre fournisseur de commutateurs.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* Commutateur configuré pour le trafic TCP.
+
+
+Lors de la planification de votre réseau NVMe sur TCP, n'oubliez pas que la  https://configmax.broadcom.com/guest["Guide des limites de configuration VMware"^] stipule que le nombre maximal de ports initiateurs TCP NVMe pris en charge par serveur est de 2. Vous devez tenir compte de cette exigence afin d'éviter de configurer un trop grand nombre de chemins.
+
+Pour garantir une configuration de chemins multiples optimale, utilisez plusieurs segments de réseau pour le réseau NVMe sur TCP. Placez au moins un port côté hôte et au moins un port de chaque contrôleur de baie sur un segment de réseau, et un groupe identique de ports côté hôte et côté baie sur un autre segment de réseau. Dans la mesure du possible, utilisez plusieurs commutateurs Ethernet pour fournir une redondance supplémentaire.
+
+.Étapes
+Consultez la documentation du fournisseur de votre commutateur.
+
+
+
+[[step-4-configure-array-side-networking]]
+== Étape 4 : Configurer le réseau côté baie
+
+Vous utilisez l'interface SANtricity System Manager pour configurer le réseau NVMe over TCP côté baie.
+
+.Description de la tâche
+Cette procédure explique comment accéder à la configuration des ports NVMe sur TCP depuis la page *Contrôleurs et composants* dans le SANtricity System Manager. Vous pouvez également accéder à la configuration depuis la page *Configurer les ports NVMe sur TCP* dans le SANtricity System Manager.
+
+.Avant de commencer
+Assurez-vous de disposer des éléments suivants :
+
+* L'adresse IP ou le nom de domaine de l'un des contrôleurs de la matrice de stockage.
+* Le mot de passe de l'interface graphique de System Manager, ou le contrôle d'accès basé sur les rôles (RBAC) ou LDAP et un service d'annuaire sont configurés pour l'accès de sécurité approprié à la baie de stockage. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur link:https://docs.netapp.com/us-en/e-series-santricity/um-certificates/overview-access-management-um.html["Gestion des accès"^].
+
+
+.Étapes
+. Dans votre navigateur, saisissez l’URL suivante : https://<DomainNameOrIPAddress>[]
++
+`IPAddress` est l'adresse de l'un des contrôleurs de la baie de stockage.
+
++
+Lors de la première ouverture du Gestionnaire système SANtricity sur une matrice qui n'a pas été configurée, l'invite définir le mot de passe administrateur s'affiche. La gestion de l'accès basée sur les rôles configure quatre rôles locaux : administrateur, support, sécurité et contrôle. Ces trois derniers rôles ont des mots de passe aléatoires qui ne peuvent être devinés. Après avoir défini un mot de passe pour le rôle admin, vous pouvez modifier tous les mots de passe à l'aide des informations d'identification admin. Consultez l'aide en ligne de SANtricity System Manager pour plus d'informations sur les quatre rôles d'utilisateur locaux.
+
+. Entrez le mot de passe du Gestionnaire système pour le rôle admin dans les champs définir le mot de passe administrateur et confirmer le mot de passe, puis cliquez sur *définir le mot de passe*.
++
+L'assistant d'installation se lance s'il n'y a pas de pools, de groupes de volumes, de charges de travail ou de notifications configurés.
+
+. Fermez l'assistant de configuration.
++
+Vous utiliserez l'assistant ultérieurement pour effectuer d'autres tâches de configuration.
+
+. Sélectionnez *Hardware* > *Controllers and components*.
+. Cliquez sur le contrôleur comportant les ports NVMe over TCP que vous souhaitez configurer.
++
+Le menu contextuel du contrôleur s'affiche.
+
+. Sélectionnez *Configurer les ports NVMe over TCP*.
++
+La boîte de dialogue « Configurer les ports NVMe sur TCP » s'ouvre.
+
+. Dans la liste déroulante, sélectionnez le port à configurer, puis cliquez sur *Suivant*.
+. Sélectionnez les paramètres du port de configuration, puis cliquez sur *Suivant*.
++
+Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres de port* à droite de la boîte de dialogue.
+
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Vitesse du port ethernet configurée
+ a| 
+Sélectionnez la vitesse souhaitée. Les options qui apparaissent dans la liste déroulante dépendent de la vitesse maximale que votre réseau peut prendre en charge (par exemple, 200 Gb/s).
+
+
+
+ a| 
+Activez IPv4 / Activer IPv6
+ a| 
+Sélectionnez une ou les deux options pour activer la prise en charge des réseaux IPv4 et IPv6.
+
+
+
+ a| 
+Taille MTU (Disponible en cliquant sur Show more port settings.)
+ a| 
+Si nécessaire, entrez une nouvelle taille en octets pour l'unité de transmission maximale (MTU).
+
+La taille par défaut de l'unité de transmission maximale (MTU) est de 4200 octets par trame. Vous devez saisir une valeur comprise entre 1500 et 9000.
+
+|===
++
+Si vous avez sélectionné *Activer IPv4*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv4 après avoir cliqué sur *Suivant*. Si vous avez sélectionné *Activer IPv6*, une boîte de dialogue s'ouvre pour sélectionner les paramètres IPv6 après avoir cliqué sur *Suivant*. Si vous avez sélectionné les deux options, la boîte de dialogue des paramètres IPv4 s'ouvre en premier, puis après avoir cliqué sur *Suivant*, la boîte de dialogue des paramètres IPv6 s'ouvre.
+
++
+Configurez les paramètres IPv4 et/ou IPv6, automatiquement ou manuellement. Pour afficher tous les paramètres de port, cliquez sur le lien *Afficher plus de paramètres* à droite de la boîte de dialogue.
+
++
+|===
+| Paramètre de port | Description 
+
+
+ a| 
+Obtention automatique de la configuration
+ a| 
+Sélectionnez cette option pour obtenir la configuration automatiquement.
+
+
+
+ a| 
+Spécifiez manuellement la configuration statique
+ a| 
+Sélectionnez cette option, puis entrez une adresse statique dans les champs. Pour IPv4, incluez le masque de sous-réseau réseau et la passerelle. Pour IPv6, incluez l'adresse IP routable et l'adresse IP du routeur.
+
+|===
+. Cliquez sur *Terminer*.
+. Fermez System Manager.
+
+
+
+
+[[step-5-configure-host-side-networking]]
+== Étape 5 : Configurer le réseau côté hôte
+
+La configuration du réseau NVMe over TCP côté hôte permet à l'initiateur de l'adaptateur de stockage VMware NVMe over TCP d'établir une session avec la baie.
+
+.Étapes
+. Identifiez les adaptateurs réseau TCP et notez la liaison montante vmnic appariée.
++
+Les adaptateurs réseau de l'hôte sont nommés vmnicN, où N est un numéro unique identifiant l'adaptateur réseau, par exemple vmnic0, vmnic1, etc. Les adaptateurs physiques peuvent être visualisés sous Réseau depuis l'hôte ESXi ou depuis l'onglet Configurer après avoir sélectionné l'hôte ESXi dans l'inventaire d'un hébergement vCenter.
+
+. Configurez la liaison de port VMkernel pour l'adaptateur TCP à l'aide d'un vSphere standard switch.
++
+Pour plus d'informations, consultez link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi/configure-vmkernel-binding-for-the-tcp-adapter.html["Configurer la liaison VMkernel pour l'adaptateur TCP"^].
+
+. Ajoutez l'adaptateur logiciel NVMe over TCP.
++
+Pour plus d'informations, consultez link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi/configure-vmkernel-binding-for-the-tcp-adapter/configure-vmkernel-binding-for-the-tcp-adapter-with-a-vsphere-standard-switch.html["Ajouter des adaptateurs logiciels NVMe over RDMA ou NVMe over TCP"^].
+
+. Ajouter des contrôleurs NVMe pour NVMe over TCP.
++
+Pour plus d'informations, consultez link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi/shared-content/submaps/GUID-23E6D699-BEDC-4B5F-9515-3390C0E73888_copy.html["Ajouter des contrôleurs pour NVMe over Fabrics"^].
+
+
+
+
+NOTE: Le NQN de l'hôte peut être obtenu au cours de cette procédure via la boîte de dialogue Ajouter un contrôleur. Il sera nécessaire ultérieurement lors de la configuration des mappages d'hôtes.
+
+Une fois l'ajout réussi, les connexions sont visibles dans la vue Adaptateurs de stockage du vSphere Client. En cas d'échec, passez à l'étape 6 pour vérifier la communication avec les ports et corriger les paramètres de connexion.
+
+
+
+[[step-6-verify-ip-network-connections]]
+== Étape 6 : Vérifiez les connexions réseau IP
+
+Vous pouvez vérifier les connexions réseau IP à l'aide des tests ping afin de vous assurer que l'hôte et la matrice sont en mesure de communiquer.
+
+.Étapes
+. Sur l'hôte, exécutez la commande suivante :
++
+[listing]
+----
+vmkping <NVMe over TCP_target_IP_address\>
+----
++
+Dans cet exemple, l'adresse IP cible NVMe over TCP est 192.29.11.111.
+
++
+[listing]
+----
+vmkping -d 192.29.11.111
+PING 192.29.11.111 (192.29.11.111): 56 data bytes
+64 bytes from 192.29.11.111: icmp_seq=0 ttl=64 time=0.902 ms
+64 bytes from 192.29.11.111: icmp_seq=1 ttl=64 time=0.406 ms
+64 bytes from 192.29.11.111: icmp_seq=2 ttl=64 time=0.855 ms
+--- 192.29.11.111 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.406/0.721/0.902 ms
+----
+. Émettez une  `vmkping`commande depuis l'adresse de l'initiateur de chaque hôte (l'adresse IP du port Ethernet de l'hôte utilisé pour NVMe over TCP) vers chaque port NVMe over TCP du contrôleur. Effectuez cette action depuis chaque serveur hôte de la configuration, en modifiant les adresses IP si nécessaire.
++
+
+NOTE: Si la commande échoue avec le message `sendto() failed (Message too long)`, vérifiez la taille MTU des interfaces Ethernet sur le serveur hôte, le contrôleur de stockage et les ports du commutateur.
+
+. Si l'étape 5 de découverte a échoué, retournez à la procédure de configuration réseau côté hôte NVMe over TCP pour terminer l'ajout des contrôleurs cibles.
+
