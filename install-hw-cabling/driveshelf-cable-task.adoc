@@ -17,7 +17,7 @@ Vous devez connecter chaque contrôleur du tiroir contrôleur à un module d'E/S
 * Cette procédure s'applique aux étagères de lecteurs IOM12, IOM12B et IOM12C.
 +
 
-NOTE: Les modules IOM12C sont uniquement pris en charge par SANtricity OS 11.70.2 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.
+NOTE: Les modules IOM12C ne sont pris en charge que sur SANtricity OS 11.90R3 et versions ultérieures. Assurez-vous que le micrologiciel de votre contrôleur a été mis à jour avant d'installer ou de mettre à niveau vers un IOM12C.
 
 * Si vous câbler un tiroir contrôleur plus ancien vers un DE212C, DE224C ou DE460, reportez-vous à la section https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Ajout de tiroirs disques IOM à un tiroir contrôleur E27XX, E56XX ou EF560 existant"^].
 * Si vous câblez un système de stockage EF50 ou EF80 à des baies d'extension SAS dans le cadre d'une nouvelle installation de système, consultez link:../install-hw-ef50-ef80/install-cable.html["Câblez le matériel pour les systèmes de stockage EF50 et EF80"] procédure.
