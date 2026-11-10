@@ -16,6 +16,13 @@ Le tableau suivant décrit les nouvelles fonctionnalités des dernières version
 
 
 
+[[new-features-in-version-12-10r1]]
+== Nouvelles fonctionnalités dans la version 12.10R1
+
+Cette version ne contient que des modifications mineures et aucune nouvelle fonctionnalité. Pour plus d'informations sur les modifications de cette version, veuillez consulter le fichier README de SANtricity OS 12.10R1 E-Series.
+
+
+
 [[new-features-in-version-12-10]]
 == Nouvelles fonctionnalités dans la version 12.10
 
